@@ -1,0 +1,75 @@
+---
+title: Spreading and gathering tree data
+author: Matt Russell
+date: '2019-03-09'
+slug: spreading-and-gathering-tree-data
+categories:
+  - Data wrangling
+tags:
+  - R
+  - tidyr
+  - gather()
+  - spread()
+---
+
+
+
+<p>A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and <a href="https://www.datacamp.com/community/tutorials/long-wide-data-R">needed to be wide</a>.</p>
+<p>The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.</p>
+<p>The <code>veg</code> dataset is formatted long and contains the “pre” (initial) and “post”&quot; (five years later) measurements, along with the number of seedlings per acre:</p>
+<pre><code>##    PlotID Period Seedlings
+## 1       1    Pre      1200
+## 2       1   Post       800
+## 3       2    Pre      1250
+## 4       2   Post       950
+## 5       3    Pre      1350
+## 6       3   Post      1200
+## 7       4    Pre      1200
+## 8       4   Post       650
+## 9       5    Pre      1100
+## 10      5   Post       950
+## 11      6    Pre      1350
+## 12      6   Post       900
+## 13      7    Pre      1200
+## 14      7   Post       650
+## 15      8    Pre      1240
+## 16      8   Post       910</code></pre>
+<p>So what happened during the five years? The number of tree seedlings generally decreased. Trees grew larger into the sapling class and many seedlings suffered mortality.</p>
+<p><img src="/post/2019-03-09-spreading-and-gathering-tree-data_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Now, how to visualize the change in tree seedlings between the two measurements? We can convert the <code>veg</code> data to a wide format using the <code>spread()</code> function from the <code>tidyr</code> package. The result will turn the 16 rows of data into eight rows of data. In this new dataset called <code>veg_wide</code>, seedlings will be stored in two columns: the pre and post measurements.</p>
+<p>Now we can easily calculate a new variable that quantifies the change in the number of seedlings, called <code>delta_Seedlings</code>:</p>
+<pre class="r"><code>veg_wide$delta_Seedlings&lt;-veg_wide$Period_seedlings_Post - veg_wide$Period_seedlings_Pre
+veg_wide</code></pre>
+<pre><code>##   PlotID Period_seedlings_Pre Period_seedlings_Post delta_Seedlings
+## 1      1                 1200                   800            -400
+## 2      2                 1250                   950            -300
+## 3      3                 1350                  1200            -150
+## 4      4                 1200                   650            -550
+## 5      5                 1100                   950            -150
+## 6      6                 1350                   900            -450
+## 7      7                 1200                   650            -550
+## 8      8                 1240                   910            -330</code></pre>
+<p>Now we can visualize the primary variable we’re interested in:</p>
+<p><img src="/post/2019-03-09-spreading-and-gathering-tree-data_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>The data are now presented in a wide format. We can use the <code>tidyr</code> package to convert the data back to a long format. Each plot should have two variables: Period and Seedlings. We’ll use the <code>gather()</code> function to make this in a new data frame called <code>veg_long</code>.</p>
+<pre class="r"><code>veg_long&lt;-veg_wide %&gt;% gather(key = Period, value = Seedlings,
+       Period_seedlings_Pre,Period_seedlings_Post)
+veg_long %&gt;% select(PlotID,Period,Seedlings)</code></pre>
+<pre><code>##    PlotID                Period Seedlings
+## 1       1  Period_seedlings_Pre      1200
+## 2       2  Period_seedlings_Pre      1250
+## 3       3  Period_seedlings_Pre      1350
+## 4       4  Period_seedlings_Pre      1200
+## 5       5  Period_seedlings_Pre      1100
+## 6       6  Period_seedlings_Pre      1350
+## 7       7  Period_seedlings_Pre      1200
+## 8       8  Period_seedlings_Pre      1240
+## 9       1 Period_seedlings_Post       800
+## 10      2 Period_seedlings_Post       950
+## 11      3 Period_seedlings_Post      1200
+## 12      4 Period_seedlings_Post       650
+## 13      5 Period_seedlings_Post       950
+## 14      6 Period_seedlings_Post       900
+## 15      7 Period_seedlings_Post       650
+## 16      8 Period_seedlings_Post       910</code></pre>
+<p>Look familiar? The <code>veg_long</code> and original <code>veg</code> datasets are nearly identical. The <code>spread()</code> and <code>gather()</code> functions are two of many functions in R for organizing <a href="https://r4ds.had.co.nz/tidy-data.html">tidy data</a>.</p>

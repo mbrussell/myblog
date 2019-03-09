@@ -1,0 +1,89 @@
+---
+title: Spreading and gathering tree data
+author: Matt Russell
+date: '2019-03-09'
+slug: spreading-and-gathering-tree-data
+categories:
+  - Data wrangling
+tags:
+  - R
+  - tidyr
+  - gather()
+  - spread()
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and [needed to be wide](https://www.datacamp.com/community/tutorials/long-wide-data-R).
+
+The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.    
+
+```{r,echo=F}
+PlotID<-c(1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8)
+Period<-c("Pre","Post","Pre","Post","Pre","Post","Pre","Post","Pre","Post","Pre","Post","Pre","Post","Pre","Post")
+Seedlings<-c(1200,800,1250,950,1350,1200,1200,650,1100,950,1350,900,1200,650,1240,910)
+#SPA_saplings<-c(400,450,350,325,425,425,550,500,300,250,570,400,430,410,300,320)
+#SPA_trees<-c(200,250,300,350,400,475,350,375,250,400,150,125,120,70,240,150)  
+veg<-data.frame(PlotID=PlotID,
+                Period=Period,
+                Seedlings=Seedlings)
+veg$Seedlings<-as.numeric(veg$Seedlings)
+```
+
+The `veg` dataset is formatted long and contains the "pre" (initial) and "post"" (five years later) measurements, along with the number of seedlings per acre:
+
+```{r,echo=F}
+print(veg)
+```    
+
+```{r,echo=F,warning=F,message=F}
+library(forcats)
+library(tidyverse)
+veg$Period<-fct_relevel(veg$Period, "Pre", "Post")
+```
+
+So what happened during the five years? The number of tree seedlings generally decreased. Trees grew larger into the sapling class and many seedlings suffered mortality.
+
+```{r,echo=F}
+p.seed<-ggplot(veg, aes(Period,Seedlings))+
+  geom_boxplot(aes(fill=Period))+
+  xlab("Time period")+
+  ylab("Seedlings per acre")
+p.seed
+```
+
+Now, how to visualize the change in tree seedlings between the two measurements? We can convert the `veg` data to a wide format using the `spread()` function from the `tidyr` package. The result will turn the 16 rows of data into eight rows of data. In this new dataset called `veg_wide`, seedlings will be stored in two columns: the pre and post measurements.  
+
+```{r,echo=F}
+veg_wide<-veg %>% spread(Period, Seedlings, sep="_seedlings_")
+```
+
+Now we can easily calculate a new variable that quantifies the change in the number of seedlings, called `delta_Seedlings`:  
+
+```{r}
+veg_wide$delta_Seedlings<-veg_wide$Period_seedlings_Post - veg_wide$Period_seedlings_Pre
+veg_wide
+```
+
+Now we can visualize the primary variable we're interested in:
+
+```{r,echo=F}
+p.seedchange<-ggplot(veg_wide, aes(x="",delta_Seedlings))+
+  geom_boxplot(fill="green")+
+  xlab("")+
+  ylab("Change in seedlings per acre")
+p.seedchange
+```
+
+The data are now presented in a wide format. We can use the `tidyr` package to convert the data back to a long format. Each plot should have two variables: Period and Seedlings. We'll use the `gather()` function to make this in a new data frame called `veg_long`.
+
+```{r}
+veg_long<-veg_wide %>% gather(key = Period, value = Seedlings,
+       Period_seedlings_Pre,Period_seedlings_Post)
+veg_long %>% select(PlotID,Period,Seedlings)
+
+```
+
+Look familiar? The `veg_long` and original `veg` datasets are nearly identical.  The `spread()` and `gather()` functions are two of many functions in R for organizing [tidy data](https://r4ds.had.co.nz/tidy-data.html).
