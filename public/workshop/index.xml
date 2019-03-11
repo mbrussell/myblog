@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data with trees</title>
-    <link>/</link>
-    <description>Recent content on Data with trees</description>
+    <title>Workshops on Data with trees</title>
+    <link>/workshop/</link>
+    <description>Recent content in Workshops on Data with trees</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/workshop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -45,16 +44,6 @@
       
       <guid>/workshop/workshop4/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Spreading and gathering tree data</title>
-      <link>/post/spreading-and-gathering-tree-data/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/spreading-and-gathering-tree-data/</guid>
-      <description>A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and needed to be wide.
-The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.</description>
     </item>
     
   </channel>
