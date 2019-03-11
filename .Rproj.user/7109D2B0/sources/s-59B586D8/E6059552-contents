@@ -1,0 +1,520 @@
+
+# For western DBH growth, try https://pubag.nal.usda.gov/pubag/downloadPDF.xhtml?id=21591&content=PDF (I think it shows equations in log scale) and
+# http://www.cof.orst.edu/cof/fr/research/organon/pubs/FRL_RB69.pdf
+
+
+library(tidyverse)
+
+# Read in data
+pond<-read.csv('C://Users//russellm//Documents//Data//MN//Ponderosa//2018PonderosaMasterData.csv')
+
+mean(pond$HT_2018)
+HT_tall<-subset(pond,HT_2018>=13.4)
+
+
+mean(HT_tall$HT_2018)
+
+pond2<-pond %>%
+  group_by(Region) %>%
+  summarize(n.tree=n())
+pond2
+
+tree <- gather(pond, year_name, ring.width, X1969:X2017, factor_key=TRUE)
+tree$year<-as.numeric(substr(tree$year_name,2,5))
+tree<-tree[!is.na(tree$ring.width),]
+
+tree<-tree %>%
+  group_by(Core_ID) %>%
+  mutate(cum_ring.width = cumsum(ring.width),
+         age = row_number())
+
+# Calculate stump diameter, inside bark and convert to cm
+tree$DIB_SH<-(tree$cum_ring.width*2)/10
+
+# Predict stump diameter, outside bark (Larsen and Hann 1985; eqs for ponderosa pine)
+tree$DOB_SH<-(((tree$DIB_SH/2.54)/0.809427)^(1/1.016866))*2.54
+
+# Predict DBH from diameter at stump (Demaerschalk and Omule 1982; eqs for "western yellow pine")
+tree$DBH<-tree$DOB_SH+(0.337111*tree$DOB_SH*log((0.3 + 1)/2.3))
+summary(tree$DBH)
+tree.2017<-subset(tree,year_name=="X2017")
+plot(tree.2017$DBH,tree.2017$DBH_2018)
+
+# Only use data for every five years of growth
+tree<-subset(tree,age %in% c(4,9,14,19,24,29,34,39,44,49))
+dbh<-data.frame("age" = c(4,9,14,19,24,29,34,39,44,49), 
+                 "dbh_name" = c("dbh04","dbh09","dbh14","dbh19","dbh24","dbh29","dbh34","dbh39","dbh44","dbh49"))
+
+tree<-merge(tree,dbh,by="age")
+tree_min<-select(tree,Core_ID,Location,SeedSource_ID,dbh_name,DBH)
+
+# Make it wide
+tree_wide <- spread(tree_min, dbh_name, DBH)
+head(tree_wide)
+
+gr1<-select(tree_wide,Core_ID,Location,SeedSource_ID,dbh1=dbh04, dbh2 = dbh09)
+gr1$dinc<-gr1$dbh2-gr1$dbh1
+gr2<-select(tree_wide,Core_ID,Location,SeedSource_ID,dbh1=dbh09, dbh2 = dbh14)
+gr2$dinc<-gr2$dbh2-gr2$dbh1
+gr3<-select(tree_wide,Core_ID,Location,SeedSource_ID,dbh1=dbh14, dbh2 = dbh19)
+gr3$dinc<-gr3$dbh2-gr3$dbh1
+gr4<-select(tree_wide,Core_ID,Location,SeedSource_ID,dbh1=dbh19, dbh2 = dbh24)
+gr4$dinc<-gr4$dbh2-gr4$dbh1
+gr5<-select(tree_wide,Core_ID,Location,SeedSource_ID,dbh1=dbh24, dbh2 = dbh29)
+gr5$dinc<-gr5$dbh2-gr5$dbh1
+gr6<-select(tree_wide,Core_ID,Location,SeedSource_ID,dbh1=dbh29, dbh2 = dbh34)
+gr6$dinc<-gr6$dbh2-gr6$dbh1
+gr7<-select(tree_wide,Core_ID,Location,SeedSource_ID,dbh1=dbh34, dbh2 = dbh39)
+gr7$dinc<-gr7$dbh2-gr7$dbh1
+gr8<-select(tree_wide,Core_ID,Location,SeedSource_ID,dbh1=dbh39, dbh2 = dbh44)
+gr8$dinc<-gr8$dbh2-gr8$dbh1
+gr9<-select(tree_wide,Core_ID,Location,SeedSource_ID,dbh1=dbh44, dbh2 = dbh49)
+gr9$dinc<-gr9$dbh2-gr9$dbh1
+
+pond<-rbind(gr1,gr2,gr3,gr4,gr5,gr6,gr7,gr8,gr9)
+pond$int<-5
+pond<-subset(pond,dbh1>=0) 
+pond<-subset(pond,dbh2>=0)
+pond$SeedSource_ID<-as.factor(pond$SeedSource_ID)
+summary(pond$dinc/pond$int)
+# try some gnls models
+
+## growth function-Hann model form
+gr.hat = function(dbh1, int, b0, b1, b2)
+{
+  # get max period length
+  max.n = max(int)
+  
+  # initialize
+  pd.c = dbh1
+  
+  # begin growth loop
+  for( i in 1:max.n )
+  {
+    gr = exp(b0+b1*log(pd.c+1)+b2*(pd.c**2))
+   # gr = exp(b0+b1*log(pd.c+1))
+    pd.c = pd.c + ifelse( i <= int, gr, 0.0 )
+  }
+  
+  # compute growth over the period
+  dbh2.hat = (pd.c - dbh1)
+  dbh2.hat
+}
+
+## growth function-Lessard model form
+gr.hat2 = function(dbh1, int, b0, b1, b2)
+{
+  # get max period length
+  max.n = max(int)
+  
+  # initialize
+  pd.c = dbh1
+  
+  # begin growth loop
+  for( i in 1:max.n )
+  {
+    gr = b0*exp(b1*pd.c)*(pd.c**b2)
+    pd.c = pd.c + ifelse( i <= int, gr, 0.0 )
+  }
+  
+  # compute growth over the period
+  dbh2.hat = (pd.c - dbh1)
+  dbh2.hat
+}
+
+summary(pond$dbh1); sd(pond$dbh1)
+levels((pond$SeedSource_ID))
+library(nlme)
+source('C://Users//russellm//Documents//Analyses//R Functions//furnival.r')
+
+#GNLS model
+# pond.gnls = gnls(((dbh2-dbh1))~gr.hat(dbh1, int, b0, b1, b2),
+#                  data = pond,
+#                  start=c(b0=-2.29, b1=0.54, b2=-0.0071),
+#                  weights=varPower(0.2,form=~dbh1),
+#                  correlation=corAR1(0.2, form = ~ 1 | Core_ID),
+#                  na.action=na.omit,
+#                  control=gnlsControl(maxIter=100,minScale=0.01,returnObject=T))
+# summary(pond.gnls)
+# furnival(pond.gnls)
+# plot(pond.gnls)
+# 
+# pond.gnls2 = gnls(((dbh2-dbh1))~gr.hat2(dbh1, int, b0, b1, b2),
+#                  data = pond,
+#                  start=c(b0=0.0708, b1=-0.0378, b2=1.1),
+#                  weights=varPower(0.2,form=~dbh1),
+#                  correlation=corAR1(0.2, form = ~ 1 | Core_ID),
+#                  na.action=na.omit,
+#                  control=gnlsControl(maxIter=100,minScale=0.01,returnObject=T))
+# summary(pond.gnls2)
+# furnival(pond.gnls2)
+# plot(pond.gnls2)
+# anova(pond.gnls,pond.gnls2)
+
+#NLME model
+pond.nlme = nlme(((dbh2-dbh1))~gr.hat(dbh1, int, b0, b1, b2),
+                 data = pond,
+                 start=c(b0=-1.4985, b1=1.0086, b2=-0.00835),
+                 fixed=c(b0+b1+b2~1),
+                 random=b2~1|SeedSource_ID,
+                 weights=varPower(0.2,form=~dbh1),
+                 correlation=corAR1(0.2, form = ~ 1 | SeedSource_ID/Core_ID),
+                 na.action=na.omit,
+                 control=gnlsControl(maxIter=100000,minScale=0.01,returnObject=T))
+summary(pond.nlme)
+furnival(pond.nlme)
+plot(pond.nlme)
+pond$ann_dinc<-((pond$dbh2-pond$dbh1)/pond$int)
+
+
+seed.ranef<-data.frame(ranef(pond.nlme))
+seed.ranef <- add_rownames(seed.ranef, "SeedSource")
+
+DBH<-seq(1,30,by=0.25)
+DINC.pred.seed=data.frame(DBH)
+DINC.pred.seed2<-merge(DINC.pred.seed,seed.ranef)
+DINC.pred.seed2$SeedSourceID<-DINC.pred.seed2$SeedSource
+
+seedsource<-read.csv('C:\\Users\\russellm\\Documents\\Projects\\Ponderosa\\seedsource_full.csv')
+
+DINC.pred.seed2<-merge(DINC.pred.seed2,seedsource,by=c("SeedSourceID"))
+
+pond$diaclass<-ifelse(pond$dbh1<=10,"<10 cm",
+                      ifelse(pond$dbh1>30,">30 cm",
+                             "10-20 cm"))
+
+pond$SeedSourceID<-pond$SeedSource_ID
+pond2<-merge(pond,seedsource,by=c("SeedSourceID"))
+pond.gr<-group_by(pond2,Region)
+pond.summ<-summarize(pond.gr,
+                     mean.ann_dinc=mean(ann_dinc),
+                     sd.ann_dinc=sd(ann_dinc))
+pond.summ
+
+pond.BH<-pond2[pond2$Region=="Black Hills",]
+pond.EHP<-pond2[pond2$Region=="Eastern High Plains",]
+pond.SEM<-pond2[pond2$Region=="Southeast Montana",]
+
+
+library(equivalence)
+
+bh.ehp<-tost(pond.EHP$ann_dinc, pond.BH$ann_dinc, epsilon = 3)
+bh.ehp$result
+
+bh.sem<-tost(pond.SEM$ann_dinc, pond.BH$ann_dinc, epsilon = 3)
+bh.sem$result
+
+ehp.sem<-tost(pond.SEM$ann_dinc, pond.EHP$ann_dinc, epsilon = 3)
+ehp.sem$result
+
+
+
+# NEW MODEL
+pp.new2<-function(b2,DBH){
+  DINC.new=exp(-1.4735139+(0.9893087*log(DBH+1))+((b2+-0.0082502)*DBH**2))
+}
+
+DINC.pred.seed2$DINC.new=mapply(pp.new2,b2=DINC.pred.seed2$b2,DBH=(DINC.pred.seed2$DBH))
+
+#Graph of seed source as a random effect
+
+p.dinc.ranef<-ggplot(data=DINC.pred.seed2, aes(DBH,DINC.new,color=Region, 
+                                                group=interaction(Region, SeedSourceID)))+
+  geom_line(size=0.75,aes(color = Region,linetype=Region))+
+  xlab("DBH (cm)")+
+  ylab(expression(paste(Delta,'DBH (cm ',yr^-1,')',sep='')))+
+  scale_color_grey()+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line=element_line(colour="black"),
+        legend.title=element_blank(),
+        legend.position= c(.73, .93),
+        legend.text=element_text(size=9),
+        legend.key=element_blank(),
+        legend.key.width = unit(1,"cm"))
+p.dinc.ranef
+
+
+source('C:\\Users\\russellm\\Documents\\Analyses\\R Functions\\furnival.r')
+
+tree<-read.csv('C:\\Users\\russellm\\Documents\\Data\\MN\\Ponderosa\\pondpine.csv')
+tree<-tree[tree$Surv<=1,]
+
+tree.ht<-subset(tree,Site %in% c("GR","LAM","MOR"))
+tree.ht0<-subset(tree,Site %in% c("GR","LAM","MOR"))
+
+tree.ht<-tree.ht[tree.ht$Surv==1,]
+
+tree.ht$SeedSourceID<-tree.ht$SeedSource
+tree.ht2<-merge(tree.ht,seedsource,by=c("SeedSourceID"))
+tree.ht0$SeedSourceID<-tree.ht0$SeedSource
+tree.ht01<-merge(tree.ht0,seedsource,by=c("SeedSourceID"))
+
+
+tree.ht.gr0<-group_by(tree.ht01,Site,Region)
+tree.ht.summ0<-summarize(tree.ht.gr0,
+                         n.trees.all=n(),
+                         n.trees.surv=sum(Surv))
+tree.ht.summ0$Surv_Pct<-(tree.ht.summ0$n.trees.surv/tree.ht.summ0$n.trees.all)*100
+View(tree.ht.summ0)
+
+
+tree.ht.gr0<-group_by(tree.ht01,Site)
+tree.ht.summ0<-summarize(tree.ht.gr0,
+                         n.trees.all=n(),
+                         n.trees.surv=sum(Surv))
+tree.ht.summ0$Surv_Pct<-(tree.ht.summ0$n.trees.surv/tree.ht.summ0$n.trees.all)*100
+View(tree.ht.summ0)
+
+tree.ht.gr2<-group_by(tree.ht2,Site,Region)
+tree.ht.summ2<-summarize(tree.ht.gr2,
+                         n.trees=n(),
+                         mean.Ht=mean(Ht,na.rm=T),
+                         sd.Ht=sd(Ht,na.rm=T),
+                         mean.DBH=mean(DBH,na.rm=T),
+                         sd.DBH=sd(DBH,na.rm=T))
+View(tree.ht.summ2)
+
+tree.ht.gr3<-group_by(tree.ht2,Site)
+tree.ht.summ3<-summarize(tree.ht.gr3,
+                         n.trees=n(),
+                         mean.Ht=mean(Ht,na.rm=T),
+                         sd.Ht=sd(Ht,na.rm=T),
+                         mean.DBH=mean(DBH,na.rm=T),
+                         sd.DBH=sd(DBH,na.rm=T))
+View(tree.ht.summ3)
+
+
+tree.ht.gr<-group_by(tree.ht2,Site,Region)
+tree.ht.summ<-summarize(tree.ht.gr,
+                     mean.Ht=mean(Ht),
+                     sd.Ht=sd(Ht))
+tree.ht.summ
+
+tree.ht.BH<-tree.ht2[tree.ht2$Region=="Black Hills",]
+tree.ht.EHP<-tree.ht2[tree.ht2$Region=="Eastern High Plains",]
+tree.ht.SEM<-tree.ht2[tree.ht2$Region=="Southeast Montana",]
+
+
+library(equivalence)
+
+bh.ehp<-tost(tree.ht.EHP$Ht, tree.ht.BH$Ht, epsilon = 3)
+bh.ehp$result
+
+bh.sem<-tost(tree.ht.SEM$Ht, tree.ht.BH$Ht, epsilon = 3)
+bh.sem$result
+
+ehp.sem<-tost(tree.ht.SEM$Ht, tree.ht.EHP$Ht, epsilon = 3)
+ehp.sem$result
+
+summary(tree.ht$Ht); sd(tree.ht$Ht); length(tree.ht$Ht)
+summary(tree.ht$DBH); sd(tree.ht$DBH,na.rm=T); length(tree.ht$DBH)
+
+tree.ht.nlme=nlme(Ht~1.37+exp(b0+b1*DBH**b2),
+                  data=tree.ht,
+                  fixed=(b0+b1+b2~1),
+                  random=b0~1|SeedSource,
+                  start=c(b0=2.63,b1=-60,b2=-1.8),
+                  weights=varPower(0.2,form=~DBH),
+                  control=nlmeControl(minScale=1e-10,returnObject=TRUE),na.action=na.omit)
+summary(tree.ht.nlme); furnival(tree.ht.nlme)
+
+seed.ranef<-data.frame(ranef(tree.ht.nlme))
+seed.ranef <- add_rownames(seed.ranef, "SeedSource")
+
+DBH<-seq(1,30,by=0.25)
+HT.pred.seed=data.frame(DBH)
+HT.pred.seed$DBH_cm<-HT.pred.seed$DBH
+HT.pred.seed2<-merge(HT.pred.seed,seed.ranef)
+HT.pred.seed2$SeedSourceID<-HT.pred.seed2$SeedSource
+
+seedsource<-read.csv('C:\\Users\\russellm\\Documents\\Projects\\Ponderosa\\seedsource_full.csv')
+
+HT.pred.seed2<-merge(HT.pred.seed2,seedsource,by=c("SeedSourceID"))
+
+# NEW MODEL
+pp.new2<-function(b0,DBH){
+  HT.new=1.37+exp((b0+2.67366)+-65.3370*DBH**(-1.78978))
+}
+
+HT.pred.seed2$HT.new=mapply(pp.new2,b0=HT.pred.seed2$b0,DBH=(HT.pred.seed2$DBH*2.54))
+
+#Graph of seed source as a random effect
+
+p.ht.ranef<-ggplot(data=HT.pred.seed2, aes(DBH,HT.new,color=Region, 
+                                               group=interaction(Region, SeedSourceID)))+
+  geom_line(size=0.75,aes(color = Region,linetype=Region))+
+  xlab("DBH (cm)")+
+  ylab("HT (m)")+
+  scale_color_grey()+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line=element_line(colour="black"),
+        legend.title=element_blank(),
+        legend.position= "none",
+        legend.text=element_text(size=7),
+        legend.key=element_blank(),
+        legend.key.width = unit(0.75,"cm"))
+p.ht.ranef
+
+library(gridExtra)
+p.all<-grid.arrange(p.ht.ranef, p.dinc.ranef, nrow = 1)
+
+ggsave(filename = "C:\\Users\\russellm\\Documents\\Projects\\Ponderosa\\Manuscripts\\Figs\\Fig2.jpg", plot=p.all,width=7,height=4,units="in",scale=1)
+
+
+
+
+
+
+
+#MN-Red pine
+tree.red<-read.csv('C:\\Users\\russellm\\Documents\\Analyses\\MN\\Ponderosa\\MN_TREE.csv')
+tree.red<-subset(tree.red,SPCD==125 & STATUSCD==1 & INVYR>=1999)
+
+
+tree.red<-select(tree.red,STATECD,COUNTYCD,PLOT,SUBP,INVYR,TREE,DIA)
+
+dbh<-data.frame("INVYR" = c(1999:2017), 
+                "dia_name" = c("dia1999","dia2000","dia2001","dia2002","dia2003","dia2004","dia2005","dia2006","dia2007","dia2008","dia2009","dia2010","dia2011","dia2012","dia2013","dia2014","dia2015","dia2016","dia2017"))
+
+tree.red<-merge(tree.red,dbh,by="INVYR")
+
+# # Make it wide
+# tree_wide <- spread(tree.red, INVYR, DIA)
+# head(tree_wide)
+
+tree_wide2<-tree.red %>%
+  mutate(INVYR = stringr::str_extract(INVYR, "[0-9]+")) %>%
+  filter(!is.na(DIA)) %>%
+  group_by(STATECD,COUNTYCD,PLOT,SUBP,TREE) %>%
+  mutate(INVYR2 = lead(INVYR),
+         DIA2 = lead(DIA, order_by = INVYR)) %>%
+  filter(!is.na(DIA2)) %>%
+  select(STATECD,COUNTYCD,PLOT,SUBP,TREE, INVYR, INVYR2, DIA, DIA2)
+
+head(tree_wide2)
+
+tree_wide.summarize<-tree_wide2%>%
+  group_by(STATECD,COUNTYCD,PLOT,SUBP,TREE) %>%
+  summarize(num_meas=n())
+tree_wide.summarize
+
+tree_wide2$DIA_cm<-tree_wide2$DIA*2.54
+tree_wide2$DIA2_cm<-tree_wide2$DIA2*2.54
+tree_wide2$int<-as.numeric(tree_wide2$INVYR2)-as.numeric(tree_wide2$INVYR)
+#tree_wide2<-subset(tree_wide2,DIA2_cm-DIA_cm>=0 & DIA_cm<=38.0151)
+tree_wide2<-subset(tree_wide2,DIA2_cm-DIA_cm>=0)
+
+tree_wide2$dinc_ann<-((tree_wide2$DIA2_cm-tree_wide2$DIA_cm)/tree_wide2$int)
+tree_wide2$dbh1<-tree_wide2$DIA_cm
+tree_wide2<-subset(tree_wide2,dbh1<=40)
+#tree_wide2<-select(tree_wide2,dbh1,dinc_ann)
+tree_wide3 <- tree_wide2 %>% 
+  ungroup() %>%
+  select(dbh1,dinc_ann)
+tree_wide3$dbhclass<-ifelse(tree_wide3$dbh1<=10,"<= 10",
+                       ifelse(tree_wide3$dbh1>10 & tree_wide3$dbh1<=20, "10-20",
+                              ifelse(tree_wide3$dbh1>20 & tree_wide3$dbh1<= 30, "20-30",
+                                     "30-40")))
+
+tree_wide3$Source<-"Red pine (Minnesota)"
+
+#Western states-ponderosa pine
+tree.sd<-read.csv('C:\\Users\\russellm\\Documents\\Analyses\\MN\\Ponderosa\\SD_TREE.csv')
+tree.sd<-subset(tree.sd,SPCD==122 & STATUSCD==1 & INVYR>=2001)
+
+tree.nd<-read.csv('C:\\Users\\russellm\\Documents\\Analyses\\MN\\Ponderosa\\ND_TREE.csv')
+tree.nd<-subset(tree.nd,SPCD==122 & STATUSCD==1 & INVYR>=2001)
+
+tree.ne<-read.csv('C:\\Users\\russellm\\Documents\\Analyses\\MN\\Ponderosa\\NE_TREE.csv')
+tree.ne<-subset(tree.ne,SPCD==122 & STATUSCD==1 & INVYR>=2001)
+
+tree.mt<-read.csv('C:\\Users\\russellm\\Documents\\Analyses\\MN\\Ponderosa\\MT_TREE.csv')
+tree.mt<-subset(tree.sd,SPCD==122 & STATUSCD==1 & INVYR>=2003)
+
+tree.co<-read.csv('C:\\Users\\russellm\\Documents\\Analyses\\MN\\Ponderosa\\CO_TREE.csv')
+tree.co<-subset(tree.co,SPCD==122 & STATUSCD==1 & INVYR>=2002)
+
+tree.wy<-read.csv('C:\\Users\\russellm\\Documents\\Analyses\\MN\\Ponderosa\\WY_TREE.csv')
+tree.wy<-subset(tree.wy,SPCD==122 & STATUSCD==1 & INVYR>=2001)
+
+
+tree.west<-rbind(tree.sd, tree.nd, tree.ne, tree.mt, tree.co, tree.wy) 
+
+dbh<-data.frame("INVYR" = c(2001:2016), 
+                "dia_name" = c("dia2001","dia2002","dia2003","dia2004","dia2005","dia2006","dia2007","dia2008","dia2009","dia2010","dia2011","dia2012","dia2013","dia2014","dia2015","dia2016"))
+
+tree.west<-merge(tree.west,dbh,by="INVYR")
+
+# # Make it wide
+tree_wide2_w<-tree.west %>%
+  mutate(INVYR = stringr::str_extract(INVYR, "[0-9]+")) %>%
+  filter(!is.na(DIA)) %>%
+  group_by(STATECD,COUNTYCD,PLOT,SUBP,TREE) %>%
+  mutate(INVYR2 = lead(INVYR),
+         DIA2 = lead(DIA, order_by = INVYR)) %>%
+  filter(!is.na(DIA2)) %>%
+  select(STATECD,COUNTYCD,PLOT,SUBP,TREE, INVYR, INVYR2, DIA, DIA2)
+
+head(tree_wide2_w)
+
+tree_wide.summarize<-tree_wide2_w%>%
+  group_by(STATECD,COUNTYCD,PLOT,SUBP,TREE) %>%
+  summarize(num_meas=n())
+tree_wide.summarize
+
+tree_wide2_w$DIA_cm<-tree_wide2_w$DIA*2.54
+tree_wide2_w$DIA2_cm<-tree_wide2_w$DIA2*2.54
+tree_wide2_w$int<-as.numeric(tree_wide2_w$INVYR2)-as.numeric(tree_wide2_w$INVYR)
+#tree_wide2_w<-subset(tree_wide2_w,DIA2_cm-DIA_cm>=0 & DIA_cm<=38.0151)
+tree_wide2_w<-subset(tree_wide2_w,DIA2_cm-DIA_cm>=0)
+
+tree_wide2_w$dinc_ann<-((tree_wide2_w$DIA2_cm-tree_wide2_w$DIA_cm)/tree_wide2_w$int)
+tree_wide2_w$dbh1<-tree_wide2_w$DIA_cm
+tree_wide2_w<-subset(tree_wide2_w,dbh1<=40)
+#tree_wide2_w<-select(tree_wide2_w,dbh1,dinc_ann)
+tree_wide3_w <- tree_wide2_w %>% 
+  ungroup() %>%
+  select(dbh1,dinc_ann)
+tree_wide3_w$dbhclass<-ifelse(tree_wide3_w$dbh1<=10,"<= 10",
+                            ifelse(tree_wide3_w$dbh1>10 & tree_wide3_w$dbh1<=20, "10-20",
+                                   ifelse(tree_wide3_w$dbh1>20 & tree_wide3_w$dbh1<= 30, "20-30",
+                                          "30-40")))
+
+tree_wide3_w$Source<-"Ponderosa pine (Western states)"
+
+
+# MN Ponderosa
+pond$dinc_ann<-((pond$dbh2-pond$dbh1)/pond$int)
+pond2<-select(pond,dbh1,dinc_ann)
+pond2$dbhclass<-ifelse(pond2$dbh1<=10,"<= 10",
+                       ifelse(pond2$dbh1>10 & pond2$dbh1<=20, "10-20",
+                              ifelse(pond2$dbh1>20 & pond2$dbh1<= 30, "20-30",
+                                     "30-40")))
+pond2$Source<-"Ponderosa (Minnesota)"
+
+tree.all<-rbind(tree_wide3_w,tree_wide3,pond2)
+
+
+tree.all$dbhclass <- factor(tree.all$dbhclass, levels = c("<= 10","10-20","20-30","30-40"))
+
+p.dinc.box<-ggplot(tree.all,aes(factor(dbhclass),dinc_ann,fill=Source))+
+  geom_boxplot(outlier.shape = NA)+
+  xlab("DBH class (cm)")+
+  ylab(expression(paste(Delta,'DBH (cm ',yr^-1,')',sep='')))+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line=element_line(colour="black"),
+        legend.title=element_blank(),
+        legend.position= c(.75, .75),
+        legend.text=element_text(size=7),
+        legend.key=element_blank(),
+        legend.key.width = unit(0.75,"cm"))
+p.dinc.box
+
+
+
+
+
+
+
+
+

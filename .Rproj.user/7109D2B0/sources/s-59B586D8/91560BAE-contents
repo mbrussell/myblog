@@ -1,0 +1,124 @@
+library(tidyverse)
+library(nlme)
+
+source('C:\\Users\\russellm\\Documents\\Analyses\\R Functions\\furnival.r')
+
+tree<-read.csv('C:\\Users\\russellm\\Documents\\Data\\MN\\Ponderosa\\pondpine.csv')
+
+tree.surv<-tree[tree$Surv<=1,] #Remove unknown survival/couldn't find
+
+tree.surv.lam<-tree.surv[tree.surv$Site=="LAM",] 
+tree.surv.lam$Dom<-ifelse(tree.surv.lam$Ht >=12.7, 1, 0)
+
+tree.ht<-subset(tree,Site %in% c("GR","LAM","MOR"))
+tree.ht<-tree.ht[tree.ht$Surv==1,]
+p.ht<-ggplot(data=tree.ht, aes(DBH,Ht,color=Site))+
+  geom_point()+
+  xlab("DBH (cm)")+
+  ylab("HT (m)")+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line=element_line(color="black"),
+        plot.margin = unit(c(0,0,0,0), "cm"),
+        legend.key.size = unit(0.3, "cm"),
+        legend.title = element_text(size=12,color="black"),
+        axis.title.x = element_text(size=12,color="black"),
+        axis.title.y = element_text(size=12,color="black"),
+        axis.text.x = element_text(size=12,color="black"),
+        axis.text.y  = element_text(size=12,color="black"))
+p.ht
+
+
+#Fit a new model of HT
+
+summary(tree.ht$Ht); sd(tree.ht$Ht); length(tree.ht$Ht)
+summary(tree.ht$DBH); sd(tree.ht$DBH,na.rm=T); length(tree.ht$DBH)
+
+tree.ht.nlme=nlme(Ht~1.37+exp(b0+b1*DBH**b2),
+                  data=tree.ht,
+                  fixed=(b0+b1+b2~1),
+                  random=b0~1|SeedSource,
+                  start=c(b0=2.63,b1=-60,b2=-1.8),
+                  weights=varPower(0.2,form=~DBH),
+                  control=nlmeControl(minScale=1e-10,returnObject=TRUE),na.action=na.omit)
+summary(tree.ht.nlme); furnival(tree.ht.nlme)
+
+seed.ranef<-data.frame(ranef(tree.ht.nlme))
+seed.ranef <- add_rownames(seed.ranef, "SeedSource")
+
+tree.ht<-merge(tree.ht,seed.ranef,by=c("SeedSource"))
+
+# FVS-Eastern Montana (FVS-EM); Wykoff model
+pp.em<-function(DBH){
+  HT.em=4.5+exp(4.4140+-8.907/(DBH+1.0))
+}
+# FVS-Central Rockies (FVS-CR); Wykoff model
+pp.cr<-function(DBH){
+  HT.cr=4.5+exp(4.6024+-11.4693/(DBH+1.0))
+}
+
+# FVS-Lake States (FVS-LS); CR model
+pp.ls<-function(DBH){
+  HT.ls=4.5+266.4562*exp(-3.9931*DBH**-0.3860)
+}
+
+# Vanderschaaf-MN; exp log model
+pp.vs<-function(DBH){
+  HT.vs=exp(2.7588+0.5097*log(DBH))
+}
+
+# FVS-Central Rockies (FVS-CR); Black Hills model
+pp.cr.bh<-function(DBH,SI){
+  HT.cr.bh=(32.108633*(SI**0.276926)*((1-exp(-0.057766*DBH))**1.0026686))+4.5
+}
+
+# NEW MODEL
+pp.new.f<-function(DBH){
+  HT.new.f=1.37+exp(2.67366+-65.3370*DBH**-1.78978)
+}
+
+# NEW MODEL - with random effects
+pp.new.fr<-function(DBH,b0){
+  HT.new.fr=1.37+exp((b0+2.67366)+-65.3370*DBH**-1.78978)
+}
+
+tree.ht$HT.em=mapply(pp.em,DBH=(tree.ht$DBH/2.54))*0.3048
+tree.ht$HT.cr=mapply(pp.cr,DBH=(tree.ht$DBH/2.54))*0.3048
+tree.ht$HT.ls=mapply(pp.ls,DBH=(tree.ht$DBH/2.54))*0.3048
+tree.ht$HT.vs=mapply(pp.vs,DBH=(tree.ht$DBH/2.54))*0.3048
+tree.ht$HT.cr.bh=mapply(pp.cr.bh,DBH=(tree.ht$DBH/2.54),SI=46)*0.3048
+tree.ht$HT.new.f=mapply(pp.new.f,DBH=(tree.ht$DBH))
+tree.ht$HT.new.fr=mapply(pp.new.fr,DBH=(tree.ht$DBH),b0=tree.ht$b0)
+
+
+library(equivalence)
+mean(tree.ht$HT.new.f,na.rm=T); mean(tree.ht$Ht-tree.ht$HT.new.f,na.rm=T); sd(tree.ht$Ht-tree.ht$HT.new.f,na.rm=T)
+m.new.f<-tost(tree.ht$HT.new.f, tree.ht$Ht, epsilon =sd(tree.ht$Ht-tree.ht$HT.new.f,na.rm=T)*.23)
+m.new.f$result
+
+mean(tree.ht$HT.new.fr,na.rm=T); mean(tree.ht$Ht-tree.ht$HT.new.fr,na.rm=T); sd(tree.ht$Ht-tree.ht$HT.new.fr,na.rm=T)
+m.new.fr<-tost(tree.ht$HT.new.fr, tree.ht$Ht, epsilon =sd(tree.ht$Ht-tree.ht$HT.new.fr,na.rm=T)*.21)
+m.new.fr$result
+
+mean(tree.ht$HT.cr.bh,na.rm=T); mean(tree.ht$Ht-tree.ht$HT.cr.bh,na.rm=T); sd(tree.ht$Ht-tree.ht$HT.cr.bh,na.rm=T)
+m.new.fr<-tost(tree.ht$HT.cr.bh, tree.ht$Ht, epsilon =sd(tree.ht$Ht-tree.ht$HT.cr.bh,na.rm=T)*.47)
+m.new.fr$result
+
+mean(tree.ht$HT.cr,na.rm=T); mean(tree.ht$Ht-tree.ht$HT.cr,na.rm=T); sd(tree.ht$Ht-tree.ht$HT.cr,na.rm=T)
+m.new.fr<-tost(tree.ht$HT.cr, tree.ht$Ht, epsilon =sd(tree.ht$Ht-tree.ht$HT.cr,na.rm=T)*.89)
+m.new.fr$result
+
+mean(tree.ht$HT.em,na.rm=T); mean(tree.ht$Ht-tree.ht$HT.em,na.rm=T); sd(tree.ht$Ht-tree.ht$HT.em,na.rm=T)
+m.new.fr<-tost(tree.ht$HT.em, tree.ht$Ht, epsilon =sd(tree.ht$Ht-tree.ht$HT.em,na.rm=T)*.58)
+m.new.fr$result
+
+
+mean(tree.ht$HT.ls,na.rm=T); mean(tree.ht$Ht-tree.ht$HT.ls,na.rm=T); sd(tree.ht$Ht-tree.ht$HT.ls,na.rm=T)
+m.new.fr<-tost(tree.ht$HT.ls, tree.ht$Ht, epsilon =sd(tree.ht$Ht-tree.ht$HT.ls,na.rm=T)*1.98)
+m.new.fr$result
+
+
+mean(tree.ht$HT.vs,na.rm=T); mean(tree.ht$Ht-tree.ht$HT.vs,na.rm=T); sd(tree.ht$Ht-tree.ht$HT.vs,na.rm=T)
+m.new.fr<-tost(tree.ht$HT.vs, tree.ht$Ht, epsilon =sd(tree.ht$Ht-tree.ht$HT.vs,na.rm=T)*1.64)
+m.new.fr$result
+
+

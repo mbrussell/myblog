@@ -2,11 +2,11 @@ baseURL = "https://mbrussell.netlify.com/"
 languageCode = "en-us"
 title = "Data with trees"
 theme = "minimal"
-disqusShortname = "username" # delete this to disable disqus comments
+disqusShortname = "mbrussell" # delete this to disable disqus comments
 googleAnalytics = ""
 
 [params]
-    author = "Matt Russell"
+    author = "Matt Russell" 
     description = "This is it."
     githubUsername = "#"
     accent = "red"
