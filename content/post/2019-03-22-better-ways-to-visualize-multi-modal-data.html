@@ -1,0 +1,59 @@
+---
+title: Adding some music to boxplots, and better ways to visualize diameter distributions
+author: Matt Russell
+date: '2019-03-22'
+slug: better-ways-to-visualize-multi-modal-data
+categories:
+  - Data visualization
+tags:
+  - R
+  - ggplot2
+  - geom_violin()
+  - geom_boxplot()
+---
+
+
+
+<p>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on <em>between</em> those boxes and whiskers?</p>
+<p><strong>Some forestry data</strong>: In the examples below, I’ve used tree diameters measured in four management units at the <a href="https://www.nrs.fs.fed.us/ef/locations/me/penobscot/">Penobscot Experimental Forest</a> in Maine. The four management units are being managed under a <a href="https://en.wikipedia.org/wiki/Selection_cutting">selection system</a>, where foresters are harvesting a select number of trees every five or ten years to create an uneven-aged forest.</p>
+<p>After plotting the data using boxplots, we can see a greater median in management units 9 and 16. All of the distributions are generally right-skewed, indicating the mean is greater than the median. Outliers in red are identified as large-diameter trees that are more than <a href="https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/box-whisker-plots/a/identifying-outliers-iqr-rule">1.5 times the size</a> of the interquartile range:</p>
+<pre class="r"><code>p.tree&lt;-ggplot(tree,aes(MgmtUnit,DBH))+
+  xlab(&quot;Management unit&quot;)+
+  ylab(&quot;Tree diameter (inches)&quot;)+
+  theme(legend.position = &quot;none&quot;,
+        panel.background = element_rect(fill = &quot;NA&quot;),
+        axis.line = element_line(color=&quot;black&quot;))
+
+p.tree + geom_boxplot(outlier.colour=&quot;red&quot;,outlier.shape=8)</code></pre>
+<p><img src="/post/2019-03-22-better-ways-to-visualize-multi-modal-data_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Violin plots are similar to box plots, except that they also show the kernel probability density of the data for the range of values. Despite the fact that they <a href="https://simplystatistics.org/2017/07/13/the-joy-of-no-more-violin-plots/">look like Christmas ornaments</a>, violin plots are more sensitive to changes in the density of a variable of interest.</p>
+<p>We can create a violin plot showing the distribution of the tree diameters using <code>geom_violin()</code>. What can we see in the violin plot that we can’t in the boxplot? Some of the distributions display noted “rises” at certain tree diameters, in particular for management units 12 and 20:</p>
+<pre class="r"><code>p.tree + geom_violin(aes(fill = factor(MgmtUnit)))</code></pre>
+<p><img src="/post/2019-03-22-better-ways-to-visualize-multi-modal-data_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>We might like to still see some of numerical summaries of the data, say the mean and standard deviations. <a href="http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization">STHDA</a> highlights some useful code that adds the mean and +/- one standard deviation to the violin plots by calling the <code>data_summary()</code> function:</p>
+<pre class="r"><code>data_summary &lt;- function(x) {
+   m &lt;- mean(x)
+   ymin &lt;- m-sd(x)
+   ymax &lt;- m+sd(x)
+   return(c(y=m,ymin=ymin,ymax=ymax))
+}
+
+p.tree + geom_violin(aes(fill = factor(MgmtUnit)))+
+  stat_summary(fun.data=data_summary)</code></pre>
+<p><img src="/post/2019-03-22-better-ways-to-visualize-multi-modal-data_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>If we want the best of both worlds, we can also overlay a boxplot onto a violin plot. Adjusting the width of the boxplot will allow it to fit nicely within the violin plot. Plus, you’ll be able to see how much of the “tails” in the violin plot are represented by the outliers:</p>
+<pre class="r"><code>p.tree+geom_violin(aes(fill = factor(MgmtUnit)))+
+  geom_boxplot(width=0.2)</code></pre>
+<p><img src="/post/2019-03-22-better-ways-to-visualize-multi-modal-data_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>When you read more about how the Penobscot data were collected, you’ll learn that the forest inventory used different-sized plots depending on the diameter of the trees. Permanent sample plots consisted of nested 1/5-, 1/20-, and 1/50-acre circular plots for measuring trees &gt;= 4.5 inches, 2.5 to 4.4 inches, and 0.5 to 2.4 inches in diameter, respectively.</p>
+<p>We might want to know how the distribution of tree diameters differ in the overstory trees (trees measured on the 1/5-acre plot) versus the understory (trees measured on the 1/20- and 1/50-acre plots). Foresters may be interested in knowing how and when the understory trees may be expected to transition into the overstory, and a visual representation of this would help.</p>
+<p><a href="https://stackoverflow.com/questions/35717353/split-violin-plot-with-ggplot2">jan-glx</a> provides code to produce a split violin plot, which produces a side-by-side comparison of two attributes. Using the <code>geom_split_violin()</code> function, we’re able to see that there are a lot of 1 to 2-inch trees across all management units:</p>
+<pre class="r"><code>ggplot(tree, aes(MgmtUnit, DBH, fill = factor(treesize))) + 
+  geom_split_violin()+
+  xlab(&quot;Management unit&quot;)+
+  ylab(&quot;Tree diameter (inches)&quot;)+
+  theme(axis.line = element_line(color=&quot;black&quot;),
+        panel.background = element_rect(fill = &quot;NA&quot;))</code></pre>
+<p><img src="/post/2019-03-22-better-ways-to-visualize-multi-modal-data_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>A goal of selection harvesting is to create a <a href="https://www.google.com/search?sa=X&amp;rlz=1C1CHBF_enUS808US809&amp;biw=1360&amp;bih=625&amp;q=reverse+j+diameter+distribution&amp;tbm=isch&amp;source=lnms&amp;ved=2ahUKEwj57Km1yJbhAhUK4oMKHQmBDecQ7Al6BAgJEA0">reverse-J diameter distribution</a>, with lots of small trees and fewer large trees. We can see this with the violin plots, but aren’t able to see it with a traditional boxplot.</p>
+<p>P.S. Thanks to the Penobscot Experimental Forest for their excellent <a href="https://www.nrs.fs.fed.us/ef/locations/me/penobscot/data/data_catalog/">research data catalog</a> that contains many long-term data sets of their great studies.</p>

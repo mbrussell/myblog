@@ -1,11 +1,11 @@
 ---
-description: Lorem ipsum dolor sit amet
+description: Four-hour workshop at 2019 Society of American Foresters Convention (Oct 30, 2019; Louisville, KY) 
 draft: false
 repo: '#'
 tags:
-- go
-- golang
-- hugo
-title: Project 1
+- R
+- Data science
+- Workshop
+title: Data Science for Forestry Applications
 weight: 1
 ---

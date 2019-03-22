@@ -1,13 +1,13 @@
 baseURL = "https://mbrussell.netlify.com/"
 languageCode = "en-us"
-title = "Data with trees"
+title = "Forests aren't random."
 theme = "minimal"
 disqusShortname = "mbrussell" # delete this to disable disqus comments
 googleAnalytics = ""
 
 [params]
     author = "Matt Russell" 
-    description = "This is it."
+    description = "I'm an Associate Professor and Extension Specialist at the University of Minnesota. I use data to make better decisions about our forests."
     githubUsername = "#"
     accent = "red"
     showBorder = true
@@ -37,7 +37,7 @@ googleAnalytics = ""
 # The list of available icons can be found at http://fontawesome.io/icons/
 
 [[menu.icon]]
-    url = "mailto:russellm@umn.edu"
+    url = "mailto:matth.russell@gmail.com"
     name = "envelope-o"
     weight = 1
 
@@ -57,6 +57,6 @@ googleAnalytics = ""
     weight = 4
     
 [[menu.icon]]
-    url = "https://www.researchgate.net/profile/Matthew_Russell4"
-    name = "fab fa-researchgate"
+    url = "https://scholar.google.com/citations?user=4OO83OcAAAAJ&hl=en&authuser=1"
+    name = "fas fa-graduation-cap"
     weight = 5

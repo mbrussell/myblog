@@ -19,6 +19,11 @@
   </url>
   
   <url>
+    <loc>/post/better-ways-to-visualize-multi-modal-data/</loc>
+    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/spreading-and-gathering-tree-data/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url>
@@ -39,6 +44,17 @@
   </url>
   
   <url>
+    <loc>/tags/data-science/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/data-visualization/</loc>
+    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/data-wrangling/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -46,7 +62,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -57,12 +73,20 @@
   </url>
   
   <url>
-    <loc>/tags/go/</loc>
+    <loc>/tags/geom_boxplot/</loc>
+    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/golang/</loc>
+    <loc>/tags/geom_violin/</loc>
+    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ggplot2/</loc>
+    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -77,24 +101,19 @@
   </url>
   
   <url>
-    <loc>/tags/hugo/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/js/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -123,6 +142,11 @@
   <url>
     <loc>/tags/tidyr/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/workshop/</loc>
     <priority>0</priority>
   </url>
   

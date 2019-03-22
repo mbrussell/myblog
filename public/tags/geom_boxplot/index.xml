@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geom_boxplot on Forests aren&#39;t random.</title>
+    <link>/tags/geom_boxplot/</link>
+    <description>Recent content in Geom_boxplot on Forests aren&#39;t random.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/geom_boxplot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding some music to boxplots, and better ways to visualize diameter distributions</title>
+      <link>/post/better-ways-to-visualize-multi-modal-data/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/better-ways-to-visualize-multi-modal-data/</guid>
+      <description>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on between those boxes and whiskers?
+Some forestry data: In the examples below, I’ve used tree diameters measured in four management units at the Penobscot Experimental Forest in Maine.</description>
+    </item>
+    
+  </channel>
+</rss>

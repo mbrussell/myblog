@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Adding some music to boxplots, and better ways to visualize diameter distributions</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Adding some music to boxplots, and better ways to visualize diameter distributions</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/workshop/">Workshops</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matth.russell@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/matthew-russell-70a94824/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://health.forestry.umn.edu/publications"><i class="fa fa-fas fa-book"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://scholar.google.com/citations?user=4OO83OcAAAAJ&amp;hl=en&amp;authuser=1"><i class="fa fa-fas fa-graduation-cap"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/better-ways-to-visualize-multi-modal-data/">Adding some music to boxplots, and better ways to visualize diameter distributions</a></h4>
+    <h5>March 22, 2019</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/ggplot2"><kbd class="item-tag">ggplot2</kbd></a>
+    
+    <a href="/tags/geom_violin"><kbd class="item-tag">geom_violin()</kbd></a>
+    
+    <a href="/tags/geom_boxplot"><kbd class="item-tag">geom_boxplot()</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<p>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on <em>between</em> those boxes and whiskers?</p>
+<p><strong>Some forestry data</strong>: In the examples below, I’ve used tree diameters measured in four management units at the <a href="https://www.nrs.fs.fed.us/ef/locations/me/penobscot/">Penobscot Experimental Forest</a> in Maine. The four management units are being managed under a <a href="https://en.wikipedia.org/wiki/Selection_cutting">selection system</a>, where foresters are harvesting a select number of trees every five or ten years to create an uneven-aged forest.</p>
+<p>After plotting the data using boxplots, we can see a greater median in management units 9 and 16. All of the distributions are generally right-skewed, indicating the mean is greater than the median. Outliers in red are identified as large-diameter trees that are more than <a href="https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/box-whisker-plots/a/identifying-outliers-iqr-rule">1.5 times the size</a> of the interquartile range:</p>
+<pre class="r"><code>p.tree&lt;-ggplot(tree,aes(MgmtUnit,DBH))+
+  xlab(&quot;Management unit&quot;)+
+  ylab(&quot;Tree diameter (inches)&quot;)+
+  theme(legend.position = &quot;none&quot;,
+        panel.background = element_rect(fill = &quot;NA&quot;),
+        axis.line = element_line(color=&quot;black&quot;))
+
+p.tree + geom_boxplot(outlier.colour=&quot;red&quot;,outlier.shape=8)</code></pre>
+<p><img src="/post/2019-03-22-better-ways-to-visualize-multi-modal-data_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Violin plots are similar to box plots, except that they also show the kernel probability density of the data for the range of values. Despite the fact that they <a href="https://simplystatistics.org/2017/07/13/the-joy-of-no-more-violin-plots/">look like Christmas ornaments</a>, violin plots are more sensitive to changes in the density of a variable of interest.</p>
+<p>We can create a violin plot showing the distribution of the tree diameters using <code>geom_violin()</code>. What can we see in the violin plot that we can’t in the boxplot? Some of the distributions display noted “rises” at certain tree diameters, in particular for management units 12 and 20:</p>
+<pre class="r"><code>p.tree + geom_violin(aes(fill = factor(MgmtUnit)))</code></pre>
+<p><img src="/post/2019-03-22-better-ways-to-visualize-multi-modal-data_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>We might like to still see some of numerical summaries of the data, say the mean and standard deviations. <a href="http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization">STHDA</a> highlights some useful code that adds the mean and +/- one standard deviation to the violin plots by calling the <code>data_summary()</code> function:</p>
+<pre class="r"><code>data_summary &lt;- function(x) {
+   m &lt;- mean(x)
+   ymin &lt;- m-sd(x)
+   ymax &lt;- m+sd(x)
+   return(c(y=m,ymin=ymin,ymax=ymax))
+}
+
+p.tree + geom_violin(aes(fill = factor(MgmtUnit)))+
+  stat_summary(fun.data=data_summary)</code></pre>
+<p><img src="/post/2019-03-22-better-ways-to-visualize-multi-modal-data_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>If we want the best of both worlds, we can also overlay a boxplot onto a violin plot. Adjusting the width of the boxplot will allow it to fit nicely within the violin plot. Plus, you’ll be able to see how much of the “tails” in the violin plot are represented by the outliers:</p>
+<pre class="r"><code>p.tree+geom_violin(aes(fill = factor(MgmtUnit)))+
+  geom_boxplot(width=0.2)</code></pre>
+<p><img src="/post/2019-03-22-better-ways-to-visualize-multi-modal-data_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>When you read more about how the Penobscot data were collected, you’ll learn that the forest inventory used different-sized plots depending on the diameter of the trees. Permanent sample plots consisted of nested 1/5-, 1/20-, and 1/50-acre circular plots for measuring trees &gt;= 4.5 inches, 2.5 to 4.4 inches, and 0.5 to 2.4 inches in diameter, respectively.</p>
+<p>We might want to know how the distribution of tree diameters differ in the overstory trees (trees measured on the 1/5-acre plot) versus the understory (trees measured on the 1/20- and 1/50-acre plots). Foresters may be interested in knowing how and when the understory trees may be expected to transition into the overstory, and a visual representation of this would help.</p>
+<p><a href="https://stackoverflow.com/questions/35717353/split-violin-plot-with-ggplot2">jan-glx</a> provides code to produce a split violin plot, which produces a side-by-side comparison of two attributes. Using the <code>geom_split_violin()</code> function, we’re able to see that there are a lot of 1 to 2-inch trees across all management units:</p>
+<pre class="r"><code>ggplot(tree, aes(MgmtUnit, DBH, fill = factor(treesize))) + 
+  geom_split_violin()+
+  xlab(&quot;Management unit&quot;)+
+  ylab(&quot;Tree diameter (inches)&quot;)+
+  theme(axis.line = element_line(color=&quot;black&quot;),
+        panel.background = element_rect(fill = &quot;NA&quot;))</code></pre>
+<p><img src="/post/2019-03-22-better-ways-to-visualize-multi-modal-data_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>A goal of selection harvesting is to create a <a href="https://www.google.com/search?sa=X&amp;rlz=1C1CHBF_enUS808US809&amp;biw=1360&amp;bih=625&amp;q=reverse+j+diameter+distribution&amp;tbm=isch&amp;source=lnms&amp;ved=2ahUKEwj57Km1yJbhAhUK4oMKHQmBDecQ7Al6BAgJEA0">reverse-J diameter distribution</a>, with lots of small trees and fewer large trees. We can see this with the violin plots, but aren’t able to see it with a traditional boxplot.</p>
+<p>P.S. Thanks to the Penobscot Experimental Forest for their excellent <a href="https://www.nrs.fs.fed.us/ef/locations/me/penobscot/data/data_catalog/">research data catalog</a> that contains many long-term data sets of their great studies.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/spreading-and-gathering-tree-data/">Spreading and gathering tree data</a></h4>
+    <h5>March 9, 2019</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/tidyr"><kbd class="item-tag">tidyr</kbd></a>
+    
+    <a href="/tags/gather"><kbd class="item-tag">gather()</kbd></a>
+    
+    <a href="/tags/spread"><kbd class="item-tag">spread()</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mbrussell" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
