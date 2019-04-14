@@ -1,0 +1,133 @@
+moose_all<-read.csv('C:/Users/russellm/Documents/Projects/Moose/Data/moose.csv')
+
+library(tidyverse)
+library(gridExtra)
+
+moose.mean<-moose_all%>% 
+  summarize(mean.moose=mean(Mean))
+moose.mean
+
+
+moose.sum<-moose_all %>% 
+  group_by(Class) %>%
+  summarize(n.moose=n())
+moose.sum
+
+moose<-subset(moose_all,Mean<50000)
+
+moose<-subset(moose_all,Mean<50000&Upper90<50000&Mean>Lower50&Mean>Lower90&Mean<Upper50&Mean<Upper90)
+
+moose.sum<-moose %>% 
+  summarize(n.moose=n(),
+            mean.moose=mean(Mean),
+            mean.Lower50=mean(Lower50),
+            mean.Upper50=mean(Upper50),
+            mean.Lower90=mean(Lower90),
+            mean.Upper90=mean(Upper90))
+moose.sum
+
+moose.class<-moose %>% 
+  group_by(Class) %>%
+  summarize(n.moose=n(),
+            mean.moose=mean(Mean),
+            mean.Lower50=mean(Lower50),
+            mean.Lower90=mean(Lower90),
+            mean.Upper50=mean(Upper50),
+            mean.Upper90=mean(Upper90))
+moose.class
+
+
+
+p.hist<-ggplot(moose, aes(x=Mean, fill=Class2)) +
+  geom_histogram(binwidth=2000,position="dodge",color="black")+
+  xlab("Moose estimate")+
+  ylab("Number of students")+
+  scale_x_continuous(limits = c(0,20000))+
+  theme(axis.line = element_line(color="black"),
+        axis.ticks = element_line(size = 0.5,color="black"),
+       # axis.text.x = element_blank(),
+       legend.position= c(.75, .75),
+       legend.title=element_blank(),
+        axis.text = element_text(size=10,color="black"),
+        panel.background = element_rect(fill = "NA"))
+p.hist
+
+p.box<-ggplot(moose, aes(Class2,Mean)) +
+  geom_boxplot(aes(fill=Class2))+
+  ylab("Moose estimate")+
+  xlab(" ")+
+  scale_y_continuous(limits = c(0,20000))+
+  theme(axis.line = element_line(color="black"),
+        axis.ticks = element_line(size = 0.5,color="black"),
+        # axis.text.x = element_blank(),
+        legend.position = "none",
+        axis.text = element_text(size=10,color="black"),
+        panel.background = element_rect(fill = "NA"))
+p.box
+
+p.data<-grid.arrange(p.hist, p.box, nrow = 1)
+
+ggsave(filename = "C:/Users/russellm/Documents/Projects/Moose/Manuscripts/Fig2.jpg", plot=p.data,width=18,height=(8.5),units="cm",scale=1)
+
+
+
+p.mean<-ggplot(moose, aes(y=StudentID, x=Mean))+
+  geom_point()+
+  geom_vline(xintercept=3030,col="red")+
+  annotate("text", y = -1, x = 5000, label = "DNR estimate (2018): 3,030 moose",col="red")+
+  xlab("Number of moose")+
+  ylab("Student number")+
+  theme(axis.line = element_line(color="black"),
+        axis.ticks = element_line(size = 0.5,color="black"))
+p.mean
+
+# How many people guessed higher than the actual value?
+moose_all$guess<-ifelse(moose_all$Mean>=3030,"HIGHER","LOWER")
+print(paste(round(sum(moose_all$guess=="HIGHER")/length(moose_all$guess),2)*100,"% of students guessed HIGHER than the actual number of moose (3,030)"))
+
+p.50<-ggplot(moose, aes(y=StudentID, x=Mean))+
+  geom_point(size=1)+
+
+  geom_vline(xintercept=3030,col="red")+
+  geom_errorbarh(aes(xmin=Lower50, xmax=Upper50, height=0.01))+
+
+  annotate("text", label = "50% confidence", y = 95, x = 20000)+
+  xlab(" ")+
+  ylab("Student ID")+
+  scale_x_continuous(limits = c(0,30000))+
+  theme(axis.line = element_line(color="black"),
+        axis.ticks = element_line(size = 0.5,color="black"),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(size=10,color="black"),
+        panel.background = element_rect(fill = "NA"))
+p.50
+
+# How many people guessed an interval that contained the actual value?
+moose_all$guess50<-ifelse(moose_all$Lower50<=3030 & moose_all$Upper50 >=3030,"INSIDE","OUTSIDE")
+print(paste(round(sum(moose_all$guess50=="INSIDE")/length(moose_all$guess50),2)*100,"% of students guessed a 50% confidence interval that contains the actual number of moose (3,030)"))
+
+p.90<-ggplot(moose, aes(y=StudentID, x=Mean))+
+  geom_point(size=1)+
+  geom_rect(aes(xmin=2320, xmax=4140, ymin=0, ymax=Inf,col="red",fill="red"))+
+  geom_errorbarh(aes(xmin=Lower90, xmax=Upper90, height=0.01))+
+  annotate("text", label = "90% confidence", y = 95, x = 20000)+
+  xlab("Number of moose")+
+  ylab("Student ID")+
+  scale_x_continuous(limits = c(0,30000))+
+  theme(axis.line = element_line(color="black"),
+        axis.ticks = element_line(size = 0.5,color="black"),
+        panel.background = element_rect(fill = "NA"),
+        axis.text = element_text(size=10,color="black"),
+        legend.position = "none")
+p.90
+
+# How many people guessed an interval that contained the actual value?
+moose_all$guess90<-ifelse(moose_all$Lower90<=3030 & moose_all$Upper90 >=3030,"INSIDE","OUTSIDE")
+print(paste(round(sum(moose_all$guess90=="INSIDE")/length(moose_all$guess90),2)*100,"% of students guessed a 90% confidence interval that contains the actual number of moose (3,030)"))
+
+
+p.all<-grid.arrange(p.50, p.90, nrow = 2)
+
+ggsave(filename = "C:/Users/russellm/Documents/Projects/Moose/Manuscripts/Fig3.jpg", plot=p.all,width=8.5,height=(8.5+(8.5/2)),units="cm",scale=1)
+
+

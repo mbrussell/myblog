@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554662325264.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1016921321",
+    "id" : "5B1D9068",
+    "lastKnownWriteTime" : 1555259094,
+    "last_content_update" : 1555259094337,
+    "path" : "~/git/myblog/content/post/2019-04-07-presenting-regression-results-better.Rmd",
+    "project_path" : "content/post/2019-04-07-presenting-regression-results-better.Rmd",
+    "properties" : {
+        "cursorPosition" : "43,105",
+        "ignored_words" : "Richter's,et,al,de\n",
+        "scrollLine" : "27"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Presenting regression results better with forest plots</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Presenting regression results better with forest plots</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/workshop/">Workshops</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matth.russell@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/matthew-russell-70a94824/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://health.forestry.umn.edu/publications"><i class="fa fa-fas fa-book"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://scholar.google.com/citations?user=4OO83OcAAAAJ&amp;hl=en&amp;authuser=1"><i class="fa fa-fas fa-graduation-cap"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/presenting-regression-results-better/">Presenting regression results better with forest plots</a></h4>
+    <h5>April 7, 2019</h5>
+    
+    <a href="/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="/tags/regression"><kbd class="item-tag">Regression</kbd></a>
+    
+    <a href="/tags/communicating-data"><kbd class="item-tag">Communicating data</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<p>I was inspired by Sara Richter’s presentation at the <a href="https://ww2.amstat.org/meetings/csp/2019/index.cfm">2019 Conference on Statistical Practice</a> titled “Easy Ways to Make Data Visualizations More Effective”. One of the themes I took away from Sara’s presentation was that data visualization needs to be practiced, but good data visualization doesn’t need to be difficult to be done well.</p>
+<p>When presenting results from a regression, people often use tables. While this is good if we need the true value of something, tables may not be good if we seek to convey general trends in our results.</p>
+<p>This is particularly true for output from regressions that contain multiple independent variables. In forestry applications, we may want to quickly understand the magnitude of these variables and which ones have the greatest impact on a variable of interest. For example, the diameter growth of a tree differs depending on various factors including the species, tree size, and the site conditions on which it is growing.</p>
+<p>As an example, <a href="https://www.mdpi.com/1999-4907/9/12/747">Anderson et al.</a> fit a mixed-effects model that predicts the ten-year diameter growth of black spruce in Minnesota. They investigated five independent variables and their relationship with diameter growth, including the diameter at breast height (<code>DBH</code>), site index (<code>SI</code>), basal area in larger trees (<code>BAL</code>), basal area of the stand (<code>BA</code>), and the tree’s crown position (a dummy variable with a 1 indicating the tree is a dominant or co-dominant tree).</p>
+<p>I’ve replicated their Table 4, which contains the standard output from a regression. This includes the regression coefficients and standard errors:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Term</th>
+<th>Coefficient</th>
+<th>Std. Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math display">\[B_{0}\]</span></td>
+<td><span class="math display">\[{Intercept}\]</span></td>
+<td>-0.6041</td>
+<td>0.2558</td>
+</tr>
+<tr class="even">
+<td><span class="math display">\[B_{1}\]</span></td>
+<td><span class="math display">\[{DBH}\]</span></td>
+<td>0.3673</td>
+<td>0.0865</td>
+</tr>
+<tr class="odd">
+<td><span class="math display">\[B_{2}\]</span></td>
+<td><span class="math display">\[{DBH^2}\]</span></td>
+<td>-0.0012</td>
+<td>0.0002</td>
+</tr>
+<tr class="even">
+<td><span class="math display">\[B_{3}\]</span></td>
+<td><span class="math display">\[{log(SI-1.37)}\]</span></td>
+<td>0.3611</td>
+<td>0.0703</td>
+</tr>
+<tr class="odd">
+<td><span class="math display">\[B_{4}\]</span></td>
+<td><span class="math display">\[\frac{BAL^2}{log(DBH+5)}\]</span></td>
+<td>-0.0011</td>
+<td>0.0001</td>
+</tr>
+<tr class="even">
+<td><span class="math display">\[B_{5}\]</span></td>
+<td><span class="math display">\[\sqrt{BA}\]</span></td>
+<td>-0.1303</td>
+<td>0.0225</td>
+</tr>
+<tr class="odd">
+<td><span class="math display">\[B_{6}\]</span></td>
+<td><span class="math display">\[{CrownPosition}\]</span></td>
+<td>0.2047</td>
+<td>0.0122</td>
+</tr>
+</tbody>
+</table>
+<p>The regression output indicates there are several variables that increase diameter growth: <code>DBH</code>, <code>SI</code>, and <code>CrownPosition</code>. In contrast, there are several variables that decrease diameter growth: <code>DBH-squared</code>, <code>BAL</code>, <code>BA</code>, and the intercept.</p>
+<p>At first glance of the table, it’s difficult to see which variables increase or decrease diameter growth. Although the standard errors are provided in the table, it’s unclear to determine how “significant” each of the variables are, i.e., whether or not a confidence interval will contain zero.</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Forest_plot">forest plot (or blobbogram)</a> can be used for information that shares a similar attribute. In our case, this is the coefficient for each of the regression parameters. Other applications include using them for <a href="https://cran.r-project.org/web/packages/sjPlot/vignettes/plot_model_estimates.html">odds ratios</a> in logistic regression.</p>
+<p>We can use a forest plot to visualize the results from the black spruce regression, with different colors indicating positive and negative coefficients and whiskers representing their 95% confidence limits:</p>
+<p><img src="/post/2019-04-07-presenting-regression-results-better_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>We often start our regression modeling with variables that don’t end up being significant to the model. We can also show those in a forest plot, indicating to the reader that we investigated them, but they did not contribute to the model:</p>
+<p><img src="/post/2019-04-07-presenting-regression-results-better_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>In this case, the variables <code>DBH-cubed</code> and <code>BA-squared</code> (not very biologically-important ones) were included in the model, but were not significant. This is indicated by the 95% confidence intervals that include zero (which can be deemphasized with a gray color).</p>
+<p>Forest plots can also be used in regressions to <a href="https://cran.r-project.org/web/packages/jtools/vignettes/summ.html">compare different models</a> and are always useful when comparing different values along a common scale.</p>
+</div>
+
+    
+    
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mbrussell" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
