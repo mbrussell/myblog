@@ -42,7 +42,7 @@ reg$sign<-ifelse(coef>=0,"Pos","Neg")
 ```
 
 The regression output indicates there are several variables that increase diameter growth: `DBH`, `SI`, and `CrownPosition`. In contrast, there are several variables that decrease diameter growth: `DBH-squared`, `BAL`, `BA`, and the intercept.
-
+ 
 At first glance of the table, it's difficult to see which variables increase or decrease diameter growth. Although the standard errors are provided in the table, it's unclear to determine how "significant" each of the variables are, i.e., whether or not a confidence interval will contain zero.
 
 A [forest plot (or blobbogram)](https://en.wikipedia.org/wiki/Forest_plot) can be used for information that shares a similar attribute. In our case, this is the coefficient for each of the regression parameters. Other applications include using them for [odds ratios](https://cran.r-project.org/web/packages/sjPlot/vignettes/plot_model_estimates.html) in logistic regression.

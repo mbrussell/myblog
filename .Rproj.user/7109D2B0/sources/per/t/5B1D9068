@@ -5,16 +5,16 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1016921321",
+    "hash" : "1555374495",
     "id" : "5B1D9068",
-    "lastKnownWriteTime" : 1555259094,
-    "last_content_update" : 1555259094337,
+    "lastKnownWriteTime" : 1555268644,
+    "last_content_update" : 1555268644489,
     "path" : "~/git/myblog/content/post/2019-04-07-presenting-regression-results-better.Rmd",
     "project_path" : "content/post/2019-04-07-presenting-regression-results-better.Rmd",
     "properties" : {
-        "cursorPosition" : "43,105",
+        "cursorPosition" : "44,1",
         "ignored_words" : "Richter's,et,al,de\n",
-        "scrollLine" : "27"
+        "scrollLine" : "29"
     },
     "relative_order" : 1,
     "source_on_save" : false,
