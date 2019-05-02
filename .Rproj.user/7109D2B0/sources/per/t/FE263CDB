@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556826681609.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FE263CDB",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1556826681609,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "2718AD8",
+        "caption" : "deer",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=deer&cache_key=2718AD8",
+        "displayedObservations" : 48,
+        "environment" : "",
+        "object" : "deer",
+        "preview" : 0,
+        "totalObservations" : 48,
+        "variables" : 12
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
