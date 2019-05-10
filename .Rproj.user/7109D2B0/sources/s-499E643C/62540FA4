@@ -12,8 +12,8 @@
     "path" : "~/git/myblog/config.toml",
     "project_path" : "config.toml",
     "properties" : {
-        "cursorPosition" : "31,29",
-        "scrollLine" : "16"
+        "cursorPosition" : "44,41",
+        "scrollLine" : "32"
     },
     "relative_order" : 3,
     "source_on_save" : false,
