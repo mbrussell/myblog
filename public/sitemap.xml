@@ -7,18 +7,6 @@
   </url>
   
   <url>
-    <loc>/workshop/workshop2/</loc>
-  </url>
-  
-  <url>
-    <loc>/workshop/workshop3/</loc>
-  </url>
-  
-  <url>
-    <loc>/workshop/workshop4/</loc>
-  </url>
-  
-  <url>
     <loc>/post/deer-vehicle-accidents/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
   </url>
@@ -39,11 +27,6 @@
   </url>
   
   <url>
-    <loc>/tags/bootstrap/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
@@ -51,11 +34,6 @@
   <url>
     <loc>/tags/communicating-data/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/css/</loc>
     <priority>0</priority>
   </url>
   
@@ -125,23 +103,8 @@
   </url>
   
   <url>
-    <loc>/tags/highlight-js/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/html/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/hunting/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/js/</loc>
     <priority>0</priority>
   </url>
   
@@ -164,18 +127,8 @@
   </url>
   
   <url>
-    <loc>/tags/responsive/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/spread/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/syntax-highlighting/</loc>
     <priority>0</priority>
   </url>
   

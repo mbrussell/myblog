@@ -12,29 +12,11 @@
     
     
     <item>
-      <title>Bootstrap</title>
-      <link>/tags/bootstrap/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/bootstrap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Communicating Data</title>
       <link>/tags/communicating-data/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/communicating-data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Css</title>
-      <link>/tags/css/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/css/</guid>
       <description></description>
     </item>
     
@@ -111,38 +93,11 @@
     </item>
     
     <item>
-      <title>Highlight Js</title>
-      <link>/tags/highlight-js/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/highlight-js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Html</title>
-      <link>/tags/html/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Hunting</title>
       <link>/tags/hunting/</link>
       <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/hunting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Js</title>
-      <link>/tags/js/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/js/</guid>
       <description></description>
     </item>
     
@@ -165,29 +120,11 @@
     </item>
     
     <item>
-      <title>Responsive</title>
-      <link>/tags/responsive/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/responsive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Spread</title>
       <link>/tags/spread/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/spread/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Syntax Highlighting</title>
-      <link>/tags/syntax-highlighting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/syntax-highlighting/</guid>
       <description></description>
     </item>
     

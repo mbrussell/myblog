@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workshops on Forests aren&#39;t random.</title>
+    <link>/workshop/</link>
+    <description>Recent content in Workshops on Forests aren&#39;t random.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/workshop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Science for Forestry Applications</title>
+      <link>/workshop/workshop1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshop/workshop1/</guid>
+      <description></description>
+    </item>
+    
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Forests aren&#39;t random.</title>
+    <link>/</link>
+    <description>Recent content on Forests aren&#39;t random.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Science for Forestry Applications</title>
+      <link>/workshop/workshop1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshop/workshop1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project 2</title>
+      <link>/workshop/workshop2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshop/workshop2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project 3</title>
+      <link>/workshop/workshop3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshop/workshop3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project 4</title>
+      <link>/workshop/workshop4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/workshop/workshop4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Connecticut harvests almost as many deer with cars as their hunters do</title>
+      <link>/post/deer-vehicle-accidents/</link>
+      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/deer-vehicle-accidents/</guid>
+      <description>White-tailed deer provide a huge contribution to the outdoors economy and deer hunters support conservation efforts throughout the US. Despite the popularity and traditions of deer and deer hunting, they present a number of ecological problems including damage to forest and agricultural crops and landscaping. Deer are ravaging Long Island’s forests and in my own state of Minnesota we’ve started a citizen science program on monitoring the impacts of deer on forest vegetation.</description>
+    </item>
+    
+    <item>
+      <title>Presenting regression results better with forest plots</title>
+      <link>/post/presenting-regression-results-better/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/presenting-regression-results-better/</guid>
+      <description>I was inspired by Sara Richter’s presentation at the 2019 Conference on Statistical Practice titled “Easy Ways to Make Data Visualizations More Effective”. One of the themes I took away from Sara’s presentation was that data visualization needs to be practiced, but good data visualization doesn’t need to be difficult to be done well.
+When presenting results from a regression, people often use tables. While this is good if we need the true value of something, tables may not be good if we seek to convey general trends in our results.</description>
+    </item>
+    
+    <item>
+      <title>Adding some music to boxplots, and better ways to visualize diameter distributions</title>
+      <link>/post/better-ways-to-visualize-multi-modal-data/</link>
+      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/better-ways-to-visualize-multi-modal-data/</guid>
+      <description>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on between those boxes and whiskers?
+Some forestry data: In the examples below, I’ve used tree diameters measured in four management units at the Penobscot Experimental Forest in Maine.</description>
+    </item>
+    
+    <item>
+      <title>Spreading and gathering tree data</title>
+      <link>/post/spreading-and-gathering-tree-data/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/spreading-and-gathering-tree-data/</guid>
+      <description>A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and needed to be wide.
+The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.</description>
+    </item>
+    
+  </channel>
+</rss>
