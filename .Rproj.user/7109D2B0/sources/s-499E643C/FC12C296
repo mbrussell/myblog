@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1557503457352.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4192116862",
+    "id" : "FC12C296",
+    "lastKnownWriteTime" : 1557503487,
+    "last_content_update" : 1557503487565,
+    "path" : "~/git/myblog/public/workshop/index.xml",
+    "project_path" : "public/workshop/index.xml",
+    "properties" : {
+        "cursorPosition" : "20,4",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "xml"
+}
