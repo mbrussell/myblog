@@ -3,7 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/workshop/workshop1/</loc>
+    <loc>/workshop/data-science-for-forestry-applications/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -39,6 +40,7 @@
   
   <url>
     <loc>/tags/data-science/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -74,7 +76,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -116,7 +118,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -152,11 +154,13 @@
   
   <url>
     <loc>/tags/workshop/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/workshop/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
