@@ -1,6 +1,10 @@
 {
-    "path" : "~/git/myblog/public/post",
+    "path" : "~/git/myblog/public/workshop",
     "sortOrder" : [
+        {
+            "ascending" : false,
+            "columnIndex" : 4
+        },
         {
             "ascending" : true,
             "columnIndex" : 2
