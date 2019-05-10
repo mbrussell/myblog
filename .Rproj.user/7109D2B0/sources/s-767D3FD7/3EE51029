@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1557509358648.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3EE51029",
+    "lastKnownWriteTime" : 1557509772,
+    "last_content_update" : 1557509772088,
+    "path" : "~/git/myblog/content/workshop/2019-05-10-try2.Rmd",
+    "project_path" : "content/workshop/2019-05-10-try2.Rmd",
+    "properties" : {
+        "cursorPosition" : "17,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
