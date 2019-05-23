@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/workshop/try2/</loc>
     <lastmod>2019-05-10T00:00:00+00:00</lastmod>
   </url>
@@ -75,8 +80,20 @@
   </url>
   
   <url>
+    <loc>/tags/forest-inventory/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/forestsamplr/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -112,7 +129,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -125,6 +142,18 @@
   <url>
     <loc>/tags/regression/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/sampling/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/sampling/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

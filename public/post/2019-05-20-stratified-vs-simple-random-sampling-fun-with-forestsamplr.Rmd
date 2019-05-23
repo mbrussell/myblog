@@ -1,0 +1,214 @@
+---
+title: 'Stratified vs. simple random sampling: fun with forestsamplr'
+author: Matt Russell
+date: '2019-05-22'
+slug: stratified-vs-simple-random-sampling-fun-with-forestsamplr
+categories:
+  - Sampling
+tags:
+  - sampling
+  - forestsamplr
+  - forest inventory
+---
+
+```{r,echo=F,warning=F,message=F}
+# Read in libraries to use
+library(gsheet)
+knitr::opts_chunk$set(echo = TRUE)
+library(devtools)
+library(tidyverse)
+library(knitr)
+library(formattable)
+library(kableExtra)
+```
+
+## Tools for estimating population means for stratified and simple random samples
+
+If we know the size of a number of subpopulations that are a part of a larger population, we can use [stratified random sampling](https://en.wikipedia.org/wiki/Stratified_sampling) to come up with a more precise estimate of a population mean. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling. What this ultimately results in is a narrower confidence interval for an overall population estimate, even when using the same sample size.
+
+![*Six example forest stands (or strata).*](/post/2019-05-20-stratified-vs-simple-random-sampling-fun-with-forestsamplr_files/strata.jpg)
+
+Stratification is essential in forest inventory planning. Nan Pond and the folks at SilviaTerra recently published the [**forestsamplr** package](https://blog.silviaterra.com/introducing-the-forestsamplr-package/) that can estimate population parameters from a variety of sample designs in a whim (including stratified random samples). The package contains a library of functions for processing natural resource data from a variety of sample designs:  
+
+```{r,,message=F}
+#devtools::install_github("SilviaTerra/forest_sampling")
+library(forestsamplr)
+```
+
+When they say a variety of sample designs, they're not kidding. The functions for simple random sampling and stratified sampling worked well, as outlined below. But there are also functions available for systematic, cluster, Poisson, and two-stage sampling. Functions are even available for 3P sampling!    
+
+## Tree stocking on the Penobscot Experimental Forest
+
+Data from the [Penobscot Experimental Forest](https://www.nrs.fs.fed.us/ef/locations/me/penobscot/) were used to compare the differences in population means after sampling trees on permanent sample plots from both five- and ten-year selection harvests. In these harvests, individual trees were harvested at approximate five- and ten-year intervals. The PEF data is a useful dataset for visualizing differences across silvicultural treatments.
+
+```{r,echo=F,warning=F,message=F}
+tree<- gsheet2tbl('https://docs.google.com/spreadsheets/d/19XgWp2naizuqvSSr-DlJ0r-53IBgQd8X7yDx_KjkWWE/edit?usp=sharing')
+
+# Select only the last year of measurement from each management unit
+tree<-subset(tree, (MgmtUnit == 20 & Year==2008 & DBH >= 0) |
+               (MgmtUnit == 9 & Year==2013 & DBH >= 0) |
+               (MgmtUnit == 12 & Year==2014 & DBH >= 0) |
+               (MgmtUnit == 16 & Year==2012 & DBH >= 0))
+#tree$MgmtUnit<-factor(tree$MgmtUnit)
+tree$DBH<-as.numeric(tree$DBH)
+```
+
+[This post from March 2019](https://mbrussell.netlify.com/post/better-ways-to-visualize-multi-modal-data/) described two "stands" within each of the five- and ten-year selection harvests. They're actually defined as experimental units that are a part of the long-term study at the PEF, but for here can be used to investigate the differences between taking stratified and simple random samples. Since the late 1950's, stands 9 and 16 have been managed under a five-year [selection treatment](https://en.wikipedia.org/wiki/Selection_cutting) and stands 12 and 20 have been managed under a ten-year selection treatment.
+
+Assume the PEF field crews sampled 68 plots randomly across these four stands, representing a simple random sample. We can store these data in the dataframe `plot`. The basal area per acre (`BAPA`, measure in sq. ft per acre) at each plot was the response variable of interest, and we can visualize the differences across the stand using violin plots. Stand 9, a five-year selection treatment, generally had the greatest basal area, followed by the other stands: 
+
+```{r,echo=F,warning=F,message=F}
+#summarize data to calculate basal area
+plot <- tree %>%
+  mutate(bapaTree = (DBH**2)*0.00545415*EXPF) %>%
+  group_by(MgmtUnit, Plot) %>%
+  summarize(BAPA = sum(bapaTree))
+plot<-data.frame(plot)
+plot$stratum<-plot$MgmtUnit
+plot$trmt<-ifelse(plot$MgmtUnit %in% c(9,16),"Five-year selection", "Ten-year selection")
+
+mgmtunit<-plot %>%
+  group_by(MgmtUnit) %>%
+  summarize(n_plots=n(),
+            mean_BAPA = mean(BAPA),
+            sd_BAPA = sd(BAPA))
+```
+
+```{r,echo=F,warning=F,message=F}
+ct <- plot[, 1:3] %>% 
+  head(6) 
+ct %>% 
+  kable("html", caption = 'The first six lines of the PEF plot data.') %>%
+   # kable_styling(position = "center") %>% 
+ kable_styling()
+```
+
+```{r,echo=F,warning=F,message=F}
+p.plot<-ggplot(plot,aes(factor(MgmtUnit),BAPA,fill=factor(trmt)))+
+  xlab("Stand")+
+  ylab("Basal area (sq. ft per acre)")+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        legend.title = element_blank())
+p.plot + geom_violin()
+``` 
+  
+
+## Simple random sampling (SRS)
+
+Assuming we measured a SRS with the 68 plots, the population mean of basal area can be calculated using the `summarize_all_srs()` function in forestsamplr, and a 95% confidence interval is provided in the output:
+
+```{r,warning=F,message=F}
+srs95<-summarize_all_srs(plot,attribute="BAPA")
+srs95
+```
+
+The desired confidence interval can be changed by adding the `desiredConfidence` statement. As an example, we can output the 66th percent confidence interval for the SRS:
+
+```{r,warning=F,message=F}
+srs66<-summarize_all_srs(plot,attribute="BAPA",desiredConfidence = 0.66)
+srs66
+```
+
+There is nothing much surprising about the SRS estimates. A few properties we assume about the SRS are that: (1) we assume the plots were sampled randomly across the four stands, (2) we generally disregard the variability in `BAPA` within each stand, and  (3) we don't take into account the total area (in acres) of each stand. 
+
+## Stratified random sampling 
+
+The objective of stratification is to minimize variances within a stratum, resulting in a narrower confidence interval with the same size sample. Two additional advantages of conducting a stratified sample are that they (1) provide an estimate of the mean or total for each stratum and (2) provide better spatial coverage of an area. The art of stratification is magical because each within-strata variance is lower than entire population variance. In the case of the four stands at the PEF, the variability of `BAPA` can be captured within each stand to obtain a more precise estimate of the mean compared to the SRS. 
+ 
+When stratifying, we need to know the area of each of the stands (in our case, acres), which we can create in the `stratumTab` dataframe:
+
+```{r}
+stratumTab <- data.frame(stratum = c(9,12,16,20), acres = c(27.2,31.3,16.3,21.2))
+```
+
+The population mean of `BAPA` can be calculated using the `summarize_stratified()` function in forestsamplr, which requires the `stratumTab` argument that contains the area of each stand. Output is provided for each stand (`$stratumSummaries`), and then for the entire area (`$totalSummary`):
+
+```{r,warning=F,message=F}
+strat95<-summarize_stratified(plot,attribute="BAPA",  stratumTab)
+strat95
+```
+
+Adding the `desiredConfidence` statement provides the 66th percent confidence interval for the stratified sample and a useful comparison to SRS:
+
+```{r,warning=F,message=F}
+strat66<-summarize_stratified(plot,attribute="BAPA", stratumTab, desiredConfidence = 0.66)
+strat66
+```
+
+The population mean for the stratified sample is slightly larger than for the SRS (166.87 vs. 160.45 sq. ft per acre). The standard error is reduced from 3.83 to 3.80 sq. ft per acre when stratifying. We can see the differences (ever so slightly) in the smaller half-width for the confidence intervals for the stratified sample: 
+
+```{r,echo=F,warning=F,message=F}
+plot.ci<-data.frame(sample = c("SRS","SRS","Stratified","Stratified"),
+                     confidence = c("95% confidence","66% confidence","95% confidence","66% confidence"),
+                     mean.value = c(srs95$mean,srs66$mean,strat95$totalSummary$popMean,strat66$totalSummary$popMean), 
+                     upperCI = c(srs95$upperLimitCI,srs66$upperLimitCI,
+                                 strat95$totalSummary$popMean+strat95$totalSummary$popCIhalf,
+                                 strat66$totalSummary$popMean+strat66$totalSummary$popCIhalf),
+                     lowerCI=c(srs95$lowerLimitCI,srs66$lowerLimitCI,
+                                 strat95$totalSummary$popMean-strat95$totalSummary$popCIhalf,
+                                 strat66$totalSummary$popMean-strat66$totalSummary$popCIhalf))
+plot.ci$upperCIhalf = plot.ci$upperCI-plot.ci$mean.value
+plot.ci$lowerCIhalf = (plot.ci$upperCIhalf)*-1
+
+p.ci<-ggplot(plot.ci,aes(x=0,y=factor(sample),col=sample))+geom_point(col="white")+
+  facet_grid(confidence~.)+
+  geom_errorbarh(data=plot.ci, mapping=aes(x=0, xmin=0, xmax=upperCIhalf, col=sample), width=0.02, size=1)+
+  xlab("Half-width of the confidence interval (sq. ft per acre)")+
+  ylab("")+
+  theme(axis.text.y=element_blank(),
+        panel.background = element_rect(fill = "NA"),
+        axis.ticks.y=element_blank(),
+        legend.title=element_blank())
+p.ci
+```
+
+## Allocating field plots to stratum
+
+In the sample of field plots at the PEF, it turns out they were laid out in a generally systematic fashion across each stand, ranging from 13 plots in stand 9 to 21 plots in stand 20. Knowing what we now know about the variability within each strata, we could allocate the number of field plots to each stand in a few different ways.
+
+Described in Burkhart et al.'s [*Forest Measurements*](https://www.waveland.com/browse.php?t=668&r=a), there are two common ways to allocate field plots in a stratified random sample: through **proportional** or **optimal** allocation.
+
+### Proportional allocation
+
+Say we were interested in taking 150 new field plots across the four stands to estimate `BAPA`. Proportional allocation would distribute the 150 field plots according to their total area. That is, take more field plots in larger area stands. The `propall` function allocates the total number of desired plots to each of the stratum. We can apply the function to the `stratumTab` dataframe:
+
+```{r}
+propall<-function(acres.stratum,total.acres,total.plots){
+  num.plots = round((acres.stratum/total.acres)*total.plots)
+  return(num.plots)}
+
+stratumTab$n_proportional<-propall(acres.stratum=stratumTab$acres,total.acres=sum(stratumTab$acres),total.plots=150)
+```
+
+### Optimal allocation
+
+The optimal allocation method would distibute the 150 field plots to each stratum that provides the smallest amount of variability possible. In addition to the total area, also required in this calculation is the standard deviation of `BAPA` within each stratum. The total number of plots to sample in each stand would be represented by the stratum area multiplied by the standard deviation of `BAPA`. The `optall` function allocates the total number of desired plots to each of the stratum, and we can apply it to the `stratumTab` dataframe:
+
+```{r,echo=F,warning=F,message=F}
+mgmtunit$stratum<-mgmtunit$MgmtUnit
+
+stratumTab<-merge(stratumTab,mgmtunit,by=c("stratum"))
+stratumTab$area_sd<-stratumTab$acres*stratumTab$sd_BAPA
+```
+
+```{r}
+optall<-function(area_sd,sum.area_sd,total.plots){
+  num.plots = round((area_sd/sum.area_sd)*total.plots)
+  return(num.plots)}
+
+stratumTab$n_optimal<-optall(area_sd=stratumTab$area_sd,sum.area_sd=sum(stratumTab$area_sd),total.plots=150)
+```
+
+We can see the differences between optimal and proportional allocation. The largest differences in how the plots are distibuted occur between stand 9 (the stand with the greatest variability in `BAPA`) and stand 12 (the stand with the lowest variability in `BAPA`). The optimal allocation strategy indicates sampling **seven more plots in stand 9** compared to the proportional allocation method due to the large standard deviation of `BAPA`. The optimal strategy indicates sampling **four fewer plots in stand 12** compared to the proportional allocation method, even though it's the **stand with the largest area**.
+
+```{r,echo=F,warning=F,message=F}
+num.plots <- stratumTab[, c(1,2,7,8,3,9)] %>% 
+ head(4)
+num.plots %>% 
+  kable("html", caption = 'Distribution of plots to sample for proportional and optimal allocation methods.') %>%
+   # kable_styling(position = "center") %>% 
+   kable_styling()
+```
+
+The [**forestsamplr** package](https://blog.silviaterra.com/introducing-the-forestsamplr-package/) can easily summarize data from stratified samples and many more designs. Check it out! 
