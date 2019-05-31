@@ -1,0 +1,19 @@
+---
+title: Animations with magick
+author: ''
+date: '2019-05-29'
+slug: animations-with-magick
+categories:
+  - Data visualization
+tags:
+  - Data viz
+  - gif
+  - magick
+---
+
+here it is
+
+```{r}
+fred<-4+5
+fred
+```

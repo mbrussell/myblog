@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>How much is too long a wait? Calculating expected wait times of wood deliveries</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">How much is too long a wait? Calculating expected wait times of wood deliveries</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/workshop/">Workshops &amp; talks</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matth.russell@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/matthew-russell-70a94824/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://health.forestry.umn.edu/publications"><i class="fa fa-fas fa-book"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://scholar.google.com/citations?user=4OO83OcAAAAJ&amp;hl=en&amp;authuser=1"><i class="fa fa-fas fa-graduation-cap"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/">How much is too long a wait? Calculating expected wait times of wood deliveries</a></h4>
+    <h5>May 31, 2019</h5>
+    
+    <a href="/tags/regression"><kbd class="item-tag">regression</kbd></a>
+    
+    <a href="/tags/wait-times"><kbd class="item-tag">wait times</kbd></a>
+    
+    <a href="/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="/tags/quantile-regression"><kbd class="item-tag">quantile regression</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<div class="figure">
+<img src="/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/LogUnload.jpg" alt="Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)" />
+<p class="caption">Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)</p>
+</div>
+<div id="how-important-are-wait-times-for-loggers-and-truckers" class="section level1">
+<h1>How important are wait times for loggers and truckers?</h1>
+<p>Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill.</p>
+<p>Both wood procurement managers and their suppliers need to know when wait times exceed the amount of time they expect. This is especially true during busy delivery seasons when mills see their greatest number of deliveries and logger capacity is maximized. These long wait times were <a href="https://www.duluthnewstribune.com/business/manufacturing/4561067-paper-mills-face-aspen-logjam">an issue at Minnesota wood mills</a> in the winter of 2019.</p>
+<p>These wait times can be quantified to determine what “expected” and “long” wait times might be for suppliers to a mill. Knowing these wait times can improve efficiencies in wood deliveries, save money, and reduce truck emissions.</p>
+</div>
+<div id="determining-wait-times" class="section level1">
+<h1>Determining wait times</h1>
+<p>To determine expected and long wait times, consider a hypothetical dataset of wait times of wood deliveries during the three busiest months of the year in the US Lake States (January through March). In this example, wait times range from 9 minutes to over 200 minutes. During this busy season, mills in the Lake States can receive up to <strong>400 deliveries a day</strong>. The average wait time during this busy season is 25 minutes.</p>
+<p>A positive trend exists in the data: if the mill receives more wood deliveries on a given day, suppliers can expect longer wait times. A linear regression can be used to estimate typical wait times and are adjusted for the number of deliveries the mill receives in a day (the black line in Figure 1).</p>
+<p>Long wait times can be determined through performing a regression through the 95th percentile of the data (the red line in Figure 1; estimated using the <code>quantreg</code> package in R). Average wait times above this red line are days when wood procurement managers and suppliers should be concerned about long wait times.</p>
+<p>Similarly, a regression through the 5th percentile of the data (the green line in Figure 1) can provide an indication of slow wait times. Wait times below this green line are days when scaling and unloading in the wood yard is operating efficiently.</p>
+<p>As an example, an outlier occurred on a day when 253 deliveries were received. Wait times on this day averaged 42 minutes, much longer than other days with similar amounts of wood deliveries. Likewise, during a day with low daily deliveries, average wait times were nearly 35 minutes. Wood procurement managers can review and reflect on these occasions to assess inefficiencies in the process and how these long wait times relate to staffing, equipment condition, and other mill resources.</p>
+<p><img src="/post/2019-05-31-how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><strong>Figure 1.</strong> Expected wait times should fall around the black line. Long wait times would occur above the red line, and short wait times below the green line.</p>
+</div>
+<div id="application-of-wait-times" class="section level1">
+<h1>Application of wait times</h1>
+<p>In this example, the expected and long wait times can be estimated with the following two equations:</p>
+<blockquote>
+<p>“Expected” wait time (minutes) = 21.35 + 0.0138 × Number of wood deliveries per day</p>
+</blockquote>
+<blockquote>
+<p>“Long” wait time (minutes) = 29.78 + 0.0043 × Number of wood deliveries per day</p>
+</blockquote>
+<p>If procurement managers observe wait times that are greater than the predicted “long” wait time from the equation, this may be a signal to review the delivery and unloading processes from that day.</p>
+<p>The following table can assist with determining expected and long wait times:</p>
+</div>
+<div id="section" class="section level1">
+<h1></h1>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>If the mill sees the following number of deliveries per day:</th>
+<th>The supplier can expect a wait time of:</th>
+<th>The mill should be concerned if wait times are longer than:</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>50 loads</td>
+<td>22 minutes</td>
+<td>30 minutes</td>
+</tr>
+<tr class="even">
+<td>200 loads</td>
+<td>24 minutes</td>
+<td>31 minutes</td>
+</tr>
+<tr class="odd">
+<td>400 loads</td>
+<td>27 minutes</td>
+<td>32 minutes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>The example presented can only be applied to the simulated data. However, data are regularly collected on wait times and a similar approach can be adapted to an individual mill’s scaling process. Including additional information such as the day (e.g., Monday versus Friday), time within a day (e.g., early morning versus mid-afternoon), staffing levels, and other variables can result in refined expectations of wait times.</p>
+<p>An estimate of expected wait times may prove especially valuable during times of peak wood deliveries. Expected durations of wait times during these times can also be shared with suppliers to efficiently schedule wood deliveries.</p>
+<p><em>NOTE: This post was previously published by the <a href="https://forestresources.org/">Forest Resources Association</a> as Technical Release 18-R-38. Special thanks to Tim O’Hara for his review of this post.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mbrussell" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Magick on Forests aren&#39;t random.</title>
+    <link>/tags/magick/</link>
+    <description>Recent content in Magick on Forests aren&#39;t random.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/magick/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Animations with magick</title>
+      <link>/post/animations-with-magick/</link>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/animations-with-magick/</guid>
+      <description>here it is
+fred&amp;lt;-4+5fred## [1] 9</description>
+    </item>
+    
+  </channel>
+</rss>

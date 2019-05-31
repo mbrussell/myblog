@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wait Times on Forests aren&#39;t random.</title>
+    <link>/tags/wait-times/</link>
+    <description>Recent content in Wait Times on Forests aren&#39;t random.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/wait-times/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How much is too long a wait? Calculating expected wait times of wood deliveries</title>
+      <link>/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</link>
+      <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</guid>
+      <description>Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)
+How important are wait times for loggers and truckers?Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill.
+Both wood procurement managers and their suppliers need to know when wait times exceed the amount of time they expect.</description>
+    </item>
+    
+  </channel>
+</rss>

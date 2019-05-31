@@ -1,0 +1,102 @@
+---
+title: How much is too long a wait? Calculating expected wait times of wood deliveries
+author: Matt Russell
+date: '2019-05-31'
+slug: how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries
+categories:
+  - Prediction
+tags:
+  - regression
+  - wait times
+  - forest products
+  - quantile regression
+---
+
+![Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)](/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/LogUnload.jpg)
+
+# How important are wait times for loggers and truckers?
+Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill. 
+
+Both wood procurement managers and their suppliers need to know when wait times exceed the amount of time they expect. This is especially true during busy delivery seasons when mills see their greatest number of deliveries and logger capacity is maximized. These long wait times were [an issue at Minnesota wood mills](https://www.duluthnewstribune.com/business/manufacturing/4561067-paper-mills-face-aspen-logjam) in the winter of 2019.
+
+These wait times can be quantified to determine what "expected" and "long" wait times might be for suppliers to a mill. Knowing these wait times can improve efficiencies in wood deliveries, save money, and reduce truck emissions.
+
+
+# Determining wait times
+
+To determine expected and long wait times, consider a hypothetical dataset of wait times of wood deliveries during the three busiest months of the year in the US Lake States (January through March). In this example, wait times range from 9 minutes to over 200 minutes. During this busy season, mills in the Lake States can receive up to **400 deliveries a day**. The average wait time during this busy season is 25 minutes.
+
+A positive trend exists in the data: if the mill receives more wood deliveries on a given day, suppliers can expect longer wait times. A linear regression can be used to estimate typical wait times and are adjusted for the number of deliveries the mill receives in a day (the black line in Figure 1). 
+
+Long wait times can be determined through performing a regression through the 95th percentile of the data (the red line in Figure 1; estimated using the `quantreg` package in R). Average wait times above this red line are days when wood procurement managers and suppliers should be concerned about long wait times. 
+
+Similarly, a regression through the 5th percentile of the data (the green line in Figure 1) can provide an indication of slow wait times. Wait times below this green line are days when scaling and unloading in the wood yard is operating efficiently.
+
+As an example, an outlier occurred on a day when 253 deliveries were received. Wait times on this day averaged 42 minutes, much longer than other days with similar amounts of wood deliveries. Likewise, during a day with low daily deliveries, average wait times were nearly 35 minutes. Wood procurement managers can review and reflect on these occasions to assess inefficiencies in the process and how these long wait times relate to staffing, equipment condition, and other mill resources.
+
+```{r, echo=F,warning=F,message=F,results="hide"}
+# Read in some simulated turn time data (Deliveries=number of wood deliveries in a day; TurnTime=average wait time [minutes] for wood deliveries)
+
+turn<-plot.ci<-data.frame(Deliveries=c(160,166,348,387,367,360,336,150,319,385,362,388,357,146,309,392,367,253,359,204,342,372,316,364,343,140,330,353,386,363,348,142,273,314,302,312,315,118,284,320,314,277,161,112,202,164,196,200,211,110,164,182,191,188,195,153,70,114,47,23,27,21,5,2,1,2,9,10,18,18,9,44,44,31,41,4),
+                          TurnTime=c(20.3,23.25301205,22.90517241,25.22997416,22.79564033,26.43888889,25.2827381,17.62,24.7492163,29.88831169,23.31491713,31.43041237,25.82913165,20.76712329,30.16828479,31.86734694,30.82833787,41.51383399,23.99442897,24.69117647,30.50584795,28.52150538,26.62025316,28.82967033,26.47813411,19.92142857,26.38787879,24.66572238,24.97668394,26.24242424,26.04885057,22.0915493,27.31135531,24.34076433,23.71192053,23.81089744,21.93968254,17.49152542,23.57042254,24.41875,24.10509554,26.69314079,21.14906832,18.05357143,23.00990099,22.4695122,24.1377551,22.815,23.16113744,19.27272727,26.39634146,23.6978022,20.09947644,21.47340426,22.63589744,22.81699346,25.14285714,27.00877193,25.19148936,24.73913043,24.96296296,27.04761905,29.8,19,29,34.5,26.33333333,22.8,21.38888889,22.94444444,15.66666667,16.18181818,15.95454545,16,15.29268293,17.25))
+
+# Predict turn times using simple linear regression
+turn.lm<-lm(TurnTime~Deliveries,data=turn) 
+summary(turn.lm)
+
+# Predict turn times at the 95th and 5th quantiles using quantile regression and the quantreg package
+library(quantreg)
+turn.qr <- rq(TurnTime~Deliveries,data=turn, tau = 0.95)
+summary(turn.qr)
+
+turn.qr5 <- rq(TurnTime~Deliveries,data=turn, tau = 0.05)
+summary(turn.qr5)
+
+# Make figure showing turn times and regression trends
+library(ggplot2)
+p.turn<-ggplot(turn, aes(Deliveries, TurnTime)) + geom_point() + 
+  geom_abline(intercept=coef(turn.qr)[1], slope=coef(turn.qr)[2],col="red")+
+  geom_abline(intercept=coef(turn.lm)[1], slope=coef(turn.lm)[2],col="black")+
+  geom_abline(intercept=coef(turn.qr5)[1], slope=coef(turn.qr5)[2],col="green")+
+  xlab("Number of deliveries per day")+
+  ylab("Average wait time (minutes)")+
+  annotate("text", label = "Long wait (42 min)", x = 320, y = 41,size=5,col="red")+
+  annotate("text", label = "Long wait (35 min)", x = 67, y = 34,size=5,col="red")+
+  theme(panel.background = element_rect(fill = "NA"), 
+        axis.line=element_line(color="black"),
+        axis.title.x = element_text(size=12,color="black"),
+        axis.title.y = element_text(size=12,color="black"),
+        axis.text.x = element_text(size=12,color="black"),
+        axis.text.y  = element_text(size=12,color="black"))
+p.turn
+```
+
+**Figure 1.** Expected wait times should fall around the black line. Long wait times would occur above the red line, and short wait times below the green line.
+
+# Application of wait times
+In this example, the expected and long wait times can be estimated with the following two equations:
+
+> “Expected” wait time (minutes) = 21.35 + 0.0138 × Number of wood deliveries per day
+
+> “Long” wait time (minutes) = 29.78 + 0.0043 × Number of wood deliveries per day
+
+If procurement managers observe wait times that are greater than the predicted “long” wait time from the equation, this may be a signal to review the delivery and unloading processes from that day.
+
+The following table can assist with determining expected and long wait times:
+
+#
+
+If the mill sees the following number of deliveries per day: | The supplier can expect a wait time of: | The mill should be concerned if wait times are longer than:
+------------- | ------------- | ------------- | 
+50 loads | 22 minutes| 30 minutes
+200 loads | 24 minutes | 31 minutes
+400 loads | 27 minutes | 32 minutes  
+
+#
+
+The example presented can only be applied to the simulated data. However, data are regularly collected on wait times and a similar approach can be adapted to an individual mill’s scaling process. Including additional information such as the day (e.g., Monday versus Friday), time within a day (e.g., early morning versus mid-afternoon), staffing levels, and other variables can result in refined expectations of wait times.
+
+An estimate of expected wait times may prove especially valuable during times of peak wood deliveries. Expected durations of wait times during these times can also be shared with suppliers to efficiently schedule wood deliveries.
+
+
+*NOTE: This post was previously published by the [Forest Resources Association](https://forestresources.org/) as Technical Release 18-R-38. Special thanks to Tim O'Hara for his review of this post.*
