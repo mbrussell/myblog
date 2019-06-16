@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Forest Inventory on Forests aren&#39;t random.</title>
-    <link>/tags/forest-inventory/</link>
-    <description>Recent content in Forest Inventory on Forests aren&#39;t random.</description>
+    <title>Mass Timber on Forests aren&#39;t random.</title>
+    <link>/tags/mass-timber/</link>
+    <description>Recent content in Mass Timber on Forests aren&#39;t random.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/forest-inventory/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/mass-timber/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>/post/how-many-trees-make-a-mass-timber-building/</guid>
       <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/)
 Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
-    </item>
-    
-    <item>
-      <title>Stratified vs. simple random sampling: fun with forestsamplr</title>
-      <link>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</link>
-      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
-      <description>Tools for estimating population means for stratified and simple random samplesIf we know the size of a number of subpopulations that are a part of a larger population, we can use stratified random sampling to come up with a more precise estimate of a population mean. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling.</description>
     </item>
     
   </channel>

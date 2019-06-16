@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>How many trees make a mass timber building?</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">How many trees make a mass timber building?</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/workshop/">Workshops &amp; talks</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matth.russell@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/matthew-russell-70a94824/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://health.forestry.umn.edu/publications"><i class="fa fa-fas fa-book"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://scholar.google.com/citations?user=4OO83OcAAAAJ&amp;hl=en&amp;authuser=1"><i class="fa fa-fas fa-graduation-cap"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/how-many-trees-make-a-mass-timber-building/">How many trees make a mass timber building?</a></h4>
+    <h5>June 15, 2019</h5>
+    
+    <a href="/tags/regression"><kbd class="item-tag">regression</kbd></a>
+    
+    <a href="/tags/mass-timber"><kbd class="item-tag">mass timber</kbd></a>
+    
+    <a href="/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<div class="figure">
+<img src="/post/how-many-trees-make-a-mass-timber-building/t3building.jpg" alt="The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/)" />
+<p class="caption">The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (<a href="http://www.emapeter.com/" class="uri">http://www.emapeter.com/</a>)</p>
+</div>
+<p><a href="https://www.thinkwood.com/building-better/taller-buildings">Mass timber buildings</a> are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with <a href="https://www.naturallywood.com/sustainable-forests/forest-management/interior-forests/mountain-pine-beetle">beetle-killed wood</a> to mitigate the impacts of forests disturbances on the carbon cycle. Because of these benefits, building codes are being changed or altered that support the construction of mass timber buildings.</p>
+<p>But just how much “mass” of wood typically goes into making a mass timber building? Comparing how much wood is needed to build a typical residential home can help to provide insights into the volume of wood that is used in mass timber buildings.</p>
+<p>Traditional homes are <a href="https://www.hunker.com/13401138/the-amount-of-lumber-needed-for-a-1200-square-foot-house">“stick built”</a>, typically made of narrow dimensional lumber like 2 x 4s. Each style of home varies depending on its size, number of doors and windows, and how the interior walls are oriented.</p>
+<p>A few estimates specifying the amount of wood required to build a home are online, but the style and size of the home are the primary drivers of how much wood is needed. From several online sources, a <strong>2,000 square foot home</strong> requires approximately <strong>16,000 board feet of wood</strong> in its construction. A board foot represents 144 cubic inches, or a piece of wood that is 12 inches x 12 inches x 1 inch.</p>
+<p>For the same square footage, the amount of wood needed to make a mass timber building would be much greater than for a home. Instead of using dimensional lumber, mass timber buildings are typically made of materials like <a href="https://www.apawood.org/cross-laminated-timber">cross laminated timber (CLT)</a>. Finished panels are between two and ten feet wide and are up to 60 feet long and 20 inches thick. Here are five examples of mass timber building across the world:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-3">Table 1: </span>Some example recently-constructed mass timber buildings with their total square footage.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Building
+</th>
+<th style="text-align:left;">
+Location
+</th>
+<th style="text-align:right;">
+YearBuilt
+</th>
+<th style="text-align:right;">
+Stories
+</th>
+<th style="text-align:right;">
+SquareFeet
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+T3
+</td>
+<td style="text-align:left;">
+Minneapolis, MN
+</td>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+224000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Carbon12
+</td>
+<td style="text-align:left;">
+Portland, OR
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+42000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+T3 West Midtown
+</td>
+<td style="text-align:left;">
+Atlanta, GA
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+205000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brock Commons Tallwood House
+</td>
+<td style="text-align:left;">
+Vancouver, BC
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+162700
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+The Cube Building
+</td>
+<td style="text-align:left;">
+London, UK
+</td>
+<td style="text-align:right;">
+2015
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+72650
+</td>
+</tr>
+</tbody>
+</table>
+<p>How can we use the board foot volume of wood used in a house to determine how many trees go into the construction of a mass timber building? Using the typical amounts of wood needed to build a home (i.e., 2,000 square foot home = 16,000 board feet of wood), a few key assumptions can be made to “scale up” to find out how much board feet is required for a mass timber building:</p>
+<ul>
+<li>First, mass timber buildings have no studs in their walls. We can assume that they have <strong>“continuous walls”</strong>. If typical stud widths in homes are 16 inches apart with two-inch pieces of wood, we can assume a continuous wall has <strong>eight times as much wood</strong> occupying a wall.</li>
+<li>Second, mass timber walls (both interior and exterior) are <strong>thicker</strong> than home walls. If a mass timber wall is 20 inches think, <strong>five times as much wood</strong> would occupy a wall.</li>
+</ul>
+<p>To summarize these assumptions, one square foot of a home requires 0.125 board feet of wood. One square foot of a mass timber building requires 5 board feet of wood.</p>
+<p>Mass timber buildings typically use western conifers like Douglas-fir in construction material such as CLT. <a href="https://andrewsforest.oregonstate.edu/sites/default/files/lter/pubs/pdf/pub3401.pdf">Growth and yield tables</a> for a typical fully-stocked stand of Douglas-fir on an average quality site can produce <strong>100,000 board feet</strong> of wood per acre at 100 years. This stand would typically contain 182 trees per acre that are seven inches in diameter or larger. This provides a useful reference point to quantify not only the volume of wood needed for a mass timber building, but also an approximation of how many trees and acres of forestland that wood may represent.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-4">Table 2: </span>Estimates of total board feet, acres harvested, and total number of trees needed to construct mass timber buildings.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Building
+</th>
+<th style="text-align:right;">
+BoardFeet
+</th>
+<th style="text-align:right;">
+Acres
+</th>
+<th style="text-align:right;">
+Trees
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+T3
+</td>
+<td style="text-align:right;">
+71680000
+</td>
+<td style="text-align:right;">
+717
+</td>
+<td style="text-align:right;">
+130494
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Carbon12
+</td>
+<td style="text-align:right;">
+13440000
+</td>
+<td style="text-align:right;">
+134
+</td>
+<td style="text-align:right;">
+24388
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+T3 West Midtown
+</td>
+<td style="text-align:right;">
+65600000
+</td>
+<td style="text-align:right;">
+656
+</td>
+<td style="text-align:right;">
+119392
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brock Commons Tallwood House
+</td>
+<td style="text-align:right;">
+52064000
+</td>
+<td style="text-align:right;">
+521
+</td>
+<td style="text-align:right;">
+94822
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+The Cube Building
+</td>
+<td style="text-align:right;">
+23248000
+</td>
+<td style="text-align:right;">
+232
+</td>
+<td style="text-align:right;">
+42224
+</td>
+</tr>
+</tbody>
+</table>
+<p>Assuming the trees were harvested from fully-stocked stands, the total number of trees required to make a mass timber building ranges from as high as <strong>130,494 trees</strong> for the T3 building in Minneapolis to <strong>24,388 trees</strong> for the Carbon12 building in Portland. These numbers of trees equate to the volume of trees from 717 and 134 acres of forestland, respectively.</p>
+<p><img src="/post/2019-06-14-how-many-trees-make-a-mass-timber-building_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>It’s difficult to find detailed information on how much wood is required to design mass timber buildings. There is no doubt that these values would differ substantially depending on the design of each building. The building’s square footage, interior and exterior design, and other features would influence the total volume of wood required.</p>
+<p>These results suggest that some of the largest mass timber buildings in the world may have been constructed from the use of over 100,000 trees. The use of all of those trees has a long-lasting benefit to the health of forests by keeping all of that wood as a long-lived forest product.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/">How much is too long a wait? Calculating expected wait times of wood deliveries</a></h4>
+    <h5>May 31, 2019</h5>
+    
+    <a href="/tags/regression"><kbd class="item-tag">regression</kbd></a>
+    
+    <a href="/tags/wait-times"><kbd class="item-tag">wait times</kbd></a>
+    
+    <a href="/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="/tags/quantile-regression"><kbd class="item-tag">quantile regression</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/">Stratified vs. simple random sampling: fun with forestsamplr</a></h4>
+    <h5>May 22, 2019</h5>
+    
+    <a href="/tags/sampling"><kbd class="item-tag">sampling</kbd></a>
+    
+    <a href="/tags/forestsamplr"><kbd class="item-tag">forestsamplr</kbd></a>
+    
+    <a href="/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mbrussell" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -1,0 +1,241 @@
+---
+title: How many trees make a mass timber building?
+author: Matt Russell
+date: '2019-06-15'
+slug: how-many-trees-make-a-mass-timber-building
+categories:
+  - Prediction
+tags:
+  - regression
+  - mass timber
+  - forest inventory
+  - forest products
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<div class="figure">
+<img src="/post/how-many-trees-make-a-mass-timber-building/t3building.jpg" alt="The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/)" />
+<p class="caption">The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (<a href="http://www.emapeter.com/" class="uri">http://www.emapeter.com/</a>)</p>
+</div>
+<p><a href="https://www.thinkwood.com/building-better/taller-buildings">Mass timber buildings</a> are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with <a href="https://www.naturallywood.com/sustainable-forests/forest-management/interior-forests/mountain-pine-beetle">beetle-killed wood</a> to mitigate the impacts of forests disturbances on the carbon cycle. Because of these benefits, building codes are being changed or altered that support the construction of mass timber buildings.</p>
+<p>But just how much “mass” of wood typically goes into making a mass timber building? Comparing how much wood is needed to build a typical residential home can help to provide insights into the volume of wood that is used in mass timber buildings.</p>
+<p>Traditional homes are <a href="https://www.hunker.com/13401138/the-amount-of-lumber-needed-for-a-1200-square-foot-house">“stick built”</a>, typically made of narrow dimensional lumber like 2 x 4s. Each style of home varies depending on its size, number of doors and windows, and how the interior walls are oriented.</p>
+<p>A few estimates specifying the amount of wood required to build a home are online, but the style and size of the home are the primary drivers of how much wood is needed. From several online sources, a <strong>2,000 square foot home</strong> requires approximately <strong>16,000 board feet of wood</strong> in its construction. A board foot represents 144 cubic inches, or a piece of wood that is 12 inches x 12 inches x 1 inch.</p>
+<p>For the same square footage, the amount of wood needed to make a mass timber building would be much greater than for a home. Instead of using dimensional lumber, mass timber buildings are typically made of materials like <a href="https://www.apawood.org/cross-laminated-timber">cross laminated timber (CLT)</a>. Finished panels are between two and ten feet wide and are up to 60 feet long and 20 inches thick. Here are five examples of mass timber building across the world:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-3">Table 1: </span>Some example recently-constructed mass timber buildings with their total square footage.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Building
+</th>
+<th style="text-align:left;">
+Location
+</th>
+<th style="text-align:right;">
+YearBuilt
+</th>
+<th style="text-align:right;">
+Stories
+</th>
+<th style="text-align:right;">
+SquareFeet
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+T3
+</td>
+<td style="text-align:left;">
+Minneapolis, MN
+</td>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+224000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Carbon12
+</td>
+<td style="text-align:left;">
+Portland, OR
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+42000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+T3 West Midtown
+</td>
+<td style="text-align:left;">
+Atlanta, GA
+</td>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+205000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brock Commons Tallwood House
+</td>
+<td style="text-align:left;">
+Vancouver, BC
+</td>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+162700
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+The Cube Building
+</td>
+<td style="text-align:left;">
+London, UK
+</td>
+<td style="text-align:right;">
+2015
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+72650
+</td>
+</tr>
+</tbody>
+</table>
+<p>How can we use the board foot volume of wood used in a house to determine how many trees go into the construction of a mass timber building? Using the typical amounts of wood needed to build a home (i.e., 2,000 square foot home = 16,000 board feet of wood), a few key assumptions can be made to “scale up” to find out how much board feet is required for a mass timber building:</p>
+<ul>
+<li>First, mass timber buildings have no studs in their walls. We can assume that they have <strong>“continuous walls”</strong>. If typical stud widths in homes are 16 inches apart with two-inch pieces of wood, we can assume a continuous wall has <strong>eight times as much wood</strong> occupying a wall.</li>
+<li>Second, mass timber walls (both interior and exterior) are <strong>thicker</strong> than home walls. If a mass timber wall is 20 inches think, <strong>five times as much wood</strong> would occupy a wall.</li>
+</ul>
+<p>To summarize these assumptions, one square foot of a home requires 0.125 board feet of wood. One square foot of a mass timber building requires 5 board feet of wood.</p>
+<p>Mass timber buildings typically use western conifers like Douglas-fir in construction material such as CLT. <a href="https://andrewsforest.oregonstate.edu/sites/default/files/lter/pubs/pdf/pub3401.pdf">Growth and yield tables</a> for a typical fully-stocked stand of Douglas-fir on an average quality site can produce <strong>100,000 board feet</strong> of wood per acre at 100 years. This stand would typically contain 182 trees per acre that are seven inches in diameter or larger. This provides a useful reference point to quantify not only the volume of wood needed for a mass timber building, but also an approximation of how many trees and acres of forestland that wood may represent.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-4">Table 2: </span>Estimates of total board feet, acres harvested, and total number of trees needed to construct mass timber buildings.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Building
+</th>
+<th style="text-align:right;">
+BoardFeet
+</th>
+<th style="text-align:right;">
+Acres
+</th>
+<th style="text-align:right;">
+Trees
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+T3
+</td>
+<td style="text-align:right;">
+71680000
+</td>
+<td style="text-align:right;">
+717
+</td>
+<td style="text-align:right;">
+130494
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Carbon12
+</td>
+<td style="text-align:right;">
+13440000
+</td>
+<td style="text-align:right;">
+134
+</td>
+<td style="text-align:right;">
+24388
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+T3 West Midtown
+</td>
+<td style="text-align:right;">
+65600000
+</td>
+<td style="text-align:right;">
+656
+</td>
+<td style="text-align:right;">
+119392
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brock Commons Tallwood House
+</td>
+<td style="text-align:right;">
+52064000
+</td>
+<td style="text-align:right;">
+521
+</td>
+<td style="text-align:right;">
+94822
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+The Cube Building
+</td>
+<td style="text-align:right;">
+23248000
+</td>
+<td style="text-align:right;">
+232
+</td>
+<td style="text-align:right;">
+42224
+</td>
+</tr>
+</tbody>
+</table>
+<p>Assuming the trees were harvested from fully-stocked stands, the total number of trees required to make a mass timber building ranges from as high as <strong>130,494 trees</strong> for the T3 building in Minneapolis to <strong>24,388 trees</strong> for the Carbon12 building in Portland. These numbers of trees equate to the volume of trees from 717 and 134 acres of forestland, respectively.</p>
+<p><img src="/post/2019-06-14-how-many-trees-make-a-mass-timber-building_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>It’s difficult to find detailed information on how much wood is required to design mass timber buildings. There is no doubt that these values would differ substantially depending on the design of each building. The building’s square footage, interior and exterior design, and other features would influence the total volume of wood required.</p>
+<p>These results suggest that some of the largest mass timber buildings in the world may have been constructed from the use of over 100,000 trees. The use of all of those trees has a long-lasting benefit to the health of forests by keeping all of that wood as a long-lived forest product.</p>
