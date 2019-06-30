@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/workshop/try2/</loc>
+    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/how-many-trees-make-a-mass-timber-building/</loc>
     <lastmod>2019-06-15T00:00:00+00:00</lastmod>
   </url>
@@ -15,11 +25,6 @@
   <url>
     <loc>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</loc>
     <lastmod>2019-05-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/workshop/try2/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -43,6 +48,12 @@
   </url>
   
   <url>
+    <loc>/tags/animation/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
@@ -55,19 +66,19 @@
   
   <url>
     <loc>/tags/data-science/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/data-visualization/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/data-viz/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -103,7 +114,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -138,8 +149,20 @@
   </url>
   
   <url>
+    <loc>/tags/gif/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/hunting/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/magick/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -151,7 +174,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-06-15T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -169,7 +192,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -199,7 +222,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -223,13 +246,13 @@
   
   <url>
     <loc>/tags/workshop/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/workshop/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

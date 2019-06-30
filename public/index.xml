@@ -6,10 +6,32 @@
     <description>Recent content on Forests aren&#39;t random.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
+      <link>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
+      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.
+The general process to make a GIF image with maps in R is:
+1. Create the images you want (e.g., using ggplot),
+2. Stitch the images together with magick, and
+3. Write the images as a GIF and share!</description>
+    </item>
+    
+    <item>
+      <title>Data Science for Forestry Applications</title>
+      <link>/workshop/try2/</link>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/workshop/try2/</guid>
+      <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have. More information here.</description>
+    </item>
     
     <item>
       <title>How many trees make a mass timber building?</title>
@@ -39,15 +61,6 @@ Both wood procurement managers and their suppliers need to know when wait times 
       
       <guid>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
       <description>Tools for estimating population means for stratified and simple random samplesIf we know the size of a number of subpopulations that are a part of a larger population, we can use stratified random sampling to come up with a more precise estimate of a population mean. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling.</description>
-    </item>
-    
-    <item>
-      <title>Data Science for Forestry Applications</title>
-      <link>/workshop/try2/</link>
-      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/workshop/try2/</guid>
-      <description>We anticipate holding this four-hour workshop at the 2019 Society of American Foresters Convention on Oct 30 2019 in Louisville, KY. More information here.</description>
     </item>
     
     <item>

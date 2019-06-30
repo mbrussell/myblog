@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/workshop/">Workshops &amp; talks</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matth.russell@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/matthew-russell-70a94824/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="http://health.forestry.umn.edu/publications"><i class="fa fa-fas fa-book"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://scholar.google.com/citations?user=4OO83OcAAAAJ&amp;hl=en&amp;authuser=1"><i class="fa fa-fas fa-graduation-cap"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/">Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </a></h4>
+    <h5>June 29, 2019</h5>
+    
+    <a href="/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="/tags/gif"><kbd class="item-tag">GIF</kbd></a>
+    
+    <a href="/tags/animation"><kbd class="item-tag">animation</kbd></a>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/magick"><kbd class="item-tag">magick</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<p>The popularity of GIFs <a href="https://www.lifewire.com/rise-of-animated-gif-3485813">have exploded in recent years</a> and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.</p>
+<p>The general process to make a GIF image with maps in R is:<br />
+1. Create the images you want (e.g., using <code>ggplot</code>),<br />
+2. Stitch the images together with <code>magick</code>, and<br />
+3. Write the images as a GIF and share!</p>
+<p>Making GIFs with maps can be accomplished in R primarily using the <code>ggplot2</code> and <code>magick</code> packages. Here is a short description of how various packages can be used to create a GIF image:</p>
+<pre class="r"><code>library(ggplot2) #Provides the visualization tools
+library(gsheet) #Links to the data in a Google Sheet
+library(GGally) #Extension of ggplot mapping attributes
+library(rgdal) #Provides geospatial attributes
+library(usmap) #Provides a basemap of the US
+library(magick) #Processes images</code></pre>
+<p>The <a href="https://extension.umn.edu/tree-and-shrub-insects/emerald-ash-borers">emerald ash borer (EAB)</a> is a non-native insect that kills ash trees. It was first observed in Minnesota in 2009 in the city of St. Paul and in Houston County. EAB has spread over the last 10 years and as of 2019 is found in 18 counties in Minnesota.</p>
+<p>The dataset <code>eab</code> contains each Minnesota county from 2009 through 2019, whether or not EAB is found in the county, and if so, which year the infestation began (<code>yearinfest</code>). The dataset is read into R using the <code>gsheet2tbl()</code> function from the <code>gsheet</code> package. A 0,1 indicator variable separates the infested counties from the non-infested ones:</p>
+<pre class="r"><code>eab&lt;-gsheet2tbl(&#39;https://docs.google.com/spreadsheets/d/1S5ypnWcL0uOG50YrhxyAGHsQk356qyyDzTTCBkiXL80/edit?usp=sharing&#39;)
+eab$state&lt;-fips(&quot;MN&quot;)
+eab$infest&lt;-ifelse(eab$yearinfest&gt;0,&quot;YES&quot;,&quot;NO&quot;) </code></pre>
+<p>The workflow will begin by first creating separate images using <code>ggplot</code> of infected counties in each year. Each year of data will be subset into its own data frame, for example for 2009:</p>
+<pre class="r"><code>eab2009&lt;-subset(eab,year==2009)</code></pre>
+<p>Next we can make a map of Minnesota for each year, indicating which counties were infested with EAB in that year. The <code>plot_usmap</code> function will use <code>ggplot2</code> to create the map, and we can replicate these maps for the other ten years:</p>
+<pre class="r"><code>p.eab2009&lt;-plot_usmap(&quot;counties&quot;, data = eab2009, 
+                      values = &quot;infest&quot;, include = &quot;MN&quot;) +
+                      ggplot2::scale_fill_discrete()+
+                      theme(legend.position=&quot;none&quot;,
+                            plot.title=element_text(size=18))+
+                      ggtitle(&quot;2009&quot;)
+p.eab2009</code></pre>
+<p><img src="/post/2019-06-29-making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>It may be worthwhile to save the yearly plots you create to your local directory. For this you can use <code>ggsave()</code>. Then you can read the image again using the <code>image_read()</code> function from the <code>magick</code> package. Any images can be read from a file path or URL:</p>
+<pre class="r"><code>ggsave(filename = &quot;eab2009.png&quot;, plot=p.eab2009,width=4,height=4,units=&quot;in&quot;,scale=1)
+d.eab2009 &lt;- image_read(&quot;eab2009.png&quot;)</code></pre>
+<p>Then, you can stitch the images together using the <code>image_append</code> function, and see what they look like:</p>
+<pre class="r"><code>img &lt;- c(d.eab2009,d.eab2010,d.eab2011,d.eab2012,d.eab2013,d.eab2014,d.eab2015,d.eab2016,d.eab2017,d.eab2018,d.eab2019)
+
+image_append(image_scale(img, &quot;x200&quot;))</code></pre>
+<p><img src="/post/2019-06-29-making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota_files/figure-html/unnamed-chunk-11-1.png" width="1100" /></p>
+<p>The purpose of the <code>image_animate()</code> function is to animate the GIF. The frames per second (<code>fps</code>) can be changed to speed up/slow down the animation depending on what works best. The final step is to write the animation as a GIF using <code>image_write()</code>:</p>
+<pre class="r"><code>my.animation&lt;-image_animate(image_scale(img, &quot;400x400&quot;), fps = 1, dispose = &quot;previous&quot;)
+image_write(my.animation, &quot;eab-spread.gif&quot;)</code></pre>
+<p>In the end you’ll get a GIF showing the spread of EAB in Minnesota during the last ten years:</p>
+<p><img src="https://media.giphy.com/media/dyjkgHpNAAUZto5BhA/giphy.gif" /></p>
+<p>Thanks to the <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">excellent vignette with magick</a> for tips and tricks!</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/presenting-regression-results-better/">Presenting regression results better with forest plots</a></h4>
+    <h5>April 7, 2019</h5>
+    
+    <a href="/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="/tags/regression"><kbd class="item-tag">Regression</kbd></a>
+    
+    <a href="/tags/communicating-data"><kbd class="item-tag">Communicating data</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/better-ways-to-visualize-multi-modal-data/">Adding some music to boxplots, and better ways to visualize diameter distributions</a></h4>
+    <h5>March 22, 2019</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/ggplot2"><kbd class="item-tag">ggplot2</kbd></a>
+    
+    <a href="/tags/geom_violin"><kbd class="item-tag">geom_violin()</kbd></a>
+    
+    <a href="/tags/geom_boxplot"><kbd class="item-tag">geom_boxplot()</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/spreading-and-gathering-tree-data/">Spreading and gathering tree data</a></h4>
+    <h5>March 9, 2019</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/tidyr"><kbd class="item-tag">tidyr</kbd></a>
+    
+    <a href="/tags/gather"><kbd class="item-tag">gather()</kbd></a>
+    
+    <a href="/tags/spread"><kbd class="item-tag">spread()</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mbrussell" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

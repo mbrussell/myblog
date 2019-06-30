@@ -6,7 +6,7 @@
     <description>Recent content in Data Science on Forests aren&#39;t random.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
     <item>
       <title>Data Science for Forestry Applications</title>
       <link>/workshop/try2/</link>
-      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/workshop/try2/</guid>
-      <description>We anticipate holding this four-hour workshop at the 2019 Society of American Foresters Convention on Oct 30 2019 in Louisville, KY. More information here.</description>
+      <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have. More information here.</description>
     </item>
     
   </channel>

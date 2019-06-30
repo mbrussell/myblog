@@ -1,0 +1,155 @@
+---
+title: 'Making animated GIFs in R: ten years of emerald ash borer
+  spread in Minnesota '
+author: Matt Russell
+date: '2019-06-29'
+slug: making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota
+categories:
+  - Data visualization
+tags:
+  - Data viz
+  - GIF
+  - animation
+  - R
+  - magick
+---
+
+The popularity of GIFs [have exploded in recent years](https://www.lifewire.com/rise-of-animated-gif-3485813) and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life. 
+
+The general process to make a GIF image with maps in R is:  
+ 1. Create the images you want (e.g., using `ggplot`),  
+ 2. Stitch the images together with `magick`, and  
+ 3. Write the images as a GIF and share!
+
+Making GIFs with maps can be accomplished in R primarily using the `ggplot2` and `magick` packages. Here is a short description of how various packages can be used to create a GIF image: 
+
+```{r, warning=F,message=F}
+library(ggplot2) #Provides the visualization tools
+library(gsheet) #Links to the data in a Google Sheet
+library(GGally) #Extension of ggplot mapping attributes
+library(rgdal) #Provides geospatial attributes
+library(usmap) #Provides a basemap of the US
+library(magick) #Processes images
+```
+
+```{r,echo=F,warning=F,message=F}
+setwd('C://Users//russellm//Documents//Data//Blog//')
+```  
+
+The [emerald ash borer (EAB)](https://extension.umn.edu/tree-and-shrub-insects/emerald-ash-borers) is a non-native insect that kills ash trees. It was first observed in Minnesota in 2009 in the city of St. Paul and in Houston County. EAB has spread over the last 10 years and as of 2019 is found in 18 counties in Minnesota.
+
+The dataset `eab` contains each Minnesota county from 2009 through 2019, whether or not EAB is found in the county, and if so, which year the infestation began (`yearinfest`). The dataset is read into R using the `gsheet2tbl()` function from the `gsheet` package. A 0,1 indicator variable separates the infested counties from the non-infested ones:
+
+```{r}
+eab<-gsheet2tbl('https://docs.google.com/spreadsheets/d/1S5ypnWcL0uOG50YrhxyAGHsQk356qyyDzTTCBkiXL80/edit?usp=sharing')
+eab$state<-fips("MN")
+eab$infest<-ifelse(eab$yearinfest>0,"YES","NO") 
+```
+
+The workflow will begin by first creating separate images using `ggplot` of infected counties in each year. Each year of data will be subset into its own data frame, for example for 2009: 
+
+```{r}
+eab2009<-subset(eab,year==2009)
+```
+
+```{r,echo=F,warning=F,message=F}
+eab2010<-subset(eab,year==2010)
+eab2011<-subset(eab,year==2011)
+eab2012<-subset(eab,year==2012)
+eab2013<-subset(eab,year==2013)
+eab2014<-subset(eab,year==2014)
+eab2015<-subset(eab,year==2015)
+eab2016<-subset(eab,year==2016)
+eab2017<-subset(eab,year==2017)
+eab2018<-subset(eab,year==2018)
+eab2019<-subset(eab,year==2019)
+```
+
+Next we can make a map of Minnesota for each year, indicating which counties were infested with EAB in that year. The `plot_usmap` function will use `ggplot2` to create the map, and we can replicate these maps for the other ten years:  
+
+```{r}
+p.eab2009<-plot_usmap("counties", data = eab2009, 
+                      values = "infest", include = "MN") +
+                      ggplot2::scale_fill_discrete()+
+                      theme(legend.position="none",
+                            plot.title=element_text(size=18))+
+                      ggtitle("2009")
+p.eab2009
+```
+
+```{r,echo=F,warning=F,message=F}
+p.eab2010<-plot_usmap("counties", data = eab2010, values = "infest", include = "MN") +
+    ggplot2::scale_fill_discrete()+theme(legend.position="none",plot.title=element_text(size=18))+ggtitle("2010")
+p.eab2011<-plot_usmap("counties", data = eab2011, values = "infest", include = "MN") +
+    ggplot2::scale_fill_discrete()+theme(legend.position="none",plot.title=element_text(size=18))+ggtitle("2011")
+p.eab2012<-plot_usmap("counties", data = eab2012, values = "infest", include = "MN") +
+    ggplot2::scale_fill_discrete()+theme(legend.position="none",plot.title=element_text(size=18))+ggtitle("2012")
+p.eab2013<-plot_usmap("counties", data = eab2013, values = "infest", include = "MN") +
+    ggplot2::scale_fill_discrete()+theme(legend.position="none",plot.title=element_text(size=18))+ggtitle("2013")
+p.eab2014<-plot_usmap("counties", data = eab2014, values = "infest", include = "MN") +
+    ggplot2::scale_fill_discrete()+theme(legend.position="none",plot.title=element_text(size=18))+ggtitle("2014")
+p.eab2015<-plot_usmap("counties", data = eab2015, values = "infest", include = "MN") +
+    ggplot2::scale_fill_discrete()+theme(legend.position="none",plot.title=element_text(size=18))+ggtitle("2015")
+p.eab2016<-plot_usmap("counties", data = eab2016, values = "infest", include = "MN") +
+    ggplot2::scale_fill_discrete()+theme(legend.position="none",plot.title=element_text(size=18))+ggtitle("2016")
+p.eab2017<-plot_usmap("counties", data = eab2017, values = "infest", include = "MN") +
+    ggplot2::scale_fill_discrete()+theme(legend.position="none",plot.title=element_text(size=18))+ggtitle("2017")
+p.eab2018<-plot_usmap("counties", data = eab2018, values = "infest", include = "MN") +
+    ggplot2::scale_fill_discrete()+theme(legend.position="none",plot.title=element_text(size=18))+ggtitle("2018")
+p.eab2019<-plot_usmap("counties", data = eab2019, values = "infest", include = "MN") +
+    ggplot2::scale_fill_discrete()+theme(legend.position="none",plot.title=element_text(size=18))+ggtitle("2019")
+```
+
+It may be worthwhile to save the yearly plots you create to your local directory. For this you can use `ggsave()`. Then you can read the image again using the `image_read()` function from the `magick` package. Any images can be read from a file path or URL:
+
+```{r}
+ggsave(filename = "eab2009.png", plot=p.eab2009,width=4,height=4,units="in",scale=1)
+d.eab2009 <- image_read("eab2009.png")
+```
+
+```{r,echo=F,warning=F,message=F}
+ggsave(filename = "eab2010.png", plot=p.eab2010,width=4,height=4,units="in",scale=1)
+ggsave(filename = "eab2011.png", plot=p.eab2011,width=4,height=4,units="in",scale=1)
+ggsave(filename = "eab2012.png", plot=p.eab2012,width=4,height=4,units="in",scale=1)
+ggsave(filename = "eab2013.png", plot=p.eab2013,width=4,height=4,units="in",scale=1)
+ggsave(filename = "eab2014.png", plot=p.eab2014,width=4,height=4,units="in",scale=1)
+ggsave(filename = "eab2015.png", plot=p.eab2015,width=4,height=4,units="in",scale=1)
+ggsave(filename = "eab2016.png", plot=p.eab2016,width=4,height=4,units="in",scale=1)
+ggsave(filename = "eab2017.png", plot=p.eab2017,width=4,height=4,units="in",scale=1)
+ggsave(filename = "eab2018.png", plot=p.eab2018,width=4,height=4,units="in",scale=1)
+ggsave(filename = "eab2019.png", plot=p.eab2019,width=4,height=4,units="in",scale=1)
+```
+
+```{r,echo=F,warning=F,message=F}
+d.eab2010 <- image_read("eab2010.png")
+d.eab2011 <- image_read("eab2011.png")
+d.eab2012 <- image_read("eab2012.png")
+d.eab2013 <- image_read("eab2013.png")
+d.eab2014 <- image_read("eab2014.png")
+d.eab2015 <- image_read("eab2015.png")
+d.eab2016 <- image_read("eab2016.png")
+d.eab2017 <- image_read("eab2017.png")
+d.eab2018 <- image_read("eab2018.png")
+d.eab2019 <- image_read("eab2019.png")
+```
+
+Then, you can stitch the images together using the `image_append` function, and see what they look like:
+
+```{r}
+img <- c(d.eab2009,d.eab2010,d.eab2011,d.eab2012,d.eab2013,d.eab2014,d.eab2015,d.eab2016,d.eab2017,d.eab2018,d.eab2019)
+
+image_append(image_scale(img, "x200"))
+```
+
+The purpose of the `image_animate()` function is to animate the GIF. The frames per second (`fps`) can be changed to speed up/slow down the animation depending on what works best. The final step is to write the animation as a GIF using `image_write()`: 
+
+```{r}
+my.animation<-image_animate(image_scale(img, "400x400"), fps = 1, dispose = "previous")
+image_write(my.animation, "eab-spread.gif")
+```
+
+In the end you'll get a GIF showing the spread of EAB in Minnesota during the last ten years: 
+
+![](https://media.giphy.com/media/dyjkgHpNAAUZto5BhA/giphy.gif)
+
+Thanks to the [excellent vignette with magick](https://cran.r-project.org/web/packages/magick/vignettes/intro.html) for tips and tricks!

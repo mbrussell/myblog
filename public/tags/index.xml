@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Forests aren&#39;t random.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Animation</title>
+      <link>/tags/animation/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/animation/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Communicating Data</title>
@@ -23,7 +32,7 @@
     <item>
       <title>Data Science</title>
       <link>/tags/data-science/</link>
-      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/data-science/</guid>
       <description></description>
@@ -32,7 +41,7 @@
     <item>
       <title>Data Viz</title>
       <link>/tags/data-viz/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/data-viz/</guid>
       <description></description>
@@ -120,11 +129,29 @@
     </item>
     
     <item>
+      <title>Gif</title>
+      <link>/tags/gif/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/gif/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hunting</title>
       <link>/tags/hunting/</link>
       <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/hunting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Magick</title>
+      <link>/tags/magick/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/magick/</guid>
       <description></description>
     </item>
     
@@ -149,7 +176,7 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
@@ -212,7 +239,7 @@
     <item>
       <title>Workshop</title>
       <link>/tags/workshop/</link>
-      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/workshop/</guid>
       <description></description>

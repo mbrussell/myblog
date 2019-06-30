@@ -6,18 +6,31 @@
     <description>Recent content in R on Forests aren&#39;t random.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
+      <link>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
+      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
+      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.
+The general process to make a GIF image with maps in R is:
+1. Create the images you want (e.g., using ggplot),
+2. Stitch the images together with magick, and
+3. Write the images as a GIF and share!</description>
+    </item>
+    
+    <item>
       <title>Data Science for Forestry Applications</title>
       <link>/workshop/try2/</link>
-      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/workshop/try2/</guid>
-      <description>We anticipate holding this four-hour workshop at the 2019 Society of American Foresters Convention on Oct 30 2019 in Louisville, KY. More information here.</description>
+      <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have. More information here.</description>
     </item>
     
     <item>

@@ -1,17 +1,17 @@
 ---
 title: Data Science for Forestry Applications
 author: Matt Russell
-date: '2019-05-10'
+date: '2019-06-21'
 slug: try2
 categories: []
 tags:
   - R
   - Data science
   - Workshop
-description: 'Oct 20, 2019 at SAF Convention'
+description: 'Oct 30, 2019 at SAF Convention'
 repo: ''
 weight: 0
 ---
 
  ![](https://www.eforester.org/images/2019%20Convention/SAF%202019%20convention%20logo%20color.png)
-We anticipate holding this four-hour workshop at the 2019 Society of American Foresters Convention on Oct 30 2019 in Louisville, KY. [More information here.](https://www.eforester.org/safconvention)
+This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have. [More information here.](https://www.eforester.org/Safconvention/Program/Workshops/Safconvention/Program/Workshops.aspx?hkey=1b8780ac-ab3c-4077-b5d7-b82d9a9f9df6)

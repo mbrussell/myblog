@@ -1,0 +1,60 @@
+---
+title: 'Making animated GIFs in R: ten years of emerald ash borer
+  spread in Minnesota '
+author: Matt Russell
+date: '2019-06-29'
+slug: making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota
+categories:
+  - Data visualization
+tags:
+  - Data viz
+  - GIF
+  - animation
+  - R
+  - magick
+---
+
+
+
+<p>The popularity of GIFs <a href="https://www.lifewire.com/rise-of-animated-gif-3485813">have exploded in recent years</a> and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.</p>
+<p>The general process to make a GIF image with maps in R is:<br />
+1. Create the images you want (e.g., using <code>ggplot</code>),<br />
+2. Stitch the images together with <code>magick</code>, and<br />
+3. Write the images as a GIF and share!</p>
+<p>Making GIFs with maps can be accomplished in R primarily using the <code>ggplot2</code> and <code>magick</code> packages. Here is a short description of how various packages can be used to create a GIF image:</p>
+<pre class="r"><code>library(ggplot2) #Provides the visualization tools
+library(gsheet) #Links to the data in a Google Sheet
+library(GGally) #Extension of ggplot mapping attributes
+library(rgdal) #Provides geospatial attributes
+library(usmap) #Provides a basemap of the US
+library(magick) #Processes images</code></pre>
+<p>The <a href="https://extension.umn.edu/tree-and-shrub-insects/emerald-ash-borers">emerald ash borer (EAB)</a> is a non-native insect that kills ash trees. It was first observed in Minnesota in 2009 in the city of St. Paul and in Houston County. EAB has spread over the last 10 years and as of 2019 is found in 18 counties in Minnesota.</p>
+<p>The dataset <code>eab</code> contains each Minnesota county from 2009 through 2019, whether or not EAB is found in the county, and if so, which year the infestation began (<code>yearinfest</code>). The dataset is read into R using the <code>gsheet2tbl()</code> function from the <code>gsheet</code> package. A 0,1 indicator variable separates the infested counties from the non-infested ones:</p>
+<pre class="r"><code>eab&lt;-gsheet2tbl(&#39;https://docs.google.com/spreadsheets/d/1S5ypnWcL0uOG50YrhxyAGHsQk356qyyDzTTCBkiXL80/edit?usp=sharing&#39;)
+eab$state&lt;-fips(&quot;MN&quot;)
+eab$infest&lt;-ifelse(eab$yearinfest&gt;0,&quot;YES&quot;,&quot;NO&quot;) </code></pre>
+<p>The workflow will begin by first creating separate images using <code>ggplot</code> of infected counties in each year. Each year of data will be subset into its own data frame, for example for 2009:</p>
+<pre class="r"><code>eab2009&lt;-subset(eab,year==2009)</code></pre>
+<p>Next we can make a map of Minnesota for each year, indicating which counties were infested with EAB in that year. The <code>plot_usmap</code> function will use <code>ggplot2</code> to create the map, and we can replicate these maps for the other ten years:</p>
+<pre class="r"><code>p.eab2009&lt;-plot_usmap(&quot;counties&quot;, data = eab2009, 
+                      values = &quot;infest&quot;, include = &quot;MN&quot;) +
+                      ggplot2::scale_fill_discrete()+
+                      theme(legend.position=&quot;none&quot;,
+                            plot.title=element_text(size=18))+
+                      ggtitle(&quot;2009&quot;)
+p.eab2009</code></pre>
+<p><img src="/post/2019-06-29-making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>It may be worthwhile to save the yearly plots you create to your local directory. For this you can use <code>ggsave()</code>. Then you can read the image again using the <code>image_read()</code> function from the <code>magick</code> package. Any images can be read from a file path or URL:</p>
+<pre class="r"><code>ggsave(filename = &quot;eab2009.png&quot;, plot=p.eab2009,width=4,height=4,units=&quot;in&quot;,scale=1)
+d.eab2009 &lt;- image_read(&quot;eab2009.png&quot;)</code></pre>
+<p>Then, you can stitch the images together using the <code>image_append</code> function, and see what they look like:</p>
+<pre class="r"><code>img &lt;- c(d.eab2009,d.eab2010,d.eab2011,d.eab2012,d.eab2013,d.eab2014,d.eab2015,d.eab2016,d.eab2017,d.eab2018,d.eab2019)
+
+image_append(image_scale(img, &quot;x200&quot;))</code></pre>
+<p><img src="/post/2019-06-29-making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota_files/figure-html/unnamed-chunk-11-1.png" width="1100" /></p>
+<p>The purpose of the <code>image_animate()</code> function is to animate the GIF. The frames per second (<code>fps</code>) can be changed to speed up/slow down the animation depending on what works best. The final step is to write the animation as a GIF using <code>image_write()</code>:</p>
+<pre class="r"><code>my.animation&lt;-image_animate(image_scale(img, &quot;400x400&quot;), fps = 1, dispose = &quot;previous&quot;)
+image_write(my.animation, &quot;eab-spread.gif&quot;)</code></pre>
+<p>In the end you’ll get a GIF showing the spread of EAB in Minnesota during the last ten years:</p>
+<p><img src="https://media.giphy.com/media/dyjkgHpNAAUZto5BhA/giphy.gif" /></p>
+<p>Thanks to the <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">excellent vignette with magick</a> for tips and tricks!</p>
