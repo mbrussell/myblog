@@ -1,13 +1,13 @@
-baseURL = "https://mbrussell.netlify.com/"
+baseURL = "https://arbor-analytics.com/"
 languageCode = "en-us"
-title = "Forests aren't random."
+title = "Arbor Analytics"
 theme = "minimal"
 disqusShortname = "mbrussell" # delete this to disable disqus comments
 googleAnalytics = "UA-136790074-1"
 
 [params]
     author = "Matt Russell" 
-    description = "I'm an Associate Professor and Extension Specialist at the University of Minnesota. I use data to make better decisions about our forests."
+    description = "Using data to make better decisions about our forests."
     githubUsername = "#"
     accent = "red"
     showBorder = true
@@ -37,7 +37,7 @@ googleAnalytics = "UA-136790074-1"
 # The list of available icons can be found at http://fontawesome.io/icons/
 
 [[menu.icon]]
-    url = "mailto:matth.russell@gmail.com"
+    url = "mailto:matt@arbor-analytics.com"
     name = "envelope-o"
     weight = 1
 
@@ -50,13 +50,8 @@ googleAnalytics = "UA-136790074-1"
     url = "https://www.linkedin.com/in/matthew-russell-70a94824/"
     name = "linkedin"
     weight = 3
-
-[[menu.icon]]
-    url = "http://health.forestry.umn.edu/publications"
-    name = "fas fa-book"
-    weight = 4
     
 [[menu.icon]]
     url = "https://scholar.google.com/citations?user=4OO83OcAAAAJ&hl=en&authuser=1"
     name = "fas fa-graduation-cap"
-    weight = 5
+    weight = 4
