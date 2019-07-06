@@ -12,6 +12,8 @@ description: 'Oct 30, 2019 at SAF Convention'
 repo: ''
 weight: 0
 ---
+<center>
 
- ![](https://www.eforester.org/images/2019%20Convention/SAF%202019%20convention%20logo%20color.png)
+ ![](https://www.eforester.org/images/2019%20Convention/SAF%202019%20convention%20logo%20color.png){width=250px}
+ </center>
 This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have. [More information here.](https://www.eforester.org/Safconvention/Program/Workshops/Safconvention/Program/Workshops.aspx?hkey=1b8780ac-ab3c-4077-b5d7-b82d9a9f9df6)
