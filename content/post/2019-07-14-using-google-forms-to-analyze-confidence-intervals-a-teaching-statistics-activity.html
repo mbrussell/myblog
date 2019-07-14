@@ -1,0 +1,120 @@
+---
+title: 'Using Google Forms to analyze confidence intervals: a teaching statistics
+  activity'
+author: Matt Russell
+date: '2019-07-14'
+slug: using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity
+categories:
+  - Statistics
+tags:
+  - Data viz
+  - teaching statistics
+  - moose
+  - overconfidence
+---
+
+
+
+<p>This post describes how the concepts of confidence intervals can be taught to students. The ideal participants are undergraduate students in an introductory statistics. The in-class activity reveals to students that most people are overconfident in their estimation of uncertainty. The activity uses the example of moose, a charismatic wildlife species in Minnesota.</p>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Demonstrations of data and statistical concepts are effective when they are designed with a structure that encourages participation in the classroom <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Using technology to explore data and integrating real data with context are two recommendations for inclusion in introductory statistics course at the undergraduate level <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Using technology in the classroom such as online survey tools encourages active problem-solving by students <a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
+<p>One charismatic wildlife species that is identifiable and relatable to a variety of students is moose. The Minnesota Department of Natural Resources (DNR) <a href="https://files.dnr.state.mn.us/wildlife/moose/moosesurvey.pdf">monitors the moose population in the state every year</a>. Integrating technology, statistics, and moose populations in Minnesota can produce an effective activity to promote concepts of confidence intervals using a charismatic wildlife species.</p>
+<p>The activity relies on a student-generated dataset using Google Forms and was analyzed in near-real time using the R statistical package and was subsequently discussed in class.</p>
+</div>
+<div id="the-activity" class="section level1">
+<h1>The activity</h1>
+<p>As a prerequisite to this activity, an introduction to the concepts of <a href="https://en.wikipedia.org/wiki/Confidence_interval%5D">confidence intervals</a> (CIs) was presented to students in the previous lecture. Essential concepts that were conveyed to students included:
+* CIs rely on some estimate of an unknown parameter in a population and a margin of error,
+* the student can specify a “wider” or “narrower” CI depending on the desired level of confidence, and
+*the proper interpretation of an 95% CI is stated that “95% of CIs calculated from many samples would contain the mean value”.</p>
+<p>An in-class activity was developed and delivered to three different introductory statistics classes at the University of Minnesota in 2017 and 2018. In total, 76 responses were used from students in three different class periods.</p>
+<p>In a session that discussed CIs and statistical inference more broadly, students were asked a general question at the start of the class period: how many moose are currently found in Minnesota? Using a smartphone, tablet, or laptop, students were asked to input their best guess for the current population of moose in Minnesota into a Google Form.</p>
+<div class="figure">
+<img src="/post/2019-07-14-using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity_files/Fig1moose.jpg" alt="Google Form for students to enter their moose data (photo: Denali National Park and Preserve)." />
+<p class="caption">Google Form for students to enter their moose data (photo: Denali National Park and Preserve).</p>
+</div>
+<p>Then, students were asked to consider how confident they were in their guess by entering an upper and lower value for a 90% CI in response to the question “I’m 90% confident there are between X and Y moose in Minnesota”. Students were subsequently asked to provide a 50% CI for their moose population estimate. Based on the prerequisite material, students recognized that a lower confidence would correspond to a narrower interval, i.e., a 50% CI would be narrower than a 90% CI.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Mean response (number of moose)</th>
+<th>“True” estimate (number of moose)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>How many moose are currently found in Minnesota?</td>
+<td>4,460</td>
+<td>3,030</td>
+</tr>
+<tr class="even">
+<td>What is the LOWER value for your 50% confidence interval?</td>
+<td>2,866</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>What is the UPPER value for your 50% confidence interval?</td>
+<td>6,011</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>What is the LOWER value for your 90% confidence interval?</td>
+<td>1,878</td>
+<td>2,320</td>
+</tr>
+<tr class="odd">
+<td>What is the UPPER value for your 90% confidence interval?</td>
+<td>7,784</td>
+<td>4,140</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="visualizing-student-confidence-in-moose-populations" class="section level1">
+<h1>Visualizing student confidence in moose populations</h1>
+<p>The value of collecting data through the Google Forms was that it provided an analysis-ready dataset that can be summarized during the class period. After students completed the activity, the instructor or teaching assistant summarized the data and presented it to the class. The instructor used a previously-developed R script to summarize the student’s responses and share the visualizations on the projector during the class.</p>
+<p>Histograms were displayed to visualize the distribution of moose estimates by students. Boxplots were displayed to visualize the five-number summary of the moose population guesses, representing the minimum, first quartile, median, third quartile, and maximum values.</p>
+<p><img src="/post/2019-07-14-using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity_files/figure-html/unnamed-chunk-2-1.png" width="672" /><img src="/post/2019-07-14-using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<p>Both the histograms and boxplots indicated the class data were right skewed, with a few large estimates of moose populations. Class 1 estimated more moose relative to other classes. Classes 2 and 3 resulted in three and one outlier, respectively, from the student responses. These graphs allowed a connection between the student and the dataset, permitting introspective questions by the student such as “how does my guess compare with other students?”</p>
+<p>We also compared the moose estimates to a “true” value for the moose population in Minnesota. Through its annual aerial survey, the Minnesota DNR used a sightability model to estimate the 2018 population to be 3,030 moose, with a 90% CI of [2,320, 4,140]. These values provided a useful comparison to the student estimates of moose populations.</p>
+<p>In total, 59% of students guessed a higher population (mean estimate of 18,981 moose; median estimate of 3,500 moose) compared to the “true” population determined by the Minnesota DNR (3,030 moose). Graphs of mean values and 50% and 90% CIs show the variability in student responses in comparison to the “true” population determined by the Minnesota DNR.</p>
+<p>In sum, 38% of students guessed a 50% confidence interval that contained the true number of moose, and 55% of students guessed a 90% confidence interval that contained the true number of moose. In the figure below, means (dots) and lower and upper confidence limits (lines) at the 50% and 90% levels for estimating the number of moose in Minnesota are shown. Red line indicates the 2018 Minnesota DNR estimate based on aerial survey (3,030 moose), and shaded region indicates the DNR-estimated 90% confidence interval (2,320-4,140 moose).</p>
+<p><img src="/post/2019-07-14-using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity_files/figure-html/unnamed-chunk-4-1.png" width="672" /><img src="/post/2019-07-14-using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<p>In summary, student estimates of CIs were too narrow, which implies that students were “too sure” or “too confident” that they knew the correct answer, a term referred to as overconfidence. These findings are not unique to the moose activity: other studies have shown that 90% CIs typically provide such “hit rates” between only 25% and 40% of the time <a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>.</p>
+</div>
+<div id="topics-for-classroom-discussion" class="section level1">
+<h1>Topics for classroom discussion</h1>
+<p>The in-class activity promotes discussion of data and the uncertainty of population estimates using an example from a charismatic wildlife species. The finding that the distributions of moose population estimates were similar across three different class periods suggests that an activity similar to this approach can be generalized with expected results in the future. Some questions for class discussion may include:</p>
+<ol style="list-style-type: decimal">
+<li><p>Why are the mean and median <strong>so different</strong>? In this example, the mean (18,981 moose) and median (3,500 moose) were starkly different. Discussions in the classroom can center around the different measures of central tendency and how they relate to moose population estimates. As an example, the finding that eight students estimated a very high population (greater than 50,000 moose) had a greater influence on the mean value, but not the median.</p></li>
+<li><p>Which observations are <strong>“suspicious”</strong> data points? The role of outliers, as seen in the boxplots in Figure 2, can be discussed in the classroom. Discussing how and why outliers exist in a dataset is worth mentioning. If a single data point falls outside the general pattern, how much would you trust it and how would you handle it in an analysis?</p></li>
+<li><p>Why are we so <strong>overconfident</strong>? Students have been surprised to learn that a low proportion of them estimated “very close” to the true number of moose, e.g., only 55% of students guessed a 90% confidence interval that contained the true population estimate. At this point it is an ideal time to revisit the confidence interval and discuss a likely component that the student might have missed: the margin of error. Reviewing concepts related to the standard deviation and its role in determining the width of the confidence interval would be valuable.</p></li>
+<li><p>“I’m <strong>99.9% confident</strong> there are between 0 and 1,000,000 moose in Minnesota. Aren’t I right?” This comment from a seemingly wise student may be correct, but not useful in practice. A discussion on the merits of wide versus narrow levels of confidence is worthwhile, and a review of the common levels of confidence in a field of study is worth exploring by the student.</p></li>
+<li><p><strong>How do agencies estimate wildlife populations?</strong> This activity relies heavily on a known moose population calculated by the Minnesota DNR. A broad overview and a subsequent discussion can focus on the sampling methods that agencies use to determine wildlife populations.</p></li>
+</ol>
+</div>
+<div id="final-thoughts" class="section level1">
+<h1>Final Thoughts</h1>
+<p>Using existing datasets collected by others may be convenient, but this approach compels students to be passive learners and students do not experience the issues that arise in data collection and analysis <a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. Students were more connected to the moose population dataset because it was generated by themselves. Using data gathered by students promotes an active learning environment in the classroom and encourages students to develop an evidence-based mindset <a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>.</p>
+<p>Coupled with showing visualizations of student responses, the process outlined here provides a structure to bring together <strong>student-generated data</strong> with concepts of statistics and overconfidence. The example of moose in Minnesota is one example that connected with students, but any example with a well-known species can be used for this lesson. These activities foster data literacy in undergraduate students, a competence that is needed to solve real-world problems in an increasingly data-driven world.</p>
+<div id="acknowledgments" class="section level3">
+<h3>Acknowledgments</h3>
+<p>Special thanks to the students in the Unversity of Minnesota’s NR5021 (Fall 2017 and Fall 2018) and ESPM3012 classes (Spring 2018) for their participation in this activity.</p>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>A. Gelman and D. Nolan. 2014. <a href="https://www.amazon.com/Teaching-Statistics-Tricks-Andrew-Gelman/dp/0198785704"><em>Teaching statistics: a bag of tricks, 2nd Ed.</em></a> Oxford University Press, Oxford, UK.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>GAISE College Report ASA Revision Committee. <a href="http://www.amstat.org/education/gaise">Guidelines for assessment and instruction in statistics education, college report 2016.</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>L. Taylor and K. Doehler. 2014. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/test.12045">Using online surveys to promote and assess learning</a>. <em>Teaching Statistics</em> 36, 34-40.<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>K. H. Teigen, and M. Jøgensen. 2005. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/acp.1085">When 90% confidence intervals are 50% certain: on the credibility of credible intervals.</a> <em>Appl. Cogn. Psychol.</em> 19, 455-475.<a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p>M. M. Marron and A.S. Wahed. 2016. <a href="https://amstat.tandfonline.com/doi/full/10.1080/10691898.2016.1158018">Teaching missing data methodology to undergraduates using a group-based project within a six-week summer program.</a> <em>J. Stat. Educ.</em> 24, 8-15.<a href="#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p>D. Schuff. 2018. <a href="https://link.springer.com/chapter/10.1007/978-3-319-58097-5_20">Data science for all: a university-wide course in data literacy.</a> In: A. V. Deokar, A. Gupta, L. S. Iyer and M. C. Jones, editors, Analytics and Data Science: Advances in Research and Pedagogy. Springer International Publishing. p. 281-297.<a href="#fnref6" class="footnote-back">↩</a></p></li>
+</ol>
+</div>

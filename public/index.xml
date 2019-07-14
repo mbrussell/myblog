@@ -6,10 +6,20 @@
     <description>Recent content on Arbor Analytics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using Google Forms to analyze confidence intervals: a teaching statistics activity</title>
+      <link>/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</link>
+      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</guid>
+      <description>This post describes how the concepts of confidence intervals can be taught to students. The ideal participants are undergraduate students in an introductory statistics. The in-class activity reveals to students that most people are overconfident in their estimation of uncertainty. The activity uses the example of moose, a charismatic wildlife species in Minnesota.
+IntroductionDemonstrations of data and statistical concepts are effective when they are designed with a structure that encourages participation in the classroom 1.</description>
+    </item>
     
     <item>
       <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
