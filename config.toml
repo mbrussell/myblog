@@ -1,15 +1,15 @@
 baseURL = "https://arbor-analytics.com/"
 languageCode = "en-us"
-title = "Arbor Analytics"
+title = "Arbor Custom Analytics"
 theme = "minimal"
 disqusShortname = "mbrussell" # delete this to disable disqus comments
 googleAnalytics = "UA-136790074-1"
 
 [params]
     author = "Matt Russell" 
-    description = "Using data to make better decisions about our forests."
+    description = "Arbor Custom Analytics offers data and analytics consulting services to the forest products industry."
     githubUsername = "#"
-    accent = "red"
+    accent = "darkgreen"
     showBorder = true
     backgroundColor = "white"
     font = "Roboto" # should match the name on Google Fonts!
@@ -29,7 +29,7 @@ googleAnalytics = "UA-136790074-1"
 
 [[menu.main]]
     url = "/workshop/"
-    name = "Workshops & talks"
+    name = "Events"
     weight = 3
 
 # Social icons to be shown on the right-hand side of the navigation bar
@@ -40,18 +40,23 @@ googleAnalytics = "UA-136790074-1"
     url = "mailto:matt@arbor-analytics.com"
     name = "envelope-o"
     weight = 1
+    
+[[menu.icon]]
+    url = "https://twitter.com/arbor_analytics"
+    name = "twitter"
+    weight = 2    
 
 [[menu.icon]]
     url = "https://github.com/mbrussell/"
     name = "github"
-    weight = 2
+    weight = 3
 
 [[menu.icon]]
     url = "https://www.linkedin.com/in/matthew-russell-70a94824/"
     name = "linkedin"
-    weight = 3
+    weight = 4
     
 [[menu.icon]]
     url = "https://scholar.google.com/citations?user=4OO83OcAAAAJ&hl=en&authuser=1"
     name = "fas fa-graduation-cap"
-    weight = 4
+    weight = 5
