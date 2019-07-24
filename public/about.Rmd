@@ -1,0 +1,43 @@
+---
+title: About
+author: Matt Russell
+date: '2019-07-24'
+slug: about
+---
+
+# Consulting
+Arbor Custom Analytics offers data and analytics consulting services to all sized organizations in the forest products industry. 
+
+## Specializations include
+* Forest analytics
+* Timberland resource assessment
+* Data management
+* Forest growth and yield modeling
+* Statistical modeling
+* Machine learning
+* Teaching data concepts to forest and natural resource professionals
+* Leveraging existing data to solve new problems
+* Independent research
+
+  
+  
+![](https://publons.com/media/thumbs/academic/photos/c8657123370249838b8a49d51b6dff3e.jpg.200x200_q95_crop_detail_upscale.jpg) 
+
+## Matt Russell
+* President and CEO
+
+### Background
+* Experience in forestry and analytics research, teaching, and outreach
+* Author/co-author of over 50 peer-reviewed articles focusing on applied forestry research
+* Officer and representative of Society of American Foresters
+  + A1-Inventory and Biometrics Working Group
+  + Forest Science and Technology Board
+* Member of Forest Products Society and American Statistical Association  
+
+### Education
+* University of Maine. PhD in Forest Resources
+* Virginia Tech, MS in Forestry
+* Paul Smith's College, BS in Forestry
+
+# How to Get Started
+[Email Matt](mailto:matt@arbor-analytics.com) with a description of what you’d like to accomplish. 

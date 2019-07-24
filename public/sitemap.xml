@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/about/</loc>
+    <lastmod>2019-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</loc>
     <lastmod>2019-07-14T00:00:00+00:00</lastmod>
   </url>
@@ -13,7 +18,7 @@
   </url>
   
   <url>
-    <loc>/workshop/try2/</loc>
+    <loc>/events/try2/</loc>
     <lastmod>2019-06-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -53,14 +58,14 @@
   </url>
   
   <url>
-    <loc>/tags/animation/</loc>
-    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2019-07-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2019-07-14T00:00:00+00:00</lastmod>
+    <loc>/tags/animation/</loc>
+    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -108,6 +113,12 @@
   <url>
     <loc>/tags/deer-vehicle-accidents/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/events/</loc>
+    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -220,13 +231,13 @@
   </url>
   
   <url>
-    <loc>/categories/sampling/</loc>
+    <loc>/tags/sampling/</loc>
     <lastmod>2019-05-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/sampling/</loc>
+    <loc>/categories/sampling/</loc>
     <lastmod>2019-05-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -275,12 +286,6 @@
   
   <url>
     <loc>/tags/workshop/</loc>
-    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/workshop/</loc>
     <lastmod>2019-06-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

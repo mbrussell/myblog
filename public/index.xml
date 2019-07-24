@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arbor Custom Analytics</title>
+    <title></title>
     <link>/</link>
-    <description>Recent content on Arbor Custom Analytics</description>
+    <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>ConsultingArbor Custom Analytics offers data and analytics consulting services to all sized organizations in the forest products industry.
+Specializations includeForest analyticsTimberland resource assessmentData managementForest growth and yield modelingStatistical modelingMachine learningTeaching data concepts to forest and natural resource professionalsLeveraging existing data to solve new problemsIndependent researchMatt RussellPresident and CEOBackgroundExperience in forestry and analytics research, teaching, and outreachAuthor/co-author of over 50 peer-reviewed articles focusing on applied forestry researchOfficer and representative of Society of American ForestersA1-Inventory and Biometrics Working GroupForest Science and Technology BoardMember of Forest Products Society and American Statistical AssociationEducationUniversity of Maine.</description>
+    </item>
     
     <item>
       <title>Using Google Forms to analyze confidence intervals: a teaching statistics activity</title>
@@ -36,10 +46,10 @@ The general process to make a GIF image with maps in R is:
     
     <item>
       <title>Data Science for Forestry Applications</title>
-      <link>/workshop/try2/</link>
+      <link>/events/try2/</link>
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/workshop/try2/</guid>
+      <guid>/events/try2/</guid>
       <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
     </item>
     

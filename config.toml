@@ -1,13 +1,13 @@
 baseURL = "https://arbor-analytics.com/"
 languageCode = "en-us"
-title = "Arbor Custom Analytics"
+#title = "Arbor Custom Analytics"
 theme = "minimal"
-disqusShortname = "mbrussell" # delete this to disable disqus comments
+disqusShortname = "mbrussell" # delete this to disable disqus comments 
 googleAnalytics = "UA-136790074-1"
 
 [params]
     author = "Matt Russell" 
-    description = "Arbor Custom Analytics offers data and analytics consulting services to the forest products industry."
+    description = "Arbor Custom Analytics provides data and analytics consulting services for the forest products industry."
     githubUsername = "#"
     accent = "darkgreen"
     showBorder = true
@@ -16,6 +16,7 @@ googleAnalytics = "UA-136790074-1"
     highlight = true
     highlightStyle = "white"
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+    profilePic = "https://arbor-analytics.com/post/2019-07-14-using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity_files/arbor_horiz.png"
 
 [[menu.main]]
     url = "/"
@@ -28,9 +29,14 @@ googleAnalytics = "UA-136790074-1"
     weight = 2
 
 [[menu.main]]
-    url = "/workshop/"
+    url = "/events/"
     name = "Events"
     weight = 3
+    
+[[menu.main]]
+    url = "/about/"
+    name = "About"
+    weight = 4
 
 # Social icons to be shown on the right-hand side of the navigation bar
 # The "name" field should match the name of the icon to be used

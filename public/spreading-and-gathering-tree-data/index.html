@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Spreading and gathering tree data</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Spreading and gathering tree data</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/about-matt/">About Matt</a></li>
+                            
+                                <li><a href="/consulting/">Consulting</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/matthew-russell-70a94824/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://scholar.google.com/citations?user=4OO83OcAAAAJ&amp;hl=en&amp;authuser=1"><i class="fa fa-fas fa-graduation-cap"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/spreading-and-gathering-tree-data/">Spreading and gathering tree data</a></h4>
+    <h5>March 9, 2019</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/tidyr"><kbd class="item-tag">tidyr</kbd></a>
+    
+    <a href="/tags/gather"><kbd class="item-tag">gather()</kbd></a>
+    
+    <a href="/tags/spread"><kbd class="item-tag">spread()</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<p>A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and <a href="https://www.datacamp.com/community/tutorials/long-wide-data-R">needed to be wide</a>.</p>
+<p>The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.</p>
+<p>The <code>veg</code> dataset is formatted long and contains the “pre” (initial) and “post”" (five years later) measurements, along with the number of seedlings per acre:</p>
+<pre><code>##    PlotID Period Seedlings
+## 1       1    Pre      1200
+## 2       1   Post       800
+## 3       2    Pre      1250
+## 4       2   Post       950
+## 5       3    Pre      1350
+## 6       3   Post      1200
+## 7       4    Pre      1200
+## 8       4   Post       650
+## 9       5    Pre      1100
+## 10      5   Post       950
+## 11      6    Pre      1350
+## 12      6   Post       900
+## 13      7    Pre      1200
+## 14      7   Post       650
+## 15      8    Pre      1240
+## 16      8   Post       910</code></pre>
+<p>So what happened during the five years? The number of tree seedlings generally decreased. Trees grew larger into the sapling class and many seedlings suffered mortality.</p>
+<p><img src="/consulting_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Now, how to visualize the change in tree seedlings between the two measurements? We can convert the <code>veg</code> data to a wide format using the <code>spread()</code> function from the <code>tidyr</code> package. The result will turn the 16 rows of data into eight rows of data. In this new dataset called <code>veg_wide</code>, seedlings will be stored in two columns: the pre and post measurements.</p>
+<p>Now we can easily calculate a new variable that quantifies the change in the number of seedlings, called <code>delta_Seedlings</code>:</p>
+<pre class="r"><code>veg_wide$delta_Seedlings&lt;-veg_wide$Period_seedlings_Post - veg_wide$Period_seedlings_Pre
+veg_wide</code></pre>
+<pre><code>##   PlotID Period_seedlings_Pre Period_seedlings_Post delta_Seedlings
+## 1      1                 1200                   800            -400
+## 2      2                 1250                   950            -300
+## 3      3                 1350                  1200            -150
+## 4      4                 1200                   650            -550
+## 5      5                 1100                   950            -150
+## 6      6                 1350                   900            -450
+## 7      7                 1200                   650            -550
+## 8      8                 1240                   910            -330</code></pre>
+<p>Now we can visualize the primary variable we’re interested in:</p>
+<p><img src="/consulting_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>The data are now presented in a wide format. We can use the <code>tidyr</code> package to convert the data back to a long format. Each plot should have two variables: Period and Seedlings. We’ll use the <code>gather()</code> function to make this in a new data frame called <code>veg_long</code>.</p>
+<pre class="r"><code>veg_long&lt;-veg_wide %&gt;% gather(key = Period, value = Seedlings,
+       Period_seedlings_Pre,Period_seedlings_Post)</code></pre>
+<pre><code>## Warning: `lang()` is deprecated as of rlang 0.2.0.
+## Please use `call2()` instead.
+## This warning is displayed once per session.</code></pre>
+<pre><code>## Warning: `new_overscope()` is deprecated as of rlang 0.2.0.
+## Please use `new_data_mask()` instead.
+## This warning is displayed once per session.</code></pre>
+<pre><code>## Warning: `overscope_eval_next()` is deprecated as of rlang 0.2.0.
+## Please use `eval_tidy()` with a data mask instead.
+## This warning is displayed once per session.</code></pre>
+<pre class="r"><code>veg_long %&gt;% select(PlotID,Period,Seedlings)</code></pre>
+<pre><code>##    PlotID                Period Seedlings
+## 1       1  Period_seedlings_Pre      1200
+## 2       2  Period_seedlings_Pre      1250
+## 3       3  Period_seedlings_Pre      1350
+## 4       4  Period_seedlings_Pre      1200
+## 5       5  Period_seedlings_Pre      1100
+## 6       6  Period_seedlings_Pre      1350
+## 7       7  Period_seedlings_Pre      1200
+## 8       8  Period_seedlings_Pre      1240
+## 9       1 Period_seedlings_Post       800
+## 10      2 Period_seedlings_Post       950
+## 11      3 Period_seedlings_Post      1200
+## 12      4 Period_seedlings_Post       650
+## 13      5 Period_seedlings_Post       950
+## 14      6 Period_seedlings_Post       900
+## 15      7 Period_seedlings_Post       650
+## 16      8 Period_seedlings_Post       910</code></pre>
+<p>Look familiar? The <code>veg_long</code> and original <code>veg</code> datasets are nearly identical. The <code>spread()</code> and <code>gather()</code> functions are two of many functions in R for organizing <a href="https://r4ds.had.co.nz/tidy-data.html">tidy data</a>.</p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/">Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </a></h4>
+    <h5>June 29, 2019</h5>
+    
+    <a href="/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="/tags/gif"><kbd class="item-tag">GIF</kbd></a>
+    
+    <a href="/tags/animation"><kbd class="item-tag">animation</kbd></a>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/magick"><kbd class="item-tag">magick</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/better-ways-to-visualize-multi-modal-data/">Adding some music to boxplots, and better ways to visualize diameter distributions</a></h4>
+    <h5>March 22, 2019</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/ggplot2"><kbd class="item-tag">ggplot2</kbd></a>
+    
+    <a href="/tags/geom_violin"><kbd class="item-tag">geom_violin()</kbd></a>
+    
+    <a href="/tags/geom_boxplot"><kbd class="item-tag">geom_boxplot()</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/spreading-and-gathering-tree-data/">Spreading and gathering tree data</a></h4>
+    <h5>March 9, 2019</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/tidyr"><kbd class="item-tag">tidyr</kbd></a>
+    
+    <a href="/tags/gather"><kbd class="item-tag">gather()</kbd></a>
+    
+    <a href="/tags/spread"><kbd class="item-tag">spread()</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mbrussell" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Workshop on Arbor Custom Analytics</title>
+    <title>Workshop on </title>
     <link>/tags/workshop/</link>
-    <description>Recent content in Workshop on Arbor Custom Analytics</description>
+    <description>Recent content in Workshop on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Jun 2019 00:00:00 +0000</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Data Science for Forestry Applications</title>
-      <link>/workshop/try2/</link>
+      <link>/events/try2/</link>
       <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/workshop/try2/</guid>
+      <guid>/events/try2/</guid>
       <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
     </item>
     

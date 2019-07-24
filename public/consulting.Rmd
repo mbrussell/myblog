@@ -1,0 +1,20 @@
+---
+title: Consulting
+author: Matt Russell
+date: '2019-07-19'
+slug: consulting
+---
+
+# Consulting
+Arbor Custom Analytics, LLC offers data and analytics consulting services to all sized organizations in the forest products industry. 
+
+## Specializations include
+* Forest analytics
+* Timberland resource assessment
+* Statistical modeling
+* Machine learning
+* Teaching data concepts to forest and natural resource professionals
+* Independent research
+
+# How to Get Started
+Email Matt with a description of what you’d like to accomplish. 
