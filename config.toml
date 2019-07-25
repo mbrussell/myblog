@@ -1,13 +1,13 @@
 baseURL = "https://arbor-analytics.com/"
 languageCode = "en-us"
-#title = "Arbor Custom Analytics"
+#title = "Arbor Custom Analytics LLC"
 theme = "minimal"
 disqusShortname = "mbrussell" # delete this to disable disqus comments 
 googleAnalytics = "UA-136790074-1"
 
 [params]
     author = "Matt Russell" 
-    description = "Arbor Custom Analytics provides data and analytics consulting services for the forest products industry."
+    description = "Arbor Custom Analytics LLC provides data and analytics consulting services for the forest products industry."
     githubUsername = "#"
     accent = "darkgreen"
     showBorder = true

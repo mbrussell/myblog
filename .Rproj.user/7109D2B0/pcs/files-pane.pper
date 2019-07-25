@@ -1,5 +1,5 @@
 {
-    "path" : "~/git/myblog/content",
+    "path" : "~/git/myblog/themes/minimal/layouts/partials",
     "sortOrder" : [
         {
             "ascending" : false,
