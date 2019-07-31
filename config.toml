@@ -58,11 +58,6 @@ googleAnalytics = "UA-136790074-1"
     weight = 3
 
 [[menu.icon]]
-    url = "https://www.linkedin.com/in/matthew-russell-70a94824/"
+    url = "https://www.linkedin.com/company/arbor-custom-analytics"
     name = "linkedin"
     weight = 4
-    
-[[menu.icon]]
-    url = "https://scholar.google.com/citations?user=4OO83OcAAAAJ&hl=en&authuser=1"
-    name = "fas fa-graduation-cap"
-    weight = 5

@@ -6,10 +6,20 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>New logging companies with old equipment: Finding patterns in logging businesses using clustering</title>
+      <link>/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
+      <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.
+As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
+    </item>
     
     <item>
       <title>Using Google Forms to analyze confidence intervals: a teaching statistics activity</title>

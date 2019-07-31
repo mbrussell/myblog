@@ -1,0 +1,152 @@
+---
+title: 'New logging companies with old equipment: Finding patterns in logging businesses
+  using clustering'
+author: Matt Russell
+date: '2019-07-31'
+slug: new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering
+categories:
+  - Machine learning
+tags:
+  - Data science
+  - Machine learning
+  - clustering
+  - k-means
+  - logging
+---
+
+<center>
+![A recent survey of loggers provides some demographic data where we can see patterns in logger demographics. (photo: Richard Sennott, _Mpls Star Tribune_)](/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/1paper1126.jpg)
+</center>
+
+Loggers are the backbone of the forest products industry and contribute to the [2.5 million jobs](https://www.afandpa.org/our-industry/fun-facts) in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.
+
+As an example in Minnesota, [a recent study](https://www.forestry.umn.edu/sites/forestry.umn.edu/files/mn_2016_logging_staff_paper_final_feb_2019.pdf) indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old. In that same study, loggers failed to identify any factors that would encourage others to join the logging profession. 
+
+The age of a logging business is likely related to other demographics such as the amount of wood volume produced by a logger, how much revenue the business takes in, and the kind of equipment used by the logger. We can use clustering to help us find patterns or groups within the Minnesota logger data.
+
+## Clustering as a way to find patterns
+
+[Clustering](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68) is an unsupervised machine learning algorithm that groups items in clusters. Data points that get grouped in the same cluster, by way of any number of clustering algorithms, are similar in nature. The process of clustering allows us to recognize patterns that might appear in the data, without needing to analyze it through detailed quantitative analysis. 
+
+[K-means clustering](https://uc-r.github.io/kmeans_clustering) is an algorithm that designates k groups, each with a mean value of that group. Each 'k-mean' is selected so that the amount of variation within a cluster is smallest. (Or in statistical terms, the the total within sum of squares is minimized.)
+
+We can use k-means clustering on the Minnesota logger data to find patterns in business characteristics.
+
+## The Minnesota logger data
+
+The logger data contain two key variables: The age of a company's newest [feller buncher](https://en.wikipedia.org/wiki/Feller_buncher) (the most common piece of equipment used to harvest wood in Minnesota) and the number of years the logging company has been in business. 
+
+One might suppose that established logging businesses may have newer equipment because of their time in their market (up to 80 years in this data set) has made them a successful company. Young companies may be working with older equipment because they have yet to build up the capital required to purchase new equipment.
+
+The data contain 78 observations from Minnesota loggers. Here's a scatter plot of the age of feller buncher and years the logging company has been in business:
+
+```{r,echo=F,warning=F,message=F}
+# Read in libraries to use
+library(gsheet)
+library(tidyverse)
+library(factoextra)
+library(gridExtra)
+library(knitr)
+library(formattable)
+library(kableExtra)
+
+logger<-gsheet2tbl('https://docs.google.com/spreadsheets/d/14i2MbYSFDX7ohIWEsWkGfh6ztpSMXIB2xGDi6MBh3BI/edit?usp=sharing') 
+
+p.age<-ggplot(logger,aes(operateyears,fellerbuncher))+geom_point()+
+  labs(x="Years of logging company",y= "Age of newest feller buncher")+
+    theme(panel.background = element_rect(fill = "NA"), 
+        axis.line=element_line(color="black"),
+        axis.title.x = element_text(size=12,color="black"),
+        axis.title.y = element_text(size=12,color="black"),
+        axis.text.x = element_text(size=12,color="black"),
+        axis.text.y  = element_text(size=12,color="black"))
+p.age
+
+```
+
+You'll notice a slight negative correlation between the two variables. The correlation coefficient is -0.33, indicating that established logging companies that have existed for a long time generally have newer equipment.  
+
+We can add a smoothed trend line (blue) with 95% confidence intervals (gray), and also see that generally younger logging companies have older pieces of equipment:
+
+```{r,echo=F,warning=F,message=F}
+mycor<-cor.test(logger$operateyears,logger$fellerbuncher)
+
+p.spp<-ggplot(logger,aes(operateyears,fellerbuncher))+geom_point()+
+  labs(x="Years of logging company",y= "Age of newest feller buncher")+
+  stat_smooth()+
+    theme(panel.background = element_rect(fill = "NA"), 
+        axis.line=element_line(color="black"),
+        axis.title.x = element_text(size=12,color="black"),
+        axis.title.y = element_text(size=12,color="black"),
+        axis.text.x = element_text(size=12,color="black"),
+        axis.text.y  = element_text(size=12,color="black"))
+p.spp
+```
+
+## Clustering logging businesses
+So what patterns might emerge if we _grouped__ the data using k-means clustering? Young logging companies with old equipment may be one group, and old companies with new equipment might be another.
+
+We'll start with trying four clusters using the logging business data, and the `factoextra` package in R [^1]. The graph shows a separation of four groups: 
+
+```{r,echo=F,warning=F,message=F}
+k4 <- kmeans(logger, centers = 4, nstart = 25)
+
+p.k4<-fviz_cluster(k4, geom = "point", data = logger) + 
+  ggtitle("k-means clustering with k = 4")
+p.k4
+
+#fviz_nbclust(logger, kmeans, method = "wss")
+#fviz_cluster(k4, data = logger_new3)
+```
+
+The k-means clustering approach also can provide mean values for the years of the logging company and the age of the newest feller buncher, summarized for each cluster.
+
+```{r,echo=F,warning=F,message=F,eval=F}
+k4$centers
+cluster<-c(1,2,3,4)
+company_years<-c(62.0, 10.1, 38.6, 30.3)
+feller_buncher_age<-c(7.8,20.6,21.2,7.5)
+logger.mean<-data.frame(cluster,company_years,feller_buncher_age)
+```
+
+```{r,echo=F,warning=F,message=F,eval=F}
+ct <- logger.mean %>% 
+  head(,)
+ct %>% 
+  kable("html", caption = 'Mean values for each cluster of the logger demographic data.') %>%
+ kable_styling()
+
+```
+
+Investigating each cluster provides insight into each group that emerges:
+
+* __Established companies, new equipment (far right)__. These are established companies that are working with new logging equipment. They have a long history and likely have strong relationships with landowners that supply the wood that they harvest.  
+* __Younger companies, new equipment (middle, bottom)__. These are younger companies that are working with  new logging equipment. They likely have solid growth opportunities as a company because their equipment can lead to efficient harvesting of wood and increased in-woods productivity.  
+* __Older companies, older equipment (middle, top)__. These are older companies that are working with relatively old logging equipment. These loggers may be at the greatest risk of market changes: they have not invested in capital expenditures in their equipment, yet likely have established relationships with landowners that provide wood for harvest.   
+* __Young companies, old equipment (far left)__. These are young companies that do not have a long history and are working with old logging equipment. They may be seeking to establish relationships with landowners.
+
+An analyst can choose any number of clusters to use in k-means clustering. There are a number of ways to identify the [appropraite number of clusters](https://www.datascience.com/blog/k-means-clustering) for a data set. For example, we could have chosen to identify between two and five clusters:
+
+```{r,echo=F,warning=F,message=F}
+k2 <- kmeans(logger, centers = 2, nstart = 25)
+k3 <- kmeans(logger, centers = 3, nstart = 25)
+k4 <- kmeans(logger, centers = 4, nstart = 25)
+k5 <- kmeans(logger, centers = 5, nstart = 25)
+
+p.k2<-fviz_cluster(k2, geom = "point", data = logger) + ggtitle("k = 2")
+p.k3<-fviz_cluster(k3, geom = "point", data = logger) + ggtitle("k = 3")
+p.k4<-fviz_cluster(k4, geom = "point", data = logger) + ggtitle("k = 4")
+p.k5<-fviz_cluster(k5, geom = "point", data = logger) + ggtitle("k = 5")
+
+grid.arrange(p.k2, p.k3, p.k4, p.k5, nrow = 2)
+```
+
+## Summary
+Clustering is a useful method to quickly identify patterns within data. The advantage is that data do not have to be __labeled__ in any way--the clustering can do they work in grouping data. As an example, for the cluster that identifies older companies working with relatively old logging equipment, additional analysis of those businesses can identify other demographics of those logging companies such as:
+* their outlook on the profession, 
+* how many employees they have, 
+* and how much wood volume they produce.
+
+More "quantitative analysts" may not see as much value in clustering due to the minimal amount of quantitative output that clustering provides (aside from the mean values of each variable within each cluster). Mean values provided in a cluster analysis may help to set thresholds that can be used in subsequent analyses, e.g., how do we define a "new logging business" or one that works with "old equipment"?
+
+[^1]: Alboukadel Kassambara and Fabian Mundt (2017). [factoextra](https://CRAN.R-project.org/package=factoextra): Extract and Visualize the Results of Multivariate Data Analyses. R package version 1.0.5.

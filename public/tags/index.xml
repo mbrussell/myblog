@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Clustering</title>
+      <link>/tags/clustering/</link>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/clustering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Communicating Data</title>
       <link>/tags/communicating-data/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
@@ -32,7 +41,7 @@
     <item>
       <title>Data Science</title>
       <link>/tags/data-science/</link>
-      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/data-science/</guid>
       <description></description>
@@ -143,6 +152,33 @@
       <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/hunting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>K Means</title>
+      <link>/tags/k-means/</link>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/k-means/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logging</title>
+      <link>/tags/logging/</link>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/logging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>/tags/machine-learning/</link>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/machine-learning/</guid>
       <description></description>
     </item>
     
