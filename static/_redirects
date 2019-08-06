@@ -1,4 +1,1 @@
-/blog /post
-http://arborcustomanalytics.com/* https://arbor-analytics.com/post/:splat 301!
-https://arborcustomanalytics.com/* https://arbor-analytics.com/post/:splat 301!
-https://arborcustomanalytics.com/* https://arbor-analytics.com/:splat 200
+https://arborcustomanalytics.com https://arbor-analytics.com.com 301!
