@@ -4,6 +4,7 @@ title: 'New logging companies with old equipment: Finding patterns in logging bu
 author: Matt Russell
 date: '2019-07-31'
 slug: new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering
+description: "An example of using machine learning in the forest products industry."
 categories:
   - Machine learning
 tags:

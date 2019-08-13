@@ -6,10 +6,20 @@
     <description>Recent content in Forest Inventory on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/forest-inventory/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quickly explore your timber cruise data with six lines of code</title>
+      <link>/post/explore-your-timber-cruise-data/</link>
+      <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/explore-your-timber-cruise-data/</guid>
+      <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.
+A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
+    </item>
     
     <item>
       <title>How many trees make a mass timber building?</title>

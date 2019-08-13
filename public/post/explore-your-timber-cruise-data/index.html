@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quickly explore your timber cruise data with six lines of code</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Quickly explore your timber cruise data with six lines of code</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+      
+
+    <h4><a href="/post/explore-your-timber-cruise-data/">Quickly explore your timber cruise data with six lines of code</a></h4>
+    <h5>The inspectdf package in R allows you to quickly summarize timber cruise data by species, tree status, and other variables.</h5>
+    
+    <a href="/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="/tags/timber-cruise"><kbd class="item-tag">timber cruise</kbd></a>
+    
+    <a href="/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="/tags/inspectdf"><kbd class="item-tag">inspectdf</kbd></a>
+    
+    <a href="/tags/communicating-data"><kbd class="item-tag">Communicating data</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<p>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.</p>
+<p>A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</p>
+<p>Don’t have a data-checking routine in place? Data-checking routines can ensure quality and reliability in forest inventories and contribute to quality assurance and quality control.</p>
+<p>Data-checking routines can also instill confidence in field crew members that are cruising timber. The job performance of forest analysts is due in part to the quality of data they’re working with. Having forest inventory data that everyone in a company can trust is essential for basing multi-million dollar decisions.</p>
+<div id="an-r-package-for-quickly-exploring-data-sets" class="section level2">
+<h2>An R package for quickly exploring data sets</h2>
+<p>Any good data checking routine would have a number of attributes:</p>
+<ul>
+<li>it loads data quickly and efficiently,</li>
+<li>it provides a useful numerical summary of important tree and stand attributes, and</li>
+<li>it provides useful visualizations for exploring timber cruise data.</li>
+</ul>
+<p>Fortunately the <code>inspectdf</code> package <a href="https://alastairrushworth.github.io/inspectdf/">developed by Alastair Rushworth</a> provides an easy-to-use tool that allows an analyst to inspect, compare, and visualize data frames in R.</p>
+<p>The <code>inspectdf</code> package can be loaded either from CRAN or from Github through the <code>install_github()</code> function in the <code>devtools</code> package. It is also useful to load the <code>tidyverse</code> package to accompany the series of graphs that the <code>inspectdf</code> package relies on:</p>
+<pre class="r"><code># devtools::install_github(&quot;alastairrushworth/inspectdf&quot;)
+library(inspectdf)
+library(tidyverse)</code></pre>
+</div>
+<div id="the-cloquet-timber-cruise-data" class="section level2">
+<h2>The Cloquet timber cruise data</h2>
+<p>In 2014 a field crew remeasured 389 fixed-radius permanent sample plots at the <a href="https://cfc.cfans.umn.edu/">Cloquet Forestry Center</a> in Cloquet, Minnesota. Trees greater than 5.0 inches diameter at breast height (DBH) were measured on a 1/7th acre fixed-radius plot and and trees smaller than 5.0 inches DBH were measured on a 1/100th acre plot. The data were comprised of 14,947 individual tree observations.</p>
+<p>The Cloquet data set (<code>tree</code>) includes two numerical variables:</p>
+<ul>
+<li>tree diameter at breast height (DBH), and</li>
+<li>total tree height in feet (HT)</li>
+</ul>
+<p>Also included are five categorical variables:</p>
+<ul>
+<li>the primary cover species where the plot is located (CoverType),</li>
+<li>the status of the tree (e.g., growth tree/standing dead tree; TreeClass),</li>
+<li>the crown class of the tree (e.g., dominant/overtopped; CrownClass),</li>
+<li>the crown ratio of the tree, categorized in ten percent increments (CrownRatio), and</li>
+<li>a two-letter code indicating tree species (SPP)</li>
+</ul>
+<p>The data include a variety of species in various in a variety of conditions:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-4">Table 1: </span>The Cloquet timber cruise data.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+CoverType
+</th>
+<th style="text-align:right;">
+DBH
+</th>
+<th style="text-align:left;">
+TreeClass
+</th>
+<th style="text-align:left;">
+CrownClass
+</th>
+<th style="text-align:left;">
+CrownRatio
+</th>
+<th style="text-align:right;">
+HT
+</th>
+<th style="text-align:left;">
+SPP
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+19.8
+</td>
+<td style="text-align:left;">
+Standing dead
+</td>
+<td style="text-align:left;">
+Dominant
+</td>
+<td style="text-align:left;">
+21-30%
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:left;">
+WP
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+White pine
+</td>
+<td style="text-align:right;">
+12.9
+</td>
+<td style="text-align:left;">
+Growth tree
+</td>
+<td style="text-align:left;">
+Dominant
+</td>
+<td style="text-align:left;">
+11-20%
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+WP
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nonforest
+</td>
+<td style="text-align:right;">
+12.0
+</td>
+<td style="text-align:left;">
+Harvested
+</td>
+<td style="text-align:left;">
+Codominant
+</td>
+<td style="text-align:left;">
+71-80%
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+WP
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+11.6
+</td>
+<td style="text-align:left;">
+Growth tree
+</td>
+<td style="text-align:left;">
+Codominant
+</td>
+<td style="text-align:left;">
+31-40%
+</td>
+<td style="text-align:right;">
+78
+</td>
+<td style="text-align:left;">
+WP
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Upland mixed hardwoods
+</td>
+<td style="text-align:right;">
+5.3
+</td>
+<td style="text-align:left;">
+Ingrowth tree
+</td>
+<td style="text-align:left;">
+Codominant
+</td>
+<td style="text-align:left;">
+51-60%
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+WP
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+19.3
+</td>
+<td style="text-align:left;">
+Standing dead
+</td>
+<td style="text-align:left;">
+Codominant
+</td>
+<td style="text-align:left;">
+31-40%
+</td>
+<td style="text-align:right;">
+95
+</td>
+<td style="text-align:left;">
+WP
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/post/2019-08-08-how-to-quickly-summarize-your-timber-cruise-data_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="the-inspectdf-functions" class="section level2">
+<h2>The inspectdf functions</h2>
+<p>The <code>inspect_types()</code> function allows you to inspect the column types for each variable in the data set. In the Cloquet data set it reads the two numeric variables and five categorical variables as factors:</p>
+<pre class="r"><code>inspect_types(tree) %&gt;% show_plot()</code></pre>
+<p><img src="/post/2019-08-08-how-to-quickly-summarize-your-timber-cruise-data_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>The <code>inspect_na()</code> function summarizes each column and presents the percentage of observations that are missing (i.e., ones that have NA values). In the Cloquet data set the only variable with missing data is <code>HT</code>.</p>
+<p>In total, 80% of tree observations do not contain a <code>HT</code> measurement. This agrees with the plot measurement protocol of measuring every fifth tree for height as a part of a subsample:</p>
+<pre class="r"><code>inspect_na(tree) %&gt;% show_plot()</code></pre>
+<p><img src="/post/2019-08-08-how-to-quickly-summarize-your-timber-cruise-data_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>The <code>inspect_num()</code> function provides a histogram of the distribution of all numeric columns in the data. The function allows you to quickly spot outliers and data entry errors in the data. In the Cloquet data set, <code>DBH</code> peaks around eight inches and <code>HT</code> around 50 feet:</p>
+<pre class="r"><code>inspect_num(tree) %&gt;% show_plot()</code></pre>
+<p><img src="/post/2019-08-08-how-to-quickly-summarize-your-timber-cruise-data_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>The <code>inspect_cor()</code> function provides the Pearson correlation coefficient for all numeric variables in the data set. In the Cloquet data set, we see that <code>DBH</code> and <code>HT</code> have a correlation coefficient of 0.772, which is what we would expect after inspecting the HT-DBH scatter plot shown previously:</p>
+<pre class="r"><code>inspect_cor(tree)</code></pre>
+<pre><code>## # A tibble: 1 x 6
+##   col_1 col_2  corr p_value lower upper
+##   &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 HT    DBH   0.772       0 0.757 0.787</code></pre>
+<p>The <code>inspect_cat()</code> function provides a graph showing the frequency of categorical levels in the data using a stacked bar chart. We can see that red pine (RP) and aspen (QA) are the most common cover types and species, most trees are in a codominant crown position, crown ratio is typically between 21 and 40%, and most observations are on growth trees (those that were measured in past inventories) or ingrowth trees:</p>
+<pre class="r"><code>inspect_cat(tree) %&gt;% show_plot() </code></pre>
+<p><img src="/post/2019-08-08-how-to-quickly-summarize-your-timber-cruise-data_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>For large timber cruise data sets, or for data sets when memory limits pose a problem, the <code>inspect_mem()</code> function may be useful. The function provides a graph showing the total size of the data set and the contribution of each column to its total volume. The Cloquet data are 532.25 Kb, and the numeric variables <code>DBH</code> and <code>HT</code> occupy the most space in the data (116.24 Kb each):</p>
+<pre class="r"><code>inspect_mem(tree) %&gt;% show_plot()</code></pre>
+<p><img src="/post/2019-08-08-how-to-quickly-summarize-your-timber-cruise-data_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>The <code>inspectdf</code> package is useful to quickly analyze any timber cruise data set. It provides simple numeric output, produces easy-to-interpret visualizations, and requires a minimal amount of code through its functions.</p>
+<p>All of these reasons are advantages to rapidly assess timber cruise data quality. Incorporating data quality routines in your everyday work flow can provide confidence and increase the reliability in forest inventory data.</p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/">Using Google Forms to analyze confidence intervals: a teaching statistics activity</a></h4>
+    <h5>July 14, 2019</h5>
+    
+    <a href="/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    
+    <a href="/tags/moose"><kbd class="item-tag">moose</kbd></a>
+    
+    <a href="/tags/overconfidence"><kbd class="item-tag">overconfidence</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/">Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </a></h4>
+    <h5>June 29, 2019</h5>
+    
+    <a href="/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="/tags/gif"><kbd class="item-tag">GIF</kbd></a>
+    
+    <a href="/tags/animation"><kbd class="item-tag">animation</kbd></a>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/magick"><kbd class="item-tag">magick</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/how-many-trees-make-a-mass-timber-building/">How many trees make a mass timber building?</a></h4>
+    <h5>June 15, 2019</h5>
+    
+    <a href="/tags/regression"><kbd class="item-tag">regression</kbd></a>
+    
+    <a href="/tags/mass-timber"><kbd class="item-tag">mass timber</kbd></a>
+    
+    <a href="/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mbrussell" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
