@@ -2,7 +2,7 @@
 title: Quickly explore your timber cruise data with six lines of code
 author: Matt Russell
 date: '2019-08-13'
-slug: explore-your-timber-cruise-data
+slug: explore-your-timber-cruise-data 
 description: The inspectdf package in R allows you to quickly summarize timber cruise data by species, tree status, and other variables.
 categories:
   - Data visualization
