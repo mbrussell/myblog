@@ -1,0 +1,78 @@
+---
+title: Should foresters keep saying “statistically significant”?
+author: Matt Russell
+date: '2019-08-30'
+slug: should-foresters-keep-saying-statistically-significant
+categories:
+  - Statistics
+tags:
+  - statitics
+  - significance
+  - p-values
+  - Communicating data
+---
+
+The statistics community has had a lot of discussion in recent years about the role of *p *-values and statistical significance. What does this mean for forest biometricians and analysts that have traditionally used *p *-values and tests of significance in their daily work?
+
+The American Statistical Association’s [August 2019 edition](https://rss.onlinelibrary.wiley.com/toc/17409713/2019/16/4) of their magazine *Significance* has a number of great articles on significance. They even refer to the term as “the S word”:
+
+<center>
+![*This month's issue of Significance.*](/post/should-foresters-keep-saying-statistically-significant/asa_significance4.jpg){height=300px}
+</center>
+
+## What are *p *-values?
+
+For many foresters, we learned that *p *-values are the probability under a statistical model that a summary of the data would be equal to or more extreme than its observed value.
+
+Frank Freese’s seminal work in [Elementary Statistics for Foresters](https://www.fpl.fs.fed.us/documnts/usda/ah317.pdf) presents the concepts of *p *-values and significance tests. He first mentions them when discussing the correlation coefficient of tree diameter and their age:
+
+> “This test result is usually summarized by saying that the sample correlation coefficient is not significant at the 0.05 level. In statistical terms, we tested the hypotheses that r = 0 and failed to reject the hypothesis at the 0.05 level. This is not exactly the same as saying that we reject the hypothesis or that we have proved that r = 0. The distinction is subtle but real.” 
+
+For another example, we could compare the sample means between two groups. After collecting some inventory plots, a pine stand on a high-quality site may have an average volume of 25,000 board feet. A stand of the same age on a poor site might have an average volume of 18,000 board feet. We might conclude by saying that the difference between the two pine stands is statistically significant at the 0.05 level. 
+## The issues with *p *-values
+So what’s the issue with saying the two stands are significantly different? In 2016 [the ASA highlighted](https://amstat.tandfonline.com/doi/full/10.1080/00031305.2016.1154108#.XWk_GyhKiUk) that “statistical significance is not equivalent to scientific, human, or economic significance”. 
+
+Assessing “statistical significance” is commonly done using the *p *-value as a threshold. A *p *-value can be small if the number of samples or measurement precision is high enough. A *p *-value can be large if the sample size is small or measurements are imprecise. 
+
+A *p *-value doesn’t measure the size of an effect or the importance of a result. So a *p *-value of 0.0001 does not indicate a more important result than a *p *-value of 0.045. This is where you might often hear someone say “My *p *-value is so small, my results are VERY significant!”
+
+The ASA [went further](https://amstat.tandfonline.com/doi/full/10.1080/00031305.2016.1154108#.XWk_GyhKiUk) by stating that the words “statistically significant” should be abandoned altogether. Their article describes that statistical significance was never intended to imply scientific importance.
+
+In short, any label of “statistical significance” on an outcome doesn’t indicate that an effect is real.
+
+## The ATOM approach for significance
+Should forest biometricians and analysts stop using *p *-values? At a minimum, I really like the ASA’s shortcut to “remember ATOM”. When thinking about traditional applications of *p *-values and significance: 
+
+* **A**ccept uncertainty. 
+* Be **T**houghtful. 
+* Be **O**pen. 
+* Be **M**odest.
+
+Data are noisy in the real world. By accepting the uncertainty inherent in the data, we move away from categorizing variables and attributes as either “significant” or “not significant”.
+
+Practicing thoughtful data analysis allows analysts to assess their workflow and applications of their work. Are you engaging in exploratory data analysis on a project? Or are your results going to inform key decisions and a thorough statistical analysis is needed?
+
+Being open about your analysis stresses the importance of recognizing that subjectivity is present in any statistical analysis. This is also true when considering the role of expert judgement in the data analysis project and the interpretation of a project’s findings. When communicating *p *-values, a practical tip is to present them as continuous values rather than dichotomized ones (e.g., report p = 0.04234 not p < 0.05).
+
+Being modest encourages you to think about how others might be able to reproduce your work. More broadly, being modest promotes the limitations of statistical knowledge in the larger discipline of scientific understanding.
+ 
+## When to use *p *-values
+
+Despite the issues and misuse of *p *-values, they may be useful in a few applications. Here are a few applications where foresters might continue to use *p *-values:
+
+#### Quality control
+Is product quality and assurance important in your business? *P *-values could be used in cases where automated decision rules are required. This approach could reduce the costs, time, and effort without a product quality protocol in place.
+
+#### Variable selection and model-fitting 
+Foresters often have a vast number of potential variables to use to explain the variability in a forest attribute of interest. How do we sort through those variables to create a meaningful model that can be easily interpreted by others?
+
+For example, consider a remote sensing project that seeks to estimate forest biomass from dozens of variables obtained in a lidar acquisition. *P *-values might be used in this case as a “threshold” to only allow a select number of variables to contribute to a final model. This can result in a model with few variables that have a lot of power in explaining forest biomass. 
+
+It’s important to revisit what *p *-values are and what they aren’t. Forest biometricians and analysts may still find that *p *-value outputs are useful to look at in their daily work.
+
+## Conclusion 
+There’s been a lot of discussion recently around how *p *-values are misused. Forest biometricians and analysts should recognize their limitations, but may still use *p *-values in a few specific cases.
+
+How do you use *p *-values in your work? Do you say “statistically significant” when you’re interpreting your forestry datasets?
+
+
