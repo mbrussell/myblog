@@ -1,0 +1,127 @@
+---
+title: A 50-year history of forest measurements by analyzing Forest Measurements
+author: Matt Russell
+date: '2019-09-15'
+slug: a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements
+categories:
+  - Forest measurements
+tags:
+  - forest inventory
+  - sampling
+  - books
+  - forest measurements
+---
+
+<center>
+![*The first five editions of Forest Measurements.*](/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/formeas.jpg){width=500px}
+</center>
+
+## 
+
+If you’ve even taken a course in forest measurements, you likely used *Forest Measurements* as the textbook. The first edition of forest measurements was published in 1967 by Thomas Eugene Avery and included a number of topics related to forest inventory, sampling forest resources, and tree and stand measurements.
+
+The book recently published its 6th edition in 2018 and is available through [Waveland Press](https://www.waveland.com/browse.php?t=668&r=a). Investigating how the book has incorporated new topics gives insights into the advances of the field of forest measurements:
+
+
+```{r,echo=F,warning=F,message=F}
+require(timeline)
+
+edition.num=c("1st ed.\n(1967)","2nd ed.\n(1975)","3rd ed.\n(1983)","4th ed.\n(1994)","5th ed.\n(2002)","6th ed.\n(2018)")
+group=c("Forest Measurements","Natural Resources\nMeasurements","Forest Measurements","Forest Measurements","Forest Measurements", "Forest Measurements")
+StartDate=as.Date(c("1967-01-01","1975-01-01","1983-01-01","1994-01-01","2002-01-01","2018-01-01"))
+EndDate=as.Date(c("1974-12-31","1982-12-31","1993-12-31","2001-12-31","2017-12-31", "2023-12-31"))
+
+editions=data.frame(edition.num=edition.num,group=group,StartDate=StartDate,EndDate=EndDate)
+Event=c("Nontimber resources",
+  "Volume/weights","Stand-tables","G&Y models","3P sampling",
+  "Sampling designs **","Statistical methods **","Site/stocking/density **","Regeneration surveys",
+  "GIS/GPS",
+  "Info. tech.", "GIS **", "Forest carbon")
+
+Date=as.Date(c("1976-01-01",
+  "1984-01-01","1984-01-01","1984-01-01","1984-01-01",
+  "1995-01-01","1995-01-01","1995-01-01","1995-01-01",
+  "2003-01-01",
+  "2018-01-01","2018-01-01","2018-01-01"))
+events=data.frame(Event=Event, Date=Date)
+
+
+#47 years of Forest Measurements
+timeline(editions, events, event.spots=2, event.label='', text.size=4, 
+  event.text.size=3,event.above=FALSE)
+
+```
+
+## 1st edition (1967)
+The book was first published by Thomas Eugene Avery, Professor and Head of the Department of Forestry at the University of Illinois, in 1967. As stated in the preface to the book:
+
+> “An attempt has been made to present subject matter in a simple and concise fashion that is easily grasped by the neophyte forester.”
+
+Avery points out what’s contained in the book, and also what’s not. The author mentions that topics covered in the book are ones that were not often covered in mensuration textbooks up until that point. Take for example the weight scaling of wood, point sampling in timber cruises, and using aerial photography in forest mensurations.  Avery mentions that alignment charts for constructing standard volume tables were purposefully left out, citing that these topics are traditionally discussed in mensuration textbooks.
+
+## 2nd edition (1975)
+The second edition was published eight years later and saw a different title: *Natural Resources Measurements*. The broader title may have been in response to an increased understanding of the importance of natural resource assessments in our ecosystems. (The United States recently celebrated its first Earth Day in 1970, after all.)
+
+The emphasis of the book was that it was “not limited to timber estimation techniques”. A new third part to the book, made up of six new chapters, included topics on measuring rangelands, wildlife,  fisheries, water, and recreation resources. There was also a new chapter added on dendrochronology.  
+
+Most of the text, tables, and figures in the book appeared in metric units. Under only two exceptions, when discussing the US Public Land Survey and board-foot log rules, did the book use English units.
+
+## 3rd edition (1983)
+A second co-author, Harold E. Burkhart from Virginia Tech, joined the authorship for the third edition of the book. In reading the preface of this edition, it is interesting to read how the book was written almost as if the second edition was never printed. This is emphasized by the change back to the original title of *Forest Measurements*. This highlighted in the first two sentences of the preface: 
+
+> “This third edition, prepared with a co-author, is, in essence, an expanded version of the first edition of *Forest Measurements*. Emphasis is on timberland inventory.”
+
+The book also mentions a survey to 113 forestry instructors (with a 60% response rate) inquiring about the contents of the book. Results from that questionnaire indicated a preference to focus on timberland inventories and use English units as the standard unit of measure throughout the book. 
+
+A humorous sentence written in the preface: 
+
+> “As of this writing, most organizations and agencies in the United States are still strongly resisting the voluntary (though inevitable?) changeover to the International System of Units”
+
+The US is still strongly resisting in 2019! 
+
+## 4th edition (1994)
+The fourth edition contained two more chapters and 77 more pages than the previous edition. The preface mentions another questionnaire sent to forestry instructors and that existing topics saw expanded coverage in the new edition.
+
+Topics on statistical methods and sampling design were separated into their own chapters. Log grading, tarif tables, and regeneration surveys were additional topics that were incorporated into this edition. A number of appendices were added, particularly ones involving mathematical operations-useful topics for any student to review prior to using this book. 
+
+## 5th edition (2002)
+The 5th edition of the book included one additional chapter and 48 more pages than the previous edition. Again, the preface mentions another questionnaire sent to forestry instructors from the US and Canada, and content was expanded accordingly.
+
+The primary addition of content included topics related to electronic and computing resources, namely the use of GIS and GPS. The measurement of tree crowns and the use of height poles for measuring heights were also incorporated into the book. A glossary and answers to select problems were also added. 
+
+## 6th edition (2018)
+A third co-author, Bronson P. Bullock from the University of Georgia, joined the authorship for the [sixth edition of the book](https://www.waveland.com/browse.php?t=668&r=a).  From the publisher’s website: 
+
+> “The new edition includes expanded discussions of information technology and geospatial information systems commonly employed in assessing forest resources. Recognizing the needs of contemporary forest inventories and models, a new chapter on assessing forest carbon builds on the foundations of traditional forest measurements, sampling, and modeling.”
+
+```{r,echo=F,warning=F,message=F}
+library(tidyverse)
+
+fm<-tribble(
+  ~ed, ~type, ~value,
+  1, "Number of chapters", 14, 
+  2, "Number of chapters", 15, 
+  3, "Number of chapters", 15, 
+  4, "Number of chapters", 17, 
+  5, "Number of chapters", 18, 
+  6, "Number of chapters", 17, 
+  1, "Number of pages", 290,
+  2, "Number of pages", 339,
+  3, "Number of pages", 331,
+  4, "Number of pages", 408,
+  5, "Number of pages", 456,
+  6, "Number of pages", 434
+)
+
+p.fm<-ggplot(fm,aes(factor(ed), value, fill=ed))+
+  facet_wrap(~type,scales="free")+
+  geom_bar(stat="identity")+
+  labs(x="Edition of Forest Measurements", y="")+
+  theme(panel.background = element_rect(fill = "NA"),
+        legend.position = "none")
+p.fm
+```
+
+## Conclusion
+
+Few textbooks in forestry and natural resources have been published through six editions. The *Forest Measurements* textbook has changed to incorporate new aspects of forest inventory and biometrics, in particular by incorporating new technologies and statistical methods. Looking at the table of contents and the new text added in each addition provides a glimpse into the history and development of the field of forest measurements.  
