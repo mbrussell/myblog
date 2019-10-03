@@ -6,10 +6,20 @@
     <description>Recent content in Forest Measurements on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/forest-measurements/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to calculate how much carbon is in a tree</title>
+      <link>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
+      <description>Carbon is perhaps the most important attribute in trees today. Forests in the United States sequester about 11% of the total CO2 emissions every year, making them an important tool to combat future global changes. Having accurate models that represent how much carbon is stored in trees is essential for understanding their carbon sequestration potential and are widely used in forest carbon accounting tools.
+Most equations that predict the amount carbon in a tree start with first predicting its biomass.</description>
+    </item>
     
     <item>
       <title>A 50-year history of forest measurements by analyzing Forest Measurements</title>

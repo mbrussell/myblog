@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Carbon on </title>
+    <link>/categories/carbon/</link>
+    <description>Recent content in Carbon on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/carbon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to calculate how much carbon is in a tree</title>
+      <link>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
+      <description>Carbon is perhaps the most important attribute in trees today. Forests in the United States sequester about 11% of the total CO2 emissions every year, making them an important tool to combat future global changes. Having accurate models that represent how much carbon is stored in trees is essential for understanding their carbon sequestration potential and are widely used in forest carbon accounting tools.
+Most equations that predict the amount carbon in a tree start with first predicting its biomass.</description>
+    </item>
+    
+  </channel>
+</rss>

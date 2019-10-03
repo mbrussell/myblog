@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>How to calculate how much carbon is in a tree</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">How to calculate how much carbon is in a tree</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/how-to-calculate-how-much-carbon-is-in-a-tree/">How to calculate how much carbon is in a tree</a></h4>
+    <h5>October 3, 2019</h5>
+    
+    <a href="/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="/tags/regression"><kbd class="item-tag">regression</kbd></a>
+    
+    <a href="/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<p>Carbon is perhaps the most important attribute in trees today. Forests in the United States sequester about 11% of the total CO2 emissions every year, making them an important tool to combat future global changes. Having accurate models that represent how much carbon is stored in trees is essential for understanding their carbon sequestration potential and are widely used in forest carbon accounting tools.</p>
+<p>Most equations that predict the amount carbon in a tree start with first predicting its biomass. Approximately half of wood biomass is carbon, which is useful to understand the carbon content in trees of different sizes and species. Weighing the biomass in trees is difficult, but it’s not as difficult as calculating the amount of carbon in a tree.</p>
+<div id="biomass-equations" class="section level2">
+<h2>Biomass equations</h2>
+<p>Biomass equations for trees are numerous and are developed at local, regional, or national scales. Most biomass equations are relatively simplistic, relying on tree measurements such as diameter and tree species. These simple variables are useful and allow flexibility in applying the equations to a large number of trees. Other variables such as tree height and site conditions will likely increase the accuracy of tree biomass predictions, but come at a cost requiring more detailed information.</p>
+<p>One example of biomass equations developed for application in North American forests are those presented in Jenkins et al. 2004<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. This analysis compiled over 2,600 biomass equations from nearly 200 studies to develop a new set of biomass equations based on tree diameter and species.</p>
+<p>We can use R code to write a function named <code>total_AGB</code> that estimates the total aboveground biomass in trees, measured in kg. The equations are based on species group (SPGRP) and a tree’s diameter at breast height, measured in cm (DBH). The values B1 and B2 are parameter estimates that differ by species group:</p>
+<pre class="r"><code>total_AGB&lt;-function(SPGRP,DBH){
+  # First list the parameter estimates for each species group:
+if(SPGRP==&#39;Aspen&#39;)
+  {B1=-2.2094; B2=2.3867}
+if(SPGRP==&#39;Cedar/larch&#39;)    
+  {B1=-2.0336; B2=2.2592}
+if(SPGRP==&#39;Maple/oak/hickory/beech&#39;)    
+  {B1=-2.0127; B2=2.4342}
+if(SPGRP==&#39;Mixed hardwood&#39;) 
+  {B1=-2.48; B2=2.4835}
+if(SPGRP==&#39;Pine&#39;)   
+  {B1=-2.5356; B2=2.4349}
+if(SPGRP==&#39;Soft maple/birch&#39;)   
+  {B1=-1.9123; B2=2.3651}
+if(SPGRP==&#39;Spruce&#39;) 
+  {B1=-2.0773; B2=2.3323}
+if(SPGRP==&#39;True fir/hemlock&#39;)   
+  {B1=-2.5384; B2=2.4814}
+  # Then calculate total aboveground biomass of each tree (AGB):
+  AGB=exp(B1+B2*log(DBH))
+    return(AGB=AGB)}</code></pre>
+<p>We can graph the biomass functions to see the differences in aboveground biomass for the different species:</p>
+<p><img src="/post/2019-09-30-how-to-calculate-how-much-carbon-is-in-a-tree_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Using these equations, for a given tree diameter, trees in the maple/oak/hickory/beech species group will have the greatest biomass and cedar/larch trees with have the lowest biomass.</p>
+</div>
+<div id="applying-the-biomass-equations-to-estimate-carbon" class="section level2">
+<h2>Applying the biomass equations to estimate carbon</h2>
+<p>Consider an example of 10 trees where we’ve measured the species group and tree diameters. We might be interested in estimating the total amount of biomass and carbon in these trees:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-5">Table 1: </span>An example tree data set.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+DBH
+</th>
+<th style="text-align:left;">
+SPGRP
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+Pine
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+Spruce
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+Maple/oak/hickory/beech
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+Cedar/larch
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+True fir/hemlock
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+Soft maple/birch
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:left;">
+Pine
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:left;">
+True fir/hemlock
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:left;">
+Spruce
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:left;">
+Soft maple/birch
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now, we can apply the <code>total_AGB</code> function to estimate total aboveground biomass and add it as a column in our tree data set:</p>
+<pre class="r"><code>tree$Biomass&lt;-round(mapply(total_AGB,DBH=tree$DBH,SPGRP=tree$SPGRP),1)</code></pre>
+<p>Assuming that 50% of wood biomass is carbon, we can also calculate how much carbon is stored in the aboveground portion of the tree, measured in kilograms:</p>
+<pre class="r"><code>tree$Carbon&lt;-round(tree$Biomass/2,1)</code></pre>
+<p>Our tree data set now contains estimates of tree biomass and carbon. For example, a maple tree with a DBH of 20 cm has almost twice the amount of carbon compared to the same diameter tree that is a cedar:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-8">Table 2: </span>Tree data set with predictions of biomass and carbon in kilograms.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+DBH
+</th>
+<th style="text-align:left;">
+SPGRP
+</th>
+<th style="text-align:right;">
+Biomass
+</th>
+<th style="text-align:right;">
+Carbon
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+Pine
+</td>
+<td style="text-align:right;">
+21.6
+</td>
+<td style="text-align:right;">
+10.8
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+Spruce
+</td>
+<td style="text-align:right;">
+59.0
+</td>
+<td style="text-align:right;">
+29.5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+Maple/oak/hickory/beech
+</td>
+<td style="text-align:right;">
+196.3
+</td>
+<td style="text-align:right;">
+98.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+Cedar/larch
+</td>
+<td style="text-align:right;">
+113.8
+</td>
+<td style="text-align:right;">
+56.9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+True fir/hemlock
+</td>
+<td style="text-align:right;">
+232.5
+</td>
+<td style="text-align:right;">
+116.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+Soft maple/birch
+</td>
+<td style="text-align:right;">
+460.3
+</td>
+<td style="text-align:right;">
+230.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:left;">
+Pine
+</td>
+<td style="text-align:right;">
+394.7
+</td>
+<td style="text-align:right;">
+197.3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:left;">
+True fir/hemlock
+</td>
+<td style="text-align:right;">
+615.1
+</td>
+<td style="text-align:right;">
+307.6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:left;">
+Spruce
+</td>
+<td style="text-align:right;">
+643.7
+</td>
+<td style="text-align:right;">
+321.9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:left;">
+Soft maple/birch
+</td>
+<td style="text-align:right;">
+1200.9
+</td>
+<td style="text-align:right;">
+600.5
+</td>
+</tr>
+</tbody>
+</table>
+<p>The tree with the greatest amount of carbon, a 45-cm soft maple/birch, contains 600 kg of carbon. Using the Environmental Protection Agency’s <a href="https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator">Greenhouse Gas Equivalency Calculator</a>, this tree is equivalent to 248 gallons of gasoline consumed or almost 300,000 charges of a smartphone.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Calculating the amount of carbon in trees is an essential analytical tool in forest management. The example presented above is just one application of using existing equations to determine the biomass and carbon content in trees. Linking the amount of carbon stored in trees with a relatable examples such as determining its equivalent in greenhouse gas emissions, helps to educate the public about the role of trees in sequestering carbon.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Jenkins, J.C., Chojnacky, D.C., Heath, L.S., Birdsey, R.A., 2004. <a href="https://www.fs.fed.us/ne/newtown_square/publications/technical_reports/pdfs/2004/ne_gtr319.pdf">A comprehensive database of diameter-based regressions for North American tree species.</a> Gen. Tech. Rep. NE-319.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/">A 50-year history of forest measurements by analyzing Forest Measurements</a></h4>
+    <h5>September 15, 2019</h5>
+    
+    <a href="/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="/tags/sampling"><kbd class="item-tag">sampling</kbd></a>
+    
+    <a href="/tags/books"><kbd class="item-tag">books</kbd></a>
+    
+    <a href="/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/how-many-trees-make-a-mass-timber-building/">How many trees make a mass timber building?</a></h4>
+    <h5>June 15, 2019</h5>
+    
+    <a href="/tags/regression"><kbd class="item-tag">regression</kbd></a>
+    
+    <a href="/tags/mass-timber"><kbd class="item-tag">mass timber</kbd></a>
+    
+    <a href="/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/">How much is too long a wait? Calculating expected wait times of wood deliveries</a></h4>
+    <h5>May 31, 2019</h5>
+    
+    <a href="/tags/regression"><kbd class="item-tag">regression</kbd></a>
+    
+    <a href="/tags/wait-times"><kbd class="item-tag">wait times</kbd></a>
+    
+    <a href="/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="/tags/quantile-regression"><kbd class="item-tag">quantile regression</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mbrussell" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
