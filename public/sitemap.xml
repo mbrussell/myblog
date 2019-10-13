@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/about/</loc>
+    <lastmod>2019-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
   </url>
@@ -25,11 +30,6 @@
   <url>
     <loc>/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</loc>
     <lastmod>2019-07-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2019-07-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -84,7 +84,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,5 +1,5 @@
 {
-    "path" : "~/git/myblog/content/post",
+    "path" : "~/git/myblog/content",
     "sortOrder" : [
         {
             "ascending" : false,
