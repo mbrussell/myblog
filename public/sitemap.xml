@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/events/try2/</loc>
+    <lastmod>2019-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/events/getting-down-with-pagedown/</loc>
+    <lastmod>2019-10-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
     <lastmod>2019-10-13T00:00:00+00:00</lastmod>
   </url>
@@ -43,11 +53,6 @@
   </url>
   
   <url>
-    <loc>/events/try2/</loc>
-    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/how-many-trees-make-a-mass-timber-building/</loc>
     <lastmod>2019-06-15T00:00:00+00:00</lastmod>
   </url>
@@ -84,8 +89,12 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-10-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/presentations/pagedown_tcrug_17oct2019/</loc>
   </url>
   
   <url>
@@ -132,7 +141,7 @@
   
   <url>
     <loc>/tags/data-science/</loc>
-    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -168,7 +177,7 @@
   
   <url>
     <loc>/events/</loc>
-    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -229,6 +238,12 @@
   <url>
     <loc>/tags/gif/</loc>
     <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/html/</loc>
+    <lastmod>2019-10-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -299,6 +314,12 @@
   </url>
   
   <url>
+    <loc>/tags/pagedown/</loc>
+    <lastmod>2019-10-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -311,6 +332,11 @@
   </url>
   
   <url>
+    <loc>/presentations/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/quantile-regression/</loc>
     <lastmod>2019-05-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -318,13 +344,19 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/regression/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/reporting/</loc>
+    <lastmod>2019-10-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -402,7 +434,7 @@
   
   <url>
     <loc>/tags/workshop/</loc>
-    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

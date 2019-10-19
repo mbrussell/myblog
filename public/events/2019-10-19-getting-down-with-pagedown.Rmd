@@ -1,0 +1,28 @@
+---
+title: Getting down with pagedown
+author: Matt Russell
+date: '2019-10-19'
+slug: getting-down-with-pagedown
+categories:
+  - Reporting
+tags:
+  - R
+  - pagedown
+  - HTML
+description: 'Oct 17, 2019 at Twin Cities R Users Group (presentation)'
+repo: ''
+weight: 0
+---
+
+
+<center>
+
+ ![](https://secure.meetupstatic.com/photos/event/6/b/0/c/600_454407404.jpeg){width=250px}
+ </center>
+
+This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.
+
+* [Slides](https://arbor-analytics.com/presentations/pagedown_tcrug_17oct2019/#/)
+* [Github repository](https://github.com/mbrussell/pagedown_tcrug_17Oct2019)
+* [Examples with pagedown](https://github.com/mbrussell/pagedown_examples)
+

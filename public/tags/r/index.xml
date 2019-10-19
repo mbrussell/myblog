@@ -6,10 +6,29 @@
     <description>Recent content in R on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Data Science for Forestry Applications</title>
+      <link>/events/try2/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/events/try2/</guid>
+      <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
+    </item>
+    
+    <item>
+      <title>Getting down with pagedown</title>
+      <link>/events/getting-down-with-pagedown/</link>
+      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/events/getting-down-with-pagedown/</guid>
+      <description>This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.
+SlidesGithub repositoryExamples with pagedown</description>
+    </item>
     
     <item>
       <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
@@ -22,15 +41,6 @@ The general process to make a GIF image with maps in R is:
 1. Create the images you want (e.g., using ggplot),
 2. Stitch the images together with magick, and
 3. Write the images as a GIF and share!</description>
-    </item>
-    
-    <item>
-      <title>Data Science for Forestry Applications</title>
-      <link>/events/try2/</link>
-      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/events/try2/</guid>
-      <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
     </item>
     
     <item>

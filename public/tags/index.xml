@@ -59,7 +59,7 @@
     <item>
       <title>Data Science</title>
       <link>/tags/data-science/</link>
-      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/data-science/</guid>
       <description></description>
@@ -174,6 +174,15 @@
     </item>
     
     <item>
+      <title>Html</title>
+      <link>/tags/html/</link>
+      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hunting</title>
       <link>/tags/hunting/</link>
       <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
@@ -264,6 +273,15 @@
     </item>
     
     <item>
+      <title>Pagedown</title>
+      <link>/tags/pagedown/</link>
+      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pagedown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Quantile Regression</title>
       <link>/tags/quantile-regression/</link>
       <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
@@ -275,7 +293,7 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
@@ -374,7 +392,7 @@
     <item>
       <title>Workshop</title>
       <link>/tags/workshop/</link>
-      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/workshop/</guid>
       <description></description>

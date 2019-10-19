@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Html on Forests aren&#39;t random.</title>
+    <title>Html on </title>
     <link>/tags/html/</link>
-    <description>Recent content in Html on Forests aren&#39;t random.</description>
+    <description>Recent content in Html on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 19 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Project 2</title>
-      <link>/workshop/workshop2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Getting down with pagedown</title>
+      <link>/events/getting-down-with-pagedown/</link>
+      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>/workshop/workshop2/</guid>
-      <description></description>
+      <guid>/events/getting-down-with-pagedown/</guid>
+      <description>This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.
+SlidesGithub repositoryExamples with pagedown</description>
     </item>
     
   </channel>

@@ -1,186 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
-    <link>/</link>
-    <description>Recent content on </description>
+    <title>Presentations on </title>
+    <link>/presentations/</link>
+    <description>Recent content in Presentations on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/presentations/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Data Science for Forestry Applications</title>
-      <link>/events/try2/</link>
-      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/events/try2/</guid>
-      <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
-    </item>
-    
-    <item>
-      <title>Getting down with pagedown</title>
-      <link>/events/getting-down-with-pagedown/</link>
-      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/events/getting-down-with-pagedown/</guid>
-      <description>This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.
-SlidesGithub repositoryExamples with pagedown</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>ConsultingArbor Custom Analytics LLC offers data and analytics consulting services to all sized organizations in the forest products industry.
-Specializations includeForest analyticsTimberland resource assessmentData managementForest growth and yield modelingStatistical modelingMachine learningTeaching data concepts to forest and natural resource professionalsLeveraging existing data to solve new problemsIndependent researchMatt RussellPresident and CEOLinkedIn, Google Scholar, GitHubBackgroundExperience in forestry and analytics research, teaching, and outreachAuthor/co-author of over 50 peer-reviewed articles focusing on applied forestry researchOfficer and representative of Society of American ForestersA1-Inventory and Biometrics Working GroupForest Science and Technology BoardMember of Forest Products Society and American Statistical AssociationEducationUniversity of Maine.</description>
-    </item>
-    
-    <item>
-      <title>How to calculate how much carbon is in a tree</title>
-      <link>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
-      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
-      <description>Carbon is perhaps the most important attribute in trees today. Forests in the United States sequester about 11% of the total CO2 emissions every year, making them an important tool to combat future global changes. Having accurate models that represent how much carbon is stored in trees is essential for understanding their carbon sequestration potential and are widely used in forest carbon accounting tools.
-Most equations that predict the amount carbon in a tree start with first predicting its biomass.</description>
-    </item>
-    
-    <item>
-      <title>A 50-year history of forest measurements by analyzing Forest Measurements</title>
-      <link>/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</guid>
-      <description>If you’ve even taken a course in forest measurements, you likely used Forest Measurements as the textbook. The first edition of forest measurements was published in 1967 by Thomas Eugene Avery and included a number of topics related to forest inventory, sampling forest resources, and tree and stand measurements.
-The book recently published its 6th edition in 2018 and is available through Waveland Press. Investigating how the book has incorporated new topics gives insights into the advances of the field of forest measurements:</description>
-    </item>
-    
-    <item>
-      <title>Should foresters keep saying “statistically significant”?</title>
-      <link>/post/should-foresters-keep-saying-statistically-significant/</link>
-      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/should-foresters-keep-saying-statistically-significant/</guid>
-      <description>The statistics community has had a lot of discussion in recent years about the role of p -values and statistical significance. What does this mean for forest biometricians and analysts that have traditionally used p -values and tests of significance in their daily work?
-The American Statistical Association’s August 2019 edition of their magazine Significance has a number of great articles on significance. They even refer to the term as “the S word”:</description>
-    </item>
-    
-    <item>
-      <title>Quickly explore your timber cruise data with six lines of code</title>
-      <link>/post/explore-your-timber-cruise-data/</link>
-      <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/explore-your-timber-cruise-data/</guid>
-      <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.
-A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
-    </item>
-    
-    <item>
-      <title>New logging companies with old equipment: Finding patterns in logging businesses using clustering</title>
-      <link>/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
-      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
-      <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.
-As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
-    </item>
-    
-    <item>
-      <title>Using Google Forms to analyze confidence intervals: a teaching statistics activity</title>
-      <link>/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</link>
-      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</guid>
-      <description>This post describes how the concepts of confidence intervals can be taught to students. The ideal participants are undergraduate students in an introductory statistics. The in-class activity reveals to students that most people are overconfident in their estimation of uncertainty. The activity uses the example of moose, a charismatic wildlife species in Minnesota.
-IntroductionDemonstrations of data and statistical concepts are effective when they are designed with a structure that encourages participation in the classroom 1.</description>
-    </item>
-    
-    <item>
-      <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
-      <link>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
-      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
-      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.
-The general process to make a GIF image with maps in R is:
-1. Create the images you want (e.g., using ggplot),
-2. Stitch the images together with magick, and
-3. Write the images as a GIF and share!</description>
-    </item>
-    
-    <item>
-      <title>How many trees make a mass timber building?</title>
-      <link>/post/how-many-trees-make-a-mass-timber-building/</link>
-      <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/how-many-trees-make-a-mass-timber-building/</guid>
-      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/)
-Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
-    </item>
-    
-    <item>
-      <title>How much is too long a wait? Calculating expected wait times of wood deliveries</title>
-      <link>/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</link>
-      <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</guid>
-      <description>Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)
-How important are wait times for loggers and truckers?Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill.
-Both wood procurement managers and their suppliers need to know when wait times exceed the amount of time they expect.</description>
-    </item>
-    
-    <item>
-      <title>Stratified vs. simple random sampling: fun with forestsamplr</title>
-      <link>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</link>
-      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
-      <description>Tools for estimating population means for stratified and simple random samplesIf we know the size of a number of subpopulations that are a part of a larger population, we can use stratified random sampling to come up with a more precise estimate of a population mean. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling.</description>
-    </item>
-    
-    <item>
-      <title>Connecticut harvests almost as many deer with cars as their hunters do</title>
-      <link>/post/deer-vehicle-accidents/</link>
-      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/deer-vehicle-accidents/</guid>
-      <description>White-tailed deer provide a huge contribution to the outdoors economy and deer hunters support conservation efforts throughout the US. Despite the popularity and traditions of deer and deer hunting, they present a number of ecological problems including damage to forest and agricultural crops and landscaping. Deer are ravaging Long Island’s forests and in my own state of Minnesota we’ve started a citizen science program on monitoring the impacts of deer on forest vegetation.</description>
-    </item>
-    
-    <item>
-      <title>Presenting regression results better with forest plots</title>
-      <link>/post/presenting-regression-results-better/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/presenting-regression-results-better/</guid>
-      <description>I was inspired by Sara Richter’s presentation at the 2019 Conference on Statistical Practice titled “Easy Ways to Make Data Visualizations More Effective”. One of the themes I took away from Sara’s presentation was that data visualization needs to be practiced, but good data visualization doesn’t need to be difficult to be done well.
-When presenting results from a regression, people often use tables. While this is good if we need the true value of something, tables may not be good if we seek to convey general trends in our results.</description>
-    </item>
-    
-    <item>
-      <title>Adding some music to boxplots, and better ways to visualize diameter distributions</title>
-      <link>/post/better-ways-to-visualize-multi-modal-data/</link>
-      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/better-ways-to-visualize-multi-modal-data/</guid>
-      <description>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on between those boxes and whiskers?
-Some forestry data: In the examples below, I’ve used tree diameters measured in four management units at the Penobscot Experimental Forest in Maine.</description>
-    </item>
-    
-    <item>
-      <title>Spreading and gathering tree data</title>
-      <link>/post/spreading-and-gathering-tree-data/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/spreading-and-gathering-tree-data/</guid>
-      <description>A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and needed to be wide.
-The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.</description>
-    </item>
     
     <item>
       <title></title>

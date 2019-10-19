@@ -6,10 +6,19 @@
     <description>Recent content in Data Science on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Data Science for Forestry Applications</title>
+      <link>/events/try2/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/events/try2/</guid>
+      <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
+    </item>
     
     <item>
       <title>New logging companies with old equipment: Finding patterns in logging businesses using clustering</title>
@@ -19,15 +28,6 @@
       <guid>/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
       <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.
 As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
-    </item>
-    
-    <item>
-      <title>Data Science for Forestry Applications</title>
-      <link>/events/try2/</link>
-      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/events/try2/</guid>
-      <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
     </item>
     
   </channel>
