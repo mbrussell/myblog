@@ -1,0 +1,108 @@
+---
+title: How to created paged HTML documents with pagedown
+author: Matt Russell
+date: '2019-10-19'
+slug: how-to-created-paged-html-documents-with-pagedown
+categories:
+  - Reporting
+tags:
+  - R
+  - pagedown
+  - HTML
+---
+
+```{r, echo=F, warnings=F,  message=FALSE}
+library(devtools)
+library(pagedown)
+```
+
+When it comes to reading documents and data summaries online, HTML is often preferred over PDF. HTML documents are more interactive, easier to read on screens, and more accessible than PDFs. 
+
+Many R users that produce reproducible reports have used [R Markdown](https://rmarkdown.rstudio.com/) for integrating text, images, code, and tables and figures into an HTML format. Using the R Markdown language allows R users to work within the R ecosystem for writing and producing code. R Markdown supports static and dynamic output formats (e.g., HTML, PDF, and MS Word) and can be adapted to use other languages such as Python and SQL.
+
+R Markdown is used in concert with other powerful tools such as [R presentations](https://support.rstudio.com/hc/en-us/articles/200486468-Authoring-R-Presentations), [books](https://bookdown.org/), [interactive data dashboards](https://rmarkdown.rstudio.com/flexdashboard/), and [websites](https://bookdown.org/yihui/blogdown/).
+
+In early 2019, Yihui Xie presented on a new feature using R Markdown at [rstudio::conf 2019](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css). This new feature would allow you to print a webpage directly to HTML or PDF using paged documents. If someone knows a little CSS and JavaScript, a variety of projects can be typeset to produce sharp-looking documents.   
+
+## What is pagedown?
+pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R. Yihui Xie and Romain Lesur have authored [the documentation](https://pagedown.rbind.io/) for pagedown.  
+
+pagedown uses [Paged.js](https://www.pagedmedia.org/paged-js/) (a JavaScript library) to paginate web documents. Any pagedown document can include headers, footers, and page margins to make sharp-looking documents.
+
+The package can be installed from Github:
+
+```{r eval=F, message=FALSE, warnings=F}
+remotes::install_github('rstudio/pagedown')
+```
+
+If using RStudio, there are several templates available depending on your application. A new pagedown file can be specified by going to **File** -> **New File** -> **R Markdown** -> **From Template**:
+
+ <center>
+![*Creating a new pagedown file in RStudio.*](https://github.com/mbrussell/pagedown_tcrug_17Oct2019/blob/master/newfile.png?raw=true){width=400px}
+ </center>
+
+## Examples with pagedown
+The following are a few examples of using pagedown templates to create a variety of documents. The code behind theses examples is available in this [Github repository](https://github.com/mbrussell/pagedown_examples). 
+
+### Paged HTML document
+A paged HTML document can be specified in the output format header. A user can choose to include a table of contents and numbered sections:
+
+```{r, eval=F}
+output:
+  pagedown::html_paged: 
+    toc: true
+    number_sections: true
+```
+
+As an example, a citizen science project is underway that asks volunteers to quantify the effects of deer browse on seedling growth. We can create a paged HTML document that has a cover page and some early results from the project. 
+
+ <center>
+![*An example HTML report created with pagedown.*](https://github.com/mbrussell/pagedown_tcrug_17Oct2019/blob/master/Assessing%20Vegetation%20Impacts%20from%20Deer%20Citizen%20Science%20Project_%202019%20results_Page_01.jpg?raw=true){width=500px}
+
+![*An example HTML report created with pagedown, page 1.*](https://github.com/mbrussell/pagedown_tcrug_17Oct2019/blob/master/Assessing%20Vegetation%20Impacts%20from%20Deer%20Citizen%20Science%20Project_%202019%20results_Page_03.jpg?raw=true){width=500px}
+ </center>
+ 
+We can see in the box plots that there have been multiple tree species measured in the project, each with a different distribution of seedling heights. 
+
+### Resume
+Resumes and curriculum vitae can be made using pagedown and the `html_resume` output format. The default template includes two parts: an **Aside** and **Main** section. The *Aside** section contains the gray area with contact information while the **Main** section contatins the education/experience:
+
+```{r, eval=F}
+---
+title: "resume_example"
+author: "Matt Russell"
+output: pagedown::html_resume
+---
+```
+
+The default resume template includes the [Font Awesome icons](https://fontawesome.com/icons?from=io) to add some appearance to the resume:
+
+![*A resume for Matt created with pagedown.*](https://github.com/mbrussell/pagedown_tcrug_17Oct2019/blob/master/resume.png?raw=true){width=500px}
+
+
+### Business card
+Business cards can be designed and printed as a single card for an individual or for multiple cards for several employees on the same page. To design a business card in pagedown, you can use the `pagedown::business_card` output format: 
+
+```{r, eval=F}
+---
+name: Matt Russell, PhD
+output: pagedown::business_card
+---
+```
+
+I created my own business card using the pagedown template, then submitted the file to Vistaprint to have them printed. For $16.00 (not including tax and shipping) you can print 250 business cards, all created through pagedown! 
+
+![*Matt's business card and code created with pagedown.*](matt_card.jpg)
+
+## Conclusions
+pagedown creates high-quality PDFs through a web browser--this is it's best attribute. pagedown is also flexible if you know CSS and JavaScript so that you can customize your documents to fit your need. As pagedown continues to be used by more people, the number of customized templates will no doubt increase.
+
+To date, the HTML and PDF output from a pagedown document work only through the Chrome or Chromium web browsers. Users will need to use their pagedown output with `xaringan` to print to web browser (and the "Infinite Moon Reader" function), e.g., `xaringan::inf_mr("my_resume.Rmd")`.
+
+Other pagedown documents that can be created and designed include letters, theses and dissertations, posters, journal articles, and more. Other features to include within documents are more elegant cover pages, lists of tables and figures, custom running headers, page references, and line numbering. Additional examples are provided in the [pagedown documentation](https://pagedown.rbind.io/) authored by Xie and Romain Lesur. 
+
+Thanks to the developers and contributors to this great product!
+
+---
+
+*This blog post is also described in a [presentation Matt provided](https://arbor-analytics.com/presentations/pagedown_tcrug_17oct2019/) at the Twin Cities R Users Group meeting on 17 Oct 2019 in Bloomington, MN.*

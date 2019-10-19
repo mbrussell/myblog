@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>How to created paged HTML documents with pagedown</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">How to created paged HTML documents with pagedown</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/how-to-created-paged-html-documents-with-pagedown/">How to created paged HTML documents with pagedown</a></h4>
+    <h5>October 19, 2019</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/pagedown"><kbd class="item-tag">pagedown</kbd></a>
+    
+    <a href="/tags/html"><kbd class="item-tag">HTML</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<p>When it comes to reading documents and data summaries online, HTML is often preferred over PDF. HTML documents are more interactive, easier to read on screens, and more accessible than PDFs.</p>
+<p>Many R users that produce reproducible reports have used <a href="https://rmarkdown.rstudio.com/">R Markdown</a> for integrating text, images, code, and tables and figures into an HTML format. Using the R Markdown language allows R users to work within the R ecosystem for writing and producing code. R Markdown supports static and dynamic output formats (e.g., HTML, PDF, and MS Word) and can be adapted to use other languages such as Python and SQL.</p>
+<p>R Markdown is used in concert with other powerful tools such as <a href="https://support.rstudio.com/hc/en-us/articles/200486468-Authoring-R-Presentations">R presentations</a>, <a href="https://bookdown.org/">books</a>, <a href="https://rmarkdown.rstudio.com/flexdashboard/">interactive data dashboards</a>, and <a href="https://bookdown.org/yihui/blogdown/">websites</a>.</p>
+<p>In early 2019, Yihui Xie presented on a new feature using R Markdown at <a href="https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css">rstudio::conf 2019</a>. This new feature would allow you to print a webpage directly to HTML or PDF using paged documents. If someone knows a little CSS and JavaScript, a variety of projects can be typeset to produce sharp-looking documents.</p>
+<div id="what-is-pagedown" class="section level2">
+<h2>What is pagedown?</h2>
+<p>pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R. Yihui Xie and Romain Lesur have authored <a href="https://pagedown.rbind.io/">the documentation</a> for pagedown.</p>
+<p>pagedown uses <a href="https://www.pagedmedia.org/paged-js/">Paged.js</a> (a JavaScript library) to paginate web documents. Any pagedown document can include headers, footers, and page margins to make sharp-looking documents.</p>
+<p>The package can be installed from Github:</p>
+<pre class="r"><code>remotes::install_github(&#39;rstudio/pagedown&#39;)</code></pre>
+<p>If using RStudio, there are several templates available depending on your application. A new pagedown file can be specified by going to <strong>File</strong> -&gt; <strong>New File</strong> -&gt; <strong>R Markdown</strong> -&gt; <strong>From Template</strong>:</p>
+<center>
+<img src="https://github.com/mbrussell/pagedown_tcrug_17Oct2019/blob/master/newfile.png?raw=true" alt="Creating a new pagedown file in RStudio." width="400" />
+</center>
+</div>
+<div id="examples-with-pagedown" class="section level2">
+<h2>Examples with pagedown</h2>
+<p>The following are a few examples of using pagedown templates to create a variety of documents. The code behind theses examples is available in this <a href="https://github.com/mbrussell/pagedown_examples">Github repository</a>.</p>
+<div id="paged-html-document" class="section level3">
+<h3>Paged HTML document</h3>
+<p>A paged HTML document can be specified in the output format header. A user can choose to include a table of contents and numbered sections:</p>
+<pre class="r"><code>output:
+  pagedown::html_paged: 
+    toc: true
+    number_sections: true</code></pre>
+<p>As an example, a citizen science project is underway that asks volunteers to quantify the effects of deer browse on seedling growth. We can create a paged HTML document that has a cover page and some early results from the project.</p>
+<center>
+<div class="figure">
+<img src="https://github.com/mbrussell/pagedown_tcrug_17Oct2019/blob/master/Assessing%20Vegetation%20Impacts%20from%20Deer%20Citizen%20Science%20Project_%202019%20results_Page_01.jpg?raw=true" alt="An example HTML report created with pagedown." width="500" />
+<p class="caption"><em>An example HTML report created with pagedown.</em></p>
+</div>
+<img src="https://github.com/mbrussell/pagedown_tcrug_17Oct2019/blob/master/Assessing%20Vegetation%20Impacts%20from%20Deer%20Citizen%20Science%20Project_%202019%20results_Page_03.jpg?raw=true" alt="An example HTML report created with pagedown, page 1." width="500" />
+</center>
+<p>We can see in the box plots that there have been multiple tree species measured in the project, each with a different distribution of seedling heights.</p>
+</div>
+<div id="resume" class="section level3">
+<h3>Resume</h3>
+<p>Resumes and curriculum vitae can be made using pagedown and the <code>html_resume</code> output format. The default template includes two parts: an <strong>Aside</strong> and <strong>Main</strong> section. The *Aside<strong> section contains the gray area with contact information while the </strong>Main** section contatins the education/experience:</p>
+<pre class="r"><code>---
+title: &quot;resume_example&quot;
+author: &quot;Matt Russell&quot;
+output: pagedown::html_resume
+---</code></pre>
+<p>The default resume template includes the <a href="https://fontawesome.com/icons?from=io">Font Awesome icons</a> to add some appearance to the resume:</p>
+<div class="figure">
+<img src="https://github.com/mbrussell/pagedown_tcrug_17Oct2019/blob/master/resume.png?raw=true" alt="A resume for Matt created with pagedown." width="500" />
+<p class="caption"><em>A resume for Matt created with pagedown.</em></p>
+</div>
+</div>
+<div id="business-card" class="section level3">
+<h3>Business card</h3>
+<p>Business cards can be designed and printed as a single card for an individual or for multiple cards for several employees on the same page. To design a business card in pagedown, you can use the <code>pagedown::business_card</code> output format:</p>
+<pre class="r"><code>---
+name: Matt Russell, PhD
+output: pagedown::business_card
+---</code></pre>
+<p>I created my own business card using the pagedown template, then submitted the file to Vistaprint to have them printed. For $16.00 (not including tax and shipping) you can print 250 business cards, all created through pagedown!</p>
+<div class="figure">
+<img src="matt_card.jpg" alt="Matt’s business card and code created with pagedown." />
+<p class="caption"><em>Matt’s business card and code created with pagedown.</em></p>
+</div>
+</div>
+</div>
+<div id="conclusions" class="section level2">
+<h2>Conclusions</h2>
+<p>pagedown creates high-quality PDFs through a web browser–this is it’s best attribute. pagedown is also flexible if you know CSS and JavaScript so that you can customize your documents to fit your need. As pagedown continues to be used by more people, the number of customized templates will no doubt increase.</p>
+<p>To date, the HTML and PDF output from a pagedown document work only through the Chrome or Chromium web browsers. Users will need to use their pagedown output with <code>xaringan</code> to print to web browser (and the “Infinite Moon Reader” function), e.g., <code>xaringan::inf_mr("my_resume.Rmd")</code>.</p>
+<p>Other pagedown documents that can be created and designed include letters, theses and dissertations, posters, journal articles, and more. Other features to include within documents are more elegant cover pages, lists of tables and figures, custom running headers, page references, and line numbering. Additional examples are provided in the <a href="https://pagedown.rbind.io/">pagedown documentation</a> authored by Xie and Romain Lesur.</p>
+<p>Thanks to the developers and contributors to this great product!</p>
+<hr />
+<p><em>This blog post is also described in a <a href="https://arbor-analytics.com/presentations/pagedown_tcrug_17oct2019/">presentation Matt provided</a> at the Twin Cities R Users Group meeting on 17 Oct 2019 in Bloomington, MN.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/">Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </a></h4>
+    <h5>June 29, 2019</h5>
+    
+    <a href="/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="/tags/gif"><kbd class="item-tag">GIF</kbd></a>
+    
+    <a href="/tags/animation"><kbd class="item-tag">animation</kbd></a>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/magick"><kbd class="item-tag">magick</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/better-ways-to-visualize-multi-modal-data/">Adding some music to boxplots, and better ways to visualize diameter distributions</a></h4>
+    <h5>March 22, 2019</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/ggplot2"><kbd class="item-tag">ggplot2</kbd></a>
+    
+    <a href="/tags/geom_violin"><kbd class="item-tag">geom_violin()</kbd></a>
+    
+    <a href="/tags/geom_boxplot"><kbd class="item-tag">geom_boxplot()</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/spreading-and-gathering-tree-data/">Spreading and gathering tree data</a></h4>
+    <h5>March 9, 2019</h5>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/tidyr"><kbd class="item-tag">tidyr</kbd></a>
+    
+    <a href="/tags/gather"><kbd class="item-tag">gather()</kbd></a>
+    
+    <a href="/tags/spread"><kbd class="item-tag">spread()</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+        <h4 class="page-header">Comments</h4>
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mbrussell" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

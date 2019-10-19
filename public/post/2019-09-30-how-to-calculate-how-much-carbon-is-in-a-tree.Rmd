@@ -13,7 +13,7 @@ tags:
   - carbon
 ---
 
-```{r,echo=F, warnings=F,message=F}
+```{r echo=F, message=FALSE, warning=FALSE}
 library(knitr)
 library(formattable)
 library(kableExtra)

@@ -31,6 +31,16 @@
     </item>
     
     <item>
+      <title>How to created paged HTML documents with pagedown</title>
+      <link>/post/how-to-created-paged-html-documents-with-pagedown/</link>
+      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/how-to-created-paged-html-documents-with-pagedown/</guid>
+      <description>When it comes to reading documents and data summaries online, HTML is often preferred over PDF. HTML documents are more interactive, easier to read on screens, and more accessible than PDFs.
+Many R users that produce reproducible reports have used R Markdown for integrating text, images, code, and tables and figures into an HTML format. Using the R Markdown language allows R users to work within the R ecosystem for writing and producing code.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
