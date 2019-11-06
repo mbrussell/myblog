@@ -19,5 +19,4 @@ weight: 0
 This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have. 
 
 * [Slides](https://docs.google.com/presentation/d/15UQ44J0xgkLZWc4NPJ8msex2gXyLO-0qYxefWFN_0Aw/edit?usp=sharing)
-* [Google Drive repository with workshop materials](https://drive.google.com/drive/folders/1vnsFxcZpn6ZlRAdfVdr-DlA77ctF2HhW)
-* [Examples with pagedown](https://github.com/mbrussell/pagedown_examples)
+* [Google Drive folder with workshop materials](https://drive.google.com/drive/folders/1vnsFxcZpn6ZlRAdfVdr-DlA77ctF2HhW)
