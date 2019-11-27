@@ -135,7 +135,7 @@ p.grouse<- ggplot() +
    scale_fill_manual(values=c("green","yellow", "red"))+
   theme(panel.background = element_rect(fill = "NA"),
         axis.line = element_line(color="black"),
-        legend.position="none")
+        legend.title=element_blank())
 p.grouse
 
 ```
