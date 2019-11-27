@@ -1,0 +1,124 @@
+---
+title: 'Ruffed grouse and West Nile: A review of the binomial distribution'
+author: Matt Russell
+date: '2019-11-27'
+slug: ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution
+categories:
+  - Statistics
+  - Sampling
+  - Distributions
+tags:
+  - binomial
+  - statistics
+  - ruffed grouse
+  - sampling
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<div align="center">
+<p><img src="https://ruffedgrousesociety.org/wp-content/uploads/2016/07/Backdrop14B-WEB2.jpg" height="350px" width="500px" /></p>
+</div>
+<p>There’s been a lot of talk in the wildlife community about the West Nile virus and <a href="https://www.dnr.state.mn.us/news/2019/10/22/west-nile-virus-ruffed-grouse-test-results-are">its impacts on ruffed grouse</a> populations.</p>
+<p>In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive. Ruffed grouse populations in this region are cyclical, with a recent <a href="https://files.dnr.state.mn.us/recreation/hunting/grouse/grouse_survey_report19.pdf">peak in populations in Minnesota in 2017</a>. Wildlife biologists are interested in knowing how West Nile impacts grouse and these peaks in populations.</p>
+<div id="the-ruffed-grouse-west-nile-data-set" class="section level2">
+<h2>The ruffed grouse-West Nile data set</h2>
+<p>The total number of ruffed grouse sampled in each of the three states, and those that showed antibodies consistent with West Nile virus is shown in the table below:</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-1">Table 1: </span>State results of West Nile occurrence in ruffed grouse.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+State
+</th>
+<th style="text-align:right;">
+Number of grouse sampled
+</th>
+<th style="text-align:right;">
+Number of grouse with West Nile
+</th>
+<th style="text-align:right;">
+Proportion of grouse with West Nile
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Michigan
+</td>
+<td style="text-align:right;">
+213
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+0.13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Minnesota
+</td>
+<td style="text-align:right;">
+273
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Wisconsin
+</td>
+<td style="text-align:right;">
+235
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+0.29
+</td>
+</tr>
+</tbody>
+</table>
+<p>These tests found a much smaller number of birds that had West Nile in their hearts, indicating that the grouse were mostly healthy when they were sampled.</p>
+</div>
+<div id="the-binomial-distribution" class="section level2">
+<h2>The binomial distribution</h2>
+<p>Using the grouse data, we can think of whether or not a grouse has West Nile as a <a href="https://en.wikipedia.org/wiki/Bernoulli_trial">Bernoulli trial</a>. If a group of grouse are sampled, some number of them may have the West Nile virus, and we have a <a href="https://en.wikipedia.org/wiki/Binomial_distribution">binomial distribution</a>.</p>
+<p>Flipping a coin and observing whether it’s a heads or tails is an example of a Bernoulli trial. With a fair coin, the probability <em>p</em> of getting a heads is <em>p</em> = 0.5. The Bernoulli distribution is the simplest discrete distribution, and is the foundation for other more complicated discrete distributions.</p>
+<p>A binomial distribution is a sum of Bernoulli trials. It is measured by the count of successes (<em>X</em>) with parameters <em>n</em> and <em>p</em>, where:</p>
+<ul>
+<li><p><em>n</em> is the number of trials of the chance process,</p></li>
+<li><p><em>p</em> is the probability of a success on any one trial, and</p></li>
+<li><p>The possible values of <em>X</em> are the whole numbers from 0 to <em>n</em>.</p></li>
+</ul>
+<p>If a count has a binomial distribution with <em>n</em> trials and probability of success <em>p</em>, the mean can be determined as <em>np</em> and the standard deviation as <em>np</em>(1-<em>p</em>).</p>
+<p>The formula for finding the probability of exactly <em>x</em> successes is:</p>
+<p><span class="math display">\[{P(X=x)}=\frac{n!}{x!(n-x)!}{p^x}{(1-p)}^{n-x}\]</span>
+As an example, consider a random sample of six grouse from Michigan. What is the probability that none of these grouse will have the West Nile virus? The problem can be solved with:</p>
+<p><span class="math display">\[{P(X=0)}=\frac{6!}{0!(6-0)!}{0.13^0}{(1-0.13)}^{6-0}=0.4336\]</span></p>
+<p>Or, there would be about a 43% chance that if you sampled six grouse from Michigan, none of them would have West Nile.</p>
+<p>Below shows a visualization of sampling <em>n</em> = 6 ruffed grouse from Michigan and calculating the probability of each possible number of grouse being infected with West Nile:</p>
+<p><img src="/post/2019-11-10-ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>We can see that if six birds are sampled, the most probable outcome is that zero ruffed grouse will have West Nile.</p>
+<p>Now we can sample ruffed grouse from Michigan with <em>n</em> = 60. The probability of a grouse infected with West Nile is the same as the previous graph (<em>p</em> = 0.13), but what do you notice about the distribution when <em>n</em> = 60?</p>
+<p><img src="/post/2019-11-10-ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>First, we can see that if 60 birds are sampled, it is most likely that around eight of them will have West Nile. Second, as <em>n</em> gets larger, something interesting happens to the shape of a binomial distribution: it looks more like a normal distribution.</p>
+<p>The normal approximation can be applied to binomial distributions when <em>n</em> gets large. As a general rule of thumb, the normal approximation can be used when n is so large that <span class="math inline">\(np \ge 10\)</span> and <span class="math inline">\(n(1-p) \ge 10\)</span>.</p>
+<p>We can also visualize the differences in West Nile presence across the three states. The following visualization assumes that 60 grouse are sampled and shows the differences in West Nile presence:</p>
+<p><img src="/post/2019-11-10-ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>The binomial distribution is a sum of Bernoulli trials. The binomial is measured by the count of successes <em>X</em> (e.g., the number of “successful” ruffed grouse where West Nile was confirmed) with parameters <em>n</em> (the total number of birds sampled) and <em>p</em> (the probability a bird has West Nile). As we can see from the ruffed grouse example, the binomial distribution is a handy one that has a number of applications across natural resources.</p>
+</div>

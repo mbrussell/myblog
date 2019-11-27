@@ -6,10 +6,20 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ruffed grouse and West Nile: A review of the binomial distribution</title>
+      <link>/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
+      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
+      <description>There’s been a lot of talk in the wildlife community about the West Nile virus and its impacts on ruffed grouse populations.
+In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive.</description>
+    </item>
     
     <item>
       <title>How to created paged HTML documents with pagedown</title>
