@@ -138,3 +138,5 @@ Calculating the amount of carbon in trees is an essential analytical tool in for
 
 
 [^1]: Jenkins, J.C., Chojnacky, D.C., Heath, L.S., Birdsey, R.A., 2004. [A comprehensive database of diameter-based regressions for North American tree species.](https://www.fs.fed.us/ne/newtown_square/publications/technical_reports/pdfs/2004/ne_gtr319.pdf) Gen. Tech. Rep. NE-319.
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

@@ -139,3 +139,5 @@ inspect_mem(tree) %>% show_plot()
 The `inspectdf` package is useful to quickly analyze any timber cruise data set. It provides simple numeric output, produces easy-to-interpret visualizations, and requires a minimal amount of code through its functions.
 
 All of these reasons are advantages to rapidly assess timber cruise data quality. Incorporating data quality routines in your everyday work flow can provide confidence and increase the reliability in forest inventory data.
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

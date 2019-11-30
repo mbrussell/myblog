@@ -1,0 +1,195 @@
+---
+title: Which forest biometrics researchers get the most citations?
+author: Matt Russell
+date: '2019-11-30'
+slug: which-forest-biometrics-faculty-get-the-most-citations
+categories:
+  - Forest measurements
+tags:
+  - faculty
+  - publishing
+  - Google Scholar
+  - forest measurements
+  - forest inventory
+  - citations
+  - web scraping
+  - productivity
+---
+
+
+Researchers in the forest and natural resource sciences are measured by their productivity: how many publications they write and how many times those publications are cited by other researchers. Researchers that have many publications that are cited in the literature by others generally have rewarding careers and are promoted.  
+
+In 2017 I [wrote a blog post](https://esa.org/earlycareer/early-career-scientists-publish-earlier-an-analysis-with-google-scholar/) for the Ecological Society of America's Early Career Ecologist section that provided some evidence that early-career scientists publish earlier in their careers compared to more senior researchers.  
+
+When I wrote that post I used data from my own Google Scholar profile. I manually went through the data, including adding together citation counts and looking up researcher profiles to see when their PhD's were awarded. Needless to say, it turned out to be very messy for what I thought would be a quick analysis and blog post.
+
+I was happy to see that a package existed that can scrape data from Google Scholar and provide a number of useful metrics.
+
+## R's `scholar` package
+
+Many faculty at colleges and universities have a Google Scholar page. (For an example, [see mine](https://scholar.google.com/citations?user=4OO83OcAAAAJ&hl=en&authuser=2).) Having a Google Scholar page allows faculty to display their research publications, track the number of citations they receive for their articles, and interact with their coauthors.
+
+The [`scholar` package](https://github.com/jkeirstead/scholar) was developed by James Keirstead in R to extract citation data from Google Scholar. You can also obtain information about a specific researcher, compare multiple researchers, and predict future *h*-index values. (An *h*-index is the largest number *h* in which *h* publications have a least *h* citations.) 
+
+You can install and call the `scholar` library by using:
+
+```{r,messages=F}
+#install.packages("scholar")
+library(scholar)
+```
+
+The `scholar` package can be used by identifying the Google Scholar ID for each researcher. The Google Scholar ID can be found at the end of the URL on each profile page:
+
+![*How to find the Google Scholar ID.*](Annotation 2019-11-30 114555.png)
+
+You can specify the Google Scholar ID for a researcher and then obtain information from their profile using the `get_profile()` function:
+
+```{r}
+# Define the ID for Matt Russell
+id <- '4OO83OcAAAAJ'
+
+# Get Matt's profile information
+get_profile(id)
+```
+ 
+Then, you can obtain the number of citations by year for any researcher. To do this, you'll use the `get_citation_history()` function:
+
+```{r}
+# Get Matt's citation history, by year 
+get_citation_history(id)
+```
+
+## Forest biometrics faculty productivity
+
+I was interested in looking at the citations for some authors I was familiar with. Specifically, I investigated all authors from the following textbooks in the disciplines of forest measurements, growth and yield, and stand dynamics. These textbooks are commonly used in undergraduate and graduate courses across forest and natural resource departments:
+
+* *Forest Measurements, Sixth Ed.* by Burkhart et al.
+* *Forest Growth and Yield Modeling* by Weiskittel et al. 
+* *Forest Dynamics, Growth and Yield* by Pretzsch
+* *Modeling Forest Trees and Stands* by Burkhart and Tome
+* *Forest Mensuration, Fifth Ed.* by Kershaw et al.
+* *Forest Stand Dynamics* by Oliver and Larson
+* *Forest Management: To Sustain Ecological, Economic, and Social Values* by Davis et al.  
+
+Including all coauthors on these books amounts to 18 unique researchers. After searching for each author, 10 of them maintain a Google Scholar profile. The following data set includes their name, Google Scholar ID, number of citations throughout their career, and the number years in their career.
+
+```{r,echo=F, message=F, warning=F}
+library(tidyverse)
+authors<-read.csv("C://Users//russellm//Documents//Data//Blog//authors.csv")
+citations<-authors
+
+author.list<-
+  authors %>% 
+  group_by(name, id) %>% 
+  summarize(num_citations = sum(cites),
+            career_years = max(career_year)) %>% 
+  arrange(desc(num_citations))
+author.list
+```
+
+For these authors, the correlation between the length of their career and total number of citations is 0.31:
+
+```{r,echo=F,message=F, warning=F}
+#cor(author.list$num_citations,author.list$career_years)
+ggplot(author.list,aes(x=career_years,y=num_citations))+
+         geom_point()+stat_smooth(se=F)+
+  labs(y="Number of citations", x="Years in career")+
+  annotate("text", x=30,y=14000,label="Correlation = 0.31")+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        legend.title=element_blank())
+```
+
+## Visualizing biometrics faculty productivity
+
+We can extract all of the Google Scholar IDs for the ten researchers by using a concatenate function `c()`.Then we can obtain a data frame comparing the number of citations of each researcher to their work in a specific year. This is accomplished with the `compare_scholars()` function.
+
+Finally, we can compare career trajectories by using the `compare_scholar_careers()` function:
+
+```{r, eval=F}
+# Define the IDs for all researchers
+ids <- c('e7z1aLEAAAAJ','mqzZk3gAAAAJ','Ah6KRK4AAAAJ','N1MKi-oAAAAJ',
+         '_HQsysQAAAAJ','GR9rjA4AAAAJ','5JseyAcAAAAJ','MkQKfx0AAAAJ',
+         'ookqs8gAAAAJ','rvCOS60AAAAJ')
+
+# Compare number of citations in a specific year 
+compare_scholars(ids)
+
+# Compare researchers career trajectories, based on year of first citation
+citations<-compare_scholar_careers(ids)
+```
+
+We can compare researcher citation counts across a number of years. Notably, early- and mid-career faculty have a shorter number of years compared to more senior researchers. This is also generally reflected in the total number of citations: 
+
+```{r, echo=F}
+ggplot(citations,aes(year,cites))+
+  geom_bar(stat="identity", position="dodge")+
+  facet_wrap(~name,ncol=2)+
+    labs(y="Number of citations", x="Year")+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        legend.title=element_blank())
+```
+
+We can also "standardize" the number of citations for each researcher because Google Scholar provides these values for each researcher. The following graph shows the number of citations at years 5, 10, 20, and 30. Note that some early- and mid-career researchers have not been in their careers for more than 20 years, so no data exist for them at those time points:
+
+```{r, echo=F}
+citations.sub <- 
+  citations %>% 
+  filter(career_year %in% c(5,10,20,30))
+
+citations.sub$Years_text<-ifelse(citations.sub$career_year==5," 5 years", 
+                                 ifelse(citations.sub$career_year==10,"10 years", 
+                                        ifelse(citations.sub$career_year==20,"20 years", "30 years"))) 
+
+ggplot(citations.sub,aes(name,cites,fill=name))+
+  geom_bar(stat="identity", position="dodge")+
+  facet_wrap(~Years_text,ncol=2)+
+    labs(y="Number of citations", x="Researcher")+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text.x = element_text(angle=45,hjust=1,size=8),
+        legend.position = "none",
+        legend.title=element_blank())
+```
+
+## Predicting future faculty productivity
+
+Another function in the `scholar` package is `predict_h_index()`, a function that allows you to predict a researcher's h-index up to ten years ahead into the future. The algorithm is based in part on [an article published in Nature in 2012](https://www.nature.com/articles/489201a):  
+
+```{r}
+# Predict Matt's future h-index
+ids <- '4OO83OcAAAAJ'
+predict_h_index(ids)
+```
+
+We can graph the future h-index values for our forest biometrics researchers for ten years ahead into the future. The `predict_h_index()` function shows the change in h-index values through 2029:
+
+```{r, echo=F}
+ids.all<-read.csv("C://Users//russellm//Documents//Data//Blog//hindex.csv")
+ids.all$Year<-2019+ids.all$years_ahead   
+
+ggplot(ids.all,aes(Year,h_index,col=name))+
+  geom_point()+geom_line()+
+    labs(y="Projected h-index", x="Year")+
+ scale_x_continuous(breaks=seq(2019, 2029, 1))+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text.x = element_text(angle=45,hjust=1,size=8),
+        legend.title=element_blank())
+```
+
+I'm not sure that forest scientists will commonly receive h-index values greater than 100 throughout their careers. So I have some reservations about its application in the forest sciences. It is interesting to note the non-linear increase in the projected h-index values. 
+
+## Limitations of Google Scholar and `scholar` package
+
+There are a few limitations of using an approach like this, and in using the `scholar` package. Most notably:
+
+* **Not everyone has a Google Scholar page.** If you list all coauthors for the seven books mentioned above, 44% of authors do not have a Google Scholar page. I know that at least two of them are deceased...
+* **Predicting future faculty productivity is based on neuroscience.** The [h-index forecasts published in Nature](https://www.nature.com/articles/489201a) were developed for the field of neuroscience. With the rising use and ease of access to citation data from sites like Google Scholar, similar research productivity forecasting tools could be developed that are tailored to the forest science community.   
+* **There are many more authors in forest biometrics.** This was just a sample of a few researchers, and many more could be used for a similar analysis. 
+
+## Conclusion
+Forest scientists and researchers (and the supervisors and department heads that evaluate them for promotion) commonly use Google Scholar to measure their research productivity. The `scholar` package in R is an excellent tool for assessing an individual's research productivity and comparing research output to others. Metrics can be queried from Google Scholar and appropriate visualizations produced to aid in interpreting citation data.   
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

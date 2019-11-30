@@ -125,3 +125,5 @@ p.fm
 ## Conclusion
 
 Few textbooks in forestry and natural resources have been published through six editions. The *Forest Measurements* textbook has changed to incorporate new aspects of forest inventory and biometrics, in particular by incorporating new technologies and statistical methods. Looking at the table of contents and the new text added in each addition provides a glimpse into the history and development of the field of forest measurements.  
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

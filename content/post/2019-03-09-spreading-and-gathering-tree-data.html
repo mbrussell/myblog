@@ -16,7 +16,7 @@ tags:
 
 <p>A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and <a href="https://www.datacamp.com/community/tutorials/long-wide-data-R">needed to be wide</a>.</p>
 <p>The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.</p>
-<p>The <code>veg</code> dataset is formatted long and contains the “pre” (initial) and “post”&quot; (five years later) measurements, along with the number of seedlings per acre:</p>
+<p>The <code>veg</code> dataset is formatted long and contains the “pre” (initial) and “post”" (five years later) measurements, along with the number of seedlings per acre:</p>
 <pre><code>##    PlotID Period Seedlings
 ## 1       1    Pre      1200
 ## 2       1   Post       800
@@ -73,3 +73,4 @@ veg_long %&gt;% select(PlotID,Period,Seedlings)</code></pre>
 ## 15      7 Period_seedlings_Post       650
 ## 16      8 Period_seedlings_Post       910</code></pre>
 <p>Look familiar? The <code>veg_long</code> and original <code>veg</code> datasets are nearly identical. The <code>spread()</code> and <code>gather()</code> functions are two of many functions in R for organizing <a href="https://r4ds.had.co.nz/tidy-data.html">tidy data</a>.</p>
+<p><em>By Matt Russell. Leave a comment below or <a href="mailto:matt@arbor-analytics.com">email Matt</a> with any questions or comments.</em></p>

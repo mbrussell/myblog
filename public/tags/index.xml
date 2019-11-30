@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>Citations</title>
+      <link>/tags/citations/</link>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/citations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Clustering</title>
       <link>/tags/clustering/</link>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
@@ -102,9 +111,18 @@
     </item>
     
     <item>
+      <title>Faculty</title>
+      <link>/tags/faculty/</link>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/faculty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Forest Inventory</title>
       <link>/tags/forest-inventory/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/forest-inventory/</guid>
       <description></description>
@@ -113,7 +131,7 @@
     <item>
       <title>Forest Measurements</title>
       <link>/tags/forest-measurements/</link>
-      <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/forest-measurements/</guid>
       <description></description>
@@ -179,6 +197,15 @@
       <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/gif/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Scholar</title>
+      <link>/tags/google-scholar/</link>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/google-scholar/</guid>
       <description></description>
     </item>
     
@@ -287,6 +314,24 @@
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/pagedown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Productivity</title>
+      <link>/tags/productivity/</link>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/productivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publishing</title>
+      <link>/tags/publishing/</link>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/publishing/</guid>
       <description></description>
     </item>
     
@@ -404,6 +449,15 @@
       <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/wait-times/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Scraping</title>
+      <link>/tags/web-scraping/</link>
+      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/web-scraping/</guid>
       <description></description>
     </item>
     

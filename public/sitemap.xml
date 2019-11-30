@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/which-forest-biometrics-faculty-get-the-most-citations/</loc>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url>
@@ -99,7 +104,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -140,6 +145,12 @@
   <url>
     <loc>/categories/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/citations/</loc>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -204,20 +215,26 @@
   </url>
   
   <url>
+    <loc>/tags/faculty/</loc>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/forest-inventory/</loc>
-    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/forest-measurements/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/forest-measurements/</loc>
-    <lastmod>2019-10-03T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -260,6 +277,12 @@
   <url>
     <loc>/tags/gif/</loc>
     <lastmod>2019-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/google-scholar/</loc>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -343,7 +366,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -355,6 +378,18 @@
   
   <url>
     <loc>/presentations/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/productivity/</loc>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/publishing/</loc>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -457,6 +492,12 @@
   <url>
     <loc>/tags/wait-times/</loc>
     <lastmod>2019-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/web-scraping/</loc>
+    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

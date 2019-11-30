@@ -87,3 +87,5 @@ veg_long %>% select(PlotID,Period,Seedlings)
 ```
 
 Look familiar? The `veg_long` and original `veg` datasets are nearly identical.  The `spread()` and `gather()` functions are two of many functions in R for organizing [tidy data](https://r4ds.had.co.nz/tidy-data.html).
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

@@ -132,3 +132,4 @@ A goal of selection harvesting is to create a [reverse-J diameter distribution](
 
 P.S. Thanks to the Penobscot Experimental Forest for their excellent [research data catalog](https://www.nrs.fs.fed.us/ef/locations/me/penobscot/data/data_catalog/) that contains many long-term data sets of their great studies.
 
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

@@ -225,3 +225,5 @@ Special thanks to the students in the Unversity of Minnesota's NR5021 (Fall 2017
 
 [^6]: D. Schuff. 2018. [Data science for all: a university-wide course in data literacy.](https://link.springer.com/chapter/10.1007/978-3-319-58097-5_20) In: A. V. Deokar, A. Gupta, L. S. Iyer and M. C. Jones, editors, Analytics and Data Science: Advances in Research and Pedagogy. Springer International Publishing. p. 281-297.
 
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
+

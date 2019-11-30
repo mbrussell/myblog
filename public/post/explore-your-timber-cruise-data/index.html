@@ -390,10 +390,10 @@ WP
 <p><img src="/post/2019-08-08-how-to-quickly-summarize-your-timber-cruise-data_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>The <code>inspect_cor()</code> function provides the Pearson correlation coefficient for all numeric variables in the data set. In the Cloquet data set, we see that <code>DBH</code> and <code>HT</code> have a correlation coefficient of 0.772, which is what we would expect after inspecting the HT-DBH scatter plot shown previously:</p>
 <pre class="r"><code>inspect_cor(tree)</code></pre>
-<pre><code>## # A tibble: 1 x 6
-##   col_1 col_2  corr p_value lower upper
-##   &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1 HT    DBH   0.772       0 0.757 0.787</code></pre>
+<pre><code>## # A tibble: 1 x 7
+##   col_1 col_2  corr p_value lower upper pcnt_nna
+##   &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
+## 1 HT    DBH   0.772       0 0.757 0.787     19.9</code></pre>
 <p>The <code>inspect_cat()</code> function provides a graph showing the frequency of categorical levels in the data using a stacked bar chart. We can see that red pine (RP) and aspen (QA) are the most common cover types and species, most trees are in a codominant crown position, crown ratio is typically between 21 and 40%, and most observations are on growth trees (those that were measured in past inventories) or ingrowth trees:</p>
 <pre class="r"><code>inspect_cat(tree) %&gt;% show_plot() </code></pre>
 <p><img src="/post/2019-08-08-how-to-quickly-summarize-your-timber-cruise-data_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
@@ -405,6 +405,7 @@ WP
 <h2>Summary</h2>
 <p>The <code>inspectdf</code> package is useful to quickly analyze any timber cruise data set. It provides simple numeric output, produces easy-to-interpret visualizations, and requires a minimal amount of code through its functions.</p>
 <p>All of these reasons are advantages to rapidly assess timber cruise data quality. Incorporating data quality routines in your everyday work flow can provide confidence and increase the reliability in forest inventory data.</p>
+<p><em>By Matt Russell. Leave a comment below or <a href="mailto:matt@arbor-analytics.com">email Matt</a> with any questions or comments.</em></p>
 </div>
 </div>
 
@@ -416,6 +417,36 @@ WP
         <h4 class="page-header">Related</h4>
 
          <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/which-forest-biometrics-faculty-get-the-most-citations/">Which forest biometrics researchers get the most citations?</a></h4>
+    <h5>November 30, 2019</h5>
+    
+    <a href="/tags/faculty"><kbd class="item-tag">faculty</kbd></a>
+    
+    <a href="/tags/publishing"><kbd class="item-tag">publishing</kbd></a>
+    
+    <a href="/tags/google-scholar"><kbd class="item-tag">Google Scholar</kbd></a>
+    
+    <a href="/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="/tags/citations"><kbd class="item-tag">citations</kbd></a>
+    
+    <a href="/tags/web-scraping"><kbd class="item-tag">web scraping</kbd></a>
+    
+    <a href="/tags/productivity"><kbd class="item-tag">productivity</kbd></a>
+    
+
+</div>
+  <div class="item">
 
     
     
@@ -456,28 +487,6 @@ WP
     <a href="/tags/p-values"><kbd class="item-tag">p-values</kbd></a>
     
     <a href="/tags/communicating-data"><kbd class="item-tag">Communicating data</kbd></a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/">Using Google Forms to analyze confidence intervals: a teaching statistics activity</a></h4>
-    <h5>July 14, 2019</h5>
-    
-    <a href="/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
-    
-    <a href="/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
-    
-    <a href="/tags/moose"><kbd class="item-tag">moose</kbd></a>
-    
-    <a href="/tags/overconfidence"><kbd class="item-tag">overconfidence</kbd></a>
     
 
 </div>

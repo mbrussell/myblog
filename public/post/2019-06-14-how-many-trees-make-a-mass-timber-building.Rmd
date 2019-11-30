@@ -98,4 +98,6 @@ p.trees
 It's difficult to find detailed information on how much wood is required to design mass timber buildings. There is no doubt that these values would differ substantially depending on the design of each building. The building's square footage, interior and exterior design, and other features would influence the total volume of wood required. 
 
 These results suggest that some of the largest mass timber buildings in the world may have been constructed from the use of over 100,000 trees. The use of all of those trees has a long-lasting benefit to the health of forests by keeping all of that wood as a long-lived forest product.
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
  

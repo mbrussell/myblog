@@ -137,8 +137,9 @@ p.grouse<- ggplot() +
         axis.line = element_line(color="black"),
         legend.title=element_blank())
 p.grouse
-
 ```
 
 ## Conclusion
 The binomial distribution is a sum of Bernoulli trials. The binomial is measured by the count of successes *X* (e.g., the number of "successful" ruffed grouse where West Nile was confirmed) with parameters *n* (the total number of birds sampled) and *p* (the probability a bird has West Nile). As we can see from the ruffed grouse example, the binomial distribution is a handy one that has a number of applications across natural resources.
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

@@ -106,3 +106,5 @@ Thanks to the developers and contributors to this great product!
 ---
 
 *This blog post is also described in a [presentation Matt provided](https://arbor-analytics.com/presentations/pagedown_tcrug_17oct2019/) at the Twin Cities R Users Group meeting on 17 Oct 2019 in Bloomington, MN.*
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

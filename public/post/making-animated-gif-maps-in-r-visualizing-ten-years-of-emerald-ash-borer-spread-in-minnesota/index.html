@@ -203,13 +203,14 @@ d.eab2009 &lt;- image_read(&quot;eab2009.png&quot;)</code></pre>
 <pre class="r"><code>img &lt;- c(d.eab2009,d.eab2010,d.eab2011,d.eab2012,d.eab2013,d.eab2014,d.eab2015,d.eab2016,d.eab2017,d.eab2018,d.eab2019)
 
 image_append(image_scale(img, &quot;x200&quot;))</code></pre>
-<p><img src="/post/2019-06-29-making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota_files/figure-html/unnamed-chunk-11-1.png" width="1100" /></p>
+<p><img src="/post/2019-06-29-making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota_files/figure-html/unnamed-chunk-11-1.png" /><!-- --></p>
 <p>The purpose of the <code>image_animate()</code> function is to animate the GIF. The frames per second (<code>fps</code>) can be changed to speed up/slow down the animation depending on what works best. The final step is to write the animation as a GIF using <code>image_write()</code>:</p>
 <pre class="r"><code>my.animation&lt;-image_animate(image_scale(img, &quot;400x400&quot;), fps = 1, dispose = &quot;previous&quot;)
 image_write(my.animation, &quot;eab-spread.gif&quot;)</code></pre>
 <p>In the end you’ll get a GIF showing the spread of EAB in Minnesota during the last ten years:</p>
 <p><img src="https://media.giphy.com/media/dyjkgHpNAAUZto5BhA/giphy.gif" /></p>
 <p>Thanks to the <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">excellent vignette with magick</a> for tips and tricks!</p>
+<p><em>By Matt Russell. Leave a comment below or <a href="mailto:matt@arbor-analytics.com">email Matt</a> with any questions or comments.</em></p>
 </div>
 
     

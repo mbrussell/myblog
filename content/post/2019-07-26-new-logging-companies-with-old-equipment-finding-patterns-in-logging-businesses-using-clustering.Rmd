@@ -151,3 +151,5 @@ Clustering is a useful method to quickly identify patterns within data. The adva
 More "quantitative analysts" may not see as much value in clustering due to the minimal amount of quantitative output that clustering provides (aside from the mean values of each variable within each cluster). Mean values provided in a cluster analysis may help to set thresholds that can be used in subsequent analyses, e.g., how do we define a "new logging business" or one that works with "old equipment"?
 
 [^1]: Alboukadel Kassambara and Fabian Mundt (2017). [factoextra](https://CRAN.R-project.org/package=factoextra): Extract and Visualize the Results of Multivariate Data Analyses. R package version 1.0.5.
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

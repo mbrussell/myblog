@@ -103,3 +103,4 @@ In this case, the variables `DBH-cubed` and `BA-squared` (not very biologically-
 
 Forest plots can also be used in regressions to [compare different models](https://cran.r-project.org/web/packages/jtools/vignettes/summ.html) and are always useful when comparing different values along a common scale.
 
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

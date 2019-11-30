@@ -75,4 +75,6 @@ There’s been a lot of discussion recently around how *p *-values are misused. 
 
 How do you use *p *-values in your work? Do you say “statistically significant” when you’re interpreting your forestry datasets?
 
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
+
 

@@ -100,3 +100,5 @@ An estimate of expected wait times may prove especially valuable during times of
 
 
 *NOTE: This post was previously published by the [Forest Resources Association](https://forestresources.org/) as Technical Release 18-R-38. Special thanks to Tim O'Hara for his review of this post.*
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

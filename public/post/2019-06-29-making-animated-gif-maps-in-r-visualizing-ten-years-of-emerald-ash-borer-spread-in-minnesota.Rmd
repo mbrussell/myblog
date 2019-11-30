@@ -153,3 +153,5 @@ In the end you'll get a GIF showing the spread of EAB in Minnesota during the la
 ![](https://media.giphy.com/media/dyjkgHpNAAUZto5BhA/giphy.gif)
 
 Thanks to the [excellent vignette with magick](https://cran.r-project.org/web/packages/magick/vignettes/intro.html) for tips and tricks!
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

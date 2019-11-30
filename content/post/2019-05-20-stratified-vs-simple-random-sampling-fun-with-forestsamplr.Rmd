@@ -212,3 +212,5 @@ num.plots %>%
 ```
 
 The [**forestsamplr** package](https://blog.silviaterra.com/introducing-the-forestsamplr-package/) can easily summarize data from stratified samples and many more designs. Check it out! 
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.* 
