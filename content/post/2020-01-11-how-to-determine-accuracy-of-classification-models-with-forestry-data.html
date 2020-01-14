@@ -1,0 +1,78 @@
+---
+title: How to determine accuracy of classification models (with forestry data)
+author: Matt Russell
+date: '2020-01-13'
+slug: how-to-determine-accuracy-of-classification-models-with-forestry-data
+categories:
+  - Prediction
+  - Statistics
+tags:
+  - classification
+  - statistics
+  - Machine learning
+  - regression
+---
+
+
+
+<p>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.</p>
+<p>You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead. Or a team could win or lose a game. In addition, logistic regression could allow an outcome for multiple classes of data. For example, a team could win lose, tie, or forfeit a game.</p>
+<p>Classification is an an example of <strong>supervised learning</strong>. That is, we have an x-y pair and are interested in finding a relationship between two variables. Linear regression is another common type of supervised learning.</p>
+<p>So, how do you know if a classification model is an accurate one?</p>
+<div id="classification-an-example-with-tree-species" class="section level2">
+<h2>Classification: an example with tree species</h2>
+<p>Say you have a sample of five trees. You want to predict their species based on an image of its leaves. You know the five species are an oak, elm, buckeye, oak, and ash:</p>
+<div class="figure">
+<img src="observation.png" alt="Five example trees." />
+<p class="caption"><em>Five example trees.</em></p>
+</div>
+<p>Next, you create a model based on the images of the leaves. Then, you use that model to predict the species.</p>
+<p>The model runs on a lot of data to train it to identify its species. In the model, there may be dozens of trees that are possible to predict.</p>
+<p>After you make the predictions, you find the model to correctly predict three out of the five species correctly. It incorrectly predicted the elm to be a different species with a compound leaf arrangement. And, it predicted the buckeye to be a different species of oak:</p>
+<div class="figure">
+<img src="prediction.png" alt="Five example trees, with predictions." />
+<p class="caption"><em>Five example trees, with predictions.</em></p>
+</div>
+<p>In this example, the accuracy of the classification is 60% and the error is 40%. Accuracy and error are two key attributes of measuring how well a classification performs. When the accuracy of a classification model goes up, the error goes down.</p>
+</div>
+<div id="measuring-the-performance-of-classification-models" class="section level2">
+<h2>Measuring the performance of classification models</h2>
+<p>Accuracy and error are two key metrics in classification. But you can interpret the performance of the model much more deeply if you learn more about another key metric: <em>the confusion matrix</em>.</p>
+<p>The confusion matrix includes rows and columns for all possible labels in a classification:</p>
+<ul>
+<li><strong>True positives (TP)</strong>: The model correctly predicts a positive value.</li>
+<li><strong>True negatives (TN)</strong>: The model correctly predicts a negative value.</li>
+<li><strong>False positives (FP)</strong>: The model incorrectly predicts a positive value.</li>
+<li><strong>False negatives (FN)</strong>: The model incorrectly predicts a negative value.</li>
+</ul>
+<p>Each cell in the confusion matrix contains the number of instances that are classified in a certain way. We’re most interested in getting true positives and true negatives: this means our classification model is working properly. A greater number of false positives and false negatives will decrease the accuracy of the model.</p>
+<div class="figure">
+<img src="accuracy.png" alt="A confusion matrix." />
+<p class="caption"><em>A confusion matrix.</em></p>
+</div>
+<p>Using the confusion matrix, the accuracy can be calculated as the number of correct predictions divided by the total number of predictions made in the data set:</p>
+<p><span class="math display">\[{Accuracy}=\frac{TP+TN}{TP+TN+FP+FN}\]</span></p>
+<p>Using the confusion matrix, the accuracy and error (1 - accuracy) measure how well the classification performed.</p>
+</div>
+<div id="predicting-alive-and-dead-trees" class="section level2">
+<h2>Predicting alive and dead trees</h2>
+<p>Say for example we have a data set with tree diameters and heights from an even-aged plantation. We also know whether or not these trees are alive or dead. Alive trees would likely have large diameters and tall heights.</p>
+<p>Dead trees would likely be smaller in diameter and shorter in height. As dead trees remain standing, through time their tops and branches will fall off and the stem will break, making them shorter.</p>
+<p>We might have a classification model that categorizes 16 different trees as being alive based on their diameter and height. Short trees with small diameters are mostly categorized as not alive (dead), indicated by everything to the left of a “prediction” line. Large diameter trees that are tall are alive, indicated by everything to the right of the line:</p>
+<p><img src="/post/2020-01-11-how-to-determine-accuracy-of-classification-models-with-forestry-data_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>You can see that the model does a fairly good job of categorizing the trees as alive or dead. But there are three dead trees that were predicted as alive. Plus, two alive trees were predicted as dead.</p>
+<p>We can use the data to draw the confusion matrix:</p>
+<div class="figure">
+<img src="accuracy2.png" alt="The confusion matrix for the alive/dead trees." />
+<p class="caption"><em>The confusion matrix for the alive/dead trees.</em></p>
+</div>
+<p>Using the values in the confusion matrix, we can also calculate the accuracy of the model:</p>
+<p><span class="math display">\[{Accuracy}=\frac{6+5}{6+5+3+2}=68.75%\]</span></p>
+<p>So, with a <strong>68.75% accuracy</strong>, our model can predict an alive or dead tree correctly about two-thirds of the time. That might do well for our application. Or maybe we want to train a new model to increase its accuracy.</p>
+<p>Understanding both the confusion matrix and the accuracy gives tremendous insight into the classification problem. For example, training new models might be needed if you find your model is predicting too many false positives or false negatives.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Classification is a widely used algorithm with many applications in forestry. Three key things to understand with any classification model are the confusion matrix, the accuracy, and the error. Useful accuracy values in forestry tend to be greater than 80%, or correctly predicting an attribute in at least four out of every five classifications.</p>
+<p><em>By Matt Russell. Leave a comment below or <a href="mailto:matt@arbor-analytics.com">email Matt</a> with any questions or comments.</em></p>
+</div>

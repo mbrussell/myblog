@@ -6,10 +6,20 @@
     <description>Recent content in Machine Learning on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to determine accuracy of classification models (with forestry data)</title>
+      <link>/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
+      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
+      <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.
+You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
+    </item>
     
     <item>
       <title>New logging companies with old equipment: Finding patterns in logging businesses using clustering</title>
