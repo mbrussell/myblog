@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/four-ways-to-supercharge-your-scatterplots/</loc>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</loc>
     <lastmod>2020-01-13T00:00:00+00:00</lastmod>
   </url>
@@ -114,7 +119,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -124,7 +129,7 @@
   
   <url>
     <loc>/tags/analytics/</loc>
-    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -190,7 +195,7 @@
   
   <url>
     <loc>/tags/communicating-data/</loc>
-    <lastmod>2019-08-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -202,13 +207,13 @@
   
   <url>
     <loc>/categories/data-visualization/</loc>
-    <lastmod>2019-08-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/data-viz/</loc>
-    <lastmod>2019-08-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -298,7 +303,7 @@
   
   <url>
     <loc>/tags/ggplot2/</loc>
-    <lastmod>2019-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -406,7 +411,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -453,7 +458,7 @@
   
   <url>
     <loc>/categories/reporting/</loc>
-    <lastmod>2019-10-19T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -472,6 +477,12 @@
   <url>
     <loc>/categories/sampling/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/scatterplots/</loc>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -507,7 +518,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

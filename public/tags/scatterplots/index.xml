@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scatterplots on </title>
+    <link>/tags/scatterplots/</link>
+    <description>Recent content in Scatterplots on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/scatterplots/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Four ways to supercharge your scatterplots</title>
+      <link>/post/four-ways-to-supercharge-your-scatterplots/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/four-ways-to-supercharge-your-scatterplots/</guid>
+      <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.
+There are a few rules for all scatterplots:
+The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
+    </item>
+    
+  </channel>
+</rss>
