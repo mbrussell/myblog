@@ -1,0 +1,185 @@
+---
+title: How much carbon is stored in one trillion trees?
+author: Matt Russell
+date: '2020-02-10'
+slug: how-much-carbon-is-stored-in-a-trillion-trees
+categories:
+  - Carbon
+  - Forest measurements
+tags:
+  - carbon
+  - analytics
+  - forest measurements
+  - trillion trees
+---
+
+#### The short answer: About 5.7 times as much than is currently stored in forests in the lower 48 US states and Alaska. One trillion trees equates to about 101 billion metric tons of carbon stored.
+
+The [Trillion Trees Campaign](https://www.trilliontrees.org/) has been widespread in the news recently. The United States has committed to the initiative, announced at the World Economic Forum in January 2020 and mentioned during President Trump's annual State of the Union address on 4 February 2020. 
+
+This Trillion Trees Campaign seeks to plant 1 trillion trees across the world by 2050. Interestingly, the campaign already reports that as of February 2020, over 13 billion trees have [already been planted](https://www.trilliontreecampaign.org/).  
+
+One trillion trees is a lot. Since the ultimate goal of the Trillion Trees Campaign is to sequester carbon as a natural climate solution to tackling climate change, just how much carbon does one trillion trees store?
+
+This post will step through a number of calculations to generate a best approximation for how much carbon is stored in one trillion trees. The calculations use data and summaries from the US Department of Agriculture's [Forest Inventory and Analysis program](https://www.fia.fs.fed.us/) and in particular the [EVALIDator](https://apps.fs.usda.gov/Evalidator/evalidator.jsp) web application. 
+
+## Trees and carbon in the US
+
+There are **3.04 trillion trees** across the world according to [the most recent research](https://www.nature.com/news/global-count-reaches-3-trillion-trees-1.18287) from 2015.
+
+For perspective, there are **367 billion trees** in the US right now. This includes all trees greater than one-inch in diameter and growing in the conterminous 48 states and Alaska.  
+
+If we were to imagine planting all of the trillion trees in the US, we wouldn't have the land area to support them. Currently the US is only slightly more that a third of the one trillion tree mark.
+
+If we know how many trees we have in the US, we can also calculate how much carbon they store. To use an example data set, we can randomly select 2,000 trees from the FIA database from each of five different US states (Colorado, Oregon, Georgia, Wisconsin, and New York) and three size classes (saplings, poletimber, and sawtimber).
+
+The key FIA variables were `DIA` (the tree's diameter, in inches) and the above (`CARBON_AG`) and belowground carbon for each tree (`CARBON_BG`). Only live trees were selected and the above and belowground portions were added to determine the total tree carbon in pounds: 
+
+
+```{r, echo = F, warning = F, message = F}
+library(tidyverse)
+library(gsheet)
+library(GGally)
+library(rgdal)
+library(usmap)
+library(ggrepel)
+library(knitr)
+library(kableExtra)
+```
+
+```{r echo = F, message = F, warning = F}
+tree<-read_csv("C:\\Users\\russellm\\Documents\\Arbor\\Data\\all.csv")
+```
+
+```{r echo = F, message = F, warning = F}
+# Summarize the tree and carbon data
+tree_sum <- tree %>% 
+  group_by(SIZE) %>% 
+  summarize(CARBON_lbs = sum(CARBON),
+            CARBON_AG_lbs = sum(CARBON_AG),
+            CARBON_BG_lbs = sum(CARBON_BG)) %>% 
+  mutate(CARBON_tons = (CARBON_lbs/2000)* 1e+08,
+         CARBON_metTons = CARBON_tons*0.907185, 
+         CARBON_AG_tons = (CARBON_AG_lbs/2000)* 1e+08,
+         CARBON_BG_tons = (CARBON_BG_lbs/2000)* 1e+08)
+```
+
+
+```{r echo = F, message = F, warning = F}
+
+all_of_it_size <- tree %>% 
+  filter(SIZE != "All trees (all diameters)") 
+
+all_of_it_size$SIZE <-  factor(all_of_it_size$SIZE,levels = c("Saplings (1 to 4 inches)", "Poletimber (4 to 10 inches)", "Saw timber (> 10 inches)"))
+
+p.size2 <- ggplot(all_of_it_size, aes(DIA,CARBON, col = SIZE)) +
+         geom_point()+
+  stat_smooth()+
+  scale_y_continuous(limits = c(0,8000))+
+  scale_x_continuous(limits = c(0,40))+
+  labs(y = "Tree carbon (pounds)", x = "Tree diameter (inches)")+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        legend.position = "top",
+        legend.title = element_blank())
+p.size2
+
+```
+
+```{r echo = F, message = F, warning = F}
+tree_sum <- tree %>% 
+  group_by(SIZE) %>% 
+  summarize(Mean.dia = round(mean(DIA), 1),
+            Mean.carbon = round(mean(CARBON), 1)) %>% 
+  arrange(match(SIZE, c("Saplings (1 to 4 inches)", "Poletimber (4 to 10 inches)", 
+                    "Saw timber (> 10 inches)","All trees (all diameters)")))
+
+knitr::kable((tree_sum[]), 
+             caption = 'Average values of tree diameter (inches) and carbon content (pounds).') %>% 
+   kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+```
+
+As you might suspect, the example data set contained lots of small trees with low carbon storage, and fewer large trees with lots of carbon:
+
+```{r echo = F, message = F, warning = F}
+all_of_it_tree <- tree %>% 
+  filter(SIZE == "All trees (all diameters)")
+
+p.size <- ggplot(all_of_it_tree, aes(CARBON, fill = SIZE)) +
+         geom_histogram(col = "black", bins = 100) +
+         #facet_wrap(~SIZE)+
+  scale_x_continuous(limits = c(0,3000))+
+  #scale_y_continuous(limits = c(0,10000))+
+  labs(x = "Tree carbon (pounds)", y = "Number of trees")+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        legend.position = "none")
+p.size
+```
+
+## How much carbon in one trillion trees?
+
+For perspective, there are **17.7 billion metric tons** of carbon stored in live trees in the US right now. This includes all living biomass above the soil including stem, stump, branches, bark, seeds, foliage, and all living biomass of coarse living roots greater than 2 millimeters in diameter and growing in the conterminous 48 states and Alaska. These numbers were obtained from the [Land Use, Land Use Change, and Forestry](https://www.epa.gov/sites/production/files/2019-04/documents/us-ghg-inventory-2019-chapter-6-land-use-land-use-change-and-forestry.pdf) chapter of the Environmental Protection Agency's Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2017.  
+
+With our example data set, we can expand the estimate to determine the amount of carbon in one trillion trees. Here, like in much of forest carbon accounting, it depends on how we define a tree.
+
+Currently, US forests contain 367 billion trees that store 17.7 billion metric tons of carbon. If we imagined one trillion *saplings* that are growing and thriving, this would equate to about 3.0 billion metric tons of carbon. On the other end, if we imagined one trillion *sawtimber-sized trees* that are growing and thriving, this would equate to about 309.9 billion metric tons of carbon.
+
+If we sampled randomly from all-sized trees, a more realistic number indicates that one trillion trees would equate to **101.0 billion metric tons** of carbon. Here is how different sized trees contribute to differing levels of carbon storage:
+
+```{r echo = F, message = F, warning = F}
+carbon2 <- tribble(
+  ~Size, ~`Carbon (BMT)`,
+"367 billion trees (all sizes; current US carbon)", 17.7, 
+"One trillion saplings", 3.0, 
+"One trillion poletimber trees", 54.7, 
+"One trillion sawtimber trees", 309.9, 
+"One trillion trees (all sizes)" , 101.0, 
+)
+
+knitr::kable((carbon2[]), 
+             caption = 'Carbon stored in one trillion trees (billion metric tons).') %>% 
+   kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+```
+
+```{r  echo = F, message = F, warning = F}
+carbon1 <- tribble(
+  ~Size, ~Carbon_BMT, ~Type,
+"367 b trees (all sizes)\n(current US carbon)\n17.7 BMT", 17.7, 0,
+"1t saplings\n3.0 BMT", 3.0, 1, 
+"1t poletimber trees\n54.7 BMT", 54.7, 1, 
+"1t sawtimber trees\n309.9 BMT", 309.9, 1, 
+"1t trees (all sizes)\n101.0 BMT" , 101.0, 1,
+)
+
+p.c <- ggplot(carbon1, aes(Carbon_BMT, 1, col = Type, size = Carbon_BMT, label = Size)) +
+         geom_point() +
+  scale_size(range = c(0,40))+
+  geom_text_repel(aes(label = Size),
+                    color = 'black',
+                    size = 4,
+                  vjust = 0,
+                  segment.size = 0.01,
+                  nudge_y = 0.25,
+                  direction = "x") +
+  labs(x = " ", y = " ")+
+    scale_y_continuous(limits = c(0.999,1.01))+
+  scale_x_continuous(limits = c(0, 350))+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_blank(),
+        legend.position = "none",
+        axis.text = element_blank(),
+        axis.ticks = element_blank())
+p.c
+
+```
+
+The Trillion Tree Campaign is global in its work, and of course, it is not practical to plant one trillion trees in a single country like the US. By finding out how much carbon is stored by planting more trees, we can begin to put numbers on the role of trees and forests as a natural climate solution.  
+
+## Conclusion
+
+There's about 17.7 billion metric tons of carbon stored in the trees in US forests today. One trillion trees from a range of tree sizes would amount to 101 billion metric tons of carbon in the above and belowground portions of trees. If the Trillion Tree Campaign planted all of those trees in the US and we assumed they reached a size similar to trees found in the US today, US forests would store about 5.7 times more carbon than they do today.
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
