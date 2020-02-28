@@ -6,10 +6,20 @@
     <description>Recent content in Carbon on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/carbon/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Units in forest carbon numbers: a primer</title>
+      <link>/post/units-in-forest-carbon-numbers-a-primer/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/units-in-forest-carbon-numbers-a-primer/</guid>
+      <description>Forest analysts are increasingly being asked about the amount of carbon that trees and forests store. However, most analysts are trained in summarizing forestry data sets to obtain measurements such as volume and basal area.
+If a forest analyst knows how to “speak carbon”, this can leave them feeling empowered when discussing the importance of forests and forest management in the context of carbon. This can leave a solid impression with landowners and decision makers.</description>
+    </item>
     
     <item>
       <title>How much carbon is stored in one trillion trees?</title>

@@ -1,0 +1,169 @@
+---
+title: 'Units in forest carbon numbers: a primer'
+author: Matt Russell
+date: '2020-02-27'
+slug: units-in-forest-carbon-numbers-a-primer
+categories:
+  - Carbon
+  - Forest measurements
+tags:
+  - analytics
+  - carbon
+  - Communicating data
+  - forest inventory
+  - forest measurements
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<p>Forest analysts are increasingly being asked about the amount of carbon that trees and forests store. However, most analysts are trained in summarizing forestry data sets to obtain measurements such as volume and basal area.</p>
+<p>If a forest analyst knows how to “speak carbon”, this can leave them feeling empowered when discussing the importance of forests and forest management in the context of carbon. This can leave a solid impression with landowners and decision makers.</p>
+<p>This post discusses the common units of measure when discussing forest carbon, ranging from tree to stand and landscape scales.</p>
+<div id="carbon-in-trees" class="section level2">
+<h2>Carbon in trees</h2>
+<p>Approximately half of a tree’s biomass is carbon. This is a useful approximate number, but the true proportion of carbon can vary depending on species, the amount of bark on a tree, and the tree’s size.</p>
+<p>The US Forest Inventory and Analysis program (FIA) reports the carbon stored in live trees using <strong>pounds</strong>. Values are reported separately for aboveground (bole, stump, and tops) and belowground (coarse roots greater than 0.1 inches in diameter) portions of the tree.</p>
+<p>In most of the world, carbon is expressed in terms of <strong>kilograms</strong>:</p>
+<p><span class="math inline">\(1 \text{ lb } = 0.4536 \text{ kg }\)</span></p>
+<p>As an example, we can look at some FIA data to see some approximate values on carbon stored in live trees. Here is a distribution of total tree carbon stored above and belowground for all trees greater than 5.0 inches in diameter on <a href="https://www.nrs.fs.fed.us/fia/data-tools/state-reports/WI/default.asp">Wisconsin FIA plots</a>. Data are from 153,553 trees measured from 2012 through 2018:</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-2">Table 1: </span>Quantile distributions of tree diameter and carbon for 153,553 trees growing in Wisconsin, USA.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Quantile
+</th>
+<th style="text-align:right;">
+DBH (in)
+</th>
+<th style="text-align:right;">
+DBH (cm)
+</th>
+<th style="text-align:right;">
+Carbon (lbs)
+</th>
+<th style="text-align:right;">
+Carbon (kg)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+5th
+</td>
+<td style="text-align:right;">
+5.2
+</td>
+<td style="text-align:right;">
+13.2
+</td>
+<td style="text-align:right;">
+42.8
+</td>
+<td style="text-align:right;">
+19.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+25th
+</td>
+<td style="text-align:right;">
+6.1
+</td>
+<td style="text-align:right;">
+15.5
+</td>
+<td style="text-align:right;">
+78.9
+</td>
+<td style="text-align:right;">
+35.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Median
+</td>
+<td style="text-align:right;">
+7.7
+</td>
+<td style="text-align:right;">
+19.6
+</td>
+<td style="text-align:right;">
+147.3
+</td>
+<td style="text-align:right;">
+66.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+75th
+</td>
+<td style="text-align:right;">
+10.4
+</td>
+<td style="text-align:right;">
+26.4
+</td>
+<td style="text-align:right;">
+315.1
+</td>
+<td style="text-align:right;">
+142.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+95th
+</td>
+<td style="text-align:right;">
+16.1
+</td>
+<td style="text-align:right;">
+40.9
+</td>
+<td style="text-align:right;">
+929.5
+</td>
+<td style="text-align:right;">
+421.6
+</td>
+</tr>
+</tbody>
+</table>
+<p>In summary, the median diameter tree growing in Wisconsin (7.7 inches) contains 147 pounds (or 67 kg) of stored carbon.</p>
+</div>
+<div id="carbon-in-forest-stands" class="section level2">
+<h2>Carbon in forest stands</h2>
+<p>Carbon attributes at the individual tree level are scaled up and represented on a per unit area basis. In the US, forest carbon can be expressed in <strong>pounds/acre</strong>. It can be expressed in <strong>tons per acre</strong>:</p>
+<p><span class="math inline">\(2,000 \text{ lbs }= 1 \text{ US ton }\)</span></p>
+<p>The US ton is also referred to as a short ton. This is not to be confused with the <a href="https://en.wikipedia.org/wiki/Long_ton">long ton</a>, or imperial ton (2,240 lbs), another measure of mass but not typically used in forest carbon inventories.</p>
+<p>Carbon stocks using English units can be converted to metric units in terms of their mass (to kilograms) and their area (to hectares). Units of <strong>lbs/acre</strong> and <strong>kg/hectare</strong> would not be feasible to express with forest carbon–if a single tree can easily store over 1,000 pounds of carbon, then several hundred trees per acre can result in high value using this unit of measure. Hence, tons/acre is commonly used to report forest carbon on a per unit area basis.</p>
+<p>Forestry professionals that are concerned with small weights over large areas would be interested in using <strong>lbs/acre</strong> and <strong>kg/hectare</strong>. Think chemical applications of herbicides to control competing vegetation. These professionals know that English and metric numbers are similar:</p>
+<p><span class="math inline">\(1 \text{ lb/acre } = 1.120851 \text{ kg/hectare }\)</span></p>
+<p>In lieu of expressing forest carbon in kilograms, values are typically reported in megagrams (Mg):</p>
+<p><span class="math inline">\(1 \text{ kg/hectare } = 0.001 \text{ Mg/hectare }\)</span></p>
+<p>A megagram is also referred to as a <strong>metric tonne</strong> and is equivalent to 1.10 US tons. At the stand level, forest carbon is typically reported as <strong>tons/acre</strong> or <strong>Mg/hectare</strong>:</p>
+<p><span class="math inline">\(1 \text{ ton/acre } = 2.2417 \text{ Mg/hectare }\)</span></p>
+<p>Looking at the <a href="https://www.nrs.fs.fed.us/pubs/55063">FIA data in Wisconsin</a>, we can visualize mean aboveground forest carbon stocks across stand age in both tons/acre and Mg/hectare:</p>
+<p><img src="/post/2020-02-25-units-in-forest-carbon-numbers-a-primer_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="carbon-across-forest-landscapes" class="section level2">
+<h2>Carbon across forest landscapes</h2>
+<p>When it comes to reporting large forest carbon stocks across expansive areas, forest carbon is almost always reported in metric tonnes. The <a href="https://www.epa.gov/ghgemissions/draft-inventory-us-greenhouse-gas-emissions-and-sinks-1990-2018">US’ Greenhouse Gas Inventory</a> reports most of its values in million metric tonnes. This is because of the large values reported across the nation’s expansive forests.</p>
+<p>Across the US, <a href="https://www.fia.fs.fed.us/forestcarbon/index.php">FIA estimates indicate</a> that <strong>39,426 million metric tonnes of carbon</strong> are stored in above and belowground trees, deadwood, forest floor, and soil organic carbon. These values range from as low as 26 million metric tonnes in Rhode Island to as high as 2,555 million metric tonnes in Oregon:</p>
+<p><img src="/post/2020-02-25-units-in-forest-carbon-numbers-a-primer_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>At the tree level, pounds are typically used in the US and kilograms internationally to convey the weight of carbon. At the stand level, pounds per acre or megagrams per hectare are often used to depict carbon on a per-unit basis. At the regional or landscape level, forest carbon stocks are typically always reported in metric units using million metric tonnes.</p>
+<p>Converting between all of the different units of measure for forest carbon can be confusing. Understanding these units can help you in interpreting the scale and magnitude of forest carbon stocks.</p>
+<p><em>By Matt Russell. Leave a comment below or <a href="mailto:matt@arbor-analytics.com">email Matt</a> with any questions or comments.</em></p>
+</div>

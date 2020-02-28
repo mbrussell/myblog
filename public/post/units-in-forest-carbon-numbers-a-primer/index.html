@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>How much carbon is stored in one trillion trees?</title>
+        <title>Units in forest carbon numbers: a primer</title>
         
         <style>
 
@@ -90,7 +90,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">How much carbon is stored in one trillion trees?</a>
+                    <a class="navbar-brand visible-xs" href="#">Units in forest carbon numbers: a primer</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -148,16 +148,18 @@
     
     
 
-    <h4><a href="/post/how-much-carbon-is-stored-in-a-trillion-trees/">How much carbon is stored in one trillion trees?</a></h4>
-    <h5>February 10, 2020</h5>
-    
-    <a href="/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    <h4><a href="/post/units-in-forest-carbon-numbers-a-primer/">Units in forest carbon numbers: a primer</a></h4>
+    <h5>February 27, 2020</h5>
     
     <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
-    <a href="/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    <a href="/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
     
-    <a href="/tags/trillion-trees"><kbd class="item-tag">trillion trees</kbd></a>
+    <a href="/tags/communicating-data"><kbd class="item-tag">Communicating data</kbd></a>
+    
+    <a href="/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
     
 
 </div>
@@ -167,157 +169,154 @@
 <script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
 
-<div id="the-short-answer-about-5.7-times-as-much-than-is-currently-stored-in-forests-in-the-lower-48-us-states-and-alaska.-one-trillion-trees-equates-to-about-101-billion-metric-tons-of-carbon-stored." class="section level4">
-<h4>The short answer: About 5.7 times as much than is currently stored in forests in the lower 48 US states and Alaska. One trillion trees equates to about 101 billion metric tons of carbon stored.</h4>
-<p>The <a href="https://www.trilliontrees.org/">Trillion Trees Campaign</a> has been widespread in the news recently. The United States has committed to the initiative, announced at the World Economic Forum in January 2020 and mentioned during President Trump’s annual State of the Union address on 4 February 2020.</p>
-<p>This Trillion Trees Campaign seeks to plant 1 trillion trees across the world by 2050. Interestingly, the campaign already reports that as of February 2020, over 13 billion trees have <a href="https://www.trilliontreecampaign.org/">already been planted</a>.</p>
-<p>One trillion trees is a lot. Since the ultimate goal of the Trillion Trees Campaign is to sequester carbon as a natural climate solution to tackling climate change, just how much carbon does one trillion trees store?</p>
-<p>This post will step through a number of calculations to generate a best approximation for how much carbon is stored in one trillion trees. The calculations use data and summaries from the US Department of Agriculture’s <a href="https://www.fia.fs.fed.us/">Forest Inventory and Analysis program</a> and in particular the <a href="https://apps.fs.usda.gov/Evalidator/evalidator.jsp">EVALIDator</a> web application.</p>
-</div>
-<div id="trees-and-carbon-in-the-us" class="section level2">
-<h2>Trees and carbon in the US</h2>
-<p>There are <strong>3.04 trillion trees</strong> across the world according to <a href="https://www.nature.com/news/global-count-reaches-3-trillion-trees-1.18287">the most recent research</a> from 2015.</p>
-<p>For perspective, there are <strong>367 billion trees</strong> in the US right now. This includes all trees greater than one-inch in diameter and growing in the conterminous 48 states and Alaska.</p>
-<p>If we were to imagine planting all of the trillion trees in the US, we wouldn’t have the land area to support them. Currently the US is only slightly more that a third of the one trillion tree mark.</p>
-<p>If we know how many trees we have in the US, we can also calculate how much carbon they store. To use an example data set, we can randomly select 2,000 trees from the FIA database from each of five different US states (Colorado, Oregon, Georgia, Wisconsin, and New York) and three size classes (saplings, poletimber, and sawtimber).</p>
-<p>The key FIA variables were <code>DIA</code> (the tree’s diameter, in inches) and the above (<code>CARBON_AG</code>) and belowground carbon for each tree (<code>CARBON_BG</code>). Only live trees were selected and the above and belowground portions were added to determine the total tree carbon in pounds:</p>
-<p><img src="/post/2020-02-08-how-much-carbon-is-stored-in-a-trillion-trees_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Forest analysts are increasingly being asked about the amount of carbon that trees and forests store. However, most analysts are trained in summarizing forestry data sets to obtain measurements such as volume and basal area.</p>
+<p>If a forest analyst knows how to “speak carbon”, this can leave them feeling empowered when discussing the importance of forests and forest management in the context of carbon. This can leave a solid impression with landowners and decision makers.</p>
+<p>This post discusses the common units of measure when discussing forest carbon, ranging from tree to stand and landscape scales.</p>
+<div id="carbon-in-trees" class="section level2">
+<h2>Carbon in trees</h2>
+<p>Approximately half of a tree’s biomass is carbon. This is a useful approximate number, but the true proportion of carbon can vary depending on species, the amount of bark on a tree, and the tree’s size.</p>
+<p>The US Forest Inventory and Analysis program (FIA) reports the carbon stored in live trees using <strong>pounds</strong>. Values are reported separately for aboveground (bole, stump, and tops) and belowground (coarse roots greater than 0.1 inches in diameter) portions of the tree.</p>
+<p>In most of the world, carbon is expressed in terms of <strong>kilograms</strong>:</p>
+<p><span class="math inline">\(1 \text{ lb } = 0.4536 \text{ kg }\)</span></p>
+<p>As an example, we can look at some FIA data to see some approximate values on carbon stored in live trees. Here is a distribution of total tree carbon stored above and belowground for all trees greater than 5.0 inches in diameter on <a href="https://www.nrs.fs.fed.us/fia/data-tools/state-reports/WI/default.asp">Wisconsin FIA plots</a>. Data are from 153,553 trees measured from 2012 through 2018:</p>
 <table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-5">Table 1: </span>Average values of tree diameter (inches) and carbon content (pounds).
+<span id="tab:unnamed-chunk-2">Table 1: </span>Quantile distributions of tree diameter and carbon for 153,553 trees growing in Wisconsin, USA.
 </caption>
 <thead>
 <tr>
 <th style="text-align:left;">
-SIZE
+Quantile
 </th>
 <th style="text-align:right;">
-Mean.dia
+DBH (in)
 </th>
 <th style="text-align:right;">
-Mean.carbon
+DBH (cm)
+</th>
+<th style="text-align:right;">
+Carbon (lbs)
+</th>
+<th style="text-align:right;">
+Carbon (kg)
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-Saplings (1 to 4 inches)
+5th
 </td>
 <td style="text-align:right;">
-2.0
+5.2
 </td>
 <td style="text-align:right;">
-6.7
+13.2
+</td>
+<td style="text-align:right;">
+42.8
+</td>
+<td style="text-align:right;">
+19.4
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Poletimber (4 to 10 inches)
+25th
 </td>
 <td style="text-align:right;">
-6.9
+6.1
 </td>
 <td style="text-align:right;">
-120.6
+15.5
+</td>
+<td style="text-align:right;">
+78.9
+</td>
+<td style="text-align:right;">
+35.8
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Saw timber (&gt; 10 inches)
+Median
 </td>
 <td style="text-align:right;">
-13.7
+7.7
 </td>
 <td style="text-align:right;">
-683.3
+19.6
+</td>
+<td style="text-align:right;">
+147.3
+</td>
+<td style="text-align:right;">
+66.8
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-All trees (all diameters)
+75th
 </td>
 <td style="text-align:right;">
-7.4
+10.4
 </td>
 <td style="text-align:right;">
-222.6
+26.4
+</td>
+<td style="text-align:right;">
+315.1
+</td>
+<td style="text-align:right;">
+142.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+95th
+</td>
+<td style="text-align:right;">
+16.1
+</td>
+<td style="text-align:right;">
+40.9
+</td>
+<td style="text-align:right;">
+929.5
+</td>
+<td style="text-align:right;">
+421.6
 </td>
 </tr>
 </tbody>
 </table>
-<p>As you might suspect, the example data set contained lots of small trees with low carbon storage, and fewer large trees with lots of carbon:</p>
-<p><img src="/post/2020-02-08-how-much-carbon-is-stored-in-a-trillion-trees_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>In summary, the median diameter tree growing in Wisconsin (7.7 inches) contains 147 pounds (or 67 kg) of stored carbon.</p>
 </div>
-<div id="how-much-carbon-in-one-trillion-trees" class="section level2">
-<h2>How much carbon in one trillion trees?</h2>
-<p>For perspective, there are <strong>17.7 billion metric tons</strong> of carbon stored in live trees in the US right now. This includes all living biomass above the soil including stem, stump, branches, bark, seeds, foliage, and all living biomass of coarse living roots greater than 2 millimeters in diameter and growing in the conterminous 48 states and Alaska. These numbers were obtained from the <a href="https://www.epa.gov/sites/production/files/2019-04/documents/us-ghg-inventory-2019-chapter-6-land-use-land-use-change-and-forestry.pdf">Land Use, Land Use Change, and Forestry</a> chapter of the Environmental Protection Agency’s Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2017.</p>
-<p>With our example data set, we can expand the estimate to determine the amount of carbon in one trillion trees. Here, like in much of forest carbon accounting, it depends on how we define a tree.</p>
-<p>Currently, US forests contain 367 billion trees that store 17.7 billion metric tons of carbon. If we imagined one trillion <em>saplings</em> that are growing and thriving, this would equate to about 3.0 billion metric tons of carbon. On the other end, if we imagined one trillion <em>sawtimber-sized trees</em> that are growing and thriving, this would equate to about 309.9 billion metric tons of carbon.</p>
-<p>If we sampled randomly from all-sized trees, a more realistic number indicates that one trillion trees would equate to <strong>101.0 billion metric tons</strong> of carbon. Here is how different sized trees contribute to differing levels of carbon storage:</p>
-<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:unnamed-chunk-7">Table 2: </span>Carbon stored in one trillion trees (billion metric tons).
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Size
-</th>
-<th style="text-align:right;">
-Carbon (BMT)
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-367 billion trees (all sizes; current US carbon)
-</td>
-<td style="text-align:right;">
-17.7
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-One trillion saplings
-</td>
-<td style="text-align:right;">
-3.0
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-One trillion poletimber trees
-</td>
-<td style="text-align:right;">
-54.7
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-One trillion sawtimber trees
-</td>
-<td style="text-align:right;">
-309.9
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-One trillion trees (all sizes)
-</td>
-<td style="text-align:right;">
-101.0
-</td>
-</tr>
-</tbody>
-</table>
-<p><img src="/post/2020-02-08-how-much-carbon-is-stored-in-a-trillion-trees_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-<p>The Trillion Tree Campaign is global in its work, and of course, it is not practical to plant one trillion trees in a single country like the US. By finding out how much carbon is stored by planting more trees, we can begin to put numbers on the role of trees and forests as a natural climate solution.</p>
+<div id="carbon-in-forest-stands" class="section level2">
+<h2>Carbon in forest stands</h2>
+<p>Carbon attributes at the individual tree level are scaled up and represented on a per unit area basis. In the US, forest carbon can be expressed in <strong>pounds/acre</strong>. It can be expressed in <strong>tons per acre</strong>:</p>
+<p><span class="math inline">\(2,000 \text{ lbs }= 1 \text{ US ton }\)</span></p>
+<p>The US ton is also referred to as a short ton. This is not to be confused with the <a href="https://en.wikipedia.org/wiki/Long_ton">long ton</a>, or imperial ton (2,240 lbs), another measure of mass but not typically used in forest carbon inventories.</p>
+<p>Carbon stocks using English units can be converted to metric units in terms of their mass (to kilograms) and their area (to hectares). Units of <strong>lbs/acre</strong> and <strong>kg/hectare</strong> would not be feasible to express with forest carbon–if a single tree can easily store over 1,000 pounds of carbon, then several hundred trees per acre can result in high value using this unit of measure. Hence, tons/acre is commonly used to report forest carbon on a per unit area basis.</p>
+<p>Forestry professionals that are concerned with small weights over large areas would be interested in using <strong>lbs/acre</strong> and <strong>kg/hectare</strong>. Think chemical applications of herbicides to control competing vegetation. These professionals know that English and metric numbers are similar:</p>
+<p><span class="math inline">\(1 \text{ lb/acre } = 1.120851 \text{ kg/hectare }\)</span></p>
+<p>In lieu of expressing forest carbon in kilograms, values are typically reported in megagrams (Mg):</p>
+<p><span class="math inline">\(1 \text{ kg/hectare } = 0.001 \text{ Mg/hectare }\)</span></p>
+<p>A megagram is also referred to as a <strong>metric tonne</strong> and is equivalent to 1.10 US tons. At the stand level, forest carbon is typically reported as <strong>tons/acre</strong> or <strong>Mg/hectare</strong>:</p>
+<p><span class="math inline">\(1 \text{ ton/acre } = 2.2417 \text{ Mg/hectare }\)</span></p>
+<p>Looking at the <a href="https://www.nrs.fs.fed.us/pubs/55063">FIA data in Wisconsin</a>, we can visualize mean aboveground forest carbon stocks across stand age in both tons/acre and Mg/hectare:</p>
+<p><img src="/post/2020-02-25-units-in-forest-carbon-numbers-a-primer_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="carbon-across-forest-landscapes" class="section level2">
+<h2>Carbon across forest landscapes</h2>
+<p>When it comes to reporting large forest carbon stocks across expansive areas, forest carbon is almost always reported in metric tonnes. The <a href="https://www.epa.gov/ghgemissions/draft-inventory-us-greenhouse-gas-emissions-and-sinks-1990-2018">US’ Greenhouse Gas Inventory</a> reports most of its values in million metric tonnes. This is because of the large values reported across the nation’s expansive forests.</p>
+<p>Across the US, <a href="https://www.fia.fs.fed.us/forestcarbon/index.php">FIA estimates indicate</a> that <strong>39,426 million metric tonnes of carbon</strong> are stored in above and belowground trees, deadwood, forest floor, and soil organic carbon. These values range from as low as 26 million metric tonnes in Rhode Island to as high as 2,555 million metric tonnes in Oregon:</p>
+<p><img src="/post/2020-02-25-units-in-forest-carbon-numbers-a-primer_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
-<p>There’s about 17.7 billion metric tons of carbon stored in the trees in US forests today. One trillion trees from a range of tree sizes would amount to 101 billion metric tons of carbon in the above and belowground portions of trees. If the Trillion Tree Campaign planted all of those trees in the US and we assumed they reached a size similar to trees found in the US today, US forests would store about 5.7 times more carbon than they do today.</p>
+<p>At the tree level, pounds are typically used in the US and kilograms internationally to convey the weight of carbon. At the stand level, pounds per acre or megagrams per hectare are often used to depict carbon on a per-unit basis. At the regional or landscape level, forest carbon stocks are typically always reported in metric units using million metric tonnes.</p>
+<p>Converting between all of the different units of measure for forest carbon can be confusing. Understanding these units can help you in interpreting the scale and magnitude of forest carbon stocks.</p>
 <p><em>By Matt Russell. Leave a comment below or <a href="mailto:matt@arbor-analytics.com">email Matt</a> with any questions or comments.</em></p>
 </div>
 </div>
@@ -338,18 +337,16 @@ One trillion trees (all sizes)
     
     
 
-    <h4><a href="/post/units-in-forest-carbon-numbers-a-primer/">Units in forest carbon numbers: a primer</a></h4>
-    <h5>February 27, 2020</h5>
-    
-    <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    <h4><a href="/post/how-much-carbon-is-stored-in-a-trillion-trees/">How much carbon is stored in one trillion trees?</a></h4>
+    <h5>February 10, 2020</h5>
     
     <a href="/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
     
-    <a href="/tags/communicating-data"><kbd class="item-tag">Communicating data</kbd></a>
-    
-    <a href="/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
     <a href="/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="/tags/trillion-trees"><kbd class="item-tag">trillion trees</kbd></a>
     
 
 </div>

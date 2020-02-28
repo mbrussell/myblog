@@ -1,0 +1,186 @@
+---
+title: 'Units in forest carbon numbers: a primer'
+author: Matt Russell
+date: '2020-02-27'
+slug: units-in-forest-carbon-numbers-a-primer
+categories:
+  - Carbon
+  - Forest measurements
+tags:
+  - analytics
+  - carbon
+  - Communicating data
+  - forest inventory
+  - forest measurements
+---
+
+Forest analysts are increasingly being asked about the amount of carbon that trees and forests store. However, most analysts are trained in summarizing forestry data sets to obtain measurements such as volume and basal area.  
+
+If a forest analyst knows how to "speak carbon", this can leave them feeling empowered when discussing the importance of forests and forest management in the context of carbon. This can leave a solid impression with landowners and decision makers.  
+
+This post discusses the common units of measure when discussing forest carbon, ranging from tree to stand and landscape scales.
+
+## Carbon in trees
+
+Approximately half of a tree's biomass is carbon. This is a useful approximate number, but the true proportion of carbon can vary depending on species, the amount of bark on a tree, and the tree's size. 
+
+The US Forest Inventory and Analysis program (FIA) reports the carbon stored in live trees using **pounds**. Values are reported separately for aboveground (bole, stump, and tops) and belowground (coarse roots greater than 0.1 inches in diameter) portions of the tree.
+
+In most of the world, carbon is expressed in terms of **kilograms**:
+
+$1 \text{ lb } = 0.4536 \text{ kg }$
+
+As an example, we can look at some FIA data to see some approximate values on carbon stored in live trees. Here is a distribution of total tree carbon stored above and belowground for all trees greater than 5.0 inches in diameter on [Wisconsin FIA plots](https://www.nrs.fs.fed.us/fia/data-tools/state-reports/WI/default.asp). Data are from 153,553 trees measured from 2012 through 2018: 
+
+
+```{r, echo = F, warning = F, message = F}
+library(tidyverse)
+library(gsheet)
+library(GGally)
+library(rgdal)
+library(usmap)
+library(ggrepel)
+library(knitr)
+library(kableExtra)
+library(patchwork)
+library(gsheet)
+library(GGally)
+library(rgdal)
+library(usmap)
+```
+
+```{r echo = F, message = F, warning = F}
+tree<-read_csv("C:\\Users\\russellm\\Documents\\Arbor\\Data\\wi_tree.csv")
+
+tree_sum <- tree %>% 
+  #group_by(SIZE) %>% 
+  summarize(Q05.dia = round(quantile(DIA, 0.05), 1),
+            Q25.dia = round(quantile(DIA, 0.25), 1),
+            Q50.dia = round(quantile(DIA, 0.5), 1),
+            Q75.dia = round(quantile(DIA, 0.75), 1),
+            Q95.dia = round(quantile(DIA, 0.95), 1),
+            Q05.carbon = round(quantile(CARBON, 0.05), 1),
+            Q25.carbon = round(quantile(CARBON, 0.25), 1),
+            Q50.carbon = round(quantile(CARBON, 0.5), 1),
+            Q75.carbon = round(quantile(CARBON, 0.75), 1),
+            Q95.carbon = round(quantile(CARBON, 0.95), 1)) 
+
+dia.C<-
+  tribble(
+~Quantile, ~`DBH (in)`, ~`DBH (cm)`, ~`Carbon (lbs)`,
+"5th", 5.2, 13.2, 42.8,
+"25th", 6.1, 15.5, 78.9,
+"Median", 7.7, 19.6, 147.3,
+"75th", 10.4, 26.4, 315.1,
+"95th", 16.1, 40.9, 929.5
+)
+
+dia.C <- dia.C %>% 
+  mutate(`Carbon (kg)` = round(`Carbon (lbs)` * 0.4536, 1))
+
+knitr::kable((dia.C[]), 
+             caption = 'Quantile distributions of tree diameter and carbon for 153,553 trees growing in Wisconsin, USA.') %>% 
+   kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+
+```
+
+In summary, the median diameter tree growing in Wisconsin (7.7 inches) contains 147 pounds (or 67 kg) of stored carbon.
+
+## Carbon in forest stands
+
+Carbon attributes at the individual tree level are scaled up and represented on a per unit area basis. In the US, forest carbon can be expressed in **pounds/acre**. It can be expressed in **tons per acre**:
+
+  $2,000 \text{ lbs }= 1 \text{ US ton }$
+	
+The US ton is also referred to as a short ton. This is not to be confused with the [long ton](https://en.wikipedia.org/wiki/Long_ton), or imperial ton (2,240 lbs), another measure of mass but not typically used in forest carbon inventories.
+
+Carbon stocks using English units can be converted to metric units in terms of their mass (to kilograms) and their area (to hectares). Units of **lbs/acre** and **kg/hectare** would not be feasible to express with forest carbon--if a single tree can easily store over 1,000 pounds of carbon, then several hundred trees per acre can result in high value using this unit of measure. Hence, tons/acre is commonly used to report forest carbon on a per unit area basis.
+
+Forestry professionals that are concerned with small weights over large areas would be interested in using **lbs/acre** and **kg/hectare**. Think chemical applications of herbicides to control competing vegetation. These professionals know that English and metric numbers are similar:
+	
+	$1 \text{ lb/acre } = 1.120851 \text{ kg/hectare }$
+	
+In lieu of expressing forest carbon in kilograms, values are typically reported in megagrams (Mg):
+	
+	$1 \text{ kg/hectare } = 0.001 \text{ Mg/hectare }$
+		
+A megagram is also referred to as a **metric tonne** and is equivalent to 1.10 US tons. At the stand level, forest carbon is typically reported as **tons/acre** or **Mg/hectare**: 
+
+	$1 \text{ ton/acre } = 2.2417 \text{ Mg/hectare }$
+	
+Looking at the [FIA data in Wisconsin](https://www.nrs.fs.fed.us/pubs/55063), we can visualize mean aboveground forest carbon stocks across stand age in both tons/acre and Mg/hectare: 
+
+```{r echo = F, message = F, warning = F}
+wi.C<-
+  tribble(
+~AgeClass, ~AGDL, ~Total, 
+"0-20", 5, 11,
+"21-40", 5.2, 19, 
+"41-60", 5.5, 26, 
+"61-80", 5.7, 32, 
+"81-100", 5.9, 35, 
+"100+", 6.1, 41 
+)
+
+wi.C <- wi.C %>% 
+  mutate(AGB = Total - AGDL,
+         AGB_Mgha = AGB*2.2417)
+
+wi.C$AgeClass <- factor(wi.C$AgeClass, 
+                        levels = c("0-20", "21-40", "41-60", "61-80", "81-100", "100+"))
+
+
+
+p.wi.lbs <- ggplot(wi.C, aes(AgeClass, AGB)) +
+         geom_bar(stat="identity") +
+  labs(y = "Tons/acre", x = "Stand age (years)")+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        legend.position = "none")
+
+p.wi.Mg <- ggplot(wi.C, aes(AgeClass, AGB_Mgha)) +
+         geom_bar(stat="identity") +
+  labs(y = "Megagrams/hectare", x = "Stand age (years)")+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        legend.position = "none")
+
+patchwork <- p.wi.lbs + p.wi.Mg
+patchwork + plot_annotation(
+  title = 'Average aboveground tree carbon in Wisconsin, USA, in English and metric units.'
+)
+
+```
+
+## Carbon across forest landscapes
+
+When it comes to reporting large forest carbon stocks across expansive areas, forest carbon is almost always reported in metric tonnes. The [US' Greenhouse Gas Inventory](https://www.epa.gov/ghgemissions/draft-inventory-us-greenhouse-gas-emissions-and-sinks-1990-2018) reports most of its values in million metric tonnes. This is because of the large values reported across the nation's expansive forests.
+
+Across the US, [FIA estimates indicate](https://www.fia.fs.fed.us/forestcarbon/index.php) that **39,426 million metric tonnes of carbon** are stored in above and belowground trees, deadwood, forest floor, and soil organic carbon. These values range from as low as 26 million metric tonnes in Rhode Island to as high as 2,555 million metric tonnes in Oregon:
+
+```{r echo = F, message = F, warning = F}
+stateC<-read_csv("C:\\Users\\russellm\\Documents\\Arbor\\Data\\statecarbon.csv")
+```
+
+```{r,echo=F,warning=F,message=F}
+plot_usmap(data = stateC, values = "Total", lines = "black",
+                      include = c("AL","AZ","AR","CA","CO","CT","DE","FL","GA","ID","IL",
+                       "IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS",
+                       "MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH",
+                       "OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA",
+                       "WA","WV","WI","WY"))+
+  scale_fill_continuous(low = "white", high = "red", name = "Million\nmetric\ntonnes", label = scales::comma) + 
+  labs(title = "Carbon storage in US forests (million metric tonnes)", 
+       subtitle = "Above and belowground carbon, deadwood, forest floor, and soil organic carbon") +
+  theme(legend.position = "right")
+
+```
+
+## Conclusion
+
+At the tree level, pounds are typically used in the US and kilograms internationally to convey the weight of carbon. At the stand level, pounds per acre or megagrams per hectare are often used to depict carbon on a per-unit basis. At the regional or landscape level, forest carbon stocks are typically always reported in metric units using million metric tonnes.
+
+Converting between all of the different units of measure for forest carbon can be confusing. Understanding these units can help you in interpreting the scale and magnitude of forest carbon stocks.
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

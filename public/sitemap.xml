@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/units-in-forest-carbon-numbers-a-primer/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/how-much-carbon-is-stored-in-a-trillion-trees/</loc>
     <lastmod>2020-02-10T00:00:00+00:00</lastmod>
   </url>
@@ -124,7 +129,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -134,7 +139,7 @@
   
   <url>
     <loc>/tags/analytics/</loc>
-    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -158,13 +163,13 @@
   
   <url>
     <loc>/tags/carbon/</loc>
-    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/carbon/</loc>
-    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -176,7 +181,7 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -200,7 +205,7 @@
   
   <url>
     <loc>/tags/communicating-data/</loc>
-    <lastmod>2020-02-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -260,19 +265,19 @@
   
   <url>
     <loc>/tags/forest-inventory/</loc>
-    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/forest-measurements/</loc>
-    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/forest-measurements/</loc>
-    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -416,7 +421,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -523,7 +528,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
