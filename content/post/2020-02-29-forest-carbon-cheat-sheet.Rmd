@@ -1,0 +1,31 @@
+---
+title: Forest carbon cheat sheet
+author: Matt Russell
+date: '2020-03-01'
+slug: forest-carbon-cheat-sheet
+categories:
+  - Carbon
+tags:
+  - analytics
+  - carbon
+  - forest measurements
+  - forest products
+  - climate
+---
+
+The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels. 
+
+[**DOWNLOAD (PDF)**](https://drive.google.com/file/d/1qO4qZtzoC4iGBjc0TzprQg2dBwB62oZm/view?usp=sharing)
+
+[**DOWNLOAD (JPEG)**](https://drive.google.com/file/d/1CIBzoQjitTMA_GmzmVoyXGDMredlvryd/view?usp=sharing)
+
+
+![The Forest Carbon Cheat Sheet.](/post/forest-carbon-cheat-sheet/Forest Carbon Cheat Sheet.jpg)
+
+
+
+*If you have questions or comments on the Cheat Sheet, leave a comment below or [email Matt](mailto:matt@arbor-analytics.com).*
+
+
+
+
