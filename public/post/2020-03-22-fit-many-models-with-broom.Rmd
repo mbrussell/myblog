@@ -1,0 +1,248 @@
+---
+title: Modeling in the tidyverse, an example predicting tree biomass 
+author: Matt Russell
+date: '2020-03-24'
+slug: fit-many-models-with-broom
+categories:
+  - Statistics
+  - Prediction
+tags:
+  - statistics
+  - Regression
+  - tidyverse
+  - broom
+  - modelr
+---
+
+One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham's [talk on the tidyverse](https://resources.rstudio.com/rstudio-conf-2020/state-of-the-tidyverse-hadley-wickham) from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages. 
+
+The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the `dplyr` package has reached over 10 million. Incredible!
+
+The tidyverse offers a suite of packages and functions to import, tidy, transform, visualize, and model data. I've known well how to use the data wrangling functions from packages like `dplyr` and data visualization from `ggplot2`. It's been that last core function of the tidyverse, modeling data, that I've never really realized. 
+
+The `modelr` and `broom` packages handle modeling in the tidyverse. In this post, I'll also use the `knitr` and `kableExtra` to design some of the tables: 
+
+```{r, warning=F, message=F}
+library(tidyverse)
+library(modelr)
+library(knitr)
+library(kableExtra)
+```
+
+```{r, echo=F, warning=F, message=F}
+tree_in <- read_csv("C:\\Users\\russellm\\Documents\\Arbor\\Data\\ga_tree.csv")
+
+spp <- tibble (
+  SPCD = c(131, 110, 111, 121, 132, 611, 129),
+  Species = c("Loblolly pine", "Shortleaf pine", "Slash pine", 
+              "Longleaf pine", "Virginia pine", "Sweetgum", "Eastern white pine")
+)
+
+tree2 <- inner_join(tree_in, spp)
+
+tree <- tree2 %>% 
+  filter(!is.na(ST_OB_D_BH),
+         !is.na(AG_DW))
+
+tree3<-tree %>% 
+  group_by(Species) %>% 
+  summarize(`Num trees` = n(),
+            `Mean DBH` = round(mean(ST_OB_D_BH, na.rm=T), 1),
+            `Max DBH` = max(ST_OB_D_BH, na.rm=T),
+            `Min DBH` = min(ST_OB_D_BH, na.rm=T),
+            `Mean weight`= round(mean(AG_DW, na.rm=T), 1),
+            `Max weight` = max(AG_DW, na.rm=T),
+            `Min weight` = min(AG_DW, na.rm=T))%>% 
+  arrange(desc(`Num trees`))
+```
+
+## Tree biomass data
+My goal in this post is to fit a series of models that determine the aboveground biomass of trees using tree diameter as a predictor variable. I've gathered data from [LegacyTreeData](http://www.legacytreedata.org/), an online repository of individual tree measurements such as volume, weight, and wood density. I queried the database to provide all tree measurements from the US State of Georgia. 
+
+After the query, there are 608 observations from seven species that contain a value for the tree's diameter at breast height, measured in inches (`ST_OB_D_BH`) and its aboveground dry weight in pounds (`AG_DW`).  
+
+Here's a ["hexagonal heat map"](https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/) produced in `ggplot` that divides the x- and y-axes into 20 hexagons. The color of each hexagon reflects the number of observations in each area of the figure. In this data set, most trees are small in diameter and do not weigh a lot:
+
+```{r}
+ggplot(tree, aes(ST_OB_D_BH, AG_DW)) +
+  geom_hex(bins = 20) +
+  labs(x = "Diameter at breast height (inches)", 
+       y = "Aboveground dry weight (pounds)") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+```
+
+The data contain relatively small trees, with DBH ranging values from 0.7 to 8.5 inches. There are at least 40 observations for seven primary species common to Georgia. These are mostly different kinds of pine trees in addition to one hardwood tree (sweetgum):
+
+```{r, echo = F}
+knitr::kable((tree3[,]), 
+             caption = 'Summary statistics for diameter at breast height (DBH) 
+             and aboveground dry weight (weight; pounds) for seven tree species.') %>% 
+   kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+
+```
+
+## Models of aboveground tree biomass
+To start our modeling analysis, we can fit a model predicting aboveground dry weight using tree diameter. From above, we can see a clear nonlinear trend in the data, indicating that we may want to log-transform the variables. We can do that with the `mutate` function.
+
+Then, we can start by fitting a linear model using `lm()` to all observations in the data set. Printing the summary of `tree_mod` indicates that the model fits the data well, with small standard errors of the coefficients and an R-squared value of 0.9251:
+
+```{r}
+tree <- tree %>% 
+  mutate(l_ST_OB_D_BH = log2(ST_OB_D_BH),
+         l_AG_DW = log2(AG_DW))
+
+tree_mod <- lm(l_AG_DW ~ l_ST_OB_D_BH, data = tree)
+
+summary(tree_mod)
+```
+
+Chapter 24 in the popular book [R for Data Science](https://r4ds.had.co.nz/model-building.html) discusses making a grid of data to investigate model predictions. In this step, I'll use the `data_grid()` function to generate a grid of data points. Then, I'll use the `add_predictions()` function to add the model predictions from `tree_mod` to complete our data grid. Finally, I'll back-transform the model predictions to get them into units we understand well. 
+
+The model appears to perform well, albeit underpredicting the biomass of a few larger-diameter loblolly pine trees:
+
+```{r}
+grid <- tree %>% 
+  data_grid(ST_OB_D_BH = seq_range(ST_OB_D_BH, 20)) %>% 
+  mutate(l_ST_OB_D_BH = log2(ST_OB_D_BH)) %>% 
+  add_predictions(tree_mod, "l_AG_DW") %>% 
+  mutate(AG_DW = 2 ^ l_AG_DW)
+
+ggplot(tree, aes(ST_OB_D_BH, AG_DW)) +
+  geom_hex(bins = 20) +
+  geom_line(data = grid, color = "red", size = 1) +
+    labs(x = "Diameter at breast height (inches)", 
+       y = "Aboveground dry weight (pounds)")
+```
+
+A data analyst's best friend in the tidyverse is the `group_by` statement. We can fit the same model as we did earlier, but this time I'll specify it for each of the seven species using `group_by`. The `tidy()` function available in the  [broom package](https://cran.r-project.org/web/packages/broom/vignettes/broom.html) provides a set of functions that put model output into data frames.
+
+Here, we can see that the species have a different set of coefficients and other attributes like p-values: 
+
+```{r}
+tree_coef<- tree %>% 
+  group_by(Species) %>% 
+  do(broom::tidy(lm(l_AG_DW ~ l_ST_OB_D_BH, .)))
+
+tree_coef
+```
+
+A way to visualize the species differences is to plot the intercept and slope coefficients with standard errors. Here we can see that all errors bars do not overlap with zero, indicating they're good models: 
+
+```{r}
+ggplot(tree_coef, aes(estimate, 1)) +
+    geom_point() +
+    geom_errorbarh(aes(xmin = estimate - (2*std.error), 
+                       xmax = estimate + (2*std.error),
+                       height = 0.5)) +
+  scale_y_continuous(limits = c(0,2))+
+  facet_grid(term~Species)+
+  labs(x = "Coefficient", y = " ")+
+  ggtitle("Coefficients for determining aboveground dry weight \n(+/- two standard errors) for seven tree species")+
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank())
+```
+
+
+## Analysis of model predictions
+
+Aside from coefficients, we might be interested in species-specific predictions from a model. The `nest()` function creates a list of data frames containing all the nested variables in an object. I think of a nested data frame as a "data frame containing many data frames". 
+
+The `by_spp` object will store this list of data frames for each species so that we can work with them:
+
+```{r}
+by_spp <- tree %>% 
+  group_by(Species) %>% 
+  nest()
+
+species_model <- function(df){
+  lm(l_AG_DW ~ l_ST_OB_D_BH, data = df)
+}
+
+models <- map(by_spp$data, species_model)
+
+by_spp <- by_spp %>% 
+  mutate(model = map(data, species_model))
+
+by_spp
+```
+
+Similar to what we did above to the all-species equation, we can map the model predictions to the nested object, adding another variable called `preds`:
+
+```{r}
+by_spp <- by_spp %>% 
+  mutate(preds = map2(data, model, add_predictions))
+
+by_spp
+```
+
+Then, we can unnest the model predictions. Unnesting is the opposite of what we've done in the previous step. This time we're taking the nested data frame and turning it into a "regular" data frame.
+
+The model predictions can now be visualized by species to better understand differences in aboveground biomass:
+
+```{r}
+preds <- unnest(by_spp, preds)
+
+preds %>% 
+  mutate(tpred = 2 ^ pred) %>% 
+  ggplot(aes(ST_OB_D_BH, tpred)) +
+  geom_line(aes(group = Species), size = 1) +
+  labs(x = "Diameter at breast height (inches)", 
+       y = "Predicted aboveground\ndry weight (pounds)")+
+  facet_wrap(~ Species)
+
+```
+
+## Analysis of model residuals
+Any good data analysis involving modeling will also analyze the residuals. Just like we added model predictions with the `add_predictions` function and nesting/unnesting, we can add residuals with the `add_residuals` statement.
+
+We see that the model residuals are generally centered around zero, with those four bigger loblolly pine trees still giving us some issues:
+
+```{r, warning = F, message=F}
+by_spp <- by_spp %>% 
+  mutate(resids = map2(data, model, add_residuals))
+
+by_spp
+
+resids <- unnest(by_spp, resids)
+  
+resids %>% 
+  ggplot(aes(ST_OB_D_BH, resid)) +
+  geom_point(aes(group = Species), alpha = 1/3) +
+  geom_smooth(se = F) +
+      labs(x = "Diameter at breast height (inches)", 
+       y = "Residual")+
+  geom_abline(intercept = 0, slope = 0, color = "pink")+
+  facet_wrap(~Species)
+```
+
+## Assessing model quality
+We also might be interested in other model attributes such as the R-squared, log-likelihood, AIC, and BIC values. These indicators of model fit can be useful to compare with different model forms. The `glance()` function from the `broom` package allows you to obtain a data frame with a single row. 
+
+```{r, warning = F, message=F}
+glance <- by_spp %>% 
+  mutate(glance = map(model, broom::glance)) %>% 
+  unnest(glance, .drop = T)
+
+glance %>% 
+  arrange(desc(r.squared))
+```
+
+We can visualize the R-squared values from the seven species and see that Virginia pine and shortleaf pine show the highest R-squared, and loblolly pine the lowest:
+
+```{r, warning = F, message = F}
+glance %>% 
+  ggplot(aes(reorder(Species, r.squared), r.squared)) +
+  geom_bar(stat = "identity")+
+  coord_flip()+
+  geom_smooth(se = F) +
+      labs(x = " ",
+           y = "R-squared")+
+  theme(legend.position = "none")
+```
+
+## Conclusion
+Like other data analysts, I've spent a lot of time with the tidyverse doing data wrangling and data visualization. But don't underestimate the power of the modeling functions available in the tidyverse. The suite of functions available in the `modelr` and `broom` packages make modeling easier, particularly if the same model forms need to be fit iteratively to different levels (in our case, tree species).
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

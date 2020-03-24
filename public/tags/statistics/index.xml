@@ -6,10 +6,20 @@
     <description>Recent content in Statistics on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Modeling in the tidyverse, an example predicting tree biomass</title>
+      <link>/post/fit-many-models-with-broom/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/fit-many-models-with-broom/</guid>
+      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.
+The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
+    </item>
     
     <item>
       <title>How to determine accuracy of classification models (with forestry data)</title>
