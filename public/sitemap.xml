@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/about/</loc>
+    <lastmod>2020-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/newsletter/</loc>
+    <lastmod>2020-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/fit-many-models-with-broom/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url>
@@ -65,11 +75,6 @@
   <url>
     <loc>/post/how-to-created-paged-html-documents-with-pagedown/</loc>
     <lastmod>2019-10-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2019-10-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -144,7 +149,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -183,13 +188,13 @@
   </url>
   
   <url>
-    <loc>/tags/carbon/</loc>
+    <loc>/categories/carbon/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/carbon/</loc>
+    <loc>/tags/carbon/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -303,14 +308,14 @@
   </url>
   
   <url>
-    <loc>/tags/forest-measurements/</loc>
-    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+    <loc>/categories/forest-measurements/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/forest-measurements/</loc>
-    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+    <loc>/tags/forest-measurements/</loc>
+    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -321,13 +326,13 @@
   </url>
   
   <url>
-    <loc>/tags/forestry/</loc>
+    <loc>/categories/forestry/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/forestry/</loc>
+    <loc>/tags/forestry/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -429,14 +434,14 @@
   </url>
   
   <url>
-    <loc>/tags/machine-learning/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+    <loc>/categories/machine-learning/</loc>
+    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/machine-learning/</loc>
-    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+    <loc>/tags/machine-learning/</loc>
+    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -542,13 +547,13 @@
   </url>
   
   <url>
-    <loc>/tags/sampling/</loc>
+    <loc>/categories/sampling/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/sampling/</loc>
+    <loc>/tags/sampling/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -572,13 +577,13 @@
   </url>
   
   <url>
-    <loc>/tags/statistics/</loc>
+    <loc>/categories/statistics/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/statistics/</loc>
+    <loc>/tags/statistics/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
