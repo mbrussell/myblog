@@ -1,0 +1,85 @@
+---
+title: The decline of researchers in forest science
+author: Matt Russell
+date: '2020-04-20'
+slug: the-decline-of-researchers-in-forest-science
+categories:
+  - Forestry
+tags:
+  - research
+  - science
+  - careers
+  - faculty
+  - forestry
+  - hiring
+---
+
+A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that "does research".  
+
+I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.
+
+I stumbled in coming up with names for my colleague. And then I realized: Not a single person comes to my mind that works solely as a researcher for a forest products company in Minnesota.
+
+There were plenty of people that came to mind in forest products companies that help to facilitate research. And by research, I mean the kind of researchers that are into the "bread and butter" of forestry: forest management, silviculture, growth and yield. I realized that what I've been observing in Minnesota may not be unusual in other states, too.  
+
+## "Erosion" of forestry research
+The capacity for forestry research across the US "continues to erode". So says McGinley, Guldin, and Cubbage in [a recent *Journal of Forestry* article](https://academic.oup.com/jof/article/117/5/443/5492322). Their study quantified recent trends in research and development in the forestry sector.
+
+Their research finds that the number of forest research scientists has declined 12% from 2002 to 2016. This decline is seen in forest industry researchers, University faculty, and US Forest Service scientists: 
+
+```{r, echo=F, warning=F, message=F}
+library(tidyverse)
+```
+
+```{r, echo=F, warning=F, message=F}
+res <-
+  tribble(
+~Type, ~Year, ~Num, 
+"Forest industry", 2002, 124,
+"Forest industry", 2016, 62,
+"Universities",	2002, 1361,
+"Universities",	2016, 1224,
+"US Forest Service",	2002, 618,
+"US Forest Service",	2016, 500
+)
+```
+
+```{r, echo=F, warning=F, message=F}
+# p.res <- ggplot(res, aes(Year, Num, col=Type, shape = Type)) +
+#          geom_line() +
+#          geom_point() +
+#   labs(x = "Year", y = "Forest scientists", 
+#        title = "The number of forestry resesearchers has declined by 12% since 2002.")+
+#     theme(panel.background = element_rect(fill = "NA"),
+#         axis.line = element_line(color="black"),
+#         legend.position = "bottom")
+# p.res
+
+p.res2 <- ggplot(res, aes(Type, Num, fill = factor(Year))) +
+         geom_bar(stat = "identity", position = "dodge2")+
+  labs(x = " ", y = "Forest scientists", 
+       title = "The number of forestry researchers has declined by 12% since 2002.",
+       caption = "Source: McGinley et al. 2019, Journal of Forestry",
+       fill = " ")+
+  scale_fill_brewer(palette="Dark2")+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        legend.position = "right",
+        legend.text = element_text(size=13, color = "black"),
+        axis.text = element_text(size=12, color = "black"),
+        axis.title.y = element_text(size = 13))
+p.res2
+```
+
+The traditional role of the role of the forest scientist working for a forestry or forest products company has largely been removed. This is particularly alarming, since data is increasingly being used to drive decision-making on key issues to solve forest and natural resource problems. 
+
+Even prior to the decline, the number of researchers in forestry is surprisingly low. This is alarming given there are **250 companies** that comprise the pulp, paper, and paperboard mill industry in the US. The US forest products industry generates **5% of the manufacturing GDP** to the country, or $169 billion annually.
+
+Within forestry and forest products companies, current investments into dedicated R&D staff are minimal compared to other sectors. The paper's research highlights that the wood products industry invested 0.6 percent of total sales in R&D. For a comparison, the automobile industry spends 3.4–3.5 percent of its sales on R&D. Software development? Sixteen percent.
+
+The paper by McGinley and others is a great read that uncovers many of these trends. Much of it is tied to funding at the federal level and trends toward more fundamental or basic science. The comparisons to other industrial sectors provide a lot of insights into the forest products industry.    
+
+## Conclusion
+The number of forestry researchers has declined by 15% since 2002. Compared to other sectors, investment in R&D staff in the forest products industry is low. Despite a large forest products industry that contributes to a significant portion of our country's economy, forestry invests a small amount in research and development.
+
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.

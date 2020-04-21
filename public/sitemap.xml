@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/the-decline-of-researchers-in-forest-science/</loc>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
     <lastmod>2020-04-13T00:00:00+00:00</lastmod>
   </url>
@@ -149,7 +154,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-04-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -201,7 +206,7 @@
   
   <url>
     <loc>/tags/careers/</loc>
-    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -291,7 +296,7 @@
   
   <url>
     <loc>/tags/faculty/</loc>
-    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -327,13 +332,13 @@
   
   <url>
     <loc>/tags/forestry/</loc>
-    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/forestry/</loc>
-    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -393,7 +398,7 @@
   
   <url>
     <loc>/tags/hiring/</loc>
-    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -489,7 +494,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -541,6 +546,12 @@
   </url>
   
   <url>
+    <loc>/tags/research/</loc>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/ruffed-grouse/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -561,6 +572,12 @@
   <url>
     <loc>/tags/scatterplots/</loc>
     <lastmod>2020-02-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/science/</loc>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
