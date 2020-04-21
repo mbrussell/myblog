@@ -82,4 +82,4 @@ The paper by McGinley and others is a great read that uncovers many of these tre
 ## Conclusion
 The number of forestry researchers has declined by 15% since 2002. Compared to other sectors, investment in R&D staff in the forest products industry is low. Despite a large forest products industry that contributes to a significant portion of our country's economy, forestry invests a small amount in research and development.
 
-*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.
+*By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
