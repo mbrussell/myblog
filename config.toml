@@ -2,7 +2,7 @@ baseURL = "https://arbor-analytics.com/"
 languageCode = "en-us"
 #title = "Arbor Custom Analytics LLC"
 theme = "minimal"
-disqusShortname = "mbrussell" # delete this to disable disqus comments 
+#disqusShortname = "mbrussell" # delete this to disable disqus comments 
 googleAnalytics = "UA-136790074-1"
 
 [params]
