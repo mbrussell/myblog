@@ -1,7 +1,7 @@
 ---
 title: Forest carbon cheat sheet
 author: Matt Russell
-date: '2020-03-01'
+date: '2020-04-28'
 slug: forest-carbon-cheat-sheet
 categories:
   - Carbon
@@ -15,16 +15,19 @@ tags:
 
 The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels. 
 
-[**DOWNLOAD (PDF)**](https://drive.google.com/file/d/1qO4qZtzoC4iGBjc0TzprQg2dBwB62oZm/view?usp=sharing)
-
-[**DOWNLOAD (JPEG)**](https://drive.google.com/file/d/1CIBzoQjitTMA_GmzmVoyXGDMredlvryd/view?usp=sharing)
+The Cheast Sheet is updated with the most recent values published in the US Environmental Protection Agency [Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2018](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks-1990-2018).  
 
 
-![The Forest Carbon Cheat Sheet.](/post/forest-carbon-cheat-sheet/Forest Carbon Cheat Sheet.jpg)
+[**DOWNLOAD (PDF)**](https://drive.google.com/file/d/1pq-J-oj4kgdCopx_QMuY5QRAX0udkpQn/view?usp=sharing)
+
+[**DOWNLOAD (JPEG)**](https://drive.google.com/file/d/1dAycY_6QgQepLeFf0KYawdLaXTMYA8P2/view?usp=sharing)
+
+
+![The Forest Carbon Cheat Sheet.](/post/forest-carbon-cheat-sheet/cheat sheet.jpg)
 
 
 
-*If you have questions or comments on the Cheat Sheet, leave a comment below or [email Matt](mailto:matt@arbor-analytics.com).*
+*If you have questions or comments on the Cheat Sheet, [email Matt](mailto:matt@arbor-analytics.com).*
 
 
 

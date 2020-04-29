@@ -6,10 +6,34 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Forest carbon cheat sheet</title>
+      <link>/post/forest-carbon-cheat-sheet/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/forest-carbon-cheat-sheet/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
+The Cheast Sheet is updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2018.
+DOWNLOAD (PDF)
+DOWNLOAD (JPEG)
+The Forest Carbon Cheat Sheet.
+If you have questions or comments on the Cheat Sheet, email Matt.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>ConsultingArbor Custom Analytics LLC offers data and analytics consulting services to all sized organizations in the forest products industry.
+Specializations includeForest analyticsTimberland resource assessmentData managementForest growth and yield modelingStatistical modelingMachine learningTeaching data concepts to forest and natural resource professionalsLeveraging existing data to solve new problemsIndependent researchMatt RussellPresident and CEOLinkedIn, Google Scholar, GitHubBackgroundExperience in forestry and analytics research, teaching, and outreachAuthor/co-author of over 50 peer-reviewed articles focusing on applied forestry researchOfficer and representative of Society of American ForestersA1-Inventory and Biometrics Working GroupForest Science and Technology BoardMember of Forest Products Society and American Statistical AssociationEducationUniversity of Maine.</description>
+    </item>
     
     <item>
       <title>The decline of researchers in forest science</title>
@@ -19,16 +43,6 @@
       <guid>/post/the-decline-of-researchers-in-forest-science/</guid>
       <description>A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that “does research”.
 I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>ConsultingArbor Custom Analytics LLC offers data and analytics consulting services to all sized organizations in the forest products industry.
-Specializations includeForest analyticsTimberland resource assessmentData managementForest growth and yield modelingStatistical modelingMachine learningTeaching data concepts to forest and natural resource professionalsLeveraging existing data to solve new problemsIndependent researchMatt RussellPresident and CEOLinkedIn, Google Scholar, GitHubBackgroundExperience in forestry and analytics research, teaching, and outreachAuthor/co-author of over 50 peer-reviewed articles focusing on applied forestry researchOfficer and representative of Society of American ForestersA1-Inventory and Biometrics Working GroupForest Science and Technology BoardMember of Forest Products Society and American Statistical AssociationEducationUniversity of Maine.</description>
     </item>
     
     <item>
@@ -62,19 +76,6 @@ The growth of the tidyverse packages is astounding. As an example, the cumulativ
 Guest workers hired through the H-2B visa program get jobs done. This is especially true across many forestry companies. Guest workers plant trees, conduct silvicultural treatments, and assist in tree nursery production.
 A strong guest worker program can lead to a future forest products industry that is healthy and sustainable in the long term.
 Last week, the Trump administration announced 35,000 additional seasonal H-2B guest worker visas available in 2020.</description>
-    </item>
-    
-    <item>
-      <title>Forest carbon cheat sheet</title>
-      <link>/post/forest-carbon-cheat-sheet/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/forest-carbon-cheat-sheet/</guid>
-      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
-DOWNLOAD (PDF)
-DOWNLOAD (JPEG)
-The Forest Carbon Cheat Sheet.
-If you have questions or comments on the Cheat Sheet, leave a comment below or email Matt.</description>
     </item>
     
     <item>

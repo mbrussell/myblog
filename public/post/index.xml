@@ -6,10 +6,24 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Forest carbon cheat sheet</title>
+      <link>/post/forest-carbon-cheat-sheet/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/forest-carbon-cheat-sheet/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
+The Cheast Sheet is updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2018.
+DOWNLOAD (PDF)
+DOWNLOAD (JPEG)
+The Forest Carbon Cheat Sheet.
+If you have questions or comments on the Cheat Sheet, email Matt.</description>
+    </item>
     
     <item>
       <title>The decline of researchers in forest science</title>
@@ -41,19 +55,6 @@ The growth of the tidyverse packages is astounding. As an example, the cumulativ
 Guest workers hired through the H-2B visa program get jobs done. This is especially true across many forestry companies. Guest workers plant trees, conduct silvicultural treatments, and assist in tree nursery production.
 A strong guest worker program can lead to a future forest products industry that is healthy and sustainable in the long term.
 Last week, the Trump administration announced 35,000 additional seasonal H-2B guest worker visas available in 2020.</description>
-    </item>
-    
-    <item>
-      <title>Forest carbon cheat sheet</title>
-      <link>/post/forest-carbon-cheat-sheet/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/forest-carbon-cheat-sheet/</guid>
-      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
-DOWNLOAD (PDF)
-DOWNLOAD (JPEG)
-The Forest Carbon Cheat Sheet.
-If you have questions or comments on the Cheat Sheet, leave a comment below or email Matt.</description>
     </item>
     
     <item>
