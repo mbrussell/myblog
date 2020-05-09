@@ -1,0 +1,83 @@
+---
+title: Disentagling the interactions between site index and disturbance
+author: Matt Russell
+date: '2020-05-09'
+slug: disentagling-the-interactions-between-site-index-and-disturbance
+categories:
+  - Data visualization
+  - Forestry
+tags:
+  - analytics
+  - forest inventory
+  - disturbance
+  - site index
+  - productivity
+---
+
+
+
+<p>The Black Hills National Forest has been in the news recently after completing a <a href="https://www.fs.usda.gov/detail/blackhills/landmanagement/resourcemanagement/?cid=fseprd731012">timber sustainability report</a>. In recent years, the Black Hills was one of the US Forest Service’s greatest timber-producing National Forests in the country.</p>
+<p>Much of the increase in timber harvest in recent years at the Black Hills National Forest was in response to a deadly mountain pine beetle epidemic. As a result, the new report suggests that current timber harvests are not sustainable into the future.</p>
+<p>Not all sites are created equally. One of the key drivers of any forest growth and yield system is how it quantifies site productivity. Forest analysts use a variety of techniques to quantify a forest’s capacity to produce wood.</p>
+<p>The following describes four site productivity measurements used in forestry, along with the corresponding variables used in the US Forest Service’s <a href="https://www.fia.fs.fed.us/">Forest Inventory and Analysis (FIA) database</a>:</p>
+<div id="site-productivity-measurements-in-forestry" class="section level2">
+<h2>Site productivity measurements in forestry</h2>
+<div id="site-index" class="section level3">
+<h3>Site index</h3>
+<p>Site index is the most common measure of productivity used by foresters. Defined as the height of trees in a stand at a given index age, site index can be easily interpreted across a range of forest conditions.</p>
+<p>The index age or “base age” is typically 25 years for fast-growing plantations in the US. It is typically 50 years for natural stands and eastern US species. The age at breast height is typically used as opposed to total age to better relate site index to other forest measurements.</p>
+<p>Site index is typically determined from a series of curves or an existing equation that is specific to a species. In the eastern US, the <a href="https://www.fs.usda.gov/treesearch/pubs/10192">Carmean site index curves</a> are widely adapted and used in many growth and yield systems.</p>
+<p><em>FIA variable:</em> <strong>SICOND</strong> (Site index for the forest condition.)</p>
+</div>
+<div id="site-productivity" class="section level3">
+<h3>Site productivity</h3>
+<p>If you want to know how productive a site is, measure how much wood the site can produce. This is the concept of a direct volume-based measure of site productivity.</p>
+<p>Wood volume measurements are typically used to determine the inherent capacity to grow wood. For example, how much cubic feet per acre can a forest grow in a typical year? This is the motivation for one way in which productivity is determined in the FIA database. A site is categorized based on its culmination of mean annual increment, considering a fully stocked, natural stand.</p>
+<p><em>FIA variable:</em> <strong>SITECLCD</strong> (Site productivity class code.)</p>
+</div>
+<div id="soils" class="section level3">
+<h3>Soils</h3>
+<p>The characteristics of soils are another metric of forest site productivity. While difficult to obtain for large forest inventories, soil measurements could include soil texture, moisture, and depth to water table. Surrogates of this measurement include soil drainage and physiographic class.</p>
+<p>The FIA program measures physiographic class that can reflect soil characteristics. This variable measures land form, topographical position, and soil on moisture available to trees. Sites can range from dry to wet conditions, i.e., from xeric to mesic and hydric sites.</p>
+<p><em>FIA variable:</em> <strong>PHYSCLCD</strong> (Physiographic class code.)</p>
+</div>
+<div id="climate" class="section level3">
+<h3>Climate</h3>
+<p>Climate drives photosynthesis, so it makes sense that understanding climate can help in determining the productivity of forests. As our forests are changing, a climate-based estimate of site productivity can provide insights into future wood productivity trends.</p>
+<p>Analysts may turn to using climate instead of other measures because traditional site index is difficult to quantify in mixed-species, multi-aged stands. Many studies have observed a strong relationship between climate variables and site index. Often, a handful of climate variables can explain over 80% of the variation in site index.</p>
+<p>While climate variables are not directly measured in the FIA program, many geographic and topographic variables are available that an analyst can link to climate databases.</p>
+<p><em>FIA variables:</em> <strong>LAT, LON, ASPECT, ELEV</strong></p>
+</div>
+</div>
+<div id="disturbances" class="section level2">
+<h2>Disturbances</h2>
+<p>Disturbances are on the mind of everyone in forestry. Whether short-term and immediate like a windstorm that damages trees or long-term and slow like climate change, analysts need to consider how disturbances are used in long-term forest planning.</p>
+<p>Unfortunately most growth and yield projections do not explicitly consider forest disturbances. By doing so, forest managers can prescribe the appropriate silvicultural decisions and provide more trust and confidence in their results.</p>
+<p>In the FIA database, a code indicates a disturbance has occurred in the forest since the last measurement (or within the last 5 years for new plots). Areas affected must be at least one acre in size and lead to mortality or damage to at least 25 percent of the trees in the condition. As many as three different disturbances per condition can be recorded.</p>
+<p><em>FIA variables:</em> <strong>DSTRBCD1, DSTRBCD2, DSTRBCD3</strong> (Codes of disturbance for each forest condition, ranked from most important to least important.)</p>
+<p>While it’s important to understand the impact of disturbances, less is known on the role of site index to withstand forest disturbances. What role does site productivity play in forests that are changing? In other words, is there a relationship between site productivity and disturbance?</p>
+</div>
+<div id="linking-site-index-and-disturbance" class="section level2">
+<h2>Linking site index and disturbance</h2>
+<p>The figure below shows the relationship between site index and forest disturbance. Data are from 133,646 forest conditions using the most recent FIA data compiled across the US.</p>
+<center>
+<div class="figure">
+<img src="/post/disentagling-the-interactions-between-site-index-and-disturbance/si-dist.png" alt="Site productivity and disturbances across the US." />
+<p class="caption">Site productivity and disturbances across the US.</p>
+</div>
+</center>
+<p>In short, <strong>22% of forest conditions were disturbed</strong> from 1997 to 2017. The western US has seen the greatest proportion of disturbances, likely a reflection of recent wildfires and insect outbreaks in the region. The far northern and southern US have also seen a large proportion of disturbances relative to other regions.</p>
+<p>Disturbed forests in Pacific Northwest were generally of poorer quality compared to non-disturbed forests. The median site index for disturbed forests in this region was about 8 meters less than non-disturbed forests. There was not a clear trend when investigating the distribution of site index and disturbance in other regions.</p>
+<center>
+<div class="figure">
+<img src="/post/disentagling-the-interactions-between-site-index-and-disturbance/si-dist-dist.png" alt="Distribution of site index in disturbed (1) and non-disturbed (0) forests of the US." />
+<p class="caption">Distribution of site index in disturbed (1) and non-disturbed (0) forests of the US.</p>
+</div>
+</center>
+</div>
+<div id="conclusions" class="section level2">
+<h2>Conclusions</h2>
+<p>Forest analysts use a number of metrics to quantify forest site productivity. These include site index, volume-based measures of productivity, soils, and climate. Analysts should incorporate disturbances into growth and yield systems to better account for long-term projections of wood volume.</p>
+<p>In the recent example of timber harvest sustainability from the Black Hills National Forest, a thorough understanding of how forest disturbances and wood productivity are integrated can add value and confidence to long-term projections of timber supply.</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
