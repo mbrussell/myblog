@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/how-to-calculate-carbon-from-board-feet-and-cords/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/disentagling-the-interactions-between-site-index-and-disturbance/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url>
@@ -159,7 +164,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -169,7 +174,7 @@
   
   <url>
     <loc>/tags/analytics/</loc>
-    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -198,14 +203,14 @@
   </url>
   
   <url>
-    <loc>/categories/carbon/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+    <loc>/tags/carbon/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/carbon/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+    <loc>/categories/carbon/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -217,7 +222,7 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -319,7 +324,13 @@
   
   <url>
     <loc>/tags/forest-inventory/</loc>
-    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/forest-measurements/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -330,26 +341,20 @@
   </url>
   
   <url>
-    <loc>/tags/forest-measurements/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/forest-products/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/forestry/</loc>
-    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/forestry/</loc>
     <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/forestry/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -450,14 +455,14 @@
   </url>
   
   <url>
-    <loc>/categories/machine-learning/</loc>
-    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+    <loc>/tags/machine-learning/</loc>
+    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/machine-learning/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+    <loc>/categories/machine-learning/</loc>
+    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -505,7 +510,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -569,13 +574,13 @@
   </url>
   
   <url>
-    <loc>/categories/sampling/</loc>
+    <loc>/tags/sampling/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/sampling/</loc>
+    <loc>/categories/sampling/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -611,13 +616,13 @@
   </url>
   
   <url>
-    <loc>/categories/statistics/</loc>
+    <loc>/tags/statistics/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/statistics/</loc>
+    <loc>/categories/statistics/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -630,7 +635,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

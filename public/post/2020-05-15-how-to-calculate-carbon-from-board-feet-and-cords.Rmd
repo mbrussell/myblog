@@ -1,0 +1,194 @@
+---
+title: How to calculate carbon from board feet and cords
+author: Matt Russell
+date: '2020-05-15'
+slug: how-to-calculate-carbon-from-board-feet-and-cords
+categories:
+  - Forestry
+  - Carbon
+tags:
+  - analytics
+  - carbon
+  - forest inventory
+  - forest products
+  - forest measurements
+---
+
+
+```{r, echo=F,warning=F,message=F}
+library(tidyverse)
+library(patchwork)
+```
+
+
+```{r, echo=F,warning=F,message=F}
+vol<-read_csv("C:\\Users\\russellm\\Documents\\Arbor\\Data\\volume.csv")
+```
+
+
+```{r, echo=F,warning=F,message=F}
+vol <- vol %>% 
+  mutate(GS_Volume_bf = GS_Volume_cuft * 12,
+         GS_Volume_cds = GS_Volume_bf/500)
+```
+
+
+```{r, echo=F,warning=F,message=F}
+vol.aspen <- vol %>% 
+  filter(Type == "Aspen")
+
+p.cds <- ggplot(vol.aspen, aes(GS_Volume_cds, Carbon)) +
+  geom_line(col = "grey") +
+  geom_point() +
+  scale_y_continuous(limits = c(0, 62))+
+  labs(y = "Carbon per acre \n(Metric tons)", x = "Cords per acre")+
+  annotate("text", x = 16, y = 60, label = "Aspen", size = 7)+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+#p.cds
+```
+
+```{r, echo=F,warning=F,message=F}
+vol.rp <- vol %>% 
+  filter(Type == "Red pine") %>% 
+  mutate(GS_Volume_bf_MBF = GS_Volume_bf/1000)
+
+p.bf <- ggplot(vol.rp, aes(GS_Volume_bf_MBF, Carbon)) +
+  geom_line(col = "red") +
+  geom_point() +
+  scale_y_continuous(limits = c(0, 62))+
+  labs(y = " ", x = "Board feet per acre (MBF)")+
+  annotate("text", x = 20, y = 60, label = "Red pine", size = 7)+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+#p.bf
+```
+
+Foresters and wood buyers are increasingly being asked about the amount of carbon that trees and forests store. However, foresters and wood buyers do not inventory or buy their wood on a carbon basis. Instead, forests in many regions of the US are inventoried and sold using volume measurements such as board feet and cords. If a forest resources professional knows how measurements like wood volume relate to carbon, he or she can feel empowered when discussing the importance of forests and forest management in the context of carbon with landowners and decision makers.  
+
+This post describes how traditional wood measurements like board feet and cords can be converted to estimates of carbon stocks. 
+
+## Converting from volume to carbon
+Carbon can be found in a number of components in the forest, including live trees, standing and downed dead trees, understory vegetation, litter, and soil.  In a healthy forest, soil pools are typically the largest carbon pool followed by live trees. 
+
+Even in the United States, metric tons are the standard units of measure when describing the amount of carbon stored in forests. (To convert from metric tons to US tons, multiply by 1.102.) According to the US’ most recent [Inventory of Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks-1990-2018), in 2019 forest ecosystems stored nearly **59 billion metric tons** of carbon across 676 million acres of forestland. The amount of carbon stored in harvested wood products was approximately 5% of all carbon stored in forests.
+
+Carbon can be related to the volume of trees through traditional tree measurements such as tree diameter, height (merchantable and total), and species. Approximately half of a tree’s biomass is carbon, hence, hardwood species will generally have more carbon than softwood species. 
+
+As an example, consider two commercial species in the northern Lake States: aspen and red pine. Aspen is typically inventoried and purchased using cords per acre, while board feet per acre is used for red pine.
+
+For these two species, an approximation to calculate the carbon per acre (measured in metric tons of live trees) is:  
+
+* For **aspen**, multiply the cords per acre by **0.77**.
+* For **red pine**, multiply the board feet per acre by **0.0015**.
+
+The figure below displays curves to convert volume to carbon for both of these economically- and ecologically-important species. Conversions were adapted from [USDA Forest Service General Technical Report NE-343](https://www.fs.usda.gov/treesearch/pubs/22954): 
+
+
+```{r, echo=F,warning=F,message=F}
+p.vol <- p.cds + p.bf
+p.vol
+```
+
+In practice, values of carbon in live trees are typically presented for all of the carbon found in live trees and do not subtract non-merchantable portions such as decay, defects, and tops and branches. General relationships between merchantable or growing stock volume can be related the total amount of carbon stored in a forest stand.   
+
+## Case study: Aspen and Red Pine at the Cloquet Forestry Center
+
+Since 1959, the [Cloquet Forestry Center (CFC)](https://cfc.cfans.umn.edu/), a 4,200-acre experimental forest owned and managed by the University of Minnesota, has periodically measured 402 permanent sample plots across its ownership. Aspen and red pine are the primary species occurring on the property and management activities at the CFC are a good reflection of how these species are managed across the Lake States.
+
+During the last forest inventory of the CFC in 2014, aspen and red pine cover types were identified on 92 and 102 permanent sample plots, respectively. In aspen stands the average volume was **27.3 cords per acre**. Using the volume-to-carbon per acre approximation, this equated to an average of **21.0 metric tons of carbon per acre** stored in live trees. 
+
+In red pine, the average volume was **42,000 board feet per acre**. This equated to an average of **63.1 metric tons of carbon per acre** stored in live trees.
+
+Here is the distribution of carbon per acre for the aspen and red pine plots visualized in a violin plot: 
+
+```{r, echo=F,warning=F,message=F}
+plot<-read_csv("C:\\Users\\russellm\\Documents\\Arbor\\Data\\cfc_plot.csv")
+```
+
+```{r, echo=F,warning=F,message=F}
+# Red pine is cover type = 2, Aspen is cover type = 60
+plot <- plot %>% 
+  filter(STAND_PLOT_COVE %in% c(2, 60)) %>% 
+  mutate(Cover_name = ifelse(STAND_PLOT_COVE == 2, "Red pine", "Aspen"),
+         GS_Volume_bf = CFVolAcre * 12,
+         GS_Volume_cds = GS_Volume_bf/500)
+
+p.vol <- ggplot(plot, aes(Cover_name, CFVolAcre)) +
+  geom_violin() +
+  labs(y = "Volume per acre (Cubic feet)", x = "Cover type")+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+
+
+plot.aspen <- plot %>% 
+  filter(STAND_PLOT_COVE == 60,
+         CFVolAcre > 50,
+         CFVolAcre <5000,
+         StandID != 201) %>% 
+  mutate(Carbon = GS_Volume_cds * 0.77,
+         Cds_Seq = GS_Volume_cds/STAND_AGE,
+         Carbon_Seq = Carbon/STAND_AGE)
+
+plot_aspen <- plot.aspen %>% 
+  group_by(Cover_name) %>% 
+  summarize(num.plots = n(),
+            mean.cds = mean(GS_Volume_cds, na.rm = T),
+            mean.age = mean(STAND_AGE, na.rm = T),
+            mean.bf = mean(GS_Volume_bf, na.rm = T),
+            mean.C = mean(Carbon, na.rm = T),
+            mean.Cds_Seq = mean (Cds_Seq, na.rm = T),
+            mean.Carbon_Seq = mean(Carbon_Seq, na.rm = T))
+
+plot.redpine <- plot %>% 
+  filter(STAND_PLOT_COVE == 2) %>% 
+  mutate(Carbon = GS_Volume_bf * 0.0015)
+
+plot_red <- plot.redpine %>% 
+  group_by(Cover_name) %>% 
+  summarize(num.plots = n(),
+            mean.cds = mean(GS_Volume_cds, na.rm = T),
+            mean.bf = mean(GS_Volume_bf, na.rm = T),
+            mean.C = mean(Carbon, na.rm = T))
+
+p.vol.aspen <- ggplot(plot.aspen, aes(Cover_name, GS_Volume_cds)) +
+  geom_violin() +
+  labs(y = "Cords per acre", x = "Cover type")+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+
+p.C.aspen <- ggplot(plot.aspen, aes(Cover_name, Carbon)) +
+  geom_violin(fill = "grey") + geom_jitter() +
+  labs(y = "Carbon per acre \n(Metric tons)", x = " ")+
+  
+    scale_y_continuous(limits = c(0, 200))+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"),
+        axis.text.x = element_text(size = 16))
+
+p.vol.redpine <- ggplot(plot.redpine, aes(Cover_name, GS_Volume_bf/1000)) +
+  geom_violin(fill = "red") + geom_jitter()+
+  labs(y = "Board feet per acre (MBF)", x = "Cover type")+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+
+p.C.redpine <- ggplot(plot.redpine, aes(Cover_name, Carbon)) +
+  geom_violin(fill = "red") + geom_jitter()+
+    scale_y_continuous(limits = c(0, 200))+
+  labs(y = " ", x = " ")+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"),
+        axis.text.x = element_text(size = 16))
+
+p.all <-  p.C.aspen + p.C.redpine
+p.all
+```
+
+Similar conversions of volume-to-carbon can be made for other species and forest types. Note that the appropriate volume-to-carbon conversion factors depend on region, species, site productivity, and past management actions. 
+
+If age and growth rates for trees are available, similar values can be produced that quantify carbon sequestration rates for a species of interest. In the CFC example, aspen stands sequestered approximately 0.9 metric tons of carbon per acre per year in live trees. This can be compared to the volume growth rate of just over one cord per acre per year for aspen growing at the CFC. 
+
+
+*This post was previously published by the [Forest Resources Association](https://forestresources.org/) as Technical Release 20-R-3. Special thanks to Tim O'Hara for his review of this post.*
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
