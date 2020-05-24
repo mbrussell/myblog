@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</loc>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/how-to-calculate-carbon-from-board-feet-and-cords/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
@@ -164,7 +169,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -252,7 +257,7 @@
   
   <url>
     <loc>/tags/communicating-data/</loc>
-    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -348,7 +353,7 @@
   
   <url>
     <loc>/tags/forestry/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -510,7 +515,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -526,8 +531,20 @@
   </url>
   
   <url>
+    <loc>/tags/presentations/</loc>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/productivity/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/professional-development/</loc>
+    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

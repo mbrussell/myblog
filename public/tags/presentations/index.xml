@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Presentations on </title>
+    <link>/tags/presentations/</link>
+    <description>Recent content in Presentations on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/presentations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Attention forestry researchers: Incorporate a call-to-action in your presentations</title>
+      <link>/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</guid>
+      <description>A simple call-to-action to use in a presentation: link to the slides you just presented.)
+“The primary purpose of a talk is advertising, not science.”
+This is one of the statements made in the Leek group guide to giving talks. Our lab group discussed this topic at a recent meeting in April.
+Sometimes we are required in a grant to provide a talk via a presentation about our research to the public.</description>
+    </item>
+    
+  </channel>
+</rss>
