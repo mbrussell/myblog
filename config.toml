@@ -66,8 +66,3 @@ googleAnalytics = "UA-136790074-1"
     url = "https://www.linkedin.com/company/arbor-custom-analytics"
     name = "linkedin"
     weight = 4
-    
-[[menu.icon]]
-    name = "Tags"
-    url = "tags"
-    weight = 5
