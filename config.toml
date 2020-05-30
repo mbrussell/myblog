@@ -17,6 +17,7 @@ googleAnalytics = "UA-136790074-1"
     highlightStyle = "white"
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
     profilePic = "https://arbor-analytics.com/post/2019-07-14-using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity_files/arbor_horiz.png"
+    gcse = "011047172664623094254:fidgmaupcky" # Google CSE code
 
 [[menu.main]]
     url = "/"
