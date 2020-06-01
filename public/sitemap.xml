@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/getting-your-data-into-r-from-google-sheets/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
   </url>
@@ -169,7 +174,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -179,7 +184,7 @@
   
   <url>
     <loc>/tags/analytics/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -262,8 +267,26 @@
   </url>
   
   <url>
+    <loc>/tags/data-import/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/data-management/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/data-management/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/data-science/</loc>
-    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -406,6 +429,18 @@
   </url>
   
   <url>
+    <loc>/tags/google-sheets/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/googlesheets4/</loc>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/guest-workers/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -515,7 +550,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-05-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -652,7 +687,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

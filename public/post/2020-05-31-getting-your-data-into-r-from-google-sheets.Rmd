@@ -1,0 +1,99 @@
+---
+title: Getting your data into R from Google Sheets
+author: Matt Russell
+date: '2020-05-31'
+slug: getting-your-data-into-r-from-google-sheets
+categories:
+  - Data management
+tags:
+  - analytics
+  - Data science
+  - data management
+  - Google Sheets
+  - googlesheets4
+  - data import
+---
+
+If you’re like me, more of the data you use on a daily basis are stored in [Google Sheets](https://www.google.com/sheets/about/). You might be using fewer Excel spreadsheets and .csv files. I recently researched the most up-to-date ways to import data from an Access database into R. (It had been a while since I imported data from a database.)
+
+Using Google Sheets to store data has several advantages:
+
+* Multiple people can collaborate on the same data set,
+* Information entered into a Google Form can populate data in a Google Spreadsheet,
+* Data can be accessed and edited both online and offline, and
+* Google Sheets can be converted to Excel spreadsheets, and vice versa.          
+
+According to [a 2018 post](https://grid.is/blog/excel-vs-google-sheets-usage-nature-and-numbers), analysts that use Google Sheets tend to be younger and work for younger organizations. Excel still dominates the spreadsheet universe, especially within established organizations.
+
+If you perform your forest data analysis in R, getting data imported and in the format you want is often half the battle. This post describes the googlesheets4 package, an R interface to the Google Sheets that is a part of the tidyverse.
+
+## The googlesheets4 package  
+
+The [`googlesheets4` package](https://googlesheets4.tidyverse.org/) is a re-release of the `googlesheets` package developed by [Jenny Bryan](https://jennybryan.org/about/) with R Studio. The "4" is designated because it uses the fourth version of the Google Sheets API.
+
+The package can be installed from CRAN:
+
+```{r, echo=T, warning=FALSE, eval=FALSE}
+install.packages("googlesheets4")
+```
+
+and attached with the `library()` function:
+
+```{r, warning = F}
+library(googlesheets4)
+```
+
+For this example, I'll import that data located in [this Google Sheet](). The data contain a list of the [15 most forested countries](http://www.fao.org/faostat/en/#home), with forest area measured in millions of hectares. The data set will be named `forestArea`.
+
+First, you'll need to authenticate with your Google account if you're using the `read_sheet()` function to access a Google Sheet. R will attempt to authenticate your Google account through the Tidyverse API: 
+
+<center>
+![](/post/getting-your-data-into-r-from-google-sheets/tidyapi.jpg)
+</center>
+
+The `read_sheet()` will read in the data for you. Those of you familiar with `read_csv()` or `readxl()` functions will see the similarities.
+
+```{r}
+forestArea <- read_sheet("https://docs.google.com/spreadsheets/d/12V808zXNxFvWldpsfU3A8vo9ZNVbqFB7LQmTht_Pjbc/edit?usp=sharing")
+```
+
+We can print the data set to view its contents:
+
+```{r}
+forestArea
+```
+
+You can also read in the Sheet ID after you've authenticated your account. The Sheet ID is the "long" portion of the Google Sheets URL:
+
+```{r, eval = FALSE}
+read_sheet("12V808zXNxFvWldpsfU3A8vo9ZNVbqFB7LQmTht_Pjbc")
+```
+
+Now that you have the data, you can plot it:
+
+```{r, warning = F}
+library(ggplot2)
+
+p.forestArea <- ggplot(forestArea, aes(x = reorder(Country, ForestAreaMillHect), y = ForestAreaMillHect)) +
+  geom_bar(stat =  "identity") +
+  coord_flip() +
+  labs(x = "Country",
+       y = "Forest area (million hectares)",
+       caption = "Source: UN Food and Agriculture Organization, 2017") +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+
+p.forestArea
+```
+
+You can also create Google Sheets directly from R using the `gs4_create()` and `sheet_write()` functions found in the package.
+
+Other helpful tutorials include:
+
+* [Get started with googlesheets4](https://googlesheets4.tidyverse.org/articles/googlesheets4.html)
+* [Using googlesheets4 with googledrive](https://googlesheets4.tidyverse.org/articles/articles/drive-and-sheets.html)
+
+## Conclusion
+The `googlesheets4` package can import data in Google Sheets directly into R. It uses many functions used in the tidyverse suite of data analysis tools. So long as you have a Google account to make authentication easier, the package is a handy one for importing data from a Google Sheet into R.    
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

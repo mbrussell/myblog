@@ -6,7 +6,7 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Analytics</title>
       <link>/tags/analytics/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/analytics/</guid>
       <description></description>
@@ -120,9 +120,27 @@
     </item>
     
     <item>
+      <title>Data Import</title>
+      <link>/tags/data-import/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/data-import/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Management</title>
+      <link>/tags/data-management/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/data-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Data Science</title>
       <link>/tags/data-science/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/data-science/</guid>
       <description></description>
@@ -278,6 +296,24 @@
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/google-scholar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Sheets</title>
+      <link>/tags/google-sheets/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/google-sheets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Googlesheets4</title>
+      <link>/tags/googlesheets4/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/googlesheets4/</guid>
       <description></description>
     </item>
     

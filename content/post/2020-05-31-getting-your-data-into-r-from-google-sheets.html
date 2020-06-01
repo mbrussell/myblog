@@ -1,0 +1,97 @@
+---
+title: Getting your data into R from Google Sheets
+author: Matt Russell
+date: '2020-05-31'
+slug: getting-your-data-into-r-from-google-sheets
+categories:
+  - Data management
+tags:
+  - analytics
+  - Data science
+  - data management
+  - Google Sheets
+  - googlesheets4
+  - data import
+---
+
+
+
+<p>If you’re like me, more of the data you use on a daily basis are stored in <a href="https://www.google.com/sheets/about/">Google Sheets</a>. You might be using fewer Excel spreadsheets and .csv files. I recently researched the most up-to-date ways to import data from an Access database into R. (It had been a while since I imported data from a database.)</p>
+<p>Using Google Sheets to store data has several advantages:</p>
+<ul>
+<li>Multiple people can collaborate on the same data set,</li>
+<li>Information entered into a Google Form can populate data in a Google Spreadsheet,</li>
+<li>Data can be accessed and edited both online and offline, and</li>
+<li>Google Sheets can be converted to Excel spreadsheets, and vice versa.</li>
+</ul>
+<p>According to <a href="https://grid.is/blog/excel-vs-google-sheets-usage-nature-and-numbers">a 2018 post</a>, analysts that use Google Sheets tend to be younger and work for younger organizations. Excel still dominates the spreadsheet universe, especially within established organizations.</p>
+<p>If you perform your forest data analysis in R, getting data imported and in the format you want is often half the battle. This post describes the googlesheets4 package, an R interface to the Google Sheets that is a part of the tidyverse.</p>
+<div id="the-googlesheets4-package" class="section level2">
+<h2>The googlesheets4 package</h2>
+<p>The <a href="https://googlesheets4.tidyverse.org/"><code>googlesheets4</code> package</a> is a re-release of the <code>googlesheets</code> package developed by <a href="https://jennybryan.org/about/">Jenny Bryan</a> with R Studio. The “4” is designated because it uses the fourth version of the Google Sheets API.</p>
+<p>The package can be installed from CRAN:</p>
+<pre class="r"><code>install.packages(&quot;googlesheets4&quot;)</code></pre>
+<p>and attached with the <code>library()</code> function:</p>
+<pre class="r"><code>library(googlesheets4)</code></pre>
+<p>For this example, I’ll import that data located in <a href="">this Google Sheet</a>. The data contain a list of the <a href="http://www.fao.org/faostat/en/#home">15 most forested countries</a>, with forest area measured in millions of hectares. The data set will be named <code>forestArea</code>.</p>
+<p>First, you’ll need to authenticate with your Google account if you’re using the <code>read_sheet()</code> function to access a Google Sheet. R will attempt to authenticate your Google account through the Tidyverse API:</p>
+<center>
+<img src="/post/getting-your-data-into-r-from-google-sheets/tidyapi.jpg" />
+</center>
+<p>The <code>read_sheet()</code> will read in the data for you. Those of you familiar with <code>read_csv()</code> or <code>readxl()</code> functions will see the similarities.</p>
+<pre class="r"><code>forestArea &lt;- read_sheet(&quot;https://docs.google.com/spreadsheets/d/12V808zXNxFvWldpsfU3A8vo9ZNVbqFB7LQmTht_Pjbc/edit?usp=sharing&quot;)</code></pre>
+<pre><code>## Using an auto-discovered, cached token.
+## To suppress this message, modify your code or options to clearly consent to the use of a cached token.
+## See gargle&#39;s &quot;Non-interactive auth&quot; vignette for more details:
+## https://gargle.r-lib.org/articles/non-interactive-auth.html</code></pre>
+<pre><code>## The googlesheets4 package is using a cached token for matt@arbor-analytics.com.</code></pre>
+<pre><code>## Reading from &quot;ForestArea&quot;</code></pre>
+<pre><code>## Range &quot;Sheet1&quot;</code></pre>
+<p>We can print the data set to view its contents:</p>
+<pre class="r"><code>forestArea</code></pre>
+<pre><code>## # A tibble: 15 x 2
+##    Country            ForestAreaMillHect
+##    &lt;chr&gt;                           &lt;dbl&gt;
+##  1 Russian Federation                815
+##  2 Brazil                            494
+##  3 Canada                            347
+##  4 USA                               310
+##  5 China                             208
+##  6 Dem. Rep. Congo                   153
+##  7 Australia                         125
+##  8 Indonesia                          91
+##  9 Peru                               74
+## 10 India                              71
+## 11 Mexico                             66
+## 12 Colombia                           59
+## 13 Angola                             58
+## 14 Bolivia                            55
+## 15 Zambia                             49</code></pre>
+<p>You can also read in the Sheet ID after you’ve authenticated your account. The Sheet ID is the “long” portion of the Google Sheets URL:</p>
+<pre class="r"><code>read_sheet(&quot;12V808zXNxFvWldpsfU3A8vo9ZNVbqFB7LQmTht_Pjbc&quot;)</code></pre>
+<p>Now that you have the data, you can plot it:</p>
+<pre class="r"><code>library(ggplot2)
+
+p.forestArea &lt;- ggplot(forestArea, aes(x = reorder(Country, ForestAreaMillHect), y = ForestAreaMillHect)) +
+  geom_bar(stat =  &quot;identity&quot;) +
+  coord_flip() +
+  labs(x = &quot;Country&quot;,
+       y = &quot;Forest area (million hectares)&quot;,
+       caption = &quot;Source: UN Food and Agriculture Organization, 2017&quot;) +
+    theme(panel.background = element_rect(fill = &quot;NA&quot;),
+        axis.line = element_line(color = &quot;black&quot;))
+
+p.forestArea</code></pre>
+<p><img src="/post/2020-05-31-getting-your-data-into-r-from-google-sheets_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>You can also create Google Sheets directly from R using the <code>gs4_create()</code> and <code>sheet_write()</code> functions found in the package.</p>
+<p>Other helpful tutorials include:</p>
+<ul>
+<li><a href="https://googlesheets4.tidyverse.org/articles/googlesheets4.html">Get started with googlesheets4</a></li>
+<li><a href="https://googlesheets4.tidyverse.org/articles/articles/drive-and-sheets.html">Using googlesheets4 with googledrive</a></li>
+</ul>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>The <code>googlesheets4</code> package can import data in Google Sheets directly into R. It uses many functions used in the tidyverse suite of data analysis tools. So long as you have a Google account to make authentication easier, the package is a handy one for importing data from a Google Sheet into R.</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
