@@ -1,0 +1,296 @@
+---
+title: How do loggers feel? Sentiment analysis on the opinions of logging contractors
+author: Matt Russell
+date: '2020-06-14'
+slug: how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors
+categories:
+  - Analytics
+tags:
+  - analytics
+  - Data science
+  - forest products
+  - logging
+  - tidytext
+  - sentiment analysis
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<p>After we conduct a survey, we have a routine for analyzing the data. Summarize the numerical responses and report values like means for specific questions. Group the data into different demographics and report the means within these categories.</p>
+<p>If we ask for any qualitative data through comments (e.g., “What is your opinion of X?”), the responses are always worth reading. We often get a lot of insight from reading an individual’s comments, and these comments can unveil new dimensions of our analysis. But qualitative data are by nature more difficult to summarize than quantitative data.</p>
+<p>Sentiment analysis, or “opinion mining”, takes the emotional tone of words and quantifies how positive or negative they are. In particular, sentiment analysis is an example of text mining and can be used to determine the emotional quality of a word or string of words.</p>
+<div id="text-mining-lexicons" class="section level2">
+<h2>Text mining lexicons</h2>
+<p>In their book <a href="https://www.tidytextmining.com/index.html">Tidy Text Mining with R</a>, Silge and Robinson describe three examples of sentiment lexicons. A lexicon contains a vocabulary of words with an associated sentiment scale for each word. Each has different qualities and quantify and/or categorize words differently:</p>
+<ul>
+<li>The <code>AFINN</code> lexicon ranks words from -5 (most negative tone) to 5 (most positive tone). It is one of the <a href="https://medium.com/@himanshu_23732/sentiment-analysis-with-afinn-lexicon-930533dfe75b">most popular lexicons</a> used in sentiment analysis.</li>
+<li>The <code>nrc</code> lexicon categorizes words in a binary fashion based on a number of criteria such as positive, negative, joy, and sadness. This lexicon was created by the <a href="http://sentiment.nrc.ca/lexicons-for-research/">National Research Council of Canada</a> and is also used in contexts such as product marketing and consumer behavior.<br />
+</li>
+<li>The <code>bing</code> lexicon categorizes words more simply whether they are negative or positive. It was <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html">developed by Bing et al.</a> for applications in opinion mining.</li>
+</ul>
+<p>These lexicons document sentiment scores between 2,500 and 6,800 words. For example, the most negative words in the <code>AFINN</code> lexicon (those ranked as -5) are almost all curse words. Other strongly negative words (those ranked as -4’s) include “catastrophic”, “fraud”, and “torture”.</p>
+<p>Some of the most positive words in the <code>AFINN</code> lexicon (those ranked as 5’s) include “thrilled”, “superb”, and “outstanding”.</p>
+<p>In 2016 I was a part of a research team that analyzed data from a survey sent to loggers. The aim of the survey was to look at the health of the logging industry in Minnesota. With many of the challenges facing loggers and the forest products industry such as low wages compared to other sectors, high costs of equipment, and uncertainty about future workers in the industry, an analysis of sentiment by logging contractors can provide novel insights.</p>
+</div>
+<div id="the-minnesota-logger-survey-data" class="section level2">
+<h2>The Minnesota logger survey data</h2>
+<p>Data were used from the <a href="https://www.forestry.umn.edu/sites/forestry.umn.edu/files/mn_2016_logging_staff_paper_final_feb_2019.pdf">Status of the Minnesota Logging Sector in 2016 (PDF</a> paper published by the University of Minnesota-Department of Forest Resources. In Appendix 9 of the document, responses from loggers to open-ended questions were listed. These open-ended comments were organized into nine themes:</p>
+<ul>
+<li>Entry into the business<br />
+</li>
+<li>Labor availability and cost<br />
+</li>
+<li>Purchasing and operating equipment<br />
+</li>
+<li>Cost of insurance<br />
+</li>
+<li>Stumpage availability and cost<br />
+</li>
+<li>Markets and delivered prices<br />
+</li>
+<li>Regulations<br />
+</li>
+<li>Impact of weather conditions on operations<br />
+</li>
+<li>Other/miscellaneous</li>
+</ul>
+<p>These detailed text responses highlighted logger concerns and opinions on the factors influencing them and their operations. In total, 74 comments were provided from 145 loggers that completed the survey.</p>
+</div>
+<div id="sentiment-analysis-of-logger-opinions" class="section level2">
+<h2>Sentiment analysis of logger opinions</h2>
+<p>The <a href="https://cran.r-project.org/web/packages/tidytext/index.html">tidytext package</a> in R was used to perform a sentiment analysis of the logger survey data. Using the <code>bing</code> lexicon, here are the most common negative words used by loggers in their open-ended comments. The words are listed with the number of occurrences of each word:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-5">Table 1: </span>Frequency of 10 most negative words in logger comments.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+word
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+die
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hard
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+poor
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bullshit
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+hassle
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ridiculous
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+stress
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+struggle
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+challenging
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+dead
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+</tbody>
+</table>
+<p>For comparison, here are the most common positive words used by loggers:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-6">Table 2: </span>Frequency of 10 most positive words in logger comments.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+word
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+work
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+afford
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+good
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+like
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+stable
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+better
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+benefits
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+enough
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+prefer
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+respect
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+</tbody>
+</table>
+<p>Each individual comment from a logger was also summarized for its own sentiment. For logger comments that contained at least five words of sentiment, here are the <strong>two most negative comments</strong> from loggers (using the <code>AFINN</code> lexicon):</p>
+<blockquote>
+<p>“If you want the logging industry to continue for younger generations, there’s too much bullsh*t and red tape. They will not do it. Between regulations, insurance, permits, hassle, logging will die. Young people don’t like stress. When the old loggers are gone, logging will die. Everybody wants a cut out of the logging world. There’s not enough money in it to go around.”</p>
+</blockquote>
+<blockquote>
+<p>“We don’t need more regulations and government control. The industry will come to a halt sooner. What a fantastic idea to have the auditors who have never logged come out and pick apart what we have done and get paid more than we did. I am sick of some of the actions that the DNR takes.”</p>
+</blockquote>
+<p>Those two negative comments each scored a mean sentiment of -1.33 on a -5 to 5 scale. For comparison, here are the <strong>two most positive comments</strong> from loggers, which scored a 1.5 and 1.42 on that same scale:</p>
+<blockquote>
+<p>“Logging is renewable &amp; sustainable agricultural product that flourishes with wise stewardship at each level of interaction Federal-State-County-private landowners &amp; logging industry producers (mills &amp; logging personnel). Mutual respect between all the above helps with P.R. and I hope is slowly getting better once again (if slightly). Cutting our own purchased stumpage has positive tax benefits so we try to do that pretty much exclusively.”</p>
+</blockquote>
+<blockquote>
+<p>“The current way stumpage is sold could be improved. Let’s try giving the rights to harvest on public lands in say”2 townships" to a logger. Agencies tell the logger this is the future desired condition we want and the logger manages this large tract to achieve the goal. The benefits: stable stumpage price, an investment in better roads the logger will be using the road system more than once. The logger could develop a year round cutting plan or harvest other forest products sap/boughs/bark/plant trees. The first generation of loggers will not harvest the benefits of their work but the rights to harvest could be passed to the next generation."</p>
+</blockquote>
+<p>Ouch. Those two negative statements depict frustration, anger, and discontent. The two positive comments reflect a sense of hopefulness and offer solutions to current problems. The lexicons used in the analysis do very well in summarizing the logger’s sentiment.</p>
+</div>
+<div id="visualizing-logger-sentiment" class="section level2">
+<h2>Visualizing logger sentiment</h2>
+<p>Comments for loggers were organized into the nine separate themes listed above, providing useful categorizations to analyze logger sentiment. The most negative words were observed under the themes of labor availability and cost, cost of insurance, and regulations. The most positive words were observed under the themes other/miscellaneous and stumpage availability and cost:</p>
+<p><img src="/post/2020-06-14-how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Using the ‘nrc’ lexicon, word sentiments can be further broken down into one of ten contexts. These contexts range from negative ones such as fear and disgust to positive themes such as joy and anticipation.</p>
+<p>Some logger comments marked high in anticipation for themes around stumpage availability and labor availability and cost. Some logger comments also marked high in fear of labor availability and cost:</p>
+<p><img src="/post/2020-06-14-how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>When averaged within each theme, other/miscellaneous and impact of weather conditions were shown to contain the most positive sentiment. Cost of insurance and purchasing and operating equipment displayed the most negative sentiment:</p>
+<p><img src="/post/2020-06-14-how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<div id="limitations-of-sentiment-analysis" class="section level2">
+<h2>Limitations of sentiment analysis</h2>
+<p>For any sentiment analysis to provide insight that can be acted upon, lots of qualitative data are always best. This survey contained 74 comments from loggers that formed nearly 2,300 words, an adequate amount of observations to gain insight.</p>
+<p>While individual words themselves are insightful, sometimes the phrases that they’re a part of mean more. For example, if a logger had commented “I do not enjoy to work outside”, the words “enjoy”, “work”, and “outside” would register as positive sentiments. It’s the negation before those words that conveys a negative tone to the message.</p>
+<p>As <a href="https://www.tidytextmining.com/sentiment.html">Silge and Robinson describe</a>, analyses can be structured to understand the sentiment of entire sentences rather than individual words. Many more advanced sentiment analyses can be performed that optimize sentences rather than words.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Loggers generally have a negative outlook on their profession, which has been shown in many recent research studies on the logging industry. This outlook and pessimistic/optimistic attitudes can be measured by investigating the sentiment of loggers towards their industry. A sentiment analysis can be used to evaluate qualitative responses to decipher the emotional intent of words.</p>
+<p>Sentiment analyses have not been widely used in the forest products industry, but have wide applications in marketing and survey research. In this example, the attitudes and concerns of loggers become apparent when analyzing the data. As one logger commented, “Logging is quite dangerous for the amount of pay back. You have to want to do it.”</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>

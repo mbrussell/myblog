@@ -6,10 +6,20 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How do loggers feel? Sentiment analysis on the opinions of logging contractors</title>
+      <link>/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
+      <description>After we conduct a survey, we have a routine for analyzing the data. Summarize the numerical responses and report values like means for specific questions. Group the data into different demographics and report the means within these categories.
+If we ask for any qualitative data through comments (e.g., “What is your opinion of X?”), the responses are always worth reading. We often get a lot of insight from reading an individual’s comments, and these comments can unveil new dimensions of our analysis.</description>
+    </item>
     
     <item>
       <title>Getting your data into R from Google Sheets</title>

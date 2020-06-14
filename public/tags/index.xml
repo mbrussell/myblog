@@ -6,7 +6,7 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Analytics</title>
       <link>/tags/analytics/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/analytics/</guid>
       <description></description>
@@ -140,7 +140,7 @@
     <item>
       <title>Data Science</title>
       <link>/tags/data-science/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/data-science/</guid>
       <description></description>
@@ -221,7 +221,7 @@
     <item>
       <title>Forest Products</title>
       <link>/tags/forest-products/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/forest-products/</guid>
       <description></description>
@@ -392,7 +392,7 @@
     <item>
       <title>Logging</title>
       <link>/tags/logging/</link>
-      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/logging/</guid>
       <description></description>
@@ -570,6 +570,15 @@
     </item>
     
     <item>
+      <title>Sentiment Analysis</title>
+      <link>/tags/sentiment-analysis/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sentiment-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Significance</title>
       <link>/tags/significance/</link>
       <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
@@ -629,6 +638,15 @@
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/tidyr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tidytext</title>
+      <link>/tags/tidytext/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tidytext/</guid>
       <description></description>
     </item>
     

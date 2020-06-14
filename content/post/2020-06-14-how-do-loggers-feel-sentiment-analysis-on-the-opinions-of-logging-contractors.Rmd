@@ -1,0 +1,245 @@
+---
+title: How do loggers feel? Sentiment analysis on the opinions of logging contractors
+author: Matt Russell
+date: '2020-06-14'
+slug: how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors
+categories:
+  - Analytics
+tags:
+  - analytics
+  - Data science
+  - forest products
+  - logging
+  - tidytext
+  - sentiment analysis
+---
+
+After we conduct a survey, we have a routine for analyzing the data. Summarize the numerical responses and report values like means for specific questions. Group the data into different demographics and report the means within these categories.  
+
+If we ask for any qualitative data through comments (e.g., “What is your opinion of X?”), the responses are always worth reading. We often get a lot of insight from reading an individual’s comments, and these comments can unveil new dimensions of our analysis. But qualitative data are by nature more difficult to summarize than quantitative data.
+
+Sentiment analysis, or “opinion mining”,  takes the emotional tone of words and quantifies how positive or negative they are. In particular, sentiment analysis is an example of text mining and can be used to determine the emotional quality of a word or string of words. 
+
+## Text mining lexicons
+In their book [Tidy Text Mining with R](https://www.tidytextmining.com/index.html), Silge and Robinson describe three examples of sentiment lexicons. A lexicon contains a vocabulary of words with an associated sentiment scale for each word. Each has different qualities and quantify and/or categorize words differently:  
+
+* The `AFINN` lexicon ranks words from -5 (most negative tone) to 5 (most positive tone). It is one of the [most popular lexicons](https://medium.com/@himanshu_23732/sentiment-analysis-with-afinn-lexicon-930533dfe75b) used in sentiment analysis.
+* The `nrc` lexicon categorizes words in a binary fashion based on a number of criteria such as positive, negative, joy, and sadness. This lexicon was created by the [National Research Council of Canada](http://sentiment.nrc.ca/lexicons-for-research/) and is also used in contexts such as product marketing and consumer behavior.    
+* The `bing` lexicon categorizes words more simply whether they are negative or positive. It was [developed by Bing et al.](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html) for applications in opinion mining.
+
+These lexicons document sentiment scores between 2,500 and 6,800 words. For example, the most negative words in the `AFINN` lexicon (those ranked as -5) are almost all curse words. Other strongly negative words (those ranked as -4’s) include “catastrophic”, “fraud”, and “torture”.  
+
+Some of the most positive words in the `AFINN` lexicon (those ranked as 5’s) include “thrilled”, “superb”, and “outstanding”.
+
+In 2016 I was a part of a research team that analyzed data from a survey sent to loggers. The aim of the survey was to look at the health of the logging industry in Minnesota. With many of the challenges facing loggers and the forest products industry such as low wages compared to other sectors, high costs of equipment, and uncertainty about future workers in the industry, an analysis of sentiment by logging contractors can provide novel insights.
+
+## The Minnesota logger survey data
+
+Data were used from the [Status of the Minnesota Logging Sector in 2016 (PDF](https://www.forestry.umn.edu/sites/forestry.umn.edu/files/mn_2016_logging_staff_paper_final_feb_2019.pdf) paper published by the University of Minnesota-Department of Forest Resources. In Appendix 9 of the document, responses from loggers to open-ended questions were listed. These open-ended comments were organized into nine themes:
+
+* Entry into the business  
+* Labor availability and cost  
+* Purchasing and operating equipment  
+* Cost of insurance  
+* Stumpage availability and cost  
+* Markets and delivered prices  
+* Regulations  
+* Impact of weather conditions on operations  
+* Other/miscellaneous  
+
+These detailed text responses highlighted logger concerns and opinions on the factors influencing them and their operations. In total, 74 comments were provided from 145 loggers that completed the survey.
+
+## Sentiment analysis of logger opinions
+
+The [tidytext package](https://cran.r-project.org/web/packages/tidytext/index.html) in R was used to perform a sentiment analysis of the logger survey data. Using the `bing` lexicon, here are the most common negative words used by loggers in their open-ended comments. The words are listed with the number of occurrences of each word:
+
+
+```{r, echo = F, message = F, warning = F}
+library(googlesheets4)
+library(tidyverse)
+library(tidytext)
+library(textdata)
+library(janeaustenr)
+library(stringr)
+library(knitr)
+library(formattable)
+library(kableExtra)
+```
+
+```{r, echo = F, message = F, warning = F}
+logger <- read_sheet("https://drive.google.com/open?id=1nxAZixhhQ-zUDaM9BFyIpunILDnq0CG91Wc5P--1gOI")
+```
+
+```{r, echo = F, message = F, warning = F}
+nrc_cats <- get_sentiments("nrc") %>% 
+  group_by(sentiment) %>% 
+  summarize(num_words = n())
+
+bing_cats <- get_sentiments("bing") %>% 
+  group_by(sentiment) %>% 
+  summarize(num_words = n())
+
+afinn_cats <- get_sentiments("afinn") %>% 
+  group_by(value) %>% 
+  summarize(num_words = n())
+```
+
+```{r, echo = F, message = F, warning = F}
+
+text_logger <- logger %>%
+  mutate(comment_id = seq.int(nrow(logger))) %>% 
+  unnest_tokens(word, Comment)
+
+#nrc
+#nrc_cats
+nrc_anger <- get_sentiments("nrc") %>% 
+  filter(sentiment == "trust")
+
+#text_logger %>%
+ # inner_join(nrc_anger) %>%
+  #count(word, sort = TRUE)
+
+#bing
+bing_neg <- get_sentiments("bing") %>% 
+  filter(sentiment == "negative")
+
+bing_neg <- text_logger %>%
+  inner_join(bing_neg) %>%
+  count(word, sort = TRUE)
+#bing_neg
+
+bing_pos <- get_sentiments("bing") %>% 
+  filter(sentiment == "positive")
+
+bing_pos <- text_logger %>%
+  inner_join(bing_pos) %>%
+  count(word, sort = TRUE)
+#bing_pos
+```
+
+```{r, echo = F, message = F, warning = F}
+#### KABLE of positive/negative words####
+bing_neg_show <- bing_neg[,] %>% 
+  head(10) 
+
+bing_neg_show %>% 
+       arrange(-n) %>% 
+   kable("html", caption = 'Frequency of 10 most negative words in logger comments.') %>%
+  kable_styling()
+```
+
+For comparison, here are the most common positive words used by loggers:
+
+```{r, echo = F, message = F, warning = F}
+bing_pos_show <- bing_pos[,] %>% 
+  head(10) 
+
+bing_pos_show %>% 
+       arrange(-n) %>% 
+   kable("html", caption = 'Frequency of 10 most positive words in logger comments.') %>%
+  kable_styling()
+```
+
+Each individual comment from a logger was also summarized for its own sentiment. For logger comments that contained at least five words of sentiment, here are the **two most negative comments** from loggers (using the `AFINN` lexicon):
+
+> “If you want the logging industry to continue for younger generations, there's too much bullsh*t and red tape. They will not do it. Between regulations, insurance, permits, hassle, logging will die. Young people don't like stress. When the old loggers are gone, logging will die. Everybody wants a cut out of the logging world. There's not enough money in it to go around.”
+
+> “We don’t need more regulations and government control. The industry will come to a halt sooner. What a fantastic idea to have the auditors who have never logged come out and pick apart what we have done and get paid more than we did. I am sick of some of the actions that the DNR takes.”
+
+Those two negative comments each scored a mean sentiment of -1.33 on a -5 to 5 scale. For comparison, here are the **two most positive comments** from loggers, which scored a 1.5 and 1.42 on that same scale:
+
+> "Logging is renewable & sustainable agricultural product that flourishes with wise stewardship at each level of interaction Federal-State-County-private landowners & logging industry producers (mills & logging personnel). Mutual respect between all the above helps with P.R. and I hope is slowly getting better once again (if slightly). Cutting our own purchased stumpage has positive tax benefits so we try to do that pretty much exclusively."
+
+> "The current way stumpage is sold could be improved. Let’s try giving the rights to harvest on public lands in say "2 townships" to a logger. Agencies tell the logger this is the future desired condition we want and the logger manages this large tract to achieve the goal. The benefits: stable stumpage price, an investment in better roads the logger will be using the road system more than once. The logger could develop a year round cutting plan or harvest other forest products sap/boughs/bark/plant trees. The first generation of loggers will not harvest the benefits of their work but the rights to harvest could be passed to the next generation."
+
+Ouch. Those two negative statements depict frustration, anger, and discontent. The two positive comments reflect a sense of hopefulness and offer solutions to current problems. The lexicons used in the analysis do very well in summarizing the logger’s sentiment. 
+
+## Visualizing logger sentiment
+
+Comments for loggers were organized into the nine separate themes listed above, providing useful categorizations to analyze logger sentiment. The most negative words were observed under the themes of labor availability and cost, cost of insurance, and regulations. The most positive words were observed under the themes other/miscellaneous and stumpage availability and cost: 
+
+
+
+```{r, echo = F, message = F, warning = F}
+# afinn
+afinn <- text_logger %>% 
+  inner_join(get_sentiments("afinn")) %>% 
+  group_by(comment_id) %>% 
+  summarize(count = n(),
+            mean_sentiment = mean(value),
+            sum_sentiment = sum(value)) %>% 
+  mutate(method = "AFINN") %>% 
+  filter(count >5)
+
+text_logger %>%
+  inner_join(get_sentiments("bing")) %>%
+  group_by(index = comment_id, Theme, sentiment) %>%
+  summarize(n = n()) %>%
+  ggplot(aes(x = index, y = n, fill = Theme)) + 
+  geom_bar(stat = "identity", alpha = 0.8) + 
+  facet_wrap(~ sentiment, ncol = 5)+
+  labs(x = "Logger ID",
+       y = "Number of words") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+```
+
+Using the ‘nrc’ lexicon, word sentiments can be further broken down into one of ten contexts. These contexts range from negative ones such as fear and disgust to positive themes such as joy and anticipation. 
+
+Some logger comments marked high in anticipation for themes around stumpage availability and labor availability and cost. Some logger comments also marked high in fear of labor availability and cost: 
+
+```{r, echo = F, message = F, warning = F}
+text_logger %>%
+  inner_join(get_sentiments("nrc")) %>%
+  group_by(index = comment_id, Theme, sentiment) %>%
+  summarize(n = n()) %>%
+  ggplot(aes(x = index, y = n, fill = Theme)) + 
+  geom_bar(stat = "identity", alpha = 0.8) + 
+  facet_wrap(~ sentiment, ncol = 5)+
+  labs(x = "Logger ID",
+       y = "Number of words") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+```
+
+When averaged within each theme, other/miscellaneous and impact of weather conditions were shown to contain the most positive sentiment. Cost of insurance and purchasing and operating equipment displayed the most negative sentiment:
+
+```{r, echo = F, message = F, warning = F}
+text_logger %>% 
+  inner_join(get_sentiments("afinn")) %>% 
+  group_by(Theme) %>% 
+  summarize(count = n(),
+            mean_sentiment = mean(value),
+            sum_sentiment = sum(value)) %>% 
+  mutate(method = "AFINN") %>% 
+  filter(count > 3) %>% 
+  ggplot(aes(x = reorder(Theme, mean_sentiment), y = (mean_sentiment), 
+             fill = mean_sentiment > 0)) + 
+  geom_bar(stat = "identity",  color = "black", alpha = 0.8) +
+  coord_flip()+
+  scale_y_continuous(limits = c(-1.5, 1.5)) + 
+  labs(x = "Theme of comments",
+       y = "Average sentiment (-5 to 5 scale)") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"),
+        legend.position = "none")
+
+```
+
+## Limitations of sentiment analysis
+
+For any sentiment analysis to provide insight that can be acted upon, lots of qualitative data are always best. This survey contained 74 comments from loggers that formed nearly 2,300 words, an adequate amount of observations to gain insight.
+
+While individual words themselves are insightful, sometimes the phrases that they’re a part of mean more. For example, if a logger had commented “I do not enjoy to work outside”, the words “enjoy”, “work”, and “outside” would register as positive sentiments. It’s the negation before those words that conveys a negative tone to the message. 
+
+As [Silge and Robinson describe](https://www.tidytextmining.com/sentiment.html), analyses can be structured to understand the sentiment of entire sentences rather than individual words. Many more advanced sentiment analyses can be performed that optimize sentences rather than words.
+
+## Conclusion
+
+Loggers generally have a negative outlook on their profession, which has been shown in many recent research studies on the logging industry. This outlook and pessimistic/optimistic attitudes can be measured by investigating the sentiment of loggers towards their industry. A sentiment analysis can be used to evaluate qualitative responses to decipher the emotional intent of words. 
+
+Sentiment analyses have not been widely used in the forest products industry, but have wide applications in marketing and survey research. In this example, the attitudes and concerns of loggers become apparent when analyzing the data. As one logger commented, “Logging is quite dangerous for the amount of pay back. You have to want to do it.”
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
