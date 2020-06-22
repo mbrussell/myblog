@@ -6,7 +6,7 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Analytics</title>
       <link>/tags/analytics/</link>
-      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/analytics/</guid>
       <description></description>
@@ -113,7 +113,7 @@
     <item>
       <title>Communicating Data</title>
       <link>/tags/communicating-data/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/communicating-data/</guid>
       <description></description>
@@ -149,7 +149,7 @@
     <item>
       <title>Data Viz</title>
       <link>/tags/data-viz/</link>
-      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/data-viz/</guid>
       <description></description>
@@ -203,7 +203,7 @@
     <item>
       <title>Forest Inventory</title>
       <link>/tags/forest-inventory/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/forest-inventory/</guid>
       <description></description>
@@ -467,6 +467,15 @@
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/pagedown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Polar Area Diagram</title>
+      <link>/tags/polar-area-diagram/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/polar-area-diagram/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,20 @@
     <description>Recent content in Data Viz on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/data-viz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Polar area diagrams in celebration of Florence Nightingale</title>
+      <link>/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
+      <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.
+The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s.</description>
+    </item>
     
     <item>
       <title>Four ways to supercharge your scatterplots</title>

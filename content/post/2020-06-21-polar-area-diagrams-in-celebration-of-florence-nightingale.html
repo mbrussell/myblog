@@ -1,0 +1,203 @@
+---
+title: Polar area diagrams in celebration of Florence Nightingale
+author: Matt Russell
+date: '2020-06-21'
+slug: polar-area-diagrams-in-celebration-of-florence-nightingale
+categories:
+  - Data visualization
+tags:
+  - analytics
+  - Data viz
+  - forest inventory
+  - polar area diagram
+  - Communicating data
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<center>
+<img src="/post/polar-area-diagrams-in-celebration-of-florence-nightingale/518px-Florence_Nightingale_(H_Hering_NPG_x82368).jpg" alt="Florence Nightingale (photo: Wikipedia))" width="250" />
+</center>
+<p>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.</p>
+<p>The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s. Specifically, the visualization showed the number of deaths that occurred from preventable diseases, wounds, and other causes.</p>
+<p><a href="https://en.wikipedia.org/wiki/Florence_Nightingale">Florence Nightingale</a>, among many roles, was a pioneer in statistical graphics. As a nurse, Nightingale was a witness of war deaths and the medical care of soldiers. For the benefit of the general public, she synthesized vast amounts of data on hospitalizations and medical care.</p>
+<p>Nightingale popularized the use of the polar area diagram, also called a coxcomb plot or rose diagram. <a href="https://en.wikipedia.org/wiki/Pie_chart#Polar_area_diagram">Polar area diagrams</a> are similar to pie charts, but they have identical angles and extend from the plot’s center depending on the magnitude of the values that are plotted.</p>
+<p>Think of the polar area diagram as a pie chart meets a histogram. A few advantages of polar area diagrams include:</p>
+<ul>
+<li>They are useful for plotting cyclical data. For example, the counts of a phenomenon in each of the 12 calendar months of a year.</li>
+<li>They are easy to read around the “rose” because data are presented chronologically.</li>
+<li>Multiple layers can be added within a diagram. This is how Nightengale described deaths from preventable diseases, wounds, and other causes.</li>
+</ul>
+<p>In celebration of Nightingale, who was born 200 years ago this year, it’s worth thinking about how polar area diagrams might be fitting to visualize forestry data.</p>
+<div id="polar-area-diagrams-in-forest-inventories" class="section level2">
+<h2>Polar area diagrams in forest inventories</h2>
+<p>I wanted to use polar area diagrams to answer one question: In which months do forest inventories occur across the United States?</p>
+<p>I queried the US Department of Agriculture’s <a href="https://apps.fs.usda.gov/fia/datamart/">Forest Inventory and Analysis (FIA) database</a> to obtain the months that forests were inventoried. The specific variable I was interested in was <code>MEASMON</code>, a variable contained in the <code>PLOT</code> table that lists the month in which the forest was inventoried.</p>
+<p>I filtered the data to obtain the measurements of all FIA plots that were collected as a part of the annual inventory design. This included all FIA plots that were inventoried since about the late 1990s or early 2000s for most US states. I also filtered the data so that at least one accessible forest land condition was present on an FIA plot.</p>
+<p>Here is a table of the results:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-2">Table 1: </span>Number of FIA plot measurements in each month.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+MONNAME
+</th>
+<th style="text-align:right;">
+MEASMON
+</th>
+<th style="text-align:right;">
+Number of measurements
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Jan
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+15148
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Feb
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+15593
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mar
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+18071
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Apr
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+17456
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+May
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+19330
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jun
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+22836
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Jul
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+22491
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Aug
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+21725
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sep
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+19034
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Oct
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+20085
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Nov
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+13507
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Dec
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+12796
+</td>
+</tr>
+</tbody>
+</table>
+<p>The result was about what you might expect for a country that has mostly temperate forests and where field work is limited to many regions in the winter months. The total number of FIA plot measurements was smallest in December (12,786 measurements) and largest in June (22,836 measurements). Not surprisingly, the majority of FIA plots are measured in the summer months when field work is most active.</p>
+<p><img src="/post/2020-06-21-polar-area-diagrams-in-celebration-of-florence-nightingale_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>The monthly trends in forest inventory data collection is not constant across different regions in the US. In the Southeast and North Central regions of the US, the number of forest inventories occur at generally the same rate across the year.</p>
+<p>But in regions where snow and cold temperatures present a barrier to getting field work done in the winter, few forest inventories occur. In the Northeast, Rocky Mountain and West Coast states, the forest inventories begin in earnest in April and then mostly conclude by October. Some forest inventories occur in the winter months but in small numbers.</p>
+<p><img src="/post/2020-06-21-polar-area-diagrams-in-celebration-of-florence-nightingale_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>The polar area diagrams using the FIA data are revealing because they show cyclical data through the calendar year and they visualize the number of plot measurements in each month. Other visualizations of these data could include a pie graph or histogram, but the polar area diagram can make each data point “pop”.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Polar area diagrams are a mix of pie charts and histograms. They have identical angles and extend from the plot’s center depending on the magnitude of the values that are plotted. Popularized by Florence Nightingale in the 1850s, polar area diagrams can be an effective way to visualize cyclical data in forestry settings.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>

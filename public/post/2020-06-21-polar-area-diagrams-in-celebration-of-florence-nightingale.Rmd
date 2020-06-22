@@ -1,0 +1,217 @@
+---
+title: Polar area diagrams in celebration of Florence Nightingale
+author: Matt Russell
+date: '2020-06-21'
+slug: polar-area-diagrams-in-celebration-of-florence-nightingale
+categories:
+  - Data visualization
+tags:
+  - analytics
+  - Data viz
+  - forest inventory
+  - polar area diagram
+  - Communicating data
+---
+
+<center>
+![*Florence Nightingale (photo: Wikipedia)*)](/post/polar-area-diagrams-in-celebration-of-florence-nightingale/518px-Florence_Nightingale_(H_Hering_NPG_x82368).jpg){width=250px} 
+</center>
+
+
+In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.    
+
+The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s. Specifically, the visualization showed the number of deaths that occurred from preventable diseases, wounds, and other causes. 
+
+[Florence Nightingale](https://en.wikipedia.org/wiki/Florence_Nightingale), among many roles, was a pioneer in statistical graphics. As a nurse, Nightingale was a witness of war deaths and the medical care of soldiers. For the benefit of the general public, she synthesized vast amounts of data on hospitalizations and medical care. 
+
+Nightingale popularized the use of the polar area diagram, also called a coxcomb plot or rose diagram. [Polar area diagrams](https://en.wikipedia.org/wiki/Pie_chart#Polar_area_diagram) are similar to pie charts, but they have identical angles and extend from the plot’s center depending on the magnitude of the values that are plotted. 
+
+Think of the polar area diagram as a pie chart meets a histogram. A few advantages of polar area diagrams include:
+
+* They are useful for plotting cyclical data. For example, the counts of a phenomenon in each of the 12 calendar months of a year. 
+* They are easy to read around the “rose” because data are presented chronologically. 
+* Multiple layers can be added within a diagram. This is how Nightengale described deaths from preventable diseases, wounds, and other causes.  
+
+In celebration of Nightingale, who was born 200 years ago this year, it’s worth thinking about how polar area diagrams might be fitting to visualize forestry data.
+
+## Polar area diagrams in forest inventories
+
+I wanted to use polar area diagrams to answer one question: In which months do forest inventories occur across the United States?
+
+I queried the US Department of Agriculture’s [Forest Inventory and Analysis (FIA) database](https://apps.fs.usda.gov/fia/datamart/) to obtain the months that forests were inventoried. The specific variable I was interested in was `MEASMON`, a variable contained in the `PLOT` table that lists the month in which the forest was inventoried. 
+
+I filtered the data to obtain the measurements of all FIA plots that were collected as a part of the annual inventory design. This included all FIA plots that were inventoried since about the late 1990s or early 2000s for most US states. I also filtered the data so that at least one accessible forest land condition was present on an FIA plot.
+
+Here is a table of the results:
+
+```{r, echo=F, message=F, warning=F}
+library(tidyverse)
+library(lubridate)
+library(knitr)
+library(formattable)
+library(kableExtra)
+library(patchwork)
+```
+
+```{r, echo=F, message=F, warning=F}
+fia <- read_csv("C://Users//russellm//Downloads//PLOT.csv")
+inv <- read_csv("C://Users//russellm//Documents//Projects//Data//FIA//ANN_INV_START.csv")
+
+fia2 <- fia %>% 
+  inner_join(inv) %>% 
+  mutate(MONNAME =  as.character(month(ymd(010101) + months(MEASMON-1),label=TRUE,abbr=TRUE)))
+
+fia.sum <- fia2 %>% 
+  group_by(MONNAME, MEASMON) %>% 
+  filter(PLOT_STATUS_CD == 1 & !is.na(MEASMON) & MEASYEAR >= ANN_INV_START) %>% 
+  summarize(`Number of measurements` = n())
+
+fia.sum %>% 
+       arrange(MEASMON) %>% 
+   kable("html", caption = 'Number of FIA plot measurements in each month.') %>%
+  kable_styling()
+
+
+fia.sum.reg <- fia2 %>% 
+  group_by(REGION_NAME, MONNAME, MEASMON) %>% 
+  filter(PLOT_STATUS_CD == 1 & !is.na(MEASMON) & INVYR >= ANN_INV_START) %>% 
+  summarize(n.month = n())
+```
+
+The result was about what you might expect for a country that has mostly temperate forests and where field work is limited to many regions in the winter months. The total number of FIA plot measurements was smallest in December (12,786 measurements) and largest in June (22,836 measurements). Not surprisingly, the majority of FIA plots are measured in the summer months when field work is most active.
+
+```{r, echo=F, message=F, warning=F}
+p.fia <- fia2 %>% 
+  filter(PLOT_STATUS_CD == 1 & !is.na(MEASMON) & INVYR >= ANN_INV_START) %>% 
+  arrange(MEASMON) %>% 
+  ggplot(aes(x = reorder(factor(MONNAME), MEASMON), fill = MONNAME)) +
+  geom_bar(width = 1, color = "black") + 
+  coord_polar() + 
+  scale_color_brewer(palette = "Blues") +
+  labs(x = " ",
+       y = " ",
+       title = "Number of FIA plot measurements in each month",
+       subtitle = "Minimum of 12,796 in Dec; maximum of 22,836 in June") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "white"),
+        legend.position = "none",
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(color = "black", size = 14),
+        axis.ticks = element_blank())
+p.fia
+```
+
+The monthly trends in forest inventory data collection is not constant across different regions in the US. In the Southeast and North Central regions of the US, the number of forest inventories occur at generally the same rate across the year.
+
+But in regions where snow and cold temperatures present a barrier to getting field work done in the winter, few forest inventories occur. In the Northeast, Rocky Mountain and West Coast states, the forest inventories begin in earnest in April and then mostly conclude by October. Some forest inventories occur in the winter months but in small numbers.
+
+```{r, echo=F, message=F, warning=F}
+p.fia.se <- fia2 %>% 
+  filter(PLOT_STATUS_CD == 1 & !is.na(MEASMON) & INVYR >= ANN_INV_START &
+           REGION_NAME == "Southeast") %>% 
+  arrange(MEASMON) %>% 
+  ggplot(aes(x = reorder(factor(MONNAME), MEASMON), fill = MONNAME)) +
+  geom_bar(width = 1, color = "black") + 
+  coord_polar() + 
+  scale_color_brewer(palette = "Blues") +
+  labs(x = " ",
+       y = " ",
+       title = "Southeast ") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "white"),
+        legend.position = "none",
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(color = "black"),
+        axis.ticks = element_blank())
+
+p.fia.nc <- fia2 %>% 
+  filter(PLOT_STATUS_CD == 1 & !is.na(MEASMON) & INVYR >= ANN_INV_START &
+           REGION_NAME == "North-Central") %>% 
+  arrange(MEASMON) %>% 
+  ggplot(aes(x = reorder(factor(MONNAME), MEASMON), fill = MONNAME)) +
+  geom_bar(width = 1, color = "black") + 
+  coord_polar() + 
+  scale_color_brewer(palette = "Blues") +
+  labs(x = " ",
+       y = " ",
+       title = "North Central") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "white"),
+        legend.position = "none",
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(color = "black"),
+        axis.ticks = element_blank())
+
+
+p.fia.ne <- fia2 %>% 
+  filter(PLOT_STATUS_CD == 1 & !is.na(MEASMON) & INVYR >= ANN_INV_START &
+           REGION_NAME == "Northeast") %>% 
+  arrange(MEASMON) %>% 
+  ggplot(aes(x = reorder(factor(MONNAME), MEASMON), fill = MONNAME)) +
+  geom_bar(width = 1, color = "black") + 
+  coord_polar() + 
+  scale_color_brewer(palette = "Blues") +
+  labs(x = " ",
+       y = " ",
+       title = "Northeast") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "white"),
+        legend.position = "none",
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(color = "black"),
+        axis.ticks = element_blank())
+
+
+
+p.fia.rm <- fia2 %>% 
+  filter(PLOT_STATUS_CD == 1 & !is.na(MEASMON) & INVYR >= ANN_INV_START &
+           REGION_NAME == "Rocky Mountian") %>% 
+  arrange(MEASMON) %>% 
+  ggplot(aes(x = reorder(factor(MONNAME), MEASMON), fill = MONNAME)) +
+  geom_bar(width = 1, color = "black") + 
+  coord_polar() + 
+  scale_color_brewer(palette = "Blues") +
+  labs(x = " ",
+       y = " ",
+       title = "Rocky Mountain") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "white"),
+        legend.position = "none",
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(color = "black"),
+        axis.ticks = element_blank())
+
+
+
+p.fia.west <- fia2 %>% 
+  filter(PLOT_STATUS_CD == 1 & !is.na(MEASMON) & INVYR >= ANN_INV_START &
+           REGION_NAME == "West Coast") %>% 
+  arrange(MEASMON) %>% 
+  ggplot(aes(x = reorder(factor(MONNAME), MEASMON), fill = MONNAME)) +
+  geom_bar(width = 1, color = "black") + 
+  coord_polar() + 
+  scale_color_brewer(palette = "Blues") +
+  labs(x = " ",
+       y = " ",
+       title = "West Coast") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "white"),
+        legend.position = "none",
+        axis.text.y = element_blank(),
+        axis.text.x = element_text(color = "black"),
+        axis.ticks = element_blank())
+
+(p.fia.se | p.fia.nc) /
+  (p.fia.ne | p.fia.rm | p.fia.west)
+```
+
+The polar area diagrams using the FIA data are revealing because they show cyclical data through the calendar year and they visualize the number of plot measurements in each month. Other visualizations of these data could include a pie graph or histogram, but the polar area diagram can make each data point “pop”.
+
+## Conclusion
+Polar area diagrams are a mix of pie charts and histograms. They have identical angles and extend from the plot’s center depending on the magnitude of the values that are plotted. Popularized by Florence Nightingale in the 1850s, polar area diagrams can be an effective way to visualize cyclical data in forestry settings. 
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
+  
+
