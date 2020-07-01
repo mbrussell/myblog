@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/using-clustering-with-logging-industry-data/</loc>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</loc>
     <lastmod>2020-06-21T00:00:00+00:00</lastmod>
   </url>
@@ -184,7 +189,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -194,13 +199,13 @@
   
   <url>
     <loc>/tags/analytics/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/analytics/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -248,7 +253,7 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -272,7 +277,7 @@
   
   <url>
     <loc>/tags/clustering/</loc>
-    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -362,7 +367,7 @@
   
   <url>
     <loc>/tags/forest-industry/</loc>
-    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -500,19 +505,19 @@
   
   <url>
     <loc>/tags/k-means/</loc>
-    <lastmod>2019-07-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/logging/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/machine-learning/</loc>
-    <lastmod>2020-01-13T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -572,7 +577,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -715,7 +720,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

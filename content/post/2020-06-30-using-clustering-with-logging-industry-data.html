@@ -1,0 +1,53 @@
+---
+title: Using clustering with logging industry data
+author: Matt Russell
+date: '2020-06-30'
+slug: using-clustering-with-logging-industry-data
+categories:
+  - Analytics
+tags:
+  - analytics
+  - clustering
+  - Machine learning
+  - k-means
+  - logging
+  - forest industry
+---
+
+
+
+<p>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.</p>
+<p>The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.</p>
+<p>Clustering is an <a href="https://en.wikipedia.org/wiki/Unsupervised_learning">unsupervised ML</a> algorithm that groups items. Data points that get grouped in the same cluster are similar in nature. A variety of clustering algorithms, such as k-means clustering, can identify how to group data.</p>
+<p>Analysts can identify the appropriate number of clusters to group data. The process of clustering allows us to recognize patterns that might appear in the data, without needing to analyze it through detailed quantitative analysis.</p>
+<p>In the forest products industry, potential applications of clustering and other unsupervised ML techniques include the following:</p>
+<ul>
+<li>A consulting forester seeks to segment her database of private landowners to identify properties that may be eligible for cost-share funding.</li>
+<li>A forestry equipment supplier seeks to use market analysis to identify potential logging companies interested in purchasing new equipment.</li>
+<li>A sawmill using high-grade hardwood lumber seeks to identify suppliers of a small amount of low-quality logs that are used in its production.</li>
+</ul>
+<p>Identifying patterns through techniques like clustering can reduce the burden of having too much data that are messy and complex. Patterns can help to partition large volumes of data into smaller groups that can be used to more efficiently solve complex tasks.</p>
+<div id="case-study-logger-demographics-and-equipment" class="section level2">
+<h2>Case study: Logger demographics and equipment</h2>
+<p>A recent study of <a href="https://www.forestry.umn.edu/sites/forestry.umn.edu/files/mn_2016_logging_staff_paper_final_feb_2019.pdf">loggers in Minnesota</a> indicated that logging businesses are aging and many of them use old equipment in their operations. The age of a logging business is likely related to other demographics such as the amount of wood volume produced by a logger, how much revenue the business takes in, and the kind of equipment used by the logger.</p>
+<p>We can use clustering to help us find patterns or groups within the Minnesota logger data. The figure shows four clusters of loggers based on their years in operation and the age of the newest feller buncher used in their operations:</p>
+<center>
+<div class="figure">
+<img src="/post/using-clustering-with-logging-industry-data/loggerEqpt.png" width="400" alt="" />
+<p class="caption"><em>Clustering can be used to identify logger needs for new harvesting equipment based on their years in operation and the age of the equipment they currently use.</em></p>
+</div>
+</center>
+<p>Investigating each cluster provides insight into each group that emerges:</p>
+<ul>
+<li>Established companies, new equipment (far right). These are established companies that are working with new logging equipment. They have a long history and likely have strong relationships with landowners that supply the wood that they harvest.</li>
+<li>Younger companies, new equipment (middle, bottom). These are younger companies that are working with new logging equipment. They likely have solid growth opportunities as a company because their equipment can lead to efficient harvesting of wood and increased in-woods productivity.</li>
+<li>Older companies, older equipment (middle, top). These are older companies that are working with relatively old logging equipment. These loggers may be at the greatest risk of market changes: they have not invested in capital expenditures in their equipment, yet likely have established relationships with landowners that provide wood for harvest.</li>
+<li>Young companies, old equipment (far left). These are young companies that do not have a long history and are working with old logging equipment. They may be seeking to establish relationships with landowners.</li>
+</ul>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Clustering can identify patterns and unearth new trends in how data are arranged in your organization. Data points are grouped into clusters if they have similar characteristics. It can be a useful technique for forest analysts that don’t necessarily require a numeric answer to analytics problem.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>

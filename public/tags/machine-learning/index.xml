@@ -6,10 +6,21 @@
     <description>Recent content in Machine Learning on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using clustering with logging industry data</title>
+      <link>/post/using-clustering-with-logging-industry-data/</link>
+      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/using-clustering-with-logging-industry-data/</guid>
+      <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.
+The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.
+Clustering is an unsupervised ML algorithm that groups items.</description>
+    </item>
     
     <item>
       <title>How to determine accuracy of classification models (with forestry data)</title>
