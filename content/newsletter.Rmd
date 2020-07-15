@@ -1,7 +1,7 @@
 ---
 title: Newsletter
 author: Matt Russell
-date: '2020-04-28'
+date: '2020-07-15'
 slug: newsletter
 ---
 ## Email newsletter  

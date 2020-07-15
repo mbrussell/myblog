@@ -1,0 +1,86 @@
+---
+title: Wages for logging truckers much lower than other transportation industries
+author: Matt Russell
+date: '2020-07-15'
+slug: wages-for-logging-truckers-much-lower-than-other-transportation-industries
+categories:
+  - Analytics
+tags:
+  - trucking
+  - transportation
+  - careers
+  - jobs
+  - forest products
+  - logging
+---
+
+<center>
+![*Log truck (photo: Darin Oswald)*](/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/logging-truck.jpg){width=250px} 
+</center>
+
+
+"To solve any problem in forestry, first figure out where the roads will go."
+
+That is a quote that I've heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it. 
+
+This makes truckers an essential part of the forest products industry. Not unlike the logging industry, the average age of truckers is increasing. Many loggers and truckers are at retirement age or will reach retirement age within the next 10 years. Recruiting a new cohort of younger workers to take their place is a challenge that many companies in the industry are facing.  
+
+The forest products industry, along with others, is facing a workforce shortage in truckers. This presents a tremendous concern that will impact the supply of wood to mills and ultimately the health of the forest products industry. 
+
+Truckers that haul products from the woods to the mill might have better-paying options doing the same kind of work in other industries. For example, [in Maine](https://maineloggers.com/maine-logger-and-log-trucker-employment-availability-and-wage-analysis-report-released%EF%BB%BF/), a recent study observed that trucker wages in growing industries such as merchant wholesalers (e.g., companies like Walmart) offer wages significantly higher than similar jobs in the forestry and logging sector.
+
+Truckers in the forest products sector also face challenges in their daily work that may not be found in other sectors. Logging truckers deal with [significant wait times at mills](https://arbor-analytics.com/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/), which may limit the number of trips a trucker can haul in a day. Logging truckers must also follow federal weight limits on roads, which often means avoiding interstates and trucking on state and local roads, adding additional time to trips. While many efficiencies have been made in logging equipment in the last several decades, fewer advances in technology and equipment have been made to log trucks and the trucking process.  
+
+Data from the US Bureau of Labor Statistics quantifies wages in different industries using the North American Industry Classification System (NAICS). Specific occupations are then listed within each NIACS classification. For the data presented here, all Heavy and Tractor-Trailer Truck Drivers were obtained if total employment in an occupations was at least 7,000 workers.
+
+Across all US states, data indicated that truckers in the Forestry and Logging classification earn a median of **$19.44 per hour**. Eighty percent of logging truckers earn between **$12.99 and $29.34 per hour**. 
+
+The following figure shows the 10th, 25th, 75th, and 90th percentiles along with the median for hourly trucking wages. Compared to the top 25 industries that employ Heavy and Tractor-Trailer Truck Drivers, truckers in the Forestry and Logging industry rank 22nd in median hourly wage:
+
+
+```{r, echo = F, message = F, warning = F}
+library(googlesheets4)
+library(tidyverse)
+library(gghighlight)
+```
+
+```{r, echo = F, message = F, warning = F}
+truck <- read_sheet("https://docs.google.com/spreadsheets/d/1osKKINnhZjfJ0Wi_lMJe5pME87hDgpkBXYF0INCnz3A/edit?usp=sharing")
+```
+
+```{r, echo = F, message = F, warning = F}
+truck2 <- truck %>% 
+  filter(i_group == "3-digit" & tot_emp > 7000) %>% 
+  arrange(desc(tot_emp)) %>% 
+  select(naics_title, h_pct10, h_pct25, h_median, h_pct75, h_pct90)
+```
+
+```{r, echo = F, message = F, warning = F, results = "hide"}
+truck3 <- truck2 %>% 
+  pivot_longer(h_pct10:h_pct90) %>% 
+  mutate(value = as.numeric(value),
+         For_ID = ifelse(naics_title == "Forestry and Logging", "For", "NotFor"))
+
+head(sort(truck3[[1]], decreasing=TRUE), 3) 
+```
+
+```{r, echo = F, message = F, warning = F}
+p.wage <- ggplot(truck3, aes(reorder(factor(naics_title), value, FUN=median), value, fill = For_ID)) +
+  geom_boxplot() +
+    gghighlight(naics_title == "Forestry and Logging") +
+  coord_flip() +
+  labs(x = "", y = "Hourly wage (US$)",
+       caption = "Source: US Bureau of Labor Statistics, Occupational Employment by Industry Research Estimates, 2019") +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"),
+        legend.position = "none")
+p.wage
+```
+
+Logging truckers lag behind other transportation industries in the amount their workers earn. For comparison, truckers in the warehousing and storage industry earn $22.58 per hour on average, or **19% more than those in the logging industry**.
+
+In summary, truckers in the logging industry face a number of challenges to remain competitive with similarly-skilled truckers in other professions. Logging truckers also face barriers to productivity such as long wait times at mills, federal weight limits on roads, and low wages compared to other industries. These challenges can be better addressed by investigating the contribution of logging truckers within the transportation sector.  
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*

@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/newsletter/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/using-clustering-with-logging-industry-data/</loc>
     <lastmod>2020-06-30T00:00:00+00:00</lastmod>
   </url>
@@ -39,11 +49,6 @@
   
   <url>
     <loc>/post/forest-carbon-cheat-sheet/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/newsletter/</loc>
     <lastmod>2020-04-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -189,7 +194,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -205,7 +210,7 @@
   
   <url>
     <loc>/categories/analytics/</loc>
-    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -247,13 +252,13 @@
   
   <url>
     <loc>/tags/careers/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -391,7 +396,7 @@
   
   <url>
     <loc>/tags/forest-products/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -499,7 +504,7 @@
   
   <url>
     <loc>/tags/jobs/</loc>
-    <lastmod>2020-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -511,7 +516,7 @@
   
   <url>
     <loc>/tags/logging/</loc>
-    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -577,7 +582,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-06-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -755,8 +760,20 @@
   </url>
   
   <url>
+    <loc>/tags/transportation/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/trillion-trees/</loc>
     <lastmod>2020-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/trucking/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
