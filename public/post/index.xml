@@ -6,10 +6,21 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Forest carbon stocks in every US state</title>
+      <link>/post/carbon-by-state/</link>
+      <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/carbon-by-state/</guid>
+      <description>photo by Sean MacEntee
+In April 2020, the USDA Forest Service published Greenhouse gas emissions and removals from forest land, woodlands, and urban trees in the United States, 1990-2018. What makes this annual report unique is that forest carbon estimates are reported for each US state. Data are available in an appendix which lists forest carbon stocks and flux for each state from 1990 to 2018.
+Across the US, forests, urban trees, and harvested wood products are the largest carbon sink.</description>
+    </item>
     
     <item>
       <title>Wages for logging truckers much lower than other transportation industries</title>
