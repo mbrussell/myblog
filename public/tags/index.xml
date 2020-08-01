@@ -6,7 +6,7 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Analytics</title>
       <link>/tags/analytics/</link>
-      <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/analytics/</guid>
       <description></description>
@@ -120,6 +120,15 @@
     </item>
     
     <item>
+      <title>Conference</title>
+      <link>/tags/conference/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Data Import</title>
       <link>/tags/data-import/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
@@ -179,6 +188,15 @@
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/disturbance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Economics</title>
+      <link>/tags/economics/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/economics/</guid>
       <description></description>
     </item>
     
