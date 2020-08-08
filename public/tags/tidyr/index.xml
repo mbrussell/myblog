@@ -6,10 +6,20 @@
     <description>Recent content in Tidyr on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/tidyr/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Forget spreading and gathering your R data, try pivoting instead</title>
+      <link>/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
+      <description>Reshaping data from a wide to a long format, or vice versa, is one of the most common data manipulation tasks that analysts need to do. One of my first posts on this blog was on how to do this in R.
+That post highlighted the spread() and gather() functions available from the tidyr package. As it turns out, the gather() and spread() functions are still available to use but are no longer under active development.</description>
+    </item>
     
     <item>
       <title>Spreading and gathering tree data</title>

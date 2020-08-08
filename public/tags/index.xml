@@ -6,7 +6,7 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Analytics</title>
       <link>/tags/analytics/</link>
-      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/analytics/</guid>
       <description></description>
@@ -489,6 +489,24 @@
     </item>
     
     <item>
+      <title>Pivot_long</title>
+      <link>/tags/pivot_long/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pivot_long/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pivot_wide</title>
+      <link>/tags/pivot_wide/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pivot_wide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Polar Area Diagram</title>
       <link>/tags/polar-area-diagram/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
@@ -536,7 +554,7 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
@@ -662,7 +680,7 @@
     <item>
       <title>Tidyr</title>
       <link>/tags/tidyr/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/tidyr/</guid>
       <description></description>

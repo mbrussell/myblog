@@ -1,0 +1,544 @@
+---
+title: Forget spreading and gathering your R data, try pivoting instead
+author: Matt Russell
+date: '2020-08-08'
+slug: forget-spreading-and-gathering-your-r-data-try-pivoting-instead
+categories:
+  - Analytics
+tags:
+  - analytics
+  - R
+  - tidyr
+  - pivot_long
+  - pivot_wide
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<p>Reshaping data from a wide to a long format, or vice versa, is one of the most common data manipulation tasks that analysts need to do. One of <a href="https://arbor-analytics.com/post/spreading-and-gathering-tree-data/">my first posts on this blog</a> was on how to do this in R.</p>
+<p>That post highlighted the <code>spread()</code> and <code>gather()</code> functions available from the <strong>tidyr</strong> package. As it turns out, the <code>gather()</code> and <code>spread()</code> functions are still available to use but are no longer under active development.</p>
+<p>Two newer functions available in <strong>tidyr</strong> are <code>pivot_longer()</code> and <code>pivot_wider()</code>. These functions “lengthen” and “widen” a data set. According to <a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">the function documentation</a>, these two functions are designed to be easier to use and can handle more use cases.</p>
+<p>To examine how the functions work, say you had an experiment with the number of tree seedlings. These seedlings were initially measured in eight different plots. Five years later the same seedlings were measured again.</p>
+<p>The <code>veg</code> data set is formatted long and contains the “pre” (initial) and “post”" (five years later) measurements, along with the number of seedlings per acre:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-3">Table 1: </span>The seedling dataset.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+PlotID
+</th>
+<th style="text-align:left;">
+Period
+</th>
+<th style="text-align:right;">
+Seedlings
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1200
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+800
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1250
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+950
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1350
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+1200
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1200
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+650
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1100
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+950
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1350
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+900
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1200
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+650
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1240
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+910
+</td>
+</tr>
+</tbody>
+</table>
+<p>So what happened during the five years? The number of tree seedlings generally decreased. Trees grew larger into the sapling class and many seedlings suffered mortality. Here is a violin plot that shows the trend:</p>
+<p><img src="/post/2020-08-07-forget-spreading-and-gathering-your-r-data-try-pivoting-instead_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Now, how to visualize the change in tree seedlings between the two measurements? We can convert the <code>veg</code> data to a wide format using the <code>pivot_wider()</code> function from the <strong>tidyr</strong> package. The result will turn the 16 rows of data into eight rows of data. In this new data set called <code>veg_wide</code>, seedlings will be stored in two columns: the pre and post measurements:</p>
+<pre class="r"><code>veg_wide &lt;- veg %&gt;% 
+  pivot_wider(names_from = Period, values_from = Seedlings)</code></pre>
+<p>In the <code>names_from</code> argument, you state which column(s) you want to provide in the new output column(s). In our example we create two new columns called <code>Pre</code> and <code>Post</code> that correspond to each of the seedling measurements. In the <code>values_from</code> statement, you state which column(s) to input the cell values into. In our example, are can compare the <code>Pre</code> and <code>Post</code> measurements now that they’re side-by-side:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-6">Table 2: </span>The seedling dataset in a WIDE format.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+PlotID
+</th>
+<th style="text-align:right;">
+Pre
+</th>
+<th style="text-align:right;">
+Post
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1200
+</td>
+<td style="text-align:right;">
+800
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1250
+</td>
+<td style="text-align:right;">
+950
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1350
+</td>
+<td style="text-align:right;">
+1200
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1200
+</td>
+<td style="text-align:right;">
+650
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1100
+</td>
+<td style="text-align:right;">
+950
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1350
+</td>
+<td style="text-align:right;">
+900
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+1200
+</td>
+<td style="text-align:right;">
+650
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1240
+</td>
+<td style="text-align:right;">
+910
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now we can easily calculate a new variable that quantifies the change in the number of seedlings, called <code>delta_Seedlings</code>. We’ll use the <code>mutate()</code> function:</p>
+<pre class="r"><code>veg_wide &lt;- veg_wide %&gt;% 
+  mutate(delta_Seedlings = Post - Pre)</code></pre>
+<p>Now we can visualize the primary variable we’re interested in:</p>
+<p><img src="/post/2020-08-07-forget-spreading-and-gathering-your-r-data-try-pivoting-instead_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>The data are now presented in a wide format. Now, we can the <code>pivot_longer()</code> function to make this in a new data frame called <code>veg_long</code>.</p>
+<pre class="r"><code>veg_long &lt;- veg_wide %&gt;% 
+  pivot_longer(-PlotID, names_to = &quot;Period&quot;, values_to = &quot;Seedlings&quot;) %&gt;% 
+  filter(Period != &quot;delta_Seedlings&quot;) </code></pre>
+<p>The <code>-</code> operator in the first argument indicates which column(s) you want to pivot (i.e., <code>PlotID</code>). The <code>names_to</code> argument names the new column based on the “wide” column names. We will name this new column <code>Period</code> which will collapse the <code>Pre</code> and <code>Post</code> variables. The <code>values_to</code> argument provides the name of the column to create that was stored in each of the cell values (i.e., the seedling measurements).</p>
+<p>Note that the <code>veg_long</code> data set pivots <em>all</em> of the variables in a data set—in our example we suppressed the output of the <code>delta_Seedlings</code> variable using the <code>filter()</code> function from the <strong>dplyr</strong> package.</p>
+<p>Here is how that data set looks:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-10">Table 3: </span>The seedling dataset in a LONG format.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+PlotID
+</th>
+<th style="text-align:left;">
+Period
+</th>
+<th style="text-align:right;">
+Seedlings
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1200
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+800
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1250
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+950
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1350
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+1200
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1200
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+650
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1100
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+950
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1350
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+900
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1200
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+650
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Pre
+</td>
+<td style="text-align:right;">
+1240
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Post
+</td>
+<td style="text-align:right;">
+910
+</td>
+</tr>
+</tbody>
+</table>
+<p>Look familiar? The <code>veg_long</code> and original <code>veg</code> data sets are identical. Try out the <code>pivot_wider()</code> and <code>pivot_longer()</code> functions the next time you’re reshaping data. They are two of many functions in R for organizing <a href="https://tidyr.tidyverse.org/articles/pivot.html">tidy data</a>.</p>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
