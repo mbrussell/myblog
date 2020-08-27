@@ -6,10 +6,20 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>31 R packages for forest analysts</title>
+      <link>/post/31-r-packages-for-forest-analysts/</link>
+      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/31-r-packages-for-forest-analysts/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.
+The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
+    </item>
     
     <item>
       <title>Forget spreading and gathering your R data, try pivoting instead</title>

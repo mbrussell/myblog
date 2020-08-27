@@ -1,0 +1,53 @@
+---
+title: 31 R packages for forest analysts
+author: Matt Russell
+date: '2020-08-26'
+slug: 31-r-packages-for-forest-analysts
+categories:
+  - Analytics
+tags:
+  - analytics
+  - R
+  - forest measurements
+  - Data science
+  - statistics
+  - R packages
+---
+
+The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users. 
+
+The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others. In turn, users can provide feedback on the functions and uses of the package to improve it. 
+
+As of today, the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/web/packages/) package repository has archived 16,166 packages since 2006. From all of these packages, how many of these might be of interest to forest analysts?
+
+Here are [31 different R packages](https://docs.google.com/spreadsheets/d/1GTVJsQ-MthC7dMDarts68Q9lSxMgerzUs198RkGHaII/edit?usp=sharing) that have specific applications for forest analysts. These packages include only those that are archived on the CRAN repository. Many more R packages exist through other services such as Github. Not all R packages are available on CRAN ([because it’s difficult](https://kbroman.org/pkg_primer/pages/cran.html)), but Github allows users to easily see packages and the code behind them as they're being developed.
+
+Any package available on CRAN has been vetted with scrutiny, so you can be sure that the forestry-specific ones are ready for a "prime time" analysis. In my searching for all forestry packages on CRAN, I realized that the keywords “tree” and “forest” do not help much when searching for forestry packages. Most packages that mention “tree” or “forest” in their description are about topics such as random forests, regression trees, or decision trees: 
+
+```{r, echo = F, message = F, warning =F}
+library(tidyverse)
+
+df <- tribble(
+  ~name, ~value,
+  "Packages actually about forestry", 31,
+  " Packages with 'tree' \n or 'forest' in their name", 340
+)
+
+ggplot(df, aes(name, value)) +
+  geom_bar(stat="identity", fill = "blue", col = "black") +
+#  coord_polar() +
+#  coord_flip() +
+  labs(y = "Number of R packages", x = "") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+
+```
+
+I wrote about the value of R packages in the article *[Nine Tips to Improve Your Everyday Forest Data Analysis](https://doi.org/10.1093/jofore/fvaa034)*, now available in the *Journal of Forestry*. 
+
+Which R package is missing from the list? [Email me](mailto:matt@arbor-analytics.com) with your comments and i'd love to hear which forestry packages you use.
+
+--
+
+*By Matt Russell. My [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) has in-depth analysis on data and analytics in the forest products industry.*
+
