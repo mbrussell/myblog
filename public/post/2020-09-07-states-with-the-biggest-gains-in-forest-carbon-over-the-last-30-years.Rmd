@@ -1,0 +1,120 @@
+---
+title: States with the biggest gains in forest carbon over the last 30 years
+author: Matt Russell
+date: '2020-09-07'
+slug: states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years
+categories:
+  - Carbon
+tags:
+  - analytics
+  - carbon
+  - forest inventory
+  - forestry
+---
+
+```{r,  echo = F, message = F, warning = F}
+knitr::opts_chunk$set(
+  echo = F, message = F, warning = F
+)
+options(scipen=10000)
+```
+
+```{r}
+library(tidyverse)
+library(knitr)
+library(formattable)
+library(kableExtra)
+```
+
+Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.
+
+The value of carbon in forests has seen a tremendous increase in recent years. The increase in voluntary forest carbon markets have required analysts to have a better understanding of carbon attributes in the forests they work in. Initiatives such as the [Trillion Trees Campaign](https://arbor-analytics.com/post/how-much-carbon-is-stored-in-a-trillion-trees/) have garnered international attention as it seeks plant trees for the carbon benefits they provide.
+
+Despite the increasing importance of understanding the amount of carbon that forests can store and sequester, easy-to-access information at the state level has historically been difficult to obtain. As it's said, all forest management is local.
+
+Last spring, the USDA Forest Service published ["Greenhouse gas emissions and removals from forest land, woodlands, and urban trees in the United States, 1990-2018"](https://www.nrs.fs.fed.us/pubs/59852). For the first time, detailed estimates were provided for each US state, including forest carbon storage, net flux of carbon, and carbon stored in different pools. In the USDA report, forest carbon pools include: 
+
+* aboveground biomass,
+* belowground biomass,
+* dead wood,
+* litter,
+* soil (mineral), and
+* soil (organic)
+
+The report provides annual trends in forest carbon stocks dating back to 1990 for each US state. The year 1990 is the benchmark to which most carbon emissions analyses are based, coinciding with  early targets set forth in the Kyoto Protocol.
+
+## Southeastern states have seen the greatest gains in forest carbon 
+
+Forest carbon stocks in the state of Mississippi have **increased by 50.4%** since 1990, from 823 to 1238 million metric tonnes (MMT). Eleven of the states with the greatest gains in forest carbon are located in the southeastern US (including Maryland). 
+
+In total, **39 US states** have seen overall forest carbon gains since 1990. (Carbon stocks in North Dakota remained the same over this time period.) Forest carbon stocks in Mississippi also had the largest total increase in forest carbon stocks, followed by Oregon (an increase of 326 MMT) and Alabama (an increase of 318 MMT).
+
+## Western states have seen the greatest losses in forest carbon 
+
+The greatest percent loss in forest carbon was in Wyoming. Forest carbon stocks in Wyoming **decreased by 13.4%** since 1990, from 529 to 458 MMT. All other states that saw losses in forest carbon since 1990 are located in the western US.  
+
+In total, eight US states have seen overall forest carbon losses since 1990. Aside from Wyoming, all other losses were in the single percentage points. Forest carbon stocks in Colorado had the largest total decrease in forest carbon stocks (a decrease of 81 MMT) followed by Montana (a decrease of 79 MMT).
+
+```{r, echo = F, message = F, warning = F}
+#trends <- read_sheet("https://docs.google.com/spreadsheets/d/1nTja9uSdwLoDNFpbLsUJIHdEKWEsZp2Jo_MKTKXGXh0/edit?usp=sharing")
+
+trends <- read_csv('C:/Users/russellm/Documents/Arbor/Projects/FRAStateCarbon/Data/trends.csv')
+
+trends_state <- trends %>% 
+  group_by(StateName) %>% 
+  summarize(min_C = first(C_MMT),
+            max_C = last(C_MMT)) 
+ 
+trends_state <- trends_state %>% 
+  mutate(pct_change = ((max_C - min_C)/min_C) * 100,
+         change = ((max_C - min_C)))
+
+trends_state <- trends_state %>%
+  mutate(pct_change_round = round(pct_change, 0),
+         pct_change_round_char = paste(pct_change_round,"%",sep=""),
+         pct_change_color = ifelse(pct_change >= 0, "Pos", "Neg")) 
+
+p.trends <- ggplot(trends_state, aes(reorder(StateName, pct_change), pct_change, 
+                                     fill = pct_change_color, col = "black")) +
+  geom_bar(stat = "identity",  col = "black") +
+  coord_flip() +
+    scale_fill_manual(breaks = c("Neg", "Pos"),
+                        values=c("red", "darkgreen")) +
+    labs(y = "Percent change in forest carbon, 1990-2019", 
+         x = " ",
+         caption = "Source: USDA Forest Service Resource Update FS-227") +
+   scale_y_continuous(limits = c (-20, 55)) +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black", size = 8),
+        legend.title = element_blank(),
+        legend.key=element_blank(),
+        legend.position = "none") +
+    guides(col = guide_legend(ncol = 2))
+p.trends
+```
+
+```{r}
+trends_state2 <- trends_state %>% 
+    arrange(-pct_change) %>% 
+  select(StateName, min_C, max_C, pct_change_round_char)
+
+
+trends_state3 <- trends_state2 %>% 
+  rename(State = StateName, 
+         `Forest carbon in 1990 (MMT)` = min_C, 
+         `Forest carbon in 2019 (MMT)` = max_C, 
+         `Percent change, 1990-2019` = pct_change_round_char)
+  
+trends_state3 %>% 
+   kable("html", caption = 'Trends in forest carbon stocks in 48 US states, 1990-2019.') %>%
+   kable_styling()
+```
+
+## US forest carbon stocks have increased by 11% from 1990 to 2019
+
+Forest carbon stocks across the lower 48 US states have increased from 41,814 MMT in 1990 to 46,221 MMT in 2019. Considering this area occupies 635.3 million acres of forests and is 34% forested, the gains in forest carbon in the country over the last 30 years represent a substantial increase in trees and forests sequestering carbon from the atmosphere. 
+
+--
+
+*By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
