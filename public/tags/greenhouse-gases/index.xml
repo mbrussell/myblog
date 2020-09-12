@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Greenhouse Gases on </title>
+    <link>/tags/greenhouse-gases/</link>
+    <description>Recent content in Greenhouse Gases on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/greenhouse-gases/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New state-level forest carbon fact sheets available</title>
+      <link>/post/new-state-level-forest-carbon-fact-sheets-available/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/new-state-level-forest-carbon-fact-sheets-available/</guid>
+      <description>An example forest carbon fact sheet from Maine.
+Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. Despite the increasing importance of understanding the amount of carbon that forests can store and sequester, easy-to-access information at the state level is difficult to obtain.
+Arbor Custom Analytics recently worked with the Forest Resources Association to create a series of fact sheets at the state, region, and national level.</description>
+    </item>
+    
+  </channel>
+</rss>

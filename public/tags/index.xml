@@ -6,7 +6,7 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Analytics</title>
       <link>/tags/analytics/</link>
-      <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/analytics/</guid>
       <description></description>
@@ -59,7 +59,7 @@
     <item>
       <title>Carbon</title>
       <link>/tags/carbon/</link>
-      <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/carbon/</guid>
       <description></description>
@@ -239,7 +239,7 @@
     <item>
       <title>Forest Products</title>
       <link>/tags/forest-products/</link>
-      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/forest-products/</guid>
       <description></description>
@@ -336,6 +336,15 @@
     </item>
     
     <item>
+      <title>Greenhouse Gases</title>
+      <link>/tags/greenhouse-gases/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/greenhouse-gases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Guest Workers</title>
       <link>/tags/guest-workers/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
@@ -386,6 +395,15 @@
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/inspectdf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Invasive Species</title>
+      <link>/tags/invasive-species/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/invasive-species/</guid>
       <description></description>
     </item>
     
@@ -554,7 +572,7 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
@@ -779,7 +797,7 @@
     <item>
       <title>Workshop</title>
       <link>/tags/workshop/</link>
-      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/workshop/</guid>
       <description></description>

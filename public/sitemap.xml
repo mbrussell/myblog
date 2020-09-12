@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/new-state-level-forest-carbon-fact-sheets-available/</loc>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/events/r-statistical-software-for-invasive-species-applications/</loc>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</loc>
     <lastmod>2020-09-07T00:00:00+00:00</lastmod>
   </url>
@@ -219,7 +229,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -229,7 +239,7 @@
   
   <url>
     <loc>/tags/analytics/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -265,13 +275,13 @@
   
   <url>
     <loc>/tags/carbon/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/carbon/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -403,7 +413,7 @@
   
   <url>
     <loc>/events/</loc>
-    <lastmod>2019-10-19T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -439,7 +449,7 @@
   
   <url>
     <loc>/tags/forest-products/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -510,6 +520,12 @@
   </url>
   
   <url>
+    <loc>/tags/greenhouse-gases/</loc>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/guest-workers/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -542,6 +558,12 @@
   <url>
     <loc>/tags/inspectdf/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/invasive-species/</loc>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -637,7 +659,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -684,7 +706,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2020-08-26T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -786,7 +808,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -858,7 +880,7 @@
   
   <url>
     <loc>/tags/workshop/</loc>
-    <lastmod>2019-10-19T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

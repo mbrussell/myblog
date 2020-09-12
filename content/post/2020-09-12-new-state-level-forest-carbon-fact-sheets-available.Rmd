@@ -1,0 +1,30 @@
+---
+title: New state-level forest carbon fact sheets available
+author: Matt Russell
+date: '2020-09-14'
+slug: new-state-level-forest-carbon-fact-sheets-available
+categories:
+  - Carbon
+tags:
+  - analytics
+  - carbon
+  - forest products
+  - greenhouse gases
+---
+
+
+![*An example forest carbon fact sheet from Maine.*](Maine.jpg)
+
+Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. Despite the increasing importance of understanding the amount of carbon that forests can store and sequester, easy-to-access information at the state level is difficult to obtain. 
+
+Arbor Custom Analytics recently worked with the [Forest Resources Association](https://www.forestresources.org/) to create a series of fact sheets at the state, region, and national level. The new fact sheets are available here.
+
+The new fact sheets present the status and trends in forest carbon storage and sequestration using data from the USDA Forest Service Forest Inventory and Analysis program. Carbon dioxide emissions data were compiled from the Environmental Protection Agency.  
+
+The fact sheets present different units of measure for forest carbon at the stand and landscape scale. A better understanding of forest carbon can assist in understanding the role of forests in carbon markets, using wood in harvested wood products such as mass timber, and using forest management to mitigate the impacts of climate change to forests. 
+
+[DOWNLOAD THE FACT SHEETS HERE.](https://www.forestresources.org/policy-priorities/carbon-fact-sheets)
+
+--
+
+*By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
