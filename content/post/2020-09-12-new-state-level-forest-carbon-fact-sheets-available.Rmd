@@ -1,7 +1,7 @@
 ---
 title: New state-level forest carbon fact sheets available
 author: Matt Russell
-date: '2020-09-14'
+date: '2020-09-12'
 slug: new-state-level-forest-carbon-fact-sheets-available
 categories:
   - Carbon
