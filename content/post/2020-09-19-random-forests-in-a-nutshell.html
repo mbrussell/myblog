@@ -1,0 +1,84 @@
+---
+title: Random forests in a nutshell
+author: Matt Russell
+date: '2020-09-19'
+slug: random-forests-in-a-nutshell
+categories:
+  - Machine learning
+tags:
+  - analytics
+  - random forests
+  - classification
+  - Machine learning
+  - Data science
+---
+
+
+
+<p>Random forests have exploded in popularity in the forestry discipline in recent years. <a href="https://en.wikipedia.org/wiki/Random_forest">Random forests (RF)</a> are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.</p>
+<p>The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article. The use of RF methods has grown in the last several years:</p>
+<p><img src="/post/2020-09-19-random-forests-in-a-nutshell_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div id="how-do-random-forests-work" class="section level2">
+<h2>How do random forests work?</h2>
+<p>First, several small samples of the entire data set are taken. Any observations that are not taken are called “out-of-bag” samples.</p>
+<div class="figure">
+<img src="/post/random-forests-in-a-nutshell/bootstrap.png" width="500" alt="" />
+<p class="caption"><em>Bootstrapped samples from random forests.</em></p>
+</div>
+<p>Random forests methods work well for response variables and models of various kinds. For example, the problem could involve classification (e.g., whether a tree is alive or dead) or regression (e.g., the height of a tree). After the bootstrapped samples are drawn, a set of regression trees are built.</p>
+<p>Then, the mean square error (MSE) is calculated for each regression tree using the out-of-bag samples for that tree. After all of those calculations, the MSE is averaged across all regression trees.</p>
+</div>
+<div id="what-is-the-key-output-from-random-forests" class="section level2">
+<h2>What is the key output from random forests?</h2>
+<p>Many studies in forestry contain dozens, if not hundreds, of potential predictor variables. Each variable in an RF model will contain an <strong>importance score</strong>. The importance score is calculated by evaluating the regression tree with and without that variable. When evaluating the regression tree, the MSE will go up, down, or stay the same.</p>
+<p>If the percent increase in MSE after removing the variable is large, it indicates an important variable. If the percent increase in MSE after removing the variable is small, it’s less important.</p>
+<p>In a forestry example, <a href="https://www.nrs.fs.fed.us/pubs/55912">Deo et al. 2017</a> used random forests to evaluate hundreds of remote sensing variables from a Landsat time-series and lidar. The authors identified several remote sensing variables that led to estimates of change in forest aboveground biomass:</p>
+<div class="figure">
+<img src="/post/random-forests-in-a-nutshell/importance.png" width="500" alt="" />
+<p class="caption"><em>Variables are ranked from most to least important in random forests output.</em></p>
+</div>
+</div>
+<div id="what-are-the-strengths-and-limitations-of-random-forests" class="section level2">
+<h2>What are the strengths and limitations of random forests?</h2>
+<p>The strengths of random forests include:</p>
+<ul>
+<li>They can handle all types of data (e.g., categorical, continuous).</li>
+<li>They often perform similarly or better than regression methods.</li>
+<li>They work well with data sets containing a large number of predictor variables.</li>
+</ul>
+<p>The limitations of random forests include:</p>
+<ul>
+<li>They are often considered a “black box” method because models are not easily interpreted.</li>
+<li>They require extensive model tuning for the best results.</li>
+</ul>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Random forests are powerful and versatile with forestry data because they only use a random subset from a large data set. These methods have increased in popularity in recent years and can be applied to a variety of classification and regression problems.</p>
+<div id="a-random-forests-reading-list" class="section level3">
+<h3>A random forests reading list</h3>
+<div id="the-classics" class="section level4">
+<h4>The classics</h4>
+<ul>
+<li>Breiman, L. 2001. <a href="https://link.springer.com/article/10.1023/A:1010933404324">Random forests</a>. Machine Learning, 45(1): 5–32.</li>
+<li>Liaw, A. and M. Wiener. 2002. <a href="https://cogns.northwestern.edu/cbmg/LiawAndWiener2002.pdf">Classification and regression by randomForest (PDF)</a>. <em>R News</em> 2(3): 18-22.</li>
+</ul>
+</div>
+<div id="applications-in-forestry" class="section level4">
+<h4>Applications in forestry</h4>
+<ul>
+<li><p>Weiskittel, A.R., N.L. Crookston, and P.J. Radtke. 2011. <a href="https://www.fs.usda.gov/treesearch/pubs/41547">Linking climate, gross primary productivity, and site index across forests of the western United States</a>. <em>Canadian Journal Forest Research</em> 41: 1710-1721.</p></li>
+<li><p>Deo, R.K., M.B. Russell, G.M. Domke, C.W. Woodall, M.J. Falkowski, and W.B. Cohen. 2017. <a href="https://www.nrs.fs.fed.us/pubs/55912">Using Landsat time-series and LiDAR to inform aboveground forest biomass baselines in northern Minnesota, USA</a>. <em>Canadian Journal of Remote Sensing</em> 43: 28-47.</p></li>
+</ul>
+</div>
+<div id="how-to-run-random-forests-in-r" class="section level4">
+<h4>How to run random forests in R</h4>
+<ul>
+<li><p><a href="https://www.blopig.com/blog/2017/04/a-very-basic-introduction-to-random-forests-using-r/">A very basic introduction to Random Forests using R</a> (Oxford Protein Informatics Group)</p></li>
+<li><p><a href="https://www.r-bloggers.com/2018/01/how-to-implement-random-forests-in-r/">How to implement Random Forests in R</a> (R-Bloggers)</p></li>
+</ul>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+</div>

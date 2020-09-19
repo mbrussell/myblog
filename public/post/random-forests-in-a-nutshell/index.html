@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Random forests in a nutshell</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Random forests in a nutshell</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/random-forests-in-a-nutshell/">Random forests in a nutshell</a></h4>
+    <h5>September 19, 2020</h5>
+    
+    <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="/tags/random-forests"><kbd class="item-tag">random forests</kbd></a>
+    
+    <a href="/tags/classification"><kbd class="item-tag">classification</kbd></a>
+    
+    <a href="/tags/machine-learning"><kbd class="item-tag">Machine learning</kbd></a>
+    
+    <a href="/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<p>Random forests have exploded in popularity in the forestry discipline in recent years. <a href="https://en.wikipedia.org/wiki/Random_forest">Random forests (RF)</a> are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.</p>
+<p>The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article. The use of RF methods has grown in the last several years:</p>
+<p><img src="/post/2020-09-19-random-forests-in-a-nutshell_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div id="how-do-random-forests-work" class="section level2">
+<h2>How do random forests work?</h2>
+<p>First, several small samples of the entire data set are taken. Any observations that are not taken are called “out-of-bag” samples.</p>
+<div class="figure">
+<img src="/post/random-forests-in-a-nutshell/bootstrap.png" width="500" alt="" />
+<p class="caption"><em>Bootstrapped samples from random forests.</em></p>
+</div>
+<p>Random forests methods work well for response variables and models of various kinds. For example, the problem could involve classification (e.g., whether a tree is alive or dead) or regression (e.g., the height of a tree). After the bootstrapped samples are drawn, a set of regression trees are built.</p>
+<p>Then, the mean square error (MSE) is calculated for each regression tree using the out-of-bag samples for that tree. After all of those calculations, the MSE is averaged across all regression trees.</p>
+</div>
+<div id="what-is-the-key-output-from-random-forests" class="section level2">
+<h2>What is the key output from random forests?</h2>
+<p>Many studies in forestry contain dozens, if not hundreds, of potential predictor variables. Each variable in an RF model will contain an <strong>importance score</strong>. The importance score is calculated by evaluating the regression tree with and without that variable. When evaluating the regression tree, the MSE will go up, down, or stay the same.</p>
+<p>If the percent increase in MSE after removing the variable is large, it indicates an important variable. If the percent increase in MSE after removing the variable is small, it’s less important.</p>
+<p>In a forestry example, <a href="https://www.nrs.fs.fed.us/pubs/55912">Deo et al. 2017</a> used random forests to evaluate hundreds of remote sensing variables from a Landsat time-series and lidar. The authors identified several remote sensing variables that led to estimates of change in forest aboveground biomass:</p>
+<div class="figure">
+<img src="/post/random-forests-in-a-nutshell/importance.png" width="500" alt="" />
+<p class="caption"><em>Variables are ranked from most to least important in random forests output.</em></p>
+</div>
+</div>
+<div id="what-are-the-strengths-and-limitations-of-random-forests" class="section level2">
+<h2>What are the strengths and limitations of random forests?</h2>
+<p>The strengths of random forests include:</p>
+<ul>
+<li>They can handle all types of data (e.g., categorical, continuous).</li>
+<li>They often perform similarly or better than regression methods.</li>
+<li>They work well with data sets containing a large number of predictor variables.</li>
+</ul>
+<p>The limitations of random forests include:</p>
+<ul>
+<li>They are often considered a “black box” method because models are not easily interpreted.</li>
+<li>They require extensive model tuning for the best results.</li>
+</ul>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Random forests are powerful and versatile with forestry data because they only use a random subset from a large data set. These methods have increased in popularity in recent years and can be applied to a variety of classification and regression problems.</p>
+<div id="a-random-forests-reading-list" class="section level3">
+<h3>A random forests reading list</h3>
+<div id="the-classics" class="section level4">
+<h4>The classics</h4>
+<ul>
+<li>Breiman, L. 2001. <a href="https://link.springer.com/article/10.1023/A:1010933404324">Random forests</a>. Machine Learning, 45(1): 5–32.</li>
+<li>Liaw, A. and M. Wiener. 2002. <a href="https://cogns.northwestern.edu/cbmg/LiawAndWiener2002.pdf">Classification and regression by randomForest (PDF)</a>. <em>R News</em> 2(3): 18-22.</li>
+</ul>
+</div>
+<div id="applications-in-forestry" class="section level4">
+<h4>Applications in forestry</h4>
+<ul>
+<li><p>Weiskittel, A.R., N.L. Crookston, and P.J. Radtke. 2011. <a href="https://www.fs.usda.gov/treesearch/pubs/41547">Linking climate, gross primary productivity, and site index across forests of the western United States</a>. <em>Canadian Journal Forest Research</em> 41: 1710-1721.</p></li>
+<li><p>Deo, R.K., M.B. Russell, G.M. Domke, C.W. Woodall, M.J. Falkowski, and W.B. Cohen. 2017. <a href="https://www.nrs.fs.fed.us/pubs/55912">Using Landsat time-series and LiDAR to inform aboveground forest biomass baselines in northern Minnesota, USA</a>. <em>Canadian Journal of Remote Sensing</em> 43: 28-47.</p></li>
+</ul>
+</div>
+<div id="how-to-run-random-forests-in-r" class="section level4">
+<h4>How to run random forests in R</h4>
+<ul>
+<li><p><a href="https://www.blopig.com/blog/2017/04/a-very-basic-introduction-to-random-forests-using-r/">A very basic introduction to Random Forests using R</a> (Oxford Protein Informatics Group)</p></li>
+<li><p><a href="https://www.r-bloggers.com/2018/01/how-to-implement-random-forests-in-r/">How to implement Random Forests in R</a> (R-Bloggers)</p></li>
+</ul>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/new-state-level-forest-carbon-fact-sheets-available/">New state-level forest carbon fact sheets available</a></h4>
+    <h5>September 12, 2020</h5>
+    
+    <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="/tags/greenhouse-gases"><kbd class="item-tag">greenhouse gases</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/">States with the biggest gains in forest carbon over the last 30 years</a></h4>
+    <h5>September 7, 2020</h5>
+    
+    <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/31-r-packages-for-forest-analysts/">31 R packages for forest analysts</a></h4>
+    <h5>August 26, 2020</h5>
+    
+    <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+    <a href="/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

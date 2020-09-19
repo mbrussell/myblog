@@ -6,7 +6,7 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Analytics</title>
       <link>/tags/analytics/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/analytics/</guid>
       <description></description>
@@ -59,7 +59,7 @@
     <item>
       <title>Carbon</title>
       <link>/tags/carbon/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/carbon/</guid>
       <description></description>
@@ -86,7 +86,7 @@
     <item>
       <title>Classification</title>
       <link>/tags/classification/</link>
-      <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/classification/</guid>
       <description></description>
@@ -149,7 +149,7 @@
     <item>
       <title>Data Science</title>
       <link>/tags/data-science/</link>
-      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/data-science/</guid>
       <description></description>
@@ -239,7 +239,7 @@
     <item>
       <title>Forest Products</title>
       <link>/tags/forest-products/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/forest-products/</guid>
       <description></description>
@@ -338,7 +338,7 @@
     <item>
       <title>Greenhouse Gases</title>
       <link>/tags/greenhouse-gases/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/greenhouse-gases/</guid>
       <description></description>
@@ -401,7 +401,7 @@
     <item>
       <title>Invasive Species</title>
       <link>/tags/invasive-species/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/invasive-species/</guid>
       <description></description>
@@ -437,7 +437,7 @@
     <item>
       <title>Machine Learning</title>
       <link>/tags/machine-learning/</link>
-      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/machine-learning/</guid>
       <description></description>
@@ -572,7 +572,7 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
@@ -584,6 +584,15 @@
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Random Forests</title>
+      <link>/tags/random-forests/</link>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/random-forests/</guid>
       <description></description>
     </item>
     
@@ -797,7 +806,7 @@
     <item>
       <title>Workshop</title>
       <link>/tags/workshop/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/workshop/</guid>
       <description></description>

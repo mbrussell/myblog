@@ -6,15 +6,25 @@
     <description>Recent content in Analytics on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/analytics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Random forests in a nutshell</title>
+      <link>/post/random-forests-in-a-nutshell/</link>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/random-forests-in-a-nutshell/</guid>
+      <description>Random forests have exploded in popularity in the forestry discipline in recent years. Random forests (RF) are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.
+The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article.</description>
+    </item>
+    
+    <item>
       <title>New state-level forest carbon fact sheets available</title>
       <link>/post/new-state-level-forest-carbon-fact-sheets-available/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/new-state-level-forest-carbon-fact-sheets-available/</guid>
       <description>An example forest carbon fact sheet from Maine.
