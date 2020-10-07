@@ -1,0 +1,35 @@
+---
+title: Ask how you want your data - and be specific
+author: Matt Russell
+date: '2020-10-07'
+slug: ask-how-how-want-your-data-and-be-specific
+categories:
+  - Data management
+tags:
+  - analytics
+  - data management
+  - Communicating data
+  - forest measurements
+---
+
+I have been analyzing the submissions to the University of Minnesota Extension's [Tree and Woodland Carbon Capture Challenge](https://extension.umn.edu/my-minnesota-woods/count-carbon-your-trees-and-woods). The Challenge is an activity that asked Minnesotans to measure trees and woodlands to observe how much carbon they sequester over a year.
+
+The audience that participated in this activity included homeowners and private woodland owners with a love for trees. In total, 26 people measured an individual tree and typed their measurements into a Google Form answering the question "What is the diameter of your tree, measured in inches?"
+
+Here are the responses I received:
+
+![*Entries in response to the question: What is the diameter of your tree?*](/post/ask-how-how-want-your-data-and-be-specific/dbhvalues.jpg){width=500px}
+
+I received answers that mixed decimals and fractions, had different significant digits, and mixed character and numeric values. Needless to say, the data were messy and difficult to immediately analyze.
+
+The take-home message is to be specific about how you ask for data and give good examples of what you expect. I did not do this for the activity, and while the quality of the data were good, it's taking more time to cleaning and reorganize the data.
+
+I could have used data validation features in the Google Form I provided. I could have gave an example like "Measure and enter data for your tree to the nearest tenth of an inch, for example, enter "10.7" for a tree that is 10.7 inches in diameter at breast height.
+
+Audience matters too. If I asked professional foresters the same question, I would have likely received a data set of diameters measured to the nearest tenth of an inch, without me asking specifically for it. 
+
+This activity is a reminder to know your audience when asking for data. Automating a data analysis workflow by using data validations can benefit the data analyst and lead to fewer problems when data are ultimately used to make decisions.  
+
+--
+
+*By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*

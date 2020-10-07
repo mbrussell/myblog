@@ -6,10 +6,20 @@
     <description>Recent content in Data Management on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ask how you want your data - and be specific</title>
+      <link>/post/ask-how-how-want-your-data-and-be-specific/</link>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ask-how-how-want-your-data-and-be-specific/</guid>
+      <description>I have been analyzing the submissions to the University of Minnesota Extension’s Tree and Woodland Carbon Capture Challenge. The Challenge is an activity that asked Minnesotans to measure trees and woodlands to observe how much carbon they sequester over a year.
+The audience that participated in this activity included homeowners and private woodland owners with a love for trees. In total, 26 people measured an individual tree and typed their measurements into a Google Form answering the question “What is the diameter of your tree, measured in inches?</description>
+    </item>
     
     <item>
       <title>Getting your data into R from Google Sheets</title>
