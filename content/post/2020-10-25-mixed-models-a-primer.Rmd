@@ -376,4 +376,6 @@ Nested random effects are useful because they take into account the hierarchy wi
 
 --
 
+*Thanks the the University of Minnesota's Silva Lab for their comments on the presentation of this work.*
+
 *By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
