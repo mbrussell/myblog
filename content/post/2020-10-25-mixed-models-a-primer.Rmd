@@ -1,0 +1,379 @@
+---
+title: 'Mixed models in R: a primer'
+author: Matt Russell
+date: '2020-10-27'
+slug: mixed-models-a-primer
+categories:
+  - Statistics
+tags:
+  - analytics
+  - Data science
+  - regression
+  - statistics
+  - mixed models
+  - R
+---
+
+Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:
+
+> “I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
+
+The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes. While the primary results of our study did not change, how we thought about and presented the analysis mattered much more.
+
+## Why mixed models?
+
+Mixed models have emerged as one of the go-to regression techniques in forestry applications, largely because forestry data are often nested. This is for several reasons including:
+
+* _Forestry data are often spatially and temporally correlated._ Foresters collect information on plots that are close to one another in space. Permanent sample plots are often used in studies looking at tree growth. In these Studies, the same trees are measured through time.
+
+* _Mixed models can account for hierarchy within data._ Forest plots are often collected within stands, stands are located within ownerships, and a collection of ownerships comprise a landscape.  
+
+* _Mixed models consist of both fixed and random effects._ **Fixed effects** can be considered population-averaged values and are similar to the parameters found in "traditional" regression techniques like ordinary least squares. **Random effects** can be determined for each parameter, typically for each hierarchical level in a data set.
+
+## Mixed model forms
+
+Consider a model fit with simple linear regression techniques. We can use the concepts of least squares to minimize the residual sums of squares for predicting $Y$, our response variable of interest using $X$, our predictor variable:
+
+$Y=\beta_0+\beta_1X+\epsilon$
+
+The values of $\beta_0$ and $\beta_1$ can be found by minimizing the residual sums of squares using least squares techniques. The $\epsilon$ term represents the variance that is not accounted for by the model. We never really think of them this way, but we can consider $\beta_0$ and $\beta_1$ as constant or “fixed” values (with some standard error associated with them). 
+
+Consider a mixed model example where the the intercept is specified as a random effect. In this case the model can be written as:
+
+$Y=\beta_0+b_i+\beta_1X+\epsilon$
+
+In this model, $\beta_0$ and $\beta_1$ are fixed effects and $b_i$ is a random effect for subject $i$. The random effect can be thought of as each subject's deviation from the fixed intercept parameter. The key assumption about $b_i$ is that it is independent, identically and normally distributed with a mean of zero.    
+
+For example, consider a model estimating the heights of trees (response variable) using a tree's diameter at breast height (predictor variable). A random effect on the intercept can be applied to each stand that a tree resides in. In this model, predictions would vary depending on each subject's random intercept term, but slopes would be the same:
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+tree <- read_csv('C:/Users/russellm/Documents/Classes/UMN/NR 5021/Data/cfc.csv')
+
+pine <- tree %>% 
+  filter(Sp == 2 & HT > 10 &
+           TreeClass %in% c("Growth tree", "Ingrowth tree", "New tree in subplot"))
+
+# Random intercepts
+ggplot(pine, aes(DBH, HT)) +
+  geom_point(col = "white") +
+      theme(panel.background = element_rect(fill = "NA"),
+           axis.line = element_line(color="black")) +
+   geom_abline(intercept = 20, slope = 3, col = "red")+
+   geom_abline(intercept = 30, slope = 3, col = "orange") +
+   geom_abline(intercept = 40, slope = 3, col = "black") +
+   geom_abline(intercept = 50, slope = 3, col = "green") +
+   geom_abline(intercept = 60, slope = 3, col = "blue") +
+   geom_abline(intercept = 70, slope = 3, col = "violet") +
+   labs(title = "Random intercept",
+        x = "X",
+       y = "Y") +
+  scale_y_continuous(limits = c(0, 150))+
+    theme(panel.background = element_rect(fill = "NA"),
+          axis.line = element_line(color="black"),
+          axis.text=element_blank(),
+          axis.ticks=element_blank())
+```
+
+Similar to applying a random effect term on the intercept, we can instead apply it to the slope term in a regression. This model form would be:
+
+$Y=\beta_0+(\beta_1+b_i)+X+\epsilon$
+
+In this model, the $b_i$ is a random effect for subject $i$ applied to the slope. Predictions would vary depending on each subject's random slope term, but the intercept would be the same:
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+ggplot(pine, aes(DBH, HT)) +
+  geom_point(col = "white") +
+      theme(panel.background = element_rect(fill = "NA"),
+           axis.line = element_line(color="black")) +
+   geom_abline(intercept = 30, slope = 0.5, col = "red")+
+   geom_abline(intercept = 30, slope = 2, col = "orange") +
+   geom_abline(intercept = 30, slope = 3, col = "black") +
+   geom_abline(intercept = 30, slope = 5, col = "green") +
+   geom_abline(intercept = 30, slope = 7, col = "blue") +
+   geom_abline(intercept = 30, slope = 10, col = "violet") +
+   labs(title = "Random slope",
+        x = "X",
+       y = "Y") +
+  scale_y_continuous(limits = c(0, 250))+
+    theme(panel.background = element_rect(fill = "NA"),
+          axis.line = element_line(color="black"),
+          axis.text=element_blank(),
+          axis.ticks=element_blank())
+```
+
+One could also specify a random effect term on both the intercept and slope. In the tree height-diameter example, this would indicate a random effect applied to each stand on the intercept in addition to a random effect for the slope parameter associated with a tree's diameter in each stand. This model form would be:
+
+$Y=(\beta_0+a_i)+(\beta_1+b_i)+X+\epsilon)$
+
+In this model, $a_i$ and $b_i$ are random effects for subject $i$ applied to the intercept and slope, respectively. Predictions would vary depending on each subject's slope and intercept terms:
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+ggplot(pine, aes(DBH, HT)) +
+  geom_point(col = "white") +
+      theme(panel.background = element_rect(fill = "NA"),
+           axis.line = element_line(color="black")) +
+   geom_abline(intercept = 20, slope = 0.5, col = "red")+
+   geom_abline(intercept = 30, slope = 2, col = "orange") +
+   geom_abline(intercept = 40, slope = 3, col = "black") +
+   geom_abline(intercept = 50, slope = 5, col = "green") +
+   geom_abline(intercept = 60, slope = 7, col = "blue") +
+   geom_abline(intercept = 70, slope = 10, col = "violet") +
+   labs(title = "Random slope and intercept",
+        x = "X",
+       y = "Y") +
+  scale_y_continuous(limits = c(0, 250))+
+    theme(panel.background = element_rect(fill = "NA"),
+          axis.line = element_line(color="black"),
+          axis.text=element_blank(),
+          axis.ticks=element_blank())
+```
+
+One of the most popular applications of mixed models is to consider the nested or hierarchical structure of data. In forestry, a common example is to nest a measurement plot within a forest stand to take into account the hierarchical nature of forest inventory design. 
+
+Consider a random effect term applied to the intercept. By nesting subject $j$ within subject $i$, this model form would be:
+
+$Y=(\beta_0+b_i+b_{ij})+\beta_1+X+\epsilon)$
+
+In this model, $b_i$ is the random effect for subject $i$ and $b_{ij}$ is the random effect for subject $j$ nested in subject $i$. In the tree height example, we would obtain a set of random effects for each stand and a set of random effects for each plot nested within each stand. Hence, predictions would result in two sets of random effects for each intercept (with identical slopes):
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+library(patchwork)
+# Nested - subject i
+p.i <- ggplot(pine, aes(DBH, HT)) +
+  geom_point(col = "white") +
+      theme(panel.background = element_rect(fill = "NA"),
+           axis.line = element_line(color="black")) +
+   geom_abline(intercept = 20, slope = 3, col = "red")+
+   geom_abline(intercept = 60, slope = 3, col = "black") +
+   geom_abline(intercept = 100, slope = 3, col = "blue") +
+   labs(title = "Subject i",
+        x = "X",
+        y = "Y") +
+  scale_y_continuous(limits = c(0, 250))+
+    theme(panel.background = element_rect(fill = "NA"),
+          axis.line = element_line(color="black"),
+          axis.text=element_blank(),
+          axis.ticks=element_blank())
+
+# Nested - Subject j nested within subject i
+p.ij <- ggplot(pine, aes(DBH, HT)) +
+  geom_point(col = "white") +
+      theme(panel.background = element_rect(fill = "NA"),
+           axis.line = element_line(color="black")) +
+   geom_abline(intercept = 20, slope = 3, col = "red")+
+   geom_abline(intercept = 30, slope = 3, col = "orange") +
+   geom_abline(intercept = 40, slope = 3, col = "black") +
+   geom_abline(intercept = 50, slope = 3, col = "green") +
+   geom_abline(intercept = 60, slope = 3, col = "blue") +
+   geom_abline(intercept = 70, slope = 3, col = "violet") +
+   geom_abline(intercept = 80, slope = 3, col = "red")+
+   geom_abline(intercept = 90, slope = 3, col = "orange") +
+   geom_abline(intercept = 100, slope = 3, col = "black") +
+   geom_abline(intercept = 110, slope = 3, col = "green") +
+   geom_abline(intercept = 120, slope = 3, col = "blue") +
+   geom_abline(intercept = 130, slope = 3, col = "violet") +
+   labs(title = "Subject j nested within subject i",
+        x = "X",
+        y = "Y") +
+  scale_y_continuous(limits = c(0, 250))+
+    theme(panel.background = element_rect(fill = "NA"),
+          axis.line = element_line(color="black"),
+          axis.text=element_blank(),
+          axis.ticks=element_blank())
+p.i + p.ij
+```
+
+## Case study: Predicting tree height with mixed models
+
+We are interested in predicting a tree’s height (`HT`) based on its diameter at breast height (`DBH`). Data are from 450 observations made at the Cloquet Forestry Center in Cloquet, Minnesota in 2014 with `DBH` measured in inches and `HT` measured in feet. Data were collected from various cover types and plots across the forest:
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+library(knitr)
+library(gridExtra)
+library(kableExtra)
+
+knitr::kable((pine[1:10, c(2,1,3,5,9)]), 
+             caption = 'Sample red pine measurements from Cloquet, MN.') %>% 
+   kable_styling(bootstrap_options = "bordered", full_width = FALSE)
+```
+
+### Ordinary least squares
+A ordinary least squares model can be considered as:
+
+$HT=\beta_0+\beta_1DBH+\epsilon$
+
+In R, the most common function to perform a simple linear regression like this is `lm()`.
+
+```{r}
+pine.lm <- lm(HT ~ DBH, data = pine)
+summary(pine.lm)
+```
+
+The estimated values of $\beta_0$ and $\beta_1$ are 31.1552 and 3.0493, respectively. The R-squared of this regression line is 0.59, indicating a moderate to strong relationship between `DBH` and `HT`. This can be observed in the following graph:
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+ggplot(pine, aes(DBH, HT)) +
+  geom_point() +
+  stat_smooth(method = "lm") +
+  labs(title = "Red pine at Cloquet Forestry Center",
+       x = "Diameter at breast height (inches)",
+       y = "Height (feet)") +
+    theme(panel.background = element_rect(fill = "NA"),
+           axis.line = element_line(color="black"))
+```
+
+### Random effects on intercept
+
+We can expand the simple linear regression to a mixed model by incorporating the forest cover type from where a tree resides as a random effect. In the Cloquet data, the `n_distinct()` function indicates there are 13 different cover types on the property.
+
+```{r}
+n_distinct(pine$CoverType)
+```
+
+We can see that while most of the red pine trees are found in the red pine cover type, the species is also found in the other 12 cover types but are less abundant:
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+ggplot(pine, aes(DBH, HT)) +
+  geom_point() +
+  facet_wrap(~CoverType, ncol = 7) +
+  labs(title = "Red pine at Cloquet Forestry Center",
+       subtitle = "HT-DBH by CoverType",
+       x = "Diameter at breast height (inches)",
+       y = "Height (feet)") +
+    theme(panel.background = element_rect(fill = "NA"),
+           axis.line = element_line(color="black"))
+```
+
+The **lme4** package in R can be used to fit linear mixed models for fixed and random effects. We will use it to fit three mixed models that specify random effects on different parameters:  
+
+```{r eval = FALSE}
+install.packages("lme4")
+library(lme4)
+```
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+library(lme4)
+```
+
+The `lmer()` function is the mixed model equivalent of `lm()`. To specify the cover type as a random effect on the intercept, we write `(1 | CoverType)`:
+
+```{r}
+pine.lme <- lmer(HT ~ DBH + (1 | CoverType),
+             data = pine)
+summary(pine.lme)
+```
+
+We can see from the output that the values for the fixed effects $\beta_0$ and $\beta_1$ are 25.8867 and 3.0585, respectively. These values are slightly different from the ordinary least squares. The plot of residuals for the model looks mostly good:
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+plot(pine.lme)
+```
+
+In **lme4**, the `ranef()` function extracts the random effect terms. In this model, we can obtain the 13 random effects for each cover type:
+
+```{r}
+ranef(pine.lme)
+```
+
+As a visual, the HT-DBH models with varying random intercepts shows a different line for each cover type. Note that the lines have the same slope yet different intercepts, as depicted in the random effect term applied to $\beta_0$. You will notice that some predictions do not extend far through the x-axis, a reflection of the small sample size for red pine trees found in some cover types:     
+
+```{r echo = FALSE}
+ggplot(pine, aes(DBH, HT)) +
+  geom_point(size = 0.1) +
+ geom_line(aes(y = predict(pine.lme), group = CoverType, 
+               color = CoverType), size = 2) +
+  labs(title = "Red pine at Cloquet Forestry Center",
+       subtitle = "HT-DBH by cover type",
+       x = "Diameter at breast height (inches)",
+       y = "Height (feet)") +
+    theme(panel.background = element_rect(fill = "NA"),
+           axis.line = element_line(color="black"))
+```
+
+### Random effects on slope
+
+An alternative mixed model could be specified by placing a random parameter on the slope term. Adding these random slope terms can introduce a lot of complexity to the model. In the tree height example, we can specify `(1 + DBH | CoverType)` to place a random effect on the slope term for the `DBH` term:
+
+```{r warning = FALSE, message = FALSE}
+pine.lme2 <- lmer(HT ~ 1 + DBH + (1 + DBH | CoverType),
+             data = pine)
+summary(pine.lme2)
+```
+
+You can see that the error message `boundary (singular) fit: see ?isSingular` is shown, indicating that the model is likely overfitted. We may be trying to do too much by specifying the random effects on the slope. Hence, for these data, we might forgo the inclusion of a random slope parameter and instead focus on random effects for the intercept.
+
+### Nested random effects on intercept
+
+We can expand the mixed model by incorporating the measurement plot (`PlotNum`) nested within forest cover type (`CoverType`) as random effects in the prediction of tree height. In the Cloquet data, there are 124 plots nested within the 13 cover types found in the data.
+
+```{r}
+n_distinct(pine$PlotNum)
+```
+
+Note the distributions of red pine heights and diameters in each plot. Although difficult to see in each plot, the scatter plots show many plots that contain only a few red pine trees:
+
+```{r echo = F}
+ggplot(pine, aes(DBH, HT)) +
+  geom_point() +
+  facet_wrap(~PlotNum) +
+  labs(title = "Red pine at Cloquet Forestry Center",
+       subtitle = "HT-DBH by plot number",
+       x = "Diameter at breast height (inches)",
+       y = "Height (feet)") +
+    theme(panel.background = element_rect(fill = "NA"),
+           axis.line = element_line(color="black"))
+```
+
+To specify nested random effects on the intercept (plot number nested within cover type), we can write `(1 | CoverType/PlotNum)` in the `lmer()` function:
+
+```{r}
+pine.lme3 <- lmer(HT ~ DBH + (1 | CoverType/PlotNum),
+             data = pine)
+summary(pine.lme3)
+```
+
+In this model, the estimated values of $\beta_0$ and $\beta_1$ are 30.5389 and 2.7111, respectively. These values are slightly different from previous model fits. In this model, we can obtain the 13 random effects for each cover type and plot nested within each cover type. A quantile-quantile plot indicates the random effects are generally normally distributed:
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+plot(ranef(pine.lme3))
+```
+
+## Questions you should ask about mixed models
+
+As you begin to design and implement mixed models in your analysis, a number of questions may come to mind. 
+
+### Which parameters should be random?
+To address this question, you can fit several models with random effects on different parameters. In my experience with forestry data, random effects applied to the intercept are robust and are often the easiest to implement in practice. Random effects applied to slopes encounter more issues with convergence due to their complexity.   
+
+After fitting models, you may evaluate them by assessing the quality of each model using metrics such as the Akaike information criterion (AIC) or a likelihood ratio test. We can assess the AIC for the red pine models:
+
+```{r}
+AIC(pine.lm, pine.lme, pine.lme2, pine.lme3)
+```
+
+In these models, we would prefer the model with the nested random effects (`pine.lme3`) because it indicates the lowest AIC compared to the others.
+
+### How do you use the equation for subjects not found in the data set?
+
+The mixed modeling framework will work well if you want to predict the height of red pine trees found on these measurement plots. But what about using the equations for subjects not found in the data set? 
+
+To do this, one could subsample from the data to get response variables of interest. For example, a person could measure every fourth tree in a measurement plot. Then, random effects can be locally calibrated based on the plot conditions. However, for many forestry variables, such as future volume growth, a subsample of growth measurements are not likely to be available.
+
+Another approach is to set the random effects equal to zero. In this case, one could make fixed effects-only predictions. This approach is similar to the ordinary least squares approach when simply using the coefficients $\beta_0$ and $\beta_1$ to make predictions.
+
+### Are mixed models needed?
+
+A valid question is to ask whether mixed models are needed or if a more parsimonious model might be preferred. To examine this, try fitting a model with and without random effects. The various model forms can be evaluated with AIC or a likelihood ratio test. In the case of the red pine heights, the lower AIC values for the mixed models indicate that random effects are useful in the predictions 
+
+## Conclusions
+
+Mixed models are widely used in forestry today. They are effective because forestry data are often spatially and temporally correlated, they can account for hierarchy within data, and they consist of both fixed and random effects. The **lme4** package in R is useful for fitting linear mixed models and can include random effects on intercept and slope terms. 
+
+Nested random effects are useful because they take into account the hierarchy within forestry data. Multiple models can be fit with different parameters specified as random effects to determine the appropriate random parameters. Using the equations for subjects not found in the data set can be accomplished by using fixed effects parameters only or, with more effort, subsampling from the data to obtain the response variables of interest.
+
+--
+
+*By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*

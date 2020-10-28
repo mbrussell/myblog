@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mixed models in R: a primer</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.54.0" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Mixed models in R: a primer</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/mixed-models-a-primer/">Mixed models in R: a primer</a></h4>
+    <h5>October 27, 2020</h5>
+    
+    <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+    <a href="/tags/regression"><kbd class="item-tag">regression</kbd></a>
+    
+    <a href="/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="/tags/mixed-models"><kbd class="item-tag">mixed models</kbd></a>
+    
+    <a href="/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<p>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:</p>
+<blockquote>
+<p>“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”</p>
+</blockquote>
+<p>The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes. While the primary results of our study did not change, how we thought about and presented the analysis mattered much more.</p>
+<div id="why-mixed-models" class="section level2">
+<h2>Why mixed models?</h2>
+<p>Mixed models have emerged as one of the go-to regression techniques in forestry applications, largely because forestry data are often nested. This is for several reasons including:</p>
+<ul>
+<li><p><em>Forestry data are often spatially and temporally correlated.</em> Foresters collect information on plots that are close to one another in space. Permanent sample plots are often used in studies looking at tree growth. In these Studies, the same trees are measured through time.</p></li>
+<li><p><em>Mixed models can account for hierarchy within data.</em> Forest plots are often collected within stands, stands are located within ownerships, and a collection of ownerships comprise a landscape.</p></li>
+<li><p><em>Mixed models consist of both fixed and random effects.</em> <strong>Fixed effects</strong> can be considered population-averaged values and are similar to the parameters found in “traditional” regression techniques like ordinary least squares. <strong>Random effects</strong> can be determined for each parameter, typically for each hierarchical level in a data set.</p></li>
+</ul>
+</div>
+<div id="mixed-model-forms" class="section level2">
+<h2>Mixed model forms</h2>
+<p>Consider a model fit with simple linear regression techniques. We can use the concepts of least squares to minimize the residual sums of squares for predicting <span class="math inline">\(Y\)</span>, our response variable of interest using <span class="math inline">\(X\)</span>, our predictor variable:</p>
+<p><span class="math inline">\(Y=\beta_0+\beta_1X+\epsilon\)</span></p>
+<p>The values of <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> can be found by minimizing the residual sums of squares using least squares techniques. The <span class="math inline">\(\epsilon\)</span> term represents the variance that is not accounted for by the model. We never really think of them this way, but we can consider <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> as constant or “fixed” values (with some standard error associated with them).</p>
+<p>Consider a mixed model example where the the intercept is specified as a random effect. In this case the model can be written as:</p>
+<p><span class="math inline">\(Y=\beta_0+b_i+\beta_1X+\epsilon\)</span></p>
+<p>In this model, <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are fixed effects and <span class="math inline">\(b_i\)</span> is a random effect for subject <span class="math inline">\(i\)</span>. The random effect can be thought of as each subject’s deviation from the fixed intercept parameter. The key assumption about <span class="math inline">\(b_i\)</span> is that it is independent, identically and normally distributed with a mean of zero.</p>
+<p>For example, consider a model estimating the heights of trees (response variable) using a tree’s diameter at breast height (predictor variable). A random effect on the intercept can be applied to each stand that a tree resides in. In this model, predictions would vary depending on each subject’s random intercept term, but slopes would be the same:</p>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Similar to applying a random effect term on the intercept, we can instead apply it to the slope term in a regression. This model form would be:</p>
+<p><span class="math inline">\(Y=\beta_0+(\beta_1+b_i)+X+\epsilon\)</span></p>
+<p>In this model, the <span class="math inline">\(b_i\)</span> is a random effect for subject <span class="math inline">\(i\)</span> applied to the slope. Predictions would vary depending on each subject’s random slope term, but the intercept would be the same:</p>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>One could also specify a random effect term on both the intercept and slope. In the tree height-diameter example, this would indicate a random effect applied to each stand on the intercept in addition to a random effect for the slope parameter associated with a tree’s diameter in each stand. This model form would be:</p>
+<p><span class="math inline">\(Y=(\beta_0+a_i)+(\beta_1+b_i)+X+\epsilon)\)</span></p>
+<p>In this model, <span class="math inline">\(a_i\)</span> and <span class="math inline">\(b_i\)</span> are random effects for subject <span class="math inline">\(i\)</span> applied to the intercept and slope, respectively. Predictions would vary depending on each subject’s slope and intercept terms:</p>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>One of the most popular applications of mixed models is to consider the nested or hierarchical structure of data. In forestry, a common example is to nest a measurement plot within a forest stand to take into account the hierarchical nature of forest inventory design.</p>
+<p>Consider a random effect term applied to the intercept. By nesting subject <span class="math inline">\(j\)</span> within subject <span class="math inline">\(i\)</span>, this model form would be:</p>
+<p><span class="math inline">\(Y=(\beta_0+b_i+b_{ij})+\beta_1+X+\epsilon)\)</span></p>
+<p>In this model, <span class="math inline">\(b_i\)</span> is the random effect for subject <span class="math inline">\(i\)</span> and <span class="math inline">\(b_{ij}\)</span> is the random effect for subject <span class="math inline">\(j\)</span> nested in subject <span class="math inline">\(i\)</span>. In the tree height example, we would obtain a set of random effects for each stand and a set of random effects for each plot nested within each stand. Hence, predictions would result in two sets of random effects for each intercept (with identical slopes):</p>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="case-study-predicting-tree-height-with-mixed-models" class="section level2">
+<h2>Case study: Predicting tree height with mixed models</h2>
+<p>We are interested in predicting a tree’s height (<code>HT</code>) based on its diameter at breast height (<code>DBH</code>). Data are from 450 observations made at the Cloquet Forestry Center in Cloquet, Minnesota in 2014 with <code>DBH</code> measured in inches and <code>HT</code> measured in feet. Data were collected from various cover types and plots across the forest:</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-5">Table 1: </span>Sample red pine measurements from Cloquet, MN.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+CoverType
+</th>
+<th style="text-align:right;">
+PlotNum
+</th>
+<th style="text-align:right;">
+TreeNum
+</th>
+<th style="text-align:right;">
+DBH
+</th>
+<th style="text-align:right;">
+HT
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:right;">
+13.0
+</td>
+<td style="text-align:right;">
+51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+8.3
+</td>
+<td style="text-align:right;">
+54
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+8.2
+</td>
+<td style="text-align:right;">
+48
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:right;">
+11.8
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+63
+</td>
+<td style="text-align:right;">
+9.0
+</td>
+<td style="text-align:right;">
+54
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+71
+</td>
+<td style="text-align:right;">
+12.5
+</td>
+<td style="text-align:right;">
+46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cut
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+47
+</td>
+<td style="text-align:right;">
+25.3
+</td>
+<td style="text-align:right;">
+90
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+16.2
+</td>
+<td style="text-align:right;">
+85
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+18.8
+</td>
+<td style="text-align:right;">
+86
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red pine
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+22.2
+</td>
+<td style="text-align:right;">
+90
+</td>
+</tr>
+</tbody>
+</table>
+<div id="ordinary-least-squares" class="section level3">
+<h3>Ordinary least squares</h3>
+<p>A ordinary least squares model can be considered as:</p>
+<p><span class="math inline">\(HT=\beta_0+\beta_1DBH+\epsilon\)</span></p>
+<p>In R, the most common function to perform a simple linear regression like this is <code>lm()</code>.</p>
+<pre class="r"><code>pine.lm &lt;- lm(HT ~ DBH, data = pine)
+summary(pine.lm)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = HT ~ DBH, data = pine)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -55.449  -9.250  -0.894   8.878  43.415 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  31.1552     1.8357   16.97   &lt;2e-16 ***
+## DBH           3.0493     0.1201   25.39   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 14.31 on 448 degrees of freedom
+## Multiple R-squared:   0.59,  Adjusted R-squared:  0.5891 
+## F-statistic: 644.7 on 1 and 448 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>The estimated values of <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are 31.1552 and 3.0493, respectively. The R-squared of this regression line is 0.59, indicating a moderate to strong relationship between <code>DBH</code> and <code>HT</code>. This can be observed in the following graph:</p>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="random-effects-on-intercept" class="section level3">
+<h3>Random effects on intercept</h3>
+<p>We can expand the simple linear regression to a mixed model by incorporating the forest cover type from where a tree resides as a random effect. In the Cloquet data, the <code>n_distinct()</code> function indicates there are 13 different cover types on the property.</p>
+<pre class="r"><code>n_distinct(pine$CoverType)</code></pre>
+<pre><code>## [1] 13</code></pre>
+<p>We can see that while most of the red pine trees are found in the red pine cover type, the species is also found in the other 12 cover types but are less abundant:</p>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>The <strong>lme4</strong> package in R can be used to fit linear mixed models for fixed and random effects. We will use it to fit three mixed models that specify random effects on different parameters:</p>
+<pre class="r"><code>install.packages(&quot;lme4&quot;)
+library(lme4)</code></pre>
+<p>The <code>lmer()</code> function is the mixed model equivalent of <code>lm()</code>. To specify the cover type as a random effect on the intercept, we write <code>(1 | CoverType)</code>:</p>
+<pre class="r"><code>pine.lme &lt;- lmer(HT ~ DBH + (1 | CoverType),
+             data = pine)
+summary(pine.lme)</code></pre>
+<pre><code>## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: HT ~ DBH + (1 | CoverType)
+##    Data: pine
+## 
+## REML criterion at convergence: 3652
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -4.1165 -0.6923 -0.0591  0.6087  3.0488 
+## 
+## Random effects:
+##  Groups    Name        Variance Std.Dev.
+##  CoverType (Intercept)  52.24    7.228  
+##  Residual              191.14   13.825  
+## Number of obs: 450, groups:  CoverType, 13
+## 
+## Fixed effects:
+##             Estimate Std. Error t value
+## (Intercept)  25.8867     3.2321   8.009
+## DBH           3.0585     0.1169  26.169
+## 
+## Correlation of Fixed Effects:
+##     (Intr)
+## DBH -0.537</code></pre>
+<p>We can see from the output that the values for the fixed effects <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are 25.8867 and 3.0585, respectively. These values are slightly different from the ordinary least squares. The plot of residuals for the model looks mostly good:</p>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>In <strong>lme4</strong>, the <code>ranef()</code> function extracts the random effect terms. In this model, we can obtain the 13 random effects for each cover type:</p>
+<pre class="r"><code>ranef(pine.lme)</code></pre>
+<pre><code>## $CoverType
+##                        (Intercept)
+## Aspen                   -2.4313290
+## Balsam fir              -6.4569721
+## Cut                     -5.3398733
+## Grass                    3.2321996
+## Jack pine                1.1099090
+## Paper birch             -7.0258594
+## Red pine                 6.4705981
+## Right of way             0.7999610
+## Scotch pine              8.9566777
+## Swamp conifers          -0.3374007
+## Upland mixed hardwoods  -0.9416721
+## White pine               6.9294464
+## White spruce            -4.9656851
+## 
+## with conditional variances for &quot;CoverType&quot;</code></pre>
+<p>As a visual, the HT-DBH models with varying random intercepts shows a different line for each cover type. Note that the lines have the same slope yet different intercepts, as depicted in the random effect term applied to <span class="math inline">\(\beta_0\)</span>. You will notice that some predictions do not extend far through the x-axis, a reflection of the small sample size for red pine trees found in some cover types:</p>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="random-effects-on-slope" class="section level3">
+<h3>Random effects on slope</h3>
+<p>An alternative mixed model could be specified by placing a random parameter on the slope term. Adding these random slope terms can introduce a lot of complexity to the model. In the tree height example, we can specify <code>(1 + DBH | CoverType)</code> to place a random effect on the slope term for the <code>DBH</code> term:</p>
+<pre class="r"><code>pine.lme2 &lt;- lmer(HT ~ 1 + DBH + (1 + DBH | CoverType),
+             data = pine)
+summary(pine.lme2)</code></pre>
+<pre><code>## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: HT ~ 1 + DBH + (1 + DBH | CoverType)
+##    Data: pine
+## 
+## REML criterion at convergence: 3651.7
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -4.0915 -0.6998 -0.0553  0.6024  3.0359 
+## 
+## Random effects:
+##  Groups    Name        Variance  Std.Dev. Corr 
+##  CoverType (Intercept)  78.74861  8.8740       
+##            DBH           0.01029  0.1014  -1.00
+##  Residual              190.92366 13.8175       
+## Number of obs: 450, groups:  CoverType, 13
+## 
+## Fixed effects:
+##             Estimate Std. Error t value
+## (Intercept)  24.9363     3.7333   6.679
+## DBH           3.1208     0.1235  25.269
+## 
+## Correlation of Fixed Effects:
+##     (Intr)
+## DBH -0.706
+## convergence code: 0
+## boundary (singular) fit: see ?isSingular</code></pre>
+<p>You can see that the error message <code>boundary (singular) fit: see ?isSingular</code> is shown, indicating that the model is likely overfitted. We may be trying to do too much by specifying the random effects on the slope. Hence, for these data, we might forgo the inclusion of a random slope parameter and instead focus on random effects for the intercept.</p>
+</div>
+<div id="nested-random-effects-on-intercept" class="section level3">
+<h3>Nested random effects on intercept</h3>
+<p>We can expand the mixed model by incorporating the measurement plot (<code>PlotNum</code>) nested within forest cover type (<code>CoverType</code>) as random effects in the prediction of tree height. In the Cloquet data, there are 124 plots nested within the 13 cover types found in the data.</p>
+<pre class="r"><code>n_distinct(pine$PlotNum)</code></pre>
+<pre><code>## [1] 124</code></pre>
+<p>Note the distributions of red pine heights and diameters in each plot. Although difficult to see in each plot, the scatter plots show many plots that contain only a few red pine trees:</p>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>To specify nested random effects on the intercept (plot number nested within cover type), we can write <code>(1 | CoverType/PlotNum)</code> in the <code>lmer()</code> function:</p>
+<pre class="r"><code>pine.lme3 &lt;- lmer(HT ~ DBH + (1 | CoverType/PlotNum),
+             data = pine)
+summary(pine.lme3)</code></pre>
+<pre><code>## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: HT ~ DBH + (1 | CoverType/PlotNum)
+##    Data: pine
+## 
+## REML criterion at convergence: 3413
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -3.8376 -0.4860  0.0388  0.5710  3.1585 
+## 
+## Random effects:
+##  Groups            Name        Variance Std.Dev.
+##  PlotNum:CoverType (Intercept) 123.63   11.119  
+##  CoverType         (Intercept)  19.17    4.378  
+##  Residual                       68.73    8.291  
+## Number of obs: 450, groups:  PlotNum:CoverType, 124; CoverType, 13
+## 
+## Fixed effects:
+##             Estimate Std. Error t value
+## (Intercept)  30.5389     2.9080   10.50
+## DBH           2.7111     0.1192   22.74
+## 
+## Correlation of Fixed Effects:
+##     (Intr)
+## DBH -0.621</code></pre>
+<p>In this model, the estimated values of <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are 30.5389 and 2.7111, respectively. These values are slightly different from previous model fits. In this model, we can obtain the 13 random effects for each cover type and plot nested within each cover type. A quantile-quantile plot indicates the random effects are generally normally distributed:</p>
+<pre><code>## $`PlotNum:CoverType`</code></pre>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<pre><code>## 
+## $CoverType</code></pre>
+<p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-20-2.png" width="672" /></p>
+</div>
+</div>
+<div id="questions-you-should-ask-about-mixed-models" class="section level2">
+<h2>Questions you should ask about mixed models</h2>
+<p>As you begin to design and implement mixed models in your analysis, a number of questions may come to mind.</p>
+<div id="which-parameters-should-be-random" class="section level3">
+<h3>Which parameters should be random?</h3>
+<p>To address this question, you can fit several models with random effects on different parameters. In my experience with forestry data, random effects applied to the intercept are robust and are often the easiest to implement in practice. Random effects applied to slopes encounter more issues with convergence due to their complexity.</p>
+<p>After fitting models, you may evaluate them by assessing the quality of each model using metrics such as the Akaike information criterion (AIC) or a likelihood ratio test. We can assess the AIC for the red pine models:</p>
+<pre class="r"><code>AIC(pine.lm, pine.lme, pine.lme2, pine.lme3)</code></pre>
+<pre><code>##           df      AIC
+## pine.lm    3 3676.142
+## pine.lme   4 3659.952
+## pine.lme2  6 3663.716
+## pine.lme3  5 3422.994</code></pre>
+<p>In these models, we would prefer the model with the nested random effects (<code>pine.lme3</code>) because it indicates the lowest AIC compared to the others.</p>
+</div>
+<div id="how-do-you-use-the-equation-for-subjects-not-found-in-the-data-set" class="section level3">
+<h3>How do you use the equation for subjects not found in the data set?</h3>
+<p>The mixed modeling framework will work well if you want to predict the height of red pine trees found on these measurement plots. But what about using the equations for subjects not found in the data set?</p>
+<p>To do this, one could subsample from the data to get response variables of interest. For example, a person could measure every fourth tree in a measurement plot. Then, random effects can be locally calibrated based on the plot conditions. However, for many forestry variables, such as future volume growth, a subsample of growth measurements are not likely to be available.</p>
+<p>Another approach is to set the random effects equal to zero. In this case, one could make fixed effects-only predictions. This approach is similar to the ordinary least squares approach when simply using the coefficients <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> to make predictions.</p>
+</div>
+<div id="are-mixed-models-needed" class="section level3">
+<h3>Are mixed models needed?</h3>
+<p>A valid question is to ask whether mixed models are needed or if a more parsimonious model might be preferred. To examine this, try fitting a model with and without random effects. The various model forms can be evaluated with AIC or a likelihood ratio test. In the case of the red pine heights, the lower AIC values for the mixed models indicate that random effects are useful in the predictions</p>
+</div>
+</div>
+<div id="conclusions" class="section level2">
+<h2>Conclusions</h2>
+<p>Mixed models are widely used in forestry today. They are effective because forestry data are often spatially and temporally correlated, they can account for hierarchy within data, and they consist of both fixed and random effects. The <strong>lme4</strong> package in R is useful for fitting linear mixed models and can include random effects on intercept and slope terms.</p>
+<p>Nested random effects are useful because they take into account the hierarchy within forestry data. Multiple models can be fit with different parameters specified as random effects to determine the appropriate random parameters. Using the equations for subjects not found in the data set can be accomplished by using fixed effects parameters only or, with more effort, subsampling from the data to obtain the response variables of interest.</p>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/ask-how-how-want-your-data-and-be-specific/">Ask how you want your data - and be specific</a></h4>
+    <h5>October 7, 2020</h5>
+    
+    <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="/tags/data-management"><kbd class="item-tag">data management</kbd></a>
+    
+    <a href="/tags/communicating-data"><kbd class="item-tag">Communicating data</kbd></a>
+    
+    <a href="/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/random-forests-in-a-nutshell/">Random forests in a nutshell</a></h4>
+    <h5>September 19, 2020</h5>
+    
+    <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="/tags/random-forests"><kbd class="item-tag">random forests</kbd></a>
+    
+    <a href="/tags/classification"><kbd class="item-tag">classification</kbd></a>
+    
+    <a href="/tags/machine-learning"><kbd class="item-tag">Machine learning</kbd></a>
+    
+    <a href="/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/new-state-level-forest-carbon-fact-sheets-available/">New state-level forest carbon fact sheets available</a></h4>
+    <h5>September 12, 2020</h5>
+    
+    <a href="/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="/tags/greenhouse-gases"><kbd class="item-tag">greenhouse gases</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+
