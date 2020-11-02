@@ -42,16 +42,16 @@ tags:
 <p>For example, consider a model estimating the heights of trees (response variable) using a tree’s diameter at breast height (predictor variable). A random effect on the intercept can be applied to each stand that a tree resides in. In this model, predictions would vary depending on each subject’s random intercept term, but slopes would be the same:</p>
 <p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p>Similar to applying a random effect term on the intercept, we can instead apply it to the slope term in a regression. This model form would be:</p>
-<p><span class="math inline">\(Y=\beta_0+(\beta_1+b_i)+X+\epsilon\)</span></p>
+<p><span class="math inline">\(Y=\beta_0+(\beta_1+b_i)X+\epsilon\)</span></p>
 <p>In this model, the <span class="math inline">\(b_i\)</span> is a random effect for subject <span class="math inline">\(i\)</span> applied to the slope. Predictions would vary depending on each subject’s random slope term, but the intercept would be the same:</p>
 <p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>One could also specify a random effect term on both the intercept and slope. In the tree height-diameter example, this would indicate a random effect applied to each stand on the intercept in addition to a random effect for the slope parameter associated with a tree’s diameter in each stand. This model form would be:</p>
-<p><span class="math inline">\(Y=(\beta_0+a_i)+(\beta_1+b_i)+X+\epsilon)\)</span></p>
+<p><span class="math inline">\(Y=(\beta_0+a_i)+(\beta_1+b_i)X+\epsilon)\)</span></p>
 <p>In this model, <span class="math inline">\(a_i\)</span> and <span class="math inline">\(b_i\)</span> are random effects for subject <span class="math inline">\(i\)</span> applied to the intercept and slope, respectively. Predictions would vary depending on each subject’s slope and intercept terms:</p>
 <p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>One of the most popular applications of mixed models is to consider the nested or hierarchical structure of data. In forestry, a common example is to nest a measurement plot within a forest stand to take into account the hierarchical nature of forest inventory design.</p>
 <p>Consider a random effect term applied to the intercept. By nesting subject <span class="math inline">\(j\)</span> within subject <span class="math inline">\(i\)</span>, this model form would be:</p>
-<p><span class="math inline">\(Y=(\beta_0+b_i+b_{ij})+\beta_1+X+\epsilon)\)</span></p>
+<p><span class="math inline">\(Y=(\beta_0+b_i+b_{ij})+\beta_1X+\epsilon)\)</span></p>
 <p>In this model, <span class="math inline">\(b_i\)</span> is the random effect for subject <span class="math inline">\(i\)</span> and <span class="math inline">\(b_{ij}\)</span> is the random effect for subject <span class="math inline">\(j\)</span> nested in subject <span class="math inline">\(i\)</span>. In the tree height example, we would obtain a set of random effects for each stand and a set of random effects for each plot nested within each stand. Hence, predictions would result in two sets of random effects for each intercept (with identical slopes):</p>
 <p><img src="/post/2020-10-25-mixed-models-a-primer_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
@@ -454,5 +454,6 @@ summary(pine.lme3)</code></pre>
 <p>Mixed models are widely used in forestry today. They are effective because forestry data are often spatially and temporally correlated, they can account for hierarchy within data, and they consist of both fixed and random effects. The <strong>lme4</strong> package in R is useful for fitting linear mixed models and can include random effects on intercept and slope terms.</p>
 <p>Nested random effects are useful because they take into account the hierarchy within forestry data. Multiple models can be fit with different parameters specified as random effects to determine the appropriate random parameters. Using the equations for subjects not found in the data set can be accomplished by using fixed effects parameters only or, with more effort, subsampling from the data to obtain the response variables of interest.</p>
 <p>–</p>
+<p><em>Thanks the the University of Minnesota’s Silva Lab for their comments on the presentation of this work.</em></p>
 <p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
 </div>

@@ -77,7 +77,7 @@ ggplot(pine, aes(DBH, HT)) +
 
 Similar to applying a random effect term on the intercept, we can instead apply it to the slope term in a regression. This model form would be:
 
-$Y=\beta_0+(\beta_1+b_i)+X+\epsilon$
+$Y=\beta_0+(\beta_1+b_i)X+\epsilon$
 
 In this model, the $b_i$ is a random effect for subject $i$ applied to the slope. Predictions would vary depending on each subject's random slope term, but the intercept would be the same:
 
@@ -105,7 +105,7 @@ ggplot(pine, aes(DBH, HT)) +
 
 One could also specify a random effect term on both the intercept and slope. In the tree height-diameter example, this would indicate a random effect applied to each stand on the intercept in addition to a random effect for the slope parameter associated with a tree's diameter in each stand. This model form would be:
 
-$Y=(\beta_0+a_i)+(\beta_1+b_i)+X+\epsilon)$
+$Y=(\beta_0+a_i)+(\beta_1+b_i)X+\epsilon)$
 
 In this model, $a_i$ and $b_i$ are random effects for subject $i$ applied to the intercept and slope, respectively. Predictions would vary depending on each subject's slope and intercept terms:
 
@@ -135,7 +135,7 @@ One of the most popular applications of mixed models is to consider the nested o
 
 Consider a random effect term applied to the intercept. By nesting subject $j$ within subject $i$, this model form would be:
 
-$Y=(\beta_0+b_i+b_{ij})+\beta_1+X+\epsilon)$
+$Y=(\beta_0+b_i+b_{ij})+\beta_1X+\epsilon)$
 
 In this model, $b_i$ is the random effect for subject $i$ and $b_{ij}$ is the random effect for subject $j$ nested in subject $i$. In the tree height example, we would obtain a set of random effects for each stand and a set of random effects for each plot nested within each stand. Hence, predictions would result in two sets of random effects for each intercept (with identical slopes):
 
