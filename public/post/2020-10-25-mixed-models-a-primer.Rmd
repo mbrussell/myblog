@@ -135,7 +135,7 @@ One of the most popular applications of mixed models is to consider the nested o
 
 Consider a random effect term applied to the intercept. By nesting subject $j$ within subject $i$, this model form would be:
 
-$Y=(\beta_0+b_i+b_{ij})+\beta_1X+\epsilon)$
+$Y=(\beta_0+b_i+b_{ij})+\beta_1X+\epsilon$
 
 In this model, $b_i$ is the random effect for subject $i$ and $b_{ij}$ is the random effect for subject $j$ nested in subject $i$. In the tree height example, we would obtain a set of random effects for each stand and a set of random effects for each plot nested within each stand. Hence, predictions would result in two sets of random effects for each intercept (with identical slopes):
 
