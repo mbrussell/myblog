@@ -6,7 +6,7 @@ slug: r-statistical-software-for-invasive-species-applications
 categories: []
 tags:
   - R
-  - invasive species 
+  - invasive species
   - Workshop
 description: 'Nov 6, 2020 at Upper Midwest Invasive Species Conference (virtual workshop)'
 ---
@@ -16,7 +16,7 @@ description: 'Nov 6, 2020 at Upper Midwest Invasive Species Conference (virtual 
 
  </center>
  
-  
+ 
 Invasive species professionals are increasingly using data in new and complex ways. This hands-on workshop will provide an introduction to R software and how it can be used to acquire, analyze, and visualize invasive species data. This workshop will encourage and empower professionals to better use data to make strategic decisions about invasive species. It will be especially valuable to graduate students who are at an early stage in their programs and professionals seeking to learn about the software and how it can be used in their work.
 
 Learning objectives include (1) being able to discuss key concepts in data analysis with application to invasive species data and (2) being able to use R to import, analyze, and visualize invasive species data.
@@ -26,4 +26,5 @@ Learning objectives include (1) being able to discuss key concepts in data analy
 ### Workshop materials: 
 
 * [SLIDES](https://docs.google.com/presentation/d/17fnk09LsOTCMUe08egZCQQsfG54eTBXHQe_djZHtGxA/edit?usp=sharing)
-* [GitHub repository with workshop files](https://github.com/mbrussell/RInvSpecies) 
+* [GitHub repository with workshop files](https://github.com/mbrussell/RInvSpecies)
+

@@ -6,10 +6,19 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R Statistical Software for Invasive Species Applications</title>
+      <link>/events/r-statistical-software-for-invasive-species-applications/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/events/r-statistical-software-for-invasive-species-applications/</guid>
+      <description>Invasive species professionals are increasingly using data in new and complex ways. This hands-on workshop will provide an introduction to R software and how it can be used to acquire, analyze, and visualize invasive species data. This workshop will encourage and empower professionals to better use data to make strategic decisions about invasive species. It will be especially valuable to graduate students who are at an early stage in their programs and professionals seeking to learn about the software and how it can be used in their work.</description>
+    </item>
     
     <item>
       <title>Mixed models in R: a primer</title>
@@ -51,15 +60,6 @@ The following graph shows the number of articles from four common journals in th
       <description>An example forest carbon fact sheet from Maine.
 Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. Despite the increasing importance of understanding the amount of carbon that forests can store and sequester, easy-to-access information at the state level is difficult to obtain.
 Arbor Custom Analytics recently worked with the Forest Resources Association to create a series of fact sheets at the state, region, and national level.</description>
-    </item>
-    
-    <item>
-      <title>R Statistical Software for Invasive Species Applications</title>
-      <link>/events/r-statistical-software-for-invasive-species-applications/</link>
-      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/events/r-statistical-software-for-invasive-species-applications/</guid>
-      <description>Invasive species professionals are increasingly using data in new and complex ways. This hands-on workshop will provide an introduction to R software and how it can be used to acquire, analyze, and visualize invasive species data. This workshop will encourage and empower professionals to better use data to make strategic decisions about invasive species. It will be especially valuable to graduate students who are at an early stage in their programs and professionals seeking to learn about the software and how it can be used in their work.</description>
     </item>
     
     <item>

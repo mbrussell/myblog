@@ -1,7 +1,7 @@
 ---
 title: R Statistical Software for Invasive Species Applications
 author: Matt Russell
-date: '2020-09-12'
+date: '2020-11-06'
 slug: r-statistical-software-for-invasive-species-applications
 categories: []
 tags:
@@ -23,5 +23,8 @@ Learning objectives include (1) being able to discuss key concepts in data analy
 
 **Participant experience level**: This workshop does not assume any prior experience with R.
 
-[REGISTER](https://events.eventzilla.net/e/umisc-workshop-r-statistical-software-for-invasive-species-applications-2138793680) for the virtial workshop.
+### Workshop materials: 
+
+* [SLIDES](https://docs.google.com/presentation/d/17fnk09LsOTCMUe08egZCQQsfG54eTBXHQe_djZHtGxA/edit?usp=sharing)
+* [GitHub repository with workshop files](https://github.com/mbrussell/RInvSpecies)
 
