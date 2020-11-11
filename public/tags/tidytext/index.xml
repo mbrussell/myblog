@@ -6,10 +6,20 @@
     <description>Recent content in Tidytext on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/tidytext/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Trends in forest carbon papers in the last 20 years</title>
+      <link>/post/trends-in-forest-carbon-literature/</link>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/trends-in-forest-carbon-literature/</guid>
+      <description>The number of peer-reviewed research publications on forest carbon has exploded in recent decades. From the signings of the Kyoto Protocol in 1997 to the Paris Agreement in 2015, much of the science and research conducted has been in response to the global challenges and opportunities that forests provide by sequestering and storing carbon.
+Forest carbon has also been increasingly studied in forest management and silvicultural practices. New technologies and remote sensing have also brought about new ways to inventory forests for the biomass and carbon they store.</description>
+    </item>
     
     <item>
       <title>How do loggers feel? Sentiment analysis on the opinions of logging contractors</title>

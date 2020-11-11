@@ -1,0 +1,160 @@
+---
+title: Trends in forest carbon papers in the last 20 years
+author: Matt Russell
+date: '2020-11-10'
+slug: trends-in-forest-carbon-literature
+categories:
+  - Carbon
+tags:
+  - analytics
+  - science
+  - tidytext
+  - carbon
+  - forest measurements
+---
+
+The number of peer-reviewed research publications on forest carbon has exploded in recent decades. From the signings of the Kyoto Protocol in 1997 to the Paris Agreement in 2015, much of the science and research conducted has been in response to the global challenges and opportunities that forests provide by sequestering and storing carbon.
+
+Forest carbon has also been increasingly studied in forest management and silvicultural practices. New technologies and remote sensing have also brought about new ways to inventory forests for the biomass and carbon they store.
+
+The number of peer-reviewed studies dealing with forest carbon is overwhelming, to the point that no one in their right mind would have the capacity to read every paper. This post describes how text mining can be used to investigate trends in forest carbon research over the last 20 years.
+
+## Peer-reviewed publications in forest carbon 
+
+To compile a data set, [Web of Science](http://www.webofknowledge.com) was queried for all peer-reviewed papers containing the term "forest carbon". Specifically, a paper was included in the data set if the term "forest carbon" was included in its abstract, title, or keyword field.
+
+In total there were 2,668 papers obtained between 1985 and 2020. The number of forest carbon papers published since 2001 represent 97% of the data, or 2,582 papers:
+
+```{r echo = F, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(readxl)
+library(tidytext)
+library(forcats)
+```
+
+```{r echo = F, message = FALSE, warning = FALSE}
+carbon <- read_excel("C://Users//russellm//Documents//Arbor//Data//forest_carbon_lit.xlsx")
+years <- read_excel("C://Users//russellm//Documents//Arbor//Data//carbon_years.xlsx")
+```
+
+```{r echo = F, message = FALSE, warning = FALSE}
+carbon <- carbon %>% 
+  filter(!is.na(`Publication Year`) & `Publication Year` >= 2001)
+
+carbon <- left_join(carbon, years)
+
+carbon_year <- carbon %>% 
+  group_by(`Publication Year`) %>% 
+  summarize(num_papers = n()) %>% 
+  arrange(desc(`Publication Year`))
+
+ggplot(carbon_year, aes(x = `Publication Year`, y = num_papers)) +
+  geom_point() +
+  geom_line() +
+  labs(x = "Year of publication", y = "Number of forest carbon papers") +
+    theme(panel.background = element_rect(fill = "NA"),
+          axis.line = element_line(color="black"))
+```
+
+The journals _Forest Ecology and Management_, _Forests_, and _Global Change Biology_ are the three that have published the most forest carbon paper since 2001:
+
+```{r echo = F, message = FALSE, warning = FALSE}
+carbon_source <- carbon %>% 
+  group_by(`Source Title`) %>% 
+  summarize(num_papers = n()) %>% 
+  arrange(desc(num_papers)) %>% 
+  filter(num_papers > 40)
+
+ggplot(carbon_source, aes(x = reorder(`Source Title`, num_papers), num_papers)) +
+  geom_bar(stat="identity") +
+  coord_flip() +
+  labs(x = "Source title", y = "Number of forest carbon papers") +
+    theme(panel.background = element_rect(fill = "NA"),
+          axis.line = element_line(color="black"))
+
+```
+
+## Trends in forest carbon research in the last 20 years
+
+We might be interested in seeing which topics have been covered in forest carbon papers in the last 20 years. Using the [tidytext package in R](https://cran.r-project.org/web/packages/tidytext/index.html) along with the great examples in the [Text Mining with R](https://www.tidytextmining.com/) book, we can do just that.
+
+The variable called *term frequency-inverse document frequency (tf-idf)* is a useful metric that determines important keywords in a string of text. This metric increases the weight for words that are not used very much while ignoring common words like "is", "the" and "of". 
+
+The figure below shows the highest tf-idf scores for all of the titles from papers that examined forest carbon for each five-year group. In other words, the figure shows the most common words used in forest carbon research studies through time:
+
+```{r echo = F, message = FALSE, warning = FALSE}
+carbon_words <- carbon %>%
+  unnest_tokens(word, `Article Title`) %>%
+  count(`Year Group`, word, sort = TRUE)
+
+total_words <- carbon_words %>% 
+  group_by(`Year Group`) %>% 
+  summarize(total = sum(n))
+
+carbon_words <- left_join(carbon_words, total_words)
+```
+
+
+```{r echo = F, message = FALSE, warning = FALSE}
+
+carbon_tf_idf <- carbon_words %>%
+  bind_tf_idf(word, `Year Group`, n)
+
+# carbon_tf_idf %>%
+#   select(-total) %>%
+#   arrange(desc(tf_idf))
+
+# carbon_tf_idf %>%
+#   #filter(`Year Group` == "2001-2005") %>%
+#   group_by(`Year Group`) %>%
+#   slice_max(tf_idf, n = 10) %>%
+#   ungroup() %>%
+#   ggplot(aes(tf_idf, fct_reorder(word, tf_idf), fill = `Year Group`)) +
+#   geom_col(show.legend = FALSE) +
+#   facet_wrap(~`Year Group`, ncol = 2, scales = "free") +
+#   labs(x = "tf-idf", y = NULL)
+```
+
+
+```{r echo = F, message = FALSE, warning = FALSE}
+# Remove some "useless" words
+
+carbon_tf_idf <- carbon_tf_idf %>% 
+  filter(!word %in% c("semi", "vol", "2011", "does", "bay", "mikaelian", "preparing", "ter",
+                      "in", "the", "for", "to", "effect", "use", "upon", "3", "1",
+                      "issue", "least", "effective", "resulting", "eighteen", "o", "1992"))
+c2<-carbon_tf_idf %>%
+  group_by(`Year Group`) %>%
+  slice_max(tf_idf, n = 10) %>%
+  ungroup()
+
+carbon_tf_idf %>%
+  filter(n >=2) %>% 
+  group_by(`Year Group`) %>%
+  slice_max(tf_idf, n = 10) %>%
+  ungroup() %>%
+  ggplot(aes(tf_idf, fct_reorder(word, tf_idf), fill = `Year Group`)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~`Year Group`, ncol = 2, scales = "free") +
+  labs(x = "tf-idf", y = NULL)
+```
+
+We can see different keywords arising at different time periods throughout the last 20 years, indicating different priorities in forest carbon research. In the early 2000's, the number of publications were lower but terms such as "kyoto" refer the the recently signed Kyoto Protocol. A number of geographic names appear in the most common words (e.g., "brunswick", "newfoundland", "wisconsin"), likely a result of local studies on forest carbon that occurred in those regions.
+
+Beginning in 2006, "redd" made its mark and continues to be one of the most common words in paper titles, referring to reducing emissions from deforestation and forest degradation. The word "plus" joins it beginning in 2011, a reflection of the increase in popularity of the REDD+ program. 
+
+The word "bioenergy" and "subtropical" also appear beginning in the 2011 year group. Of note in more recent years in the increase in use words relating to technology ans remote sensing. Words such as "lidar", "mapping", "modis", and "sentinel" are examples of this. 
+
+## Conclusion
+
+Research on forest carbon has leaped forward in recent decades. There are 2,582 peer-reviewed papers that have been published on forest carbon topics in the last 20 years. In recent years, more terms relating to technology and remote sensing have been incorporated into titles of forest carbon papers.
+
+--
+
+Thanks to Samuel Neal and Cindy Zheng for the inspiration for this post based on their excellent article looking at [keywords in COVID-19 papers](https://rss.onlinelibrary.wiley.com/doi/10.1111/1740-9713.01416) published in last month's issue of Significance.
+
+*By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
+
+
+
+
