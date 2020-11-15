@@ -1,0 +1,441 @@
+---
+title: 'Coverting forest inventory data from volume to carbon '
+author: Matt Russell
+date: '2020-11-15'
+slug: coverting-wood-scaled-as-weight-to-carbon
+categories:
+  - Carbon
+tags:
+  - analytics
+  - carbon
+  - forest measurements
+  - forest products
+  - forest inventory
+  - timber cruise
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<center>
+<img src="wood.jpg" width="500" />
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>The amount of carbon in a forest is a key metric that decision-makers want to know. Accurate estimates of forest carbon are needed if a landowner is interested in enrolling a forest into carbon markets.</p>
+<p>Unfortunately, most forest inventories continue to measure the amount of wood in a stand in terms of the volume it contains. Forest analysts also rely on historical forest inventory data to project future forest structure and composition - it is not unlikely to rely on inventory data that are more than 20 years old. In other words, many forest inventories of sawtimber-sized trees refer to stands in terms of the board feet or cubic meters.</p>
+<p>Fortunately, a forest doesn’t need to be re-inventoried if a reliable estimate of merchantable volume is available from a recent inventory. As an example, say the amount of wood in thousand board feet (MBF) is available from nine forest stands, each with a different volume (measured using the International 1/4-inch rule) and species:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-3">Table 1: </span>Example forest inventory data from nine stands.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Stand
+</th>
+<th style="text-align:left;">
+Species
+</th>
+<th style="text-align:right;">
+Volume/ac (MBF)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Eastern white pine
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Eastern white pine
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Eastern white pine
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Douglas-fir
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Douglas-fir
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Douglas-fir
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Southern pine
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Southern pine
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+Southern pine
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+</tbody>
+</table>
+<p>The first step to convert a merchantable volume to carbon is to <strong>scale it to a weight basis</strong>. If you work for a forest products company, values converting MBF to tons are likely a part of your records. For reference, a number of citations provide these values that vary by species:</p>
+<ul>
+<li><p>For eastern species, the Forest Research Group’s <a href="http://www.forestresearchgroup.com/Newsletters/Vol16No1.pdf">Forest Research Notes (PDF)</a> compiles a number of conversions.</p></li>
+<li><p>For western species, the <a href="https://dor.wa.gov/sites/default/files/legacy/Docs/pubs/foresttax/fh98/981inste.htm">State of Washington Department of Revenue Forest Tax Section</a> has many conversions.</p></li>
+</ul>
+<p>For the example inventory data above and using the Forest Research Group conversions, the tons/MBF conversion factors will be 4.50 (for eastern white pine), 4.35 (for Douglas-fir), and 7.50 (for southern pine).</p>
+<p>Because carbon in wood is expressed as dry weight, our next step is to multiply the green weight value by its <strong>specific gravity</strong>. A popular place to find the green specific gravity of wood (i.e., the green volume and oven-dry weight) is from the <a href="https://www.fs.usda.gov/treesearch/pubs/34185">USDA Forest Service Forest Inventory and Analysis (FIA) program</a>. For the example inventory data above and using the FIA conversions, the specific gravities are 0.34 (for eastern white pine), 0.45 (for Douglas-fir), and 0.47 (for southern pine).</p>
+<p>Forest inventories often record only the merchantable volume. This doesn’t reflect all of the parts of a tree where carbon is being stored (e.g., in the stump, tops, and branches). To determine the entire tree’s biomass and carbon content, a general rule of thumb is to use a <strong>merchantable to total tree conversion factor</strong>. For softwood species this value is typically 1.12 and for hardwoods (because they’re more “branchy”) this value is typically 1.33.</p>
+<p>So, we can multiply the stand’s volume by three conversions to obtain its dry weight in short tons:</p>
+<ol style="list-style-type: decimal">
+<li>the tons/MBF conversion factor (by species)</li>
+<li>the wood specific gravity (by species), and</li>
+<li>the merchantable to total tree conversion factor (by hardwood/softwood group)</li>
+</ol>
+<p>Now, the result is biomass of wood, but it’s carbon content is what we’re after. Approximately half of a tree’s dry weight is carbon, so we can multiply the stand’s biomass by 0.5 to obtain the carbon content in short tons.</p>
+<p>Here is the total amount of biomass and carbon found in the nine stands:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-7">Table 2: </span>Carbon storage in nine stands.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Stand
+</th>
+<th style="text-align:left;">
+Species
+</th>
+<th style="text-align:right;">
+Volume/ac (MBF)
+</th>
+<th style="text-align:right;">
+TonsMBF
+</th>
+<th style="text-align:right;">
+SP_GR
+</th>
+<th style="text-align:right;">
+MerchTotConv
+</th>
+<th style="text-align:right;">
+Biomass/ac (Tons)
+</th>
+<th style="text-align:right;">
+Carbon/ac (Tons)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Eastern white pine
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+4.50
+</td>
+<td style="text-align:right;">
+0.34
+</td>
+<td style="text-align:right;">
+1.12
+</td>
+<td style="text-align:right;">
+10.28
+</td>
+<td style="text-align:right;">
+5.14
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Eastern white pine
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+4.50
+</td>
+<td style="text-align:right;">
+0.34
+</td>
+<td style="text-align:right;">
+1.12
+</td>
+<td style="text-align:right;">
+20.56
+</td>
+<td style="text-align:right;">
+10.28
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Eastern white pine
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+4.50
+</td>
+<td style="text-align:right;">
+0.34
+</td>
+<td style="text-align:right;">
+1.12
+</td>
+<td style="text-align:right;">
+30.84
+</td>
+<td style="text-align:right;">
+15.42
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Douglas-fir
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+4.35
+</td>
+<td style="text-align:right;">
+0.45
+</td>
+<td style="text-align:right;">
+1.12
+</td>
+<td style="text-align:right;">
+13.15
+</td>
+<td style="text-align:right;">
+6.58
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Douglas-fir
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+4.35
+</td>
+<td style="text-align:right;">
+0.45
+</td>
+<td style="text-align:right;">
+1.12
+</td>
+<td style="text-align:right;">
+26.31
+</td>
+<td style="text-align:right;">
+13.15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Douglas-fir
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+4.35
+</td>
+<td style="text-align:right;">
+0.45
+</td>
+<td style="text-align:right;">
+1.12
+</td>
+<td style="text-align:right;">
+39.46
+</td>
+<td style="text-align:right;">
+19.73
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Southern pine
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+7.50
+</td>
+<td style="text-align:right;">
+0.47
+</td>
+<td style="text-align:right;">
+1.12
+</td>
+<td style="text-align:right;">
+23.69
+</td>
+<td style="text-align:right;">
+11.85
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Southern pine
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+7.50
+</td>
+<td style="text-align:right;">
+0.47
+</td>
+<td style="text-align:right;">
+1.12
+</td>
+<td style="text-align:right;">
+47.38
+</td>
+<td style="text-align:right;">
+23.69
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+Southern pine
+</td>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+7.50
+</td>
+<td style="text-align:right;">
+0.47
+</td>
+<td style="text-align:right;">
+1.12
+</td>
+<td style="text-align:right;">
+71.06
+</td>
+<td style="text-align:right;">
+35.53
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can see that for the same volume, the southern pine stands have a greater carbon content. This is due to the greater specific gravity content and larger tons/MBF conversion factors for the species.</p>
+<p>The last column in the table shows the carbon content in short tons. Across the world, carbon is often expressed in metric tonnes, where one short ton is equal to 0.9072 metric tonnes:</p>
+<p><span class="math display">\[1 \mbox{ short ton carbon} = 0.9072 \mbox{ metric tonnes carbon}\]</span></p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Converting forest inventory data from volume to carbon can be accomplished with a few species-specific conversion factors. Specific forest products companies likely have their own tons/MBF conversions, as these values vary by species and region. Having in place a trusted workflow to convert volume measurements to carbon content can allow you to get the most out of your forest inventory data to better understand the carbon content in your forests.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
