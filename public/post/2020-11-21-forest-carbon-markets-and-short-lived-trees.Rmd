@@ -1,0 +1,182 @@
+---
+title: Forest carbon and short-lived trees
+author: Matt Russell
+date: '2020-11-21'
+slug: forest-carbon-markets-and-short-lived-trees
+categories:
+  - Carbon
+tags:
+  - analytics
+  - carbon
+  - disturbance
+  - forest inventory
+  - carbon markets
+---
+
+<center>
+
+![](aspen.jpg){width=500px}
+</center>
+
+## 
+
+
+I spoke with a forest products company representative this week who expressed concern with "extending rotations" so that carbon is locked up in trees for a longer time. Many forest carbon markets are proposing delaying harvesting for a few years so that more carbon accumulates over time.
+
+The particular concern was in Minnesota where aspen, the state's most commercially important species, is crucial to the forest products economy. Aspen is a short-lived, shade-intolerant species that is managed using even-aged silvicultural techniques. This forest products company representative was concerned about the motivation to delay harvesting of aspen with the assumption that more carbon will be stored and sequestered.
+
+As forests age, forest health problems become more noticeable. In aspen trees in Minnesota, diseases such as hypoxylon canker in Minnesota become widespread as they age. Older aspen forests are also more susceptible to large-scale wind events, as evident in a recent derecho windstorm that occured in the St. Croix State Forest in 2011.
+
+## Carbon in aspen forests in Minnesota
+
+Data from the Forest Inventory and Analysis [EVALIDator program](https://apps.fs.usda.gov/Evalidator/evalidator.jsp) were obtained to visualize trends in forest carbon storage and sequestration in aspen stands in Minnesota. Data represent 2,623 FIA plots in the aspen-birch forest type, measured between 2015 and 2019.
+
+The majority of the carbon in aspen-birch forests are on private lands, followed by lands managed by state and local entities. (In addition to a large amount of land on owned by the Minnesota Department of Natural Resources, counties in northern Minnesota manage a large amount of aspen forests.)
+
+```{r echo = F, message = F, warning = F}
+my_REGION = "MN"
+my_REGION_name = "North Central"
+my_STATE = "Minnesota"
+my_STATE_abbr = "MN"
+options(scipen=10000)
+```
+
+```{r echo = F, message = F, warning = F}
+library(tidyverse)
+```
+
+```{r echo = F, message = F, warning = F}
+own <- read_csv('C:/Users/russellm/Documents/Arbor/Projects/FRAStateCarbon/Data/own_aspen.csv')
+
+p.own <- own %>% 
+  mutate(C_MMT = C_MT/1000000) %>% 
+  filter(StateName == my_STATE) %>% 
+  ggplot(aes(reorder(Ownership, C_MMT), C_MMT, fill = C_MMT)) +
+         geom_bar(stat="identity") +
+  coord_flip() +
+  #scale_y_continuous(limits = c(0,16000)) +
+  labs(x = " ", y = "Carbon in live aboveground trees \n(million metric tons)", 
+       title = paste("Carbon in Minnesota's aspen/birch forest"))+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black"),
+        legend.position = "none",
+        #plot.margin = margin(0, 0, 0, 0, "cm")
+        )
+p.own
+```
+
+Carbon storage and sequestration in aspen-birch forests in Minnesota shows some interesting trends. Carbon storage in live aboveground trees reaches a peak beginning at about 50 years. Carbon storage doesn't generally extend greater than 20 tons per acre.
+
+```{r echo = F, message = F, warning = F}
+storage <- read_csv('C:/Users/russellm/Documents/Arbor/Projects/FRAStateCarbon/Data/storage_state_aspen.csv')
+
+storage_amt <- storage %>% 
+  filter(State == my_STATE & ForestTypeGroup == "Aspen / birch") %>% 
+  mutate(Carbon_UStons = Total * 1.10)
+
+storage_long <- storage %>% 
+  filter(State == my_STATE & ForestTypeGroup == "Aspen / birch") %>% 
+  select(-Total) %>% 
+  pivot_longer(`0`:`96-100`, names_to= "StandAge", values_to = "Carbon") %>% 
+    mutate(Carbon_UStons = Carbon * 1.10)
+
+# storage_type <- storage_long %>% 
+#   group_by(HdwdSfwd, StandAge) %>% 
+#   summarize(mean_Carbon_UStons = mean(Carbon_UStons, na.rm = T)) %>% 
+#   mutate(HdwdSfwd_name = ifelse(HdwdSfwd == "HW", "Hardwood forests", "Softwood forests"))
+
+storage_type <- storage_long
+storage_type$StandAge <- factor(storage_type$StandAge, levels = c("0", "0-5", "6-10", "11-15", "16-20", 
+                                                                  "21-25", "26-30", "31-35", "36-40", 
+                                                                  "41-45", "46-50", "51-55", "56-60", 
+                                                                  "61-65", "66-70", "71-75", "76-80", 
+                                                                  "81-85", "86-90", "91-95", "96-100"))
+
+p.storage <- ggplot(storage_type, aes(StandAge, Carbon_UStons)) +
+         geom_bar(stat="identity", col = "black", fill = "lightblue") +
+   scale_x_discrete(limits=storage_type$StandAge,breaks=storage_type$StandAge[seq(1,length(storage_type$StandAge),by=2)])+
+  labs(x = "Stand age (years)", y = "Average carbon storage \n(US tons per acre)",
+       title = paste("Carbon storage in Minnesota's aspen/birch forests"))+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        strip.text = element_text(size=10),
+        strip.background = element_rect(fill="white"),
+        axis.text.y = element_text(color = "black"),
+        axis.text.x = element_text(size = 8, angle = 45, vjust = 0.5, color = "black"),
+        )
+p.storage
+```
+
+Carbon sequestration occurs in aspen-birch up until about age 70 (negative values in the graph). Then, aspen stands become a net source of carbon after that (positive values in the graph). This is only looking at the live aboveground tree pool, and additional work could drill down more to better understand these dynamics.
+
+```{r echo = F, message = F, warning = F}
+sequest <- storage %>% 
+  mutate(`0 ` = 0,
+         `0-5 ` = -1*(`0-5` / 5),
+         `6-10 ` = -1*((`6-10` - `0-5`) / 5),
+         `11-15 ` = -1*((`11-15` - `6-10`) / 5),
+         `16-20 ` = -1*((`16-20` - `11-15`) / 5),
+         `21-25 ` = -1*((`21-25` - `16-20`) / 5),
+         `26-30 ` = -1*((`26-30` - `21-25`) / 5),
+         `31-35 ` = -1*((`31-35` - `26-30`) / 5),
+         `36-40 ` = -1*((`36-40` - `31-35`) / 5),
+         `41-45 ` = -1*((`41-45` - `36-40`) / 5),
+         `46-50 ` = -1*((`46-50` - `41-45`) / 5),
+         `51-55 ` = -1*((`51-55` - `46-50`) / 5),
+         `56-60 ` = -1*((`56-60` - `51-55`) / 5),
+         `61-65 ` = -1*((`61-65` - `56-60`) / 5),
+         `66-70 ` = -1*((`66-70` - `61-65`) / 5),
+         `71-75 ` = -1*((`71-75` - `66-70`) / 5),
+         `76-80 ` = -1*((`76-80` - `71-75`) / 5),
+         `81-85 ` = -1*((`81-85` - `76-80`) / 5),
+         `86-90 ` = -1*((`86-90` - `81-85`) / 5),
+         `91-95 ` = -1*((`91-95` - `86-90`) / 5),
+         `96-100 ` = -1*((`96-100` - `91-95`) / 5))
+
+sequest_long <- sequest %>% 
+  filter(State == my_STATE & ForestTypeGroup == "Aspen / birch") %>% 
+  select(-c(Total, `0`:`96-100`)) %>% 
+  pivot_longer(`0 `:`96-100 `, names_to= "StandAge", values_to = "Carbon") %>% 
+    mutate(Carbon_UStons = Carbon * 1.10)
+
+
+# sequest_type <- sequest_long %>% 
+#   group_by(HdwdSfwd, StandAge) %>% 
+#   summarize(mean_Carbon_UStons = mean(Carbon_UStons, na.rm = T)) %>% 
+#   mutate(HdwdSfwd_name = ifelse(HdwdSfwd == "HW", "Hardwood forests", "Softwood forests"))
+
+sequest_type <- sequest_long 
+sequest_type$StandAge <- factor(sequest_type$StandAge, c("0 ", "0-5 ", "6-10 ", "11-15 ", "16-20 ", 
+                                                                  "21-25 ", "26-30 ", "31-35 ", "36-40 ", 
+                                                                  "41-45 ", "46-50 ", "51-55 ", "56-60 ", 
+                                                                  "61-65 ", "66-70 ", "71-75 ", "76-80 ", 
+                                                                  "81-85 ", "86-90 ", "91-95 ", "96-100 "))
+sequest_type$StandAge_num <- 1:21
+  
+p.sequest<- ggplot(sequest_type, aes(StandAge, Carbon_UStons, group = 1)) +
+  geom_point() +
+  stat_smooth(span = 1, se = F) +
+  scale_y_reverse() +
+  scale_x_discrete(limits=sequest_type$StandAge,breaks=sequest_type$StandAge[seq(1,length(sequest_type$StandAge),by=2)])+
+  geom_hline(yintercept=0, col = "red", linetype = "dashed")+
+  labs(x = "Stand age (years)", y = "Average carbon sequestration \n(US tons per acre per year)",
+       title = paste("Carbon sequestration in Minnesota's aspen/birch forests"))+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        strip.text = element_text(size=10),
+        strip.background = element_rect(fill="white"),
+        axis.text.y = element_text(color = "black"),
+        axis.text.x = element_text(size = 8, angle = 45, vjust = 0.5, color = "black")
+        )
+p.sequest
+```
+
+## Conclusion
+
+We need to discuss stand age and species composition when we talk about forest carbon. Short-lived trees like aspen in Minnesota have a number of forest health challenges at old ages and don't survive up to the length of typical contact lengths in carbon markets (e.g., 100 years). Delaying harvesting of forests with short-lived trees may present a number of additional forest health challenges.
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
+

@@ -6,10 +6,20 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Forest carbon and short-lived trees</title>
+      <link>/post/forest-carbon-markets-and-short-lived-trees/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/forest-carbon-markets-and-short-lived-trees/</guid>
+      <description>I spoke with a forest products company representative this week who expressed concern with “extending rotations” so that carbon is locked up in trees for a longer time. Many forest carbon markets are proposing delaying harvesting for a few years so that more carbon accumulates over time.
+The particular concern was in Minnesota where aspen, the state’s most commercially important species, is crucial to the forest products economy.</description>
+    </item>
     
     <item>
       <title>Coverting forest inventory data from volume to carbon </title>

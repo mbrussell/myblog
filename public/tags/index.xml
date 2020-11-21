@@ -6,7 +6,7 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Analytics</title>
       <link>/tags/analytics/</link>
-      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/analytics/</guid>
       <description></description>
@@ -59,9 +59,18 @@
     <item>
       <title>Carbon</title>
       <link>/tags/carbon/</link>
-      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/carbon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Carbon Markets</title>
+      <link>/tags/carbon-markets/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/carbon-markets/</guid>
       <description></description>
     </item>
     
@@ -185,7 +194,7 @@
     <item>
       <title>Disturbance</title>
       <link>/tags/disturbance/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/disturbance/</guid>
       <description></description>
@@ -221,7 +230,7 @@
     <item>
       <title>Forest Inventory</title>
       <link>/tags/forest-inventory/</link>
-      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/forest-inventory/</guid>
       <description></description>
