@@ -6,10 +6,23 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Most read posts in 2020</title>
+      <link>/post/most-read-posts-in-2020/</link>
+      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/most-read-posts-in-2020/</guid>
+      <description>In 2020, 29 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you’d like to see? Email Matt with any suggestions.
+Here are the most read posts from the Arbor Custom Analytics blog in 2020:
+Missed models in R: a primer
+Getting your data into R from Google Sheets
+The three kinds of data scientists in forestry</description>
+    </item>
     
     <item>
       <title>Forest carbon and short-lived trees</title>
