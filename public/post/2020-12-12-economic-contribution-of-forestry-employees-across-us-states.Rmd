@@ -1,0 +1,117 @@
+---
+title: Economic contribution of forestry employees across US states
+author: Matt Russell
+date: '2020-12-12'
+slug: economic-contribution-of-forestry-employees-across-us-states
+categories:
+  - Forestry
+tags:
+  - economics
+  - forest industry
+  - forest products
+  - forestry
+  - jobs
+  - logging
+---
+
+
+<center>
+
+![](logs.jpg){width=500px}
+</center>
+## 
+## 
+## 
+
+
+The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a [top ten manufacturing employer](https://www.energy.gov/eere/amo/forest-products-industry-profile). A few other insights on the importance of the forest products industry:
+
+* **250 companies** comprise the pulp, paper, and paperboard mill industry in the US,
+* The US forest products industry generates **5% of the manufacturing GDP** ($169 billion),
+* The US forest products industry contains over **22,000 manufacturing facilities** (~5,000 pulp and paper and 17,000 wood products)
+* **56% of US forests** are privately owned by family forest owners and companies.
+
+With the incredible importance of the forest products industry to the country's economy, this translates to jobs and careers in forestry. In a [paper published](https://meridian.allenpress.com/fpj/article/70/1/28/438785/Forestry-s-Economic-Contribution-in-the-United) in the *Forest Products Journal* earlier this year, Matthew Pelkki and Gabrielle Sherman summarized forestry's contribution to the US economy.   
+
+The data, compiled in 2016, are derived from the IMPLAN economic model using sources such as the US Bureau of Economic Analysis, US Department of Agriculture, and US Bureau of Labor Statistics. Forestry industry sectors are included in over 29 different forest industry types, including pulp mills, paper mills, manufactured home facilities, and more.
+
+California employs the greatest number of employees in the forestry sector (84,233 employees). The greatest number of employees in each state are followed by North Carolina, Texas, Pennsylvania, and Wisconsin. States with small land area or small human population have the fewest number of employees in the forestry sector: 
+
+```{r, echo = F, message = F, warning = F}
+library(tidyverse)
+library(googlesheets4)
+```
+
+```{r, echo = F, message = F, warning = F}
+emp <- read_sheet("https://docs.google.com/spreadsheets/d/1aT7tmGeSWmFeXoJ-lgnRK3ktLwlnhaInBfPLXWyYIEM/edit?usp=sharing")
+```
+
+
+```{r, echo = F, message = F, warning = F}
+# Graph of total # of employees by state
+
+p.emp <- ggplot(emp, aes(reorder(State, Employees), Employees , 
+                         fill = Employees)) +
+         geom_bar(stat="identity") +
+  coord_flip() +
+  labs(x = " ", y = "Employees",
+       title = "Number of employees in forestry sector, 2016",
+       caption = "Source: Pelkki and Sherman 2020") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black", size = 8),
+        legend.position = "none")
+p.emp
+```
+
+Forestry's total direct contribution to employee compensation is the highest for these same five states, with California providing the greatest overall compensation at $4.6 billion:
+
+```{r, echo = F, message = F, warning = F}
+# Graph of employee compensation by state
+
+p.comp <- ggplot(emp, aes(reorder(State, Employees_comp), Employees_comp, 
+                          fill = Employees_comp)) +
+         geom_bar(stat="identity") +
+  coord_flip() +
+  labs(x = " ", y = "Employee compensation ($ in millions)",
+       title = "Total direct employee compensation in forestry sector, 2016",
+       caption = "Source: Pelkki and Sherman 2020") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black", size = 8),
+        legend.position = "none")
+p.comp
+```
+
+On a per employee basis, forestry's total direct contribution was the greatest in New Jersey (nearly **$80,000** per employee) and the lowest in Wyoming (**$27,000** per employee). Generally, states in the Northeast region have the highest contributions per employee and the Central Plains and Mountain West the lowest.
+
+```{r, echo = F, message = F, warning = F}
+# Graph of employee compensation per employee
+
+emp <- emp %>% 
+  mutate(comp_emp = (Employees_comp*1000000)/Employees)
+
+
+p.comp <- ggplot(emp, aes(reorder(State, comp_emp), comp_emp/1000, 
+                          fill = comp_emp)) +
+         geom_bar(stat="identity") +
+  facet_wrap(~Region, scale = "free_y") +
+  coord_flip() +
+  labs(x = " ", y = "Compensation per employee ($ in thousands)",
+       title = "Compensation per employee in forestry sector, 2016",
+       caption = "Source: Pelkki and Sherman 2020") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black", size = 8),
+        legend.position = "none")
+p.comp
+```
+
+## Conclusion
+
+
+Understanding employment and compensation is an essential tool to quantifying the role of the workforce in the forest products sector. Approximately 1.2 million people are directly employed across forest products sectors, making it a key manufacturing employer that relies on a renewable and sustainable raw material.
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
