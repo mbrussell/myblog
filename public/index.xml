@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>ConsultingArbor Custom Analytics LLC offers data and analytics consulting services to all sized organizations in the forest products industry.
+Specializations includeForest analyticsTimberland resource assessmentData managementForest growth and yield modelingStatistical modelingMachine learningTeaching data concepts to forest and natural resource professionalsLeveraging existing data to solve new problemsIndependent researchMatt RussellPresident and CEOLinkedIn, Google Scholar, GitHubBackgroundExperience in forestry and analytics research, teaching, and outreachAuthor/co-author of over 50 peer-reviewed articles focusing on applied forestry researchOfficer and representative of Society of American ForestersA1-Inventory and Biometrics Working GroupForest Science and Technology BoardMember of Forest Products Society and American Statistical AssociationEducationUniversity of Maine.</description>
+    </item>
+    
+    <item>
       <title>Economic contribution of forestry employees across US states</title>
       <link>/post/economic-contribution-of-forestry-employees-across-us-states/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
@@ -19,6 +29,18 @@
       <guid>/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
       <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:
 250 companies comprise the pulp, paper, and paperboard mill industry in the US,The US forest products industry generates 5% of the manufacturing GDP ($169 billion),The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)56% of US forests are privately owned by family forest owners and companies.</description>
+    </item>
+    
+    <item>
+      <title>Newsletter</title>
+      <link>/newsletter/</link>
+      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/newsletter/</guid>
+      <description>Email newsletterStay on top of how data is changing the forest products industry.This email newsletter provides in-depth analysis on data and analytics in the forest products industry. One email delivered on the last Thursday of every month.
+SUBSCRIBE HERE
+READ PAST ISSUES
+</description>
     </item>
     
     <item>
@@ -167,18 +189,6 @@ Across the US, forests, urban trees, and harvested wood products are the largest
     </item>
     
     <item>
-      <title>Newsletter</title>
-      <link>/newsletter/</link>
-      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/newsletter/</guid>
-      <description>Email newsletterStay on top of how data is changing the forest products industry.This email newsletter provides in-depth analysis on data and analytics in the forest products industry. One email delivered on the last Thursday of every month.
-SUBSCRIBE HERE
-READ PAST ISSUES
-</description>
-    </item>
-    
-    <item>
       <title>Wages for logging truckers much lower than other transportation industries</title>
       <link>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
@@ -273,16 +283,6 @@ DOWNLOAD (PDF)
 DOWNLOAD (JPEG)
 The Forest Carbon Cheat Sheet.
 If you have questions or comments on the Cheat Sheet, email Matt.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>ConsultingArbor Custom Analytics LLC offers data and analytics consulting services to all sized organizations in the forest products industry.
-Specializations includeForest analyticsTimberland resource assessmentData managementForest growth and yield modelingStatistical modelingMachine learningTeaching data concepts to forest and natural resource professionalsLeveraging existing data to solve new problemsIndependent researchMatt RussellPresident and CEOLinkedIn, Google Scholar, GitHubBackgroundExperience in forestry and analytics research, teaching, and outreachAuthor/co-author of over 50 peer-reviewed articles focusing on applied forestry researchOfficer and representative of Society of American ForestersA1-Inventory and Biometrics Working GroupForest Science and Technology BoardMember of Forest Products Society and American Statistical AssociationEducationUniversity of Maine.</description>
     </item>
     
     <item>

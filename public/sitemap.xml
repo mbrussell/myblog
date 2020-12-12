@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/about/</loc>
+    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/economic-contribution-of-forestry-employees-across-us-states/</loc>
+    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/newsletter/</loc>
     <lastmod>2020-12-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,11 +88,6 @@
   </url>
   
   <url>
-    <loc>/newsletter/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
@@ -125,11 +130,6 @@
   <url>
     <loc>/post/forest-carbon-cheat-sheet/</loc>
     <lastmod>2020-04-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
