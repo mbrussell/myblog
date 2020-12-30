@@ -23,7 +23,7 @@ In 2020, 29 new posts were published to this blog on topics relating to data and
 
 Here are the most read posts from the Arbor Custom Analytics blog in 2020:
 
-1. [Missed models in R: a primer](https://arbor-analytics.com/post/mixed-models-a-primer/)
+1. [Mixed models in R: a primer](https://arbor-analytics.com/post/mixed-models-a-primer/)
 
 2. [Getting your data into R from Google Sheets](https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/)
 

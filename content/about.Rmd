@@ -1,7 +1,7 @@
 ---
 title: About
 author: Matt Russell
-date: '2020-12-12'
+date: '2020-12-30'
 slug: about
 ---
 
@@ -10,7 +10,7 @@ Arbor Custom Analytics LLC offers data and analytics consulting services to all 
 
 ## Specializations include
 * Forest analytics
-* Timberland resource assessment
+* Forest carbon assessment
 * Data management
 * Forest growth and yield modeling
 * Statistical modeling
@@ -30,7 +30,7 @@ Arbor Custom Analytics LLC offers data and analytics consulting services to all 
 
 ### Background
 * Experience in forestry and analytics research, teaching, and outreach
-* Author/co-author of over 50 peer-reviewed articles focusing on applied forestry research
+* Author/co-author of over 60 peer-reviewed articles focusing on applied forestry research
 * Officer and representative of Society of American Foresters
   + A1-Inventory and Biometrics Working Group
   + Forest Science and Technology Board
