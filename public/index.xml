@@ -6,19 +6,42 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Climate 21: what it says about forest carbon</title>
+      <link>/post/climate-21-what-it-says-about-forest-carbon/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/post/climate-21-what-it-says-about-forest-carbon/</guid>
+      <description>Word cloud for the Climate 21 Project Transition Memo-Department of Agriculture.
+There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.
+In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>/about/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
       <description>ConsultingArbor Custom Analytics LLC offers data and analytics consulting services to all sized organizations in the forest products industry.
-Specializations includeForest analyticsTimberland resource assessmentData managementForest growth and yield modelingStatistical modelingMachine learningTeaching data concepts to forest and natural resource professionalsLeveraging existing data to solve new problemsIndependent researchMatt RussellPresident and CEOLinkedIn, Google Scholar, GitHubBackgroundExperience in forestry and analytics research, teaching, and outreachAuthor/co-author of over 50 peer-reviewed articles focusing on applied forestry researchOfficer and representative of Society of American ForestersA1-Inventory and Biometrics Working GroupForest Science and Technology BoardMember of Forest Products Society and American Statistical AssociationEducationUniversity of Maine.</description>
+Specializations includeForest analyticsForest carbon assessmentData managementForest growth and yield modelingStatistical modelingMachine learningTeaching data concepts to forest and natural resource professionalsLeveraging existing data to solve new problemsIndependent researchMatt RussellPresident and CEOLinkedIn, Google Scholar, GitHubBackgroundExperience in forestry and analytics research, teaching, and outreachAuthor/co-author of over 60 peer-reviewed articles focusing on applied forestry researchOfficer and representative of Society of American ForestersA1-Inventory and Biometrics Working GroupForest Science and Technology BoardMember of Forest Products Society and American Statistical AssociationEducationUniversity of Maine.</description>
+    </item>
+    
+    <item>
+      <title>Newsletter</title>
+      <link>/newsletter/</link>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/newsletter/</guid>
+      <description>Email newsletterStay on top of how data is changing the forest products industry.This email newsletter provides in-depth analysis on data and analytics in the forest products industry. One email delivered on the last Thursday of every month.
+SUBSCRIBE HERE
+READ PAST ISSUES
+</description>
     </item>
     
     <item>
@@ -32,18 +55,6 @@ Specializations includeForest analyticsTimberland resource assessmentData ma
     </item>
     
     <item>
-      <title>Newsletter</title>
-      <link>/newsletter/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/newsletter/</guid>
-      <description>Email newsletterStay on top of how data is changing the forest products industry.This email newsletter provides in-depth analysis on data and analytics in the forest products industry. One email delivered on the last Thursday of every month.
-SUBSCRIBE HERE
-READ PAST ISSUES
-</description>
-    </item>
-    
-    <item>
       <title>Most read posts in 2020</title>
       <link>/post/most-read-posts-in-2020/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
@@ -51,7 +62,7 @@ READ PAST ISSUES
       <guid>/post/most-read-posts-in-2020/</guid>
       <description>In 2020, 29 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you’d like to see? Email Matt with any suggestions.
 Here are the most read posts from the Arbor Custom Analytics blog in 2020:
-Missed models in R: a primer
+Mixed models in R: a primer
 Getting your data into R from Google Sheets
 The three kinds of data scientists in forestry</description>
     </item>
