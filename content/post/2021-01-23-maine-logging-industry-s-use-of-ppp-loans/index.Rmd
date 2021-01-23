@@ -17,7 +17,7 @@ Logging companies in Maine requested at least $13.8 million in Paycheck Protecti
 
 The [SBA Paycheck Protection Program Loan Level Data](https://home.treasury.gov/policy-issues/cares-act/assistance-for-small-businesses/sba-paycheck-protection-program-loan-level-data) provides information on PPP loan distributions to businesses made through August 8, 2020. Depending on the size of the business and its needs, loan amounts varied.
 
-For businesses that requested **less than \$150,000**, the average loan amount was \$32,790 and there were an average of four jobs reported:
+For businesses that requested **less than \$150,000**, the average loan amount was \$32,790 and there were an average of four jobs reported: 
 
 ```{r,  echo = F, message = F, warning = F}
 options(scipen=10000)
