@@ -1,0 +1,143 @@
+---
+title: Maine logging industry's use of PPP loans
+author: Matt Russell
+date: '2021-01-23'
+slug: []
+categories:
+  - Logging
+tags:
+  - logging
+  - forest industry
+  - forest products
+  - jobs
+  - PPP loans
+---
+
+Logging companies in Maine requested at least $13.8 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020. These loans were offered to 256 logging businesses in Maine in the spring and early summer of 2020.
+
+The [SBA Paycheck Protection Program Loan Level Data](https://home.treasury.gov/policy-issues/cares-act/assistance-for-small-businesses/sba-paycheck-protection-program-loan-level-data) provides information on PPP loan distributions to businesses made through August 8, 2020. Depending on the size of the business and its needs, loan amounts varied.
+
+For businesses that requested **less than \$150,000**, the average loan amount was \$32,790 and there were an average of four jobs reported:
+
+```{r,  echo = F, message = F, warning = F}
+options(scipen=10000)
+
+library(tidyverse)
+library(knitr)
+library(formattable)
+library(kableExtra)
+```
+
+```{r, echo = F, message = F, warning = F}
+all <- read_csv('C:/Users/russellm/Documents/Arbor/Data/me_ppp.csv')
+
+me <- all %>%
+  filter(NAICSCode %in% c(1133, 113310))
+  
+mean_me <- me %>% 
+  summarize(mean_loan = mean(LoanAmount),
+            mean_jobs = mean(JobsReported, na.rm=T)) 
+
+p.numloans <- ggplot(me, aes(LoanAmount))+
+  geom_histogram(bins = 15, fill="cyan", col = "black")+
+    labs(y = "Number of PPP loans", 
+         x = "Loan amount ($)") +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black"),
+        legend.title = element_blank(),
+        legend.key=element_blank(),
+        legend.position = "none") 
+p.numloans
+
+p.jobs<- ggplot(me, aes(JobsReported, LoanAmount)) +
+  geom_point() +
+  geom_smooth() +
+    labs(y = "Loan amount ($)", 
+         x = "Number of jobs reported") +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black"),
+        legend.title = element_blank(),
+        legend.key=element_blank(),
+        legend.position = "none") 
+p.jobs
+```
+
+Sixteen Maine logging businesses requested **between \$150,000 and \$350,000**, with an average of 21 jobs reported. Eleven Maine logging businesses requested between **\$350,000 and \$1 million**, with an average of 46 jobs reported:
+
+```{r, echo = F, message = F, warning = F}
+
+me_big <- read_csv('C:/Users/russellm/Documents/Arbor/Data/me_ppp_150kplus.csv')
+  
+mean_me <- me_big %>% 
+  group_by(LoanRange) %>% 
+  summarize(n_loans = n()) 
+
+loan <-
+  tribble (
+  ~LoanRange, ~`Loan Range`,
+  "d $350,000-1 million", "$350,000-1 million",
+  "e $150,000-350,000", "$150,000-350,000"
+  )
+
+mean_me <- inner_join(mean_me, loan)
+
+p.numloans.big <- ggplot(mean_me, aes(`Loan Range`, n_loans))+
+  geom_bar(stat="identity", fill="cyan", col = "black")+
+  coord_flip()+
+    labs(y = "Number of PPP loans", 
+         x = "Loan amount range ($)") +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black"),
+        legend.title = element_blank(),
+        legend.key=element_blank(),
+        legend.position = "none") 
+p.numloans.big
+```
+
+```{r, echo = F, message = F, warning = F}
+sum_me <- me %>% 
+  summarize(sum_loan = sum(LoanAmount)) 
+
+sum_me_big <- me_big %>% 
+  group_by(LoanRange) %>% 
+  summarize(n_loans = n()) 
+
+#Total amt to Maine logging businesses
+Sum_all <- sum_me + (11*350000) + (16*150000)
+
+```
+
+```{r, echo = F, message = F, warning = F}
+mean_me2 <- me_big %>% 
+  group_by(LoanRange) %>% 
+  summarize(mean_jobs = mean(JobsReported )) 
+```
+
+The town of Fort Kent, ME saw the greatest number loan distributions to logging companies with 40. Lincoln, ME ranked second with 10 loan distributions, followed by four other cities tied with six distributions: 
+
+```{r, echo = F, message = F, warning = F}
+me_city_all<- tibble(City = c(me$City, me_big$City))
+
+me_city2 <- me_city_all %>% 
+  mutate(CITY = str_to_upper(City, locale = "en")) %>% 
+  group_by(CITY) %>% 
+  summarize(n_city = n())
+
+me_city3 <- me_city2 %>% 
+  rename(`Number of loans` = n_city) %>% 
+  filter(`Number of loans` >= 5) %>% 
+  arrange(desc(`Number of loans`))
+  
+me_city3 %>% 
+   kable("html", caption = 'Number of PPP loans offered to logging businesses in Maine cities.') %>%
+   kable_styling()
+```
+
+The PPP program has provided needed loans to assist logging and other forest products businesses keep their workers employed throughout the COVID-19 pandemic.The US Small Business Administration is [continuing to offer](https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/paycheck-protection-program) a First Draw Loan for first time program participants and a Second Draw Loan for businesses who have previously received a PPP loan.
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
