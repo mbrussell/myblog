@@ -13,7 +13,7 @@ tags:
 ---
 
 <center>
-![A black spruce forest in northern Minnesota](blackspruce.jpg){width=500px}
+![A black spruce forest in northern Minnesota](blackspruce2.jpg){width=500px}
 </center>
 
 <center>
