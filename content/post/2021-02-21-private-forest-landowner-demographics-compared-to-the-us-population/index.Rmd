@@ -1,0 +1,64 @@
+---
+title: Private forest landowner demographics compared to the US population
+author: Matt Russell
+date: '2021-02-21'
+slug: []
+categories:
+  - Forestry
+tags:
+  - forestry
+  - forest ownership
+  - demographics
+  - Data viz
+---
+
+Private individuals own a third of the nation’s forests. These private landowners value them primarily due to the beauty, natural values, and wildlife habitat they provide.
+
+Forests owned by private non-industrial individuals are diverse: they vary in terms of species composition, structure, and management objectives. While privately-owned forests are diverse, the demographics of their owners are not. 
+
+Data from the [National Woodland Owner Survey](https://academic.oup.com/jof/article/114/6/638/4756812), a program administered by the USDA Forest Service, indicate that the primary decision makers on private forestlands are older, predominantly male, White, and non-Hispanic. These demographics do not align with the population demographics of the state or US as a whole.
+
+```{r echo = F, warning = F, message = F}
+library(tidyverse)
+
+ffo <- tribble(
+  ~Topic, ~Group, ~Pct,
+  "Age greater than 65", "US population", 13,
+  "Age greater than 65", "US private forest landowners", 43,
+  "Men", "US population", 49,
+  "Men", "US private forest landowners", 79,
+  "White", "US population", 72,
+  "White", "US private forest landowners", 95,
+  "Non-Hispanic", "US population", 84,
+  "Non-Hispanic", "US private forest landowners", 99,
+)
+
+p.ffo <- ggplot(ffo, aes(Topic, Pct,  fill = Group)) +
+  geom_bar(stat = "identity", position = "dodge",  col = "black") +
+  coord_flip() +
+  scale_fill_brewer(palette="Dark2") +
+     labs(y = "Percentage", 
+         x = " ") +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black"),
+        legend.position = "top",
+        legend.title = element_blank()) 
+p.ffo
+```
+
+While 72% of the US population are White, 95% of private forests are owned by Whites. Men make up 49% of the US population, yet 79% of private forest are owned by men. People aged 65 years or over are 13% of the US population, but 43% of private land owners are of this age.   
+
+Private forestland is often passed on to family members through legacy planning. Because of this, landowner demographics will not likely change unless there is increased interest in passing land to non-heirs, a tool that can diversify landowner demographics. 
+
+Little research exists about the demographics of private forestland ownership by non-traditional groups. Here are a few resources to learn more:
+
+* [Women Owning Woodlands](https://www.womenowningwoodlands.net/). Communities of women owning woodlands with a shared mindset of land stewardship have increased in recent years. The WOW website supports women in forest leadership, women who manage their own woodlands, and all who facilitate the stewardship of forests.
+
+* [Sustainable Forestry and African American Land Retention Network (SFLR)](https://www.usendowment.org/sustainable-forestry-and-african-american-land-retention-program-sflr/). The SFLR program improves forest management by connecting African American landowners to established networks of forestry professionals. The third episode of [*America's Forest* with Chuck Leavell](https://www.americasforestswithchuckleavell.com/watch/episode-3-south-carolina/) highlights the SFLR program.
+
+* **Native American Land Ownership**. Native American tribes own 2% of all US forestland, including in individual allotments or lands managed by tribal entities. The Story Map ["Who owns America's forest?](https://arcg.is/1K90HW) has excellent data on ownership by Native Americans.
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
