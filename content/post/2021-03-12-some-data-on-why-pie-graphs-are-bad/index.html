@@ -1,0 +1,86 @@
+---
+title: Some data on why pie graphs are bad
+author: Matt Russell
+date: '2021-03-13'
+slug: []
+categories:
+  - Data visualization
+tags:
+  - Communicating data
+  - Data viz
+  - pie graphs
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<blockquote>
+<p>“The only thing worse than a pie chart is several of them.” -<em>Edward Tufte</em></p>
+</blockquote>
+<p>I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.</p>
+<p>Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid. In the age of Twitter and social media, there’s a strong community <a href="https://twitter.com/dataandme/status/1031362448404738049">against pie graphs</a>.</p>
+<p>Pie graphs are used to display categorical data. They show the distribution of variables as a “pie” whose slices are sized by the counts or percents for the categories.</p>
+<p>Pie graphs are ineffective because the human eye does a poor job in judging angles. Similarly, the eye is terrible when judging color in pie graphs. Instead, the human eye does a great job of discerning position and lengths of objects, and we should develop visualizations that emphasize those elements.</p>
+<p>This post will describe an in-class activity I’ve conducted in several statistics classes. I’ll show some data I’ve collected on why pie charts are problematic compared to other visualizations.</p>
+<div id="class-activity-graphical-perception" class="section level2">
+<h2>Class activity: Graphical perception</h2>
+<p>I’ve used graduate students in my NR 5021: Statistics for Agricultural and Natural Resources Professionals class as my “pie graph lab rats”. In five different classes over the last five years, I’ve collected data from 114 students that tested their graphical perception of different types of visualizations.</p>
+<p>Students decoded quantitative information from a series of graphs that I showed on the projector screen. They entered their response into a Goggle Form that allowed me to quickly analyze the results and show them in class. (You can try these yourself.)</p>
+<p>Students saw a series of three questions and were asked to estimate the percentage of a data point (<strong>B</strong>, <strong>C</strong>, and <strong>D</strong>), relative to the data point <strong>A</strong>. For example, the first question asked about positions along a common scale. If students thought <strong>C</strong> was half the value of <strong>A</strong>, they entered 50%:</p>
+<center>
+<p><img src="Q1.jpg" width="250" /></p>
+</center>
+<p>The questions became more difficult. The second question asked about perceiving the length and area of an object:</p>
+<center>
+<p><img src="Q2.jpg" width="250" /></p>
+</center>
+<p>And the third question asked about judging the size of angles, your task when you see a pie graph:</p>
+<center>
+<p><img src="Q3.jpg" width="500" /></p>
+</center>
+</div>
+<div id="the-answers" class="section level2">
+<h2>The answers</h2>
+<p>For Question 1, most people had trouble estimating <strong>D</strong>, the smallest value. On average, students overpredicted the value of Q1D by 5%:</p>
+<center>
+<p><img src="Q1_ans.jpg" width="250" /></p>
+</center>
+<p>For Question 2, on average students <strong>underpredicted</strong> every value, up to 7%:</p>
+<center>
+<p><img src="Q2_ans.jpg" width="250" /></p>
+</center>
+<p>For Question 3, on average students <strong>overpredicted</strong> every value, up to 8%. This question was a challenge for many students because the reference angle was 80 degrees and not oriented with a horizontal axis:</p>
+<center>
+<p><img src="Q3_ans.jpg" width="500" /></p>
+</center>
+<p>To summarize the results, here is the average difference from the true value for each of the questions:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Pie charts should be used with caution. There are several reasons for overlooking pie graphs and instead favoring other kinds of graphs. Several reasons behind this are pointed out in early work by Cleveland and McGill (1984, 1985):</p>
+<ul>
+<li>The human eye does a poor job in judging angles. This makes it difficult to discern the values within pie graphs.</li>
+<li>Pie graphs contain color, and the human eye does a very poor job in judging color in graphs. This is especially true for individuals that are color blind or have other visual impairments.</li>
+</ul>
+<p>Regardless, because of the widespread use of pie graphs it is helpful to learn how to interpret them. As an alternative, place more priority in developing graphs such as bar plots when displaying categorical data.</p>
+<p>Cleveland and McGill (1984, 1985) recommend creating graphs that exploit the following aspects, ranked from highest to lowest:</p>
+<ol style="list-style-type: decimal">
+<li>Position along a common scale (like Question 1)</li>
+<li>Position on identical but non-identical scales (think axes that are of the same magnitude but offset to one another)</li>
+<li>Length (like Question 2)</li>
+<li>Angle (Pie graphs, like Question 3)</li>
+<li>Slopes and directions</li>
+<li>Area</li>
+<li>Volume, density, and color saturation</li>
+<li>Color hue</li>
+</ol>
+<p>The human eye does a fine job of discerning position and lengths of objects, so stick to creating those graphs in your data visualization.</p>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p>Cleveland, W.S., and R. McGill. 1984. Graphical perception: theory, experimentation, and application to the development of graphical methods. <em>J. Am. Stat. Assoc.</em> 79: 531-554.</p>
+<p>Cleveland, W.S., and R. McGill. 1985. Graphical perception and graphical methods for analyzing scientific data. <em>Science</em> 229: 828-833.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
