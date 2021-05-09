@@ -271,7 +271,10 @@ $ 149.81
 </tr>
 </tbody>
 </table>
-<p>The development of the animated bar chart begin with creating a static visualization. The visualization <code>p.static</code> below uses <strong>ggplot</strong> to create a bar graph that plots the stumpage price for each species. Each species is colored differently which will aid the reader in interpreting the visualization. Several arguments to the <code>theme()</code> statement :</p>
+</div>
+<div id="animated-bar-charts-with-ggplot" class="section level2">
+<h2>Animated bar charts with ggplot</h2>
+<p>The development of the animated bar chart begins with creating a static visualization. The visualization <code>p.static</code> below uses <strong>ggplot</strong> to create a bar graph that plots the stumpage price for each species. Each species is colored differently which will aid the reader in interpreting the visualization. Several arguments are added to the <code>theme()</code> statement:</p>
 <pre class="r"><code>p.static &lt;- ggplot(prices, aes(rank, group = Species,
                 fill = as.factor(Species), color = as.factor(Species))) +
   geom_tile(aes(y = Price/2,
@@ -310,14 +313,14 @@ $ 149.81
 <pre class="r"><code>animate(anim, 200, fps = 20,  width = 1200, height = 1000, 
         renderer = gifski_renderer(&quot;gganim.gif&quot;))</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-9-1.gif" /><!-- --></p>
-<p>The animated bar plots reveal a number of trends that otherwise are difficult to discern by looking at the data in a table or static figure:</p>
+<p>The animated bar plots reveal a number of trends that are otherwise difficult to discern by looking at the data in a table or static figure:</p>
 <ul>
-<li><strong>The price of ash sawlogs jumps to number one.</strong> Ash is mostly a low-priced species until 2018 when it jumps to the highest priced species. This is somewhat of a surprise because the emerald ash borer, an invasive insect, is leading to mortality of many ash forests across Minnesota, but it is likely a trend in emerging markets for ash forest products.<br />
+<li><strong>The price of ash sawlogs jumps to number one.</strong> Ash is mostly a low-valued species until 2018 when it jumps to the highest price of all species. This is somewhat of a surprise because the emerald ash borer, an invasive insect, is leading to mortality of many ash forests across Minnesota. This is likely an issue with supply and trends in emerging markets for ash forest products.<br />
 </li>
 <li><strong>Pine sawtimber prices are stable.</strong> Prices for red, white, and jack pine consistently rank between number three and six in price from 2010 through 2019.</li>
 <li><strong>Oak and maple dominate.</strong> Prices for oak sawtimber are the highest amount of all species for almost all years. Maple see a decline in price beginning in 2018.</li>
 </ul>
-<p>In summary, try adding animated bar plots to your data viz toolkit. They are effective in showing trends across time and do well in a number on online environments like social media.</p>
+<p>In summary, try adding animated bar plots to your data viz toolkit. They are effective for showing trends across time and do well in a number on online environments like social media.</p>
 <p>–</p>
 <p>Many thanks to Abdul Majed Raja for the <a href="https://towardsdatascience.com/create-animated-bar-charts-using-r-31d09e5841da">inspiration and code</a> behind this post.</p>
 <p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
