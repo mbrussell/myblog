@@ -102,8 +102,6 @@ total.pools <- hwp %>%
   pivot_wider(names_from = Pool, values_from = Value_MMT_C) %>% 
   mutate(pct_hwp = (`Harvested wood total`/`Forest total`)*100)
 
-total.pools
-
 total.pools2 <- hwp %>% 
   filter(Pool %in% c("Forest total", "Harvested wood total"))
 ```
