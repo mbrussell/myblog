@@ -1,5 +1,5 @@
 ---
-title: 'Harvested wood products: an growing contributor to US carbon storage'
+title: 'Harvested wood products: a growing contributor to US carbon storage'
 author: Matt Russell
 date: '2021-05-16'
 slug: []
