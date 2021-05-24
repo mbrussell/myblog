@@ -1,0 +1,548 @@
+---
+title: The forest products industry’s use of Paycheck Protection Program loans
+author: Matt Russell
+date: '2021-05-24'
+slug: [ppp]
+categories:
+  - Forest products
+tags:
+  - analytics
+  - forest industry
+  - forest products
+  - forestry
+  - jobs
+  - PPP loans
+---
+
+<center>
+
+![](wood.jpg){width=500px}
+</center>
+
+```{r,  echo = F, message = F, warning = F}
+options(scipen=10000)
+library(tidyverse)
+library(lubridate)
+library(tidycensus)
+library(sf)
+library(urbnmapr)
+library(knitr)
+library(formattable)
+library(kableExtra)
+```
+
+## Summary
+The Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 34,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 485,000 workers in the forest industry.
+
+## The Paycheck Protection Program 
+The US Small Business Administration (SBA) managed the [Paycheck Protection Program (PPP)](https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program) between April 2020 and May 2021. This loan program was created in response to business challenges presented by the COVID-19 pandemic. 
+
+The program provided loans to businesses to keep their workers on payroll, with many borrowers eligible for loan forgiveness. As of May 10, 2021, 49% of all PPP loans distributed in 2020 have been forgiven ($257.5 out of $521.2 billion).
+
+In total, nearly 800 billion dollars were allocated to US companies as a part of the PPP. The loan program was initially slated to expire on May 31, 2021, however, funds for the program essentially ran out on May 2, 2021. 
+
+Approximately four percent of PPP loans were delivered to companies in the forestry and agricultural sector. This article summarizes information on PPP loans provided to businesses in the forest products industry.
+
+## PPP data
+Data were acquired from [the US SBA website](https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program/ppp-data) (last updated 10 May 2021). To identify forest products companies, the North American Industry Classification System (NAICS) codes were obtained as a subset of the Agriculture, Forestry, Fishing and Hunting and Manufacturing industry titles. These represented 28 different industries including:
+
+* Forest nurseries and gathering of forest products,
+* Logging,
+* Converted paper product manufacturing,
+* Pulp, paper, and paperboard mills,
+* Veneer, plywood, and engineered wood product manufacturing,
+* Other wood product manufacturing, and
+* Support activities for forestry
+
+```{r, echo = F, message = F, warning = F}
+# Make a NAICS Code table
+NAICS <- tribble(
+  ~NAICSCode, ~IndustryTitle, ~IndustryCat, ~NAICSName, ~n_bus,
+1131, "Agriculture, Forestry, Fishing and Hunting",	"Timber Tract Operations", "Timber Tract Operations", 2067,
+113110,"Agriculture, Forestry, Fishing and Hunting", "Timber Tract Operations", "Timber Tract Operations", 2067,	
+1132, "Agriculture, Forestry, Fishing and Hunting",	"Forest Nurseries and Gathering of Forest Products", "Forest Nurseries and Gathering of Forest Products", 962, 	
+113210, "Agriculture, Forestry, Fishing and Hunting",	"Forest Nurseries and Gathering of Forest Products", "Forest Nurseries and Gathering of Forest Products", 962,	
+1133, "Agriculture, Forestry, Fishing and Hunting",	"Logging", "Logging", 8250,
+113310, "Agriculture, Forestry, Fishing and Hunting",	"Logging", "Logging", 8250,
+1153,"Agriculture, Forestry, Fishing and Hunting",	"Support Activities for Forestry", "Support Activities for Forestry", 5277,
+115310,"Agriculture, Forestry, Fishing and Hunting",	"Support Activities for Forestry", "Support Activities for Forestry", 5277,
+3211, "Manufacturing",	"Sawmills and Wood Preservation",	"Sawmills and Wood Preservation",3120,
+321113, "Manufacturing",	"Sawmills and Wood Preservation","Sawmills",	2480,
+321114, "Manufacturing", "Sawmills and Wood Preservation",	"Wood Preservation",	640,
+3212, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Veneer, Plywood, and Engineered Wood Product Manufacturing",	1617,
+321211, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Hardwood Veneer and Plywood Manufacturing",	299,
+321212, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Softwood Veneer and Plywood Manufacturing",	80,
+321213, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Engineered Wood Member (except Truss) Manufacturing",	58,
+321214, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Truss Manufacturing",	869,
+321219, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Reconstituted Wood Product Manufacturing",	311,
+3219, "Manufacturing",	"Other Wood Product Manufacturing", "Other Wood Product Manufacturing",	26742,
+321911, "Manufacturing", "Other Wood Product Manufacturing", "Wood Window and Door Manufacturing",	1259,
+321912, "Manufacturing", "Other Wood Product Manufacturing", "Cut Stock, Resawing Lumber, and Planing",	1225,
+321918, "Manufacturing", "Other Wood Product Manufacturing", "Other Millwork (including Flooring)",	14687,
+321920, "Manufacturing", "Other Wood Product Manufacturing", "Wood Container and Pallet Manufacturing",	3383,
+321991, "Manufacturing", "Other Wood Product Manufacturing", "Manufactured Home (Mobile Home) Manufacturing",	570,
+321992, "Manufacturing", "Other Wood Product Manufacturing", "Prefabricated Wood Building Manufacturing",	1111,
+321999, "Manufacturing", "Other Wood Product Manufacturing",	"All Other Miscellaneous Wood Product Manufacturing",	4507,
+3221, "Manufacturing",	"Pulp, Paper, and Paperboard Mills", "Pulp, Paper, and Paperboard Mills",	2956,
+322110, "Manufacturing", "Pulp, Paper, and Paperboard Mills",	"Pulp Mills",	343,
+322121, "Manufacturing", "Pulp, Paper, and Paperboard Mills",	"Paper (except Newsprint) Mills",	1921,
+322122, "Manufacturing", "Pulp, Paper, and Paperboard Mills",	"Newsprint Mills",	34,
+322130, "Manufacturing", "Pulp, Paper, and Paperboard Mills", "Paperboard Mills",	658,
+3222, "Manufacturing", "Converted Paper Product Manufacturing", "Converted Paper Product Manufacturing",	6059,
+322211, "Manufacturing", "Converted Paper Product Manufacturing", "Corrugated and Solid Fiber Box Manufacturing",	1852,
+322212, "Manufacturing", "Converted Paper Product Manufacturing", "Folding Paperboard Box Manufacturing",	147,
+322219, "Manufacturing", "Converted Paper Product Manufacturing", "Other Paperboard Container Manufacturing",	663,
+322220, "Manufacturing", "Converted Paper Product Manufacturing", "Paper Bag and Coated and Treated Paper Manufacturing",	1471,
+322230, "Manufacturing", "Converted Paper Product Manufacturing", "Stationery Product Manufacturing",	412,
+322291, "Manufacturing", "Converted Paper Product Manufacturing", "Sanitary Paper Product Manufacturing",	374,
+322299, "Manufacturing", "Converted Paper Product Manufacturing", "All Other Converted Paper Product Manufacturing",	1140
+)
+```
+
+```{r, echo = F, message = F, warning = F}
+# Make a list of NAICS codes
+NAICS_list <- c(1133, 
+                113310, 
+                1132, 
+                113210,
+                1133,
+                113310,
+                1153,
+                115310,
+                3211,
+                321113,
+                321114,
+                3212,
+                321211,
+                321212,
+                321213,
+                321214,
+                321219,
+                3219,
+                321911,
+                321912,
+                321918,
+                321920,
+                321991,
+                321992,
+                321999,
+                3221,
+                322110,
+                322121,
+                322122,
+                322130,
+                3222,
+                322211,
+                322212,
+                322219,
+                322220,
+                322230,
+                322291,
+                322299)
+
+# Read in data from US SBA website
+public_up_to_150k_1 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/3d28c417-5170-4f1f-be31-b0c7b0182501/download/public_up_to_150k_1.csv')
+
+public_up_to_150k_1 <- public_up_to_150k_1 %>%
+  filter(NAICSCode %in% NAICS_list)
+  
+public_up_to_150k_2 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/4a2529a5-08ce-436d-a448-465ca82eadaf/download/public_up_to_150k_2.csv')
+
+public_up_to_150k_2 <- public_up_to_150k_2 %>%
+  filter(NAICSCode %in% NAICS_list)
+
+public_up_to_150k_3 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/ffd0bdb7-cc41-4adb-9762-8957d61c1862/download/public_up_to_150k_3.csv')
+
+public_up_to_150k_3 <- public_up_to_150k_3 %>%
+  filter(NAICSCode %in% NAICS_list)
+
+public_up_to_150k_4 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/864cd9cb-7797-42da-b991-68ac24fcab9a/download/public_up_to_150k_4.csv')
+
+public_up_to_150k_4 <- public_up_to_150k_4 %>%
+  filter(NAICSCode %in% NAICS_list)
+
+public_up_to_150k_5 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/3032cb97-3a22-4ded-a0ca-69bdf54cdc32/download/public_up_to_150k_5.csv')
+
+public_up_to_150k_5 <- public_up_to_150k_5 %>%
+  filter(NAICSCode %in% NAICS_list)
+
+public_up_to_150k_6 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/8fd56c55-8ad6-491e-a219-441c50471e4d/download/public_up_to_150k_6.csv')
+
+public_up_to_150k_6 <- public_up_to_150k_6 %>%
+  filter(NAICSCode %in% NAICS_list)
+
+public_up_to_150k_7 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/7fd17fde-42a9-4a5a-8be9-dfbc6703e5f3/download/public_up_to_150k_7.csv')
+
+public_up_to_150k_7 <- public_up_to_150k_7 %>%
+  filter(NAICSCode %in% NAICS_list)
+
+public_up_to_150k_8 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/c0c87f18-333a-43e8-843e-7c1e27b18317/download/public_up_to_150k_8.csv')
+
+public_up_to_150k_8 <- public_up_to_150k_8 %>%
+  filter(NAICSCode %in% NAICS_list)
+
+public_up_to_150k_9 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/88d9f6f7-b471-4f5b-ae3e-7b9d7b394ad2/download/public_up_to_150k_9.csv')
+
+public_up_to_150k_9 <- public_up_to_150k_9 %>%
+  filter(NAICSCode %in% NAICS_list)
+
+public_up_to_150k_10 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/1d790863-35f5-491c-9e1c-e09fa7905a7c/download/public_up_to_150k_10.csv')
+
+public_up_to_150k_10 <- public_up_to_150k_10 %>%
+  filter(NAICSCode %in% NAICS_list)
+
+public_up_to_150k_11 <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/9499ab4e-2016-41fd-b1a0-23d5a2d065cf/download/public_up_to_150k_11.csv')
+
+public_up_to_150k_11 <- public_up_to_150k_11 %>%
+  filter(NAICSCode %in% NAICS_list)
+
+# BIG
+public_150k_plus <- read_csv('https://data.sba.gov/dataset/8aa276e2-6cab-4f86-aca4-a7dde42adf24/resource/6b62a44b-69ec-436a-9b95-0ea550475543/download/public_150k_plus.csv')
+
+public_150k_plus <- public_150k_plus %>%
+  filter(NAICSCode %in% NAICS_list)
+```
+
+```{r, echo = F, message = F, warning = F}
+# Combine all PPP loan data and join to NAICS code table
+ppp <- rbind(public_up_to_150k_1,
+             public_up_to_150k_2,
+             public_up_to_150k_3,
+             public_up_to_150k_4,
+             public_up_to_150k_5,
+             public_up_to_150k_6,
+             public_up_to_150k_7,
+             public_up_to_150k_8,
+             public_up_to_150k_9,
+             public_up_to_150k_10,
+             public_up_to_150k_11,
+             public_150k_plus)
+
+ppp <- inner_join(ppp, NAICS)
+```
+
+## PPP loans to the forest products industry
+Forest products companies received 34,349 loans for a total of $4.7 billion through the PPP program from April 2020 to May 2021. The SBA provided PPP loans through three rounds between April 3, 2020 and April 16, 2020 (Round One), April 27 and August 8, 2020 (Round 2), and December 27, 2020 and May 5, 2021 (Round 3). 
+
+```{r, echo = F, message = F, warning = F}
+# Summarize by PPP daily loan date
+mean_ppp_date <- ppp %>% 
+  group_by(DateApproved) %>% 
+  summarize(n_loans = n(),) %>% 
+  arrange(desc(n_loans)) %>% 
+  mutate(DateApproved2 = as.Date(DateApproved, format =  "%m/%d/%Y"),
+         Round = ifelse(DateApproved2 < "2020-04-17", "Round 1", 
+                           ifelse(DateApproved2 > "2021-01-01", "Round 3", "Round 2")))
+# Summarize by PPP round
+mean_ppp_date2 <- mean_ppp_date %>% 
+  group_by(Round) %>% 
+  summarize(n_loans = sum(n_loans))
+#mean_ppp_date2
+
+# Summarize by draw
+mean_ppp_draw <- ppp %>% 
+  group_by(ProcessingMethod) %>% 
+  summarize(n_loans = n(),
+            mean_loan_initial = mean(InitialApprovalAmount),
+            mean_jobs = mean(JobsReported, na.rm=T)) %>% 
+  arrange(desc(mean_jobs))
+#mean_ppp_draw
+
+p.date <- ggplot(mean_ppp_date, aes(x = DateApproved2, y = n_loans)) +
+  geom_bar(stat="identity", col = "black") +
+  labs(x = "Loan approval date",
+       y = "Number of PPP loans") +
+  scale_fill_brewer(palette="Greys")  +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black"),
+        legend.title = element_blank(),
+        legend.key=element_blank(),
+        legend.position = c(0.8, 0.8)) 
+p.date
+```
+*Figure 1. Daily distribution of PPP loans to forest products companies in three rounds of funding, April 2020 through May 2021.*
+
+The majority of PPP loans (44%) were provided in the third round of funding. Elsewhere, 26% and 30% of loans were provided in the first and second rounds of funding, respectively. There were 7,832 second draw loans from forest products companies that received a previous loan, or 23% of all loans. 
+
+Logging and other wood product manufacturing companies received 68% of all PPP loans (n = 23,399) provided to forest products companies:
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+# Graph number of loans by NAICS category
+mean_ppp_indcat <- ppp %>% 
+  group_by(IndustryCat) %>% 
+  summarize(n_loans = n(),
+            mean_loan_initial = mean(InitialApprovalAmount),
+            mean_jobs = mean(JobsReported, na.rm=T)) %>% 
+  arrange(desc(n_loans))
+#mean_ppp_indcat
+
+ggplot(mean_ppp_indcat, aes(reorder(IndustryCat, n_loans), n_loans, fill = IndustryCat)) +
+  geom_bar(stat = "identity", col = "black")+
+  coord_flip() +
+  labs(x = " ", y = "Companies receiving PPP loans") +
+  scale_fill_brewer(palette="BrBG") +
+  theme(panel.background = element_blank(),
+        axis.line = element_line(color = "black"),
+        axis.text = element_text(color = "black"),
+        axis.text.y = element_text(size = 7),
+        legend.position = "none")
+```
+*Figure 2. Number of forest products companies that received PPP loans by NAICS industry classification.*
+
+Converted paper product manufacturers and pulp, paper, and paperboard mills received the largest loan amounts, exceeding $300,000 on average. These industries, along with veneer, plywood, and engineered wood product manufacturers, reported the greatest number of jobs supported through the PPP loan program. 
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+# Make table of NAICS industries and loan amounts.
+ppp <- ppp %>% 
+  mutate(Industry = IndustryCat)
+  
+mean_ppp_indcat <- ppp %>% 
+  group_by(Industry) %>% 
+  summarize(`Num loans` = n(),
+            `Avg num jobs` = round(mean(JobsReported, na.rm = T),1),
+            `Avg loan amount (USD)` = as.numeric(gsub("\\$", "", round(mean(InitialApprovalAmount), 0)))) %>% 
+  mutate(`Avg loan amount (USD)` = currency(`Avg loan amount (USD)`, digits = 0L)) %>% 
+  arrange(desc(`Avg loan amount (USD)`))
+
+mean_ppp_indcat %>% 
+  kable("html", format.args = list(big.mark = ","),
+        caption = 'Average PPP loan amounts for forest products companies by NAICS industry classification.') %>%
+  kable_styling()
+```
+
+The number of forest industry jobs reported in PPP loan applications was positively related to PPP loan amounts (*p* < 0.001, $R^2$ = 0.799). Most applications reported that the PPP loan would support fewer than 20 jobs with loans amounts lower than $200,000. 
+
+```{r, echo = F, warning = FALSE, message = F}
+# Calculate mean across all industries
+mean_ppp <- ppp %>% 
+  summarize(`Num loans` = n(),
+            `Avg num jobs` = round(mean(JobsReported, na.rm = T),1),
+            `Avg loan amount (USD)` = as.numeric(gsub("\\$", "", round(mean(InitialApprovalAmount), 0))))
+
+# mean_ppp
+
+# Plot jobs versus loan amounts
+p.jobs<- ggplot(ppp, aes(JobsReported, InitialApprovalAmount/1000000)) +
+  geom_hex(bins = 25) +
+  scale_fill_gradient(low="gray",high="black",trans="log") +
+    labs(y = "PPP loan amount ($USD, millions)", 
+         x = "Jobs reported") +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black"),
+        legend.title = element_blank(),
+        legend.key=element_blank(),
+        legend.position = "none") 
+p.jobs
+
+#lm.jobs <- lm((InitialApprovalAmount/1000000) ~ JobsReported, data = ppp)
+#summary(lm.jobs)
+```
+*Figure 3. Number of forest industry jobs reported in PPP loans, with darker areas indicating greater number of loans.*
+
+The majority of PPP loans (60%) were provided to forest product companies at an amount less than $50,000. Loans greater than $350,000 represented 61% of the total approved value of loans to all forest products companies.  
+
+```{r, echo = F, warning = FALSE, message = F}
+# Make tables of loans amount size and approved values
+ppp <- ppp %>% 
+  mutate(LoanSize = ifelse(InitialApprovalAmount <50000, "< 50K",
+                           ifelse(InitialApprovalAmount >50001 & InitialApprovalAmount <100000, paste0("50K - 100K"),
+                                  ifelse(InitialApprovalAmount >100001 & InitialApprovalAmount <150000, "100K - 150K",
+                                         ifelse(InitialApprovalAmount >150001 & InitialApprovalAmount <350000, "150K - 350K",
+                                                ifelse(InitialApprovalAmount >350001 & InitialApprovalAmount <1000000, "350K - 1M",
+                                                       ifelse(InitialApprovalAmount >1000000 & InitialApprovalAmount <2000000, "1M - 2M",
+                                                              ifelse(InitialApprovalAmount >2000001 & InitialApprovalAmount <5000000, "2M - 5M",
+                                                                     "> 5M"))))))),
+         LoanSizeRank = ifelse(InitialApprovalAmount <50000, 1,
+                           ifelse(InitialApprovalAmount >50001 & InitialApprovalAmount <100000, 2,
+                                  ifelse(InitialApprovalAmount >100001 & InitialApprovalAmount <150000, 3,
+                                         ifelse(InitialApprovalAmount >150001 & InitialApprovalAmount <350000, 4,
+                                                ifelse(InitialApprovalAmount >350001 & InitialApprovalAmount <1000000, 4,
+                                                       ifelse(InitialApprovalAmount >1000000 & InitialApprovalAmount <2000000, 5,
+                                                              ifelse(InitialApprovalAmount >2000001 & InitialApprovalAmount <5000000, 6,
+                                                                     7))))))))
+
+
+# Calculate averages by loan size
+mean_ppp_size <- ppp %>% 
+  group_by(LoanSize) %>% 
+  summarize(`Num loans` = n(),
+            `Total approved value (USD, millions)`= sum(InitialApprovalAmount)/1000000) %>% 
+  mutate(`Percent of approved loans` = round((prop.table(`Num loans`)*100), 1),
+         `Percent of approved value` = round((prop.table(`Total approved value (USD, millions)`)*100), 1),
+         `Total approved value (USD, millions)` = round(`Total approved value (USD, millions)`, 1),
+         `Loan size (USD)` = as.character(LoanSize),
+         LoanSizeRank = ifelse(`Loan size (USD)`== "< 50K", 1,
+                           ifelse(`Loan size (USD)`== "50K - 100K", 2,
+                                  ifelse(`Loan size (USD)`== "100K - 150K", 3,
+                                         ifelse(`Loan size (USD)`== "150K - 350K", 4,
+                                                ifelse(`Loan size (USD)`== "350K - 1M", 4,
+                                                       ifelse(`Loan size (USD)`== "1M - 2M", 5,
+                                                              ifelse(`Loan size (USD)`== "2M - 5M", 6,
+                                                                     7)))))))) %>% 
+ # arrange(LoanSizeRank) %>% 
+   arrange(LoanSizeRank) %>% 
+  select(`Loan size (USD)`, `Num loans`, `Total approved value (USD, millions)`,
+         `Percent of approved loans`, `Percent of approved value`)
+# mean_ppp_size
+
+mean_ppp_size %>% 
+  kable("html", format.args = list(big.mark = ","),
+        caption = 'Number and value of PPP loans provided to forest products companies, April 2020 through May 2021.') %>%
+  kable_styling()
+```
+
+PPP loans provided to logging companies supported the greatest number of jobs (64,593) across all forest industries. Loan amounts to specific logging companies supported the smallest number of jobs on average, however, nearly 12,000 loans were provided to this industry.
+
+PPP loans provided to companies in the softwood veneer and plywood manufacturing and folding paperboard box manufacturing industries each saw the greatest loan amounts on average, in excess of $600,000. Companies in these industries supported fewer total numbers of jobs across the industry, but a greater number of jobs supported within each company.
+
+```{r, echo = F, warning = FALSE, message = F}
+# Make industry  table with loan amounts
+mean_ppp_name <- ppp %>% 
+  group_by(NAICSName) %>% 
+  summarize(`Num loans` = n(),
+            `Avg loan value (USD)` = mean(InitialApprovalAmount),
+            `Total loan value (USD, millions)` = sum(InitialApprovalAmount)/1000000,
+            `Avg num jobs` = mean(JobsReported, na.rm=T),
+            `Total num jobs` = sum(JobsReported, na.rm=T)) %>% 
+  arrange(desc(`Total num jobs`)) %>% 
+  mutate(Industry = NAICSName,
+         `Avg loan value (USD)` = round(`Avg loan value (USD)`, 0),
+         `Total loan value (USD, millions)`= round(`Total loan value (USD, millions)`, 1),
+         `Avg num jobs` = round(`Avg num jobs`, 1)) %>% 
+    select(Industry, `Num loans`, `Avg loan value (USD)`, `Total loan value (USD, millions)`,
+           `Avg num jobs`, `Total num jobs`)
+# mean_ppp_name
+
+mean_ppp_name %>% 
+  kable("html", format.args = list(big.mark = ","), escape = F,
+        caption = 'Mean value and number of jobs supported by PPP loans provided to forest products companies by NAICS industry categories.') %>%
+  kable_styling()
+```
+
+California forest products companies received the greatest number of loans (1,951) and the largest amount ($357 million) across all US states. Six other states received in excess of $200 million each in PPP loans to forest products companies: Oregon, Pennsylvania, Ohio, Texas, New York, and Wisconsin.
+
+```{r, echo = F, warning = FALSE, message = F}
+# Make state choropleth map with loan amounts
+mean_ppp_state <- ppp %>% 
+  group_by(BorrowerState) %>% 
+  summarize(n_loans = n(),
+            mean_loan_initial = mean(InitialApprovalAmount),
+            sum_loan_initial = sum(InitialApprovalAmount),
+            mean_jobs = mean(JobsReported, na.rm=T),
+            sum_jobs = sum(JobsReported, na.rm=T)) %>% 
+  mutate( state_abbv = BorrowerState,
+          state = BorrowerState) %>% 
+  arrange(desc(sum_loan_initial))
+#mean_ppp_state
+
+fips_cd <- fips_codes %>% 
+  group_by(state) %>% 
+  summarize(fips_code = max(state_code))
+#fips_cd
+
+mean_ppp_state <- inner_join(mean_ppp_state, fips_cd) %>% 
+  mutate(state_fips = fips_code)
+
+spatial_data <- left_join(get_urbn_map(map = "states", sf = TRUE),
+                          statedata,
+                          by = "state_name")
+
+mean_ppp_state <- inner_join(mean_ppp_state, spatial_data)
+mean_ppp_state <- left_join(mean_ppp_state, states, by = "state_name")
+
+p.amt <-  ggplot(mean_ppp_state, mapping = aes(long, lat, group = group, 
+                                               fill = sum_loan_initial/1000000)) +
+  geom_polygon(color = "black", size = 0.25) +
+  coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
+scale_fill_gradient(name="Total PPP \nloan amount \n($USD, millions)", low="white", high="brown") +
+  labs(title = "PPP loans to forest products industries") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        axis.line = element_blank(),
+        legend.position = c(0.9, 0.4)) 
+p.amt
+```
+*Figure 4. Total value of PPP loans provided to forest products companies.*
+
+The District of Columbia, receiving just 10 loans to forest products companies, saw the greatest average loan value at $286,851. The US Virgin Islands, Hawaii, Vermont, and Wyoming saw the smallest average loan value, each less than $60,000.
+
+```{r, echo = F, warning = FALSE, message = F}
+# Make table by State and loan amount
+mean_ppp_state <- ppp %>% 
+  group_by(BorrowerState) %>% 
+  summarize(`Num loans` = n(),
+            `Avg loan value (USD)` = mean(InitialApprovalAmount),
+            `Total loan value (USD, millions)` = sum(InitialApprovalAmount)/1000000,
+            `Avg num jobs` = mean(JobsReported, na.rm=T),
+            `Total num jobs` = sum(JobsReported, na.rm=T)) %>% 
+  arrange(BorrowerState) %>% 
+ # arrange(`Total loan value ($USD, millions)`) %>% 
+  mutate(State = BorrowerState,
+         `Avg loan value (USD)` = round(`Avg loan value (USD)`, 0),
+         `Total loan value (USD, millions)`= round(`Total loan value (USD, millions)`, 1),
+         `Avg num jobs` = round(`Avg num jobs`, 1)) %>% 
+    select(State, `Num loans`, `Avg loan value (USD)`, `Total loan value (USD, millions)`,
+           `Avg num jobs`, `Total num jobs`) %>% 
+  filter(State != "NA")
+#mean_ppp_state
+
+fips_codes_state <- fips_codes %>% 
+  distinct(state, state_name)
+
+#fips_codes_state
+ 
+mean_ppp_state <- mean_ppp_state %>% 
+  mutate(state = State) %>% 
+  inner_join(fips_codes_state)
+  
+mean_ppp_state <- mean_ppp_state %>% 
+  rename(`State name` = state_name) %>% 
+  select(`State name`, `Num loans`, `Avg loan value (USD)`, `Total loan value (USD, millions)`,
+           `Avg num jobs`, `Total num jobs`)
+
+mean_ppp_state %>% 
+  kable("html", format.args = list(big.mark = ","), escape = F,
+        caption = 'Mean value and number of jobs supported by PPP loans provided to forest products companies in each state.') %>%
+  kable_styling()
+```
+
+Last year, Pelkki and Sherman reported on each state's [economic contribution from the forest industry](https://meridian.allenpress.com/fpj/article-abstract/70/1/28/438785/Forestry-s-Economic-Contribution-in-the-United?redirectedFrom=fulltext). It seems useful to compare a state's use of PPP loans to the contribution of forestry to GDP in that state. The table below shows the rankings of total contribution of forestry a state's GDP (compiled from Pelkki and Sherman 2020; their Figure 2) alongside the ranking of total PPP loan amounts provided to states.
+
+```{r, echo = F, warning = FALSE, message = F}
+# Make table from Pelkki and Sherman 2020; their Figure 2
+pelkki <- tribble(
+  ~State, ~`Total contribution to GDP rank`, ~`Total PPP loan value rank`,
+  "California", 1, 1, 
+  "Pennsylvania", 2, 3,
+  "Wisconsin", 3, 7, 
+  "Georgia", 4, 9, 
+  "North Carolina", 5, 11, 
+  "Texas", 6, 5, 
+  "Ohio", 7, 4, 
+  "New York", 8, 6,  
+  "Tennessee", 9, 19, 
+  "Alabama", 10, 14
+)
+
+pelkki %>% 
+  kable("html", format.args = list(big.mark = ","), escape = F,
+        caption = 'Rankings of highest total contribution of forestry to state GDP (from Pelkki and Sherman 2020) and total PPP loan amounts to states.') %>%
+  kable_styling()
+```
+
+Rankings for each state are generally consistent with a few notable exceptions. States in the Pacific Northwest (Oregon and Washington) along with Michigan were "PPP winners", obtaining a greater proportion of PPP loans relative to their state's economic contribution to GDP. States in the southeastern US (Tennessee, Alabama, and North Carolina) ranked in the top ten for total contribution to GDP but outside of the top ten in their total value of PPP loans requested.
+
+## Conclusion
+In total, PPP loans to the forest products industry helped to support 485,000 jobs with loan amounts totaling $4.7 billion. Over 34,000 loans were offered to forest products companies in the US from April 2020 through May 2021 through the PPP program. Funds for the PPP program ran out three weeks earlier than expected in early May, pointing to a slow economic recovery across US businesses. In the forest products industry, PPP loans have no doubt helped companies to keep workers employed in this essential industry. 
+
+--
+
+*By Matt Russell*
+
+*Code and data that produced this article is [available on GitHub](https://github.com/mbrussell/myblog/tree/master/content/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans).*
+
+*[Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for [The Landing](https://mailchi.mp/d96897dc0f46/arbor-analytics) for monthly in-depth analysis on data and analytics in the forest products industry.*
