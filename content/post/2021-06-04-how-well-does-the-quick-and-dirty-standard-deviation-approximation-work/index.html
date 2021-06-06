@@ -1,0 +1,234 @@
+---
+title: How well does the "quick and dirty" standard deviation approximation work?
+author: Matt Russell
+date: '2021-06-06'
+slug: []
+categories:
+  - Statistics
+tags:
+  - analytics
+  - Data science
+  - statistics
+  - teaching statistics
+  - standard deviation
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<center>
+<div class="figure">
+<img src="stats.jpg" width="500" alt="" />
+<p class="caption">Photo by Chris Liverani on Unsplash.</p>
+</div>
+</center>
+<p>The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.</p>
+<p>When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data.</p>
+<p>I was intrigued about a calculation that required less work. This meant that an approximation could help with other sampling challenges, typically a result of not having any data about a population of interest. For example, determining the appropriate number of samples to collect at a specified level of confidence requires understanding the variability in a population. Any approximation to the variability would be helpful when performing future analyses.</p>
+<p>At the same time, I was skeptical with how well an approximation would capture the true amount of variability in a data set.</p>
+<p>This post compares a “quick and dirty” approximation to the standard deviation with its true value. Ten variables from forestry and natural resources are used to make this comparison.</p>
+<div id="standard-deviation-a-primer" class="section level2">
+<h2>Standard deviation: a primer</h2>
+<p>When we begin discussing variability in data, we start with the variance. The <strong>variance</strong> measures the average squared distance of the observations from their mean. To calculate the sample variance <span class="math inline">\(s^2\)</span>, the average of the squared distance is determined:</p>
+<p><span class="math display">\[{s^2 = \frac {1}{n-1} {\sum_{i=1}^{n} (x_i- \bar{x})^2}} = \frac {1}{n-1} {(x_1- \bar{x})^2 + (x_2- \bar{x})^2 + ... + (x_n- \bar{x})^2}\]</span>
+While the variance is used widely in statistics, it is not always a meaningful number to characterize a variable of interest. This is because its units are squared. For a more useful number, instead we’ll take the square root of the variance and report the <strong>standard deviation</strong>, defined as the average distance of the observations from their mean:</p>
+<p><span class="math display">\[{s} = \sqrt{s^2}\]</span></p>
+<p>Two different distributions may have the same mean but different standard deviations. One with a larger standard deviation would have longer “tails” than a distribution with a smaller standard deviation.</p>
+</div>
+<div id="the-quick-and-dirty-approximation-to-standard-deviation" class="section level2">
+<h2>The “quick and dirty” approximation to standard deviation</h2>
+<p>The population mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span> of a normal distribution help define the <strong>empirical rule</strong>, a rule that describes the approximate percentages of the range of observations. The empirical rule states that:</p>
+<ul>
+<li>approximately 68% of the observations fall within <span class="math inline">\(\sigma\)</span> of <span class="math inline">\(\mu\)</span>,</li>
+<li>approximately 95% of the observations fall within <span class="math inline">\(2\sigma\)</span> of <span class="math inline">\(\mu\)</span>, and</li>
+<li>approximately 99.7% of the observations fall within <span class="math inline">\(3\sigma\)</span> of <span class="math inline">\(\mu\)</span>.</li>
+</ul>
+<p>So, from the empirical rule, we know that nearly all of the data will be found within four standard deviations of the mean (assuming the data are distributed normally). A “quick and dirty” approximation to the standard deviation is <span class="math inline">\(\sigma \approx \mbox{range}/4\)</span>. If you have an estimate of the minimum and maximum values for your variable of interest, you can calculate the range approximate the standard deviation.</p>
+</div>
+<div id="applying-the-standard-deviation-approximation" class="section level2">
+<h2>Applying the standard deviation approximation</h2>
+<p>Ten variables from five data sets were compiled to test the approximation assumption with the true standard deviation values. These included:</p>
+<ul>
+<li>The diameter of breast height (<code>DBH</code>; in) and tons of carbon per acre (<code>Tons</code>) for trees entered in the University of Minnesota’s <a href="https://extension.umn.edu/courses-and-events/carbon-capture-challenge">Carbon Capture Challenge</a>,</li>
+<li>The diameter of breast height (<code>DIA</code>; in), total tree height (<code>HT</code>; ft), and diameter of the tree crown (<code>CROWN_DIAM_WIDE</code>; ft), of <a href="https://academic.oup.com/jof/article-abstract/118/6/636/5892963?redirectedFrom=fulltext">cedar elm trees measured in Austin, Texas</a>.</li>
+<li>The total amount of <a href="https://arbor-analytics.com/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/">forest carbon</a> (<code>MMT/100</code>; million metric tonnes / 100) in each of 48 US states in 2019,</li>
+<li>Measurement of <a href="https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/iris">iris flower measurements</a> (cm), including the length of the petal (<code>Petal.Length</code>) and width of the sepal (<code>Sepal.Width</code>), and</li>
+<li>The <a href="https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/CO2">CO2 concentration</a> (<code>conc/100</code>) and uptake (<code>uptake</code>) rates of the cold tolerance of a grass species.</li>
+</ul>
+<p>The table below shows the approximate and true values for standard deviations:</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-6">Table 1: </span>Example datasets.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Dataset
+</th>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:right;">
+SD_true
+</th>
+<th style="text-align:right;">
+SD_apxx
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+carbon
+</td>
+<td style="text-align:left;">
+DBH
+</td>
+<td style="text-align:right;">
+13.8
+</td>
+<td style="text-align:right;">
+14.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+carbon
+</td>
+<td style="text-align:left;">
+Tons
+</td>
+<td style="text-align:right;">
+20.0
+</td>
+<td style="text-align:right;">
+18.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+elm
+</td>
+<td style="text-align:left;">
+DIA
+</td>
+<td style="text-align:right;">
+5.1
+</td>
+<td style="text-align:right;">
+9.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+elm
+</td>
+<td style="text-align:left;">
+HT
+</td>
+<td style="text-align:right;">
+9.8
+</td>
+<td style="text-align:right;">
+13.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+elm
+</td>
+<td style="text-align:left;">
+CROWN_DIAM_WIDE
+</td>
+<td style="text-align:right;">
+11.0
+</td>
+<td style="text-align:right;">
+13.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+state_carbon
+</td>
+<td style="text-align:left;">
+MMT/100
+</td>
+<td style="text-align:right;">
+7.6
+</td>
+<td style="text-align:right;">
+7.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+iris
+</td>
+<td style="text-align:left;">
+Petal.Length
+</td>
+<td style="text-align:right;">
+1.8
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+iris
+</td>
+<td style="text-align:left;">
+Sepal.Width
+</td>
+<td style="text-align:right;">
+0.4
+</td>
+<td style="text-align:right;">
+0.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CO2
+</td>
+<td style="text-align:left;">
+conc/100
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+<td style="text-align:right;">
+2.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CO2
+</td>
+<td style="text-align:left;">
+uptake
+</td>
+<td style="text-align:right;">
+10.8
+</td>
+<td style="text-align:right;">
+9.4
+</td>
+</tr>
+</tbody>
+</table>
+<p>The figure below shows the approximate and true values for standard deviations along with a 1:1 line for comparison:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>After calculating the differences, the standard deviation approximation was higher than the true value for six of the ten variables. The greatest percent difference for all variables was for the cedar elm diameters (<code>DIA</code>): the true standard deviation was 5.1 inches and the approximation was 9.5 inches. This was likely because of one “outlier” tree that measured 43.0 inches in diameter, yet the next largest tree was 29.0 inches.</p>
+<p>Similarly, the <code>HT</code> variable from the cedar elm data set and the <code>Sepal.Width</code> measurement from the iris data set had standard deviation approximations that were more than 38% greater than the true values. These variabilities could have been reduced further by stratifying the data. For example, the cedar elm data could have been separated into their different tree class codes (e.g., open-grown versus dominant trees) and the iris data could have been separated into their different species (e.g., setosa versus versicolor).</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>The “quick and dirty” standard deviation approximation works well for a sample of data, provided the data are approximately normally distributed. The approximation relies on the range of the data to reflect how noisy the data are. The standard deviation approximation is a quick calculation but should not be used in data where you anticipate extreme values may be present.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>

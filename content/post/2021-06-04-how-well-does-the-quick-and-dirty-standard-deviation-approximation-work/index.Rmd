@@ -1,0 +1,274 @@
+---
+title: How well does the "quick and dirty" standard deviation approximation work?
+author: Matt Russell
+date: '2021-06-06'
+slug: []
+categories:
+  - Statistics
+tags:
+  - analytics
+  - Data science
+  - statistics
+  - teaching statistics
+  - standard deviation
+---
+
+<center>
+
+![Photo by Chris Liverani on Unsplash.](stats.jpg){width=500px}
+
+</center>
+
+The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the "noise" in a sample of data.
+
+When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data. 
+
+I was intrigued about a calculation that required less work. This meant that an approximation could help with other sampling challenges, typically a result of not having any data about a population of interest. For example, determining the appropriate number of samples to collect at a specified level of confidence requires understanding the variability in a population. Any approximation to the variability would be helpful when performing future analyses.  
+
+At the same time, I was skeptical with how well an approximation would capture the true amount of variability in a data set.
+
+This post compares a "quick and dirty" approximation to the standard deviation with its true value. Ten variables from forestry and natural resources are used to make this comparison. 
+
+## Standard deviation: a primer
+
+When we begin discussing variability in data, we start with the variance. The **variance** measures the average squared distance of the observations from their mean. To calculate the sample variance $s^2$, the average of the squared distance is determined: 
+
+$${s^2 = \frac {1}{n-1} {\sum_{i=1}^{n} (x_i- \bar{x})^2}} = \frac {1}{n-1} {(x_1- \bar{x})^2 + (x_2- \bar{x})^2 + ... + (x_n- \bar{x})^2}$$
+While the variance is used widely in statistics, it is not always a meaningful number to characterize a variable of interest. This is because its units are squared. For a more useful number, instead we'll take the square root of the variance and report the **standard deviation**, defined as the average distance of the observations from their mean: 
+
+$${s} = \sqrt{s^2}$$
+
+Two different distributions may have the same mean but different standard deviations. One with a larger standard deviation would have longer "tails" than a distribution with a smaller standard deviation.  
+
+```{r, echo = F,  message = F, warning = F}
+library(tidyverse)
+library(googlesheets4)
+library(knitr)
+library(formattable)
+library(kableExtra)
+options(kableExtra.auto_format = FALSE)
+```
+
+## The "quick and dirty" approximation to standard deviation
+
+The population mean $\mu$ and standard deviation $\sigma$ of a normal distribution help define the **empirical rule**, a rule that describes the approximate percentages of the range of observations. The empirical rule states that:  
+
+* approximately 68% of the observations fall within $\sigma$ of $\mu$, 
+* approximately 95% of the observations fall within $2\sigma$ of $\mu$, and 
+* approximately 99.7% of the observations fall within $3\sigma$ of $\mu$. 
+
+So, from the empirical rule, we know that nearly all of the data will be found within four standard deviations of the mean (assuming the data are distributed normally). A "quick and dirty" approximation to the standard deviation is $\sigma \approx \mbox{range}/4$. If you have an estimate of the minimum and maximum values for your variable of interest, you can calculate the range approximate the standard deviation.  
+
+## Applying the standard deviation approximation
+
+Ten variables from five data sets were compiled to test the approximation assumption with the true standard deviation values. These included:
+
+* The diameter of breast height (`DBH`; in) and tons of carbon per acre (`Tons`) for trees entered in the University of Minnesota's [Carbon Capture Challenge](https://extension.umn.edu/courses-and-events/carbon-capture-challenge),
+* The diameter of breast height (`DIA`; in), total tree height (`HT`; ft), and diameter of the tree crown (`CROWN_DIAM_WIDE`; ft), of [cedar elm trees measured in Austin, Texas](https://academic.oup.com/jof/article-abstract/118/6/636/5892963?redirectedFrom=fulltext). 
+* The total amount of [forest carbon](https://arbor-analytics.com/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/) (`MMT/100`; million metric tonnes / 100) in each of 48 US states in 2019,
+* Measurement of [iris flower measurements](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/iris) (cm), including the length of the petal (`Petal.Length`) and width of the sepal (`Sepal.Width`), and
+* The [CO2 concentration](https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/CO2) (`conc/100`) and uptake (`uptake`) rates of the cold tolerance of a grass species.
+
+The table below shows the approximate and true values for standard deviations:
+
+```{r, echo = F,  message = F, warning = F}
+# Here is the function:
+
+total_AGB<-function(SPGRP_JENKINS,DIA){
+if(SPGRP_JENKINS=='Aspen')
+  {JENKINS_TOTAL_B1=-2.2094; JENKINS_TOTAL_B2=2.3867}
+if(SPGRP_JENKINS=='Cedar/larch')	
+  {JENKINS_TOTAL_B1=-2.0336; JENKINS_TOTAL_B2=2.2592}
+if(SPGRP_JENKINS=='Maple/oak/hickory/beech')	
+  {JENKINS_TOTAL_B1=-2.0127; JENKINS_TOTAL_B2=2.4342}
+if(SPGRP_JENKINS=='Mixed hardwood')	
+  {JENKINS_TOTAL_B1=-2.48; JENKINS_TOTAL_B2=2.4835}
+if(SPGRP_JENKINS=='Pine')	
+  {JENKINS_TOTAL_B1=-2.5356; JENKINS_TOTAL_B2=2.4349}
+if(SPGRP_JENKINS=='Soft maple/birch')	
+  {JENKINS_TOTAL_B1=-1.9123; JENKINS_TOTAL_B2=2.3651}
+if(SPGRP_JENKINS=='Spruce')	
+  {JENKINS_TOTAL_B1=-2.0773; JENKINS_TOTAL_B2=2.3323}
+if(SPGRP_JENKINS=='True fir/hemlock') 	
+  {JENKINS_TOTAL_B1=-2.5384; JENKINS_TOTAL_B2=2.4814}
+  # Calculate total aboveground biomass of each tree (AGB)
+  # Note the equation predicts biomass in kg, but we  convert it into pounds 
+  AGB=(exp(JENKINS_TOTAL_B1+JENKINS_TOTAL_B2*log(DIA*2.54)))*2.20462
+    return(AGB=AGB)}
+```
+
+```{r, echo = F,  message = F, warning = F}
+#Read in datasets
+# tree carbon
+tree <- read_sheet("https://docs.google.com/spreadsheets/d/1sjRe8pi08C4jY8TlDBeRKxmhqMlo85eB5wmqNovsiOU/edit?usp=sharing")
+
+# wood carbon
+wood2021 <- read_sheet("https://docs.google.com/spreadsheets/d/1ekdnxAnmO0PfVAmA-aZ1j6lNdwNKMGz7WLK1vBttmtA/edit?usp=sharing")
+PLOT_SIZE = 10
+
+wood2021$AGB1<-mapply(total_AGB, SPGRP_JENKINS=wood2021$Spp2, DIA=wood2021$DBH1)
+wood2021$C1<-wood2021$AGB1*0.5
+wood2021$C_sum1<-wood2021$C1*PLOT_SIZE
+
+wood2021$AGB2<-mapply(total_AGB, SPGRP_JENKINS=wood2021$Spp2, DIA=wood2021$DBH2)
+wood2021$C2<-wood2021$AGB2*0.5
+wood2021$C_sum2<-wood2021$C2*PLOT_SIZE
+
+plot.C <- wood2021 %>% 
+  group_by(Team) %>% 
+  summarize(CPA1 = sum(C_sum1),
+            CPA2 = sum(C_sum2))
+
+plot.C$CO2e1 <- plot.C$CPA1 * 3.667
+plot.C$tons1 <- plot.C$CPA1 / 2000
+
+# elm
+elm <- read_csv('C:/Users/russellm/Documents/Projects/SNRAwR/SNRAwR/Data/elm.csv')
+
+# State Carbon (MMT) in 2019
+carbon_state <- c(1238,
+1288,
+1407,
+1041,
+1157,
+233,
+1437,
+1470,
+888,
+1041,
+835,
+165,
+346,
+1102,
+368,
+176,
+191,
+1596,
+325,
+215,
+1911,
+3186,
+473,
+1162,
+992,
+3044,
+873,
+481,
+610,
+657,
+1533,
+1215,
+2706,
+1726,
+38,
+1429,
+91,
+35,
+277,
+48,
+1707,
+522,
+110,
+705,
+622,
+1867,
+1224,
+458)
+# iris
+# iris$Petal.Length
+# iris$Sepal.Width
+
+```
+
+```{r, echo = F,  message = F, warning = F}
+sd_apx <- function(min, max){
+  sd_hat = (max-min)/4
+  return(sd_hat)
+}
+```
+
+```{r, echo = F,  message = F, warning = F}
+Dataset <- c("carbon",
+              "carbon",
+              "elm",
+              "elm",
+              "elm",
+              "state_carbon",
+              "iris",
+              "iris",
+              "CO2",
+              "CO2")
+
+Variable <- c("DBH",
+              "Tons",
+              "DIA",
+              "HT",
+              "CROWN_DIAM_WIDE",
+              "MMT/100",
+              "Petal.Length",
+              "Sepal.Width",
+              "conc/100",
+              "uptake")
+
+SD_true <- c(round(sd(tree$DBH1),1),
+             round(sd(plot.C$tons1),1),
+             round(sd(elm$DIA),1),
+             round(sd(elm$HT),1),
+             round(sd(elm$CROWN_DIAM_WIDE),1),
+             round(sd(carbon_state/100),1),
+             round(sd(iris$Petal.Length),1),
+             round(sd(iris$Sepal.Width),1),
+             round(sd(CO2$conc/100),1),
+             round(sd(CO2$uptake),1))
+
+SD_apxx <- c(round(sd_apx(min = min(tree$DBH1), max = max(tree$DBH1)),1),
+             round(sd_apx(min = min(plot.C$tons1), max = max(plot.C$tons1)),1),
+             round(sd_apx(min = min(elm$DIA), max = max(elm$DIA)),1),
+             round(sd_apx(min = min(elm$HT), max = max(elm$HT)),1),
+             round(sd_apx(min = min(elm$CROWN_DIAM_WIDE), max = max(elm$CROWN_DIAM_WIDE)),1),
+             round(sd_apx(min = min(carbon_state/100), max = max(carbon_state/100)),1),
+             round(sd_apx(min = min(iris$Petal.Length), max = max(iris$Petal.Length)),1),
+             round(sd_apx(min = min(iris$Sepal.Width), max = max(iris$Sepal.Width)),1),
+             round(sd_apx(min = min(CO2$conc/100), max = max(CO2$conc/100)),1),
+             round(sd_apx(min = min(CO2$uptake), max = max(CO2$uptake)),1))
+
+all_data <- tibble(Dataset, Variable, SD_true, SD_apxx)
+
+all_data <- all_data %>% 
+  mutate(`Percent different` = ((SD_true-SD_apxx)/SD_true)*100)
+
+```
+
+```{r, echo = F}
+knitr::kable((all_data[,1:4]), 
+             caption = 'Example datasets.') %>% 
+   kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+```
+
+
+The figure below shows the approximate and true values for standard deviations along with a 1:1 line for comparison:
+
+```{r, echo = F,  message = F, warning = F}
+p.all <- ggplot(all_data, aes(x = SD_true, y = SD_apxx)) +
+  geom_point() +
+  geom_abline(slope=1, intercept = 0) +
+  xlab("True SD") +
+  ylab("Approximate SD") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black")) 
+p.all
+```
+
+After calculating the differences, the standard deviation approximation was higher than the true value for six of the ten variables. The greatest percent difference for all variables was for the cedar elm diameters (`DIA`): the true standard deviation was 5.1 inches and the approximation was 9.5 inches. This was likely because of one "outlier" tree that measured 43.0 inches in diameter, yet the next largest tree was 29.0 inches.
+
+Similarly, the `HT` variable from the cedar elm data set and the `Sepal.Width` measurement from the iris data set had standard deviation approximations that were more than 38% greater than the true values. These variabilities could have been reduced further by stratifying the data. For example, the cedar elm data could have been separated into their different tree class codes (e.g., open-grown versus dominant trees) and the iris data could have been separated into their different species (e.g., setosa versus versicolor).    
+
+## Conclusion
+
+The "quick and dirty" standard deviation approximation works well for a sample of data, provided the data are approximately normally distributed. The approximation relies on the range of the data to reflect how noisy the data are. The standard deviation approximation is a quick calculation but should not be used in data where you anticipate extreme values may be present.
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
