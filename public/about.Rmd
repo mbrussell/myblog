@@ -6,7 +6,7 @@ slug: about
 ---
 
 # Consulting
-Arbor Custom Analytics LLC offers data and analytics consulting services to all sized organizations in the forest products industry.
+Arbor Custom Analytics LLC offers data and analytics consulting services to all sized organizations in the forest products industry. 
 
 ## Specializations include
 * Forest analytics
