@@ -76,8 +76,8 @@ p.drought <- ggplot(west_summ, aes(x = reorder(State, acs_drought), y = acs_drou
   geom_bar(stat = "identity", col = "black", fill = "brown1") +
   coord_flip()+
      labs (x = "",
-           y = "Acres affected by drought (x 1,000)",
-           caption = "Source: USDA Forest Inventory and Analyis")+
+           y = "Forested acres affected by drought (x 1,000)",
+           caption = "Source: USDA Forest Inventory and Analysis")+
       theme(panel.background = element_blank(),
          axis.line = element_line(color = "black"),
          axis.text = element_text(color = "black"))
