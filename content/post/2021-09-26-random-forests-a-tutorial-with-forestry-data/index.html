@@ -1,0 +1,208 @@
+---
+title: 'Random forests: a tutorial with forestry data'
+author: Matt Russell
+date: '2021-09-27'
+slug: []
+categories:
+  - Analytics
+tags:
+  - analytics
+  - Data science
+  - random forests
+  - statistics
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<center>
+<img src="bootstrap_rf.png" width="500" />
+</center>
+<div id="section" class="section level1">
+<h1></h1>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>Random forests have quickly become <a href="https://arbor-analytics.com/post/random-forests-in-a-nutshell/">one of the most popular analytical techniques</a> used in forestry today. Random forests (RF) are a machine learning technique that differ in many ways to traditional prediction models such as regression. Random forests can handle a lot of data, can be applied to classification or regression problems, and rank the relative importance of many variables that are related to a response variable of interest.</p>
+<p>I’ve written about the <a href="https://arbor-analytics.com/post/random-forests-in-a-nutshell/">theory behind random forests</a>. This post will present a tutorial of using random forests in R.</p>
+<div id="the-parresol-tree-biomass-data" class="section level2">
+<h2>The Parresol tree biomass data</h2>
+<p>As an example, we’ll use a data set of 40 slash pine trees from Louisiana USA presented in Parresol’s 2001 paper <a href="https://cdnsciencepub.com/doi/10.1139/x00-202"><em>Additivity of nonlinear biomass equations</em></a>. The data are presented in Table 1 of the paper, which is replicated in <a href="https://docs.google.com/spreadsheets/d/1TPutUVyZLWr7XopKguT5Nvh9lo1EOG4wvOZ6_lD1F_M/edit?usp=sharing">this Google Sheet</a>.</p>
+<p>We’ll read in the data using the <code>read_sheet()</code> function from the <strong>googlesheets4</strong> package. We will also load the <strong>tidyverse</strong> package to use some of its plotting features:</p>
+<pre class="r"><code>library(tidyverse)
+library(googlesheets4)
+
+tree &lt;- read_sheet(&quot;https://docs.google.com/spreadsheets/d/1TPutUVyZLWr7XopKguT5Nvh9lo1EOG4wvOZ6_lD1F_M/edit?usp=sharing&quot;)</code></pre>
+<p>The data contain the following variables:</p>
+<ul>
+<li><code>TreeID</code>: Tree observation record,</li>
+<li><code>DBH</code>: Tree diameter at breast height, cm,</li>
+<li><code>HT</code>: Tree height, m,</li>
+<li><code>LCL</code>: Tree live crown length, m,</li>
+<li><code>Age</code>: Age of the tree, years,</li>
+<li><code>Mass_wood</code>: Green mass of the wood in the tree, kg,</li>
+<li><code>Mass_bark</code>: Green mass of the bark in the tree, kg,</li>
+<li><code>Mass_crown</code>: Green mass of the crown of the tree, kg, and</li>
+<li><code>Mass_tree</code>: Green mass of all tree components, kg.</li>
+</ul>
+<p>Our ultimate interest is in predicting the mass all tree components using common tree measurements such as tree diameter, height, live crown length, and age. Before we start modeling with the data, it is a good practice to first visualize the variables. The <code>ggpairs()</code> function from the <strong>GGally</strong> package is a useful tool that visualizes the distribution and correlation between variables:</p>
+<pre class="r"><code>library(GGally)
+
+ggpairs(tree, columns = c(2:5, 9))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>You can see a few variables have strong positive correlations with the mass of the tree (e.g., height and diameter) and some more moderate positive correlations (e.g., age).</p>
+</div>
+<div id="the-randomforest-r-package" class="section level2">
+<h2>The randomForest R package</h2>
+<p>R and Python both have numerous packages that implement random forests. In R alone, there are nearly 400 packages with the word “tree” or “forest” in their name. (Sidebar: This is not ideal if you’re a forest analyst of biometrician because <a href="https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/">only 31 of them</a> are actually about forestry.)</p>
+<p>Breiman <a href="https://link.springer.com/article/10.1023/A:1010933404324">wrote about random forests in 2001</a> and a year later <a href="https://cogns.northwestern.edu/cbmg/LiawAndWiener2002.pdf">Liaw and Wiener</a> created an R package that implements the technique. To date, the <strong>randomForest</strong> R package remains one of the most popular ones in machine learning.</p>
+<p>We can install and load the <strong>randomForest</strong> package:</p>
+<pre class="r"><code># install.packages(&quot;randomForest&quot;)
+library(randomForest)</code></pre>
+<p>We will use the <code>randomForest()</code> function to predict total tree mass using several variables in the <strong>tree</strong> data set. A few other key statements to use in the <code>randomForest()</code> function are:</p>
+<ul>
+<li><code>keep.forest = T</code>: This will save the random forest output, which will be helpful in summarizing the results.</li>
+<li><code>importance = TRUE</code>: This will assess the importance of each of the predictors, essential output in random forests!</li>
+<li><code>mtry = 1</code>: This tells the function to randomly sample one variable at each split in the random forest. For applications in regression, the default value is the number of predictor variables divided by three (and rounded down). In the modeling, several small samples of the entire data set are taken. Any observations that are not taken are called “out-of-bag” samples.</li>
+<li><code>ntree = 500</code>. This tells the function to grow 500 trees. Generally, a larger number of trees will produce more stable estimates. However, increasing the number of trees needs to be done with consideration of time and memory issues when dealing with large data sets.</li>
+</ul>
+<p>Our response variable in the random forests model is <code>Mass_tree</code> and predictors are <code>DBH</code>, <code>HT</code>, <code>LCL</code>, and <code>Age</code>.</p>
+<pre class="r"><code>tree.rf &lt;- randomForest(Mass_tree ~ DBH + HT + LCL + Age,
+                        data = tree,
+                        keep.forest = T,
+                        importance = TRUE, 
+                        mtry = 1,
+                        ntree = 500)
+tree.rf</code></pre>
+<pre><code>## 
+## Call:
+##  randomForest(formula = Mass_tree ~ DBH + HT + LCL + Age, data = tree,      keep.forest = T, importance = TRUE, mtry = 1, ntree = 500) 
+##                Type of random forest: regression
+##                      Number of trees: 500
+## No. of variables tried at each split: 1
+## 
+##           Mean of squared residuals: 8432.869
+##                     % Var explained: 88.6</code></pre>
+<p>Note the mean of squared residuals and the percent variation explained (analogous to R-squared) provided in the output. (We’ll revisit them later.)</p>
+<p>Another way to visualize the out-of-bag error rates of the random forests models is to use the <code>plot()</code> function. In this application, although we specified 500 trees, the out-of-bag error generally stabilizes after 100 trees:</p>
+<pre class="r"><code>plot(tree.rf)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Some of the most helpful output in random forests is the importance of each of the predictor variables. The importance score is calculated by evaluating the regression tree with and without that variable. When evaluating the regression tree, the mean square error (MSE) will go up, down, or stay the same.</p>
+<p>If the percent increase in MSE after removing the variable is large, it indicates an important variable. If the percent increase in MSE after removing the variable is small, it’s less important.</p>
+<p>The <code>importance()</code> function prints the importance scores for each variable and the <code>varImpPlot()</code> function plots them:</p>
+<pre class="r"><code>importance(tree.rf)</code></pre>
+<pre><code>##       %IncMSE IncNodePurity
+## DBH 16.536030      821970.5
+## HT  16.247151      861302.9
+## LCL 14.062093      633208.3
+## Age  8.155748      323918.3</code></pre>
+<pre class="r"><code>varImpPlot(tree.rf,type=1)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>The output indicates that <code>DBH</code> is the most important variable for predicting <code>Mass_tree</code> and age the least important.</p>
+</div>
+<div id="comparing-random-forests-and-regression-models" class="section level2">
+<h2>Comparing random forests and regression models</h2>
+<p>Forest analysts are often compare multiple models and determine which one has a better predictive ability. In this case, we can fit a multiple linear regression model to the data and compare to the random forests model.</p>
+<p>The <code>lm()</code> function can be used to develop a parametric model for <code>Mass_tree</code>:</p>
+<pre class="r"><code>tree.reg &lt;- lm(Mass_tree ~ DBH + HT + LCL + Age, data = tree)
+summary(tree.reg)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Mass_tree ~ DBH + HT + LCL + Age, data = tree)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -136.285  -57.177   -9.399   43.822  189.758 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -545.374     67.916  -8.030 1.89e-09 ***
+## DBH           40.523      5.778   7.013 3.68e-08 ***
+## HT           -15.048      8.079  -1.862   0.0709 .  
+## LCL            2.490     12.259   0.203   0.8402    
+## Age           15.431      3.198   4.825 2.72e-05 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 82.33 on 35 degrees of freedom
+## Multiple R-squared:  0.9198, Adjusted R-squared:  0.9106 
+## F-statistic: 100.4 on 4 and 35 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Note the residual standard error of 82.33 kg and the adjusted R-squared of 0.91. The residual standard error is slightly lower and the R-squared value slightly higher for the multiple regression model compared to the random forest output. In addition, further work may be conducted on the multiple regression model by removing the non-significant variables and refitting the model.</p>
+<p>Another aspect of model evaluation is comparing predictions. Although random forests models are often considered a “black box” method because their results are not easily interpreted, the <code>predict()</code> function provides predictions of total tree mass:</p>
+<pre class="r"><code>Mass_pred_rf &lt;- predict(tree.rf, tree, predict.all = F)
+Mass_pred_reg &lt;- predict(tree.reg, tree, predict.all = F)</code></pre>
+<p>In an ideal setting we might test our model on an independent data set not used in model fitting. However, we can combine the predicted tree weights from both models to the <strong>tree</strong> data set:</p>
+<pre class="r"><code>tree2 &lt;- as.data.frame(cbind(tree, Mass_pred_rf, Mass_pred_reg))</code></pre>
+<p>Note that some predictions from the linear regression model on the 40 trees provide negative values for predicted total tree mass, an undesirable feature that may need to be addressed before implementing the model:</p>
+<pre class="r"><code>tree2 %&gt;% 
+  summarize(Mass_tree, Mass_pred_rf, Mass_pred_reg)</code></pre>
+<pre><code>##    Mass_tree Mass_pred_rf Mass_pred_reg
+## 1        9.8     25.78337   -108.051811
+## 2       12.1     25.13321    -86.903051
+## 3       24.4     46.33957    -62.814807
+## 4       27.0     35.07399    -42.513067
+## 5       33.6     42.35590     -7.391764
+## 6       43.5     44.74030     -8.814627
+## 7       46.0    105.06471    168.354603
+## 8       56.1     79.76736     -8.073626
+## 9       64.4     66.07957     47.563293
+## 10      70.8    103.35683     64.024945
+## 11      75.9    114.75971    189.278688
+## 12      88.7     84.72086    103.439719
+## 13      95.7    102.82287     18.126885
+## 14     102.4    146.06540    238.684823
+## 15     123.7    138.20651     90.880242
+## 16     147.6    177.44083    261.258307
+## 17     148.5    145.70510    174.276553
+## 18     174.8    165.93732    186.750002
+## 19     193.0    164.60443    199.939638
+## 20     211.7    204.88033    306.293014
+## 21     214.6    272.80811    186.964881
+## 22     225.3    245.85032    240.537957
+## 23     244.7    245.55750    277.932654
+## 24     258.2    292.13384    263.034375
+## 25     285.8    275.14268    363.444771
+## 26     297.6    284.67062    317.816460
+## 27     309.8    269.27449    366.051168
+## 28     316.2    341.63584    392.605018
+## 29     318.0    320.49226    283.934957
+## 30     401.1    417.38922    399.000959
+## 31     402.2    394.79413    463.875242
+## 32     411.9    406.38153    450.015697
+## 33     446.3    467.69703    458.158909
+## 34     490.3    433.95661    546.871939
+## 35     522.6    515.31412    583.516204
+## 36     522.7    466.91310    519.012527
+## 37     593.6    560.88703    652.592720
+## 38     900.3    811.64060    714.152257
+## 39    1034.9    910.49999    845.142484
+## 40    1198.5    990.69244   1095.330861</code></pre>
+<p>We may also be interested in plotting residual values from both model types to compare their performance:</p>
+<pre class="r"><code>p.rf &lt;- ggplot(tree2, (aes(x = Mass_pred_rf, y = Mass_tree - Mass_pred_rf))) +
+  geom_point() + 
+  scale_y_continuous(limits = c(-200, 200)) +
+  labs(x = &quot;Predicted tree mass (kg)&quot;,
+       y = &quot;Residual (kg)&quot;,
+       subtitle = &quot;Random forests model&quot;) 
+
+p.reg &lt;- ggplot(tree2, (aes(x = Mass_pred_reg, y = Mass_tree - Mass_pred_reg))) +
+  geom_point() + 
+  scale_y_continuous(limits = c(-200, 200)) +
+  labs(x = &quot;Predicted tree mass (kg)&quot;,
+       y = &quot;Residual (kg)&quot;,
+       subtitle = &quot;Regression model&quot;) 
+
+library(patchwork)
+
+p.rf + p.reg</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>With the heteroscedastic residuals in the models, we’d likely want to explore transforming the data prior to model fitting, or to explore other modeling techniques.</p>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>Random forests techniques are flexible and can perform comparably with other regression or classification methods. Random forests can handle all types of data (e.g., categorical, continuous) and are advantageous because they work well with data sets containing a large number of predictor variables. The <strong>randomForest</strong> package has seen a lot of development and can be used to help solve modeling problems in your future forest analytics work.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
