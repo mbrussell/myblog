@@ -1,0 +1,37 @@
+---
+title: 'Visualizing forest carbon trends in the last thirty years'
+author: Matt Russell
+date: '2021-11-15'
+slug: []
+categories:
+  - Carbon
+tags:
+  - analytics
+  - carbon
+  - Data viz
+  - forest carbon
+  - forest industry
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.</p>
+<p>The value of carbon in forests has seen a tremendous increase in recent years. The increased role of forests in meeting climate challenges has required analysts to have a better understanding of carbon attributes in the forests they work in. Tree planting initiatives such as the Trillion Trees Campaign have garnered international attention as they seek to plant trees for the carbon benefits they provide.</p>
+<p>This year the USDA Forest Service published <a href="https://www.nrs.fs.fed.us/pubs/62418">“Greenhouse gas emissions and removals from forest land, woodlands, and urban trees in the United States, 1990-2019”</a>. This report provides detailed estimates for each US state, including forest carbon storage, net flux of carbon, and carbon stored in different pools. In the USDA report, forest carbon pools include:</p>
+<ul>
+<li>aboveground biomass,</li>
+<li>belowground biomass,</li>
+<li>dead wood,</li>
+<li>litter,</li>
+<li>soil (mineral), and</li>
+<li>soil (organic)</li>
+</ul>
+<p>Since 1990, ten states have seen a net loss in the aboveground biomass pool. This has occurred in states in the Rocky Mountain and northern Great Plains regions.</p>
+<p>While many of the tables found in the appendices of the USDA report are informative to show these trends, nothing does it like a map. Using the <a href="https://hafen.github.io/geofacet/"><strong>geofacet</strong> package in R</a>, we can visualize the trends in aboveground biomass through the last 30 years:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Forest carbon stocks in aboveground biomass pools have increased from 11,810 MMT in 1990 to 15,260 MMT in 2019. These gains, representing an increase of 29% over 30 years,represent a substantial increase in the amount of carbon stored in trees and forests.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+<p><em>Data used in this post are <a href="https://www.fs.usda.gov/rds/archive/Catalog/RDS-2021-0035">available here.</a></em></p>
+<p><em>Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
