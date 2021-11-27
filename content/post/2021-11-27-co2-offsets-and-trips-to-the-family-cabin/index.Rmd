@@ -1,0 +1,47 @@
+---
+title: CO2 offsets and trips to the family cabin
+author: Matt Russell
+date: '2021-11-27'
+slug: []
+categories:
+  - Carbon
+tags:
+  - carbon
+  - climate
+  - climate change
+  - Communicating data
+  - forest carbon
+  - forestry
+---
+
+
+<center>
+![](forestroad.jpg){width=500px}
+</center>
+
+## 
+## 
+
+Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.
+
+The true amount of forest carbon is only measured in detailed research studies, yet we discuss carbon stocks like they’re known values. A tremendous amount of research has gone into determining the amount of biomass and carbon using allometric equations, and more recently, remote sensing and other technologies.
+
+For the past two years I’ve run the [Tree and Woodland Carbon Capture Challenge](https://extension.umn.edu/news/2021-tree-and-woodland-carbon-capture-challenge-results), a friendly citizen science contest with the goal of finding the tree and woodland in Minnesota that sequesters the most carbon. Participants measure a tree or woodland at the beginning of the growing season in April and then remeasure that same tree or woodland in October. Behind the scenes, I calculate the biomass and carbon stored and sequestered in the trees and tabulate the results.
+
+One participant measured a silver maple in his suburban yard in the Twin Cities. The tree was about 15 inches in diameter, gaining about 84 pounds in biomass through the growing season. So, it sequestered about 42 pounds of carbon.
+
+The participant was interested to know how much CO~2~ his trees “offset” and how he can relate that to driving his car. Secretly, he told me, he wanted to justify the several road trips he made to his family’s cabin in northern Minnesota this summer. 
+
+As foresters we think of carbon in terms of pounds, but it is often useful to convert it to its CO~2~ equivalent. One unit of carbon is equal to 3.667 units of CO~2~ equivalent. For the 15-inch silver maple, this equated to removing 154 units of CO~2~ from the atmosphere this year.
+
+Burning a gallon of gas emits about 20 pounds of carbon dioxide. Hence, the silver maple removed the equivalent of 7.7 gallons of gas from the atmosphere in the 2021 growing season. My participant’s cabin is 220 miles away outside Ely, MN: if his vehicle gets 29 miles to the gallon, a single one-way trip would be offset by the silver maple in his yard back home. 
+
+Such calculations are important to interpret and convey the importance of trees in removing CO~2~ from the atmosphere. The Environmental Protection Agency maintains its [Greenhouse Gas Equivalencies Calculator](https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator) to help put carbon and CO~2~ values in context. I’ve maintained the [Forest Carbon Cheat Sheet](https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/) to help convert key values of forest carbon to different units to contextualize their metrics.
+
+Forest resource professionals will need to be able to articulate the role of trees and forests in the carbon cycle. Being effective communicators on this topic can lend trust to forestry professionals and position the industry to be an essential player in addressing future climate challenges. 
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.* 
+
+*For more on forest carbon, I've compiled the eBook [Forest Carbon by the Numbers: Understanding the Hottest Forest Product of the 2020s](https://www.amazon.com/dp/B09CC1WT69), sharing insights and visualizations of the current status and trends in forest carbon and how it impacts the forest products industry.*
