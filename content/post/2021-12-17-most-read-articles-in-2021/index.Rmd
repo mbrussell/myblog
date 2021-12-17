@@ -1,0 +1,39 @@
+---
+title: Most read articles in 2021
+author: Matt Russell
+date: '2021-12-17'
+slug: []
+categories:
+  - Behind the curtain
+tags:
+  - blog
+  - behind the curtain
+---
+
+
+
+<center>
+
+![Andrew Neel/Unsplash](aspen cloquet.jpg){width=500px}
+</center>
+
+
+##
+
+In 2021, 26 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you'd like to see? [Email Matt](mailto:matt@arbor-analytics.com) with any suggestions.
+
+Here are the most read posts from the Arbor Custom Analytics blog in 2021:
+
+1. [Getting your data into R from Google Sheets](https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/)
+
+2. [Creating animated bar charts to visualize sawtimber prices](https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/) 
+
+3. [Mixed models in R: a primer](https://arbor-analytics.com/post/mixed-models-a-primer/)
+
+4. [How to created paged HTML documents with pagedown](https://arbor-analytics.com/post/how-to-created-paged-html-documents-with-pagedown/)
+
+5. [Presenting regression results better with forest plots](https://arbor-analytics.com/post/presenting-regression-results-better/)
+
+--
+
+*By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
