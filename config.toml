@@ -36,11 +36,16 @@ googleAnalytics = "UA-136790074-1"
     url = "/newsletter/"
     name = "Newsletter"
     weight = 4
+ 
+[[menu.main]]
+    url = "/podcast/"
+    name = "Podcast"
+    weight = 5
     
 [[menu.main]]
     url = "/about/"
     name = "About"
-    weight = 5
+    weight = 6
 
 # Social icons to be shown on the right-hand side of the navigation bar
 # The "name" field should match the name of the icon to be used
