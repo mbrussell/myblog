@@ -74,4 +74,4 @@ googleAnalytics = "UA-136790074-1"
 [[menu.icon]]
     url = "https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"
     name = "search"
-    weight = 5
+    weight = 5 
