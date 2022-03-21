@@ -279,7 +279,7 @@ ls_city3 %>%
    kable_styling()
 ```
 
-The PPP program has provided needed loans to assist logging and other forest products businesses keep their workers employed throughout the COVID-19 pandemic. For more data that summarizes PPP loans, [see this recent post](https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/) which describes funds provided to the forest products industry.
+The PPP program has provided needed loans to assist logging and other forest products businesses keep their workers employed throughout the COVID-19 pandemic. For more data that summarizes PPP loans, [see this recent post](https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/) which describes funds provided to the forest products industry. 
 
 --
 
