@@ -30,6 +30,7 @@ For all logging businesses, the average loan amount was \$34,412 and there were 
 options(scipen=10000)
 
 library(tidyverse)
+
 library(knitr)
 library(formattable)
 library(kableExtra)
@@ -258,7 +259,7 @@ p.jobs<- ggplot(ls, aes(JobsReported, CurrentApprovalAmount/1000)) +
 p.jobs
 ```
 
-The town of Crandon, WI saw the greatest number of loan distributions to logging companies. Medford and Laona, WI ranked second with over 20 loan distributions. Bemidji, MN and Gladstone, MI were those towns with the greatest number of PPP loans offered to logging businesses in those states: 
+The town of Crandon, WI saw the greatest number of loan distributions to logging companies. Medford and Laona, WI ranked second with over 20 loan distributions. Bemidji, MN and Gladstone, MI were those towns with the greatest number of PPP loans offered to logging businesses in those states:  
 
 ```{r, echo = F, message = F, warning = F}
 ls_city_all<- tibble(City = c(ls$BorrowerCity),
