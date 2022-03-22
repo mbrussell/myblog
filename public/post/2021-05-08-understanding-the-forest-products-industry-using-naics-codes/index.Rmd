@@ -1,0 +1,112 @@
+---
+title: Understanding the forest products industry using NAICS codes
+author: Matt Russell
+date: '2021-05-08'
+slug: []
+categories:
+  - Analytics
+tags:
+  - forest products
+  - data management
+  - logging
+  - forest industry
+  - PPP loans
+---
+
+To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.
+
+In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries. NAICS codes have been used extensively in several analyses of the forestry industry, including:
+
+* Understanding how many [jobs were lost](https://meridian.allenpress.com/fpj/article-abstract/61/8/614/136584/Recession-Effects-on-the-Forests-and-Forest) in the forestry sector as a result of the Great Recession,
+* Understanding [foreign direct investments](https://www.sciencedirect.com/science/article/pii/S1389934111000207?casa_token=85Ev-V_wR_IAAAAA:KTd5xH063RcCC8mAWivFcg7z27F_82Hf1gchbn700vTzsdXnerSZJLOjwlZ1Uc26NOXdV5k_tw) between the US and Canada within the forest products sector, and
+* Determining [heat-related illnesses](https://onlinelibrary.wiley.com/doi/full/10.1002/ajim.22357?casa_token=Gawv30aaTsEAAAAA%3AXnjND4TXf9fzhgnlIlMNovUAlk86DaUmh7toj_d3ht8RHql7moXkhiBuOJiH6Mq3r7868zeRVIBY_ts) in the forestry sector in Washington. 
+
+Using data from the [NAICS website](https://www.naics.com/search/), the following graph shows the number of existing marketable businesses according to their NAICS industry category:
+
+```{r, echo = F, warning = F, message = F}
+library(tidyverse)
+library(knitr)
+library(formattable)
+library(kableExtra)
+```
+
+```{r, echo = F}
+# Make NAICSCode table
+NAICS <- tribble(
+  ~NAICSCode, ~IndustryTitle, ~IndustryCat, ~NAICSName, ~Businesses,
+1131, "Agriculture, Forestry, Fishing and Hunting",	"Timber Tract Operations", "Timber Tract Operations", 2067,
+113110,"Agriculture, Forestry, Fishing and Hunting", "Timber Tract Operations", "Timber Tract Operations", 2067,	
+1132, "Agriculture, Forestry, Fishing and Hunting",	"Forest Nurseries and Gathering of Forest Products", "Forest Nurseries and Gathering of Forest Products", 962, 	
+113210, "Agriculture, Forestry, Fishing and Hunting",	"Forest Nurseries and Gathering of Forest Products", "Forest Nurseries and Gathering of Forest Products", 962,	
+1133, "Agriculture, Forestry, Fishing and Hunting",	"Logging", "Logging", 8250,
+113310, "Agriculture, Forestry, Fishing and Hunting",	"Logging", "Logging", 8250,
+1153,"Agriculture, Forestry, Fishing and Hunting",	"Support Activities for Forestry", "Support Activities for Forestry", 5277,
+115310,"Agriculture, Forestry, Fishing and Hunting",	"Support Activities for Forestry", "Support Activities for Forestry", 5277,
+3211, "Manufacturing",	"Sawmills and Wood Preservation",	"Sawmills and Wood Preservation",3120,
+321113, "Manufacturing",	"Sawmills and Wood Preservation","Sawmills",	2480,
+321114, "Manufacturing", "Sawmills and Wood Preservation",	"Wood Preservation",	640,
+3212, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Veneer, Plywood, and Engineered Wood Product Manufacturing",	1617,
+321211, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Hardwood Veneer and Plywood Manufacturing",	299,
+321212, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Softwood Veneer and Plywood Manufacturing",	80,
+321213, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Engineered Wood Member (except Truss) Manufacturing",	58,
+321214, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Truss Manufacturing",	869,
+321219, "Manufacturing", "Veneer, Plywood, and Engineered Wood Product Manufacturing",	"Reconstituted Wood Product Manufacturing",	311,
+3219, "Manufacturing",	"Other Wood Product Manufacturing", "Other Wood Product Manufacturing",	26742,
+321911, "Manufacturing", "Other Wood Product Manufacturing", "Wood Window and Door Manufacturing",	1259,
+321912, "Manufacturing", "Other Wood Product Manufacturing", "Cut Stock, Resawing Lumber, and Planing",	1225,
+321918, "Manufacturing", "Other Wood Product Manufacturing", "Other Millwork (including Flooring)",	14687,
+321920, "Manufacturing", "Other Wood Product Manufacturing", "Wood Container and Pallet Manufacturing",	3383,
+321991, "Manufacturing", "Other Wood Product Manufacturing", "Manufactured Home (Mobile Home) Manufacturing",	570,
+321992, "Manufacturing", "Other Wood Product Manufacturing", "Prefabricated Wood Building Manufacturing",	1111,
+321999, "Manufacturing", "Other Wood Product Manufacturing",	"All Other Miscellaneous Wood Product Manufacturing",	4507,
+3221, "Manufacturing",	"Pulp, Paper, and Paperboard Mills", "Pulp, Paper, and Paperboard Mills",	2956,
+322110, "Manufacturing", "Pulp, Paper, and Paperboard Mills",	"Pulp Mills",	343,
+322121, "Manufacturing", "Pulp, Paper, and Paperboard Mills",	"Paper (except Newsprint) Mills",	1921,
+322122, "Manufacturing", "Pulp, Paper, and Paperboard Mills",	"Newsprint Mills",	34,
+322130, "Manufacturing", "Pulp, Paper, and Paperboard Mills", "Paperboard Mills",	658,
+3222, "Manufacturing", "Converted Paper Product Manufacturing", "Converted Paper Product Manufacturing",	6059,
+322211, "Manufacturing", "Converted Paper Product Manufacturing", "Corrugated and Solid Fiber Box Manufacturing",	1852,
+322212, "Manufacturing", "Converted Paper Product Manufacturing", "Folding Paperboard Box Manufacturing",	147,
+322219, "Manufacturing", "Converted Paper Product Manufacturing", "Other Paperboard Container Manufacturing",	663,
+322220, "Manufacturing", "Converted Paper Product Manufacturing", "Paper Bag and Coated and Treated Paper Manufacturing",	1471,
+322230, "Manufacturing", "Converted Paper Product Manufacturing", "Stationery Product Manufacturing",	412,
+322291, "Manufacturing", "Converted Paper Product Manufacturing", "Sanitary Paper Product Manufacturing",	374,
+322299, "Manufacturing", "Converted Paper Product Manufacturing", "All Other Converted Paper Product Manufacturing",	1140
+)
+
+NAICS_trim <- NAICS %>% 
+  filter(NAICSCode %in% c(1131, 1132, 1133, 1153, 3211, 3212, 3219, 3221, 3222))
+
+NAICS_full <- NAICS %>% 
+  filter(!(NAICSCode %in% c(1131, 1132, 1133, 1153, 3211, 3212, 3219, 3221, 3222)))
+```
+
+
+```{r, echo = F}
+ggplot(NAICS_trim, aes(reorder(IndustryCat, Businesses), Businesses, fill = IndustryCat)) +
+  geom_bar(stat = "identity", col = "black")+
+  coord_flip() +
+  labs(x = " ", y = "Number of marketable US businesses") +
+  scale_fill_brewer(palette="BrBG") +
+  theme(panel.background = element_blank(),
+        axis.line = element_line(color = "black"),
+        axis.text = element_text(color = "black"),
+        legend.position = "none")
+```
+
+The names of the specific NAICS codes appear below along with the number of businesses. Businesses conducting millwork, logging, and support activities for forestry are the most common: 
+
+```{r, echo = F}
+NAICS %>% 
+  select(NAICSCode, NAICSName, Businesses) %>% 
+  filter(!(NAICSCode %in% c(1131, 1132, 1133, 1153, 3211, 3212, 3219, 3221, 3222))) %>% 
+  arrange(desc(Businesses)) %>% 
+  kable("html", caption = 'NAICS codes, names, and number of marketable US businesses in the forest products industry.') %>%
+  kable_styling()
+```
+
+If you work with forest industry and economic data, get acquainted with the NAICS codes and how they can be used in your analysis. 
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*

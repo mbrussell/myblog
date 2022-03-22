@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mixed Models on </title>
-    <link>/tags/mixed-models/</link>
-    <description>Recent content in Mixed Models on </description>
+    <title>mixed models on </title>
+    <link>https://arbor-analytics.com/tags/mixed-models/</link>
+    <description>Recent content in mixed models on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/mixed-models/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/mixed-models/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mixed models in R: a primer</title>
-      <link>/post/mixed-models-a-primer/</link>
+      <link>https://arbor-analytics.com/post/mixed-models-a-primer/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/mixed-models-a-primer/</guid>
+      <guid>https://arbor-analytics.com/post/mixed-models-a-primer/</guid>
       <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:
 “I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
 The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>

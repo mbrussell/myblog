@@ -1,22 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Climate on </title>
-    <link>/tags/climate/</link>
-    <description>Recent content in Climate on </description>
+    <title>climate on </title>
+    <link>https://arbor-analytics.com/tags/climate/</link>
+    <description>Recent content in climate on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/climate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CO2 offsets and trips to the family cabin</title>
+      <link>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</link>
+      <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
+      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.</description>
+    </item>
     
-	<atom:link href="/tags/climate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Drought in the US West: impacts from the last ten years</title>
+      <link>https://arbor-analytics.com/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</guid>
+      <description>Drought conditions in the western US, 20 July 2021. From US Drought Monitor.
+Much of the western United States is currently under severe drought conditions. Drought impacts trees and forests in the short and long term. Trees and forests can tolerate some extended dry periods depending of species and local conditions, but without adequate moisture availability, drought can ultimately lead to tree mortality.
+Perhaps the greatest impact of drought is the stress it places on trees.</description>
+    </item>
     
+    <item>
+      <title>Forest carbon cheat sheet: updated for 2021</title>
+      <link>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</link>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
+The Cheat Sheet has been updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2019.
+DOWNLOAD (PDF)
+DOWNLOAD (JPEG)
+–
+By Matt Russell. Email Matt with any questions or comments.</description>
+    </item>
     
     <item>
       <title>Forest carbon cheat sheet</title>
-      <link>/post/forest-carbon-cheat-sheet/</link>
+      <link>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/forest-carbon-cheat-sheet/</guid>
+      <guid>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</guid>
       <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
 The Cheast Sheet is updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2018.
 DOWNLOAD (PDF)

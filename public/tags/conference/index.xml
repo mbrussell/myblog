@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Conference on </title>
-    <link>/tags/conference/</link>
-    <description>Recent content in Conference on </description>
+    <title>conference on </title>
+    <link>https://arbor-analytics.com/tags/conference/</link>
+    <description>Recent content in conference on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/conference/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/conference/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reflections on the American Forestry Conference</title>
-      <link>/post/reflections-on-the-american-forestry-conference/</link>
+      <link>https://arbor-analytics.com/post/reflections-on-the-american-forestry-conference/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/reflections-on-the-american-forestry-conference/</guid>
+      <guid>https://arbor-analytics.com/post/reflections-on-the-american-forestry-conference/</guid>
       <description>Shawn Baker presents on trends in logging businesses.
 Last week I tuned into the American Forestry Conference, a virtual conference on the forest products industry and how forestry businesses can reshape the future US economy. The conference, organized by the Georgia Forestry Association, had 35 speakers that discussed topics such as the challenges and opportunities of the role of forestry in the current and future economic climate. In an email, the organizing committee reported 540 attendees from 26 US states.</description>
     </item>

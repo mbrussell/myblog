@@ -1,0 +1,95 @@
+---
+title: 'Visualizing forest carbon trends in the last thirty years'
+author: Matt Russell
+date: '2021-11-15'
+slug: []
+categories:
+  - Carbon
+tags:
+  - analytics
+  - carbon
+  - Data viz
+  - forest carbon
+  - forest industry
+---
+
+```{r, echo = F, warning = F, message = F}
+library(tidyverse)
+library(knitr)
+library(patchwork)
+library(GGally)
+library(rgdal)
+library(usmap)
+library(googlesheets4)
+library(geofacet)
+```
+
+Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide. 
+
+The value of carbon in forests has seen a tremendous increase in recent years. The increased role of forests in meeting climate challenges has required analysts to have a better understanding of carbon attributes in the forests they work in. Tree planting initiatives such as the Trillion Trees Campaign have garnered international attention as they seek to plant trees for the carbon benefits they provide.
+
+This year the USDA Forest Service published [“Greenhouse gas emissions and removals from forest land, woodlands, and urban trees in the United States, 1990-2019”](https://www.nrs.fs.fed.us/pubs/62418). This report provides detailed estimates for each US state, including forest carbon storage, net flux of carbon, and carbon stored in different pools. In the USDA report, forest carbon pools include:   
+
+* aboveground biomass,
+* belowground biomass,
+* dead wood,
+* litter,
+* soil (mineral), and 
+* soil (organic)
+
+Since 1990, ten states have seen a net loss in the aboveground biomass pool. This has occurred in states in the Rocky Mountain and northern Great Plains regions.
+
+While many of the tables found in the appendices of the USDA report are informative to show these trends, nothing does it like a map. Using the [**geofacet** package in R](https://hafen.github.io/geofacet/), we can visualize the trends in aboveground biomass through the last 30 years:
+
+```{r, echo = F, warning = F, message = F}
+trends <- read_csv('C:/Users/russellm/Documents/Arbor/Projects/FRAStateCarbon/FRF_stock_MMTC.csv')
+
+trends<- trends %>% 
+  filter(`Carbon Pools` == "Aboveground Biomass") %>% 
+  select(-`Carbon Pools`) %>% 
+  pivot_longer(!State, names_to = "Year", values_to = "C_MMT") %>% 
+  mutate(Year = as.numeric(Year),
+         State.abb = state.abb[match(State,state.name)])
+```
+
+```{r, echo = F, warning = F, message = F}
+trends <- trends %>% 
+  group_by(State) %>% 
+  mutate(diff = last((C_MMT)) - first(C_MMT),
+         diff_dum = ifelse(diff >= 0.1, "C gain", "C loss")) 
+```
+
+  
+```{r, echo = F, warning = F, message = F}
+p.trends <- ggplot(trends, aes(Year, C_MMT)) +
+  geom_line(aes(col = diff_dum), size = 0.5) +
+  labs(x = "Year", y = "Forest aboveground carbon\n(million metric tons)",
+       caption = "Source: USDA Forest Service Resource Update FS–307",
+       title = "Forest carbon in aboveground biomass increased 29% over the last 30 years.",
+       subtitle = "Carbon losses seen in Rocky Mountain and northern Great Plains states.") +
+  scale_color_manual(values = c("black", "red")) +
+  scale_x_continuous(breaks = c(1990, 2020))+
+  scale_y_continuous(breaks = c(0, 1100))+
+    facet_geo(~ State.abb) +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text.y = element_text(color = "black"),
+        axis.text.x = element_text(color = "black", angle = 45, vjust = 0.1),
+        legend.title = element_blank(),
+        legend.key=element_blank(),
+        legend.position = "top",
+         plot.margin = margin(0, 0, 0, 0, "cm")) +
+    guides(col = guide_legend(ncol = 2))
+p.trends
+```
+
+Forest carbon stocks in aboveground biomass pools have increased from 11,810 MMT in 1990 to 15,260 MMT in 2019. These gains, representing an increase of 29% over 30 years,represent a substantial increase in the amount of carbon stored in trees and forests.
+  
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.* 
+
+*Data used in this post are [available here.](https://www.fs.usda.gov/rds/archive/Catalog/RDS-2021-0035)*
+
+
+*Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*

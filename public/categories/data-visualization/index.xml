@@ -1,42 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Visualization on </title>
-    <link>/categories/data-visualization/</link>
-    <description>Recent content in Data Visualization on </description>
+    <title>Data visualization on </title>
+    <link>https://arbor-analytics.com/categories/data-visualization/</link>
+    <description>Recent content in Data visualization on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/data-visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating animated bar charts to visualize sawtimber prices</title>
+      <link>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</link>
+      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</guid>
+      <description>If you’re on social media, you’ve probably seen animated bar charts. My favorite is one that shows the popularity of data science software through time.
+Animated bar graphs are effective when you have a categorical variable that has a different value at multiple time periods. This is why animated bar graphs work well to visualize time series data. These data might typically be represented by multiple lines on a graph that “cross” over time.</description>
+    </item>
     
-	<atom:link href="/categories/data-visualization/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Some data on why pie graphs are bad</title>
+      <link>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</guid>
+      <description>“The only thing worse than a pie chart is several of them.” -Edward Tufte
+I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.
+Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid.</description>
+    </item>
     
     <item>
       <title>Polar area diagrams in celebration of Florence Nightingale</title>
-      <link>/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
+      <link>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
+      <guid>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
       <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.
 The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s.</description>
     </item>
     
     <item>
       <title>Disentagling the interactions between site index and disturbance</title>
-      <link>/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
+      <link>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
+      <guid>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
       <description>The Black Hills National Forest has been in the news recently after completing a timber sustainability report. In recent years, the Black Hills was one of the US Forest Service’s greatest timber-producing National Forests in the country.
 Much of the increase in timber harvest in recent years at the Black Hills National Forest was in response to a deadly mountain pine beetle epidemic. As a result, the new report suggests that current timber harvests are not sustainable into the future.</description>
     </item>
     
     <item>
       <title>Four ways to supercharge your scatterplots</title>
-      <link>/post/four-ways-to-supercharge-your-scatterplots/</link>
+      <link>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/four-ways-to-supercharge-your-scatterplots/</guid>
+      <guid>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</guid>
       <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.
 There are a few rules for all scatterplots:
 The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
@@ -44,20 +61,20 @@ There are a few rules for all scatterplots:
     
     <item>
       <title>Quickly explore your timber cruise data with six lines of code</title>
-      <link>/post/explore-your-timber-cruise-data/</link>
+      <link>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/explore-your-timber-cruise-data/</guid>
+      <guid>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</guid>
       <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.
 A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
     </item>
     
     <item>
       <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
-      <link>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
+      <link>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
       <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
+      <guid>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
       <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.
 The general process to make a GIF image with maps in R is:
 1. Create the images you want (e.g., using ggplot),
@@ -67,20 +84,20 @@ The general process to make a GIF image with maps in R is:
     
     <item>
       <title>Presenting regression results better with forest plots</title>
-      <link>/post/presenting-regression-results-better/</link>
+      <link>https://arbor-analytics.com/post/presenting-regression-results-better/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/presenting-regression-results-better/</guid>
+      <guid>https://arbor-analytics.com/post/presenting-regression-results-better/</guid>
       <description>I was inspired by Sara Richter’s presentation at the 2019 Conference on Statistical Practice titled “Easy Ways to Make Data Visualizations More Effective”. One of the themes I took away from Sara’s presentation was that data visualization needs to be practiced, but good data visualization doesn’t need to be difficult to be done well.
 When presenting results from a regression, people often use tables. While this is good if we need the true value of something, tables may not be good if we seek to convey general trends in our results.</description>
     </item>
     
     <item>
       <title>Adding some music to boxplots, and better ways to visualize diameter distributions</title>
-      <link>/post/better-ways-to-visualize-multi-modal-data/</link>
+      <link>https://arbor-analytics.com/post/better-ways-to-visualize-multi-modal-data/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/better-ways-to-visualize-multi-modal-data/</guid>
+      <guid>https://arbor-analytics.com/post/better-ways-to-visualize-multi-modal-data/</guid>
       <description>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on between those boxes and whiskers?
 Some forestry data: In the examples below, I’ve used tree diameters measured in four management units at the Penobscot Experimental Forest in Maine.</description>
     </item>

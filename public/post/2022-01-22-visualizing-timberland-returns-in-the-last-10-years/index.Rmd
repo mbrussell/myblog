@@ -1,0 +1,83 @@
+---
+title: Timberlands as investments see biggest gain since 2014 
+author: Matt Russell
+date: '2022-01-26'
+slug: []
+categories:
+  - Forest products
+tags:
+  - analytics
+  - Data viz
+  - economics
+  - forest industry
+  - timber prices
+---
+
+Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.
+
+The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted [fourth-quarter returns](https://www.ncreif.org/news/timber-4q2021/) for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion. The Index showed a 4.56% return for the fourth quarter of 2021, representing the strongest single quarter return for the index since the fourth quarter of 2014.
+
+The NCREIF gained 9.17% in 2021, the largest annual gain since 2014 (10.48%). Returns from timberland investments can be compared to national economic indicators such as the US 10-year Treasury yield and the S&P 500: 
+
+```{r, echo = F, warning = F, message = F}
+# Load packages
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+```{r, echo = F, warning = F, message = F}
+# Enter data, from Zhang 2021 page 163
+
+timber <- tribble(
+  ~Year, ~`10-year Treasury`, ~`S&P 500`, ~`NCREIF Index`, ~REIT,
+  2010, 3.30, 15.06, -0.15, 13.42,
+  2011, 1.89, 2.11, 1.57, 9.30,
+  2012, 1.78, 16.00, 7.75, 38.50,
+  2013, 3.05, 32.39, 9.69, 9.45,
+  2014, 2.17, 13.69, 10.48, 9.59,
+  2015, 2.27, 1.38, 4.97, -6.07,
+  2016, 2.45, 11.96, 2.59, 8.62,
+  2017, 2.40, 21.83, 3.63, 21.08,
+  2018, 2.69, -4.38, 3.21, -32.50,
+  2019, 1.92, 31.49, 1.30, 40.00,
+  2020, 0.89, 18.40, 0.81, 12.44,
+  2021, 1.5, 26.9, 9.17, NA
+)
+
+```
+
+```{r, echo = F, warning = F, message = F}
+timber_long <- timber %>% 
+  select(-REIT) %>% 
+  pivot_longer(`10-year Treasury`:`NCREIF Index`, "Index", "PctChange")
+
+ggplot(timber_long, aes(Year, value, col = Index)) +
+  geom_point() +
+  geom_line() +
+  labs(y = "Annual rate of return (%)") +
+  scale_x_continuous(breaks = c(2010:2021)) +
+  theme_bw()
+```
+
+In the last 12 years, the NCREIF Index has averaged a return of 4.6%. The variability of returns observed in the NCREIF Index is similar to returns from the S&P 500, represented by a coefficient of variation of 82.6% for the NCREIF Index and 75% for the S&P 500:  
+
+```{r, echo = F, warning = F, message = F}
+timber_long_summ <- timber_long %>% 
+  group_by(Index) %>%
+  summarize(`Avg return` = round(mean(value), 1),
+            `Std Dev return` = round(sd(value), 1)) %>% 
+  mutate(`CV return` = round((`Std Dev return`/`Avg return`)*100, 1))
+
+timber_long_summ %>%
+  kbl(caption = "Average and variability of annual rates of return of timberland investments, 2010-2021.") %>%
+  kable_styling()
+```
+
+Due to the steady growth and demand for wood and forest products along with the increasing interest in timberlands as impact investments, timberlands are a great addition to one's investment portfolio. Timberlands are attractive and can provide a hedge against inflation.  
+
+For more on timberlands as investments, Daowei Zhang's excellent book ["From Backwoods to Boardrooms"](https://osupress.oregonstate.edu/book/from-backwoods-to-boardrooms) presents a thorough history of timberland ownership in the US, describes the rise of TIMOs and REITs, and discusses the future of investment in timberlands.
+
+--
+
+*By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*

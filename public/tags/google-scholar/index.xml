@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Scholar on </title>
-    <link>/tags/google-scholar/</link>
+    <link>https://arbor-analytics.com/tags/google-scholar/</link>
     <description>Recent content in Google Scholar on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/google-scholar/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/google-scholar/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Which forest biometrics researchers get the most citations?</title>
-      <link>/post/which-forest-biometrics-faculty-get-the-most-citations/</link>
+      <link>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</link>
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/which-forest-biometrics-faculty-get-the-most-citations/</guid>
+      <guid>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</guid>
       <description>Researchers in the forest and natural resource sciences are measured by their productivity: how many publications they write and how many times those publications are cited by other researchers. Researchers that have many publications that are cited in the literature by others generally have rewarding careers and are promoted.
 In 2017 I wrote a blog post for the Ecological Society of America’s Early Career Ecologist section that provided some evidence that early-career scientists publish earlier in their careers compared to more senior researchers.</description>
     </item>

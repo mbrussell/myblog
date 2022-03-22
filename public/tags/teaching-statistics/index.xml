@@ -1,22 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Teaching Statistics on </title>
-    <link>/tags/teaching-statistics/</link>
-    <description>Recent content in Teaching Statistics on </description>
+    <title>teaching statistics on </title>
+    <link>https://arbor-analytics.com/tags/teaching-statistics/</link>
+    <description>Recent content in teaching statistics on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/teaching-statistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What statistics students in natural resources want to learn more about</title>
+      <link>https://arbor-analytics.com/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</link>
+      <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</guid>
+      <description>As the holidays approach, it’s always a great time of year to reflect back and look forward. This post will describe my approach to this as it relates to a class that just wrapped up for the Fall 2021 semester.
+I instruct the course NR 5021: Statistics for Agricultural and Natural Resources Professionals at the University of Minnesota. The class has between 25 and 40 graduate students enrolled in a given year, a mix between students studying natural resources, agriculture, and plant sciences.</description>
+    </item>
     
-	<atom:link href="/tags/teaching-statistics/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>How well does the &#34;quick and dirty&#34; standard deviation approximation work?</title>
+      <link>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</link>
+      <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</guid>
+      <description>Photo by Chris Liverani on Unsplash.
+The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.
+When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data.</description>
+    </item>
     
     <item>
       <title>Using Google Forms to analyze confidence intervals: a teaching statistics activity</title>
-      <link>/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</link>
+      <link>https://arbor-analytics.com/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</link>
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</guid>
+      <guid>https://arbor-analytics.com/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</guid>
       <description>This post describes how the concepts of confidence intervals can be taught to students. The ideal participants are undergraduate students in an introductory statistics. The in-class activity reveals to students that most people are overconfident in their estimation of uncertainty. The activity uses the example of moose, a charismatic wildlife species in Minnesota.
 IntroductionDemonstrations of data and statistical concepts are effective when they are designed with a structure that encourages participation in the classroom 1.</description>
     </item>

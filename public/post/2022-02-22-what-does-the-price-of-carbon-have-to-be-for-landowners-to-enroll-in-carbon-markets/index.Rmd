@@ -1,0 +1,84 @@
+---
+title: What does the price of carbon have to be for landowners to enroll in carbon markets?
+author: Matt Russell
+date: '2022-02-22'
+slug: []
+categories:
+  - Carbon
+tags:
+  - carbon
+  - carbon markets
+  - economics
+  - forest carbon
+---
+
+<center>
+![](balsamfirme.jpg){width=500px}
+</center>
+
+## Introduction
+
+Carbon has quickly become one of the most talked about commodities in our forests today. A variety of new and emerging carbon market programs are paying landowners for the carbon in their forests Carbon is the currency of interest when discussing trees and forests as natural climate solutions.
+
+While compliance-driven markets such as the California Air Resource Board’s (CARB) Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres. Forest inventory costs to enroll property in the CARB program are high and 100-year contract lengths are signed. Most recently, the offering price of one metric ton of carbon dioxide was around \$17.00 in the CARB program, with auction prices reaching [$28.00 in November 2021](https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/).
+
+A number of voluntary forest carbon markets have expanded considerably over the last several years. One of the novelties of these voluntary forest carbon programs is that they typically have small minimum acreage requirements and shorter contract lengths. Voluntary markets may be the greatest opportunity for private forestland owners with small properties (e.g., less than 100 acres). These markets also provide unique ways to reward landowners with carbon payments.
+
+For example, the [NCX program](https://ncx.com/) is a “data-driven forest carbon marketplace” that operates on a harvest deferral model for one year. It is currently enrolling landowners across the continuous US. In contrast, the [Family Forest Carbon Program](https://www.forestfoundation.org/what-we-do/increase-carbon-storage/family-forest-carbon-program/) by the American Forestry Foundation and The Nature Conservancy is an incentive-based program that recently completed a pilot in Pennsylvania, with plans to enroll landowners in the US Lake States in 2022. Contract lengths in this program are for 20 years and landowners can choose to enroll in their Growing Mature Forests or Enhancing the Future Forest programs.
+
+Given the increased attention in providing payments to landowners for carbon, at what price does carbon need to be to encourage landowners to enroll in carbon markets? Fortunately, several studies have been conducted in the last decade that quantify landowner willingness to participate in carbon markets and the prices they are willing to accept.
+
+## A review of carbon price studies
+
+Some new voluntary carbon programs operate on a harvest deferral model. For example, the NCX program operates an annual harvest deferral. In this model, landowners will chose to forgo timber harvesting in favor of allowing their forest to store and sequester carbon and receive a carbon payment. It is fitting to summarize what the annual price of carbon would be need to be on a per acre basis if landowners seek to enroll.
+
+Table 1 summarizes five different studies across different regions in the US that analyzed this. Most studies analyzed private forest landowners through a mix of surveys or simulation analyses to quantify the price that landowners are willing to accept for carbon.
+
+```{r, echo = F, warning = F, message = F}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+```{r, echo = F, warning = F, message = F}
+price <- tribble(
+~`State/Region`, ~`Price ($/acre)`,	~Study,	~Notes,
+"Vermont",	"$5 to $15",	"White et al. 2018", "Responses from a mail survey to landowners in the state’s Current Use Program.",
+"Texas",	"$20 to $27",	"Simpson and Li 2010", "Values range from being willing to accept a five-year contract versus a conservation easement.",
+"Southeastern US",	"$4 to $49",	"Tanger et al. 2021", "Payment rates vary depending on four treatments including different ages at thinning and final harvest.",
+"Florida",	"$20 to $30",	"Soto et al. 2016", "Conclusion that amount would have significantly stronger impacts on enrollment than $5 or $10.",
+"Lake States",	"$18 to $28",	"Miller et al. 2012", "$18 payment required to generate 50% participation rate. $28 payment for survey respondents that expressed a high certainty in their response to a valuation question."
+)
+
+price %>% 
+  kable("html", format.args = list(big.mark = ","),
+        caption = 'Prices that forest landowners are willing to accept on a per acre basis for storing carbon annually.') %>%
+  kable_styling()
+```
+
+Averaged across these studies, forest landowners are willing to accept $21.60 per acre for storing carbon annually. Although Table 1 is not a complete list of studies and prices are not all in 2021 dollars, it should be noted that this price might be competitive with stumpage prices for lower quality wood across most US regions.  
+In addition to comparing between stumpage rates and product classes that a landowner’s timber might provide, another key factor is incorporating the management costs incurred by a landowner. In particular for regions in the US with relatively short rotation ages (e.g., loblolly pine planted in the US Southeast), carbon payments that landowners would be willing to accept would likely be impacted by past and future silvicultural treatments, including ages of thinning operations and selection of the year of final harvest. Tree growth rates will vary across regions and species, which subsequently need to be taken into account when quantifying the potential for a forest to store and sequester carbon.
+
+## Conclusion
+
+Many carbon markets now appeal to a variety of landowners, including small private landowners. The current price of carbon on an annual basis will be a large determinant of a landowner’s willingness to enroll in a carbon market. A review of several research-based studies indicates an average landowner willingness to accept $21.60 per acre for storing carbon annually. Forest resources professionals should engage with landowners to help them determine if and how managing for carbon can be incorporated into their management plans. 
+
+## References
+
+Miller, K.A., S.A. Snyder, and M.A. Kilgore. 2012. An assessment of forest landowner interest in 	selling forest carbon credits in the Lake States, USA. *Forest Policy and Economics* 25:113-	122.
+
+Simpson, H., and Y. Li. 2010. [Environmental credit marketing survey report (PDF).](https://tfsweb.tamu.edu/uploadedFiles/TFSMain/Data_and_Analysis/Contact_Us(3)/ECMSurveyReport.pdf)    	 
+
+Soto, J.R., D.C. Adams, and F.J. Escobedo. 2016. Landowner attitudes and willingness to accept compensation from forest carbon offsets: Application of best–worst choice modeling in 	Florida USA. *Forest Policy and Economics* 63:35-42.
+
+Tanger, S.M., B. da Silva, and M.E. McDill. 2021. [Cut or wait decision-making for landowners: determining payment amounts necessary for postponing harvest for a year.](http://extension.msstate.edu/publications/cut-or-wait-decision-making-for-landowners). Mississippi State University Extension Pub. 3593.
+
+White, A.E., D.A. Lutz, R.B. Howarth, and J.R. Soto. 2018. Small-scale forestry and carbon offset markets: An empirical study of Vermont Current Use forest landowner willingness to accept carbon credit programs. *PLOS ONE* 13(8):e0201967.
+
+--
+
+*By Matt Russell*
+
+*NOTE: This post was previously published by the [Forest Resources Association](https://forestresources.org/) as Technical Release 21-R-29. Special thanks to Tim O’Hara for his review of this post.*
+
+*[Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for [The Landing](https://mailchi.mp/d96897dc0f46/arbor-analytics) for monthly in-depth analysis on data and analytics in the forest products industry.*

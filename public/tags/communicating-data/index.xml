@@ -1,42 +1,68 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Communicating Data on </title>
-    <link>/tags/communicating-data/</link>
-    <description>Recent content in Communicating Data on </description>
+    <title>Communicating data on </title>
+    <link>https://arbor-analytics.com/tags/communicating-data/</link>
+    <description>Recent content in Communicating data on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/communicating-data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CO2 offsets and trips to the family cabin</title>
+      <link>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</link>
+      <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
+      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.</description>
+    </item>
     
-	<atom:link href="/tags/communicating-data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Peer review: Lessons learned from reviewing 100 forest science manuscripts</title>
+      <link>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</link>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</guid>
+      <description>Photo by Annie Spratt on Unsplash.
+This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.</description>
+    </item>
     
+    <item>
+      <title>Some data on why pie graphs are bad</title>
+      <link>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</guid>
+      <description>“The only thing worse than a pie chart is several of them.” -Edward Tufte
+I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.
+Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid.</description>
+    </item>
     
     <item>
       <title>Ask how you want your data - and be specific</title>
-      <link>/post/ask-how-how-want-your-data-and-be-specific/</link>
+      <link>https://arbor-analytics.com/post/ask-how-how-want-your-data-and-be-specific/</link>
       <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/ask-how-how-want-your-data-and-be-specific/</guid>
+      <guid>https://arbor-analytics.com/post/ask-how-how-want-your-data-and-be-specific/</guid>
       <description>I have been analyzing the submissions to the University of Minnesota Extension’s Tree and Woodland Carbon Capture Challenge. The Challenge is an activity that asked Minnesotans to measure trees and woodlands to observe how much carbon they sequester over a year.
 The audience that participated in this activity included homeowners and private woodland owners with a love for trees. In total, 26 people measured an individual tree and typed their measurements into a Google Form answering the question “What is the diameter of your tree, measured in inches?</description>
     </item>
     
     <item>
       <title>Polar area diagrams in celebration of Florence Nightingale</title>
-      <link>/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
+      <link>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
+      <guid>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
       <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.
 The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s.</description>
     </item>
     
     <item>
       <title>Attention forestry researchers: Incorporate a call-to-action in your presentations</title>
-      <link>/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</link>
+      <link>https://arbor-analytics.com/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</guid>
+      <guid>https://arbor-analytics.com/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</guid>
       <description>A simple call-to-action to use in a presentation: link to the slides you just presented.)
 “The primary purpose of a talk is advertising, not science.”
 This is one of the statements made in the Leek group guide to giving talks. Our lab group discussed this topic at a recent meeting in April.
@@ -45,20 +71,20 @@ Sometimes we are required in a grant to provide a talk via a presentation about 
     
     <item>
       <title>Units in forest carbon numbers: a primer</title>
-      <link>/post/units-in-forest-carbon-numbers-a-primer/</link>
+      <link>https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/units-in-forest-carbon-numbers-a-primer/</guid>
+      <guid>https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/</guid>
       <description>Forest analysts are increasingly being asked about the amount of carbon that trees and forests store. However, most analysts are trained in summarizing forestry data sets to obtain measurements such as volume and basal area.
 If a forest analyst knows how to “speak carbon”, this can leave them feeling empowered when discussing the importance of forests and forest management in the context of carbon. This can leave a solid impression with landowners and decision makers.</description>
     </item>
     
     <item>
       <title>Four ways to supercharge your scatterplots</title>
-      <link>/post/four-ways-to-supercharge-your-scatterplots/</link>
+      <link>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/four-ways-to-supercharge-your-scatterplots/</guid>
+      <guid>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</guid>
       <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.
 There are a few rules for all scatterplots:
 The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
@@ -66,30 +92,30 @@ There are a few rules for all scatterplots:
     
     <item>
       <title>Should foresters keep saying “statistically significant”?</title>
-      <link>/post/should-foresters-keep-saying-statistically-significant/</link>
+      <link>https://arbor-analytics.com/post/should-foresters-keep-saying-statistically-significant/</link>
       <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/should-foresters-keep-saying-statistically-significant/</guid>
+      <guid>https://arbor-analytics.com/post/should-foresters-keep-saying-statistically-significant/</guid>
       <description>The statistics community has had a lot of discussion in recent years about the role of p -values and statistical significance. What does this mean for forest biometricians and analysts that have traditionally used p -values and tests of significance in their daily work?
 The American Statistical Association’s August 2019 edition of their magazine Significance has a number of great articles on significance. They even refer to the term as “the S word”:</description>
     </item>
     
     <item>
       <title>Quickly explore your timber cruise data with six lines of code</title>
-      <link>/post/explore-your-timber-cruise-data/</link>
+      <link>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/explore-your-timber-cruise-data/</guid>
+      <guid>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</guid>
       <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.
 A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
     </item>
     
     <item>
       <title>Presenting regression results better with forest plots</title>
-      <link>/post/presenting-regression-results-better/</link>
+      <link>https://arbor-analytics.com/post/presenting-regression-results-better/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/presenting-regression-results-better/</guid>
+      <guid>https://arbor-analytics.com/post/presenting-regression-results-better/</guid>
       <description>I was inspired by Sara Richter’s presentation at the 2019 Conference on Statistical Practice titled “Easy Ways to Make Data Visualizations More Effective”. One of the themes I took away from Sara’s presentation was that data visualization needs to be practiced, but good data visualization doesn’t need to be difficult to be done well.
 When presenting results from a regression, people often use tables. While this is good if we need the true value of something, tables may not be good if we seek to convey general trends in our results.</description>
     </item>

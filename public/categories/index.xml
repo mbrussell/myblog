@@ -1,166 +1,189 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on </title>
-    <link>/categories/</link>
+    <link>https://arbor-analytics.com/categories/</link>
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Analytics</title>
-      <link>/categories/analytics/</link>
-      <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
+      <title>Logging</title>
+      <link>https://arbor-analytics.com/categories/logging/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>/categories/analytics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Behind the Curtain</title>
-      <link>/categories/behind-the-curtain/</link>
-      <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/behind-the-curtain/</guid>
+      <guid>https://arbor-analytics.com/categories/logging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Carbon</title>
-      <link>/categories/carbon/</link>
-      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+      <link>https://arbor-analytics.com/categories/carbon/</link>
+      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>/categories/carbon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Climate</title>
-      <link>/categories/climate/</link>
-      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/climate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Conference</title>
-      <link>/categories/conference/</link>
-      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/conference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Management</title>
-      <link>/categories/data-management/</link>
-      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/data-management/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Visualization</title>
-      <link>/categories/data-visualization/</link>
-      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/data-visualization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Wrangling</title>
-      <link>/categories/data-wrangling/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/data-wrangling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Distributions</title>
-      <link>/categories/distributions/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/distributions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Forest Measurements</title>
-      <link>/categories/forest-measurements/</link>
-      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/forest-measurements/</guid>
+      <guid>https://arbor-analytics.com/categories/carbon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Forestry</title>
-      <link>/categories/forestry/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      <link>https://arbor-analytics.com/categories/forestry/</link>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>/categories/forestry/</guid>
+      <guid>https://arbor-analytics.com/categories/forestry/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Machine Learning</title>
-      <link>/categories/machine-learning/</link>
-      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
+      <title>Forest products</title>
+      <link>https://arbor-analytics.com/categories/forest-products/</link>
+      <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>/categories/machine-learning/</guid>
+      <guid>https://arbor-analytics.com/categories/forest-products/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Prediction</title>
-      <link>/categories/prediction/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      <title>Analytics</title>
+      <link>https://arbor-analytics.com/categories/analytics/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>/categories/prediction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Professional Development</title>
-      <link>/categories/professional-development/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/professional-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reporting</title>
-      <link>/categories/reporting/</link>
-      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/reporting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sampling</title>
-      <link>/categories/sampling/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/sampling/</guid>
+      <guid>https://arbor-analytics.com/categories/analytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>/categories/statistics/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
+      <link>https://arbor-analytics.com/categories/statistics/</link>
+      <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>/categories/statistics/</guid>
+      <guid>https://arbor-analytics.com/categories/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Behind the curtain</title>
+      <link>https://arbor-analytics.com/categories/behind-the-curtain/</link>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/behind-the-curtain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forest health</title>
+      <link>https://arbor-analytics.com/categories/forest-health/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/forest-health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data visualization</title>
+      <link>https://arbor-analytics.com/categories/data-visualization/</link>
+      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/data-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data wrangling</title>
+      <link>https://arbor-analytics.com/categories/data-wrangling/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/data-wrangling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Climate</title>
+      <link>https://arbor-analytics.com/categories/climate/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/climate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data management</title>
+      <link>https://arbor-analytics.com/categories/data-management/</link>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/data-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine learning</title>
+      <link>https://arbor-analytics.com/categories/machine-learning/</link>
+      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conference</title>
+      <link>https://arbor-analytics.com/categories/conference/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Professional development</title>
+      <link>https://arbor-analytics.com/categories/professional-development/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/professional-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prediction</title>
+      <link>https://arbor-analytics.com/categories/prediction/</link>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/prediction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forest measurements</title>
+      <link>https://arbor-analytics.com/categories/forest-measurements/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/forest-measurements/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reporting</title>
+      <link>https://arbor-analytics.com/categories/reporting/</link>
+      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/reporting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Distributions</title>
+      <link>https://arbor-analytics.com/categories/distributions/</link>
+      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/distributions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sampling</title>
+      <link>https://arbor-analytics.com/categories/sampling/</link>
+      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/sampling/</guid>
       <description></description>
     </item>
     

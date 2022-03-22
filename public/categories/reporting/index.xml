@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reporting on </title>
-    <link>/categories/reporting/</link>
+    <link>https://arbor-analytics.com/categories/reporting/</link>
     <description>Recent content in Reporting on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/reporting/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/reporting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Four ways to supercharge your scatterplots</title>
-      <link>/post/four-ways-to-supercharge-your-scatterplots/</link>
+      <link>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/four-ways-to-supercharge-your-scatterplots/</guid>
+      <guid>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</guid>
       <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.
 There are a few rules for all scatterplots:
 The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
@@ -24,20 +20,20 @@ There are a few rules for all scatterplots:
     
     <item>
       <title>Getting down with pagedown</title>
-      <link>/events/getting-down-with-pagedown/</link>
+      <link>https://arbor-analytics.com/events/getting-down-with-pagedown/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>/events/getting-down-with-pagedown/</guid>
+      <guid>https://arbor-analytics.com/events/getting-down-with-pagedown/</guid>
       <description>This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.
 SlidesGithub repositoryExamples with pagedown</description>
     </item>
     
     <item>
       <title>How to created paged HTML documents with pagedown</title>
-      <link>/post/how-to-created-paged-html-documents-with-pagedown/</link>
+      <link>https://arbor-analytics.com/post/how-to-created-paged-html-documents-with-pagedown/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-to-created-paged-html-documents-with-pagedown/</guid>
+      <guid>https://arbor-analytics.com/post/how-to-created-paged-html-documents-with-pagedown/</guid>
       <description>When it comes to reading documents and data summaries online, HTML is often preferred over PDF. HTML documents are more interactive, easier to read on screens, and more accessible than PDFs.
 Many R users that produce reproducible reports have used R Markdown for integrating text, images, code, and tables and figures into an HTML format. Using the R Markdown language allows R users to work within the R ecosystem for writing and producing code.</description>
     </item>

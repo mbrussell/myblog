@@ -1,32 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Management on </title>
-    <link>/tags/data-management/</link>
-    <description>Recent content in Data Management on </description>
+    <title>data management on </title>
+    <link>https://arbor-analytics.com/tags/data-management/</link>
+    <description>Recent content in data management on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding the forest products industry using NAICS codes</title>
+      <link>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
+      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.
+In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
+    </item>
     
     <item>
       <title>Ask how you want your data - and be specific</title>
-      <link>/post/ask-how-how-want-your-data-and-be-specific/</link>
+      <link>https://arbor-analytics.com/post/ask-how-how-want-your-data-and-be-specific/</link>
       <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/ask-how-how-want-your-data-and-be-specific/</guid>
+      <guid>https://arbor-analytics.com/post/ask-how-how-want-your-data-and-be-specific/</guid>
       <description>I have been analyzing the submissions to the University of Minnesota Extension’s Tree and Woodland Carbon Capture Challenge. The Challenge is an activity that asked Minnesotans to measure trees and woodlands to observe how much carbon they sequester over a year.
 The audience that participated in this activity included homeowners and private woodland owners with a love for trees. In total, 26 people measured an individual tree and typed their measurements into a Google Form answering the question “What is the diameter of your tree, measured in inches?</description>
     </item>
     
     <item>
       <title>Getting your data into R from Google Sheets</title>
-      <link>/post/getting-your-data-into-r-from-google-sheets/</link>
+      <link>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/getting-your-data-into-r-from-google-sheets/</guid>
+      <guid>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</guid>
       <description>If you’re like me, more of the data you use on a daily basis are stored in Google Sheets. You might be using fewer Excel spreadsheets and .csv files. I recently researched the most up-to-date ways to import data from an Access database into R. (It had been a while since I imported data from a database.)
 Using Google Sheets to store data has several advantages:
 Multiple people can collaborate on the same data set,Information entered into a Google Form can populate data in a Google Spreadsheet,Data can be accessed and edited both online and offline, andGoogle Sheets can be converted to Excel spreadsheets, and vice versa.</description>

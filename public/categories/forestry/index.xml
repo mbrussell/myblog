@@ -1,61 +1,98 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Forestry on </title>
-    <link>/categories/forestry/</link>
+    <link>https://arbor-analytics.com/categories/forestry/</link>
     <description>Recent content in Forestry on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/forestry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forestry is a STEM discipline</title>
+      <link>https://arbor-analytics.com/post/2022-02-19-forestry-is-a-stem-discipline/</link>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-02-19-forestry-is-a-stem-discipline/</guid>
+      <description>The Homeland Security Department recently recognized forestry as a science, technology, engineering, and mathematics (STEM) discipline. Homeland Security has added both the general forestry and forest resources production and management fields of study to the Optional Practical Training (OPT) program.
+This is significant for the forestry profession because colleges and universities will have access to additional funding to support students. The announcement also makes it easier for non US citizens with advanced degrees (such as Masters and PhD graduates) that are in STEM disciplines to obtain lawful permanent resident status in the United States.</description>
+    </item>
     
-	<atom:link href="/categories/forestry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>H-2B workers: essential to the forest products industry</title>
+      <link>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</guid>
+      <description>In Cabinet Battle #1, one of the most popular songs from the musical Hamilton, Alexander Hamilton and Thomas Jefferson discuss the role of the federal government in assuming the financial debt of states. It’s the late 1780s, and Hamilton has ideas for a national bank that Jefferson and many Southerners aren’t fans of.
+Near the end of Hamilton’s verse, he states that it’s odd to take “civics lessons from a slaver”.</description>
+    </item>
     
+    <item>
+      <title>Private forest landowner demographics compared to the US population</title>
+      <link>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</link>
+      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</guid>
+      <description>Private individuals own a third of the nation’s forests. These private landowners value them primarily due to the beauty, natural values, and wildlife habitat they provide.
+Forests owned by private non-industrial individuals are diverse: they vary in terms of species composition, structure, and management objectives. While privately-owned forests are diverse, the demographics of their owners are not.
+Data from the National Woodland Owner Survey, a program administered by the USDA Forest Service, indicate that the primary decision makers on private forestlands are older, predominantly male, White, and non-Hispanic.</description>
+    </item>
+    
+    <item>
+      <title>A #ForestProud moment after listening to the MeatEater podcast</title>
+      <link>https://arbor-analytics.com/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</link>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</guid>
+      <description>The MeatEater podcast.The MeatEater Podcast is one of the most widely listened to podcasts in the outdoor genre. It has over 33,000 ratings on Apple Podcasts and consistently ranks as one of the most downloaded podcasts in the outdoors and wilderness categories.
+I’m a semi-regular listener and enjoy the questions from listeners, hunting stories, and discussions on conservation issues. For a podcast that talks about the outdoors so much, I’ve always found it lacks a discussion on forests, one of the ecosystems that the MeatEater crew spends so much time in.</description>
+    </item>
     
     <item>
       <title>Economic contribution of forestry employees across US states</title>
-      <link>/post/economic-contribution-of-forestry-employees-across-us-states/</link>
+      <link>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
+      <guid>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
       <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:
 250 companies comprise the pulp, paper, and paperboard mill industry in the US,The US forest products industry generates 5% of the manufacturing GDP ($169 billion),The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)56% of US forests are privately owned by family forest owners and companies.</description>
     </item>
     
     <item>
       <title>How to calculate carbon from board feet and cords</title>
-      <link>/post/how-to-calculate-carbon-from-board-feet-and-cords/</link>
+      <link>https://arbor-analytics.com/post/how-to-calculate-carbon-from-board-feet-and-cords/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-to-calculate-carbon-from-board-feet-and-cords/</guid>
+      <guid>https://arbor-analytics.com/post/how-to-calculate-carbon-from-board-feet-and-cords/</guid>
       <description>Foresters and wood buyers are increasingly being asked about the amount of carbon that trees and forests store. However, foresters and wood buyers do not inventory or buy their wood on a carbon basis. Instead, forests in many regions of the US are inventoried and sold using volume measurements such as board feet and cords. If a forest resources professional knows how measurements like wood volume relate to carbon, he or she can feel empowered when discussing the importance of forests and forest management in the context of carbon with landowners and decision makers.</description>
     </item>
     
     <item>
       <title>Disentagling the interactions between site index and disturbance</title>
-      <link>/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
+      <link>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
+      <guid>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
       <description>The Black Hills National Forest has been in the news recently after completing a timber sustainability report. In recent years, the Black Hills was one of the US Forest Service’s greatest timber-producing National Forests in the country.
 Much of the increase in timber harvest in recent years at the Black Hills National Forest was in response to a deadly mountain pine beetle epidemic. As a result, the new report suggests that current timber harvests are not sustainable into the future.</description>
     </item>
     
     <item>
       <title>The decline of researchers in forest science</title>
-      <link>/post/the-decline-of-researchers-in-forest-science/</link>
+      <link>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</link>
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/the-decline-of-researchers-in-forest-science/</guid>
+      <guid>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</guid>
       <description>A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that “does research”.
 I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.</description>
     </item>
     
     <item>
       <title>H-2B guest workers in forestry: by the numbers</title>
-      <link>/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</link>
+      <link>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</guid>
+      <guid>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</guid>
       <description>Guest workers regenerating a northern Minnesota forest. (photo: @Chris_KTDunham, Twitter)
 Guest workers hired through the H-2B visa program get jobs done. This is especially true across many forestry companies. Guest workers plant trees, conduct silvicultural treatments, and assist in tree nursery production.
 A strong guest worker program can lead to a future forest products industry that is healthy and sustainable in the long term.

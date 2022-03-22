@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Sheets on </title>
-    <link>/tags/google-sheets/</link>
+    <link>https://arbor-analytics.com/tags/google-sheets/</link>
     <description>Recent content in Google Sheets on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/google-sheets/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/google-sheets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting your data into R from Google Sheets</title>
-      <link>/post/getting-your-data-into-r-from-google-sheets/</link>
+      <link>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/getting-your-data-into-r-from-google-sheets/</guid>
+      <guid>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</guid>
       <description>If you’re like me, more of the data you use on a daily basis are stored in Google Sheets. You might be using fewer Excel spreadsheets and .csv files. I recently researched the most up-to-date ways to import data from an Access database into R. (It had been a while since I imported data from a database.)
 Using Google Sheets to store data has several advantages:
 Multiple people can collaborate on the same data set,Information entered into a Google Form can populate data in a Google Spreadsheet,Data can be accessed and edited both online and offline, andGoogle Sheets can be converted to Excel spreadsheets, and vice versa.</description>

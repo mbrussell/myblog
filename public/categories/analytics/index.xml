@@ -1,52 +1,86 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Analytics on </title>
-    <link>/categories/analytics/</link>
+    <link>https://arbor-analytics.com/categories/analytics/</link>
     <description>Recent content in Analytics on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/analytics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Five R packages every forest analyst should be using</title>
+      <link>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.
+Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.</description>
+    </item>
     
-	<atom:link href="/categories/analytics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Random forests: a tutorial with forestry data</title>
+      <link>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</guid>
+      <description>Random forests have quickly become one of the most popular analytical techniques used in forestry today. Random forests (RF) are a machine learning technique that differ in many ways to traditional prediction models such as regression. Random forests can handle a lot of data, can be applied to classification or regression problems, and rank the relative importance of many variables that are related to a response variable of interest.</description>
+    </item>
     
+    <item>
+      <title>The importance of citizen data scientists in forest analytics</title>
+      <link>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
+      <description>As a part of my work with the University of Minnesota Extension, we run the Assessing Vegetation Impacts from Deer program. The AVID program engages citizen scientists to monitor tree seedlings that are susceptible to browse from white-tailed deer. With little information on deer browse impacts for most of Minnesota’s tree species, the data are beginning to provide insights on how deer browse degrades the health of the forest.</description>
+    </item>
+    
+    <item>
+      <title>Understanding the forest products industry using NAICS codes</title>
+      <link>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
+      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.
+In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
+    </item>
     
     <item>
       <title>31 R packages for forest analysts</title>
-      <link>/post/31-r-packages-for-forest-analysts/</link>
+      <link>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/31-r-packages-for-forest-analysts/</guid>
+      <guid>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</guid>
       <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.
 The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
     </item>
     
     <item>
       <title>Forget spreading and gathering your R data, try pivoting instead</title>
-      <link>/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
+      <link>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
+      <guid>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
       <description>Reshaping data from a wide to a long format, or vice versa, is one of the most common data manipulation tasks that analysts need to do. One of my first posts on this blog was on how to do this in R.
 That post highlighted the spread() and gather() functions available from the tidyr package. As it turns out, the gather() and spread() functions are still available to use but are no longer under active development.</description>
     </item>
     
     <item>
       <title>Wages for logging truckers much lower than other transportation industries</title>
-      <link>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
+      <link>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
+      <guid>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
       <description>“To solve any problem in forestry, first figure out where the roads will go.”
 That is a quote that I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it.</description>
     </item>
     
     <item>
       <title>Using clustering with logging industry data</title>
-      <link>/post/using-clustering-with-logging-industry-data/</link>
+      <link>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</link>
       <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/using-clustering-with-logging-industry-data/</guid>
+      <guid>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</guid>
       <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.
 The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.
 Clustering is an unsupervised ML algorithm that groups items.</description>
@@ -54,10 +88,10 @@ Clustering is an unsupervised ML algorithm that groups items.</description>
     
     <item>
       <title>How do loggers feel? Sentiment analysis on the opinions of logging contractors</title>
-      <link>/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
+      <link>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
       <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
+      <guid>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
       <description>After we conduct a survey, we have a routine for analyzing the data. Summarize the numerical responses and report values like means for specific questions. Group the data into different demographics and report the means within these categories.
 If we ask for any qualitative data through comments (e.g., “What is your opinion of X?”), the responses are always worth reading. We often get a lot of insight from reading an individual’s comments, and these comments can unveil new dimensions of our analysis.</description>
     </item>

@@ -1,61 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Forest Measurements on </title>
-    <link>/categories/forest-measurements/</link>
-    <description>Recent content in Forest Measurements on </description>
+    <title>Forest measurements on </title>
+    <link>https://arbor-analytics.com/categories/forest-measurements/</link>
+    <description>Recent content in Forest measurements on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/forest-measurements/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/forest-measurements/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Units in forest carbon numbers: a primer</title>
-      <link>/post/units-in-forest-carbon-numbers-a-primer/</link>
+      <link>https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/units-in-forest-carbon-numbers-a-primer/</guid>
+      <guid>https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/</guid>
       <description>Forest analysts are increasingly being asked about the amount of carbon that trees and forests store. However, most analysts are trained in summarizing forestry data sets to obtain measurements such as volume and basal area.
 If a forest analyst knows how to “speak carbon”, this can leave them feeling empowered when discussing the importance of forests and forest management in the context of carbon. This can leave a solid impression with landowners and decision makers.</description>
     </item>
     
     <item>
       <title>How much carbon is stored in one trillion trees?</title>
-      <link>/post/how-much-carbon-is-stored-in-a-trillion-trees/</link>
+      <link>https://arbor-analytics.com/post/how-much-carbon-is-stored-in-a-trillion-trees/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-much-carbon-is-stored-in-a-trillion-trees/</guid>
+      <guid>https://arbor-analytics.com/post/how-much-carbon-is-stored-in-a-trillion-trees/</guid>
       <description>The short answer: About 5.7 times as much than is currently stored in forests in the lower 48 US states and Alaska. One trillion trees equates to about 101 billion metric tons of carbon stored.The Trillion Trees Campaign has been widespread in the news recently. The United States has committed to the initiative, announced at the World Economic Forum in January 2020 and mentioned during President Trump’s annual State of the Union address on 4 February 2020.</description>
     </item>
     
     <item>
       <title>Which forest biometrics researchers get the most citations?</title>
-      <link>/post/which-forest-biometrics-faculty-get-the-most-citations/</link>
+      <link>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</link>
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/which-forest-biometrics-faculty-get-the-most-citations/</guid>
+      <guid>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</guid>
       <description>Researchers in the forest and natural resource sciences are measured by their productivity: how many publications they write and how many times those publications are cited by other researchers. Researchers that have many publications that are cited in the literature by others generally have rewarding careers and are promoted.
 In 2017 I wrote a blog post for the Ecological Society of America’s Early Career Ecologist section that provided some evidence that early-career scientists publish earlier in their careers compared to more senior researchers.</description>
     </item>
     
     <item>
       <title>How to calculate how much carbon is in a tree</title>
-      <link>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
+      <link>https://arbor-analytics.com/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
+      <guid>https://arbor-analytics.com/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
       <description>Carbon is perhaps the most important attribute in trees today. Forests in the United States sequester about 11% of the total CO2 emissions every year, making them an important tool to combat future global changes. Having accurate models that represent how much carbon is stored in trees is essential for understanding their carbon sequestration potential and are widely used in forest carbon accounting tools.
 Most equations that predict the amount carbon in a tree start with first predicting its biomass.</description>
     </item>
     
     <item>
       <title>A 50-year history of forest measurements by analyzing Forest Measurements</title>
-      <link>/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</link>
+      <link>https://arbor-analytics.com/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</guid>
+      <guid>https://arbor-analytics.com/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</guid>
       <description>If you’ve even taken a course in forest measurements, you likely used Forest Measurements as the textbook. The first edition of forest measurements was published in 1967 by Thomas Eugene Avery and included a number of topics related to forest inventory, sampling forest resources, and tree and stand measurements.
 The book recently published its 6th edition in 2018 and is available through Waveland Press. Investigating how the book has incorporated new topics gives insights into the advances of the field of forest measurements:</description>
     </item>

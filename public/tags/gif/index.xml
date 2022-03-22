@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gif on </title>
-    <link>/tags/gif/</link>
-    <description>Recent content in Gif on </description>
+    <title>GIF on </title>
+    <link>https://arbor-analytics.com/tags/gif/</link>
+    <description>Recent content in GIF on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/gif/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/gif/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
-      <link>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
+      <link>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
       <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
+      <guid>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
       <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.
 The general process to make a GIF image with maps in R is:
 1. Create the images you want (e.g., using ggplot),

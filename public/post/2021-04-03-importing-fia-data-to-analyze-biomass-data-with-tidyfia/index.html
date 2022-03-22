@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.93.2" />
+        <title>Importing FIA data to analyze forest carbon with tidyFIA</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Importing FIA data to analyze forest carbon with tidyFIA</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/">Importing FIA data to analyze forest carbon with tidyFIA</a></h4>
+    <h5>April 5, 2021</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-import"><kbd class="item-tag">data import</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/tidyfia"><kbd class="item-tag">tidyFIA</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/header-attrs/header-attrs.js"></script>
+<script src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/kePrint/kePrint.js"></script>
+<link href="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<center>
+<img src="tidyfia2.png" title="fig:" alt="The tidyFIA package." />
+</center>
+<p>I used to cringe every time I needed to import Forest Inventory and Analysis data. The data files that contain tree observations for a single state can exceed 100 megabytes. The file I downloaded six months ago might or might not contain the most recent data for that state.</p>
+<p>There are a few R packages that have been developed in the last several years that help import FIA data. The <a href="https://github.com/SilviaTerra/tidyFIA">tidyFIA package</a> is one of them. Developed by the biometricians at SilviaTerra, the package allows you to download and import FIA data from the FIA database.</p>
+<div id="the-tidyfia-package" class="section level2">
+<h2>The tidyFIA package</h2>
+<p>To install <strong>tidyFIA</strong> on your version of R, you can obtain it from GitHub:</p>
+<pre class="r"><code>remotes::install_github(&quot;SilviaTerra/tidyFIA&quot;)</code></pre>
+<p>And then you can load the library to use the package:</p>
+<pre class="r"><code>library(tidyFIA)</code></pre>
+<p>I’ll also load a few other packages to help with my data analysis, such as the <strong>tidycensus</strong> package to work with state and county names and the <strong>urbnmapr</strong> package to make maps:</p>
+<pre class="r"><code>library(tidyverse)
+library(sf)
+library(spData)
+library(knitr)
+library(kableExtra)
+library(tidycensus)
+library(urbnmapr)</code></pre>
+<p>The <code>tidy_fia()</code> function will import any data table from the FIA database using either a state (e.g., <code>states = "ME"</code>) or an area of interest. I’ll use the package to import data from Maine to analyze forest carbon across the state.</p>
+<p>The <code>table_names =</code> statement allows you to specify the data tables from the FIA database that you want to work with. I’ll gather the PLOT, COND, and TREE tables to have a suite of information on the forest and trees to determine carbon</p>
+<p>The <code>postgis</code> statement can be set to <code>FALSE</code> to access the database without any required authentication. You can set this to <code>TRUE</code> to access the files from SilviaTerra’s PostGIS database. This will be quicker, but you would need to email the developers for the password for the database:</p>
+<pre class="r"><code>me_data &lt;- tidy_fia(
+  states = &quot;ME&quot;,
+  table_names = c(&quot;plot&quot;, &quot;tree&quot;, &quot;cond&quot;),
+  postgis = FALSE
+  )</code></pre>
+<p>A map of the FIA plot locations can be obtained with the <code>plot()</code> function in <strong>tidyFIA</strong>:</p>
+<pre class="r"><code>p.me &lt;- plot(me_data) 
+p.me</code></pre>
+<p><img src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Depending on the amount of data collected in the state or geographic area of interest, it can take some time to import the data of interest. I will query the Maine data to obtain all inventories which have occurred since 1999, the year that annual inventories began in the state (i.e., when data began to be collected in a consistent manner):</p>
+<pre class="r"><code>plot &lt;- me_data[[&quot;plot&quot;]] %&gt;% filter(invyr &gt;= 1999)
+cond &lt;- me_data[[&quot;cond&quot;]] %&gt;% filter(invyr &gt;= 1999)
+tree &lt;- me_data[[&quot;tree&quot;]] %&gt;% filter(invyr &gt;= 1999)</code></pre>
+<p>The <a href="https://github.com/SilviaTerra/tidyFIA/blob/main/vignettes/using_tidyFIA.Rmd">tidyFIA vignette</a> contains some useful functions that can complement your forest data analysis. The <code>plot_stats</code> function returns the basal area (<code>bapa</code>) and aboveground carbon in live trees (tons per acre; <code>cpa_tons</code>). The diameter of the tree (<code>dia</code>) and the amount of carbon in the aboveground portion of the tree (<code>carbon_ag</code>) are multiplied by the FIA plot expansion factor (<code>tpa_unadj</code>) to obtain these values. Carbon is converted to US tons per acre:</p>
+<pre class="r"><code>plot_stats &lt;- tree %&gt;%
+  group_by(plt_cn) %&gt;%
+  filter(statuscd == 1) %&gt;% 
+  summarize(
+    bapa = sum(tpa_unadj * 0.005454 * dia ^ 2, na.rm = TRUE),
+    cpa =  sum(tpa_unadj * carbon_ag, na.rm = TRUE)
+  ) %&gt;%
+  full_join(
+    plot %&gt;% select(cn, statecd, unitcd, countycd, plot, invyr),
+    by = c(&quot;plt_cn&quot; = &quot;cn&quot;)
+  ) %&gt;%
+  mutate(cpa_tons = cpa /2000) %&gt;% 
+  replace_na(replace = list(bapa = 0, cpa = 0))</code></pre>
+<p>There is a strong positive correlation between the basal area and aboveground carbon in live trees in Maine:</p>
+<pre class="r"><code>p.carbon &lt;- ggplot(plot_stats, aes(x = bapa, y = cpa_tons)) +
+  geom_point() +
+  labs (x = &quot;Basal area (sq. ft per acre)&quot;,
+        y = &quot;Aboveground carbon (tons per acre)&quot;)
+p.carbon</code></pre>
+<p><img src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>You might also be interested in the most common species found in Maine. In the code below, the <code>ref_species</code> data frame contains the FIA species code and common names. The six most common species are gathered from the FIA database and then graphed to observe trends between tree diameter and aboveground carbon:</p>
+<pre class="r"><code>ref_species &lt;- read_ref_table(&quot;REF_SPECIES&quot;) %&gt;%
+  select(spcd, common_name)
+
+common_spp &lt;- me_data[[&quot;tree&quot;]] %&gt;%
+  group_by(spcd) %&gt;%
+  tally %&gt;%
+  top_n(6, wt = n) %&gt;%
+  pull(spcd)
+
+me_data[[&quot;tree&quot;]] %&gt;%
+  filter(spcd %in% common_spp) %&gt;%
+  left_join(ref_species) %&gt;%
+  ggplot(aes(x = dia, y = carbon_ag)) +
+    geom_point(alpha = 0.2) +
+    facet_wrap(~ common_name) +
+    labs (x = &quot;Tree diameter (inches)&quot;,
+          y = &quot;Aboveground carbon (pounds)&quot;)</code></pre>
+<p><img src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>In Maine, some FIA plots have been remeasured up to five times. The next set of code filters the data to obtain only the most recent inventory by matching the remeasurement id number (<code>rem_id</code>; 1 through 5) with the most recent remeasurement (<code>max_rem_id</code>):</p>
+<pre class="r"><code>plot2 &lt;- plot_stats %&gt;% 
+  group_by(statecd, countycd, plot) %&gt;% 
+  mutate(plot_dummy = 1,
+         rem_id = cumsum(plot_dummy))
+
+plot3 &lt;- plot2 %&gt;% 
+  group_by(statecd, countycd, plot) %&gt;% 
+  summarize(max_rem_id = max(rem_id))
+  
+plot4 &lt;- inner_join(plot3, plot2) %&gt;%  
+  filter(rem_id == max_rem_id)</code></pre>
+<p>Across Maine’s 3,592 FIA plots, we can calculate the mean, standard deviation, minimum, and maximum values for the aboveground carbon values. Values are in US tons per acre:</p>
+<pre class="r"><code>plot_stats_c&lt;- plot4 %&gt;% 
+  ungroup() %&gt;% 
+  summarize(`FIA plots` = n(), 
+            `Mean carbon` = round(mean(cpa_tons, na.rm = T), 1),
+            `SD carbon` = round(sd(cpa_tons, na.rm = T), 1),
+            `Min carbon` = round(min(cpa_tons, na.rm = T), 1),
+            `Max carbon` = round(max(cpa_tons, na.rm = T), 1))</code></pre>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+FIA plots
+</th>
+<th style="text-align:right;">
+Mean carbon
+</th>
+<th style="text-align:right;">
+SD carbon
+</th>
+<th style="text-align:right;">
+Min carbon
+</th>
+<th style="text-align:right;">
+Max carbon
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+3592
+</td>
+<td style="text-align:right;">
+18.1
+</td>
+<td style="text-align:right;">
+10.8
+</td>
+<td style="text-align:right;">
+0.1
+</td>
+<td style="text-align:right;">
+64.4
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can also examine the data by county. The largest number of FIA plots (736) are located in Aroostook County and on average the greatest amount of aboveground carbon (24.8 tons per acre) is found in Cumberland County:</p>
+<pre class="r"><code>fips &lt;- fips_codes %&gt;% 
+  rename(countycd = county_code) %&gt;% 
+  mutate(countycd = as.numeric(countycd)) %&gt;% 
+  filter(state == &quot;ME&quot;)
+
+plot4 &lt;- inner_join(plot4, fips)
+
+plot_stats_c_county&lt;- plot4 %&gt;% 
+  group_by(county) %&gt;% 
+  summarize(`FIA plots` = n(), 
+            `Mean carbon` = round(mean(cpa_tons, na.rm = T), 1),
+            `SD carbon` = round(sd(cpa_tons, na.rm = T), 1),
+            `Min carbon` = round(min(cpa_tons, na.rm = T), 1),
+            `Max carbon` = round(max(cpa_tons, na.rm = T), 1))</code></pre>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+county
+</th>
+<th style="text-align:right;">
+FIA plots
+</th>
+<th style="text-align:right;">
+Mean carbon
+</th>
+<th style="text-align:right;">
+SD carbon
+</th>
+<th style="text-align:right;">
+Min carbon
+</th>
+<th style="text-align:right;">
+Max carbon
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Androscoggin County
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+19.9
+</td>
+<td style="text-align:right;">
+10.3
+</td>
+<td style="text-align:right;">
+6.4
+</td>
+<td style="text-align:right;">
+56.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Aroostook County
+</td>
+<td style="text-align:right;">
+736
+</td>
+<td style="text-align:right;">
+15.9
+</td>
+<td style="text-align:right;">
+10.0
+</td>
+<td style="text-align:right;">
+0.1
+</td>
+<td style="text-align:right;">
+64.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cumberland County
+</td>
+<td style="text-align:right;">
+111
+</td>
+<td style="text-align:right;">
+24.8
+</td>
+<td style="text-align:right;">
+10.8
+</td>
+<td style="text-align:right;">
+2.0
+</td>
+<td style="text-align:right;">
+48.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Franklin County
+</td>
+<td style="text-align:right;">
+187
+</td>
+<td style="text-align:right;">
+20.8
+</td>
+<td style="text-align:right;">
+11.3
+</td>
+<td style="text-align:right;">
+0.3
+</td>
+<td style="text-align:right;">
+50.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hancock County
+</td>
+<td style="text-align:right;">
+198
+</td>
+<td style="text-align:right;">
+17.4
+</td>
+<td style="text-align:right;">
+10.3
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+50.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kennebec County
+</td>
+<td style="text-align:right;">
+104
+</td>
+<td style="text-align:right;">
+21.1
+</td>
+<td style="text-align:right;">
+11.3
+</td>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:right;">
+47.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Knox County
+</td>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:right;">
+18.2
+</td>
+<td style="text-align:right;">
+10.0
+</td>
+<td style="text-align:right;">
+2.4
+</td>
+<td style="text-align:right;">
+44.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lincoln County
+</td>
+<td style="text-align:right;">
+53
+</td>
+<td style="text-align:right;">
+22.2
+</td>
+<td style="text-align:right;">
+10.5
+</td>
+<td style="text-align:right;">
+1.6
+</td>
+<td style="text-align:right;">
+48.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Oxford County
+</td>
+<td style="text-align:right;">
+251
+</td>
+<td style="text-align:right;">
+24.5
+</td>
+<td style="text-align:right;">
+11.9
+</td>
+<td style="text-align:right;">
+0.4
+</td>
+<td style="text-align:right;">
+54.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Penobscot County
+</td>
+<td style="text-align:right;">
+383
+</td>
+<td style="text-align:right;">
+16.1
+</td>
+<td style="text-align:right;">
+9.7
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:right;">
+52.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Piscataquis County
+</td>
+<td style="text-align:right;">
+491
+</td>
+<td style="text-align:right;">
+17.9
+</td>
+<td style="text-align:right;">
+10.7
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:right;">
+57.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sagadahoc County
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+24.0
+</td>
+<td style="text-align:right;">
+10.8
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:right;">
+52.7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Somerset County
+</td>
+<td style="text-align:right;">
+445
+</td>
+<td style="text-align:right;">
+17.3
+</td>
+<td style="text-align:right;">
+10.9
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:right;">
+59.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Waldo County
+</td>
+<td style="text-align:right;">
+81
+</td>
+<td style="text-align:right;">
+19.7
+</td>
+<td style="text-align:right;">
+10.5
+</td>
+<td style="text-align:right;">
+2.0
+</td>
+<td style="text-align:right;">
+49.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Washington County
+</td>
+<td style="text-align:right;">
+308
+</td>
+<td style="text-align:right;">
+14.3
+</td>
+<td style="text-align:right;">
+8.1
+</td>
+<td style="text-align:right;">
+0.2
+</td>
+<td style="text-align:right;">
+49.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+York County
+</td>
+<td style="text-align:right;">
+117
+</td>
+<td style="text-align:right;">
+23.4
+</td>
+<td style="text-align:right;">
+11.8
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+<td style="text-align:right;">
+52.5
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can also make a map of the average carbon (US tons per acre) found across Maine’s 16 counties by producing a choropleth map. We’ll do some data manipulation to bind together the state and county <a href="https://en.wikipedia.org/wiki/FIPS_county_code">FIPS codes</a> found in the FIA data, in addition to some functions from the <strong>urbnmapr</strong> package:</p>
+<pre class="r"><code>plot_stats_c_county&lt;- plot4 %&gt;% 
+  group_by(statecd, countycd) %&gt;% 
+  summarize(`FIA plots` = n(), 
+            `Mean carbon` = round(mean(cpa_tons, na.rm = T), 1),
+            `SD carbon` = round(sd(cpa_tons, na.rm = T), 1),
+            `Min carbon` = round(min(cpa_tons, na.rm = T), 1),
+            `Max carbon` = round(max(cpa_tons, na.rm = T), 1))
+
+plot_stats_c_county &lt;- plot_stats_c_county %&gt;% 
+  mutate(county_fips = paste(statecd, ifelse(countycd &lt; 10, paste0(&quot;00&quot;, countycd),
+                              paste0(&quot;0&quot;, countycd)), sep = &quot;&quot;))
+
+
+carbon_data &lt;- left_join(plot_stats_c_county, counties, by = &quot;county_fips&quot;) 
+
+carbon_data %&gt;%
+  ggplot(aes(long, lat, group = group, fill = `Mean carbon`)) +
+  geom_polygon(color = NA) +
+  coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) +
+  labs(fill = &quot;Mean carbon \n(tons per acre)&quot;)</code></pre>
+<p><img src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>The <strong>tidyFIA</strong> package is a useful one to quickly bring in FIA data into R. Plus, it works easily with the <strong>tidyverse</strong> suite of functions. <a href="https://github.com/SilviaTerra/tidyFIA">Try it out</a> to see how it can help your data analysis.</p>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/">How the logging industry in the Lake States used PPP loans</a></h4>
+    <h5>March 22, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/logging"><kbd class="item-tag">logging</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-industry"><kbd class="item-tag">forest industry</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/jobs"><kbd class="item-tag">jobs</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/ppp-loans"><kbd class="item-tag">PPP loans</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/">How the forest products industry used Paycheck Protection Program loans (2022 update)</a></h4>
+    <h5>February 12, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/ppp-loans"><kbd class="item-tag">PPP loans</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/logging"><kbd class="item-tag">logging</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/">Timberlands as investments see biggest gain since 2014</a></h4>
+    <h5>January 26, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/economics"><kbd class="item-tag">economics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-industry"><kbd class="item-tag">forest industry</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/timber-prices"><kbd class="item-tag">timber prices</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

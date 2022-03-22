@@ -1,0 +1,218 @@
+---
+title: Importing FIA data to analyze forest carbon with tidyFIA
+author: Matt Russell
+date: '2021-04-05'
+slug: []
+categories:
+  - Data wrangling
+tags:
+  - analytics
+  - data import
+  - tidyFIA
+---
+
+<center>
+![The tidyFIA package.](tidyfia2.png)
+</center>
+
+
+I used to cringe every time I needed to import Forest Inventory and Analysis data. The data files that contain tree observations for a single state can exceed 100 megabytes. The file I downloaded six months ago might or might not contain the most recent data for that state.
+
+There are a few R packages that have been developed in the last several years that help import FIA data. The [tidyFIA package](https://github.com/SilviaTerra/tidyFIA) is one of them. Developed by the biometricians at SilviaTerra, the package allows you to download and import FIA data from the FIA database.  
+
+## The tidyFIA package
+
+To install **tidyFIA** on your version of R, you can obtain it from GitHub:
+
+```{r, eval = F}
+remotes::install_github("SilviaTerra/tidyFIA")
+```
+
+And then you can load the library to use the package:
+
+```{r, warning = F, message = F}
+library(tidyFIA)
+```
+
+I'll also load a few other packages to help with my data analysis, such as the **tidycensus** package to work with state and county names and the **urbnmapr** package to make maps:
+
+```{r, warning = F, message = F}
+library(tidyverse)
+library(sf)
+library(spData)
+library(knitr)
+library(kableExtra)
+library(tidycensus)
+library(urbnmapr)
+```
+
+The `tidy_fia()` function will import any data table from the FIA database using either a state (e.g., `states = "ME"`) or an area of interest. I'll use the package to import data from Maine to analyze forest carbon across the state.
+
+The `table_names =` statement allows you to specify the data tables from the FIA database that you want to work with. I'll gather the PLOT, COND, and TREE tables to have a suite of information on the forest and trees to determine carbon 
+
+The `postgis` statement can be set to `FALSE` to access the database without any required authentication. You can set this to `TRUE` to access the files from SilviaTerra's PostGIS database. This will be quicker, but you would need to email the developers for the password for the database: 
+
+```{r, warning = F, message = F}
+me_data <- tidy_fia(
+  states = "ME",
+  table_names = c("plot", "tree", "cond"),
+  postgis = FALSE
+  )
+```
+
+A map of the FIA plot locations can be obtained with the `plot()` function in **tidyFIA**:
+
+```{r, warning = F, message = F}
+p.me <- plot(me_data) 
+p.me
+```
+
+Depending on the amount of data collected in the state or geographic area of interest, it can take some time to import the data of interest. I will query the Maine data to obtain all inventories which have occurred since 1999, the year that annual inventories began in the state (i.e., when data began to be collected in a consistent manner):
+
+```{r, warning = F, message = F}
+plot <- me_data[["plot"]] %>% filter(invyr >= 1999)
+cond <- me_data[["cond"]] %>% filter(invyr >= 1999)
+tree <- me_data[["tree"]] %>% filter(invyr >= 1999)
+```
+
+The [tidyFIA vignette](https://github.com/SilviaTerra/tidyFIA/blob/main/vignettes/using_tidyFIA.Rmd) contains some useful functions that can complement your forest data analysis. The `plot_stats` function returns the basal area (`bapa`) and aboveground carbon in live trees (tons per acre; `cpa_tons`). The diameter of the tree (`dia`) and the amount of carbon in the aboveground portion of the tree (`carbon_ag`) are multiplied by the FIA plot expansion factor (`tpa_unadj`) to obtain these values. Carbon is converted to US tons per acre:
+
+```{r, warning = F, message = F}
+plot_stats <- tree %>%
+  group_by(plt_cn) %>%
+  filter(statuscd == 1) %>% 
+  summarize(
+    bapa = sum(tpa_unadj * 0.005454 * dia ^ 2, na.rm = TRUE),
+    cpa =  sum(tpa_unadj * carbon_ag, na.rm = TRUE)
+  ) %>%
+  full_join(
+    plot %>% select(cn, statecd, unitcd, countycd, plot, invyr),
+    by = c("plt_cn" = "cn")
+  ) %>%
+  mutate(cpa_tons = cpa /2000) %>% 
+  replace_na(replace = list(bapa = 0, cpa = 0))
+```
+
+There is a strong positive correlation between the basal area and aboveground carbon in live trees in Maine:
+
+```{r, warning = F, message = F}
+p.carbon <- ggplot(plot_stats, aes(x = bapa, y = cpa_tons)) +
+  geom_point() +
+  labs (x = "Basal area (sq. ft per acre)",
+        y = "Aboveground carbon (tons per acre)")
+p.carbon
+```
+
+You might also be interested in the most common species found in Maine. In the code below, the `ref_species` data frame contains the FIA species code and common names. The six most common species are gathered from the FIA database and then graphed to observe trends between tree diameter and aboveground carbon: 
+
+```{r, warning = F, message = F}
+ref_species <- read_ref_table("REF_SPECIES") %>%
+  select(spcd, common_name)
+
+common_spp <- me_data[["tree"]] %>%
+  group_by(spcd) %>%
+  tally %>%
+  top_n(6, wt = n) %>%
+  pull(spcd)
+
+me_data[["tree"]] %>%
+  filter(spcd %in% common_spp) %>%
+  left_join(ref_species) %>%
+  ggplot(aes(x = dia, y = carbon_ag)) +
+    geom_point(alpha = 0.2) +
+    facet_wrap(~ common_name) +
+    labs (x = "Tree diameter (inches)",
+          y = "Aboveground carbon (pounds)")
+```
+
+In Maine, some FIA plots have been remeasured up to five times. The next set of code filters the data to obtain only the most recent inventory by matching the remeasurement id number (`rem_id`; 1 through 5) with the most recent remeasurement (`max_rem_id`):
+
+```{r, warning = F, message = F}
+plot2 <- plot_stats %>% 
+  group_by(statecd, countycd, plot) %>% 
+  mutate(plot_dummy = 1,
+         rem_id = cumsum(plot_dummy))
+
+plot3 <- plot2 %>% 
+  group_by(statecd, countycd, plot) %>% 
+  summarize(max_rem_id = max(rem_id))
+  
+plot4 <- inner_join(plot3, plot2) %>%  
+  filter(rem_id == max_rem_id)
+```
+
+Across Maine's 3,592 FIA plots, we can calculate the mean, standard deviation, minimum, and maximum values for the aboveground carbon values. Values are in US tons per acre:
+
+```{r, warning = F, message = F}
+plot_stats_c<- plot4 %>% 
+  ungroup() %>% 
+  summarize(`FIA plots` = n(), 
+            `Mean carbon` = round(mean(cpa_tons, na.rm = T), 1),
+            `SD carbon` = round(sd(cpa_tons, na.rm = T), 1),
+            `Min carbon` = round(min(cpa_tons, na.rm = T), 1),
+            `Max carbon` = round(max(cpa_tons, na.rm = T), 1))
+```
+
+```{r, echo = F}
+kable((plot_stats_c[,])) %>% 
+     kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+```
+
+We can also examine the data by county. The largest number of FIA plots (736) are located in Aroostook County and on average the greatest amount of aboveground carbon (24.8 tons per acre) is found in Cumberland County:
+
+```{r, warning = F, message = F}
+fips <- fips_codes %>% 
+  rename(countycd = county_code) %>% 
+  mutate(countycd = as.numeric(countycd)) %>% 
+  filter(state == "ME")
+
+plot4 <- inner_join(plot4, fips)
+
+plot_stats_c_county<- plot4 %>% 
+  group_by(county) %>% 
+  summarize(`FIA plots` = n(), 
+            `Mean carbon` = round(mean(cpa_tons, na.rm = T), 1),
+            `SD carbon` = round(sd(cpa_tons, na.rm = T), 1),
+            `Min carbon` = round(min(cpa_tons, na.rm = T), 1),
+            `Max carbon` = round(max(cpa_tons, na.rm = T), 1))
+```
+
+```{r, echo = F}
+kable((plot_stats_c_county[,])) %>% 
+     kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+```
+
+We can also make a map of the average carbon (US tons per acre) found across Maine's 16 counties by producing a choropleth map. We'll do some data manipulation to bind together the state and county [FIPS codes](https://en.wikipedia.org/wiki/FIPS_county_code) found in the FIA data, in addition to some functions from the **urbnmapr** package:
+
+```{r, warning = F, message = F}
+plot_stats_c_county<- plot4 %>% 
+  group_by(statecd, countycd) %>% 
+  summarize(`FIA plots` = n(), 
+            `Mean carbon` = round(mean(cpa_tons, na.rm = T), 1),
+            `SD carbon` = round(sd(cpa_tons, na.rm = T), 1),
+            `Min carbon` = round(min(cpa_tons, na.rm = T), 1),
+            `Max carbon` = round(max(cpa_tons, na.rm = T), 1))
+
+plot_stats_c_county <- plot_stats_c_county %>% 
+  mutate(county_fips = paste(statecd, ifelse(countycd < 10, paste0("00", countycd),
+                              paste0("0", countycd)), sep = ""))
+
+
+carbon_data <- left_join(plot_stats_c_county, counties, by = "county_fips") 
+
+carbon_data %>%
+  ggplot(aes(long, lat, group = group, fill = `Mean carbon`)) +
+  geom_polygon(color = NA) +
+  coord_map(projection = "albers", lat0 = 39, lat1 = 45) +
+  labs(fill = "Mean carbon \n(tons per acre)")
+```
+
+## Summary
+
+The **tidyFIA** package is a useful one to quickly bring in FIA data into R. Plus, it works easily with the **tidyverse** suite of functions. [Try it out](https://github.com/SilviaTerra/tidyFIA) to see how it can help your data analysis.
+
+--
+
+*By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*

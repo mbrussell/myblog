@@ -1,0 +1,321 @@
+---
+title: "Forest carbon in Maine: an introduction"
+author: "Matt Russell"
+date: '2022-03-10'
+output: word_document
+categories: Carbon
+tags:
+- carbon
+- carbon markets
+- forest carbon
+slug: []
+---
+
+<center>
+![](maine_2.png)
+</center> 
+
+ 
+**Note:** *This post is based on an article Matt wrote for the Great Lakes Timber Professionals Association's magazine in January 2022. Interested in an article like this for your state? [Email Matt](mailto:matt@arbor-analytics.com) with any requests.*
+
+
+One of the many benefits that trees provide is removing carbon dioxide from the air. Carbon dioxide is the leading source of greenhouse gas emissions in the United States.   
+  
+In trees and forests, carbon is measured by how much is stored and sequestered. Carbon storage refers to the current amount of carbon in a tree or forest. Carbon sequestration refers to the process by which trees and other plants use carbon dioxide and photosynthesis to store carbon as plant biomass.
+
+Healthy trees and forests increase carbon storage and avoid greenhouse gas emissions. In the United States, every year trees and forests sequester approximately 11% of all greenhouse gas emissions. Understanding how trees and forests use carbon leads to a better knowledge of their importance in meeting future global challenges related to climate change.
+ 
+Approximately half of a tree’s dry weight is carbon. The amount of carbon that is stored in a tree depends on its size, age, and species. Carbon is typically measured in pounds or kilograms. A single tree can sequester as much as 10 pounds of carbon dioxide each year. 
+
+Trees are not the only component where carbon is stored in forests. Forests store carbon in five different pools:
+
+* Live trees, aboveground. Includes trees, shrubs, and other vegetation.
+* Live trees, belowground. Includes coarse and fine roots.
+* Dead wood. Includes standing dead trees and downed dead wood.
+* Litter. Includes leaves and other small woody material.
+* Soil. Includes mineral and organic soil with dead and decaying plant material and insects.
+
+The amount of carbon in a forest is constantly changing as new trees grow and old trees die. Across Maine, forests average 20.9 US tons per acre in carbon found in aboveground trees. Most of the carbon found in Maine forests is distributed in mineral soil and aboveground live trees. 
+
+```{r,  echo = F, message = F, warning = F}
+knitr::opts_chunk$set(
+  echo = F, message = F, warning = F
+)
+
+my_REGION = "NE"
+my_REGION_name = "Northeast"
+my_STATE = "Maine"
+my_STATE_abbr = "ME"
+options(scipen=10000)
+
+library(tidyverse)
+library(knitr)
+library(patchwork)
+library(GGally)
+library(rgdal)
+library(usmap)
+library(googlesheets4)
+
+#pools <- read_sheet("https://docs.google.com/spreadsheets/d/15jGuyx62Kdfcm3VzeDgfbhYGlxs3EvDEsd63QWVIPWM/edit?usp=sharing")
+
+pools <- read_csv('C:/Users/russellm/Documents/Arbor/Projects/FRAStateCarbon/Data/pools.csv')
+
+
+p.pool <- pools %>% 
+  filter(StateName == my_STATE) %>% 
+  ggplot(aes(reorder(Pool, C_MMT), C_MMT, fill = C_MMT)) +
+         geom_bar(stat="identity") +
+  coord_flip() +
+  #scale_y_continuous(limits = c(0,16000)) +
+  labs(x = " ", y = "Carbon stocks \n(million metric tons)", 
+       title = paste("Carbon pools in", my_STATE, "forests")) +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black"),
+        legend.position = "none",
+        #plot.margin = margin(0, 0, 0, 0, "cm")
+        )
+p.pool
+```
+
+Across Maine, private forest ownerships own the majority of the forest carbon resource, at 90% or 299 million metric tons. State and local (8%) and national forests and other federal agencies (2%) control the remaining carbon resource.
+
+```{r,  echo = F, message = F, warning = F}
+own <- read_csv('C:/Users/russellm/Documents/Arbor/Projects/FRAStateCarbon/Data/own.csv')
+
+p.own <- own %>% 
+  mutate(C_MMT = C_MT/1000000) %>% 
+  filter(StateName == my_STATE) %>% 
+  ggplot(aes(reorder(Ownership, C_MMT), C_MMT, fill = C_MMT)) +
+         geom_bar(stat="identity") +
+  coord_flip() +
+  #scale_y_continuous(limits = c(0,16000)) +
+  labs(x = " ", y = "Carbon in live aboveground trees \n(million metric tons)", 
+       title = paste("Carbon across", my_STATE, "ownerships"))+
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black"),
+        legend.position = "none",
+        #plot.margin = margin(0, 0, 0, 0, "cm")
+        )
+p.own
+```
+
+Disturbances will impact how much carbon is stored in a forest depending on its type and severity. Despite major forest disturbances, carbon storage has increased over the last several decades in Maine. Total forest ecosystem carbon stocks in Maine have increased from 1,359 million metric tons in 1990 to 1,429 million metric tons in 2019, an increase of 8%. 
+
+```{r,  echo = F, message = F, warning = F}
+trends <- read_csv('C:/Users/russellm/Documents/Arbor/Projects/FRAStateCarbon/Data/trends.csv')
+
+trends_state <- trends %>% 
+  group_by(State) %>% 
+  summarize(min_C = first(C_MMT),
+            max_C = last(C_MMT)) 
+ 
+trends_state <- trends_state %>% 
+  mutate(pct_change = ((max_C - min_C)/min_C) * 100)
+
+trends_state <- trends_state %>%
+  mutate(pct_change_round = round(pct_change, 0),
+         pct_change_round_char = paste(pct_change_round,"%",sep="")) %>% 
+    filter(State == my_STATE_abbr)
+
+# paste(my_STATE, "forest carbon stocks have increased by",
+#                           trends_state$pct_change_round_char,"from 1990 to 2019.")
+
+trends_2017 <- trends %>%
+  filter(Year == 2017 & State == my_STATE_abbr)
+
+# paste("In", my_STATE, ", forests, urban trees, and harvested wood products remove",
+#                           round((trends_2017$Flux_MMTCO2 / trends_2017$Emissions_MMTCO2)*100, 0),
+#                            "% of all CO2 emissions in the state. Across the US, this value is 14%.")
+# 
+# paste("In", my_STATE, ", forests, urban trees, and harvested wood products store the equivalent of",
+#                           round(trends_2017$C_MMT / (trends_2017$Emissions_MMTCO2/3.667), 0),
+#                            "years of all CO2 emissions produced in the state.")
+
+
+trends_new <- trends %>% 
+  filter(StateName == my_STATE)
+
+p.trends <- ggplot(trends_new, aes(Year, C_MMT)) +
+         geom_point() + geom_line() +
+    labs(x = "Year", y = "Forest ecosystem carbon\n(million metric tons)",
+         title = paste("Trends in", my_STATE, "carbon stocks")) +
+  scale_y_continuous(limits = c (min(trends_new$C_MMT)-(min(trends_new$C_MMT)*0.025), 
+                                 max(trends_new$C_MMT)+(max(trends_new$C_MMT)*0.025))) +
+  scale_x_continuous(limits = c (1990, 2021)) +
+    theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        axis.text = element_text(color = "black"),
+        legend.title = element_blank(),
+        legend.key=element_blank(),
+        legend.position = "bottom",
+         plot.margin = margin(0, 0, 0, 0, "cm")) +
+    guides(col = guide_legend(ncol = 2))
+p.trends
+```
+
+## Managing forests for carbon
+
+Every forest is unique in terms of its age, species composition, soil type, and history. How you manage a forest will influence how much carbon it stores and sequesters.  
+
+### Goal A: Manage for carbon storage
+To maximize carbon storage, strategies should manage for old forests (e.g., greater than 50 years old). Through this approach, forests would be comprised of large-sized trees (greater than 10 inches in diameter) that are of high quality. If timber harvesting is appropriate for this forest, harvested wood can be marketed as sawtimber and veneer. Wood can be made into long-lived wood products such as lumber, construction materials, cabin logs, utility poles and other durable wood products that continue to store carbon into the future.
+
+In older forests, as trees die they will add to carbon pools such as dead wood and litter. The growth of individual trees (i.e., sequestration) is slower in older forests, but carbon storage is greater across the forest.  
+
+```{r,  echo = F, message = F, warning = F}
+storage <- read_csv('C:/Users/russellm/Documents/Arbor/Projects/FRAStateCarbon/Data/storage_state.csv')
+
+storage_amt <- storage %>% 
+  filter(State == my_STATE & ForestTypeGroup == "Total") %>% 
+  mutate(Carbon_UStons = Total * 1.10)
+
+# paste("Average carbon density in aboveground trees across", my_STATE, "forests is",
+#                           round(storage_amt$Carbon_UStons, 1),"US tons per acre.")
+
+storage_long <- storage %>% 
+  filter(State == my_STATE & ForestTypeGroup == "Total") %>% 
+  select(-Total) %>% 
+  pivot_longer(`0`:`96-100`, names_to= "StandAge", values_to = "Carbon") %>% 
+    mutate(Carbon_UStons = Carbon * 1.10)
+
+# storage_type <- storage_long %>% 
+#   group_by(HdwdSfwd, StandAge) %>% 
+#   summarize(mean_Carbon_UStons = mean(Carbon_UStons, na.rm = T)) %>% 
+#   mutate(HdwdSfwd_name = ifelse(HdwdSfwd == "HW", "Hardwood forests", "Softwood forests"))
+
+storage_type <- storage_long
+storage_type$StandAge <- factor(storage_type$StandAge, levels = c("0", "0-5", "6-10", "11-15", "16-20", 
+                                                                  "21-25", "26-30", "31-35", "36-40", 
+                                                                  "41-45", "46-50", "51-55", "56-60", 
+                                                                  "61-65", "66-70", "71-75", "76-80", 
+                                                                  "81-85", "86-90", "91-95", "96-100"))
+
+  
+# write_csv(storage_type, "C://Users//russellm//Documents//c_storage_mn.csv")
+
+p.storage <- ggplot(storage_type, aes(StandAge, Carbon_UStons)) +
+         geom_bar(stat="identity", col = "black", fill = "lightblue") +
+   scale_x_discrete(limits=storage_type$StandAge,breaks=storage_type$StandAge[seq(1,length(storage_type$StandAge),by=2)])+
+  labs(x = "Stand age (years)", y = "Average carbon storage \n(US tons per acre)",
+       title = paste("Carbon storage in", my_STATE))+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        strip.text = element_text(size=10),
+        strip.background = element_rect(fill="white"),
+        axis.text.y = element_text(color = "black"),
+        axis.text.x = element_text(size = 8, angle = 45, vjust = 0.5, color = "black"),
+        #plot.margin = margin(0, 0, 0, 0, "cm")
+        )
+p.storage
+```
+
+### Goal B: Manage for carbon sequestration rates
+To maximize carbon sequestration rates, strategies should manage for young forests (e.g., less than 50 years old). Through this approach, forests would be comprised of small- to medium-sized trees (4 to 10 inches in diameter). If timber harvesting is appropriate for this forest, harvested wood can be made into shorter-lived wood products such as pulpwood and paper.
+
+In young forests, competition among trees is high as they compete for available resources and growing space. Dominant trees will outcompete weaker ones, and this competition leads to high carbon sequestration rates. Carbon sequestration will generally decrease in forests as they age. 
+
+```{r,  echo = F, message = F, warning = F}
+sequest <- storage %>% 
+  mutate(`0 ` = 0,
+         `0-5 ` = -1*(`0-5` / 5),
+         `6-10 ` = -1*((`6-10` - `0-5`) / 5),
+         `11-15 ` = -1*((`11-15` - `6-10`) / 5),
+         `16-20 ` = -1*((`16-20` - `11-15`) / 5),
+         `21-25 ` = -1*((`21-25` - `16-20`) / 5),
+         `26-30 ` = -1*((`26-30` - `21-25`) / 5),
+         `31-35 ` = -1*((`31-35` - `26-30`) / 5),
+         `36-40 ` = -1*((`36-40` - `31-35`) / 5),
+         `41-45 ` = -1*((`41-45` - `36-40`) / 5),
+         `46-50 ` = -1*((`46-50` - `41-45`) / 5),
+         `51-55 ` = -1*((`51-55` - `46-50`) / 5),
+         `56-60 ` = -1*((`56-60` - `51-55`) / 5),
+         `61-65 ` = -1*((`61-65` - `56-60`) / 5),
+         `66-70 ` = -1*((`66-70` - `61-65`) / 5),
+         `71-75 ` = -1*((`71-75` - `66-70`) / 5),
+         `76-80 ` = -1*((`76-80` - `71-75`) / 5),
+         `81-85 ` = -1*((`81-85` - `76-80`) / 5),
+         `86-90 ` = -1*((`86-90` - `81-85`) / 5),
+         `91-95 ` = -1*((`91-95` - `86-90`) / 5),
+         `96-100 ` = -1*((`96-100` - `91-95`) / 5))
+
+sequest_long <- sequest %>% 
+  filter(State == my_STATE & ForestTypeGroup == "Total") %>% 
+  select(-c(Total, `0`:`96-100`)) %>% 
+  pivot_longer(`0 `:`96-100 `, names_to= "StandAge", values_to = "Carbon") %>% 
+    mutate(Carbon_UStons = Carbon * 1.10)
+
+
+# sequest_type <- sequest_long %>% 
+#   group_by(HdwdSfwd, StandAge) %>% 
+#   summarize(mean_Carbon_UStons = mean(Carbon_UStons, na.rm = T)) %>% 
+#   mutate(HdwdSfwd_name = ifelse(HdwdSfwd == "HW", "Hardwood forests", "Softwood forests"))
+
+sequest_type <- sequest_long 
+sequest_type$StandAge <- factor(sequest_type$StandAge, c("0 ", "0-5 ", "6-10 ", "11-15 ", "16-20 ", 
+                                                                  "21-25 ", "26-30 ", "31-35 ", "36-40 ", 
+                                                                  "41-45 ", "46-50 ", "51-55 ", "56-60 ", 
+                                                                  "61-65 ", "66-70 ", "71-75 ", "76-80 ", 
+                                                                  "81-85 ", "86-90 ", "91-95 ", "96-100 "))
+sequest_type$StandAge_num <- 1:21
+  
+#write_csv(sequest_type, "C://Users//russellm//Documents//c_sequest_mn.csv")
+
+p.sequest<- ggplot(sequest_type, aes(StandAge, Carbon_UStons, group = 1)) +
+  geom_point() +
+  stat_smooth(span = 1, se = F) +
+  scale_y_reverse() +
+  scale_x_discrete(limits=sequest_type$StandAge,breaks=sequest_type$StandAge[seq(1,length(sequest_type$StandAge),by=2)])+
+  labs(x = "Stand age (years)", y = "Average carbon sequestration \n(US tons per acre per year)",
+       title = paste("Carbon sequestration in", my_STATE))+
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color="black"),
+        strip.text = element_text(size=10),
+        strip.background = element_rect(fill="white"),
+        axis.text.y = element_text(color = "black"),
+        axis.text.x = element_text(size = 8, angle = 45, vjust = 0.5, color = "black"),
+        #plot.margin = margin(0, 0, 0, 0, "cm")
+        )
+p.sequest
+```
+
+### Goal C: Manage for both carbon storage and sequestration rates
+
+To manage for both carbon storage and sequestration rates, strategies should manage trees with a diversity of age, species, and structure. In this approach, young trees will continue to sequester carbon at high rates, while old trees will store large amounts of carbon.
+
+To continue to store and sequester carbon at high rates, forest management techniques should promote a variety of tree ages. These uneven-aged regeneration systems promote a variety of tree species, ages, and sizes within a forest. Uneven-aged treatments such as single-tree and group selection harvests will promote the establishment of new trees and mimic small-scale natural disturbances such as wind events and insect defoliation.
+
+## Carbon in wood products
+
+Harvested wood products in use and solid waste disposal sites represented 4.5% of the total amount of carbon found in the US. The benefit of wood products include carbon storage and the avoided emissions of not using fossil fuel-intensive materials such as steel and concrete. In short, wood is an environmentally friendly building material.
+
+As an example, mass timber buildings (large multi-story buildings made with wood) are increasingly being built across the world. Mass timber buildings are lighter than other traditional buildings commonly designed with steel, are fire resistant, and can be built more quickly compared to a traditional concrete and steel building. As a result, building codes are being changed or altered that support the construction of mass timber buildings.
+
+## Carbon offset markets
+A number of forest carbon offset markets have been established that seek to capitalize on the value that trees and forests provide in storing carbon and removing carbon dioxide from the atmosphere. In these markets, corporations and individuals provide a payment for carbon dioxide emissions to offset their own emissions. Landowners are paid for the carbon storage and sequestration their trees provide.
+
+Carbon markets can be categorized as voluntary- or compliance-driven. Voluntary markets are typically managed by private entities while compliance markets involve government agencies. Compliance markets such as the California Air Resource Board’s Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres. 
+
+Carbon offset projects are structured so that forest owners can receive payment through a variety of approaches. These include:
+
+* Establishing a forest on previously non-forested land through afforestation, 
+* Reestablishing a forest on understocked or recently harvested land through reforestation,
+* Protecting a forest from being converted to non-forested land, i.e., through avoided conversions, and
+* Improving forest management activities to increase carbon storage in the forest and/or associated forest products. 
+
+Most forest landowners will enroll in a carbon offset project that improves forest management activities. Specific details vary across programs and market prices fluctuate. The following conditions are common across many carbon offset markets if landowners seek to enroll:
+
+* The landowner provides evidence that the property is sustainably managed,
+* The landowner agrees to terms and conditions that the property remains forested over a specified period of time, and 
+* The landowner has an inventory of the property, including the type, size, and composition of tree species in the forest.
+
+Programs continue to evolve and a number of new ones are being created or modified that appeal to landowners with smaller ownerships. Each program has their own minimum acreage. Contract lengths vary from one program to the next. Most allow timber harvesting, but many have restrictions about the volume of harvest allowed or the time period when harvesting can occur. To keep track of their development, visit the websites of these carbon programs to learn more about their requirements. Many have email lists that keep you updated on the status and enrollment in the program.
+
+A series of forest carbon fact sheets for each state have been developed in partnership with the Forest Resources Association. [Download your state’s here.](https://forestresources.org/policy-priorities/carbon-fact-sheets) 
+
+--
+
+*By Matt Russell*
+
+*[Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for [The Landing](https://mailchi.mp/d96897dc0f46/arbor-analytics) for monthly in-depth analysis on data and analytics in the forest products industry.*

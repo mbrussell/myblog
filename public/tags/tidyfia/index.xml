@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tidyFIA on </title>
+    <link>https://arbor-analytics.com/tags/tidyfia/</link>
+    <description>Recent content in tidyFIA on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/tidyfia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Importing FIA data to analyze forest carbon with tidyFIA</title>
+      <link>https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/</guid>
+      <description>I used to cringe every time I needed to import Forest Inventory and Analysis data. The data files that contain tree observations for a single state can exceed 100 megabytes. The file I downloaded six months ago might or might not contain the most recent data for that state.
+There are a few R packages that have been developed in the last several years that help import FIA data.</description>
+    </item>
+    
+  </channel>
+</rss>

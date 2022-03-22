@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Polar Area Diagram on </title>
-    <link>/tags/polar-area-diagram/</link>
-    <description>Recent content in Polar Area Diagram on </description>
+    <title>polar area diagram on </title>
+    <link>https://arbor-analytics.com/tags/polar-area-diagram/</link>
+    <description>Recent content in polar area diagram on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/polar-area-diagram/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/polar-area-diagram/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Polar area diagrams in celebration of Florence Nightingale</title>
-      <link>/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
+      <link>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
+      <guid>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
       <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.
 The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s.</description>
     </item>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.93.2" />
+        <title>How well does the &#34;quick and dirty&#34; standard deviation approximation work?</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">How well does the &#34;quick and dirty&#34; standard deviation approximation work?</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/">How well does the &#34;quick and dirty&#34; standard deviation approximation work?</a></h4>
+    <h5>June 6, 2021</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/standard-deviation"><kbd class="item-tag">standard deviation</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/index_files/header-attrs/header-attrs.js"></script>
+<script src="https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/index_files/kePrint/kePrint.js"></script>
+<link href="https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<center>
+<div class="figure">
+<img src="stats.jpg" width="500" alt="" />
+<p class="caption">Photo by Chris Liverani on Unsplash.</p>
+</div>
+</center>
+<p>The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.</p>
+<p>When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data.</p>
+<p>I was intrigued about a calculation that required less work. This meant that an approximation could help with other sampling challenges, typically a result of not having any data about a population of interest. For example, determining the appropriate number of samples to collect at a specified level of confidence requires understanding the variability in a population. Any approximation to the variability would be helpful when performing future analyses.</p>
+<p>At the same time, I was skeptical with how well an approximation would capture the true amount of variability in a data set.</p>
+<p>This post compares a “quick and dirty” approximation to the standard deviation with its true value. Ten variables from forestry and natural resources are used to make this comparison.</p>
+<div id="standard-deviation-a-primer" class="section level2">
+<h2>Standard deviation: a primer</h2>
+<p>When we begin discussing variability in data, we start with the variance. The <strong>variance</strong> measures the average squared distance of the observations from their mean. To calculate the sample variance <span class="math inline">\(s^2\)</span>, the average of the squared distance is determined:</p>
+<p><span class="math display">\[{s^2 = \frac {1}{n-1} {\sum_{i=1}^{n} (x_i- \bar{x})^2}} = \frac {1}{n-1} {(x_1- \bar{x})^2 + (x_2- \bar{x})^2 + ... + (x_n- \bar{x})^2}\]</span>
+While the variance is used widely in statistics, it is not always a meaningful number to characterize a variable of interest. This is because its units are squared. For a more useful number, instead we’ll take the square root of the variance and report the <strong>standard deviation</strong>, defined as the average distance of the observations from their mean:</p>
+<p><span class="math display">\[{s} = \sqrt{s^2}\]</span></p>
+<p>Two different distributions may have the same mean but different standard deviations. One with a larger standard deviation would have longer “tails” than a distribution with a smaller standard deviation.</p>
+</div>
+<div id="the-quick-and-dirty-approximation-to-standard-deviation" class="section level2">
+<h2>The “quick and dirty” approximation to standard deviation</h2>
+<p>The population mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span> of a normal distribution help define the <strong>empirical rule</strong>, a rule that describes the approximate percentages of the range of observations. The empirical rule states that:</p>
+<ul>
+<li>approximately 68% of the observations fall within <span class="math inline">\(\sigma\)</span> of <span class="math inline">\(\mu\)</span>,</li>
+<li>approximately 95% of the observations fall within <span class="math inline">\(2\sigma\)</span> of <span class="math inline">\(\mu\)</span>, and</li>
+<li>approximately 99.7% of the observations fall within <span class="math inline">\(3\sigma\)</span> of <span class="math inline">\(\mu\)</span>.</li>
+</ul>
+<p>So, from the empirical rule, we know that nearly all of the data will be found within four standard deviations of the mean (assuming the data are distributed normally). A “quick and dirty” approximation to the standard deviation is <span class="math inline">\(\sigma \approx \mbox{range}/4\)</span>. If you have an estimate of the minimum and maximum values for your variable of interest, you can calculate the range approximate the standard deviation.</p>
+</div>
+<div id="applying-the-standard-deviation-approximation" class="section level2">
+<h2>Applying the standard deviation approximation</h2>
+<p>Ten variables from five data sets were compiled to test the approximation assumption with the true standard deviation values. These included:</p>
+<ul>
+<li>The diameter of breast height (<code>DBH</code>; in) and tons of carbon per acre (<code>Tons</code>) for trees entered in the University of Minnesota’s <a href="https://extension.umn.edu/courses-and-events/carbon-capture-challenge">Carbon Capture Challenge</a>,</li>
+<li>The diameter of breast height (<code>DIA</code>; in), total tree height (<code>HT</code>; ft), and diameter of the tree crown (<code>CROWN_DIAM_WIDE</code>; ft), of <a href="https://academic.oup.com/jof/article-abstract/118/6/636/5892963?redirectedFrom=fulltext">cedar elm trees measured in Austin, Texas</a>.</li>
+<li>The total amount of <a href="https://arbor-analytics.com/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/">forest carbon</a> (<code>MMT/100</code>; million metric tonnes / 100) in each of 48 US states in 2019,</li>
+<li>Measurement of <a href="https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/iris">iris flower measurements</a> (cm), including the length of the petal (<code>Petal.Length</code>) and width of the sepal (<code>Sepal.Width</code>), and</li>
+<li>The <a href="https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/CO2">CO2 concentration</a> (<code>conc/100</code>) and uptake (<code>uptake</code>) rates of the cold tolerance of a grass species.</li>
+</ul>
+<p>The table below shows the approximate and true values for standard deviations:</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-6">Table 1: </span>Example datasets.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Dataset
+</th>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:right;">
+SD_true
+</th>
+<th style="text-align:right;">
+SD_apxx
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+carbon
+</td>
+<td style="text-align:left;">
+DBH
+</td>
+<td style="text-align:right;">
+13.8
+</td>
+<td style="text-align:right;">
+14.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+carbon
+</td>
+<td style="text-align:left;">
+Tons
+</td>
+<td style="text-align:right;">
+20.0
+</td>
+<td style="text-align:right;">
+18.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+elm
+</td>
+<td style="text-align:left;">
+DIA
+</td>
+<td style="text-align:right;">
+5.1
+</td>
+<td style="text-align:right;">
+9.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+elm
+</td>
+<td style="text-align:left;">
+HT
+</td>
+<td style="text-align:right;">
+9.8
+</td>
+<td style="text-align:right;">
+13.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+elm
+</td>
+<td style="text-align:left;">
+CROWN_DIAM_WIDE
+</td>
+<td style="text-align:right;">
+11.0
+</td>
+<td style="text-align:right;">
+13.2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+state_carbon
+</td>
+<td style="text-align:left;">
+MMT/100
+</td>
+<td style="text-align:right;">
+7.6
+</td>
+<td style="text-align:right;">
+7.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+iris
+</td>
+<td style="text-align:left;">
+Petal.Length
+</td>
+<td style="text-align:right;">
+1.8
+</td>
+<td style="text-align:right;">
+1.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+iris
+</td>
+<td style="text-align:left;">
+Sepal.Width
+</td>
+<td style="text-align:right;">
+0.4
+</td>
+<td style="text-align:right;">
+0.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CO2
+</td>
+<td style="text-align:left;">
+conc/100
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+<td style="text-align:right;">
+2.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CO2
+</td>
+<td style="text-align:left;">
+uptake
+</td>
+<td style="text-align:right;">
+10.8
+</td>
+<td style="text-align:right;">
+9.4
+</td>
+</tr>
+</tbody>
+</table>
+<p>The figure below shows the approximate and true values for standard deviations along with a 1:1 line for comparison:</p>
+<p><img src="https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>After calculating the differences, the standard deviation approximation was higher than the true value for six of the ten variables. The greatest percent difference for all variables was for the cedar elm diameters (<code>DIA</code>): the true standard deviation was 5.1 inches and the approximation was 9.5 inches. This was likely because of one “outlier” tree that measured 43.0 inches in diameter, yet the next largest tree was 29.0 inches.</p>
+<p>Similarly, the <code>HT</code> variable from the cedar elm data set and the <code>Sepal.Width</code> measurement from the iris data set had standard deviation approximations that were more than 38% greater than the true values. These variabilities could have been reduced further by stratifying the data. For example, the cedar elm data could have been separated into their different tree class codes (e.g., open-grown versus dominant trees) and the iris data could have been separated into their different species (e.g., setosa versus versicolor).</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>The “quick and dirty” standard deviation approximation works well for a sample of data, provided the data are approximately normally distributed. The approximation relies on the range of the data to reflect how noisy the data are. The standard deviation approximation is a quick calculation but should not be used in data where you anticipate extreme values may be present.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/">How the logging industry in the Lake States used PPP loans</a></h4>
+    <h5>March 22, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/logging"><kbd class="item-tag">logging</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-industry"><kbd class="item-tag">forest industry</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/jobs"><kbd class="item-tag">jobs</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/ppp-loans"><kbd class="item-tag">PPP loans</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/">How the forest products industry used Paycheck Protection Program loans (2022 update)</a></h4>
+    <h5>February 12, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/ppp-loans"><kbd class="item-tag">PPP loans</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/logging"><kbd class="item-tag">logging</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/">Timberlands as investments see biggest gain since 2014</a></h4>
+    <h5>January 26, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/economics"><kbd class="item-tag">economics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-industry"><kbd class="item-tag">forest industry</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/timber-prices"><kbd class="item-tag">timber prices</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

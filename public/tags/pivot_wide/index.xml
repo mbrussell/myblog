@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pivot_wide on </title>
-    <link>/tags/pivot_wide/</link>
-    <description>Recent content in Pivot_wide on </description>
+    <title>pivot_wide on </title>
+    <link>https://arbor-analytics.com/tags/pivot_wide/</link>
+    <description>Recent content in pivot_wide on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/pivot_wide/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 08 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/pivot_wide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Forget spreading and gathering your R data, try pivoting instead</title>
-      <link>/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
+      <link>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
+      <guid>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
       <description>Reshaping data from a wide to a long format, or vice versa, is one of the most common data manipulation tasks that analysts need to do. One of my first posts on this blog was on how to do this in R.
 That post highlighted the spread() and gather() functions available from the tidyr package. As it turns out, the gather() and spread() functions are still available to use but are no longer under active development.</description>
     </item>

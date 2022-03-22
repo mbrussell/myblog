@@ -1,63 +1,225 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Carbon on </title>
-    <link>/tags/carbon/</link>
-    <description>Recent content in Carbon on </description>
+    <title>carbon on </title>
+    <link>https://arbor-analytics.com/tags/carbon/</link>
+    <description>Recent content in carbon on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/carbon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forest carbon in Maine: an introduction</title>
+      <link>https://arbor-analytics.com/post/2022-03-10-forest-carbon-in-maine-an-introduction/</link>
+      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-03-10-forest-carbon-in-maine-an-introduction/</guid>
+      <description>Note: This post is based on an article Matt wrote for the Great Lakes Timber Professionals Association’s magazine in January 2022. Interested in an article like this for your state? Email Matt with any requests.
+One of the many benefits that trees provide is removing carbon dioxide from the air. Carbon dioxide is the leading source of greenhouse gas emissions in the United States.
+In trees and forests, carbon is measured by how much is stored and sequestered.</description>
+    </item>
     
-	<atom:link href="/tags/carbon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What does the price of carbon have to be for landowners to enroll in carbon markets?</title>
+      <link>https://arbor-analytics.com/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</guid>
+      <description>IntroductionCarbon has quickly become one of the most talked about commodities in our forests today. A variety of new and emerging carbon market programs are paying landowners for the carbon in their forests Carbon is the currency of interest when discussing trees and forests as natural climate solutions.
+While compliance-driven markets such as the California Air Resource Board’s (CARB) Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres.</description>
+    </item>
     
+    <item>
+      <title>Forest carbon Emerging opportunities in Lake States Forests</title>
+      <link>https://arbor-analytics.com/events/2021-12-10-forest-carbon-emerging-opportunities-in-lake-states-forests/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/events/2021-12-10-forest-carbon-emerging-opportunities-in-lake-states-forests/</guid>
+      <description>Forest carbon presents many opportunities for forest resources professionals. This presentation was a part of a panel at the Forest Resources Association’s Lake States Winter Meeting on forest carbon.
+READ THE SLIDES.</description>
+    </item>
+    
+    <item>
+      <title>Price of carbon recently hit a record high</title>
+      <link>https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</guid>
+      <description>The price of carbon per metric tonne reached a record high at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from November 2021, the settlement price of one metric tonne of carbon was $28.26. This represents a 21% increase from prices of $23.30 as recent as August 2021.
+Auction reserve prices have increased marginally over the last several years, ranging from $14.</description>
+    </item>
+    
+    <item>
+      <title>CO2 offsets and trips to the family cabin</title>
+      <link>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</link>
+      <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
+      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.</description>
+    </item>
+    
+    <item>
+      <title>Visualizing forest carbon trends in the last thirty years</title>
+      <link>https://arbor-analytics.com/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</link>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</guid>
+      <description>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.
+The value of carbon in forests has seen a tremendous increase in recent years. The increased role of forests in meeting climate challenges has required analysts to have a better understanding of carbon attributes in the forests they work in.</description>
+    </item>
+    
+    <item>
+      <title>If 50% of a tree&#39;s biomass is carbon, what&#39;s the other half?</title>
+      <link>https://arbor-analytics.com/post/2021-08-22-if-50-of-a-tree-s-biomass-is-carbon-what-s-the-other-half/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-08-22-if-50-of-a-tree-s-biomass-is-carbon-what-s-the-other-half/</guid>
+      <description>“You wrote earlier that “since half of biomass is carbon, I multiply by 0.5.” What is the other half of biomass?&#34;
+I was sent this question this question over email last week. As foresters, we’re often concerned with only carbon stored and sequestered in trees. But the are other elements that form the chemical composition of wood. While there are slight deviations to the “50% of biomass in wood is carbon” assumption, it is a statement that provides an approximation about the amount of carbon in wood.</description>
+    </item>
+    
+    <item>
+      <title>New eBook: Forest Carbon by the Numbers</title>
+      <link>https://arbor-analytics.com/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</guid>
+      <description>Now available on Amazon is Forest Carbon by the Numbers: Understanding the Hottest Forest Product of the 2020s.
+Carbon is becoming a highly valued commodity of forests. Trees sequester carbon dioxide and turn it into wood, storing carbon in forests and long-lived forest products for long time periods. Despite the increased recognition of carbon as a natural climate solution and several emerging markets that monetize it, few professionals in forestry and natural resources have a grasp on the amount and extent of forest carbon in the ecosystems they work in.</description>
+    </item>
+    
+    <item>
+      <title>Forest carbon: key definitions and numbers in perspective  </title>
+      <link>https://arbor-analytics.com/post/2021-08-08-forest-carbon-key-definitions-and-numbers-in-perspective/</link>
+      <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-08-08-forest-carbon-key-definitions-and-numbers-in-perspective/</guid>
+      <description>Carbon storage in US forests. Source: USDA Forest Service.
+Carbon is quickly becoming one of the hottest forest products of the 2020s. The term “carbon” is a broad one, and when reading an article or listening to a speaker, you may not know exactly which process or specific term is being referred to.
+Here are a few basic terms that will help guide your understanding:</description>
+    </item>
+    
+    <item>
+      <title>Testing the assumption: Half of the biomass of a tree is carbon</title>
+      <link>https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/</guid>
+      <description>“Half of the biomass of a tree is carbon.” This has been a widely spoken statement made by many foresters and scientists alike. Most forest carbon assessments use the 50% rule and it generally works well.
+In forest analytics, determining the amount of carbon in a tree is first based on estimating its biomass. At the individual tree level, a biomass equation can be developed based on a tree’s diameter, height, species, region, and other tree and stand characteristics.</description>
+    </item>
+    
+    <item>
+      <title>Forest carbon cheat sheet: updated for 2021</title>
+      <link>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</link>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
+The Cheat Sheet has been updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2019.
+DOWNLOAD (PDF)
+DOWNLOAD (JPEG)
+–
+By Matt Russell. Email Matt with any questions or comments.</description>
+    </item>
+    
+    <item>
+      <title>Harvested wood products: a growing contributor to US carbon storage</title>
+      <link>https://arbor-analytics.com/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/</guid>
+      <description>There has been a lot of talk recently about the importance of carbon in forests. Carbon dioxide is the leading source of greenhouse gas emissions, resulting from burning fossil fuels for transportation and energy and producing electricity, among other sources. Trees sequester carbon dioxide from the air and turn it into carbon stored in wood. As a result, healthy trees and forests increase carbon storage and avoid greenhouse gas emissions.</description>
+    </item>
+    
+    <item>
+      <title>Can you get paid for the carbon in your woods?</title>
+      <link>https://arbor-analytics.com/events/2021-03-20-can-you-get-paid-for-the-carbon-in-your-woods/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/events/2021-03-20-can-you-get-paid-for-the-carbon-in-your-woods/</guid>
+      <description>Forest carbon markets are becoming a popular source of revenue for private woodland owners. Learn about the role of carbon sequestration in forests and how carbon markets might work for Minnesota landowners.
+This presentation and discussion and discussion was a part of UMN Extension’s Fridays with a Forester series.
+WATCH THIS WEBINAR presented by Matt Russell on March 19, 2021.
+READ THE SLIDES.</description>
+    </item>
+    
+    <item>
+      <title>Five forest carbon markets for small landowners</title>
+      <link>https://arbor-analytics.com/post/2021-03-20-an-overview-of-forest-carbon-markets-for-small-landowners/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-03-20-an-overview-of-forest-carbon-markets-for-small-landowners/</guid>
+      <description>Voluntary forest carbon markets have expanded considerably over the last year. While compliance markets such as the California Air Resource Board’s Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres.
+One of the benefits of newer voluntary forest carbon programs is that they typically have small minimum acreage requirements and shorter contract lengths.</description>
+    </item>
+    
+    <item>
+      <title>Forest carbon: a reading list for beginners</title>
+      <link>https://arbor-analytics.com/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</guid>
+      <description>A black spruce forest in northern Minnesota.Carbon is quickly becoming one of the hottest forest products of the 2020s. Carbon sequestration is the reason why trees and forests are being placed front and center in discussions about natural climate solutions. Emerging markets are encouraging landowners to manage forests for the carbon they provide.
+You can very quickly can get lost in the definitions, units, and vocabulary used in the forest carbon world.</description>
+    </item>
+    
+    <item>
+      <title>How to add more &#34;carbon &#34; to your vocubulary</title>
+      <link>https://arbor-analytics.com/events/2021-01-23-how-to-add-more-carbon-to-your-vocubulary/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/events/2021-01-23-how-to-add-more-carbon-to-your-vocubulary/</guid>
+      <description>Carbon may be regarded as the most highly coveted forest product of the 2020’s. A benefit of trees is that they store and sequester carbon dioxide from the atmosphere, making forests a natural climate solution.
+While foresters are familiar with measuring the number of boards and cords in a forest, less is known about how much carbon is found in an acre of woods. With a number of emerging markets that seek to pay landowners for the carbon in their trees, an increased understanding of the concepts and numbers behind forest carbon is needed.</description>
+    </item>
     
     <item>
       <title>Climate 21: what it says about forest carbon</title>
-      <link>/post/climate-21-what-it-says-about-forest-carbon/</link>
+      <link>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</link>
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/post/climate-21-what-it-says-about-forest-carbon/</guid>
-      <description>Word cloud for the Climate 21 Project Transition Memo-Department of Agriculture.
-There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.
-In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.</description>
+      <guid>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</guid>
+      <description>There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.
+In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.
+The Department of Agriculture (USDA) memo recognizes the role that the forestry and agriculture sectors play in climate mitigation and adaptation.</description>
     </item>
     
     <item>
       <title>Forest carbon and short-lived trees</title>
-      <link>/post/forest-carbon-markets-and-short-lived-trees/</link>
+      <link>https://arbor-analytics.com/post/forest-carbon-markets-and-short-lived-trees/</link>
       <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/forest-carbon-markets-and-short-lived-trees/</guid>
+      <guid>https://arbor-analytics.com/post/forest-carbon-markets-and-short-lived-trees/</guid>
       <description>I spoke with a forest products company representative this week who expressed concern with “extending rotations” so that carbon is locked up in trees for a longer time. Many forest carbon markets are proposing delaying harvesting for a few years so that more carbon accumulates over time.
 The particular concern was in Minnesota where aspen, the state’s most commercially important species, is crucial to the forest products economy.</description>
     </item>
     
     <item>
       <title>Coverting forest inventory data from volume to carbon </title>
-      <link>/post/coverting-wood-scaled-as-weight-to-carbon/</link>
+      <link>https://arbor-analytics.com/post/coverting-wood-scaled-as-weight-to-carbon/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/coverting-wood-scaled-as-weight-to-carbon/</guid>
+      <guid>https://arbor-analytics.com/post/coverting-wood-scaled-as-weight-to-carbon/</guid>
       <description>The amount of carbon in a forest is a key metric that decision-makers want to know. Accurate estimates of forest carbon are needed if a landowner is interested in enrolling a forest into carbon markets.
 Unfortunately, most forest inventories continue to measure the amount of wood in a stand in terms of the volume it contains. Forest analysts also rely on historical forest inventory data to project future forest structure and composition - it is not unlikely to rely on inventory data that are more than 20 years old.</description>
     </item>
     
     <item>
       <title>Trends in forest carbon papers in the last 20 years</title>
-      <link>/post/trends-in-forest-carbon-literature/</link>
+      <link>https://arbor-analytics.com/post/trends-in-forest-carbon-literature/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/trends-in-forest-carbon-literature/</guid>
+      <guid>https://arbor-analytics.com/post/trends-in-forest-carbon-literature/</guid>
       <description>The number of peer-reviewed research publications on forest carbon has exploded in recent decades. From the signings of the Kyoto Protocol in 1997 to the Paris Agreement in 2015, much of the science and research conducted has been in response to the global challenges and opportunities that forests provide by sequestering and storing carbon.
 Forest carbon has also been increasingly studied in forest management and silvicultural practices. New technologies and remote sensing have also brought about new ways to inventory forests for the biomass and carbon they store.</description>
     </item>
     
     <item>
       <title>New state-level forest carbon fact sheets available</title>
-      <link>/post/new-state-level-forest-carbon-fact-sheets-available/</link>
+      <link>https://arbor-analytics.com/post/new-state-level-forest-carbon-fact-sheets-available/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/new-state-level-forest-carbon-fact-sheets-available/</guid>
+      <guid>https://arbor-analytics.com/post/new-state-level-forest-carbon-fact-sheets-available/</guid>
       <description>An example forest carbon fact sheet from Maine.
 Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. Despite the increasing importance of understanding the amount of carbon that forests can store and sequester, easy-to-access information at the state level is difficult to obtain.
 Arbor Custom Analytics recently worked with the Forest Resources Association to create a series of fact sheets at the state, region, and national level.</description>
@@ -65,20 +227,20 @@ Arbor Custom Analytics recently worked with the Forest Resources Association to 
     
     <item>
       <title>States with the biggest gains in forest carbon over the last 30 years</title>
-      <link>/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</link>
+      <link>https://arbor-analytics.com/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</link>
       <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</guid>
+      <guid>https://arbor-analytics.com/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</guid>
       <description>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.
 The value of carbon in forests has seen a tremendous increase in recent years. The increase in voluntary forest carbon markets have required analysts to have a better understanding of carbon attributes in the forests they work in.</description>
     </item>
     
     <item>
       <title>Forest carbon stocks in every US state</title>
-      <link>/post/carbon-by-state/</link>
+      <link>https://arbor-analytics.com/post/carbon-by-state/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/carbon-by-state/</guid>
+      <guid>https://arbor-analytics.com/post/carbon-by-state/</guid>
       <description>photo by Sean MacEntee
 In April 2020, the USDA Forest Service published Greenhouse gas emissions and removals from forest land, woodlands, and urban trees in the United States, 1990-2018. What makes this annual report unique is that forest carbon estimates are reported for each US state. Data are available in an appendix which lists forest carbon stocks and flux for each state from 1990 to 2018.
 Across the US, forests, urban trees, and harvested wood products are the largest carbon sink.</description>
@@ -86,19 +248,19 @@ Across the US, forests, urban trees, and harvested wood products are the largest
     
     <item>
       <title>How to calculate carbon from board feet and cords</title>
-      <link>/post/how-to-calculate-carbon-from-board-feet-and-cords/</link>
+      <link>https://arbor-analytics.com/post/how-to-calculate-carbon-from-board-feet-and-cords/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-to-calculate-carbon-from-board-feet-and-cords/</guid>
+      <guid>https://arbor-analytics.com/post/how-to-calculate-carbon-from-board-feet-and-cords/</guid>
       <description>Foresters and wood buyers are increasingly being asked about the amount of carbon that trees and forests store. However, foresters and wood buyers do not inventory or buy their wood on a carbon basis. Instead, forests in many regions of the US are inventoried and sold using volume measurements such as board feet and cords. If a forest resources professional knows how measurements like wood volume relate to carbon, he or she can feel empowered when discussing the importance of forests and forest management in the context of carbon with landowners and decision makers.</description>
     </item>
     
     <item>
       <title>Forest carbon cheat sheet</title>
-      <link>/post/forest-carbon-cheat-sheet/</link>
+      <link>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/forest-carbon-cheat-sheet/</guid>
+      <guid>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</guid>
       <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
 The Cheast Sheet is updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2018.
 DOWNLOAD (PDF)
@@ -109,29 +271,29 @@ The Forest Carbon Cheat Sheet.
     
     <item>
       <title>Units in forest carbon numbers: a primer</title>
-      <link>/post/units-in-forest-carbon-numbers-a-primer/</link>
+      <link>https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/units-in-forest-carbon-numbers-a-primer/</guid>
+      <guid>https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/</guid>
       <description>Forest analysts are increasingly being asked about the amount of carbon that trees and forests store. However, most analysts are trained in summarizing forestry data sets to obtain measurements such as volume and basal area.
 If a forest analyst knows how to “speak carbon”, this can leave them feeling empowered when discussing the importance of forests and forest management in the context of carbon. This can leave a solid impression with landowners and decision makers.</description>
     </item>
     
     <item>
       <title>How much carbon is stored in one trillion trees?</title>
-      <link>/post/how-much-carbon-is-stored-in-a-trillion-trees/</link>
+      <link>https://arbor-analytics.com/post/how-much-carbon-is-stored-in-a-trillion-trees/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-much-carbon-is-stored-in-a-trillion-trees/</guid>
+      <guid>https://arbor-analytics.com/post/how-much-carbon-is-stored-in-a-trillion-trees/</guid>
       <description>The short answer: About 5.7 times as much than is currently stored in forests in the lower 48 US states and Alaska. One trillion trees equates to about 101 billion metric tons of carbon stored.The Trillion Trees Campaign has been widespread in the news recently. The United States has committed to the initiative, announced at the World Economic Forum in January 2020 and mentioned during President Trump’s annual State of the Union address on 4 February 2020.</description>
     </item>
     
     <item>
       <title>How to calculate how much carbon is in a tree</title>
-      <link>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
+      <link>https://arbor-analytics.com/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
+      <guid>https://arbor-analytics.com/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
       <description>Carbon is perhaps the most important attribute in trees today. Forests in the United States sequester about 11% of the total CO2 emissions every year, making them an important tool to combat future global changes. Having accurate models that represent how much carbon is stored in trees is essential for understanding their carbon sequestration potential and are widely used in forest carbon accounting tools.
 Most equations that predict the amount carbon in a tree start with first predicting its biomass.</description>
     </item>

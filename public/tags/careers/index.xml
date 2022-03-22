@@ -1,42 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Careers on </title>
-    <link>/tags/careers/</link>
-    <description>Recent content in Careers on </description>
+    <title>careers on </title>
+    <link>https://arbor-analytics.com/tags/careers/</link>
+    <description>Recent content in careers on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/careers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The importance of citizen data scientists in forest analytics</title>
+      <link>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
+      <description>As a part of my work with the University of Minnesota Extension, we run the Assessing Vegetation Impacts from Deer program. The AVID program engages citizen scientists to monitor tree seedlings that are susceptible to browse from white-tailed deer. With little information on deer browse impacts for most of Minnesota’s tree species, the data are beginning to provide insights on how deer browse degrades the health of the forest.</description>
+    </item>
     
-	<atom:link href="/tags/careers/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>A #ForestProud moment after listening to the MeatEater podcast</title>
+      <link>https://arbor-analytics.com/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</link>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</guid>
+      <description>The MeatEater podcast.The MeatEater Podcast is one of the most widely listened to podcasts in the outdoor genre. It has over 33,000 ratings on Apple Podcasts and consistently ranks as one of the most downloaded podcasts in the outdoors and wilderness categories.
+I’m a semi-regular listener and enjoy the questions from listeners, hunting stories, and discussions on conservation issues. For a podcast that talks about the outdoors so much, I’ve always found it lacks a discussion on forests, one of the ecosystems that the MeatEater crew spends so much time in.</description>
+    </item>
     
     <item>
       <title>Wages for logging truckers much lower than other transportation industries</title>
-      <link>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
+      <link>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
+      <guid>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
       <description>“To solve any problem in forestry, first figure out where the roads will go.”
 That is a quote that I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it.</description>
     </item>
     
     <item>
       <title>The decline of researchers in forest science</title>
-      <link>/post/the-decline-of-researchers-in-forest-science/</link>
+      <link>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</link>
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/the-decline-of-researchers-in-forest-science/</guid>
+      <guid>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</guid>
       <description>A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that “does research”.
 I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.</description>
     </item>
     
     <item>
       <title>The three kinds of data scientists in forestry</title>
-      <link>/post/the-three-kinds-of-data-scientists-in-forestry/</link>
+      <link>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/the-three-kinds-of-data-scientists-in-forestry/</guid>
+      <guid>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</guid>
       <description>Data scientists are highly sought after professionals across tens of thousands of companies. And there&amp;rsquo;s a difference between what a data scientist does and what a statistician does.
 The field of statistics has been around for centuries, while data science programs at universities are just now beginning to graduate their first students.
 In statistics, hypotheses are evaluated. In data science, hypotheses are generated. Statistics is often considered a primary data analysis technique, while data science is often considered secondary.</description>

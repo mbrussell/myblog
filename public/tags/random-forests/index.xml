@@ -1,22 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Random Forests on </title>
-    <link>/tags/random-forests/</link>
-    <description>Recent content in Random Forests on </description>
+    <title>random forests on </title>
+    <link>https://arbor-analytics.com/tags/random-forests/</link>
+    <description>Recent content in random forests on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/random-forests/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 27 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/random-forests/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Random forests: a tutorial with forestry data</title>
+      <link>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</guid>
+      <description>Random forests have quickly become one of the most popular analytical techniques used in forestry today. Random forests (RF) are a machine learning technique that differ in many ways to traditional prediction models such as regression. Random forests can handle a lot of data, can be applied to classification or regression problems, and rank the relative importance of many variables that are related to a response variable of interest.</description>
+    </item>
     
     <item>
       <title>Random forests in a nutshell</title>
-      <link>/post/random-forests-in-a-nutshell/</link>
+      <link>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</link>
       <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/random-forests-in-a-nutshell/</guid>
+      <guid>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</guid>
       <description>Random forests have exploded in popularity in the forestry discipline in recent years. Random forests (RF) are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.
 The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article.</description>
     </item>

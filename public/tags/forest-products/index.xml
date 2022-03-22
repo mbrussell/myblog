@@ -1,42 +1,129 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Forest Products on </title>
-    <link>/tags/forest-products/</link>
-    <description>Recent content in Forest Products on </description>
+    <title>forest products on </title>
+    <link>https://arbor-analytics.com/tags/forest-products/</link>
+    <description>Recent content in forest products on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/forest-products/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How the logging industry in the Lake States used PPP loans</title>
+      <link>https://arbor-analytics.com/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</guid>
+      <description>Logging companies in the US Lake States requested $49.7 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020 and 2021. These loans were offered to 1,445 logging businesses in the Lake States.
+The SBA Paycheck Protection Program provides information on PPP loan distributions to businesses throughout the COVID-19 pandemic. Depending on the size of the business and its needs, loan amounts varied.</description>
+    </item>
     
-	<atom:link href="/tags/forest-products/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How the forest products industry used Paycheck Protection Program loans (2022 update)</title>
+      <link>https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</link>
+      <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</guid>
+      <description>SummaryThe Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 35,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 487,000 workers in the forest industry.</description>
+    </item>
     
+    <item>
+      <title>H-2B workers: essential to the forest products industry</title>
+      <link>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</guid>
+      <description>In Cabinet Battle #1, one of the most popular songs from the musical Hamilton, Alexander Hamilton and Thomas Jefferson discuss the role of the federal government in assuming the financial debt of states. It’s the late 1780s, and Hamilton has ideas for a national bank that Jefferson and many Southerners aren’t fans of.
+Near the end of Hamilton’s verse, he states that it’s odd to take “civics lessons from a slaver”.</description>
+    </item>
+    
+    <item>
+      <title>Forest carbon cheat sheet: updated for 2021</title>
+      <link>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</link>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
+The Cheat Sheet has been updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2019.
+DOWNLOAD (PDF)
+DOWNLOAD (JPEG)
+–
+By Matt Russell. Email Matt with any questions or comments.</description>
+    </item>
+    
+    <item>
+      <title>The forest products industry’s use of Paycheck Protection Program loans</title>
+      <link>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</link>
+      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</guid>
+      <description>SummaryThe Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 34,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 485,000 workers in the forest industry.</description>
+    </item>
+    
+    <item>
+      <title>Harvested wood products: a growing contributor to US carbon storage</title>
+      <link>https://arbor-analytics.com/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/</guid>
+      <description>There has been a lot of talk recently about the importance of carbon in forests. Carbon dioxide is the leading source of greenhouse gas emissions, resulting from burning fossil fuels for transportation and energy and producing electricity, among other sources. Trees sequester carbon dioxide from the air and turn it into carbon stored in wood. As a result, healthy trees and forests increase carbon storage and avoid greenhouse gas emissions.</description>
+    </item>
+    
+    <item>
+      <title>Understanding the forest products industry using NAICS codes</title>
+      <link>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
+      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.
+In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
+    </item>
+    
+    <item>
+      <title>Forest carbon: a reading list for beginners</title>
+      <link>https://arbor-analytics.com/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</guid>
+      <description>A black spruce forest in northern Minnesota.Carbon is quickly becoming one of the hottest forest products of the 2020s. Carbon sequestration is the reason why trees and forests are being placed front and center in discussions about natural climate solutions. Emerging markets are encouraging landowners to manage forests for the carbon they provide.
+You can very quickly can get lost in the definitions, units, and vocabulary used in the forest carbon world.</description>
+    </item>
+    
+    <item>
+      <title>Maine logging industry&#39;s use of PPP loans</title>
+      <link>https://arbor-analytics.com/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</guid>
+      <description>Logging companies in Maine requested at least $13.8 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020. These loans were offered to 256 logging businesses in Maine in the spring and early summer of 2020.
+The SBA Paycheck Protection Program Loan Level Data provides information on PPP loan distributions to businesses made through August 8, 2020. Depending on the size of the business and its needs, loan amounts varied.</description>
+    </item>
     
     <item>
       <title>Economic contribution of forestry employees across US states</title>
-      <link>/post/economic-contribution-of-forestry-employees-across-us-states/</link>
+      <link>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
+      <guid>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
       <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:
 250 companies comprise the pulp, paper, and paperboard mill industry in the US,The US forest products industry generates 5% of the manufacturing GDP ($169 billion),The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)56% of US forests are privately owned by family forest owners and companies.</description>
     </item>
     
     <item>
       <title>Coverting forest inventory data from volume to carbon </title>
-      <link>/post/coverting-wood-scaled-as-weight-to-carbon/</link>
+      <link>https://arbor-analytics.com/post/coverting-wood-scaled-as-weight-to-carbon/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/coverting-wood-scaled-as-weight-to-carbon/</guid>
+      <guid>https://arbor-analytics.com/post/coverting-wood-scaled-as-weight-to-carbon/</guid>
       <description>The amount of carbon in a forest is a key metric that decision-makers want to know. Accurate estimates of forest carbon are needed if a landowner is interested in enrolling a forest into carbon markets.
 Unfortunately, most forest inventories continue to measure the amount of wood in a stand in terms of the volume it contains. Forest analysts also rely on historical forest inventory data to project future forest structure and composition - it is not unlikely to rely on inventory data that are more than 20 years old.</description>
     </item>
     
     <item>
       <title>New state-level forest carbon fact sheets available</title>
-      <link>/post/new-state-level-forest-carbon-fact-sheets-available/</link>
+      <link>https://arbor-analytics.com/post/new-state-level-forest-carbon-fact-sheets-available/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/new-state-level-forest-carbon-fact-sheets-available/</guid>
+      <guid>https://arbor-analytics.com/post/new-state-level-forest-carbon-fact-sheets-available/</guid>
       <description>An example forest carbon fact sheet from Maine.
 Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. Despite the increasing importance of understanding the amount of carbon that forests can store and sequester, easy-to-access information at the state level is difficult to obtain.
 Arbor Custom Analytics recently worked with the Forest Resources Association to create a series of fact sheets at the state, region, and national level.</description>
@@ -44,39 +131,39 @@ Arbor Custom Analytics recently worked with the Forest Resources Association to 
     
     <item>
       <title>Wages for logging truckers much lower than other transportation industries</title>
-      <link>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
+      <link>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
+      <guid>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
       <description>“To solve any problem in forestry, first figure out where the roads will go.”
 That is a quote that I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it.</description>
     </item>
     
     <item>
       <title>How do loggers feel? Sentiment analysis on the opinions of logging contractors</title>
-      <link>/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
+      <link>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
       <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
+      <guid>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
       <description>After we conduct a survey, we have a routine for analyzing the data. Summarize the numerical responses and report values like means for specific questions. Group the data into different demographics and report the means within these categories.
 If we ask for any qualitative data through comments (e.g., “What is your opinion of X?”), the responses are always worth reading. We often get a lot of insight from reading an individual’s comments, and these comments can unveil new dimensions of our analysis.</description>
     </item>
     
     <item>
       <title>How to calculate carbon from board feet and cords</title>
-      <link>/post/how-to-calculate-carbon-from-board-feet-and-cords/</link>
+      <link>https://arbor-analytics.com/post/how-to-calculate-carbon-from-board-feet-and-cords/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-to-calculate-carbon-from-board-feet-and-cords/</guid>
+      <guid>https://arbor-analytics.com/post/how-to-calculate-carbon-from-board-feet-and-cords/</guid>
       <description>Foresters and wood buyers are increasingly being asked about the amount of carbon that trees and forests store. However, foresters and wood buyers do not inventory or buy their wood on a carbon basis. Instead, forests in many regions of the US are inventoried and sold using volume measurements such as board feet and cords. If a forest resources professional knows how measurements like wood volume relate to carbon, he or she can feel empowered when discussing the importance of forests and forest management in the context of carbon with landowners and decision makers.</description>
     </item>
     
     <item>
       <title>Forest carbon cheat sheet</title>
-      <link>/post/forest-carbon-cheat-sheet/</link>
+      <link>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/forest-carbon-cheat-sheet/</guid>
+      <guid>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</guid>
       <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
 The Cheast Sheet is updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2018.
 DOWNLOAD (PDF)
@@ -87,20 +174,20 @@ The Forest Carbon Cheat Sheet.
     
     <item>
       <title>How many trees make a mass timber building?</title>
-      <link>/post/how-many-trees-make-a-mass-timber-building/</link>
+      <link>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</link>
       <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-many-trees-make-a-mass-timber-building/</guid>
+      <guid>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</guid>
       <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/)
 Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
     </item>
     
     <item>
       <title>How much is too long a wait? Calculating expected wait times of wood deliveries</title>
-      <link>/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</link>
+      <link>https://arbor-analytics.com/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</link>
       <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</guid>
+      <guid>https://arbor-analytics.com/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</guid>
       <description>Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)
 How important are wait times for loggers and truckers?Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill.
 Both wood procurement managers and their suppliers need to know when wait times exceed the amount of time they expect.</description>

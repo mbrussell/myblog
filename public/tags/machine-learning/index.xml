@@ -1,32 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Machine Learning on </title>
-    <link>/tags/machine-learning/</link>
-    <description>Recent content in Machine Learning on </description>
+    <title>Machine learning on </title>
+    <link>https://arbor-analytics.com/tags/machine-learning/</link>
+    <description>Recent content in Machine learning on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Random forests in a nutshell</title>
-      <link>/post/random-forests-in-a-nutshell/</link>
+      <link>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</link>
       <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/random-forests-in-a-nutshell/</guid>
+      <guid>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</guid>
       <description>Random forests have exploded in popularity in the forestry discipline in recent years. Random forests (RF) are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.
 The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article.</description>
     </item>
     
     <item>
       <title>Using clustering with logging industry data</title>
-      <link>/post/using-clustering-with-logging-industry-data/</link>
+      <link>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</link>
       <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/using-clustering-with-logging-industry-data/</guid>
+      <guid>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</guid>
       <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.
 The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.
 Clustering is an unsupervised ML algorithm that groups items.</description>
@@ -34,20 +30,20 @@ Clustering is an unsupervised ML algorithm that groups items.</description>
     
     <item>
       <title>How to determine accuracy of classification models (with forestry data)</title>
-      <link>/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
+      <link>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
       <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
+      <guid>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
       <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.
 You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
     </item>
     
     <item>
       <title>New logging companies with old equipment: Finding patterns in logging businesses using clustering</title>
-      <link>/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
+      <link>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
+      <guid>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
       <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.
 As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
     </item>

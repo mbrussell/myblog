@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Forestsamplr on </title>
-    <link>/tags/forestsamplr/</link>
-    <description>Recent content in Forestsamplr on </description>
+    <title>forestsamplr on </title>
+    <link>https://arbor-analytics.com/tags/forestsamplr/</link>
+    <description>Recent content in forestsamplr on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 May 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/forestsamplr/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 22 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/forestsamplr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stratified vs. simple random sampling: fun with forestsamplr</title>
-      <link>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</link>
+      <link>https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</link>
       <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
+      <guid>https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
       <description>Tools for estimating population means for stratified and simple random samplesIf we know the size of a number of subpopulations that are a part of a larger population, we can use stratified random sampling to come up with a more precise estimate of a population mean. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling.</description>
     </item>
     

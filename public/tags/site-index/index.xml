@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Site Index on </title>
-    <link>/tags/site-index/</link>
-    <description>Recent content in Site Index on </description>
+    <title>site index on </title>
+    <link>https://arbor-analytics.com/tags/site-index/</link>
+    <description>Recent content in site index on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/site-index/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/site-index/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Disentagling the interactions between site index and disturbance</title>
-      <link>/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
+      <link>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
+      <guid>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
       <description>The Black Hills National Forest has been in the news recently after completing a timber sustainability report. In recent years, the Black Hills was one of the US Forest Service’s greatest timber-producing National Forests in the country.
 Much of the increase in timber harvest in recent years at the Black Hills National Forest was in response to a deadly mountain pine beetle epidemic. As a result, the new report suggests that current timber harvests are not sustainable into the future.</description>
     </item>

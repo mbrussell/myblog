@@ -1,53 +1,169 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Forestry on </title>
-    <link>/tags/forestry/</link>
-    <description>Recent content in Forestry on </description>
+    <title>forestry on </title>
+    <link>https://arbor-analytics.com/tags/forestry/</link>
+    <description>Recent content in forestry on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/forestry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forestry is a STEM discipline</title>
+      <link>https://arbor-analytics.com/post/2022-02-19-forestry-is-a-stem-discipline/</link>
+      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-02-19-forestry-is-a-stem-discipline/</guid>
+      <description>The Homeland Security Department recently recognized forestry as a science, technology, engineering, and mathematics (STEM) discipline. Homeland Security has added both the general forestry and forest resources production and management fields of study to the Optional Practical Training (OPT) program.
+This is significant for the forestry profession because colleges and universities will have access to additional funding to support students. The announcement also makes it easier for non US citizens with advanced degrees (such as Masters and PhD graduates) that are in STEM disciplines to obtain lawful permanent resident status in the United States.</description>
+    </item>
     
-	<atom:link href="/tags/forestry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Five R packages every forest analyst should be using</title>
+      <link>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.
+Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.</description>
+    </item>
     
+    <item>
+      <title>CO2 offsets and trips to the family cabin</title>
+      <link>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</link>
+      <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
+      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.</description>
+    </item>
+    
+    <item>
+      <title>H-2B workers: essential to the forest products industry</title>
+      <link>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</guid>
+      <description>In Cabinet Battle #1, one of the most popular songs from the musical Hamilton, Alexander Hamilton and Thomas Jefferson discuss the role of the federal government in assuming the financial debt of states. It’s the late 1780s, and Hamilton has ideas for a national bank that Jefferson and many Southerners aren’t fans of.
+Near the end of Hamilton’s verse, he states that it’s odd to take “civics lessons from a slaver”.</description>
+    </item>
+    
+    <item>
+      <title>The importance of citizen data scientists in forest analytics</title>
+      <link>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
+      <description>As a part of my work with the University of Minnesota Extension, we run the Assessing Vegetation Impacts from Deer program. The AVID program engages citizen scientists to monitor tree seedlings that are susceptible to browse from white-tailed deer. With little information on deer browse impacts for most of Minnesota’s tree species, the data are beginning to provide insights on how deer browse degrades the health of the forest.</description>
+    </item>
+    
+    <item>
+      <title>Peer review: Lessons learned from reviewing 100 forest science manuscripts</title>
+      <link>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</link>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</guid>
+      <description>Photo by Annie Spratt on Unsplash.
+This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.</description>
+    </item>
+    
+    <item>
+      <title>The forest products industry’s use of Paycheck Protection Program loans</title>
+      <link>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</link>
+      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</guid>
+      <description>SummaryThe Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 34,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 485,000 workers in the forest industry.</description>
+    </item>
+    
+    <item>
+      <title>Can you get paid for the carbon in your woods?</title>
+      <link>https://arbor-analytics.com/events/2021-03-20-can-you-get-paid-for-the-carbon-in-your-woods/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/events/2021-03-20-can-you-get-paid-for-the-carbon-in-your-woods/</guid>
+      <description>Forest carbon markets are becoming a popular source of revenue for private woodland owners. Learn about the role of carbon sequestration in forests and how carbon markets might work for Minnesota landowners.
+This presentation and discussion and discussion was a part of UMN Extension’s Fridays with a Forester series.
+WATCH THIS WEBINAR presented by Matt Russell on March 19, 2021.
+READ THE SLIDES.</description>
+    </item>
+    
+    <item>
+      <title>Private forest landowner demographics compared to the US population</title>
+      <link>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</link>
+      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</guid>
+      <description>Private individuals own a third of the nation’s forests. These private landowners value them primarily due to the beauty, natural values, and wildlife habitat they provide.
+Forests owned by private non-industrial individuals are diverse: they vary in terms of species composition, structure, and management objectives. While privately-owned forests are diverse, the demographics of their owners are not.
+Data from the National Woodland Owner Survey, a program administered by the USDA Forest Service, indicate that the primary decision makers on private forestlands are older, predominantly male, White, and non-Hispanic.</description>
+    </item>
+    
+    <item>
+      <title>A #ForestProud moment after listening to the MeatEater podcast</title>
+      <link>https://arbor-analytics.com/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</link>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</guid>
+      <description>The MeatEater podcast.The MeatEater Podcast is one of the most widely listened to podcasts in the outdoor genre. It has over 33,000 ratings on Apple Podcasts and consistently ranks as one of the most downloaded podcasts in the outdoors and wilderness categories.
+I’m a semi-regular listener and enjoy the questions from listeners, hunting stories, and discussions on conservation issues. For a podcast that talks about the outdoors so much, I’ve always found it lacks a discussion on forests, one of the ecosystems that the MeatEater crew spends so much time in.</description>
+    </item>
+    
+    <item>
+      <title>Forest carbon: a reading list for beginners</title>
+      <link>https://arbor-analytics.com/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</guid>
+      <description>A black spruce forest in northern Minnesota.Carbon is quickly becoming one of the hottest forest products of the 2020s. Carbon sequestration is the reason why trees and forests are being placed front and center in discussions about natural climate solutions. Emerging markets are encouraging landowners to manage forests for the carbon they provide.
+You can very quickly can get lost in the definitions, units, and vocabulary used in the forest carbon world.</description>
+    </item>
+    
+    <item>
+      <title>How to add more &#34;carbon &#34; to your vocubulary</title>
+      <link>https://arbor-analytics.com/events/2021-01-23-how-to-add-more-carbon-to-your-vocubulary/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/events/2021-01-23-how-to-add-more-carbon-to-your-vocubulary/</guid>
+      <description>Carbon may be regarded as the most highly coveted forest product of the 2020’s. A benefit of trees is that they store and sequester carbon dioxide from the atmosphere, making forests a natural climate solution.
+While foresters are familiar with measuring the number of boards and cords in a forest, less is known about how much carbon is found in an acre of woods. With a number of emerging markets that seek to pay landowners for the carbon in their trees, an increased understanding of the concepts and numbers behind forest carbon is needed.</description>
+    </item>
     
     <item>
       <title>Climate 21: what it says about forest carbon</title>
-      <link>/post/climate-21-what-it-says-about-forest-carbon/</link>
+      <link>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</link>
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/post/climate-21-what-it-says-about-forest-carbon/</guid>
-      <description>Word cloud for the Climate 21 Project Transition Memo-Department of Agriculture.
-There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.
-In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.</description>
+      <guid>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</guid>
+      <description>There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.
+In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.
+The Department of Agriculture (USDA) memo recognizes the role that the forestry and agriculture sectors play in climate mitigation and adaptation.</description>
     </item>
     
     <item>
       <title>Economic contribution of forestry employees across US states</title>
-      <link>/post/economic-contribution-of-forestry-employees-across-us-states/</link>
+      <link>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
+      <guid>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
       <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:
 250 companies comprise the pulp, paper, and paperboard mill industry in the US,The US forest products industry generates 5% of the manufacturing GDP ($169 billion),The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)56% of US forests are privately owned by family forest owners and companies.</description>
     </item>
     
     <item>
       <title>States with the biggest gains in forest carbon over the last 30 years</title>
-      <link>/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</link>
+      <link>https://arbor-analytics.com/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</link>
       <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</guid>
+      <guid>https://arbor-analytics.com/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</guid>
       <description>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.
 The value of carbon in forests has seen a tremendous increase in recent years. The increase in voluntary forest carbon markets have required analysts to have a better understanding of carbon attributes in the forests they work in.</description>
     </item>
     
     <item>
       <title>Attention forestry researchers: Incorporate a call-to-action in your presentations</title>
-      <link>/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</link>
+      <link>https://arbor-analytics.com/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</guid>
+      <guid>https://arbor-analytics.com/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</guid>
       <description>A simple call-to-action to use in a presentation: link to the slides you just presented.)
 “The primary purpose of a talk is advertising, not science.”
 This is one of the statements made in the Leek group guide to giving talks. Our lab group discussed this topic at a recent meeting in April.
@@ -56,20 +172,20 @@ Sometimes we are required in a grant to provide a talk via a presentation about 
     
     <item>
       <title>The decline of researchers in forest science</title>
-      <link>/post/the-decline-of-researchers-in-forest-science/</link>
+      <link>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</link>
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/the-decline-of-researchers-in-forest-science/</guid>
+      <guid>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</guid>
       <description>A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that “does research”.
 I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.</description>
     </item>
     
     <item>
       <title>H-2B guest workers in forestry: by the numbers</title>
-      <link>/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</link>
+      <link>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</guid>
+      <guid>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</guid>
       <description>Guest workers regenerating a northern Minnesota forest. (photo: @Chris_KTDunham, Twitter)
 Guest workers hired through the H-2B visa program get jobs done. This is especially true across many forestry companies. Guest workers plant trees, conduct silvicultural treatments, and assist in tree nursery production.
 A strong guest worker program can lead to a future forest products industry that is healthy and sustainable in the long term.

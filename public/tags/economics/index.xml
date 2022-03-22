@@ -1,32 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Economics on </title>
-    <link>/tags/economics/</link>
-    <description>Recent content in Economics on </description>
+    <title>economics on </title>
+    <link>https://arbor-analytics.com/tags/economics/</link>
+    <description>Recent content in economics on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/economics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What does the price of carbon have to be for landowners to enroll in carbon markets?</title>
+      <link>https://arbor-analytics.com/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</guid>
+      <description>IntroductionCarbon has quickly become one of the most talked about commodities in our forests today. A variety of new and emerging carbon market programs are paying landowners for the carbon in their forests Carbon is the currency of interest when discussing trees and forests as natural climate solutions.
+While compliance-driven markets such as the California Air Resource Board’s (CARB) Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres.</description>
+    </item>
     
-	<atom:link href="/tags/economics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Timberlands as investments see biggest gain since 2014</title>
+      <link>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.
+The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
+    </item>
     
+    <item>
+      <title>Price of carbon recently hit a record high</title>
+      <link>https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</guid>
+      <description>The price of carbon per metric tonne reached a record high at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from November 2021, the settlement price of one metric tonne of carbon was $28.26. This represents a 21% increase from prices of $23.30 as recent as August 2021.
+Auction reserve prices have increased marginally over the last several years, ranging from $14.</description>
+    </item>
     
     <item>
       <title>Economic contribution of forestry employees across US states</title>
-      <link>/post/economic-contribution-of-forestry-employees-across-us-states/</link>
+      <link>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
+      <guid>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
       <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:
 250 companies comprise the pulp, paper, and paperboard mill industry in the US,The US forest products industry generates 5% of the manufacturing GDP ($169 billion),The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)56% of US forests are privately owned by family forest owners and companies.</description>
     </item>
     
     <item>
       <title>Reflections on the American Forestry Conference</title>
-      <link>/post/reflections-on-the-american-forestry-conference/</link>
+      <link>https://arbor-analytics.com/post/reflections-on-the-american-forestry-conference/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/reflections-on-the-american-forestry-conference/</guid>
+      <guid>https://arbor-analytics.com/post/reflections-on-the-american-forestry-conference/</guid>
       <description>Shawn Baker presents on trends in logging businesses.
 Last week I tuned into the American Forestry Conference, a virtual conference on the forest products industry and how forestry businesses can reshape the future US economy. The conference, organized by the Georgia Forestry Association, had 35 speakers that discussed topics such as the challenges and opportunities of the role of forestry in the current and future economic climate. In an email, the organizing committee reported 540 attendees from 26 US states.</description>
     </item>

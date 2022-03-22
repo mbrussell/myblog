@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.93.2" />
+        <title>Understanding the forest products industry using NAICS codes</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Understanding the forest products industry using NAICS codes</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/">Understanding the forest products industry using NAICS codes</a></h4>
+    <h5>May 8, 2021</h5>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-management"><kbd class="item-tag">data management</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/logging"><kbd class="item-tag">logging</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-industry"><kbd class="item-tag">forest industry</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/ppp-loans"><kbd class="item-tag">PPP loans</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/index_files/header-attrs/header-attrs.js"></script>
+<script src="https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/index_files/kePrint/kePrint.js"></script>
+<link href="https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<p>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.</p>
+<p>In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries. NAICS codes have been used extensively in several analyses of the forestry industry, including:</p>
+<ul>
+<li>Understanding how many <a href="https://meridian.allenpress.com/fpj/article-abstract/61/8/614/136584/Recession-Effects-on-the-Forests-and-Forest">jobs were lost</a> in the forestry sector as a result of the Great Recession,</li>
+<li>Understanding <a href="https://www.sciencedirect.com/science/article/pii/S1389934111000207?casa_token=85Ev-V_wR_IAAAAA:KTd5xH063RcCC8mAWivFcg7z27F_82Hf1gchbn700vTzsdXnerSZJLOjwlZ1Uc26NOXdV5k_tw">foreign direct investments</a> between the US and Canada within the forest products sector, and</li>
+<li>Determining <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/ajim.22357?casa_token=Gawv30aaTsEAAAAA%3AXnjND4TXf9fzhgnlIlMNovUAlk86DaUmh7toj_d3ht8RHql7moXkhiBuOJiH6Mq3r7868zeRVIBY_ts">heat-related illnesses</a> in the forestry sector in Washington.</li>
+</ul>
+<p>Using data from the <a href="https://www.naics.com/search/">NAICS website</a>, the following graph shows the number of existing marketable businesses according to their NAICS industry category:</p>
+<p><img src="https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>The names of the specific NAICS codes appear below along with the number of businesses. Businesses conducting millwork, logging, and support activities for forestry are the most common:</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-4">Table 1: </span>NAICS codes, names, and number of marketable US businesses in the forest products industry.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+NAICSCode
+</th>
+<th style="text-align:left;">
+NAICSName
+</th>
+<th style="text-align:right;">
+Businesses
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+321918
+</td>
+<td style="text-align:left;">
+Other Millwork (including Flooring)
+</td>
+<td style="text-align:right;">
+14687
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+113310
+</td>
+<td style="text-align:left;">
+Logging
+</td>
+<td style="text-align:right;">
+8250
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+115310
+</td>
+<td style="text-align:left;">
+Support Activities for Forestry
+</td>
+<td style="text-align:right;">
+5277
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321999
+</td>
+<td style="text-align:left;">
+All Other Miscellaneous Wood Product Manufacturing
+</td>
+<td style="text-align:right;">
+4507
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321920
+</td>
+<td style="text-align:left;">
+Wood Container and Pallet Manufacturing
+</td>
+<td style="text-align:right;">
+3383
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321113
+</td>
+<td style="text-align:left;">
+Sawmills
+</td>
+<td style="text-align:right;">
+2480
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+113110
+</td>
+<td style="text-align:left;">
+Timber Tract Operations
+</td>
+<td style="text-align:right;">
+2067
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322121
+</td>
+<td style="text-align:left;">
+Paper (except Newsprint) Mills
+</td>
+<td style="text-align:right;">
+1921
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322211
+</td>
+<td style="text-align:left;">
+Corrugated and Solid Fiber Box Manufacturing
+</td>
+<td style="text-align:right;">
+1852
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322220
+</td>
+<td style="text-align:left;">
+Paper Bag and Coated and Treated Paper Manufacturing
+</td>
+<td style="text-align:right;">
+1471
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321911
+</td>
+<td style="text-align:left;">
+Wood Window and Door Manufacturing
+</td>
+<td style="text-align:right;">
+1259
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321912
+</td>
+<td style="text-align:left;">
+Cut Stock, Resawing Lumber, and Planing
+</td>
+<td style="text-align:right;">
+1225
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322299
+</td>
+<td style="text-align:left;">
+All Other Converted Paper Product Manufacturing
+</td>
+<td style="text-align:right;">
+1140
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321992
+</td>
+<td style="text-align:left;">
+Prefabricated Wood Building Manufacturing
+</td>
+<td style="text-align:right;">
+1111
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+113210
+</td>
+<td style="text-align:left;">
+Forest Nurseries and Gathering of Forest Products
+</td>
+<td style="text-align:right;">
+962
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321214
+</td>
+<td style="text-align:left;">
+Truss Manufacturing
+</td>
+<td style="text-align:right;">
+869
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322219
+</td>
+<td style="text-align:left;">
+Other Paperboard Container Manufacturing
+</td>
+<td style="text-align:right;">
+663
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322130
+</td>
+<td style="text-align:left;">
+Paperboard Mills
+</td>
+<td style="text-align:right;">
+658
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321114
+</td>
+<td style="text-align:left;">
+Wood Preservation
+</td>
+<td style="text-align:right;">
+640
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321991
+</td>
+<td style="text-align:left;">
+Manufactured Home (Mobile Home) Manufacturing
+</td>
+<td style="text-align:right;">
+570
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322230
+</td>
+<td style="text-align:left;">
+Stationery Product Manufacturing
+</td>
+<td style="text-align:right;">
+412
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322291
+</td>
+<td style="text-align:left;">
+Sanitary Paper Product Manufacturing
+</td>
+<td style="text-align:right;">
+374
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322110
+</td>
+<td style="text-align:left;">
+Pulp Mills
+</td>
+<td style="text-align:right;">
+343
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321219
+</td>
+<td style="text-align:left;">
+Reconstituted Wood Product Manufacturing
+</td>
+<td style="text-align:right;">
+311
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321211
+</td>
+<td style="text-align:left;">
+Hardwood Veneer and Plywood Manufacturing
+</td>
+<td style="text-align:right;">
+299
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322212
+</td>
+<td style="text-align:left;">
+Folding Paperboard Box Manufacturing
+</td>
+<td style="text-align:right;">
+147
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321212
+</td>
+<td style="text-align:left;">
+Softwood Veneer and Plywood Manufacturing
+</td>
+<td style="text-align:right;">
+80
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321213
+</td>
+<td style="text-align:left;">
+Engineered Wood Member (except Truss) Manufacturing
+</td>
+<td style="text-align:right;">
+58
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322122
+</td>
+<td style="text-align:left;">
+Newsprint Mills
+</td>
+<td style="text-align:right;">
+34
+</td>
+</tr>
+</tbody>
+</table>
+<p>If you work with forest industry and economic data, get acquainted with the NAICS codes and how they can be used in your analysis.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/">How the logging industry in the Lake States used PPP loans</a></h4>
+    <h5>March 22, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/logging"><kbd class="item-tag">logging</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-industry"><kbd class="item-tag">forest industry</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/jobs"><kbd class="item-tag">jobs</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/ppp-loans"><kbd class="item-tag">PPP loans</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/">How the forest products industry used Paycheck Protection Program loans (2022 update)</a></h4>
+    <h5>February 12, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/ppp-loans"><kbd class="item-tag">PPP loans</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/logging"><kbd class="item-tag">logging</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/">Timberlands as investments see biggest gain since 2014</a></h4>
+    <h5>January 26, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/economics"><kbd class="item-tag">economics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-industry"><kbd class="item-tag">forest industry</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/timber-prices"><kbd class="item-tag">timber prices</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -1,32 +1,97 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Forest Industry on </title>
-    <link>/tags/forest-industry/</link>
-    <description>Recent content in Forest Industry on </description>
+    <title>forest industry on </title>
+    <link>https://arbor-analytics.com/tags/forest-industry/</link>
+    <description>Recent content in forest industry on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/forest-industry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How the logging industry in the Lake States used PPP loans</title>
+      <link>https://arbor-analytics.com/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</guid>
+      <description>Logging companies in the US Lake States requested $49.7 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020 and 2021. These loans were offered to 1,445 logging businesses in the Lake States.
+The SBA Paycheck Protection Program provides information on PPP loan distributions to businesses throughout the COVID-19 pandemic. Depending on the size of the business and its needs, loan amounts varied.</description>
+    </item>
     
-	<atom:link href="/tags/forest-industry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Timberlands as investments see biggest gain since 2014</title>
+      <link>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.
+The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
+    </item>
     
+    <item>
+      <title>Visualizing forest carbon trends in the last thirty years</title>
+      <link>https://arbor-analytics.com/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</link>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</guid>
+      <description>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.
+The value of carbon in forests has seen a tremendous increase in recent years. The increased role of forests in meeting climate challenges has required analysts to have a better understanding of carbon attributes in the forests they work in.</description>
+    </item>
+    
+    <item>
+      <title>H-2B workers: essential to the forest products industry</title>
+      <link>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</guid>
+      <description>In Cabinet Battle #1, one of the most popular songs from the musical Hamilton, Alexander Hamilton and Thomas Jefferson discuss the role of the federal government in assuming the financial debt of states. It’s the late 1780s, and Hamilton has ideas for a national bank that Jefferson and many Southerners aren’t fans of.
+Near the end of Hamilton’s verse, he states that it’s odd to take “civics lessons from a slaver”.</description>
+    </item>
+    
+    <item>
+      <title>The forest products industry’s use of Paycheck Protection Program loans</title>
+      <link>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</link>
+      <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</guid>
+      <description>SummaryThe Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 34,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 485,000 workers in the forest industry.</description>
+    </item>
+    
+    <item>
+      <title>Understanding the forest products industry using NAICS codes</title>
+      <link>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
+      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.
+In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
+    </item>
+    
+    <item>
+      <title>Maine logging industry&#39;s use of PPP loans</title>
+      <link>https://arbor-analytics.com/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</guid>
+      <description>Logging companies in Maine requested at least $13.8 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020. These loans were offered to 256 logging businesses in Maine in the spring and early summer of 2020.
+The SBA Paycheck Protection Program Loan Level Data provides information on PPP loan distributions to businesses made through August 8, 2020. Depending on the size of the business and its needs, loan amounts varied.</description>
+    </item>
     
     <item>
       <title>Economic contribution of forestry employees across US states</title>
-      <link>/post/economic-contribution-of-forestry-employees-across-us-states/</link>
+      <link>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
+      <guid>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
       <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:
 250 companies comprise the pulp, paper, and paperboard mill industry in the US,The US forest products industry generates 5% of the manufacturing GDP ($169 billion),The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)56% of US forests are privately owned by family forest owners and companies.</description>
     </item>
     
     <item>
       <title>Using clustering with logging industry data</title>
-      <link>/post/using-clustering-with-logging-industry-data/</link>
+      <link>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</link>
       <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/using-clustering-with-logging-industry-data/</guid>
+      <guid>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</guid>
       <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.
 The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.
 Clustering is an unsupervised ML algorithm that groups items.</description>
@@ -34,10 +99,10 @@ Clustering is an unsupervised ML algorithm that groups items.</description>
     
     <item>
       <title>H-2B guest workers in forestry: by the numbers</title>
-      <link>/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</link>
+      <link>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</guid>
+      <guid>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</guid>
       <description>Guest workers regenerating a northern Minnesota forest. (photo: @Chris_KTDunham, Twitter)
 Guest workers hired through the H-2B visa program get jobs done. This is especially true across many forestry companies. Guest workers plant trees, conduct silvicultural treatments, and assist in tree nursery production.
 A strong guest worker program can lead to a future forest products industry that is healthy and sustainable in the long term.

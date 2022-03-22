@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>citizen data science on </title>
+    <link>https://arbor-analytics.com/tags/citizen-data-science/</link>
+    <description>Recent content in citizen data science on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/citizen-data-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The importance of citizen data scientists in forest analytics</title>
+      <link>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
+      <description>As a part of my work with the University of Minnesota Extension, we run the Assessing Vegetation Impacts from Deer program. The AVID program engages citizen scientists to monitor tree seedlings that are susceptible to browse from white-tailed deer. With little information on deer browse impacts for most of Minnesota’s tree species, the data are beginning to provide insights on how deer browse degrades the health of the forest.</description>
+    </item>
+    
+  </channel>
+</rss>

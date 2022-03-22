@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.93.2" />
+        <title>Testing the assumption: Half of the biomass of a tree is carbon</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Testing the assumption: Half of the biomass of a tree is carbon</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/">Testing the assumption: Half of the biomass of a tree is carbon</a></h4>
+    <h5>June 20, 2021</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/header-attrs/header-attrs.js"></script>
+<script src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/kePrint/kePrint.js"></script>
+<link href="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<center>
+<p><img src="wood.jpg" width="500" /></p>
+</center>
+<p>“Half of the biomass of a tree is carbon.” This has been a widely spoken statement made by many foresters and scientists alike. Most forest carbon assessments use the 50% rule and it generally works well.</p>
+<p>In forest analytics, determining <a href="https://arbor-analytics.com/post/how-to-calculate-how-much-carbon-is-in-a-tree/">the amount of carbon in a tree</a> is first based on estimating its biomass. At the individual tree level, a biomass equation can be developed based on a tree’s diameter, height, species, region, and other tree and stand characteristics.</p>
+<p>Biomass is then multiplied by a carbon concentration factor for the wood, such as the 50% value. For example, if the aboveground dry weight for a 20-inch diameter tree is 3,000 pounds, it would contain 1,500 pounds of carbon.</p>
+<p>Wood is comprised of cellulose, hemicellulose, and lignin, each with varying carbon concentrations across different tree species and regions. So how well does the 50% assumption hold if we compare it to what was found in a recently published study?</p>
+<div id="carbon-in-maines-forests" class="section level2">
+<h2>Carbon in Maine’s forests</h2>
+<p>In 2018, Martin and colleagues compiled a database of <a href="https://www.nature.com/articles/s41561-018-0246-x">wood concentrations for species around the world</a>. They found that for hardwood species in temperate regions, the average carbon concentration was <strong>46.5%</strong> (averaged across 111 species). For temperate conifers, the average carbon concentration of wood <strong>50.1%</strong> (averaged across 45 species).</p>
+<p>Obtaining data from the <a href="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/">tidyFIA package in R</a>, we can simulate how these different carbon concentration factors result in different estimates of carbon at the tree and stand scales. Obtaining Forest Inventory and Analysis (FIA) data from Maine, USA results in 14,876 unique remeasurements of forest plots:</p>
+<p><img src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Biomass and carbon of trees in the FIA program are estimated using the <a href="https://www.nrs.fs.fed.us/pubs/39555">component ratio method (CRM)</a>, a set of regional volume equations that ultimately predict carbon in aboveground portions of trees. We can modify the carbon concentration used in the CRM method to look at different assessments of carbon stored in individual trees.</p>
+<p>The figure below displays the carbon content of each tree, separated by conifers and hardwoods. Note that the carbon estimates for conifers are similar for both concentrations and generally follow the 1:1 line. (50.1% is awfully close to the default value of 50.0%.) However, for large hardwood trees, note that the 50% carbon assumption leads to “overestimates” compared to the revised 46.5% concentration:</p>
+<p><img src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>At the individual tree level, slight differences in carbon estimates will occur, especially for large-diameter hardwoods. But what about when trees are scaled to the pot level and represented on a per acre basis?</p>
+<p>The figure below shows the “overprediction” of carbon using the 50% assumption relative to the carbon concentrations which vary for hardwoods and conifers (46.5% and 50.1%). The blue regression line follows the trend for FIA plots in Maine and can be compared to the black 1:1 line:</p>
+<p><img src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>On average, there’s <strong>4% less carbon</strong> on FIA plots in Maine using the hardwood- and conifer-specific carbon concentrations compared to the 50% assumption. There are 16.2 tons/acre for the 50% concentration and 15.6 tons/acre using the hardwood- and conifer-specific carbon concentration. For stands with large trees with lots of biomass (e.g., large-diameter oaks and maples in Maine), these differences would be more apparent.</p>
+<p>We can analyze the Maine data to better understand carbon differences across ecological subsections. Six of Maine’s most common ecological subsections vary in terms of their species composition and stand structures.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-13">Table 1: </span>Six most common ecological subsections in Maine.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+ecosubcd
+</th>
+<th style="text-align:left;">
+name
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+211Aa
+</td>
+<td style="text-align:left;">
+Aroostook Hills Subsection
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+211Bb
+</td>
+<td style="text-align:left;">
+Maine-New Brunswick Lowlands Subsection
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+211Da
+</td>
+<td style="text-align:left;">
+Central Maine Embayment Subsection
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+M211Ab
+</td>
+<td style="text-align:left;">
+St. John Upland Subsection
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+M211Ac
+</td>
+<td style="text-align:left;">
+Maine Central Mountains Subsection
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+M211Af
+</td>
+<td style="text-align:left;">
+Connecticut Lakes Subsection
+</td>
+</tr>
+</tbody>
+</table>
+<p>Regions that have a strong hardwood component, such as the Maine Central Mountains Subsection and the Connecticut Lakes Subsection, show stark different in high biomass areas when comparing the different carbon concentration factors.</p>
+<p><img src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>The choice of which concentration factor to use will provide different values in any carbon assessment. It is important to be familiar with which carbon concentration factors are used in the assessments you’re involved with. While “half of the biomass of a tree is carbon” is generally a true statement for conifers in temperate regions, analysts working on carbon projects with large-diameter hardwood species should assess these broad assumptions about carbon in wood.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/">How the logging industry in the Lake States used PPP loans</a></h4>
+    <h5>March 22, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/logging"><kbd class="item-tag">logging</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-industry"><kbd class="item-tag">forest industry</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/jobs"><kbd class="item-tag">jobs</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/ppp-loans"><kbd class="item-tag">PPP loans</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-03-10-forest-carbon-in-maine-an-introduction/">Forest carbon in Maine: an introduction</a></h4>
+    <h5>March 10, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/carbon-markets"><kbd class="item-tag">carbon markets</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/">What does the price of carbon have to be for landowners to enroll in carbon markets?</a></h4>
+    <h5>February 22, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/carbon-markets"><kbd class="item-tag">carbon markets</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/economics"><kbd class="item-tag">economics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

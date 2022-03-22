@@ -1,0 +1,17 @@
+---
+title: Podcast
+author: Matt Russell
+date: '2022-01-03'
+slug: podcast
+---
+
+## Podcast  
+  
+#### The Forest Analytics Landing
+
+<left>
+![](/podcast_cover_small3.png){width=300px}
+
+The [Forest Analytics Landing podcast](https://anchor.fm/matthew-russell95) highlights current events, emerging research, and new opportunities in forest analytics. It provides commentary and shares stories about how organizations are solving forestry problems by leveraging data to make informed decisions.  
+
+**[**LISTEN HERE**](https://anchor.fm/matthew-russell95)**

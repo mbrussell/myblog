@@ -1,42 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Logging on </title>
-    <link>/tags/logging/</link>
-    <description>Recent content in Logging on </description>
+    <title>logging on </title>
+    <link>https://arbor-analytics.com/tags/logging/</link>
+    <description>Recent content in logging on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How the logging industry in the Lake States used PPP loans</title>
+      <link>https://arbor-analytics.com/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</guid>
+      <description>Logging companies in the US Lake States requested $49.7 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020 and 2021. These loans were offered to 1,445 logging businesses in the Lake States.
+The SBA Paycheck Protection Program provides information on PPP loan distributions to businesses throughout the COVID-19 pandemic. Depending on the size of the business and its needs, loan amounts varied.</description>
+    </item>
     
-	<atom:link href="/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How the forest products industry used Paycheck Protection Program loans (2022 update)</title>
+      <link>https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</link>
+      <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</guid>
+      <description>SummaryThe Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 35,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 487,000 workers in the forest industry.</description>
+    </item>
     
+    <item>
+      <title>Understanding the forest products industry using NAICS codes</title>
+      <link>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
+      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.
+In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
+    </item>
+    
+    <item>
+      <title>Maine logging industry&#39;s use of PPP loans</title>
+      <link>https://arbor-analytics.com/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</guid>
+      <description>Logging companies in Maine requested at least $13.8 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020. These loans were offered to 256 logging businesses in Maine in the spring and early summer of 2020.
+The SBA Paycheck Protection Program Loan Level Data provides information on PPP loan distributions to businesses made through August 8, 2020. Depending on the size of the business and its needs, loan amounts varied.</description>
+    </item>
     
     <item>
       <title>Economic contribution of forestry employees across US states</title>
-      <link>/post/economic-contribution-of-forestry-employees-across-us-states/</link>
+      <link>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
+      <guid>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
       <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:
 250 companies comprise the pulp, paper, and paperboard mill industry in the US,The US forest products industry generates 5% of the manufacturing GDP ($169 billion),The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)56% of US forests are privately owned by family forest owners and companies.</description>
     </item>
     
     <item>
       <title>Wages for logging truckers much lower than other transportation industries</title>
-      <link>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
+      <link>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
+      <guid>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
       <description>“To solve any problem in forestry, first figure out where the roads will go.”
 That is a quote that I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it.</description>
     </item>
     
     <item>
       <title>Using clustering with logging industry data</title>
-      <link>/post/using-clustering-with-logging-industry-data/</link>
+      <link>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</link>
       <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/using-clustering-with-logging-industry-data/</guid>
+      <guid>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</guid>
       <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.
 The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.
 Clustering is an unsupervised ML algorithm that groups items.</description>
@@ -44,20 +79,20 @@ Clustering is an unsupervised ML algorithm that groups items.</description>
     
     <item>
       <title>How do loggers feel? Sentiment analysis on the opinions of logging contractors</title>
-      <link>/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
+      <link>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
       <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
+      <guid>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
       <description>After we conduct a survey, we have a routine for analyzing the data. Summarize the numerical responses and report values like means for specific questions. Group the data into different demographics and report the means within these categories.
 If we ask for any qualitative data through comments (e.g., “What is your opinion of X?”), the responses are always worth reading. We often get a lot of insight from reading an individual’s comments, and these comments can unveil new dimensions of our analysis.</description>
     </item>
     
     <item>
       <title>New logging companies with old equipment: Finding patterns in logging businesses using clustering</title>
-      <link>/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
+      <link>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
+      <guid>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
       <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.
 As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
     </item>

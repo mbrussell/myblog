@@ -1,22 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Citations on </title>
-    <link>/tags/citations/</link>
-    <description>Recent content in Citations on </description>
+    <title>citations on </title>
+    <link>https://arbor-analytics.com/tags/citations/</link>
+    <description>Recent content in citations on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/citations/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 19 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/citations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Peer review: Lessons learned from reviewing 100 forest science manuscripts</title>
+      <link>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</link>
+      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</guid>
+      <description>Photo by Annie Spratt on Unsplash.
+This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.</description>
+    </item>
     
     <item>
       <title>Which forest biometrics researchers get the most citations?</title>
-      <link>/post/which-forest-biometrics-faculty-get-the-most-citations/</link>
+      <link>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</link>
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/which-forest-biometrics-faculty-get-the-most-citations/</guid>
+      <guid>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</guid>
       <description>Researchers in the forest and natural resource sciences are measured by their productivity: how many publications they write and how many times those publications are cited by other researchers. Researchers that have many publications that are cited in the literature by others generally have rewarding careers and are promoted.
 In 2017 I wrote a blog post for the Ecological Society of America’s Early Career Ecologist section that provided some evidence that early-career scientists publish earlier in their careers compared to more senior researchers.</description>
     </item>

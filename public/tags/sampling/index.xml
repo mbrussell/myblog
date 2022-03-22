@@ -1,42 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sampling on </title>
-    <link>/tags/sampling/</link>
-    <description>Recent content in Sampling on </description>
+    <title>sampling on </title>
+    <link>https://arbor-analytics.com/tags/sampling/</link>
+    <description>Recent content in sampling on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/sampling/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/sampling/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ruffed grouse and West Nile: A review of the binomial distribution</title>
-      <link>/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
+      <link>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
+      <guid>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
       <description>There’s been a lot of talk in the wildlife community about the West Nile virus and its impacts on ruffed grouse populations.
 In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive.</description>
     </item>
     
     <item>
       <title>A 50-year history of forest measurements by analyzing Forest Measurements</title>
-      <link>/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</link>
+      <link>https://arbor-analytics.com/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</guid>
+      <guid>https://arbor-analytics.com/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</guid>
       <description>If you’ve even taken a course in forest measurements, you likely used Forest Measurements as the textbook. The first edition of forest measurements was published in 1967 by Thomas Eugene Avery and included a number of topics related to forest inventory, sampling forest resources, and tree and stand measurements.
 The book recently published its 6th edition in 2018 and is available through Waveland Press. Investigating how the book has incorporated new topics gives insights into the advances of the field of forest measurements:</description>
     </item>
     
     <item>
       <title>Stratified vs. simple random sampling: fun with forestsamplr</title>
-      <link>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</link>
+      <link>https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</link>
       <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
+      <guid>https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
       <description>Tools for estimating population means for stratified and simple random samplesIf we know the size of a number of subpopulations that are a part of a larger population, we can use stratified random sampling to come up with a more precise estimate of a population mean. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling.</description>
     </item>
     

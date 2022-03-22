@@ -1,22 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Statistics on </title>
-    <link>/tags/statistics/</link>
-    <description>Recent content in Statistics on </description>
+    <title>statistics on </title>
+    <link>https://arbor-analytics.com/tags/statistics/</link>
+    <description>Recent content in statistics on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Random forests: a tutorial with forestry data</title>
+      <link>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</guid>
+      <description>Random forests have quickly become one of the most popular analytical techniques used in forestry today. Random forests (RF) are a machine learning technique that differ in many ways to traditional prediction models such as regression. Random forests can handle a lot of data, can be applied to classification or regression problems, and rank the relative importance of many variables that are related to a response variable of interest.</description>
+    </item>
     
-	<atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The importance of citizen data scientists in forest analytics</title>
+      <link>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
+      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
+      <description>As a part of my work with the University of Minnesota Extension, we run the Assessing Vegetation Impacts from Deer program. The AVID program engages citizen scientists to monitor tree seedlings that are susceptible to browse from white-tailed deer. With little information on deer browse impacts for most of Minnesota’s tree species, the data are beginning to provide insights on how deer browse degrades the health of the forest.</description>
+    </item>
     
+    <item>
+      <title>How well does the &#34;quick and dirty&#34; standard deviation approximation work?</title>
+      <link>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</link>
+      <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</guid>
+      <description>Photo by Chris Liverani on Unsplash.
+The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.
+When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data.</description>
+    </item>
     
     <item>
       <title>Mixed models in R: a primer</title>
-      <link>/post/mixed-models-a-primer/</link>
+      <link>https://arbor-analytics.com/post/mixed-models-a-primer/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/mixed-models-a-primer/</guid>
+      <guid>https://arbor-analytics.com/post/mixed-models-a-primer/</guid>
       <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:
 “I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
 The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
@@ -24,40 +49,40 @@
     
     <item>
       <title>31 R packages for forest analysts</title>
-      <link>/post/31-r-packages-for-forest-analysts/</link>
+      <link>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/31-r-packages-for-forest-analysts/</guid>
+      <guid>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</guid>
       <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.
 The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
     </item>
     
     <item>
       <title>Modeling in the tidyverse, an example predicting tree biomass</title>
-      <link>/post/fit-many-models-with-broom/</link>
+      <link>https://arbor-analytics.com/post/fit-many-models-with-broom/</link>
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/fit-many-models-with-broom/</guid>
+      <guid>https://arbor-analytics.com/post/fit-many-models-with-broom/</guid>
       <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.
 The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
     </item>
     
     <item>
       <title>How to determine accuracy of classification models (with forestry data)</title>
-      <link>/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
+      <link>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
       <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
+      <guid>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
       <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.
 You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
     </item>
     
     <item>
       <title>The three kinds of data scientists in forestry</title>
-      <link>/post/the-three-kinds-of-data-scientists-in-forestry/</link>
+      <link>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/the-three-kinds-of-data-scientists-in-forestry/</guid>
+      <guid>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</guid>
       <description>Data scientists are highly sought after professionals across tens of thousands of companies. And there&amp;rsquo;s a difference between what a data scientist does and what a statistician does.
 The field of statistics has been around for centuries, while data science programs at universities are just now beginning to graduate their first students.
 In statistics, hypotheses are evaluated. In data science, hypotheses are generated. Statistics is often considered a primary data analysis technique, while data science is often considered secondary.</description>
@@ -65,10 +90,10 @@ In statistics, hypotheses are evaluated. In data science, hypotheses are generat
     
     <item>
       <title>Ruffed grouse and West Nile: A review of the binomial distribution</title>
-      <link>/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
+      <link>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
+      <guid>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
       <description>There’s been a lot of talk in the wildlife community about the West Nile virus and its impacts on ruffed grouse populations.
 In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive.</description>
     </item>

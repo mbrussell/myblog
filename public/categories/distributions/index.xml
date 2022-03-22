@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Distributions on </title>
-    <link>/categories/distributions/</link>
+    <link>https://arbor-analytics.com/categories/distributions/</link>
     <description>Recent content in Distributions on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/distributions/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/distributions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ruffed grouse and West Nile: A review of the binomial distribution</title>
-      <link>/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
+      <link>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
+      <guid>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
       <description>There’s been a lot of talk in the wildlife community about the West Nile virus and its impacts on ruffed grouse populations.
 In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive.</description>
     </item>
