@@ -1,25 +1,23 @@
 ---
-title: "How the logging industry in the Lake States used PPP loans"
-author: "Matt Russell"
-date: '2022-03-21'
-output: word_document
+title: How the logging industry in the Lake States used PPP loans
+author: Matt Russell
+date: '2022-03-22'
+slug: []
 categories:
-  - Forest products
+  - Logging
 tags:
+  - analytics
   - logging
-  - forest industry
   - forest products
+  - forest industry
   - jobs
   - PPP loans
-slug: []
 ---
 
 <center>
 ![](timber harvest maine weyerhaeuser2.jpg){width=400px}
 </center>
 
-
- 
 Logging companies in the US Lake States requested $49.7 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020 and 2021. These loans were offered to 1,445 logging businesses in the Lake States.
 
 The [SBA Paycheck Protection Program](https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program/ppp-data) provides information on PPP loan distributions to businesses throughout the COVID-19 pandemic. Depending on the size of the business and its needs, loan amounts varied.
