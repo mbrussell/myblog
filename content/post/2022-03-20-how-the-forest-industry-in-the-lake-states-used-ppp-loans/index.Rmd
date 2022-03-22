@@ -1,8 +1,8 @@
 ---
-title: 'How the logging industry in the Lake States used PPP loans'
-author: Matt Russell
+title: "How the logging industry in the Lake States used PPP loans"
+author: "Matt Russell"
 date: '2022-03-21'
-slug: []
+output: word_document
 categories:
   - Forest products
 tags:
@@ -11,6 +11,7 @@ tags:
   - forest products
   - jobs
   - PPP loans
+slug: []
 ---
 
 <center>
