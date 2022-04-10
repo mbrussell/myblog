@@ -10,7 +10,7 @@ tags:
   - carbon markets
   - carbon credits
   - forest carbon
-draft: yes
+  - forestry
 ---
 
 <center>
@@ -43,7 +43,7 @@ In his presentation, Hourdequin presents three case studies using forests in his
 
 * In **Michigan**, Lyme forests have had a long history of timber harvesting. In Lyme’s analysis, the true cost of carbon for them was $60/tonne.
 * In **Florida**, this Lyme forest is under conservation easement. True cost of carbon: $50/tonne. 
-* In a **West Virginia** property, this forest is currently enrolled in a CARB project. True cost of carbon: $30/tonne.
+* In a **West Virginia** property, this forest is currently enrolled in a CARB project. True cost of carbon: $30/tonne. 
 
 The primary conclusions are that at low prices, the quantity for carbon credits will generally be preferred instead of the quality of credits. If buyers of carbon credits are willing to pay, there may be additional opportunities for focusing on credits that reflect the true value of carbon. For example, the three case studies from Lyme’s forests indicate higher rates payments that integrate the full suite of costs that are higher than current market rates.  
 
