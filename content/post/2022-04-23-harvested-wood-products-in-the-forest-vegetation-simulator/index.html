@@ -1,0 +1,311 @@
+---
+title: Harvested wood products in the Forest Vegetation Simulator
+author: Matt Russell
+date: '2022-04-23'
+slug: []
+categories:
+  - Forest products
+tags:
+  - analytics
+  - carbon
+  - forest carbon
+  - forest products
+  - harvested wood products
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<center>
+<p><img src="wood.jpg" width="500" /></p>
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>Carbon is stored and sequestered in growing forests. It can also can be stored “off site” in the form of harvested wood products. These can be in short-lived products (i.e., paper or pulp) or long-lived ones (i.e., utility poles).</p>
+<p>Harvested wood products in use and solid waste disposal sites (e.g., landfills) represent <a href="https://arbor-analytics.com/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/">4.5% of the total amount of carbon in the US</a>. When using wood products, lower emissions are used compared fossil fuel-intensive materials such as steel and concrete. Substituting the use of wood products as opposed to greenhouse gas-intensive construction materials is an environmentally sound approach with a lower overall carbon footprint.</p>
+<p>With the interest in forecasting forest carbon through time, the <a href="https://www.fs.fed.us/fvs/">Forest Vegetation Simulator (FVS)</a> is a commonly used model that also incorporates estimates of carbon stored in harvested wood products. The FVS model was developed by the USDA Forest Service. It is an individual tree model that uses lists of trees (e.g., species and tree diameter) to forecast forest growth through time. The FVS model is an approved growth and yield model in many forest carbon programs, including the California Air Resources Board’s <a href="https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program/compliance-offset-protocols/us-forest-projects/models">Compliance Offset Program</a>.</p>
+</div>
+<div id="harvested-wood-products-in-fvs" class="section level2">
+<h2>Harvested wood products in FVS</h2>
+<p>The harvested carbon report from FVS simulates carbon in harvested merchantable material. Carbon that is harvested is proportioned into different pools. The amount of carbon stored in a product pool changes over time as wood decays or transitions to another pool. The harvested carbon report tracks carbon stored in four pools:</p>
+<ul>
+<li>Products in use</li>
+<li>Products in solid waste disposal sites (i.e., landfills)</li>
+<li>Carbon emitted from combustion with energy capture (energy)</li>
+<li>Carbon emitted from combustion or decay without energy capture (emissions)</li>
+</ul>
+<p>To visualize the harvested wood products report from FVS, I used the Lake States geographic variant to simulate aspen growth starting at a density of 1,000 trees per acre with a site index of 60 feet at 50 years. Aspen was grown to a harvest a rotation of 50 years until a clearcut harvest was specified in the simulation.</p>
+<p>After simulating through 50 years, the stand stored 22.5 US tons/acre of carbon in the aboveground live portion of trees. In the clearcut harvest, 16.6 US tons/acre of carbon were removed from the merchantable portion.</p>
+<p>The majority of merchantable carbon removed immediately transitioned into harvested wood products in use (11.30 tons/ac). Ten years following the harvest, some of the carbon transitioned into solid waste disposal sites.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-6">Table 1: </span>Example harvested carbon information from FVS (values in US tons/acre), with a clearcut harvest in aspen simulated at year 50.
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Age (years)
+</th>
+<th style="text-align:right;">
+Products
+</th>
+<th style="text-align:right;">
+SWDS
+</th>
+<th style="text-align:right;">
+Energy
+</th>
+<th style="text-align:right;">
+Emissions
+</th>
+<th style="text-align:right;">
+Merch Carbon Stored
+</th>
+<th style="text-align:right;">
+Merch Carbon Removed
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+11.30
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+2.74
+</td>
+<td style="text-align:right;">
+2.48
+</td>
+<td style="text-align:right;">
+11.30
+</td>
+<td style="text-align:right;">
+16.6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:right;">
+6.01
+</td>
+<td style="text-align:right;">
+1.85
+</td>
+<td style="text-align:right;">
+4.38
+</td>
+<td style="text-align:right;">
+4.33
+</td>
+<td style="text-align:right;">
+7.85
+</td>
+<td style="text-align:right;">
+16.6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+70
+</td>
+<td style="text-align:right;">
+4.61
+</td>
+<td style="text-align:right;">
+2.19
+</td>
+<td style="text-align:right;">
+4.82
+</td>
+<td style="text-align:right;">
+4.95
+</td>
+<td style="text-align:right;">
+6.80
+</td>
+<td style="text-align:right;">
+16.6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+4.05
+</td>
+<td style="text-align:right;">
+2.29
+</td>
+<td style="text-align:right;">
+4.97
+</td>
+<td style="text-align:right;">
+5.26
+</td>
+<td style="text-align:right;">
+6.34
+</td>
+<td style="text-align:right;">
+16.6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+90
+</td>
+<td style="text-align:right;">
+3.63
+</td>
+<td style="text-align:right;">
+2.39
+</td>
+<td style="text-align:right;">
+5.06
+</td>
+<td style="text-align:right;">
+5.49
+</td>
+<td style="text-align:right;">
+6.01
+</td>
+<td style="text-align:right;">
+16.6
+</td>
+</tr>
+</tbody>
+</table>
+<p>The amount of carbon stored in products in use declined through time, while the amount in solid waste disposal sites increased. Ultimately, after 40 years since harvest, approximately half of the merchantable carbon stored remained in products in use or solid waste disposal sites (6.01 US tons/acre), with the other half decayed or burned.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>The harvested wood products reports in FVS provide important details about the fate of carbon. The article <a href="https://www.fs.usda.gov/treesearch/pubs/37449">“Forest carbon estimation using FVS: seven things you need to know”</a> by Hoover and Rebain is a great resource to learn more about estimating carbon with FVS and how to interpret the harvested wood products numbers.</p>
+<p>A tool like FVS can be leveraged to better understand the contributions of harvested wood products in understanding the longevity of forest carbon. Not incorporating harvested wood product data in simulations of forest carbon can underestimate the total amount of carbon being stored.</p>
+<p>–</p>
+<p><em>By Matt Russell</em></p>
+<p><em><a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments. Sign up for <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">The Landing</a> for monthly in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
