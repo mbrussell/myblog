@@ -1,0 +1,117 @@
+---
+title: Reading in data quickly into R
+author: Matt Russell
+date: '2022-05-22'
+slug: []
+categories:
+  - Analytics
+tags:
+  - analytics
+  - Data science
+  - data import
+  - data management
+---
+
+<center>
+
+![](datass.jpg){width=500px}
+
+</center>
+
+##
+
+If you're like me, you work with a lot of data files in your daily analytical work. Despite the increase in cloud computing, reading in files locally to the machine your working on is common.
+
+You want a rapid summary of your data and don't want to wait forever for your computer to read in the file you're working with. To do this, you want to use functions that are efficient and effective for working with large amounts of data. 
+
+If you're using R, there are several functions to read in data depending on your needs. This post summarizes three common functions in R that read in data and compares their speed. 
+
+## The plant dictionary data set
+
+The US Department of Agriculture's [Forest Inventory and Analysis program](https://www.fia.fs.fed.us/) collects information on the status and trends of forests across the country. The *REF_PLANT_DICTIONARY* data table is an important one contained on the [FIA Datamart webpage](https://apps.fs.usda.gov/fia/datamart/CSV/datamart_csv.html). 
+
+This data table contains 81,489 rows and 39 variables and is stored as a comma separated data file (i.e., a .csv format). The tables contains information on all of the plant species recorded in the FIA database:
+
+
+```{r, echo = F, message = F, warning = F}
+library(tidyverse)
+```
+
+```{r, echo = F, message = F, warning = F}
+tree <- read.csv('C://Users//russellm//Downloads//REF_PLANT_DICTIONARY.csv')
+head(tibble(tree))
+```
+
+The data set is a large enough one that we will see differences in the speed at which different functions read in the data.
+
+### read.csv()
+
+One of the most common functions for reading in data in R is `read.csv()`. This function is available in the base version of R and is used regularly for reading in data:
+
+```{r, echo = F, eval = F, message = F, warning = F}
+read.csv('C://Users//russellm//Downloads//REF_PLANT_DICTIONARY.csv')
+```
+
+```{r, eval = F, message = F, warning = F}
+read.csv('C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv')
+```
+
+### read_csv()
+
+There's a slight difference in the name of this function, but it leads to a big impact. The `read_csv()` function is available from the **readr** package, one of the many packages available in the **tidyverse** megapackage. The only difference is using the underscore instead of a period. 
+
+The primary difference in the `read_csv()` function is that instead of treating the data as a data frame, it treats it as a tibble, the tidyverse's implementation of a data set in R: 
+
+```{r, message = F, warning = F}
+library(tidyverse)
+```
+
+```{r, echo = F, eval = F, message = F, warning = F}
+read_csv('C://Users//russellm//Downloads//REF_PLANT_DICTIONARY.csv')
+```
+
+```{r, eval = F, message = F, warning = F}
+read_csv('C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv')
+```
+
+### fread()
+
+The **data.table** package is well known to work well with large data sets. For reading in .csv files, the `fread()` function works well. Like the `read.csv()` function, after it reads in the data it is stored as a data frame:
+
+```{r, message = F, warning = F}
+library(data.table)
+```
+
+```{r, echo = F, eval = F, message = F, warning = F}
+fread('C://Users//russellm//Downloads//REF_PLANT_DICTIONARY.csv')
+```
+
+```{r, eval = F, message = F, warning = F}
+fread('C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv')
+```
+
+To compare speeds of the different function, we can run the `system.time()` function
+
+```{r, eval = F, message = F, warning = F}
+system.time(read.csv('C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv'))
+system.time(read_csv('C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv'))
+system.time(fread('C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv'))
+```
+
+```{r, echo = F, message = F, warning = F}
+system.time(read.csv('C://Users//russellm//Downloads//REF_PLANT_DICTIONARY.csv'))
+system.time(read_csv('C://Users//russellm//Downloads//REF_PLANT_DICTIONARY.csv'))
+system.time(fread('C://Users//russellm//Downloads//REF_PLANT_DICTIONARY.csv'))
+```
+
+We can see that the `read.csv()` function takes the longest time to read in the data, followed by `read_csv()`. The `fread()` function takes the shortest time to read in the data. (For reference, I'm running an i7 processor with four cores on a laptop that's four years old.)
+
+There are pros and cons for each of the functions depending on your needs. For speed, the `fread()` function is quickest to get data read into your session. Analysts that work within the tidyverse suite of packages will find the `read_csv()` function advantageous because it imports and stores tables as tibbles. I've rarely had an issue with the `read.csv()` function, and it's considered the standard function for getting data into R. 
+
+Depending on your needs and the size of the data you're working with, consider implementing these functions for reading in data into R in the future.
+
+--
+
+*By Matt Russell*
+
+*[Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for [The Landing](https://mailchi.mp/d96897dc0f46/arbor-analytics) for monthly in-depth analysis on data and analytics in the forest products industry.*
