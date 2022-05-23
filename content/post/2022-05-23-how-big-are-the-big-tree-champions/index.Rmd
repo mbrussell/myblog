@@ -103,7 +103,7 @@ tree_summ %>%
 For balsam fir, an 18.7-inch tree measured in an FIA plot was almost as large as the diameter of the Maine's champion tree (19.7 in). Many FIA plots did not record a tree that was at least 50% of the diameter of the largest champion tree.
 
 This short exercise indicates how we can use champion tree data to better understand the maximum size of trees. Whether to understand the longevity of a species or to quantify the amount of volume, biomass, or carbon within it, insights can be unearthed by looking at these data that may otherwise be categorized as "outliers".
-
+ 
 --
 
 *By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
