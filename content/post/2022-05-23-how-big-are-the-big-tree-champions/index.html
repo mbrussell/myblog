@@ -1,0 +1,208 @@
+---
+title: How "big" are the Big Tree Champions?
+author: Matt Russell
+date: '2022-05-23'
+slug: []
+categories:
+  - Forest measurements
+tags:
+  - analytics
+  - Data science
+  - forest measurements
+  - forest inventory
+  - big tree
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<center>
+<p><img src="oaktree.jpg" width="500" /></p>
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>You might have heard this before: “I just saw the largest <strong>X</strong> tree in the state!”</p>
+<p>I have always been curious about the trees that make the list of state tree champions, or “big trees”. For nearly every state in the US, a list of the largest trees of each species are maintained. As landowners and foresters roam the woods, they can report a potential champion tree. (For context, a team of wildlife researchers came across the <a href="https://www.twincities.com/2018/12/05/jack-pine-voyageurs-national-park-mn-largest-recorded-in-us/">largest jack pine in the US</a> in 2018 when they were studying wolves in northern Minnesota.)</p>
+<p>A tree becomes a champion after a careful measurement of the circumference, height, and crown width of the tree. A points system tallies up these measurements and compares it to the current champion for that species.</p>
+<p>While these big trees might be considered “outliers” from a forest measurements perspective, understanding how they compare to measurements of the same species can be insightful. There is scientific interest in understanding the growth and size limits of trees. A lot more carbon is stored in a big tree, and there are few studies which have directly measured the amount of biomass in big trees.</p>
+</div>
+<div id="the-maine-register-of-big-trees" class="section level2">
+<h2>The Maine Register of Big Trees</h2>
+<p>I was curious to see how these champion trees compare the the size of most trees growing in a state. So I turned to some data.</p>
+<p><a href="https://digitalmaine.com/for_docs/265/">The Maine Register of Big Trees</a> contains measurements from 146 different species representing big trees in the state, including six national champion trees. I chose to focus on the ten most common species in the state, as identified from summarizing the <a href="https://www.nrs.fs.fed.us/fia/data-tools/state-reports/ME/default.asp">Forest Inventory and Analysis (FIA) data</a>.</p>
+<p>For the species, northern red oak was the largest in diameter, with a circumference of 255 inches. Now, many of these champion trees have swelling or cankers along their trunk and may contain multiple stems. This complicates a true measurement at breast height, but for comparison I also calculated the tree’s diameter to compare with FIA data.</p>
+<p>To compare the sizes of trees sampled randomly from Maine, I compiled the FIA data from the ten species from a recent measurement. The data were collected from approximately 3,100 FIA plots across diverse forest conditions.</p>
+<p>The following figure shows the distribution of tree diameter measurements recorded on FIA plots in Maine with the diameter of largest tree in red, as recorded in Maine Register of Big Trees:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Note that for each species, the champion trees have a much greater diameter compared to the distribution of trees from the FIA database. For species with a large maximum diameter, like yellow birch and northern red oak, these differences are large. For smaller-diameter species like balsam fir and red spruce, these differences are less drastic.</p>
+<p>Here is a summary of each species showing the champion tree’s diameter along with the maximum diameter found in the FIA data. The last column shows the percent of the maximum diameter compared with that of the state champion tree"</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-3">Table 1: </span>Summary of tree diameter measurements.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Species
+</th>
+<th style="text-align:right;">
+Maximum FIA diameter (in)
+</th>
+<th style="text-align:right;">
+Big tree diameter (in)
+</th>
+<th style="text-align:right;">
+Percent FIA of Big Tree
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Balsam fir
+</td>
+<td style="text-align:right;">
+18.7
+</td>
+<td style="text-align:right;">
+19.7
+</td>
+<td style="text-align:right;">
+95
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Eastern hemlock
+</td>
+<td style="text-align:right;">
+34.4
+</td>
+<td style="text-align:right;">
+44.6
+</td>
+<td style="text-align:right;">
+77
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Eastern white pine
+</td>
+<td style="text-align:right;">
+36.3
+</td>
+<td style="text-align:right;">
+77.7
+</td>
+<td style="text-align:right;">
+47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Northern red oak
+</td>
+<td style="text-align:right;">
+33.7
+</td>
+<td style="text-align:right;">
+81.2
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Northern white-cedar
+</td>
+<td style="text-align:right;">
+30.4
+</td>
+<td style="text-align:right;">
+61.5
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Paper birch
+</td>
+<td style="text-align:right;">
+23.2
+</td>
+<td style="text-align:right;">
+30.9
+</td>
+<td style="text-align:right;">
+75
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red maple
+</td>
+<td style="text-align:right;">
+30.7
+</td>
+<td style="text-align:right;">
+40.1
+</td>
+<td style="text-align:right;">
+77
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red spruce
+</td>
+<td style="text-align:right;">
+24.5
+</td>
+<td style="text-align:right;">
+33.8
+</td>
+<td style="text-align:right;">
+72
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sugar maple
+</td>
+<td style="text-align:right;">
+42.8
+</td>
+<td style="text-align:right;">
+72.9
+</td>
+<td style="text-align:right;">
+59
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yellow birch
+</td>
+<td style="text-align:right;">
+34.4
+</td>
+<td style="text-align:right;">
+76.4
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+</tbody>
+</table>
+<p>For balsam for, an 18.7-inch tree measured in an FIA plot was almost as large as the diametr of the states champion tree (19.7 in). Many FIA plots did not recorded a tree that was at least 50% of the diameter of the largest champion tree.</p>
+<p>This short exercise indicates how we can use champion tree data to better understand how the maximum size of trees. Whether to compare for understanding the longevity of a species or to better understand the amount of biomass or carbon in it, insights can be gleaned upon by looking at the data from these observations that may otherwise be categorized as “outliers”.</p>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
