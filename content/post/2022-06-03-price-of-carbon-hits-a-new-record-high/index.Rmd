@@ -45,7 +45,7 @@ ggplot(carb, aes(Date2, Price, col = Auction))+
         legend.key = element_rect(colour = "transparent"))
 ```
 
-Auction reserve prices have increased marginally over the last several years, ranging from \$14.53 in early 2018 to \$19.70 in 2021. The continued interest in carbon from investors and is likely contributing to the increases in carbon prices.   
+Auction reserve prices have increased marginally over the last several years, ranging from \$14.53 in early 2018 to \$19.70 in 2022. The continued interest in carbon from investors and is likely contributing to the increases in carbon prices.   
 
 The California ARB operates a compliance-driven carbon market. While the program was created from legislation passed in California, forestland across the United States can be enrolled. In this cap-and-trade system, emitters purchase an amount of annual emissions allowances (a cap). If they release below their cap, they can sell the remaining allowances. If they release above the cap, emitters must purchase allowances through a system such as CARB's. 
 
