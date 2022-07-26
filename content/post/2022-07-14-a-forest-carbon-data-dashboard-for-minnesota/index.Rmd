@@ -20,7 +20,7 @@ tags:
 ##
 
 
-By total forest land area, Minnesota ranks 21st in the US. At 17.7 million acres, the state has an incredible amount of carbon being stored and sequestered in its trees and forests.
+By total forest land area, Minnesota ranks 21st in the United States. At 17.7 million acres, the state has an incredible amount of carbon being stored and sequestered in its trees and forests.
 
 I was recently a part of a year-long project funded by the Minnesota Forest Resources Council to do a deep dive into the state’s forest carbon resource. This project involved two primary tasks: (1) to create a report summarizing the current status and opportunities with forest carbon in Minnesota and (2) develop a data dashboard to effectively visualize current and past forest carbon attributes across the state.
 
