@@ -130,7 +130,7 @@ Includes climate change?
 Yes, but only for Western US with Climate-FVS
 </td>
 <td style="text-align:left;">
-No
+No. But user can modify the default climate data (which only impacts decay), and use zero carbon impact disturbance events paired with transition rules to alter stand growth in unison with changes in climate.
 </td>
 </tr>
 <tr>
@@ -152,8 +152,7 @@ How is regeneration handled?
 A “full” regeneration establishment model is available for some variants in the western US. A “partial” establishment model is available for all other variants and simulates stump sprouting. User can specify information on planting and natural regeneration.
 </td>
 <td style="text-align:left;">
-Following a disturbance, regeneration will occur normally or can be delayed or accelerated due to
-planting.
+Following a stand-replacing disturbance, regeneration will occur automatically, or can be delayed or accelerated using transition rules and/or switching of growth curves. By default, there is no regeneration assumed following non-stand-replacing disturbances. However the user can implement a transition rule to switch an impacted stand to a new growth curve(s) to account for multiple growth components (although the stand can only be represented by a single age or age class).
 </td>
 </tr>
 <tr>
@@ -164,7 +163,7 @@ Includes harvested wood products report?
 Yes
 </td>
 <td style="text-align:left;">
-No
+No. But annual carcon stocks harvested and transferred to a forest products pool are tracked, and can be viewed and exported for use in HWP carbon models.
 </td>
 </tr>
 <tr>
@@ -193,6 +192,7 @@ Aboveground biomass, belowground biomass (live coarse and live fine roots), dead
 </tbody>
 </table>
 <p>Have you tried using both models, and if so, what are your thoughts on their differences? <a href="mailto:matt@arbor-analytics.com">Drop me an email</a> and I’d love to learn more.</p>
+<p><em>Special thanks to Stephen Kull with the Canadian Forest Service for highlighting some additional aspects of the CBM-CFS3 model.</em></p>
 <p>–</p>
 <p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
 </div>

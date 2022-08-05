@@ -53,8 +53,7 @@ library(kableExtra)
  tbl_img <- data.frame(
    Attribute = c("Developer/maintainer", "Year developed", "Model type", "How are forested regions specified?", "Time step", "Can forest management and disturbance be analyzed?", "Includes climate change?", "Incorporates uneven-aged stands?", "How is regeneration handled?", "Includes harvested wood products report?", "How does it incorporate carbon?", "Carbon pools tracked"),
    FVS = c("USDA Forest Service", "1973", "Individual tree model; semi-distance independent", "Includes 22 different model variants depending on region.", "Default cycle length is 10 years for most variants.", "Yes", "Yes, but only for Western US with Climate-FVS", "Yes", "A “full” regeneration establishment model is available for some variants in the western US. A “partial” establishment model is available for all other variants and simulates stump sprouting. User can specify information on planting and natural regeneration.", "Yes", "Accounts for carbon stocks and stock changes  with the Fire and Fuels Extension.", "Aboveground biomass, belowground biomass (live and dead coarse roots), dead wood (standing and downed), forest floor (litter and duff), herbs and shrubs."),
-   `CBM-CFS3` = c("Canadian Forest Service", "Original model: 1989; CBM-CFS3 model: 2002", "Stand and landscape-level model; distance independent", "Default ecological parameters are provided, but can be modified by the user.", "Annual", "Yes", "No", "No. But user can modify yield curves.", "Following a disturbance, regeneration will occur normally or can be delayed or accelerated due to
-planting.", "No", "Accounts for carbon stocks and stock changes in tree biomass and
+   `CBM-CFS3` = c("Canadian Forest Service", "Original model: 1989; CBM-CFS3 model: 2002", "Stand and landscape-level model; distance independent", "Default ecological parameters are provided, but can be modified by the user.", "Annual", "Yes", "No. But user can modify the default climate data (which only impacts decay), and use zero carbon impact disturbance events paired with transition rules to alter stand growth in unison with changes in climate.", "No. But user can modify yield curves.", "Following a stand-replacing disturbance, regeneration will occur automatically, or can be delayed or accelerated using transition rules and/or switching of growth curves. By default, there is no regeneration assumed  following non-stand-replacing disturbances. However the user can implement a transition rule to switch an impacted stand to a new growth curve(s) to account for multiple growth components (although the stand can only be represented by a single age or age class).", "No. But annual carcon stocks harvested and transferred to a forest products pool are tracked, and can be viewed and exported for use in HWP carbon models.", "Accounts for carbon stocks and stock changes in tree biomass and
 dead organic matter pools.", "Aboveground biomass, belowground biomass (live coarse and live fine roots), dead wood (standing and downed {on ground and in mineral soil}), litter (includes fine woody debris), soil organic matter.")
  )
  
@@ -66,6 +65,8 @@ dead organic matter pools.", "Aboveground biomass, belowground biomass (live coa
 ```
 
 Have you tried using both models, and if so, what are your thoughts on their differences? [Drop me an email](mailto:matt@arbor-analytics.com) and I'd love to learn more.
+
+*Special thanks to Stephen Kull with the Canadian Forest Service for highlighting some additional aspects of the CBM-CFS3 model.*
 
 --
 
