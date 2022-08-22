@@ -45,7 +45,7 @@ $$ \mbox{KG_PER_CUMTR_WOOD} = (\mbox{WOOD_SPGR_GREENVOL_DRYWT}*1000)*(1+(\mbox{M
 
 Then, we can convert this value to pounds per cubic foot:
 
-$$ \mbox{LBS_PER_CUFT_WOOD} = \mbox{KG_PER_CUMTR_WOOD}*2.2046)/35.3145$$
+$$ \mbox{LBS_PER_CUFT_WOOD} = (\mbox{KG_PER_CUMTR_WOOD}*2.2046)/35.3145$$
 
 Cords are a typical volume measure used to describe the volume of wood across many regions. We then convert this value to the weight of pounds per cord, assuming 90 cubic feet of wood are found in one cord of wood:
 
@@ -53,9 +53,9 @@ $$ \mbox{LBS_PER_CORD_WOOD} = \mbox{LBS_PER_CUFT_WOOD} * 90$$
 
 We shouldn't forget about the bark component of trees, which can make up a considerable portion of the total volume of a tree. We can follow the same approach to determine volume in bark by using the following formulas:
 
-$$ \mbox{KG_PER_CUMTR_BARK} = (\mbox{BARK_SPGR_GREENVOL_DRYWT}*1000)*(1+(\mbox{MC_PCT_GREEN_BARK}/100))$$
+$$ \mbox{KG_PER_CUMTR_BARK} = (\mbox{BARK_SPGR_GREENVOL_DRYWT}*1000)*\\(1+(\mbox{MC_PCT_GREEN_BARK}/100))*\\(\mbox{BARK_VOL_PCT}/100)$$
 
-$$ \mbox{LBS_PER_CUFT_BARK} = \mbox{KG_PER_CUMTR_BARK}*2.2046)/35.3145$$
+$$ \mbox{LBS_PER_CUFT_BARK} = (\mbox{KG_PER_CUMTR_BARK}*2.2046)/35.3145$$
 
 $$ \mbox{LBS_PER_CORD_BARK} = \mbox{LBS_PER_CUFT_BARK} * 90$$
 
@@ -69,13 +69,13 @@ As an example, consider we wish to determine the number of green tons per cord i
 
 $$ \mbox{KG_PER_CUMTR_WOOD}_{SM} = (0.56*1000)*(1+(57.39286/100)) = 881.4$$
 
-$$ \mbox{LBS_PER_CUFT_WOOD}_{SM} = 881.4*2.2046)/35.3145 = 55.0237$$
+$$ \mbox{LBS_PER_CUFT_WOOD}_{SM} = (881.4*2.2046)/35.3145 = 55.0237$$
 
 $$ \mbox{LBS_PER_CORD_WOOD}_{SM} = 55.0237* 90 = 4952.13$$
 
 Then, we can determine the amount in the bark component:
 
-$$ \mbox{KG_PER_CUMTR_BARK}_{SM} = (0.54*1000)*(1+(89.92593/100)) = 165.9$$
+$$ \mbox{KG_PER_CUMTR_BARK}_{SM} = (0.56*1000)*\\(1+(89.92593/100))*\\(15.6/100) = 165.9$$
 
 $$ \mbox{LBS_PER_CUFT_BARK}_{SM} = (165.9*2.2046)/35.3145 = 10.3579$$
 
@@ -131,5 +131,6 @@ You might be interested to compare these conversion factors with ones you may be
 How do the volume-weight conversions work for you? [Drop me an email](mailto:matt@arbor-analytics.com) to let me know if you've found them useful in your own work.
 
 --
+*Update August 22, 2022. Special thanks to Jon Lundsford for pointing out an error in an equation from a previous version of this article.*
 
 *By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*

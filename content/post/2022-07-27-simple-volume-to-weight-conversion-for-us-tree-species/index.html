@@ -37,12 +37,12 @@ tags:
 <p>Top start, we can calculate the weight of one cubic meter of wood, in kilograms:</p>
 <p><span class="math display">\[ \mbox{KG_PER_CUMTR_WOOD} = (\mbox{WOOD_SPGR_GREENVOL_DRYWT}*1000)*(1+(\mbox{MC_PCT_GREEN_WOOD}/100))\]</span></p>
 <p>Then, we can convert this value to pounds per cubic foot:</p>
-<p><span class="math display">\[ \mbox{LBS_PER_CUFT_WOOD} = \mbox{KG_PER_CUMTR_WOOD}*2.2046)/35.3145\]</span></p>
+<p><span class="math display">\[ \mbox{LBS_PER_CUFT_WOOD} = (\mbox{KG_PER_CUMTR_WOOD}*2.2046)/35.3145\]</span></p>
 <p>Cords are a typical volume measure used to describe the volume of wood across many regions. We then convert this value to the weight of pounds per cord, assuming 90 cubic feet of wood are found in one cord of wood:</p>
 <p><span class="math display">\[ \mbox{LBS_PER_CORD_WOOD} = \mbox{LBS_PER_CUFT_WOOD} * 90\]</span></p>
 <p>We shouldn’t forget about the bark component of trees, which can make up a considerable portion of the total volume of a tree. We can follow the same approach to determine volume in bark by using the following formulas:</p>
-<p><span class="math display">\[ \mbox{KG_PER_CUMTR_BARK} = (\mbox{BARK_SPGR_GREENVOL_DRYWT}*1000)*(1+(\mbox{MC_PCT_GREEN_BARK}/100))\]</span></p>
-<p><span class="math display">\[ \mbox{LBS_PER_CUFT_BARK} = \mbox{KG_PER_CUMTR_BARK}*2.2046)/35.3145\]</span></p>
+<p><span class="math display">\[ \mbox{KG_PER_CUMTR_BARK} = (\mbox{BARK_SPGR_GREENVOL_DRYWT}*1000)*\\(1+(\mbox{MC_PCT_GREEN_BARK}/100))*\\(\mbox{BARK_VOL_PCT}/100)\]</span></p>
+<p><span class="math display">\[ \mbox{LBS_PER_CUFT_BARK} = (\mbox{KG_PER_CUMTR_BARK}*2.2046)/35.3145\]</span></p>
 <p><span class="math display">\[ \mbox{LBS_PER_CORD_BARK} = \mbox{LBS_PER_CUFT_BARK} * 90\]</span></p>
 <p>Finally, we can compute the number of tons per cord by adding the wood and bark components and dividing by the number of pounds in a ton (2,000):</p>
 <p><span class="math display">\[ \mbox{GREEN_TONS_PER_CORD} = (\mbox{LBS_PER_CUFT_WOOD} + \mbox{LBS_PER_CUFT_BARK})/2000 \]</span></p>
@@ -51,10 +51,10 @@ tags:
 <h2>An example with sugar maple</h2>
 <p>As an example, consider we wish to determine the number of green tons per cord in sugar maple (<em>Acer saccharrum</em>). We start by calculating the volume in the wood component:</p>
 <p><span class="math display">\[ \mbox{KG_PER_CUMTR_WOOD}_{SM} = (0.56*1000)*(1+(57.39286/100)) = 881.4\]</span></p>
-<p><span class="math display">\[ \mbox{LBS_PER_CUFT_WOOD}_{SM} = 881.4*2.2046)/35.3145 = 55.0237\]</span></p>
+<p><span class="math display">\[ \mbox{LBS_PER_CUFT_WOOD}_{SM} = (881.4*2.2046)/35.3145 = 55.0237\]</span></p>
 <p><span class="math display">\[ \mbox{LBS_PER_CORD_WOOD}_{SM} = 55.0237* 90 = 4952.13\]</span></p>
 <p>Then, we can determine the amount in the bark component:</p>
-<p><span class="math display">\[ \mbox{KG_PER_CUMTR_BARK}_{SM} = (0.54*1000)*(1+(89.92593/100)) = 165.9\]</span></p>
+<p><span class="math display">\[ \mbox{KG_PER_CUMTR_BARK}_{SM} = (0.56*1000)*\\(1+(89.92593/100))*\\(15.6/100) = 165.9\]</span></p>
 <p><span class="math display">\[ \mbox{LBS_PER_CUFT_BARK}_{SM} = (165.9*2.2046)/35.3145 = 10.3579\]</span></p>
 <p><span class="math display">\[ \mbox{LBS_PER_CORD_BARK}_{SM} = 10.3579 * 90 = 932.22\]</span></p>
 <p>Finally, we can compute the <em>GREEN_TONS_PER_CORD</em> conversion factor for sugar maple:</p>
@@ -78,7 +78,8 @@ tags:
 <li>Check with your local state agency. As an example, the <a href="https://digitalmaine.com/cgi/viewcontent.cgi?article=1274&amp;context=for_docs">Maine Forest Service</a> and <a href="https://www.revenue.nh.gov/mun-prop/property/documents/timber-conversion-formulas.pdf">New Hampshire Division of forests and Lands</a> present conversion factors for the primary commercial species in their state.</li>
 </ul>
 <p>How do the volume-weight conversions work for you? <a href="mailto:matt@arbor-analytics.com">Drop me an email</a> to let me know if you’ve found them useful in your own work.</p>
-<p>–</p>
+<p>–
+<em>Update August 22, 2022. Special thanks to Jon Lundsford for pointing out an error in an equation from a previous version of this article.</em></p>
 <p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
 </div>
 </div>
