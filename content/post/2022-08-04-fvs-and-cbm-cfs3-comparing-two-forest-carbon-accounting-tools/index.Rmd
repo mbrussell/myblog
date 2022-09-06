@@ -32,7 +32,7 @@ The [Forest Vegetation Simulator (FVS)](https://www.fs.usda.gov/fvs/index.shtml)
 
 There has been a tremendous amount of research and development on the FVS model through time. Their website contains excellent supporting information, video tutorials, and documentation. Although the model was originally developed in the US, here are a few applications of it in Canada:
 
-* An [Acadian variant of FVS](https://www.researchgate.net/publication/324705922_The_Acadian_Variant_of_the_Forest_Vegetation_Simulator_Continued_development_and_evaluation) is available for Maine and the Canadian Maritime provinces,
+* An [Acadian variant of FVS](https://www.researchgate.net/publication/324705922_The_Acadian_Variant_of_the_Forest_Vegetation_Simulator_Continued_development_and_evaluation) is available for Maine and the Canadian Maritime provinces, and
 * The FVS model has been calibrated for [Ontario's forests](https://cfs.nrcan.gc.ca/publications?id=28760).
  
 
@@ -66,7 +66,7 @@ dead organic matter pools.", "Aboveground biomass, belowground biomass (live coa
 
 Have you tried using both models, and if so, what are your thoughts on their differences? [Drop me an email](mailto:matt@arbor-analytics.com) and I'd love to learn more.
 
-*Special thanks to Stephen Kull with the Canadian Forest Service for highlighting some additional aspects of the CBM-CFS3 model and to Greg Paradis for pointing out differences between the two models.*
+*Updated 6 Sept 2022. Special thanks to Stephen Kull with the Canadian Forest Service for highlighting some additional aspects of the CBM-CFS3 model and to Greg Paradis for pointing out differences between the two models.*
 
 --
 
