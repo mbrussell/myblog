@@ -1,7 +1,7 @@
 ---
 title: How many trees make a mass timber building?
 author: Matt Russell
-date: '2019-06-15'
+date: '2022-09-27'
 slug: how-many-trees-make-a-mass-timber-building
 categories:
   - Prediction
@@ -12,7 +12,11 @@ tags:
   - forest products
 ---
 
-![The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/)](/post/how-many-trees-make-a-mass-timber-building/t3building.jpg)
+<center>
+
+![The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/](t3building.jpg){width=500px}
+
+</center> 
 
 ```{r echo=F,warning=F,message=F}
 knitr::opts_chunk$set(echo = TRUE)
@@ -103,4 +107,3 @@ These results suggest that some of the largest mass timber buildings in the worl
 *Updated 27 September 2022. Special thanks to Lydia Link for pointing out calculation error in board foot value of buildings.*
 
 *By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
- 
