@@ -15,11 +15,10 @@ tags:
 description: 'Sept 21, 2022 presentation at the SAF Convention'
 ---
 
-
-
 <center>
 
-pandemic_title.png_title){width=500px}
+![](pandemic_title.png){width=500px}
+
 </center>
 
 ##
