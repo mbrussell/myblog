@@ -37,7 +37,7 @@ building<-data.frame(Building=c("T3","Carbon12","T3 West Midtown","Brock Commons
                      SquareFeet=c(224000,42000,205000,162700,72650))
 ```
 
-[Mass timber buildings](https://www.thinkwood.com/building-better/taller-buildings) are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with [beetle-killed wood](https://www.naturallywood.com/sustainable-forests/forest-management/interior-forests/mountain-pine-beetle) to mitigate the impacts of forests disturbances on the carbon cycle. Because of these benefits, building codes are being changed or altered that support the construction of mass timber buildings.
+[Mass timber buildings](https://www.thinkwood.com/building-better/taller-buildings) are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with [beetle-killed wood](https://www.naturallywood.com/sustainable-forests/forest-management/interior-forests/mountain-pine-beetle) to mitigate the impacts of forests disturbances on the carbon cycle. Because of these benefits, building codes are being changed or altered that support the construction of mass timber buildings. 
 
 But just how much "mass" of wood typically goes into making a mass timber building? Comparing how much wood is needed to build a typical residential home can help to provide insights into the volume of wood that is used in mass timber buildings.
 
@@ -59,7 +59,7 @@ t.building %>%
 How can we use the board foot volume of wood used in a house to determine how many trees go into the construction of a mass timber building? Using the typical amounts of wood needed to build a home (i.e., 2,000 square foot home = 16,000 board feet of wood), a few key assumptions can be made to "scale up" to find out how much board feet is required for a mass timber building:
 
  * First, mass timber buildings have no studs in their walls. We can assume that they have **"continuous walls"**. If typical stud widths in homes are 16 inches apart with two-inch pieces of wood, we can assume a continuous wall has **eight times as much wood** occupying a wall.
- * Second, mass timber walls (both interior and exterior) are **thicker** than home walls. If a mass timber wall is 20 inches think, **five times as much wood** would occupy a wall.
+ * Second, mass timber walls (both interior and exterior) are **thicker** than home walls. If a mass timber wall is 20 inches think, **five times as much wood** would occupy a wall. 
 
 To summarize these assumptions, one square foot of a home requires 0.125 board feet of wood. One square foot of a mass timber building requires 5 board feet of wood.  
 
