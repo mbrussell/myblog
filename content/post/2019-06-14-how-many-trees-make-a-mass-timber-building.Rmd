@@ -66,7 +66,8 @@ Mass timber buildings typically use western conifers like Douglas-fir in constru
 stud<-8
 thick<-5
 building<-building %>% mutate(
-  BoardFeet = (SquareFeet/(2000/16000))*thick*stud,
+  # BoardFeet = (SquareFeet/(2000/16000))*thick*stud,
+  BoardFeet = SquareFeet*5,
   Acres = round(BoardFeet/100000),
   Trees=round(182*Acres)) 
 
@@ -77,7 +78,7 @@ t.building2 %>%
  kable_styling()
 ```
 
-Assuming the trees were harvested from fully-stocked stands, the total number of trees required to make a mass timber building ranges from as high as **130,494 trees** for the T3 building in Minneapolis to **24,388 trees** for the Carbon12 building in Portland. These numbers of trees equate to the volume of trees from 717 and 134 acres of forestland, respectively.
+Assuming the trees were harvested from fully-stocked stands, the total number of trees required to make a mass timber building ranges from as high as **2,002 trees** for the T3 building in Minneapolis to **364 trees** for the Carbon12 building in Portland. These numbers of trees equate to the volume of trees from 11 and 2 acres of forestland, respectively.
 
 
 ```{r,echo=F,warning=F,message=F}
@@ -97,7 +98,9 @@ p.trees
 
 It's difficult to find detailed information on how much wood is required to design mass timber buildings. There is no doubt that these values would differ substantially depending on the design of each building. The building's square footage, interior and exterior design, and other features would influence the total volume of wood required. 
 
-These results suggest that some of the largest mass timber buildings in the world may have been constructed from the use of over 100,000 trees. The use of all of those trees has a long-lasting benefit to the health of forests by keeping all of that wood as a long-lived forest product.
+These results suggest that some of the largest mass timber buildings in the world may have been constructed from the use of thousands of trees. The use of all of those trees has a long-lasting benefit to the health of forests by keeping all of that wood as a long-lived forest product.
+
+*Updated 27 September 2022. Special thanks to Lydia Link for pointing out calculation error in board foot value of buildings.*
 
 *By Matt Russell. Leave a comment below or [email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
  
