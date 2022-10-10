@@ -42,7 +42,7 @@ So should foresters stop relying on using p-values? Probably not. (After all, I 
 
 I set up a small experiment: to look at how many *p*-values were reported in the *Journal of Forestry* in 2021 ([find the data here](https://github.com/mbrussell/myblog/tree/master/content/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science)).
 
-What counted as a *p*-value was more complicated then I first thought. Oftentimes authors will mention the true *p*-value from a statistical test either in the text or commonly in a table of results. However, other times, no doubt a result of the software being used, authors with report the asterisk or double asterisk that shows the significance at a specific level. For example, * and ** were written to denote significance at the 0.10 and 0.05 levels, respectively. Other times *p*-values will be embedded within figures, which makes finding them with a text string search problematic.  
+What counted as a *p*-value was more complicated than I first thought. Oftentimes authors will mention the true *p*-value from a statistical test either in the text or most commonly, in a table of results. However, other times, no doubt a result of the software being used, authors will report the asterisk or double asterisk that shows the significance at a specific level. For example, * and ** were written to denote significance at the 0.10 and 0.05 levels, respectively. Other times *p*-values will be embedded within figures, which makes finding them with a text string search problematic.  
 
 Despite the challenges, out of the 36 research and review articles published in the *Journal of Forestry* in 2021, 61% did not present any *p*-values. Here is the distribution of *p*-values from the articles:
 
@@ -78,7 +78,7 @@ p_p_hist
 
 Of those that did present *p*-values, the median number of *p*-values per article was 15. There was one paper that presented 191 different *p*-values (which made excellent use of the asterisk approach). 
 
-I have no idea if the use of *p*-values in forestry has increased of decreased since they began to be used widely in the mid 1900's. It strikes me that as we continue to teach hypothesis testing to students, *p*-values will continue to be used in the future. 
+I have no idea if the use of *p*-values in forestry has increased or decreased since they began to be used widely in the mid 1900's. It strikes me that as we continue to teach hypothesis testing to students, *p*-values will continue to be used in the future. 
 
 While there are many caveats, I really like the ASA’s shortcut to “remember **ATOM**” when using *p*-values. When thinking about them, remember to:
 
