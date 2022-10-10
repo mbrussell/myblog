@@ -1,0 +1,52 @@
+---
+title: 'P-ing in the woods: p-values in forest science'
+author: Matt Russell
+date: '2022-10-10'
+slug: []
+categories:
+  - Statistics
+tags:
+  - analytics
+  - Data science
+  - statistics
+  - teaching statistics
+  - p-values
+---
+
+
+
+<center>
+<img src="cena_Pvalue.png" width="400" />
+</center>
+<center>
+<em>A meme about p-values. Hat tip to <a href="https://www.linkedin.com/in/mattdancho/">Matt Dancho</a> for the idea for the graphic.</em>
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>The statistics community has had a lot of discussion in recent years about the role of <em>p</em>-values and statistical significance. This has led some to question if we’re relying too much on them as a way of interpreting results from a statistical analysis.</p>
+<p>The “<em>p</em>” in <em>p</em>-value stands for probability, or the <strong>probability</strong> under a statistical model that a summary of the data would be equal to or more extreme than its observed value. There are few caveats with using <em>p</em>-values and interpreting them.</p>
+<p>First, assessing statistical significance is commonly done using the <em>p</em>-value as a threshold. As the <a href="https://amstat.tandfonline.com/doi/full/10.1080/00031305.2016.1154108#.XWk_GyhKiUk">American Statistical Association highlighted in 2016</a> “statistical significance is not equivalent to scientific, human, or economic significance”.</p>
+<p>Second, a <em>p</em>-value can be small if the number of samples or measurement precision is high enough. Similarly, a <em>p</em>-value can be large if the sample size is small or measurements are imprecise.</p>
+<p>Lastly, a <em>p</em>-value doesn’t measure the size of an effect or the importance of a result. So a <em>p</em>-value of 0.0001 does not indicate a more important result than a <em>p</em>-value of 0.045. This is where I’ve heard many a graduate student say “My p-value is so small, my results are VERY significant!”</p>
+<p>Much of the data science community is moving away from using <em>p</em>-values. The scrutiny over the interpretation and use of <em>p</em>-values has also reached academic publishing. Some journals have <a href="">outlawed the use of <em>p</em>-values</a> in their journals. Some editors are providing <a href="https://support.jmir.org/hc/en-us/articles/360000002012-How-should-P-values-be-reported-">specific instructions for authors</a> on how to report (and not report) <em>p</em>-values in their journals.</p>
+</div>
+<div id="p-values-in-the-journal-of-forestry" class="section level2">
+<h2>P-values in the <em>Journal of Forestry</em></h2>
+<p>So should foresters stop relying on using p-values? Probably not. (After all, I don’t want to be labeled a hypocrite because <a href="https://stats4nr.com/">I use them a lot.</a>) Out of curiosity, I was interested to see how often <em>p</em>-values are used in forestry research.</p>
+<p>I set up a small experiment: to look at how many <em>p</em>-values were reported in the <em>Journal of Forestry</em> in 2021 (find the data here).</p>
+<p>What counted as a <em>p</em>-value was more complicated then I first thought. Oftentimes authors will mention the true <em>p</em>-value from a statistical test either in the text or commonly in a table of results. However, other times, no doubt a result of the software being used, authors with report the asterisk or double asterisk that shows the significance at a specific level. For example, * and ** were written to denote significance at the 0.10 and 0.05 levels, respectively. Other times <em>p</em>-values will be embedded within figures, which makes finding them with a text string search problematic.</p>
+<p>Despite the challenges, out of the 36 research and review articles published in the <em>Journal of Forestry</em> in 2021, 61% did not present any <em>p</em>-values. Here is the distribution of <em>p</em>-values from the articles:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Of those that did present <em>p</em>-values, the median number of <em>p</em>-values per article was 15. There was one paper that presented 191 different <em>p</em>-values (which made excellent use of the asterisks).</p>
+<p>I have no idea if the use of <em>p</em>-values in forestry has increased of decreased since they began to be used widely in the mid 1900’s. It strikes me that as we continue to teach hypothesis testing to students, hey will continue to be used in the future.</p>
+<p>While there are many caveats, I really like the ASA’s shortcut to “remember <strong>ATOM</strong>” when using <em>p</em>-values. When thinking about them, remember to:</p>
+<ul>
+<li><strong>Accept uncertainty.</strong> Data are noisy in the real world. By accepting the uncertainty inherent in the data, we move away from categorizing variables and attributes as either “significant” or “not significant”.</li>
+<li><strong>Be thoughtful.</strong> Practicing thoughtful data analysis allows analysts to assess their workflow and applications of their work. Are you engaging in exploratory data analysis on a project? Or are your results going to inform key decisions and a thorough statistical analysis is needed?</li>
+<li><strong>Be open.</strong> Being open about your analysis stresses the importance of recognizing that subjectivity is present in any statistical analysis. This is also true when considering the role of expert judgment in the data analysis project and the interpretation of a project’s findings. When communicating <em>p</em>-values, a practical tip is to present them as continuous values rather than dichotomized ones (e.g., report p = 0.04234 not p &lt; 0.05). The “asterisks” that are provided by statistical software don’t help with this one.</li>
+<li><strong>Be modest.</strong> Being modest encourages you to think about how others might be able to reproduce your work. More broadly, being modest promotes the limitations of statistical knowledge in the larger discipline of scientific understanding.</li>
+</ul>
+<p>It’s important to reflect on the role of hypothesis tests and <em>p</em>-values are and what they aren’t. Forest biometricians and analysts should have these in their toolbox, but also be aware of their proper use.</p>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">my monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
