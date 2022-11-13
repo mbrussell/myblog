@@ -13,7 +13,7 @@ tags:
 
 <center>
 
-![](firewood.jpg){width=400px}
+![](firewood2.jpg){width=400px}
 </center>
 
 *Photo by <a href="https://unsplash.com/@anaspata?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andreas Pajuvirta</a> on <a href="https://unsplash.com/s/photos/firewood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*
