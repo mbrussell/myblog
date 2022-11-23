@@ -2,6 +2,7 @@
 title: New updates for tools that query Forest Inventory and Analysis data
 author: Matt Russell
 date: '2022-11-23'
+slug: []
 categories:
   - Analytics
 tags:
