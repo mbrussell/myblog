@@ -22,7 +22,7 @@ tags:
 
 ##
 
-The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential. 
+The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential.
 
 After attending the [FIA Science Stakeholder Meeting](https://www.fia.fs.usda.gov/sciencestakeholder/index.php) last week, I was happy to learn about some important updates to two tools that are widely used by forest analysts: the FIA EVALIDator program and the FIA DataMart. This post describes new features that are now available in these applications.
 
