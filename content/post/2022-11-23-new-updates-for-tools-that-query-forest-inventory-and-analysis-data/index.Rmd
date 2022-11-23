@@ -29,7 +29,7 @@ After attending the [FIA Science Stakeholder Meeting](https://www.fia.fs.usda.go
 ## EVALIDator version 2.0.3
 
 [EVALIDator](https://apps.fs.usda.gov/fiadb-api/evalidator) is a web-based Application Programming Interface that generates population estimates for core forestry metrics. It provides the ability to query FIA information at the state level (e.g., total aboveground biomass in Maine) or a circular retrieval of information around a fixed geographic point (e.g., total aboveground biomass within a 50 mile radius of a proposed mill in Maine).   
- 
+  
 <center>
 ![](evalidator.png){width=400px}
 </center>
