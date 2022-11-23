@@ -63,7 +63,7 @@ The [FIA DataMart](https://experience.arcgis.com/experience/3641cea45d614ab88791
 Using the DataMart, users can select a state and navigate to a specific data table of interest. Data are available for download as comma-delimited files, SQLite3 State databases, or Microsoft® Excel workbooks.
 
 A new feature I like is the data update history, a short description indicating the dates when new data were added or modifications were made to existing data. Having this feature can help to sort out issues one may encounter if downloading the data at different times.
-
+ 
 --
 
 *What are your thoughts on these changes to EVALIDator and DataMart? I’m always curious to know, so [let me know via email](mailto:matt@arbor-analytics.com).*
