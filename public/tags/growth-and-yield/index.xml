@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>growth and yield on </title>
+    <link>https://arbor-analytics.com/tags/growth-and-yield/</link>
+    <description>Recent content in growth and yield on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/growth-and-yield/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FVS and CBM-CFS3: Comparing two forest simulation models </title>
+      <link>https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/</link>
+      <pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/</guid>
+      <description>Analysts in the forestry community often turn to models to simulate what a forest will look like in the future. Whether it’s simulating a forest management treatment or forecasting the effects of a natural disturbance, models are required tools for understanding how forests will grow.
+Increasingly, models are being used to understand forest carbon stocks and stock changes. As we strive to quantify the role of forests in offsetting carbon dioxide emissions, having reliable tools to understand forest dynamics is essential.</description>
+    </item>
+    
+  </channel>
+</rss>

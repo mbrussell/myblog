@@ -6,22 +6,85 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Logging</title>
-      <link>https://arbor-analytics.com/categories/logging/</link>
-      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      <title>Analytics</title>
+      <link>https://arbor-analytics.com/categories/analytics/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://arbor-analytics.com/categories/logging/</guid>
+      <guid>https://arbor-analytics.com/categories/analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://arbor-analytics.com/categories/statistics/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forest industry</title>
+      <link>https://arbor-analytics.com/categories/forest-industry/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/forest-industry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prediction</title>
+      <link>https://arbor-analytics.com/categories/prediction/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/prediction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Carbon</title>
       <link>https://arbor-analytics.com/categories/carbon/</link>
-      <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://arbor-analytics.com/categories/carbon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logging</title>
+      <link>https://arbor-analytics.com/categories/logging/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/logging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forest measurements</title>
+      <link>https://arbor-analytics.com/categories/forest-measurements/</link>
+      <pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/forest-measurements/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forest products</title>
+      <link>https://arbor-analytics.com/categories/forest-products/</link>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/forest-products/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Professional development</title>
+      <link>https://arbor-analytics.com/categories/professional-development/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/categories/professional-development/</guid>
       <description></description>
     </item>
     
@@ -31,33 +94,6 @@
       <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://arbor-analytics.com/categories/forestry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Forest products</title>
-      <link>https://arbor-analytics.com/categories/forest-products/</link>
-      <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/forest-products/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Analytics</title>
-      <link>https://arbor-analytics.com/categories/analytics/</link>
-      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/analytics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Statistics</title>
-      <link>https://arbor-analytics.com/categories/statistics/</link>
-      <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/statistics/</guid>
       <description></description>
     </item>
     
@@ -130,33 +166,6 @@
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://arbor-analytics.com/categories/conference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Professional development</title>
-      <link>https://arbor-analytics.com/categories/professional-development/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/professional-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Prediction</title>
-      <link>https://arbor-analytics.com/categories/prediction/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/prediction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Forest measurements</title>
-      <link>https://arbor-analytics.com/categories/forest-measurements/</link>
-      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/forest-measurements/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,151 @@
+---
+title: Harvested wood products in the Forest Vegetation Simulator
+author: Matt Russell
+date: '2022-04-23'
+slug: []
+categories:
+  - Forest products
+tags:
+  - analytics
+  - carbon
+  - forest carbon
+  - forest products
+  - harvested wood products
+---
+
+<center>
+
+![](wood.jpg){width=500px}
+
+</center>
+
+##
+
+Carbon is stored and sequestered in growing forests. It can also can be stored “off site” in the form of harvested wood products. These can be in short-lived products (i.e., paper or pulp) or long-lived ones (i.e., utility poles). 
+
+Harvested wood products in use and solid waste disposal sites (e.g., landfills) represent [4.5% of the total amount of carbon in the US](https://arbor-analytics.com/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/). When using wood products, lower emissions are used compared fossil fuel-intensive materials such as steel and concrete. Substituting the use of wood products as opposed to greenhouse gas-intensive construction materials is an environmentally sound approach with a lower overall carbon footprint.
+
+With the interest in forecasting forest carbon through time, the [Forest Vegetation Simulator (FVS)](https://www.fs.fed.us/fvs/) is a commonly used model that also incorporates estimates of carbon stored in harvested wood products. The FVS model was developed by the USDA Forest Service. It is an individual tree model that uses lists of trees (e.g., species and tree diameter) to forecast forest growth through time. The FVS model is an approved growth and yield model in many forest carbon programs, including the California Air Resources Board’s [Compliance Offset Program](https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program/compliance-offset-protocols/us-forest-projects/models).  
+
+## Harvested wood products in FVS
+
+The harvested carbon report from FVS simulates carbon in harvested merchantable material. Carbon that is harvested is proportioned into different pools. The amount of carbon stored in a product pool changes over time as wood decays or transitions to another pool. The harvested carbon report tracks carbon stored in four pools:
+
+* Products in use
+* Products in solid waste disposal sites (i.e., landfills)
+* Carbon emitted from combustion with energy capture (energy)
+* Carbon emitted from combustion or decay without energy capture (emissions)
+
+To visualize the harvested wood products report from FVS, I used the Lake States geographic variant to simulate aspen growth starting at a density of 1,000 trees per acre with a site index of 60 feet at 50 years. Aspen was grown to a harvest a rotation of 50 years until a clearcut harvest was specified in the simulation. 
+
+After simulating through 50 years, the stand stored 22.5 US tons/acre of carbon in the aboveground live portion of trees. In the clearcut harvest, 16.6 US tons/acre of carbon were removed from the merchantable portion.
+
+```{r, echo = F, message = F, warning = F}
+# Load packages
+library(openxlsx)
+library(tidyverse)
+library(readxl)
+library(patchwork)
+library(knitr)
+library(kableExtra)
+```
+
+
+```{r, echo = F, message = F, warning = F}
+qa_bau <- read_excel("C:/Users/russellm/Documents/Projects/MFRC/Carbon/Analysis/Aspen/qa_bau/FVSOut_QA_bau.xls", sheet = "FVS_Summary_East")
+qa_bau1 <- qa_bau %>% 
+  filter(StandID  == "QA")
+qa_bau1$StandID <- "BAU, Rot 1"
+```
+
+```{r, echo = F, message = F, warning = F}
+c_aspen <- tribble(
+  ~Age, ~`Aboveground live carbon storage (US tons/ac)`, ~`Carbon removed (US tons/ac)`,
+  0, 0, 0, 
+  10, 0.9, 0,
+  20, 6, 0,
+  30, 13.7, 0,
+  40, 18.7, 0,
+  50, 22.5, 16.6
+)
+
+```
+
+```{r, echo = F, message = F, warning = F}
+p.c <- ggplot(c_aspen, aes(x = Age, y = `Aboveground live carbon storage (US tons/ac)`, col = "Aboveground live carbon")) +
+  geom_point() +
+  geom_line() +
+  labs(x = "Age",
+       y = "Carbon storage (US tons/ac)") +
+    scale_x_continuous(limits = c(0, 95)) +
+  theme(panel.background = element_blank(),
+        axis.line = element_line(colour = "black"),
+        legend.title = element_blank())
+```
+
+```{r, echo = F, message = F, warning = F}
+qa_hwp_bau <- read_excel("C:/Users/russellm/Documents/Projects/MFRC/Carbon/Analysis/Aspen/qa_bau/FVSOut_QA_bau.xls", 
+                         sheet = "FVS_Hrv_Carbon")
+
+qa_hwp_bau1 <- qa_hwp_bau %>% 
+  filter(StandID  == "QA")
+
+qa_hwp <- qa_hwp_bau1 %>% 
+  mutate(`Products in use` = Products,
+         `Solid waste disposal sites` = Landfill,
+         `Merch Carbon Stored` = Merch_Carbon_Stored,
+         `Merch Carbon Removed` = Merch_Carbon_Removed) %>% 
+  select(StandID, Year, `Products in use`, `Solid waste disposal sites`) %>% 
+  pivot_longer(`Products in use`:`Solid waste disposal sites`, "Type") %>%
+  filter(value > 0)
+
+c_hwp <- tribble(
+  ~`Age (years)`, ~Products, ~SWDS, ~Energy, ~Emissions, ~`Merch Carbon Stored`, ~`Merch Carbon Removed`,
+  0, 0, 0, 0, 0, 0, 0,  
+  10, 0, 0, 0, 0, 0, 0,  
+  20 ,0, 0, 0, 0, 0, 0,  
+  30, 0, 0, 0, 0, 0, 0,  
+  40, 0, 0, 0, 0, 0, 0,  
+  50, 11.3,0,2.74,2.48,11.3,16.6,
+  60, 6.01,1.85,4.38,4.33,7.85,16.6,
+  70, 4.61,2.19,4.82,4.95,6.80,16.6,
+  80, 4.05,2.29,4.97,5.26,6.34,16.6,
+  90, 3.63,2.39,5.06,5.49,6.01,16.6
+)
+```
+
+The majority of merchantable carbon removed immediately transitioned into harvested wood products in use (11.30 tons/ac). Ten years following the harvest, some of the carbon transitioned into solid waste disposal sites.  
+
+```{r, echo = F, message = F, warning = F}
+c_hwp %>% 
+  kable("html", format.args = list(big.mark = ","),
+        caption = 'Example harvested carbon information from FVS (values in US tons/acre), with a clearcut harvest in aspen simulated at year 50.') %>%
+  kable_styling()
+```
+
+The amount of carbon stored in products in use declined through time, while the amount in solid waste disposal sites increased. Ultimately, after 40 years since harvest, approximately half of the merchantable carbon stored remained in products in use or solid waste disposal sites (6.01 US tons/acre), with the other half decayed or burned. 
+
+```{r, echo = F, message = F, warning = F}
+p.qa.c_hwp <- ggplot(qa_hwp, aes(x = Year - 2010, y = value, col = Type)) +
+  geom_point() +
+  geom_line() +
+   # scale_color_brewer(palette="Accent") +
+  labs(x = "Age",
+       y = "Carbon storage in harvested \nwood products (US tons/ac)") +
+    scale_x_continuous(limits = c(0, 95)) +
+      scale_color_brewer(palette="Set1") +
+  theme(panel.background = element_blank(),
+        axis.line = element_line(colour = "black"),
+        legend.title = element_blank())
+p.c / p.qa.c_hwp 
+```
+
+The harvested wood products reports in FVS provide important details about the fate of carbon. The article ["Forest carbon estimation using FVS: seven things you need to know"](https://www.fs.usda.gov/treesearch/pubs/37449) by Hoover and Rebain is a great resource to learn more about estimating carbon with FVS and how to interpret the harvested wood products numbers. 
+
+A tool like FVS can be leveraged to better understand the contributions of harvested wood products in understanding the longevity of forest carbon. Not incorporating harvested wood product data in simulations of forest carbon can underestimate the total amount of carbon being stored. 
+
+--
+
+*By Matt Russell*
+
+*[Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for [The Landing](https://mailchi.mp/d96897dc0f46/arbor-analytics) for monthly in-depth analysis on data and analytics in the forest products industry.*

@@ -6,7 +6,57 @@
     <description>Recent content in forest inventory on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/forest-inventory/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/forest-inventory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New updates for tools that query Forest Inventory and Analysis data</title>
+      <link>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</guid>
+      <description>The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential.
+After attending the FIA Science Stakeholder Meeting last week, I was happy to learn about some important updates to two tools that are widely used by forest analysts: the FIA EVALIDator program and the FIA DataMart.</description>
+    </item>
+    
+    <item>
+      <title>How many trees make a mass timber building?</title>
+      <link>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</guid>
+      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/
+Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
+    </item>
+    
+    <item>
+      <title>Simple volume to weight conversion for US tree species</title>
+      <link>https://arbor-analytics.com/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</guid>
+      <description>Foresters are accustomed to converting units of measure from one to another. Data are often collected in one unit of measure (e.g., the height of a tree in feet), but need to be converted to another for some part of the analysis or report (e.g., its height in meters).
+When it comes to calculating the volume of a tree, the number of equations and models are overwhelming. Not only are there a myriad of log rules to determine wood volume of standing timber, but even more volume equations can make determining wood volume for a species of interest a mess.</description>
+    </item>
+    
+    <item>
+      <title>How &#34;big&#34; are the Big Tree Champions?</title>
+      <link>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</guid>
+      <description>You might have heard this before: “I just saw the largest X tree in the state!”
+I have always been curious about the trees that make the list of state tree champions, or “big trees”. For nearly every state in the US, a list of the largest trees of each species are maintained. As landowners and foresters roam the woods, they can report a potential champion tree. (For context, in 2018 a team of wildlife researchers came across the largest jack pine in the US when they were studying wolves in northern Minnesota.</description>
+    </item>
+    
+    <item>
+      <title>Potential improvements to support forest carbon management and accounting</title>
+      <link>https://arbor-analytics.com/events/2022-04-23-potential-improvements-to-support-forest-carbon-management-and-accounting/</link>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/events/2022-04-23-potential-improvements-to-support-forest-carbon-management-and-accounting/</guid>
+      <description>Improvements are needed in the current forest inventory and monitoring programs to support forest carbon management and accounting. This presentation was a part of a Special Focus session of the Forest Inventory and Analysis National User Group.
+READ THE SLIDES.</description>
+    </item>
+    
     <item>
       <title>Five R packages every forest analyst should be using</title>
       <link>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
@@ -14,7 +64,8 @@
       
       <guid>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
       <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.
-Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.</description>
+Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.
+R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
     </item>
     
     <item>
@@ -24,7 +75,7 @@ Last year I wrote about 31 R packages available to forest analysts available on 
       
       <guid>https://arbor-analytics.com/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</guid>
       <description>Drought conditions in the western US, 20 July 2021. From US Drought Monitor.
-Much of the western United States is currently under severe drought conditions. Drought impacts trees and forests in the short and long term. Trees and forests can tolerate some extended dry periods depending of species and local conditions, but without adequate moisture availability, drought can ultimately lead to tree mortality.
+Much of the western United States is currently under severe drought conditions. Drought impacts trees and forests in the short and long term. Trees and forests can tolerate some extended dry periods depending of species and local conditions, but without adequate moisture availability, drought can ultimately lead to tree mortality.
 Perhaps the greatest impact of drought is the stress it places on trees.</description>
     </item>
     
@@ -35,7 +86,7 @@ Perhaps the greatest impact of drought is the stress it places on trees.</descri
       
       <guid>https://arbor-analytics.com/post/forest-carbon-markets-and-short-lived-trees/</guid>
       <description>I spoke with a forest products company representative this week who expressed concern with “extending rotations” so that carbon is locked up in trees for a longer time. Many forest carbon markets are proposing delaying harvesting for a few years so that more carbon accumulates over time.
-The particular concern was in Minnesota where aspen, the state’s most commercially important species, is crucial to the forest products economy.</description>
+The particular concern was in Minnesota where aspen, the state’s most commercially important species, is crucial to the forest products economy. Aspen is a short-lived, shade-intolerant species that is managed using even-aged silvicultural techniques.</description>
     </item>
     
     <item>
@@ -65,7 +116,7 @@ The value of carbon in forests has seen a tremendous increase in recent years. T
       
       <guid>https://arbor-analytics.com/post/carbon-by-state/</guid>
       <description>photo by Sean MacEntee
-In April 2020, the USDA Forest Service published Greenhouse gas emissions and removals from forest land, woodlands, and urban trees in the United States, 1990-2018. What makes this annual report unique is that forest carbon estimates are reported for each US state. Data are available in an appendix which lists forest carbon stocks and flux for each state from 1990 to 2018.
+In April 2020, the USDA Forest Service published Greenhouse gas emissions and removals from forest land, woodlands, and urban trees in the United States, 1990-2018. What makes this annual report unique is that forest carbon estimates are reported for each US state. Data are available in an appendix which lists forest carbon stocks and flux for each state from 1990 to 2018.
 Across the US, forests, urban trees, and harvested wood products are the largest carbon sink.</description>
     </item>
     
@@ -76,7 +127,7 @@ Across the US, forests, urban trees, and harvested wood products are the largest
       
       <guid>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
       <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.
-The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s.</description>
+The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s. Specifically, the visualization showed the number of deaths that occurred from preventable diseases, wounds, and other causes.</description>
     </item>
     
     <item>
@@ -136,16 +187,6 @@ The book recently published its 6th edition in 2018 and is available through Wav
       <guid>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</guid>
       <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.
 A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
-    </item>
-    
-    <item>
-      <title>How many trees make a mass timber building?</title>
-      <link>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</link>
-      <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</guid>
-      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/)
-Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
     </item>
     
     <item>

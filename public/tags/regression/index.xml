@@ -6,7 +6,17 @@
     <description>Recent content in Regression on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/regression/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How many trees make a mass timber building?</title>
+      <link>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</guid>
+      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/
+Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
+    </item>
+    
     <item>
       <title>Mixed models in R: a primer</title>
       <link>https://arbor-analytics.com/post/mixed-models-a-primer/</link>
@@ -14,8 +24,8 @@
       
       <guid>https://arbor-analytics.com/post/mixed-models-a-primer/</guid>
       <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:
-“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
-The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
+“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
+The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
     </item>
     
     <item>
@@ -49,23 +59,13 @@ Most equations that predict the amount carbon in a tree start with first predict
     </item>
     
     <item>
-      <title>How many trees make a mass timber building?</title>
-      <link>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</link>
-      <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</guid>
-      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/)
-Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
-    </item>
-    
-    <item>
       <title>How much is too long a wait? Calculating expected wait times of wood deliveries</title>
       <link>https://arbor-analytics.com/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</link>
       <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://arbor-analytics.com/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</guid>
       <description>Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)
-How important are wait times for loggers and truckers?Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill.
+How important are wait times for loggers and truckers?Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill.
 Both wood procurement managers and their suppliers need to know when wait times exceed the amount of time they expect.</description>
     </item>
     

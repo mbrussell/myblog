@@ -13,7 +13,8 @@
       <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
-      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.</description>
+      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.
+The true amount of forest carbon is only measured in detailed research studies, yet we discuss carbon stocks like they’re known values.</description>
     </item>
     
     <item>
@@ -23,7 +24,8 @@
       
       <guid>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</guid>
       <description>Photo by Annie Spratt on Unsplash.
-This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.</description>
+This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.
+For the process, typically a journal will reach out to a reviewer over email with an invitation.</description>
     </item>
     
     <item>
@@ -33,7 +35,7 @@
       
       <guid>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</guid>
       <description>“The only thing worse than a pie chart is several of them.” -Edward Tufte
-I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.
+I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.
 Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid.</description>
     </item>
     
@@ -54,7 +56,7 @@ The audience that participated in this activity included homeowners and private 
       
       <guid>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
       <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.
-The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s.</description>
+The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s. Specifically, the visualization showed the number of deaths that occurred from preventable diseases, wounds, and other causes.</description>
     </item>
     
     <item>
@@ -64,7 +66,7 @@ The visualization showed the number of deaths from soldiers in the Crimean War, 
       
       <guid>https://arbor-analytics.com/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</guid>
       <description>A simple call-to-action to use in a presentation: link to the slides you just presented.)
-“The primary purpose of a talk is advertising, not science.”
+“The primary purpose of a talk is advertising, not science.”
 This is one of the statements made in the Leek group guide to giving talks. Our lab group discussed this topic at a recent meeting in April.
 Sometimes we are required in a grant to provide a talk via a presentation about our research to the public.</description>
     </item>
@@ -87,7 +89,7 @@ If a forest analyst knows how to “speak carbon”, this can leave them feeling
       <guid>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</guid>
       <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.
 There are a few rules for all scatterplots:
-The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
+The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
     </item>
     
     <item>

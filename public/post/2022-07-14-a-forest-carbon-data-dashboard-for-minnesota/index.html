@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.101.0" />
+        <title>A forest carbon data dashboard for Minnesota</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">A forest carbon data dashboard for Minnesota</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-07-14-a-forest-carbon-data-dashboard-for-minnesota/">A forest carbon data dashboard for Minnesota</a></h4>
+    <h5>July 14, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<center>
+<p><img src="carbon%20dashboard.jpg" width="500" /></p>
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>By total forest land area, Minnesota ranks 21st in the United States. At 17.7 million acres, the state has an incredible amount of carbon being stored and sequestered in its trees and forests.</p>
+<p>I was recently a part of a year-long project funded by the Minnesota Forest Resources Council to do a deep dive into the state’s forest carbon resource. This project involved two primary tasks: (1) to create a report summarizing the current status and opportunities with forest carbon in Minnesota and (2) develop a data dashboard to effectively visualize current and past forest carbon attributes across the state.</p>
+</div>
+<div id="report-carbon-in-minnesotas-forests" class="section level2">
+<h2>Report: Carbon in Minnesota’s Forests</h2>
+<p>The report <a href="https://mn.gov/frc/assets/Carbon_in%20Minnesota_10_June_2022_tcm1162-531123.pdf">Carbon in Minnesota’s Forests: Current Status and Future Opportunities</a> is a scoping document that outlines the current status and future opportunities of forest carbon in the state. The project involved compiling relevant literature and data sources, delivering a series of outreach events, holding focus group sessions with key stakeholders, and performing data analysis and forest growth simulations.</p>
+<p>Here are a few highlights of the report:</p>
+<ul>
+<li><p><strong>Nine information needs and opportunities were identified.</strong> The project identified nine major thematic information needs and opportunities that warrant closer exploration and research related to forest carbon in Minnesota. These themes came about through a series of focus groups with stakeholders that helped identify them. The themes focus on three broad areas: carbon markets, forest management, and data and technology.</p></li>
+<li><p><strong>Forest Inventory and Analysis data provide detailed forest carbon estimates.</strong> Data from the USDA Forest Service’s Forest Inventory and Analysis program were used to quantify baseline information on forest carbon. In Minnesota, carbon attributes were summarized from over 6,300 forested plots, representing approximately one plot for every 2,791 acres. Forest carbon information was also obtained for the state using <a href="https://www.fs.usda.gov/rds/archive/Catalog/RDS-2021-0035">greenhouse gas emissions and removals data</a> reported on a statewide basis.</p></li>
+<li><p><strong>States are tackling forest carbon differently.</strong> Every state is looking at forest carbon opportunities in different ways. In the report, Table 1 lists 15 different states with a number of current projects ongoing within their boundaries. The table serves as a handy resource to compare state-level investments in forest carbon programs and research opportunities.</p></li>
+<li><p><strong>Growth and yield simulations provide a glimpse into how management impacts forest carbon.</strong> To better understand carbon dynamics, the project simulated carbon stocks for several forest types and forest management treatments. Three silvicultural treatments were simulated for each forest type: a no management treatment, a “business as usual” treatment (i.e., a commonly-implemented forest management strategy used throughout Minnesota), and a climate-adapted treatment. The Forest Vegetation Simulator, an individual tree model that uses lists of trees to forecast forest growth through time, was used to perform the simulation.</p></li>
+<li><p><strong>Carbon markets present opportunities for al landowners.</strong> The report also lists the current status of several carbon markets available to landowners. With an emphasis on voluntary markets and impacts to private woodland owners with small acreages, the report can serve as a useful roadmap to better understanding market-based approaches to forest carbon.</p></li>
+</ul>
+</div>
+<div id="forest-carbon-data-dashboard" class="section level2">
+<h2>Forest carbon data dashboard</h2>
+<p>Another component of the project was the development of the <a href="https://experience.arcgis.com/experience/28fc7281e9e84168b5ec50b7de2480c2/">Minnesota Forest Carbon Dashboard</a>. This data dashboard provides a summary of Minnesota’s forest carbon resource, with the ability to query information by forest type, ownership, regions, and stocking levels.</p>
+<p>The dashboard was developed by ArcGIS Online. Data tables present carbon stocks and flux estimates dating back to 1990 with a number of units, including carbon and carbon dioxide equivalent.</p>
+<p>Special thanks to the Minnesota Forest Resources Council for their support with this project and especially to Chris Edgar and the University of Minnesota USpatial team for developing the data dashboard.</p>
+<p>What data on forest carbon would be most beneficial to you and your organization? <a href="mailto:matt@arbor-analytics.com">Email me</a> and I’d love to learn more.</p>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/">New updates for tools that query Forest Inventory and Analysis data</a></h4>
+    <h5>November 23, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/datamart"><kbd class="item-tag">DataMart</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/evalidator"><kbd class="item-tag">EVALIDator</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-09-07-price-of-carbon-in-carb-decreases-slightly/">Price of carbon in CARB decreases slightly</a></h4>
+    <h5>September 7, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/carbon-credits"><kbd class="item-tag">carbon credits</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/carbon-markets"><kbd class="item-tag">carbon markets</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/carb"><kbd class="item-tag">CARB</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/">FVS and CBM-CFS3: Comparing two forest simulation models </a></h4>
+    <h5>August 4, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/carbon-markets"><kbd class="item-tag">carbon markets</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

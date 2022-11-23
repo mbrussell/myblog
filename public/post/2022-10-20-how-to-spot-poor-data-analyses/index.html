@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.101.0" />
+        <title>How to spot poor data analyses</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">How to spot poor data analyses</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-10-20-how-to-spot-poor-data-analyses/">How to spot poor data analyses</a></h4>
+    <h5>October 20, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<center>
+<img src="diameter%20tape%20oak%20tree%202.jpg" width="400" />
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.</p>
+<p>Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s <a href="https://theconversation.com/excel-autocorrect-errors-still-plague-genetic-research-raising-concerns-over-scientific-rigour-166554">autocorrecting feature</a> had led to errors in 30% of gene list observations over a six year span. Perusing <a href="https://www.reddit.com/r/dataisugly/">Reddit’s Data Is Ugly page</a> is a reminder of how poor data visualization can go very wrong.</p>
+<p>Here I share a few red flags that may help to identify data analyses of poor quality. These come mostly from my experience in consulting with forestry companies and organizations, mentoring graduate students, and <a href="https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/">serving as a journal reviewer</a>.</p>
+<div id="sample-sizes-arent-shown." class="section level3">
+<h3>Sample sizes aren’t shown.</h3>
+<p>If a polling company reported that 70% of voters support candidate A over candidate B, you might think they’re a lock to win. But if only 10 people were polled, you’ll have more uncertainty and suspicion about the usefulness of the poll. Not reporting the number of observations can often obscure one’s interpretation of statistical results.</p>
+<p>A good practice is to always show the number of samples taken when providing a summary of a data set. This can be as simple as adding a footnote or a column in a table that provides the reader more insights into the data being shown.</p>
+</div>
+<div id="measure-of-variability-isnt-reported." class="section level3">
+<h3>Measure of variability isn’t reported.</h3>
+<p>Nate Silver’s <a href="https://www.penguinrandomhouse.com/books/305826/the-signal-and-the-noise-by-nate-silver/">“The Signal and the Noise”</a> popularized a lot of methods used in political polling and statistics. The <em>signal</em> is generally understood as the trend in which the data points to, while the <em>noise</em> encompasses all of the uncertainty and variability associated with the data. It is often the noise which is the most challenging (but oftentimes fun) to deal with.</p>
+<p>Always present a measure of variation when summarizing a variable from a data set. When collecting data from a population, the statistical variance or standard deviation is a useful metric. After a sample is taken, the standard error is a useful value that can also be used to determine the appropriate confidence interval.</p>
+<p>Understand the typical amount of variation you should expect for measurements you work with frequently. For example, the coefficient of variation (CV) is a useful measure which standardizes variability as a reflection of the mean value. The CV of stand volume in mixed-species uneven-aged forests is typically around 100%, while the CV for single-species stands grown in a plantation is typically around 30%. Understanding typical values of variation can also help in determining the appropriate number of samples to collect in future projects, saving time and cost.</p>
+</div>
+<div id="distribution-of-data-is-unknown." class="section level3">
+<h3>Distribution of data is unknown.</h3>
+<p>While the mean and variation of a variable is informative, understanding the complete distribution of the data is essential. Having the complete distribution of a variable is important to identify outlier data points and identify clustering, in addition to determining whether or not subsequent statistical procedures can be applied to the data.</p>
+<p>Visualizations help immensely to show distributions of data. Histograms and box plots have long been used to show distributions. A newer visualization type, <a href="https://www.r-bloggers.com/2021/07/ggdist-make-a-raincloud-plot-to-visualize-distribution-in-ggplot2/">termed raincloud plots</a>, combines density plots with box plots to display a full depiction of the distribution of data.</p>
+</div>
+<div id="too-many-results-are-displayed." class="section level3">
+<h3>Too many results are displayed.</h3>
+<p>Beware of the report you’re reading with 50 pages of analysis that don’t seem to answer the question that needs to be answered. Oftentimes, analysts will present too many results because they have lost sight or are unsure what the motivation for the work originally was.</p>
+<p>In my experience, analysts will often show too much data because they’re not confident in the results that are produced. I’ve sat through too many presentations where the speaker has shown tables with a dozen rows and columns and only allowed the audience 15 seconds to interpret the results. Presenting too many results leaves the reader unsure and suspect of your analysis.</p>
+<p>The Law of Parsimony, which states that the simplest explanation is most likely the correct one, is a good adage to follow here. Be parsimonious with what you share. Only show them what they need to see to make an informed decision. But, always have additional results close by and be willing to share them if you’re asked.</p>
+</div>
+<div id="output-is-copypasted-from-software." class="section level3">
+<h3>Output is copy/pasted from software.</h3>
+<p>One of the benefits of having great software for analyzing data is that we can too easily rely on the output it produces. For example, all too often, we only need a key number or two after running a statistical test, yet a dozen tables and figures can be provided by software which show information related to a test.</p>
+<p>Simply copying output from software and pasting it into a report is lazy and indicates you haven’t spent time thinking about how to communicate your data. To combat this, I will often look at other reports and papers that quantify the same kinds of data that I’m analyzing. In doing this, you can be inspired with ideas and unique ways to present information that will resonate with your audience.</p>
+</div>
+<div id="tables-and-figures-are-not-used-effectively." class="section level3">
+<h3>Tables and figures are not used effectively.</h3>
+<p>Tables are often one of the best ways to present data in a compact form. But too many people present tables that are too large to comprehend. Figures are useful to convey trends and showcase differences from one variable to another.</p>
+<p>Tables should be used (1) to convey precise numbers or text, (2) to compare individual values, and, (3) to present several variables each with different units of measure. Figures can be used to (1) showcase trends or relationships between different values and (2) display photographs, maps, or other illustrations.</p>
+<p>–</p>
+<p><em>By Matt Russell. Which data analysis practices are “red flags” to you? Leave me a comment on <a href="https://www.linkedin.com/feed/update/urn:li:activity:6988925136041041920">the LinkedIn post for this article</a> and I’d love to hear it.</em></p>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/">New updates for tools that query Forest Inventory and Analysis data</a></h4>
+    <h5>November 23, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/datamart"><kbd class="item-tag">DataMart</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/evalidator"><kbd class="item-tag">EVALIDator</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-11-09-home-heating-with-wood/">How many homes heat with wood?</a></h4>
+    <h5>November 9, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/energy"><kbd class="item-tag">energy</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/wood"><kbd class="item-tag">wood</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/">P-ing in the woods: p-values in forest science</a></h4>
+    <h5>October 10, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/p-values"><kbd class="item-tag">p-values</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

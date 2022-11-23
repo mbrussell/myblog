@@ -6,7 +6,17 @@
     <description>Recent content in data management on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading in data quickly into R</title>
+      <link>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</guid>
+      <description>If you’re like me, you work with a lot of data files in your daily analytical work. Despite the increase in cloud computing, reading in files locally to the machine your working on is common.
+You want a rapid summary of your data and don’t want to wait forever for your computer to read in the file you’re working with. To do this, you want to use functions that are efficient and effective for working with large amounts of data.</description>
+    </item>
+    
     <item>
       <title>Understanding the forest products industry using NAICS codes</title>
       <link>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
@@ -35,7 +45,7 @@ The audience that participated in this activity included homeowners and private 
       <guid>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</guid>
       <description>If you’re like me, more of the data you use on a daily basis are stored in Google Sheets. You might be using fewer Excel spreadsheets and .csv files. I recently researched the most up-to-date ways to import data from an Access database into R. (It had been a while since I imported data from a database.)
 Using Google Sheets to store data has several advantages:
-Multiple people can collaborate on the same data set,Information entered into a Google Form can populate data in a Google Spreadsheet,Data can be accessed and edited both online and offline, andGoogle Sheets can be converted to Excel spreadsheets, and vice versa.</description>
+Multiple people can collaborate on the same data set,Information entered into a Google Form can populate data in a Google Spreadsheet,Data can be accessed and edited both online and offline, andGoogle Sheets can be converted to Excel spreadsheets, and vice versa.</description>
     </item>
     
   </channel>

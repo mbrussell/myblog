@@ -6,7 +6,37 @@
     <description>Recent content in forest measurements on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/forest-measurements/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/forest-measurements/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New updates for tools that query Forest Inventory and Analysis data</title>
+      <link>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</guid>
+      <description>The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential.
+After attending the FIA Science Stakeholder Meeting last week, I was happy to learn about some important updates to two tools that are widely used by forest analysts: the FIA EVALIDator program and the FIA DataMart.</description>
+    </item>
+    
+    <item>
+      <title>Simple volume to weight conversion for US tree species</title>
+      <link>https://arbor-analytics.com/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</guid>
+      <description>Foresters are accustomed to converting units of measure from one to another. Data are often collected in one unit of measure (e.g., the height of a tree in feet), but need to be converted to another for some part of the analysis or report (e.g., its height in meters).
+When it comes to calculating the volume of a tree, the number of equations and models are overwhelming. Not only are there a myriad of log rules to determine wood volume of standing timber, but even more volume equations can make determining wood volume for a species of interest a mess.</description>
+    </item>
+    
+    <item>
+      <title>How &#34;big&#34; are the Big Tree Champions?</title>
+      <link>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</guid>
+      <description>You might have heard this before: “I just saw the largest X tree in the state!”
+I have always been curious about the trees that make the list of state tree champions, or “big trees”. For nearly every state in the US, a list of the largest trees of each species are maintained. As landowners and foresters roam the woods, they can report a potential champion tree. (For context, in 2018 a team of wildlife researchers came across the largest jack pine in the US when they were studying wolves in northern Minnesota.</description>
+    </item>
+    
     <item>
       <title>If 50% of a tree&#39;s biomass is carbon, what&#39;s the other half?</title>
       <link>https://arbor-analytics.com/post/2021-08-22-if-50-of-a-tree-s-biomass-is-carbon-what-s-the-other-half/</link>
@@ -14,7 +44,7 @@
       
       <guid>https://arbor-analytics.com/post/2021-08-22-if-50-of-a-tree-s-biomass-is-carbon-what-s-the-other-half/</guid>
       <description>“You wrote earlier that “since half of biomass is carbon, I multiply by 0.5.” What is the other half of biomass?&#34;
-I was sent this question this question over email last week. As foresters, we’re often concerned with only carbon stored and sequestered in trees. But the are other elements that form the chemical composition of wood. While there are slight deviations to the “50% of biomass in wood is carbon” assumption, it is a statement that provides an approximation about the amount of carbon in wood.</description>
+I was sent this question this question over email last week. As foresters, we’re often concerned with only carbon stored and sequestered in trees. But the are other elements that form the chemical composition of wood. While there are slight deviations to the “50% of biomass in wood is carbon” assumption, it is a statement that provides an approximation about the amount of carbon in wood.</description>
     </item>
     
     <item>
@@ -47,8 +77,8 @@ In forest analytics, determining the amount of carbon in a tree is first based o
 The Cheat Sheet has been updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2019.
 DOWNLOAD (PDF)
 DOWNLOAD (JPEG)
-–
-By Matt Russell. Email Matt with any questions or comments.</description>
+–
+By Matt Russell. Email Matt with any questions or comments. Sign up for my monthly newsletter for in-depth analysis on data and analytics in the forest products industry.</description>
     </item>
     
     <item>
@@ -111,7 +141,7 @@ The Cheast Sheet is updated with the most recent values published in the US Envi
 DOWNLOAD (PDF)
 DOWNLOAD (JPEG)
 The Forest Carbon Cheat Sheet.
-If you have questions or comments on the Cheat Sheet, email Matt.</description>
+If you have questions or comments on the Cheat Sheet, email Matt.</description>
     </item>
     
     <item>

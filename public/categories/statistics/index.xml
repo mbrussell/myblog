@@ -6,7 +6,28 @@
     <description>Recent content in Statistics on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>P-ing in the woods: p-values in forest science</title>
+      <link>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</guid>
+      <description>A meme about p-values. Hat tip to Matt Dancho for the idea for the graphic.The statistics community has had a lot of discussion in recent years about the role of p-values and statistical significance. This has led some to question if we’re relying too much on them as a way of interpreting results from a statistical analysis.
+The “p” in p-value stands for probability, or the probability under a statistical model that a summary of the data would be equal to or more extreme than its observed value.</description>
+    </item>
+    
+    <item>
+      <title>New book: Statistics in Natural Resources: Applications with R</title>
+      <link>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
+      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.
+I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.
+At the same time, I was searching for a different textbook to use for the course.</description>
+    </item>
+    
     <item>
       <title>What statistics students in natural resources want to learn more about</title>
       <link>https://arbor-analytics.com/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</link>
@@ -24,7 +45,7 @@ I instruct the course NR 5021: Statistics for Agricultural and Natural Resources
       
       <guid>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</guid>
       <description>Photo by Chris Liverani on Unsplash.
-The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.
+The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.
 When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data.</description>
     </item>
     
@@ -35,8 +56,8 @@ When I was learning statistics in an introductory course, I was shown a formula 
       
       <guid>https://arbor-analytics.com/post/mixed-models-a-primer/</guid>
       <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:
-“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
-The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
+“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
+The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
     </item>
     
     <item>

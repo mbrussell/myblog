@@ -6,7 +6,56 @@
     <description>Recent content in Data science on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to spot poor data analyses</title>
+      <link>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</guid>
+      <description>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.
+Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s autocorrecting feature had led to errors in 30% of gene list observations over a six year span.</description>
+    </item>
+    
+    <item>
+      <title>P-ing in the woods: p-values in forest science</title>
+      <link>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</guid>
+      <description>A meme about p-values. Hat tip to Matt Dancho for the idea for the graphic.The statistics community has had a lot of discussion in recent years about the role of p-values and statistical significance. This has led some to question if we’re relying too much on them as a way of interpreting results from a statistical analysis.
+The “p” in p-value stands for probability, or the probability under a statistical model that a summary of the data would be equal to or more extreme than its observed value.</description>
+    </item>
+    
+    <item>
+      <title>Data Science for Forestry Applications</title>
+      <link>https://arbor-analytics.com/events/2022-09-27-data-science-for-forestry-applications/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/events/2022-09-27-data-science-for-forestry-applications/</guid>
+      <description>This hands-on workshop showcased how data science can be used in forestry applications. Participants learned how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop was perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
+    </item>
+    
+    <item>
+      <title>How &#34;big&#34; are the Big Tree Champions?</title>
+      <link>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</guid>
+      <description>You might have heard this before: “I just saw the largest X tree in the state!”
+I have always been curious about the trees that make the list of state tree champions, or “big trees”. For nearly every state in the US, a list of the largest trees of each species are maintained. As landowners and foresters roam the woods, they can report a potential champion tree. (For context, in 2018 a team of wildlife researchers came across the largest jack pine in the US when they were studying wolves in northern Minnesota.</description>
+    </item>
+    
+    <item>
+      <title>Reading in data quickly into R</title>
+      <link>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</guid>
+      <description>If you’re like me, you work with a lot of data files in your daily analytical work. Despite the increase in cloud computing, reading in files locally to the machine your working on is common.
+You want a rapid summary of your data and don’t want to wait forever for your computer to read in the file you’re working with. To do this, you want to use functions that are efficient and effective for working with large amounts of data.</description>
+    </item>
+    
     <item>
       <title>Five R packages every forest analyst should be using</title>
       <link>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
@@ -14,7 +63,8 @@
       
       <guid>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
       <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.
-Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.</description>
+Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.
+R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
     </item>
     
     <item>
@@ -52,7 +102,7 @@ I instruct the course NR 5021: Statistics for Agricultural and Natural Resources
       
       <guid>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</guid>
       <description>Photo by Chris Liverani on Unsplash.
-The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.
+The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.
 When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data.</description>
     </item>
     
@@ -63,8 +113,8 @@ When I was learning statistics in an introductory course, I was shown a formula 
       
       <guid>https://arbor-analytics.com/post/mixed-models-a-primer/</guid>
       <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:
-“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
-The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
+“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
+The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
     </item>
     
     <item>
@@ -105,7 +155,7 @@ If we ask for any qualitative data through comments (e.g., “What is your opini
       <guid>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</guid>
       <description>If you’re like me, more of the data you use on a daily basis are stored in Google Sheets. You might be using fewer Excel spreadsheets and .csv files. I recently researched the most up-to-date ways to import data from an Access database into R. (It had been a while since I imported data from a database.)
 Using Google Sheets to store data has several advantages:
-Multiple people can collaborate on the same data set,Information entered into a Google Form can populate data in a Google Spreadsheet,Data can be accessed and edited both online and offline, andGoogle Sheets can be converted to Excel spreadsheets, and vice versa.</description>
+Multiple people can collaborate on the same data set,Information entered into a Google Form can populate data in a Google Spreadsheet,Data can be accessed and edited both online and offline, andGoogle Sheets can be converted to Excel spreadsheets, and vice versa.</description>
     </item>
     
     <item>

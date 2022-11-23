@@ -15,7 +15,7 @@
       <guid>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</guid>
       <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.
 There are a few rules for all scatterplots:
-The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
+The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
     </item>
     
     <item>
@@ -24,8 +24,8 @@ There are a few rules for all scatterplots:
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://arbor-analytics.com/events/getting-down-with-pagedown/</guid>
-      <description>This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.
-SlidesGithub repositoryExamples with pagedown</description>
+      <description>This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.
+SlidesGithub repositoryExamples with pagedown</description>
     </item>
     
     <item>

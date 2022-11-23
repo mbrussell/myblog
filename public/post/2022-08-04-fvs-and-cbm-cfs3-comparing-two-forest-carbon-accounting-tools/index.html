@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.101.0" />
+        <title>FVS and CBM-CFS3: Comparing two forest simulation models </title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">FVS and CBM-CFS3: Comparing two forest simulation models </a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/">FVS and CBM-CFS3: Comparing two forest simulation models </a></h4>
+    <h5>August 4, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/carbon-markets"><kbd class="item-tag">carbon markets</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/index_files/kePrint/kePrint.js"></script>
+<link href="https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<center>
+<p><img src="fvs-cbm-cfs3.png" width="500" /></p>
+</center>
+<div id="section" class="section level1">
+<h1></h1>
+<p>Analysts in the forestry community often turn to models to simulate what a forest will look like in the future. Whether it’s simulating a forest management treatment or forecasting the effects of a natural disturbance, models are required tools for understanding how forests will grow.</p>
+<p>Increasingly, models are being used to understand forest carbon stocks and stock changes. As we strive to quantify the role of forests in offsetting carbon dioxide emissions, having reliable tools to understand forest dynamics is essential. The use of models are also required in many forest carbon programs, for example, the <a href="https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program/compliance-offset-protocols/us-forest-projects/models">California Air Resources Board’s Compliance Offset Program</a>.</p>
+<p>This post describes two commonly used models being used to forecast forest carbon. Both rely on information to forecast forest dynamics and carbon stocks and stock changes into the future. Although one was developed in the US and one in Canada, both models are being used across country boundaries.</p>
+<div id="the-fvs-model" class="section level2">
+<h2>The FVS model</h2>
+<p>The <a href="https://www.fs.usda.gov/fvs/index.shtml">Forest Vegetation Simulator (FVS)</a> is a model developed by the USDA Forest Service in 1973. The FVS model is an individual tree model that uses lists of trees (e.g., species and tree diameter) to forecast forest growth through time. The model can simulate forest management activities, disturbances, and provide forest carbon and harvested wood products reports. A series of 22 different model variants provide regional differences in forest growth patterns.</p>
+<p>There has been a tremendous amount of research and development on the FVS model through time. Their website contains excellent supporting information, video tutorials, and documentation. Although the model was originally developed in the US, here are a few applications of it in Canada:</p>
+<ul>
+<li>An <a href="https://www.researchgate.net/publication/324705922_The_Acadian_Variant_of_the_Forest_Vegetation_Simulator_Continued_development_and_evaluation">Acadian variant of FVS</a> is available for Maine and the Canadian Maritime provinces, and</li>
+<li>The FVS model has been calibrated for <a href="https://cfs.nrcan.gc.ca/publications?id=28760">Ontario’s forests</a>.</li>
+</ul>
+</div>
+<div id="the-cbm-cfs3-model" class="section level2">
+<h2>The CBM-CFS3 model</h2>
+<p>The <a href="https://www.nrcan.gc.ca/climate-change-adapting-impacts-and-reducing-emissions/climate-change-impacts-forests/carbon-accounting/carbon-budget-model/13107">Carbon Budget Model of the Canadian Forest Service 3 (CBM-CFS 3)</a> is a model developed by the Canadian Forest Service in 2002. The model simulates carbon dynamics following the Good Practice Guidance established by the Intergovernmental Panel on Climate Change (IPCC) for reporting on carbon stocks and stock changes. The model works on an operational scale and is well suited for landscape-level predictions, but it can also operate at the stand level. Although the model was originally developed by the Canadian Forest Service, it has been applied in the US as well:</p>
+<ul>
+<li>An <a href="https://www.canr.msu.edu/news/2021-22-fcwg-learning-exchange-series-modeling-forest-management-and-carbon-a-tool-for-state-wide-planning-and-action">analysis in seven US states</a> used Forest Inventory and Analysis data in CBM-CFS3 to understand carbon impacts resulting from forest management.</li>
+<li>A recent analysis integrated <a href="https://cbmjournal.biomedcentral.com/articles/10.1186/s13021-022-00201-1">CBM-CFS3 with a land use and land cover change model</a> to understand spatially explicit estimates of carbon stocks and fluxes.</li>
+</ul>
+<p>As for me, I’ve been a long time FVS user and am beginning to hear more about applications of CBM-CFS3 as a carbon accounting tool. The following table, a “cheat sheet” of sorts, compares the design, input, and outputs of both models:</p>
+<table class="table lightable-paper" style="margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Attribute
+</th>
+<th style="text-align:left;">
+FVS
+</th>
+<th style="text-align:left;">
+CBM.CFS3
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Developer/maintainer
+</td>
+<td style="text-align:left;">
+USDA Forest Service
+</td>
+<td style="text-align:left;">
+Canadian Forest Service
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Year developed
+</td>
+<td style="text-align:left;">
+1973
+</td>
+<td style="text-align:left;">
+Original model: 1989; CBM-CFS3 model: 2002
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Model type
+</td>
+<td style="text-align:left;">
+Individual tree model; semi-distance independent
+</td>
+<td style="text-align:left;">
+Stand and landscape-level model; distance independent
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+How are forested regions specified?
+</td>
+<td style="text-align:left;">
+Includes 22 different model variants depending on region.
+</td>
+<td style="text-align:left;">
+Default ecological parameters are provided, but can be modified by the user.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Time step
+</td>
+<td style="text-align:left;">
+Default cycle length is 10 years for most variants.
+</td>
+<td style="text-align:left;">
+Annual
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Can forest management and disturbance be analyzed?
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Includes climate change?
+</td>
+<td style="text-align:left;">
+Yes, but only for Western US with Climate-FVS
+</td>
+<td style="text-align:left;">
+No. But user can modify the default climate data (which only impacts decay), and use zero carbon impact disturbance events paired with transition rules to alter stand growth in unison with changes in climate.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Incorporates uneven-aged stands?
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+No. But user can modify yield curves.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+How is regeneration handled?
+</td>
+<td style="text-align:left;">
+A “full” regeneration establishment model is available for some variants in the western US. A “partial” establishment model is available for all other variants and simulates stump sprouting. User can specify information on planting and natural regeneration.
+</td>
+<td style="text-align:left;">
+Following a stand-replacing disturbance, regeneration will occur automatically, or can be delayed or accelerated using transition rules and/or switching of growth curves. By default, there is no regeneration assumed following non-stand-replacing disturbances. However the user can implement a transition rule to switch an impacted stand to a new growth curve(s) to account for multiple growth components (although the stand can only be represented by a single age or age class).
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Includes harvested wood products report?
+</td>
+<td style="text-align:left;">
+Yes
+</td>
+<td style="text-align:left;">
+No. But annual carcon stocks harvested and transferred to a forest products pool are tracked, and can be viewed and exported for use in HWP carbon models.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+How does it incorporate carbon?
+</td>
+<td style="text-align:left;">
+Accounts for carbon stocks and stock changes with the Fire and Fuels Extension.
+</td>
+<td style="text-align:left;">
+Accounts for carbon stocks and stock changes in tree biomass and
+dead organic matter pools.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Carbon pools tracked
+</td>
+<td style="text-align:left;">
+Aboveground biomass, belowground biomass (live and dead coarse roots), dead wood (standing and downed), forest floor (litter and duff), herbs and shrubs.
+</td>
+<td style="text-align:left;">
+Aboveground biomass, belowground biomass (live coarse and live fine roots), dead wood (standing and downed {on ground and in mineral soil}), litter (includes fine woody debris), soil organic matter.
+</td>
+</tr>
+</tbody>
+</table>
+<p>Have you tried using both models, and if so, what are your thoughts on their differences? <a href="mailto:matt@arbor-analytics.com">Drop me an email</a> and I’d love to learn more.</p>
+<p><em>Updated 6 Sept 2022. Special thanks to Stephen Kull with the Canadian Forest Service for highlighting some additional aspects of the CBM-CFS3 model and to Greg Paradis for pointing out differences between the two models.</em></p>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/">New updates for tools that query Forest Inventory and Analysis data</a></h4>
+    <h5>November 23, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/datamart"><kbd class="item-tag">DataMart</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/evalidator"><kbd class="item-tag">EVALIDator</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-11-09-home-heating-with-wood/">How many homes heat with wood?</a></h4>
+    <h5>November 9, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/energy"><kbd class="item-tag">energy</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/wood"><kbd class="item-tag">wood</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-10-20-how-to-spot-poor-data-analyses/">How to spot poor data analyses</a></h4>
+    <h5>October 20, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

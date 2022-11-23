@@ -1,0 +1,64 @@
+---
+title: 'New book: Statistics in Natural Resources: Applications with R'
+author: Matt Russell
+date: '2022-07-20'
+slug: []
+categories:
+  - Statistics
+tags:
+  - analytics
+  - books
+  - education
+  - R
+  - statistics
+  - teaching statistics
+  - stats4nr
+---
+<center>
+
+![](stats4nr.jpg){width=250px}
+</center>
+
+##
+
+At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.
+
+I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.
+
+At the same time, I was searching for a different textbook to use for the course. I was using *Introductory Statistics with R* by Dalgaard, which I liked for its focus on the applied aspects of statistics. But the book wasn’t a great fit for graduate students and “use a different textbook” was a comment that showed up repeatedly on student evaluations of the course.
+
+So, in an effort to tackle both of these issues, I decided it was worth my time and the community’s to invest in developing a new textbook that focuses on applied statistics with a natural resources focus. I’m happy to report that the *Statistics in Natural Resources: Applications with R* is now in production and available for pre-order. You can order from anywhere you buy books, including [from the publisher](http://www.routledge.com/9781032258782) or [Amazon](https://www.amazon.com/Statistics-Natural-Resources-Applications-R/dp/1032258780/ref=sr_1_1?crid=1EIALUHRHVHH3&keywords=statistics+natural+resources&qid=1658330008&s=books&sprefix=statistis+natural+resources%2Cstripbooks%2C111&sr=1-1). It is currently in production and will ship August 19, 2022 in both hardcover and eBook formats.
+
+If you order before Sept 30, 2022, I’m also happy to share a 20% discount code that you can use if you order [through Routledge’s website](http://www.routledge.com/9781032258782):
+
+<center>
+
+![](2022-07-twitter-banner.jpg){width=500px}
+</center>
+
+## 
+
+The book is also available in its entirety online at [stats4nr.com](http://stats4nr.com). It will always be free and available at that website. One of the primary reasons I chose to publish with Chapman and Hall/CRC Press was their commitment to make their textbooks accessible to a wider number of individuals.
+
+This book focuses on the application of statistical analyses in the environmental, agricultural, and natural resources disciplines. There are thousands of textbooks on statistics, so I thought it be worth highlighting a few examples of what sets this book apart from others:
+
+* **Focuses on natural resources.** There are many great statistics textbooks, but few that use examples solely from the natural resources disciplines. It’s been my experience that student comprehension is improved if they work with data they’re familiar with throughout their learning process.  
+* **Uses the tidyverse.** The tidyverse package is a “megapackage” in R that includes several packages that import, reshape, and visualize data in a consistent manner, among other tasks. The [tidyverse suite of R packages](https://www.tidyverse.org/) is continually updated and improved upon and provides a more seamless integration of learning how to code and perform data analysis. 
+* **Has 130 exercises with solutions.** Learning happens best when you use concepts and apply them to everyday problems. The book’s website contains [solutions to over 130 exercises (PDF)](https://s3-eu-west-1.amazonaws.com/s3-euw1-ap-pe-ws4-cws-documents.ri-prod/9781032258782/stats_4_nr_solutions.pdf) in R that build on the concepts in the book.   
+* **Has an accompanying R package.** Loading data into R is often half the battle for people learning new statistical software. All of the data sets used in the book can be accessed by installing the [stats4nr R package](https://github.com/mbrussell/stats4nr). This avoids the need to download external files when working through the book.
+
+The first ten chapters form the basis of most semester-long introductory statistics classes at the undergraduate level. Chapters 11 through 15, which include topics such as mixed models, logistic regression, and count regression, could also be included in a statistics class that moves at an accelerated pace (e.g., for graduate students). 
+
+For some “behind the curtain” information, the book was written entirely in R using the **bookdown** package. I loved this approach because updating the online version of the book as it was being developed was a breeze. As I completed each chapter or significant sections, I uploaded new versions to the book’s website. I also gained feedback from students that used the book, in addition to LinkedIn followers, as this post from August 2021 shows: 
+
+<center>
+
+![](LI post book.png){width=500px}
+</center>
+
+## 
+
+I thank everyone who provided feedback on the book throughout the last year. I also have many people to thank for getting the book to press, namely the excellent folks at Chapman and Hall/CRC Press. Lara Spieker guided me through the process, Shashi Kumar helped to remedy several LaTEX issues, Michele Dimont provided a thorough copyedit, and technical reviewers improved the quality and scope of the book.
+
+If you find the book valuable, I’d be interested to know. Don’t hesitate to [send me an email](mailto:matt@arbor-analytics.com) with how you’re using it, or send any corrections or topics you’d like to see in the future. Enjoy!
+

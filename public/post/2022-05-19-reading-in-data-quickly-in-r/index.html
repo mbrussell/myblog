@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.101.0" />
+        <title>Reading in data quickly into R</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Reading in data quickly into R</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-05-19-reading-in-data-quickly-in-r/">Reading in data quickly into R</a></h4>
+    <h5>May 22, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-import"><kbd class="item-tag">data import</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-management"><kbd class="item-tag">data management</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/index_files/header-attrs/header-attrs.js"></script>
+
+
+<center>
+<p><img src="datass.jpg" width="500" /></p>
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>If you’re like me, you work with a lot of data files in your daily analytical work. Despite the increase in cloud computing, reading in files locally to the machine your working on is common.</p>
+<p>You want a rapid summary of your data and don’t want to wait forever for your computer to read in the file you’re working with. To do this, you want to use functions that are efficient and effective for working with large amounts of data.</p>
+<p>If you’re using R, there are several functions to read in data depending on your needs. This post summarizes three common functions in R that read in data and compares their speed.</p>
+</div>
+<div id="the-plant-dictionary-data-set" class="section level2">
+<h2>The plant dictionary data set</h2>
+<p>The US Department of Agriculture’s <a href="https://www.fia.fs.fed.us/">Forest Inventory and Analysis program</a> collects information on the status and trends of forests across the country. The <em>REF_PLANT_DICTIONARY</em> data table is an important one contained on the <a href="https://apps.fs.usda.gov/fia/datamart/CSV/datamart_csv.html">FIA Datamart webpage</a>.</p>
+<p>This data table contains 81,489 rows and 39 variables and is stored as a comma separated data file (i.e., a .csv format). The tables contains information on all of the plant species recorded in the FIA database:</p>
+<pre><code>## # A tibble: 6 x 39
+##        CN SYMBOL_TYPE SYMBOL SCIENTIFIC_NAME       NEW_SYMBOL NEW_SCIENTIFIC_NA~
+##     &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;  &lt;chr&gt;                 &lt;chr&gt;      &lt;chr&gt;             
+## 1 5.04e14 Old         NOFR3  Nothoscordum fragrans &quot;NOBO&quot;     &quot;Nothoscordum bor~
+## 2 5.04e14 Old         NOGR4  Nothoscordum gracile  &quot;NOBO&quot;     &quot;Nothoscordum bor~
+## 3 5.04e14 Species     NOGR3  Nothoscordum gracile  &quot;&quot;         &quot;&quot;                
+## 4 5.04e14 Old         NOIN6  Nothoscordum inodorum &quot;NOBO&quot;     &quot;Nothoscordum bor~
+## 5 5.04e14 Old         NOIN3  Nothoscordum inodorum &quot;ALNE3&quot;    &quot;Allium neapolita~
+## 6 5.04e14 Species     NOTE2  Nothoscordum texanum  &quot;&quot;         &quot;&quot;                
+## # ... with 33 more variables: COMMON_NAME &lt;chr&gt;, CATEGORY &lt;chr&gt;, FAMILY &lt;chr&gt;,
+## #   GROWTH_HABIT &lt;chr&gt;, DURATION &lt;chr&gt;, US_NATIVITY &lt;chr&gt;,
+## #   STATE_DISTRIBUTION &lt;chr&gt;, STATE_AND_PROVINCE &lt;chr&gt;,
+## #   SCIENTIFIC_NAME_W_AUTHOR &lt;chr&gt;, GENERA_BINOMIAL_AUTHOR &lt;chr&gt;,
+## #   TRINOMIAL_AUTHOR &lt;chr&gt;, QUADRINOMIAL_AUTHOR &lt;chr&gt;, XGENUS &lt;chr&gt;,
+## #   GENUS &lt;chr&gt;, XSPECIES &lt;chr&gt;, SPECIES &lt;chr&gt;, SSP &lt;chr&gt;, XSUBSPECIES &lt;chr&gt;,
+## #   SUBSPECIES &lt;chr&gt;, VAR &lt;chr&gt;, XVARIETY &lt;chr&gt;, VARIETY &lt;chr&gt;, ...</code></pre>
+<p>The data set is a large enough one that we will see differences in the speed at which different functions read in the data.</p>
+<div id="read.csv" class="section level3">
+<h3>read.csv()</h3>
+<p>One of the most common functions for reading in data in R is <code>read.csv()</code>. This function is available in the base version of R and is used regularly for reading in data:</p>
+<pre class="r"><code>read.csv(&#39;C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv&#39;)</code></pre>
+</div>
+<div id="read_csv" class="section level3">
+<h3>read_csv()</h3>
+<p>There’s a slight difference in the name of this function, but it leads to a big impact. The <code>read_csv()</code> function is available from the <strong>readr</strong> package, one of the many packages available in the <strong>tidyverse</strong> megapackage. The only difference is using the underscore instead of a period.</p>
+<p>The primary difference in the <code>read_csv()</code> function is that instead of treating the data as a data frame, it treats it as a tibble, the tidyverse’s implementation of a data set in R:</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre class="r"><code>read_csv(&#39;C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv&#39;)</code></pre>
+</div>
+<div id="fread" class="section level3">
+<h3>fread()</h3>
+<p>The <strong>data.table</strong> package is well known to work well with large data sets. For reading in .csv files, the <code>fread()</code> function works well. Like the <code>read.csv()</code> function, after it reads in the data it is stored as a data frame:</p>
+<pre class="r"><code>library(data.table)</code></pre>
+<pre class="r"><code>fread(&#39;C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv&#39;)</code></pre>
+<p>To compare speeds of the different function, we can run the <code>system.time()</code> function</p>
+<pre class="r"><code>system.time(read.csv(&#39;C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv&#39;))
+system.time(read_csv(&#39;C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv&#39;))
+system.time(fread(&#39;C://Users//MyUser//Data//REF_PLANT_DICTIONARY.csv&#39;))</code></pre>
+<pre><code>##    user  system elapsed 
+##    2.05    0.08    2.16</code></pre>
+<pre><code>##    user  system elapsed 
+##    0.92    0.15    0.55</code></pre>
+<pre><code>##    user  system elapsed 
+##    0.62    0.10    0.42</code></pre>
+<p>We can see that the <code>read.csv()</code> function takes the longest time to read in the data, followed by <code>read_csv()</code>. The <code>fread()</code> function takes the shortest time to read in the data. (For reference, I’m running an i7 processor with four cores on a laptop that’s four years old.)</p>
+<p>There are pros and cons for each of the functions depending on your needs. For speed, the <code>fread()</code> function is quickest to get data read into your session. Analysts that work within the tidyverse suite of packages will find the <code>read_csv()</code> function advantageous because it imports and stores tables as tibbles. I’ve rarely had an issue with the <code>read.csv()</code> function, and it’s considered the standard function for getting data into R.</p>
+<p>Depending on your needs and the size of the data you’re working with, consider implementing these functions for reading in data into R in the future.</p>
+<p>–</p>
+<p><em>By Matt Russell</em></p>
+<p><em><a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments. Sign up for <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">The Landing</a> for monthly in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/">New updates for tools that query Forest Inventory and Analysis data</a></h4>
+    <h5>November 23, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/datamart"><kbd class="item-tag">DataMart</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/evalidator"><kbd class="item-tag">EVALIDator</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-11-09-home-heating-with-wood/">How many homes heat with wood?</a></h4>
+    <h5>November 9, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/energy"><kbd class="item-tag">energy</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/wood"><kbd class="item-tag">wood</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-10-20-how-to-spot-poor-data-analyses/">How to spot poor data analyses</a></h4>
+    <h5>October 20, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

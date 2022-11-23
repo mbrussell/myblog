@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.101.0" />
+        <title>Simple volume to weight conversion for US tree species</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Simple volume to weight conversion for US tree species</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/">Simple volume to weight conversion for US tree species</a></h4>
+    <h5>July 27, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<center>
+<p><img src="logs%20pile%20white%20pine.jpg" width="500" /></p>
+</center>
+<div id="section" class="section level1">
+<h1></h1>
+<p>Foresters are accustomed to converting units of measure from one to another. Data are often collected in one unit of measure (e.g., the height of a tree in feet), but need to be converted to another for some part of the analysis or report (e.g., its height in meters).</p>
+<p>When it comes to calculating the volume of a tree, the number of equations and models are overwhelming. Not only are there a myriad of log rules to determine wood volume of standing timber, but even more volume equations can make determining wood volume for a species of interest a mess. As an example, <a href="https://www.fs.fed.us/forestmanagement/products/measurement/volume/nvel/index.php">the National Volume Estimator Library</a> contains files with the equations for estimating tree volume for US species - its files are <em>megabytes</em> in size.</p>
+<p>With the increased interest in understanding the amount of carbon stored in forests and harvested wood products, being able to convert between wood volume and mass is essential. Traditionally, these volume-to-weight conversions were developed by mills and other forest industries to better understand their wood utilization and products.</p>
+<p>Still to this day, most foresters measure the volume of wood when they inventory forests. While a specific company may use their own volume-to-weight conversions, they are often developed for localized regions and are not widely published.</p>
+<div id="volume-to-weight-conversions-with-fia-data" class="section level2">
+<h2>Volume-to-weight conversions with FIA data</h2>
+<p>To develop a simple set of volume-to-weight conversions, we can turn to the USDA Forest Service’s Forest Inventory and Analysis data. Specifically, the reference species table available through the <a href="https://apps.fs.usda.gov/fia/datamart/CSV/datamart_csv.html">FIA DataMart</a> contains data on over 2,600 tree and shrub species that occur across the US. Contained in it are a few key variables for help when converting between wood volume and weight:</p>
+<ul>
+<li><strong>WOOD_SPGR_GREENVOL_DRYWT</strong>: The green specific gravity of wood (green volume and oven-dry weight),</li>
+<li><strong>BARK_SPGR_GREENVOL_DRYWT</strong>: The green specific gravity of bark (green volume and oven-dry weight),</li>
+<li><strong>BARK_VOL_PCT</strong>: Bark volume as a percent of wood volume,</li>
+<li><strong>MC_PCT_GREEN_WOOD</strong>: The moisture content of green wood as a percent of oven-dry weight, and</li>
+<li><strong>MC_PCT_GREEN_BARK</strong>: The moisture content of green bark as a percent of oven-dry weight.</li>
+</ul>
+<p>Top start, we can calculate the weight of one cubic meter of wood, in kilograms:</p>
+<p><span class="math display">\[ \mbox{KG_PER_CUMTR_WOOD} = (\mbox{WOOD_SPGR_GREENVOL_DRYWT}*1000)*(1+(\mbox{MC_PCT_GREEN_WOOD}/100))\]</span></p>
+<p>Then, we can convert this value to pounds per cubic foot:</p>
+<p><span class="math display">\[ \mbox{LBS_PER_CUFT_WOOD} = (\mbox{KG_PER_CUMTR_WOOD}*2.2046)/35.3145\]</span></p>
+<p>Cords are a typical volume measure used to describe the volume of wood across many regions. We then convert this value to the weight of pounds per cord, assuming 90 cubic feet of wood are found in one cord of wood:</p>
+<p><span class="math display">\[ \mbox{LBS_PER_CORD_WOOD} = \mbox{LBS_PER_CUFT_WOOD} * 90\]</span></p>
+<p>We shouldn’t forget about the bark component of trees, which can make up a considerable portion of the total volume of a tree. We can follow the same approach to determine volume in bark by using the following formulas:</p>
+<p><span class="math display">\[ \mbox{KG_PER_CUMTR_BARK} = (\mbox{BARK_SPGR_GREENVOL_DRYWT}*1000)*\\(1+(\mbox{MC_PCT_GREEN_BARK}/100))*\\(\mbox{BARK_VOL_PCT}/100)\]</span></p>
+<p><span class="math display">\[ \mbox{LBS_PER_CUFT_BARK} = (\mbox{KG_PER_CUMTR_BARK}*2.2046)/35.3145\]</span></p>
+<p><span class="math display">\[ \mbox{LBS_PER_CORD_BARK} = \mbox{LBS_PER_CUFT_BARK} * 90\]</span></p>
+<p>Finally, we can compute the number of tons per cord by adding the wood and bark components and dividing by the number of pounds in a ton (2,000):</p>
+<p><span class="math display">\[ \mbox{GREEN_TONS_PER_CORD} = (\mbox{LBS_PER_CUFT_WOOD} + \mbox{LBS_PER_CUFT_BARK})/2000 \]</span></p>
+</div>
+<div id="an-example-with-sugar-maple" class="section level2">
+<h2>An example with sugar maple</h2>
+<p>As an example, consider we wish to determine the number of green tons per cord in sugar maple (<em>Acer saccharrum</em>). We start by calculating the volume in the wood component:</p>
+<p><span class="math display">\[ \mbox{KG_PER_CUMTR_WOOD}_{SM} = (0.56*1000)*(1+(57.39286/100)) = 881.4\]</span></p>
+<p><span class="math display">\[ \mbox{LBS_PER_CUFT_WOOD}_{SM} = (881.4*2.2046)/35.3145 = 55.0237\]</span></p>
+<p><span class="math display">\[ \mbox{LBS_PER_CORD_WOOD}_{SM} = 55.0237* 90 = 4952.13\]</span></p>
+<p>Then, we can determine the amount in the bark component:</p>
+<p><span class="math display">\[ \mbox{KG_PER_CUMTR_BARK}_{SM} = (0.56*1000)*\\(1+(89.92593/100))*\\(15.6/100) = 165.9\]</span></p>
+<p><span class="math display">\[ \mbox{LBS_PER_CUFT_BARK}_{SM} = (165.9*2.2046)/35.3145 = 10.3579\]</span></p>
+<p><span class="math display">\[ \mbox{LBS_PER_CORD_BARK}_{SM} = 10.3579 * 90 = 932.22\]</span></p>
+<p>Finally, we can compute the <em>GREEN_TONS_PER_CORD</em> conversion factor for sugar maple:</p>
+<p><span class="math display">\[ \mbox{GREEN_TONS_PER_CORD}_{SM} = (4952.13 + 932.22)/2000 = 2.94\]</span></p>
+<p>So, each cord of sugar maple wood weighs approximately 2.94 tons.</p>
+<p>If you commonly deal with measurements in thousand board feet (MBF), you can multiply that number by two to convert between MBF and green weight. This uses the common assumption that one cord is equal to 500 board feet. Using this approach, one MBF of sugar maple would weigh 5.88 tons.</p>
+</div>
+<div id="volume-weight-data-set-for-us-species" class="section level2">
+<h2>Volume-weight data set for US species</h2>
+<p>From the FIA species list, here’s the distribution of 119 conifers and 339 hardwood species, representing the primary ones across the US. Hardwoods have a greater ratio than conifers:</p>
+<p><img src="https://arbor-analytics.com/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Using this approach, I’ve provided a data set based on FIA’s species reference table. It contains volume to weight conversions for over 2,500 species, which you can find here:</p>
+<ul>
+<li><a href="https://github.com/mbrussell/volume_to_mass">Volume to mass conversion data set</a></li>
+</ul>
+<p>You might be interested to compare these conversion factors with ones you may be familiar with. As mentioned previously, these simple conversion factors are not always easy to find, but here are a few sources I came across that might be of interest:</p>
+<ul>
+<li>The USDA Forest Service’s Southern Research Station presents a number of conversion factors for US species that are separated by region and product class in <a href="">Timber products monitoring: unit of measure conversion factors for roundwood receiving facilities</a>.</li>
+<li>In his <a href="http://www.forestresearchgroup.com/Newsletters/Vol16No1.pdf">Forest Research Notes Vol. 16 Num. 1</a>, Jack Lutz presents volume to weight conversion factors for several species. (See table 1).<br />
+</li>
+<li>Check with your local state agency. As an example, the <a href="https://digitalmaine.com/cgi/viewcontent.cgi?article=1274&amp;context=for_docs">Maine Forest Service</a> and <a href="https://www.revenue.nh.gov/mun-prop/property/documents/timber-conversion-formulas.pdf">New Hampshire Division of forests and Lands</a> present conversion factors for the primary commercial species in their state.</li>
+</ul>
+<p>How do the volume-weight conversions work for you? <a href="mailto:matt@arbor-analytics.com">Drop me an email</a> to let me know if you’ve found them useful in your own work.</p>
+<p>–
+<em>Update August 22, 2022. Special thanks to Jon Lundsford for pointing out an error in an equation from a previous version of this article.</em></p>
+<p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/">New updates for tools that query Forest Inventory and Analysis data</a></h4>
+    <h5>November 23, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/datamart"><kbd class="item-tag">DataMart</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/evalidator"><kbd class="item-tag">EVALIDator</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-11-09-home-heating-with-wood/">How many homes heat with wood?</a></h4>
+    <h5>November 9, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/energy"><kbd class="item-tag">energy</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/wood"><kbd class="item-tag">wood</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-10-20-how-to-spot-poor-data-analyses/">How to spot poor data analyses</a></h4>
+    <h5>October 20, 2022</h5>
+    
+    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="https://arbor-analytics.com/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

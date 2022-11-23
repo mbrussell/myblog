@@ -14,7 +14,8 @@
       
       <guid>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
       <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.
-Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.</description>
+Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.
+R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
     </item>
     
     <item>

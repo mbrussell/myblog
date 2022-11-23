@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stats4nr on </title>
+    <link>https://arbor-analytics.com/tags/stats4nr/</link>
+    <description>Recent content in stats4nr on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/stats4nr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New book: Statistics in Natural Resources: Applications with R</title>
+      <link>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
+      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.
+I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.
+At the same time, I was searching for a different textbook to use for the course.</description>
+    </item>
+    
+  </channel>
+</rss>

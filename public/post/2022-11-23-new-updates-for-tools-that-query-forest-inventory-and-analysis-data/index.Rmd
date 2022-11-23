@@ -1,0 +1,72 @@
+---
+title: New updates for tools that query Forest Inventory and Analysis data
+author: Matt Russell
+date: '2022-11-23'
+slug: []
+categories:
+  - Analytics
+tags:
+  - analytics
+  - DataMart
+  - EVALIDator
+  - forest inventory
+  - forest inventory and analysis
+  - forest measurements
+  - forestry
+---
+ 
+<center>
+
+![](diameter.jpg){width=400px}
+</center>
+
+##
+
+The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential. 
+
+After attending the [FIA Science Stakeholder Meeting](https://www.fia.fs.usda.gov/sciencestakeholder/index.php) last week, I was happy to learn about some important updates to two tools that are widely used by forest analysts: the FIA EVALIDator program and the FIA DataMart. This post describes new features that are now available in these applications.
+
+## EVALIDator version 2.0.3
+
+[EVALIDator](https://apps.fs.usda.gov/fiadb-api/evalidator) is a web-based Application Programming Interface that generates population estimates for core forestry metrics. It provides the ability to query FIA information at the state level (e.g., total aboveground biomass in Maine) or a circular retrieval of information around a fixed geographic point (e.g., total aboveground biomass within a 50 mile radius of a proposed mill in Maine).   
+ 
+<center>
+![](evalidator.png){width=400px}
+</center>
+<center>
+*Homepage for EVALIDator API.*
+</center>
+
+##
+
+The previous version of EVALIDator was built in Java, but it now runs in Python. It uses pandas in the data frame style to provide output for the variables that you specify.
+
+One new feature that I especially like is that you can copy/paste the URL for an EVALIDator query you run. Then you can share the link in a document or share with a colleague. For example, [see this EVALIDator output](https://apps.fs.usda.gov/fiadb-api/fullreport?rselected=Forest%20type%20group&cselected=Site%20productivity%20class&snum=48&wc=232021) for a summary of aboveground carbon by forest type group and site productivity class in Maine. This is especially helpful for analysts that work in teams and want to share output with others that may not have the expertise or time available to navigate the EVAIDator API.
+
+Another feature I really love is the addition of ‘normalized’ estimates as output in EVALIDator. This is akin to viewing the data in its “long format”. For those of us that work with tidy data (where each variable has its own column, each observation has its own row, and each value has its own cell), downloading the data in this format can save time down the line. Users can save output in a variety of formats, including CSV, JSON, or XML.  
+
+
+## FIA DataMart version 2.0.1
+
+
+The [FIA DataMart](https://experience.arcgis.com/experience/3641cea45d614ab88791aef54f3a1849/) is a tool that allows for the retrieval of state-level FIA data. This new version resides on an Esri platform and contains user-friendly ways to acquire data. An updated map on its landing page displays the most recent year that data are available for each state, a handy visualization especially if an analyst is interested in making comparisons across states.
+
+<center>
+![](datamart.png){width=400px}
+</center>
+<center>
+*Homepage for FIA DataMart application.*
+</center>
+
+##
+
+Using the DataMart, users can select a state and navigate to a specific data table of interest. Data are available for download as comma-delimited files, SQLite3 State databases, or Microsoft® Excel workbooks.
+
+A new feature I like is the data update history, a short description indicating the dates when new data were added or modifications were made to existing data. Having this feature can help to sort out issues one may encounter if downloading the data at different times.
+ 
+--
+
+*What are your thoughts on these changes to EVALIDator and DataMart? I’m always curious to know, so [let me know via email](mailto:matt@arbor-analytics.com).*
+
+*By Matt Russell. Sign up for [my monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
+

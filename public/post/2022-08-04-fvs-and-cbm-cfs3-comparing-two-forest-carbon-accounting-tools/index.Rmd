@@ -1,0 +1,77 @@
+---
+title: "FVS and CBM-CFS3: Comparing two forest simulation models "
+author: "Matt Russell"
+date: "2022-08-04"
+slug: []
+categories: Forest measurements
+tags:
+- analytics
+- carbon
+- carbon markets
+- forest carbon
+- growth and yield
+---
+
+
+<center>
+
+![](fvs-cbm-cfs3.png){width=500px}
+
+</center>
+
+#
+
+Analysts in the forestry community often turn to models to simulate what a forest will look like in the future. Whether it's simulating a forest management treatment or forecasting the effects of a natural disturbance, models are required tools for understanding how forests will grow.
+
+Increasingly, models are being used to understand forest carbon stocks and stock changes. As we strive to quantify the role of forests in offsetting carbon dioxide emissions, having reliable tools to understand forest dynamics is essential. The use of models are also required in many forest carbon programs, for example, the [California Air Resources Board’s Compliance Offset Program](https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program/compliance-offset-protocols/us-forest-projects/models).   
+
+This post describes two commonly used models being used to forecast forest carbon. Both rely on information to forecast forest dynamics and carbon stocks and stock changes into the future. Although one was developed in the US and one in Canada, both models are being used across country boundaries.
+
+## The FVS model
+The [Forest Vegetation Simulator (FVS)](https://www.fs.usda.gov/fvs/index.shtml) is a model developed by the USDA Forest Service in 1973. The FVS model is an individual tree model that uses lists of trees (e.g., species and tree diameter) to forecast forest growth through time. The model can simulate forest management activities, disturbances, and provide forest carbon and harvested wood products reports. A series of 22 different model variants provide regional differences in forest growth patterns.
+
+There has been a tremendous amount of research and development on the FVS model through time. Their website contains excellent supporting information, video tutorials, and documentation. Although the model was originally developed in the US, here are a few applications of it in Canada:
+
+* An [Acadian variant of FVS](https://www.researchgate.net/publication/324705922_The_Acadian_Variant_of_the_Forest_Vegetation_Simulator_Continued_development_and_evaluation) is available for Maine and the Canadian Maritime provinces, and
+* The FVS model has been calibrated for [Ontario's forests](https://cfs.nrcan.gc.ca/publications?id=28760).
+ 
+
+## The CBM-CFS3 model
+The [Carbon Budget Model of the Canadian Forest Service 3 (CBM-CFS 3)](https://www.nrcan.gc.ca/climate-change-adapting-impacts-and-reducing-emissions/climate-change-impacts-forests/carbon-accounting/carbon-budget-model/13107) is a model developed by the Canadian Forest Service in 2002. The model simulates carbon dynamics following the Good Practice Guidance established by the Intergovernmental Panel on Climate Change (IPCC) for reporting on carbon stocks and stock changes. The model works on an operational scale and is well suited for landscape-level predictions, but it can also operate at the stand level. Although the model was originally developed by the Canadian Forest Service, it has been applied in the US as well:
+
+* An [analysis in seven US states](https://www.canr.msu.edu/news/2021-22-fcwg-learning-exchange-series-modeling-forest-management-and-carbon-a-tool-for-state-wide-planning-and-action) used Forest Inventory and Analysis data in CBM-CFS3 to understand carbon impacts resulting from forest management.
+* A recent analysis integrated [CBM-CFS3 with a land use and land cover change model](https://cbmjournal.biomedcentral.com/articles/10.1186/s13021-022-00201-1) to understand spatially explicit estimates of carbon stocks and fluxes. 
+
+As for me, I've been a long time FVS user and am beginning to hear more about applications of CBM-CFS3 as a carbon accounting tool. The following table, a "cheat sheet" of sorts, compares the design, input, and outputs of both models:
+
+```{r, echo = F, warning = F, message = F}
+library(tidyverse)
+library(kableExtra)
+```
+
+```{r, echo = F, warning = F, message = F}
+ tbl_img <- data.frame(
+   Attribute = c("Developer/maintainer", "Year developed", "Model type", "How are forested regions specified?", "Time step", "Can forest management and disturbance be analyzed?", "Includes climate change?", "Incorporates uneven-aged stands?", "How is regeneration handled?", "Includes harvested wood products report?", "How does it incorporate carbon?", "Carbon pools tracked"),
+   FVS = c("USDA Forest Service", "1973", "Individual tree model; semi-distance independent", "Includes 22 different model variants depending on region.", "Default cycle length is 10 years for most variants.", "Yes", "Yes, but only for Western US with Climate-FVS", "Yes", "A “full” regeneration establishment model is available for some variants in the western US. A “partial” establishment model is available for all other variants and simulates stump sprouting. User can specify information on planting and natural regeneration.", "Yes", "Accounts for carbon stocks and stock changes  with the Fire and Fuels Extension.", "Aboveground biomass, belowground biomass (live and dead coarse roots), dead wood (standing and downed), forest floor (litter and duff), herbs and shrubs."),
+   `CBM-CFS3` = c("Canadian Forest Service", "Original model: 1989; CBM-CFS3 model: 2002", "Stand and landscape-level model; distance independent", "Default ecological parameters are provided, but can be modified by the user.", "Annual", "Yes", "No. But user can modify the default climate data (which only impacts decay), and use zero carbon impact disturbance events paired with transition rules to alter stand growth in unison with changes in climate.", "No. But user can modify yield curves.", "Following a stand-replacing disturbance, regeneration will occur automatically, or can be delayed or accelerated using transition rules and/or switching of growth curves. By default, there is no regeneration assumed  following non-stand-replacing disturbances. However the user can implement a transition rule to switch an impacted stand to a new growth curve(s) to account for multiple growth components (although the stand can only be represented by a single age or age class).", "No. But annual carcon stocks harvested and transferred to a forest products pool are tracked, and can be viewed and exported for use in HWP carbon models.", "Accounts for carbon stocks and stock changes in tree biomass and
+dead organic matter pools.", "Aboveground biomass, belowground biomass (live coarse and live fine roots), dead wood (standing and downed {on ground and in mineral soil}), litter (includes fine woody debris), soil organic matter.")
+ )
+ 
+ tbl_img %>%
+   kbl(booktabs = T) %>% 
+   kable_styling() %>%
+  column_spec(1, bold = T) %>%
+   kable_paper(full_width = F)
+```
+
+Have you tried using both models, and if so, what are your thoughts on their differences? [Drop me an email](mailto:matt@arbor-analytics.com) and I'd love to learn more.
+
+*Updated 6 Sept 2022. Special thanks to Stephen Kull with the Canadian Forest Service for highlighting some additional aspects of the CBM-CFS3 model and to Greg Paradis for pointing out differences between the two models.*
+
+--
+
+*By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*  
+
+
+
+

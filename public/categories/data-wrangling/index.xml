@@ -14,7 +14,7 @@
       
       <guid>https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/</guid>
       <description>I used to cringe every time I needed to import Forest Inventory and Analysis data. The data files that contain tree observations for a single state can exceed 100 megabytes. The file I downloaded six months ago might or might not contain the most recent data for that state.
-There are a few R packages that have been developed in the last several years that help import FIA data.</description>
+There are a few R packages that have been developed in the last several years that help import FIA data. The tidyFIA package is one of them.</description>
     </item>
     
     <item>

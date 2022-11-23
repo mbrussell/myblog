@@ -6,7 +6,37 @@
     <description>Recent content in Forest measurements on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/forest-measurements/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/forest-measurements/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FVS and CBM-CFS3: Comparing two forest simulation models </title>
+      <link>https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/</link>
+      <pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/</guid>
+      <description>Analysts in the forestry community often turn to models to simulate what a forest will look like in the future. Whether it’s simulating a forest management treatment or forecasting the effects of a natural disturbance, models are required tools for understanding how forests will grow.
+Increasingly, models are being used to understand forest carbon stocks and stock changes. As we strive to quantify the role of forests in offsetting carbon dioxide emissions, having reliable tools to understand forest dynamics is essential.</description>
+    </item>
+    
+    <item>
+      <title>Simple volume to weight conversion for US tree species</title>
+      <link>https://arbor-analytics.com/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</link>
+      <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</guid>
+      <description>Foresters are accustomed to converting units of measure from one to another. Data are often collected in one unit of measure (e.g., the height of a tree in feet), but need to be converted to another for some part of the analysis or report (e.g., its height in meters).
+When it comes to calculating the volume of a tree, the number of equations and models are overwhelming. Not only are there a myriad of log rules to determine wood volume of standing timber, but even more volume equations can make determining wood volume for a species of interest a mess.</description>
+    </item>
+    
+    <item>
+      <title>How &#34;big&#34; are the Big Tree Champions?</title>
+      <link>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</guid>
+      <description>You might have heard this before: “I just saw the largest X tree in the state!”
+I have always been curious about the trees that make the list of state tree champions, or “big trees”. For nearly every state in the US, a list of the largest trees of each species are maintained. As landowners and foresters roam the woods, they can report a potential champion tree. (For context, in 2018 a team of wildlife researchers came across the largest jack pine in the US when they were studying wolves in northern Minnesota.</description>
+    </item>
+    
     <item>
       <title>Units in forest carbon numbers: a primer</title>
       <link>https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/</link>

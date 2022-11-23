@@ -1,0 +1,27 @@
+---
+title: A review of the log trucking workforce and comparisons to other industries
+author: Matt Russell
+date: '2022-09-27'
+slug: []
+categories:
+  - Forest industry
+tags:
+  - analytics
+  - forest industry
+  - forest products
+  - trucking
+  - transportation
+description: 'Sept 28, 2022 presentation at the Forest Resources Association Fall Meeting'
+---
+
+
+<center>
+
+![](trucking_title.png){width=500px}
+</center>
+
+##
+ 
+The trucking industry is faced with a number of challenges, including recruiting workers, pending retirements, and an increase in demand due to e-commerce sales. These slides provide an overview of the log trucking workforce and were presented at the Forest Resources Association's Fall Board Meeting in Portland, ME.
+
+[READ THE SLIDES](https://docs.google.com/presentation/d/17Dv47PLyi_z2K-iMbJy282Q9TMx_A7_zhwUTr0Oe_DE/edit?usp=sharing). 

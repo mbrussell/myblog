@@ -6,7 +6,17 @@
     <description>Recent content in Data viz on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/data-viz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/data-viz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to spot poor data analyses</title>
+      <link>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</link>
+      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</guid>
+      <description>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.
+Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s autocorrecting feature had led to errors in 30% of gene list observations over a six year span.</description>
+    </item>
+    
     <item>
       <title>Timberlands as investments see biggest gain since 2014</title>
       <link>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
@@ -44,7 +54,7 @@ Animated bar graphs are effective when you have a categorical variable that has 
       
       <guid>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</guid>
       <description>“The only thing worse than a pie chart is several of them.” -Edward Tufte
-I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.
+I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.
 Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid.</description>
     </item>
     
@@ -66,7 +76,7 @@ Data from the National Woodland Owner Survey, a program administered by the USDA
       
       <guid>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
       <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.
-The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s.</description>
+The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s. Specifically, the visualization showed the number of deaths that occurred from preventable diseases, wounds, and other causes.</description>
     </item>
     
     <item>
@@ -77,7 +87,7 @@ The visualization showed the number of deaths from soldiers in the Crimean War, 
       <guid>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</guid>
       <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.
 There are a few rules for all scatterplots:
-The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
+The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
     </item>
     
     <item>

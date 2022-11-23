@@ -1,0 +1,60 @@
+---
+title: 'Carbon credits: quantity versus quality'
+author: Matt Russell
+date: '2022-04-10'
+slug: []
+categories:
+  - Carbon
+tags:
+  - carbon
+  - carbon markets
+  - carbon credits
+  - forest carbon
+  - forestry
+---
+
+<center>
+![](maine lake landscape.jpg){width=500px}
+</center>
+
+## 
+
+The forestry community is focused on carbon, and the question of quantity versus quality of credits is increasingly being raised. Credits associated with forest carbon are bringing new opportunities to landowners and the investors that value timberlands.
+
+With about 800 million acres of forests in the US alone, there is no lack of carbon for emerging markets to tap into. Some carbon programs are limited by not including public lands, but the volume of forests in other ownerships is large. Last week’s news of the state of Washington entering [10,000 acres of school trust lands](https://www.dnr.wa.gov/news/dnr-launches-first-nation-carbon-project-protecting-forests-and-creating-over-million-carbon) into a carbon project is a reflection of more diverse land ownerships jumping into carbon markets.   
+
+The quality of carbon credits relates to how valuable the credit is relative to other factors such as costs of forest management and deferring timber harvest. Carbon credits that integrate the full value of the carbon in the trees and forests would be considered of high quality. Carbon programs which contain details on issues such as proving additionality and minimizing leakage can help show that their credits are of high quality.
+
+The different aspects of quality and quantity of carbon credits have been at the forefront of many conversations in forestry in the last six months. 
+
+## A timber investor’s view on carbon credits
+
+Jim Hourdequin, CEO of The Lyme Timber Company, has recently brought the issue of quality and quantity of carbon credits to many conversations. Last fall, he provided a presentation titled [“You get what you pay for: a TIMO’s perspective on forest carbon offsets and evolving carbon markets”](https://youtu.be/uaZE1Rf95J0)(36 min.). This presentation was delivered at the *Who Will Own the Forest Conference* sponsored by the World Forestry Center. 
+
+Last month, Hourdequin was featured prominently in an article in Bloomberg titled [“This timber company sold millions of dollars of useless carbon offsets”](https://www.bloomberg.com/news/articles/2022-03-17/timber-ceo-wants-to-reform-flawed-carbon-offset-market). Many of the issues pointed out in his presentation were also mentioned in the article. 
+
+For perspective, the Lyme Timber Company owns 1.6 million acres of forests in the US. The company has approximately 200,000 of those acres currently enrolled in carbon markets.
+
+In the article and presentation, Hourdequin mentions many of the drawbacks to some carbon programs. For example, with a carbon program that operates on a harvest deferral model, there is speculation that payments are made to the landowner for actions they were not  planning to do anyway. Hourdequin uses a different analogy, saying it’s like “paying to enter a beer hall, enjoying a fine meal, but finding out they ran out of beer.”
+
+He goes on to mention that with a 100-year compliance framework, typical in the California Air Resources Board’s (CARB) [Compliance Offset Program](https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program), the carbon sale proceeds do not fully cover the cost of the timberlands. According to CARB’s recent Auction Information and Results from late last year, the settlement price of [one metric tonne of carbon was $28.26](https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/). On the voluntary markets, carbon prices are going from $6 to $13 dollars per metric tonne, a value that favors a larger quantity of credits.  
+
+In his presentation, Hourdequin presents three case studies using forests in his company's portfolio. His major findings across these three case studies are that the price of carbon was considerably higher after taking into account harvest reductions and forest management obligations:
+
+* In **Michigan**, Lyme forests have had a long history of timber harvesting. In Lyme’s analysis, the true cost of carbon for them was $60/tonne.
+* In **Florida**, this Lyme forest is under conservation easement. True cost of carbon: $50/tonne. 
+* In a **West Virginia** property, this forest is currently enrolled in a CARB project. True cost of carbon: $30/tonne. 
+
+The primary conclusions are that at low prices, the quantity for carbon credits will generally be preferred instead of the quality of credits. If buyers of carbon credits are willing to pay, there may be additional opportunities for focusing on credits that reflect the true value of carbon. For example, the three case studies from Lyme’s forests indicate higher rates payments that integrate the full suite of costs that are higher than current market rates.  
+
+Hourdequin’s perspectives are essential to listen to and understand. Although there are abundant carbon credits available today, with many carbon programs going after them, understanding the quality of those credits will be needed to better understand the role of forests in natural capital markets.   
+
+**PS** - Understanding the values behind forest carbon is essential to understanding how markets work. My eBook [Forest Carbon by the Numbers](https://www.amazon.com/dp/B09CC1WT69) is available on Amazon for more perspective on forest carbon and the metrics behind them.
+
+--
+
+*By Matt Russell*
+
+*[Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments. Sign up for [The Landing](https://mailchi.mp/d96897dc0f46/arbor-analytics) for monthly in-depth analysis on data and analytics in the forest products industry.*
+
+
