@@ -1,16 +1,17 @@
 ---
-title: "New updates for tools that query Forest Inventory and Analysis data"
-author: "Matt Russell"
-date: "2022-11-23"
-slug: []
-categories: Analytics
+title: New updates for tools that query Forest Inventory and Analysis data
+author: Matt Russell
+date: '2022-11-23'
+categories:
+  - Analytics
 tags:
-- analytics
-- forest inventory
-- forest inventory and analysis
-- forest measurements
-- DataMart
-- EVALIDator
+  - analytics
+  - DataMart
+  - EVALIDator
+  - forest inventory
+  - forest inventory and analysis
+  - forest measurements
+  - forestry
 ---
  
 <center>
