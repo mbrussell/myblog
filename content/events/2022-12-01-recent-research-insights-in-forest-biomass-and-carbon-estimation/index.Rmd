@@ -1,0 +1,28 @@
+---
+title: Recent research insights in forest biomass and carbon estimation
+author: Matt Russell
+date: '2022-12-01'
+slug: []
+categories:
+  - Carbon
+tags:
+  - analytics
+  - carbon markets
+  - carbon credits
+  - CARB
+  - carbon
+  - forest carbon
+  - forest inventory and analysis
+description: 'Nov 30, 2022 presentation for the California Air Resources Board'
+---
+
+<center>
+
+![](titleslide.png){width=500px}
+</center>
+
+##
+
+Recent research within the forest biometrics community is helping to generate more precise estimates of forest carbon using new methods and technologies. This presentation was delivered to the California Air Resources Board Public Workshop on US Forest Projects Compliance Offset Protocol on November 30, 2022.
+
+[READ THE SLIDES.](https://docs.google.com/presentation/d/1j58n-xS3HudJ0FezbSnFk4AHLWcmlpySbapKPqFOax4/edit?usp=sharing)
