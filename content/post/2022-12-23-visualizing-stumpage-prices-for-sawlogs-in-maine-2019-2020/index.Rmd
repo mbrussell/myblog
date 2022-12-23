@@ -35,7 +35,7 @@ library(tidyverse)
 stumpage <- read_csv("C://Users//matt//Documents//Arbor//Projects//Seven Islands//me_stumpage.csv")
 ```
 
-```{r, echo = F, warning = F, message = F, fig.cap = "Statewide stumpage prices in Maine, 2019 and 2020."}
+```{r, echo = F, warning = F, message = F, fig.cap = "*Statewide stumpage prices in Maine, 2019 and 2020.*"}
 stumpage_all <- stumpage %>% 
   filter(County == "*Statewide*")
 
@@ -56,7 +56,7 @@ Here we can see that red oak, sugar maple, and ash have the greatest sawlog pric
 
 For species with a substantial number of reported values, the minimum and maximum values of stumpage prices are also provided. Here are the stumpage prices for sawlogs in 2020 for all Maine counties:
 
-```{r, echo = F, warning = F, message = F, fig.cap = "Stumpage prices by Maine county, 2019 and 2020. NOE: Capital area includes Kennebec, Knox, Lincoln, and Waldo counties; Casco Bay includes Androscoggin, Cumberland, Sagadohoc, and York counties."}
+```{r, echo = F, warning = F, message = F, fig.cap = "*Stumpage prices by Maine county, 2019 and 2020. NOTE: Capital area includes Kennebec, Knox, Lincoln, and Waldo counties; Casco Bay includes Androscoggin, Cumberland, Sagadohoc, and York counties.*"}
 stumpage_all_2020 <- stumpage %>% 
   filter(Year == 2020)
 
@@ -75,7 +75,7 @@ p.stumpage.range <- ggplot(stumpage_all_2020, aes(x = Species, y = Avg)) +
 p.stumpage.range
 ```
 
-Forest data analysts can use data like these to understand market conditions for different species. If you're interested in seeing the data set that contains these prices, I've made a spreadsheet [available on Github.]()
+Forest data analysts can use data like these to understand market conditions for different species. If you're interested in seeing the data set that contains these prices, I've made a spreadsheet [available on Github.](https://github.com/mbrussell/myblog/tree/master/content/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020)
 
 --
 
