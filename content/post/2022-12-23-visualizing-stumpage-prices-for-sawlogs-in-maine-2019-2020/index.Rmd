@@ -75,7 +75,7 @@ p.stumpage.range <- ggplot(stumpage_all_2020, aes(x = Species, y = Avg)) +
 p.stumpage.range
 ```
 
-Forest data analysts can use data like these to understand market conditions for different species. If you're interested in seeing the data set that contains these prices, I've made a spreadsheet [available on Github.](https://github.com/mbrussell/myblog/tree/master/content/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020)
+Forest data analysts can use data like these to understand market conditions for different species. If you're interested in seeing the data set that contains these prices, I've made a spreadsheet [available on Github (titled me_stumpage.csv).](https://github.com/mbrussell/myblog/tree/master/content/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020)
 
 --
 

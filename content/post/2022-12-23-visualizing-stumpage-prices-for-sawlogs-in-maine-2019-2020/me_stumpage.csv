@@ -1,0 +1,309 @@
+County,Species,Product,Units,Year,Avg,Min,Max,NumReports
+*Statewide*,Ash,Sawlogs,per MBF,2020,177,56,347,477
+*Statewide*,Aspen/poplar,Sawlogs,per MBF,2020,97,30,245,74
+*Statewide*,Beech,Sawlogs,per MBF,2020,127,10,256,44
+*Statewide*,Cedar,Sawlogs,per MBF,2020,101,20,175,134
+*Statewide*,Hemlock,Sawlogs,per MBF,2020,61,25,125,409
+*Statewide*,Red oak,Sawlogs,per MBF,2020,251,100,480,487
+*Statewide*,Red pine,Sawlogs,per MBF,2020,62,20,147,67
+*Statewide*,Red/white maple,Sawlogs,per MBF,2020,115,50,330,455
+*Statewide*,Spruce/fir,Sawlogs,per MBF,2020,118,45,196,476
+*Statewide*,Sugar maple,Sawlogs,per MBF,2020,186,75,431,441
+*Statewide*,White birch,Sawlogs,per MBF,2020,133,50,320,417
+*Statewide*,White oak,Sawlogs,per MBF,2020,175,50,315,60
+*Statewide*,White pine,Sawlogs,per MBF,2020,168,65,251,915
+*Statewide*,Yellow birch,Sawlogs,per MBF,2020,150,50,331,379
+*Statewide*,Ash,Sawlogs,per MBF,2019,197,,,
+*Statewide*,Aspen/poplar,Sawlogs,per MBF,2019,98,,,
+*Statewide*,Beech,Sawlogs,per MBF,2019,133,,,
+*Statewide*,Cedar,Sawlogs,per MBF,2019,104,,,
+*Statewide*,Hemlock,Sawlogs,per MBF,2019,67,,,
+*Statewide*,Red oak,Sawlogs,per MBF,2019,265,,,
+*Statewide*,Red pine,Sawlogs,per MBF,2019,72,,,
+*Statewide*,Red/white maple,Sawlogs,per MBF,2019,157,,,
+*Statewide*,Spruce/fir,Sawlogs,per MBF,2019,128,,,
+*Statewide*,Sugar maple,Sawlogs,per MBF,2019,254,,,
+*Statewide*,White birch,Sawlogs,per MBF,2019,158,,,
+*Statewide*,White oak,Sawlogs,per MBF,2019,135,,,
+*Statewide*,White pine,Sawlogs,per MBF,2019,175,,,
+*Statewide*,Yellow birch,Sawlogs,per MBF,2019,198,,,
+Aroostook,Ash,Sawlogs,per MBF,2020,179,100,296,31
+Aroostook,Aspen/poplar,Sawlogs,per MBF,2020,,,,
+Aroostook,Beech,Sawlogs,per MBF,2020,,,,
+Aroostook,Cedar,Sawlogs,per MBF,2020,108,33,175,61
+Aroostook,Hemlock,Sawlogs,per MBF,2020,74,45,96,7
+Aroostook,Red oak,Sawlogs,per MBF,2020,,,,
+Aroostook,Red pine,Sawlogs,per MBF,2020,,,,
+Aroostook,Red/white maple,Sawlogs,per MBF,2020,79,50,275,40
+Aroostook,Spruce/fir,Sawlogs,per MBF,2020,109,48,190,57
+Aroostook,Sugar maple,Sawlogs,per MBF,2020,187,100,421,51
+Aroostook,White birch,Sawlogs,per MBF,2020,207,110,271,24
+Aroostook,White oak,Sawlogs,per MBF,2020,,,,
+Aroostook,White pine,Sawlogs,per MBF,2020,156,66,197,19
+Aroostook,Yellow birch,Sawlogs,per MBF,2020,149,71,331,35
+Aroostook,Ash,Sawlogs,per MBF,2019,176,,,
+Aroostook,Aspen/poplar,Sawlogs,per MBF,2019,,,,
+Aroostook,Beech,Sawlogs,per MBF,2019,,,,
+Aroostook,Cedar,Sawlogs,per MBF,2019,96,,,
+Aroostook,Hemlock,Sawlogs,per MBF,2019,90,,,
+Aroostook,Red oak,Sawlogs,per MBF,2019,,,,
+Aroostook,Red pine,Sawlogs,per MBF,2019,,,,
+Aroostook,Red/white maple,Sawlogs,per MBF,2019,168,,,
+Aroostook,Spruce/fir,Sawlogs,per MBF,2019,108,,,
+Aroostook,Sugar maple,Sawlogs,per MBF,2019,274,,,
+Aroostook,White birch,Sawlogs,per MBF,2019,192,,,
+Aroostook,White oak,Sawlogs,per MBF,2019,,,,
+Aroostook,White pine,Sawlogs,per MBF,2019,154,,,
+Aroostook,Yellow birch,Sawlogs,per MBF,2019,227,,,
+Penobscot,Ash,Sawlogs,per MBF,2020,216,56,274,59
+Penobscot,Aspen/poplar,Sawlogs,per MBF,2020,,,,
+Penobscot,Beech,Sawlogs,per MBF,2020,,,,
+Penobscot,Cedar,Sawlogs,per MBF,2020,87,20,150,26
+Penobscot,Hemlock,Sawlogs,per MBF,2020,76,40,116,43
+Penobscot,Red oak,Sawlogs,per MBF,2020,243,100,400,20
+Penobscot,Red pine,Sawlogs,per MBF,2020,,,,
+Penobscot,Red/white maple,Sawlogs,per MBF,2020,153,70,324,53
+Penobscot,Spruce/fir,Sawlogs,per MBF,2020,136,50,165,27
+Penobscot,Sugar maple,Sawlogs,per MBF,2020,209,100,333,63
+Penobscot,White birch,Sawlogs,per MBF,2020,165,100,300,36
+Penobscot,White oak,Sawlogs,per MBF,2020,,,,
+Penobscot,White pine,Sawlogs,per MBF,2020,166,80,251,95
+Penobscot,Yellow birch,Sawlogs,per MBF,2020,164,68,286,53
+Penobscot,Ash,Sawlogs,per MBF,2019,195,56,274,59
+Penobscot,Aspen/poplar,Sawlogs,per MBF,2019,127,,,
+Penobscot,Beech,Sawlogs,per MBF,2019,71,,,
+Penobscot,Cedar,Sawlogs,per MBF,2019,107,,,
+Penobscot,Hemlock,Sawlogs,per MBF,2019,78,,,
+Penobscot,Red oak,Sawlogs,per MBF,2019,220,,,
+Penobscot,Red pine,Sawlogs,per MBF,2019,76,,,
+Penobscot,Red/white maple,Sawlogs,per MBF,2019,157,,,
+Penobscot,Spruce/fir,Sawlogs,per MBF,2019,135,,,
+Penobscot,Sugar maple,Sawlogs,per MBF,2019,261,,,
+Penobscot,White birch,Sawlogs,per MBF,2019,167,,,
+Penobscot,White oak,Sawlogs,per MBF,2019,,,,
+Penobscot,White pine,Sawlogs,per MBF,2019,173,,,
+Penobscot,Yellow birch,Sawlogs,per MBF,2019,215,,,
+Piscataquis,Ash,Sawlogs,per MBF,2020,152,80,340,49
+Piscataquis,Aspen/poplar,Sawlogs,per MBF,2020,119,90,150,5
+Piscataquis,Beech,Sawlogs,per MBF,2020,,,,
+Piscataquis,Cedar,Sawlogs,per MBF,2020,89,22,156,24
+Piscataquis,Hemlock,Sawlogs,per MBF,2020,61,40,110,12
+Piscataquis,Red oak,Sawlogs,per MBF,2020,213,136,420,12
+Piscataquis,Red pine,Sawlogs,per MBF,2020,,,,
+Piscataquis,Red/white maple,Sawlogs,per MBF,2020,77,50,296,37
+Piscataquis,Spruce & fir,Sawlogs,per MBF,2020,138,53,196,47
+Piscataquis,Sugar maple,Sawlogs,per MBF,2020,159,100,350,43
+Piscataquis,White birch,Sawlogs,per MBF,2020,169,50,284,32
+Piscataquis,White oak,Sawlogs,per MBF,2020,,,,
+Piscataquis,White pine,Sawlogs,per MBF,2020,155,65,237,53
+Piscataquis,Yellow birch,Sawlogs,per MBF,2020,133,73,310,44
+Piscataquis,Ash,Sawlogs,per MBF,2020,187,,,
+Piscataquis,Aspen/poplar,Sawlogs,per MBF,2019,,,,
+Piscataquis,Beech,Sawlogs,per MBF,2019,,,,
+Piscataquis,Cedar,Sawlogs,per MBF,2019,107,,,
+Piscataquis,Hemlock,Sawlogs,per MBF,2019,66,,,
+Piscataquis,Red oak,Sawlogs,per MBF,2019,232,,,
+Piscataquis,Red pine,Sawlogs,per MBF,2019,,,,
+Piscataquis,Red/white maple,Sawlogs,per MBF,2019,165,,,
+Piscataquis,Spruce & fir,Sawlogs,per MBF,2019,114,,,
+Piscataquis,Sugar maple,Sawlogs,per MBF,2019,239,,,
+Piscataquis,White birch,Sawlogs,per MBF,2019,133,,,
+Piscataquis,White oak,Sawlogs,per MBF,2019,,,,
+Piscataquis,White pine,Sawlogs,per MBF,2019,140,,,
+Piscataquis,Yellow birch,Sawlogs,per MBF,2019,180,,,
+Capital area,Ash,Sawlogs,per MBF,2020,170,75,318,73
+Capital area,Aspen/poplar,Sawlogs,per MBF,2020,121,30,245,16
+Capital area,Beech,Sawlogs,per MBF,2020,106,50,200,5
+Capital area,Cedar,Sawlogs,per MBF,2020,,,,
+Capital area,Hemlock,Sawlogs,per MBF,2020,55,25,110,79
+Capital area,Red oak,Sawlogs,per MBF,2020,241,100,426,102
+Capital area,Red pine,Sawlogs,per MBF,2020,,,,
+Capital area,Red/white maple,Sawlogs,per MBF,2020,156,50,328,64
+Capital area,Spruce & fir,Sawlogs,per MBF,2020,86,45,160,86
+Capital area,Sugar maple,Sawlogs,per MBF,2020,281,100,431,51
+Capital area,White birch,Sawlogs,per MBF,2020,161,50,320,66
+Capital area,White oak,Sawlogs,per MBF,2020,186,70,235,11
+Capital area,White pine,Sawlogs,per MBF,2020,146,75,250,175
+Capital area,Yellow birch,Sawlogs,per MBF,2020,145,50,300,36
+Capital area,Ash,Sawlogs,per MBF,2019,189,,,
+Capital area,Aspen/poplar,Sawlogs,per MBF,2019,82,,,
+Capital area,Beech,Sawlogs,per MBF,2019,,,,
+Capital area,Cedar,Sawlogs,per MBF,2019,,,,
+Capital area,Hemlock,Sawlogs,per MBF,2019,59,,,
+Capital area,Red oak,Sawlogs,per MBF,2019,231,,,
+Capital area,Red pine,Sawlogs,per MBF,2019,46,,,
+Capital area,Red/white maple,Sawlogs,per MBF,2019,157,,,
+Capital area,Spruce & fir,Sawlogs,per MBF,2019,111,,,
+Capital area,Sugar maple,Sawlogs,per MBF,2019,206,,,
+Capital area,White birch,Sawlogs,per MBF,2019,157,,,
+Capital area,White oak,Sawlogs,per MBF,2019,264,,,
+Capital area,White pine,Sawlogs,per MBF,2019,157,,,
+Capital area,Yellow birch,Sawlogs,per MBF,2019,159,,,
+Casco Bay,Ash,Sawlogs,per MBF,2020,174,80,347,93
+Casco Bay,Aspen/poplar,Sawlogs,per MBF,2020,72,42,215,8
+Casco Bay,Beech,Sawlogs,per MBF,2020,144,10,256,13
+Casco Bay,Cedar,Sawlogs,per MBF,2020,,,,
+Casco Bay,Hemlock,Sawlogs,per MBF,2020,61,25,120,146
+Casco Bay,Red oak,Sawlogs,per MBF,2020,262,100,480,200
+Casco Bay,Red pine,Sawlogs,per MBF,2020,37,20,80,25
+Casco Bay,Red/white maple,Sawlogs,per MBF,2020,167,50,330,86
+Casco Bay,Spruce & fir,Sawlogs,per MBF,2020,107,48,185,80
+Casco Bay,Sugar maple,Sawlogs,per MBF,2020,167,75,390,65
+Casco Bay,White birch,Sawlogs,per MBF,2020,144,50,280,80
+Casco Bay,White oak,Sawlogs,per MBF,2020,153,50,315,34
+Casco Bay,White pine,Sawlogs,per MBF,2020,185,66,250,284
+Casco Bay,Yellow birch,Sawlogs,per MBF,2020,138,55,315,61
+Casco Bay,Ash,Sawlogs,per MBF,2019,251,,,
+Casco Bay,Aspen/poplar,Sawlogs,per MBF,2019,99,,,
+Casco Bay,Beech,Sawlogs,per MBF,2019,40,,,
+Casco Bay,Cedar,Sawlogs,per MBF,2019,,,,
+Casco Bay,Hemlock,Sawlogs,per MBF,2019,61,,,
+Casco Bay,Red oak,Sawlogs,per MBF,2019,275,,,
+Casco Bay,Red pine,Sawlogs,per MBF,2019,75,,,
+Casco Bay,Red/white maple,Sawlogs,per MBF,2019,164,,,
+Casco Bay,Spruce & fir,Sawlogs,per MBF,2019,107,,,
+Casco Bay,Sugar maple,Sawlogs,per MBF,2019,248,,,
+Casco Bay,White birch,Sawlogs,per MBF,2019,139,,,
+Casco Bay,White oak,Sawlogs,per MBF,2019,119,,,
+Casco Bay,White pine,Sawlogs,per MBF,2019,188,,,
+Casco Bay,Yellow birch,Sawlogs,per MBF,2019,136,,,
+Franklin,Ash,Sawlogs,per MBF,2020,183,75,300,39
+Franklin,Aspen/poplar,Sawlogs,per MBF,2020,123,70,175,11
+Franklin,Beech,Sawlogs,per MBF,2020,,,,
+Franklin,Cedar,Sawlogs,per MBF,2020,,,,
+Franklin,Hemlock,Sawlogs,per MBF,2020,64,30,105,17
+Franklin,Red oak,Sawlogs,per MBF,2020,233,113,325,27
+Franklin,Red pine,Sawlogs,per MBF,2020,,,,
+Franklin,Red/white maple,Sawlogs,per MBF,2020,132,50,240,52
+Franklin,Spruce & fir,Sawlogs,per MBF,2020,118,50,190,41
+Franklin,Sugar maple,Sawlogs,per MBF,2020,244,75,400,39
+Franklin,White birch,Sawlogs,per MBF,2020,181,50,315,49
+Franklin,White oak,Sawlogs,per MBF,2020,,,,
+Franklin,White pine,Sawlogs,per MBF,2020,147,80,250,53
+Franklin,Yellow birch,Sawlogs,per MBF,2020,190,50,300,38
+Franklin,Ash,Sawlogs,per MBF,2019,195,,,
+Franklin,Aspen/poplar,Sawlogs,per MBF,2019,96,,,
+Franklin,Beech,Sawlogs,per MBF,2019,152,,,
+Franklin,Cedar,Sawlogs,per MBF,2019,,,,
+Franklin,Hemlock,Sawlogs,per MBF,2019,48,,,
+Franklin,Red oak,Sawlogs,per MBF,2019,233,,,
+Franklin,Red pine,Sawlogs,per MBF,2019,,,,
+Franklin,Red/white maple,Sawlogs,per MBF,2019,145,,,
+Franklin,Spruce & fir,Sawlogs,per MBF,2019,125,,,
+Franklin,Sugar maple,Sawlogs,per MBF,2019,228,,,
+Franklin,White birch,Sawlogs,per MBF,2019,164,,,
+Franklin,White oak,Sawlogs,per MBF,2019,,,,
+Franklin,White pine,Sawlogs,per MBF,2019,148,,,
+Franklin,Yellow birch,Sawlogs,per MBF,2019,170,,,
+Hancock,Ash,Sawlogs,per MBF,2020,115,72,175,9
+Hancock,Aspen/poplar,Sawlogs,per MBF,2020,,,,
+Hancock,Beech,Sawlogs,per MBF,2020,,,,
+Hancock,Cedar,Sawlogs,per MBF,2020,91,33,120,6
+Hancock,Hemlock,Sawlogs,per MBF,2020,66,50,75,10
+Hancock,Red oak,Sawlogs,per MBF,2020,196,113,425,11
+Hancock,Red pine,Sawlogs,per MBF,2020,,,,
+Hancock,Red/white maple,Sawlogs,per MBF,2020,110,100,165,10
+Hancock,Spruce & fir,Sawlogs,per MBF,2020,95,55,135,11
+Hancock,Sugar maple,Sawlogs,per MBF,2020,209,150,225,8
+Hancock,White birch,Sawlogs,per MBF,2020,239,75,300,9
+Hancock,White oak,Sawlogs,per MBF,2020,,,,
+Hancock,White pine,Sawlogs,per MBF,2020,158,100,208,31
+Hancock,Yellow birch,Sawlogs,per MBF,2020,136,75,200,9
+Hancock,Ash,Sawlogs,per MBF,2019,125,,,
+Hancock,Aspen/poplar,Sawlogs,per MBF,2019,,,,
+Hancock,Beech,Sawlogs,per MBF,2019,,,,
+Hancock,Cedar,Sawlogs,per MBF,2019,92,,,
+Hancock,Hemlock,Sawlogs,per MBF,2019,68,,,
+Hancock,Red oak,Sawlogs,per MBF,2019,183,,,
+Hancock,Red pine,Sawlogs,per MBF,2019,,,,
+Hancock,Red/white maple,Sawlogs,per MBF,2019,125,,,
+Hancock,Spruce & fir,Sawlogs,per MBF,2019,121,,,
+Hancock,Sugar maple,Sawlogs,per MBF,2019,206,,,
+Hancock,White birch,Sawlogs,per MBF,2019,245,,,
+Hancock,White oak,Sawlogs,per MBF,2019,,,,
+Hancock,White pine,Sawlogs,per MBF,2019,195,,,
+Hancock,Yellow birch,Sawlogs,per MBF,2019,165,,,
+Oxford,Ash,Sawlogs,per MBF,2020,162,30,295,83
+Oxford,Aspen/poplar,Sawlogs,per MBF,2020,88,31,190,21
+Oxford,Beech,Sawlogs,per MBF,2020,69,10,215,16
+Oxford,Cedar,Sawlogs,per MBF,2020,,,,
+Oxford,Hemlock,Sawlogs,per MBF,2020,60,30,125,67
+Oxford,Red oak,Sawlogs,per MBF,2020,239,100,417,94
+Oxford,Red pine,Sawlogs,per MBF,2020,56,20,80,24
+Oxford,Red/white maple,Sawlogs,per MBF,2020,121,60,317,74
+Oxford,Spruce & fir,Sawlogs,per MBF,2020,98,60,195,74
+Oxford,Sugar maple,Sawlogs,per MBF,2020,191,100,395,78
+Oxford,White birch,Sawlogs,per MBF,2020,95,50,275,87
+Oxford,White oak,Sawlogs,per MBF,2020,78,50,220,10
+Oxford,White pine,Sawlogs,per MBF,2020,172,100,247,130
+Oxford,Yellow birch,Sawlogs,per MBF,2020,158,58,250,65
+Oxford,Ash,Sawlogs,per MBF,2019,188,,,
+Oxford,Aspen/poplar,Sawlogs,per MBF,2019,150,,,
+Oxford,Beech,Sawlogs,per MBF,2019,139,,,
+Oxford,Cedar,Sawlogs,per MBF,2019,,,,
+Oxford,Hemlock,Sawlogs,per MBF,2019,70,,,
+Oxford,Red oak,Sawlogs,per MBF,2019,280,,,
+Oxford,Red pine,Sawlogs,per MBF,2019,50,,,
+Oxford,Red/white maple,Sawlogs,per MBF,2019,159,,,
+Oxford,Spruce & fir,Sawlogs,per MBF,2019,147,,,
+Oxford,Sugar maple,Sawlogs,per MBF,2019,235,,,
+Oxford,White birch,Sawlogs,per MBF,2019,133,,,
+Oxford,White oak,Sawlogs,per MBF,2019,120,,,
+Oxford,White pine,Sawlogs,per MBF,2019,185,,,
+Oxford,Yellow birch,Sawlogs,per MBF,2019,178,,,
+Somerset,Ash,Sawlogs,per MBF,2020,176,80,274,36
+Somerset,Aspen/poplar,Sawlogs,per MBF,2020,135,80,172,7
+Somerset,Beech,Sawlogs,per MBF,2020,,,,
+Somerset,Cedar,Sawlogs,per MBF,2020,81,50,150,7
+Somerset,Hemlock,Sawlogs,per MBF,2020,53,25,98,23
+Somerset,Red oak,Sawlogs,per MBF,2020,252,120,375,19
+Somerset,Red pine,Sawlogs,per MBF,2020,41,20,110,4
+Somerset,Red/white maple,Sawlogs,per MBF,2020,125,50,260,34
+Somerset,Spruce & fir,Sawlogs,per MBF,2020,134,53,183,48
+Somerset,Sugar maple,Sawlogs,per MBF,2020,187,115,355,34
+Somerset,White birch,Sawlogs,per MBF,2020,147,80,250,27
+Somerset,White oak,Sawlogs,per MBF,2020,,,,
+Somerset,White pine,Sawlogs,per MBF,2020,135,75,225,56
+Somerset,Yellow birch,Sawlogs,per MBF,2020,159,96,250,32
+Somerset,Ash,Sawlogs,per MBF,2019,174,,,
+Somerset,Aspen/poplar,Sawlogs,per MBF,2019,111,,,
+Somerset,Beech,Sawlogs,per MBF,2019,,,,
+Somerset,Cedar,Sawlogs,per MBF,2019,152,,,
+Somerset,Hemlock,Sawlogs,per MBF,2019,65,,,
+Somerset,Red oak,Sawlogs,per MBF,2019,249,,,
+Somerset,Red pine,Sawlogs,per MBF,2019,,,,
+Somerset,Red/white maple,Sawlogs,per MBF,2019,125,,,
+Somerset,Spruce & fir,Sawlogs,per MBF,2019,166,,,
+Somerset,Sugar maple,Sawlogs,per MBF,2019,256,,,
+Somerset,White birch,Sawlogs,per MBF,2019,146,,,
+Somerset,White oak,Sawlogs,per MBF,2019,,,,
+Somerset,White pine,Sawlogs,per MBF,2019,147,,,
+Somerset,Yellow birch,Sawlogs,per MBF,2019,140,,,
+Washington,Ash,Sawlogs,per MBF,2020,170,158,175,5
+Washington,Aspen/poplar,Sawlogs,per MBF,2020,,,,
+Washington,Beech,Sawlogs,per MBF,2020,,,,
+Washington,Cedar,Sawlogs,per MBF,2020,,,,
+Washington,Hemlock,Sawlogs,per MBF,2020,52,40,88,5
+Washington,Red oak,Sawlogs,per MBF,2020,,,,
+Washington,Red pine,Sawlogs,per MBF,2020,80,22,125,4
+Washington,Red/white maple,Sawlogs,per MBF,2020,133,110,146,5
+Washington,Spruce & fir,Sawlogs,per MBF,2020,125,100,150,5
+Washington,Sugar maple,Sawlogs,per MBF,2020,199,100,200,9
+Washington,White birch,Sawlogs,per MBF,2020,169,107,300,7
+Washington,White oak,Sawlogs,per MBF,2020,,,,
+Washington,White pine,Sawlogs,per MBF,2020,137,92,195,19
+Washington,Yellow birch,Sawlogs,per MBF,2020,165,150,200,6
+Washington,Ash,Sawlogs,per MBF,2019,,,,
+Washington,Aspen/poplar,Sawlogs,per MBF,2019,,,,
+Washington,Beech,Sawlogs,per MBF,2019,,,,
+Washington,Cedar,Sawlogs,per MBF,2019,,,,
+Washington,Hemlock,Sawlogs,per MBF,2019,57,,,
+Washington,Red oak,Sawlogs,per MBF,2019,,,,
+Washington,Red pine,Sawlogs,per MBF,2019,,,,
+Washington,Red/white maple,Sawlogs,per MBF,2019,120,,,
+Washington,Spruce & fir,Sawlogs,per MBF,2019,86,,,
+Washington,Sugar maple,Sawlogs,per MBF,2019,200,,,
+Washington,White birch,Sawlogs,per MBF,2019,137,,,
+Washington,White oak,Sawlogs,per MBF,2019,,,,
+Washington,White pine,Sawlogs,per MBF,2019,126,,,
+Washington,Yellow birch,Sawlogs,per MBF,2019,191,,,
