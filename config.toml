@@ -62,8 +62,8 @@ googleAnalytics = "UA-136790074-1"
     weight = 2    
 
 [[menu.icon]]
-    url = "https://github.com/mbrussell/"
-    name = "github"
+    url = "https://www.youtube.com/@arboranalytics"
+    name = "youtube"
     weight = 3
 
 [[menu.icon]]
