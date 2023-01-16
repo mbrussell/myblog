@@ -1,12 +1,12 @@
 ---
 title: Newsletter
 author: Matt Russell
-date: '2022-12-26'
+date: '2023-01-16'
 slug: newsletter
 ---
 
 Two newsletter options to follow our work:
-
+ 
 ## 1. LinkedIn Newsletter  
 
 #### Insights for professionals that work with forests and data.
