@@ -1,0 +1,84 @@
+---
+title: Timberlands as investments continue to rise
+author: Matt Russell
+date: '2023-01-27'
+slug: []
+categories:
+  - Forest products
+tags:
+  - analytics
+  - economics
+  - forest industry
+  - timber prices
+---
+
+Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.
+
+The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth quarter and annual returns for their [Timberland Index](https://www.ncreif.org/data-products/timberland/), an index representing 464 investment-grade timberland properties with a market value of $24.5 billion. The Index showed a 4.89% return for the fourth quarter of 2022.
+
+The NCREIF gained 12.9% in 2022, the largest annual increase since at least 2010. Returns from timberland investments can be compared to national economic indicators such as the US 10-year Treasury yield and the S&P 500: 
+
+```{r, echo = F, warning = F, message = F}
+# Load packages
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+```{r, echo = F, warning = F, message = F}
+# Enter data, from Zhang 2021 page 163
+timber <- tribble(
+  ~Year, ~`10-year Treasury`, ~`S&P 500`, ~`NCREIF Index`, ~REIT,
+  2010, 3.30, 12.78, -0.15, 13.42,
+  2011, 1.89, 0.00, 1.57, 9.30,
+  2012, 1.78, 13.41, 7.75, 38.50,
+  2013, 3.04, 29.60, 9.69, 9.45,
+  2014, 2.17, 11.39, 10.48, 9.59,
+  2015, 2.27, -0.73, 4.97, -6.07,
+  2016, 2.44, 9.54, 2.59, 8.62,
+  2017, 2.41, 19.42, 3.63, 21.08,
+  2018, 2.69, -6.24, 3.21, -32.50,
+  2019, 1.92, 28.88, 1.30, 40.00,
+  2020, 0.93, 16.26, 0.81, 12.44,
+  2021, 1.52, 26.89, 9.17, NA,
+  2022, 3.88, -19.44, 12.9, NA
+)
+```
+
+```{r, echo = F, warning = F, message = F}
+timber_long <- timber %>% 
+  select(-REIT) %>% 
+  pivot_longer(`10-year Treasury`:`NCREIF Index`, "Index", "PctChange")
+
+ggplot(timber_long, aes(Year, value, col = Index)) +
+  geom_point() +
+  geom_line() +
+  labs(y = "Annual rate of return (%)") +
+  scale_x_continuous(breaks = c(2010:2022)) +
+  theme_bw()
+```
+
+In the last 13 years, the NCREIF Index has averaged a return of 5.2%. The variability of returns observed in the NCREIF Index is lower than returns from the S&P 500, represented by a coefficient of variation of 82.7% for the NCREIF Index and 133% for the S&P 500:  
+
+```{r, echo = F, warning = F, message = F}
+timber_long_summ <- timber_long %>% 
+  group_by(Index) %>%
+  summarize(`Avg return` = round(mean(value), 1),
+            `Std Dev return` = round(sd(value), 1)) %>% 
+  mutate(`CV return` = round((`Std Dev return`/`Avg return`)*100, 1))
+timber_long_summ %>%
+  kbl(caption = "Average and variability of annual rates of return of timberland investments, 2010-2022.") %>%
+  kable_styling()
+```
+
+The report also provides returns for timberland in four regions of the US. The Lake States region ended last quarter with a 7.34% increase in market value (up to $673 per acre) compared to Q3 values (based on 17 properties). Other region market values include:
+
+* South: Market value of $2,009 per acre (n = 322 properties),
+* Pacific Northwest: Market value of $2,971 per acre (n = 84 properties),
+* Northeast: Market value of $1,557 per acre (n = 39 properties),
+
+For more info, Forisk recently published a post that examined [Timberland and Timber REIT Investment Performance fom 2022](https://forisk.com/blog/2023/01/25/timberland-and-timber-reit-investment-performance-in-2022/). For more history, Daowei Zhang's excellent book ["From Backwoods to Boardrooms"](https://osupress.oregonstate.edu/book/from-backwoods-to-boardrooms) presents a thorough history of timberland ownership in the US, describes the rise of TIMOs and REITs, and discusses the future of investment in timberlands.
+
+--
+
+*By Matt Russell. Sign up for my [monthly newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for in-depth analysis on data and analytics in the forest products industry.*
