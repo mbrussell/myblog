@@ -32,7 +32,7 @@ tags:
 <div id="penobscot-experimental-forest-data" class="section level2">
 <h2>Penobscot Experimental Forest data</h2>
 <p>The data used here is from the <a href="https://www.fs.usda.gov/rds/archive/catalog/RDS-2012-0008-2">Penobscot Experimental Forest (PEF)</a>, a long-term silvicultural experiment based in central Maine. The species are typical of the mixed-species Acadian Forest, an ecotone between the boreal forests to the north and the broadleaf forests to the south. Permanent sample plots are located in several management units (MU) across the forest.</p>
-<p>There are several remeasurements of permanent sample plots on trees in the PEF database. I use only the most recent measurement from each plot for this analysis. On the PEF, permanent sample plots consist of nested 1/5-, 1/20-, and 1/50-acre circular plots for measuring trees &gt;= 4.5 inches, 2.5 to 4.4 inches, and 0.5 to 2.4 inches in diameter at breast height, respectively. Tree heights are measured on one-third of the plots. (NOTE: I skip some of the data cleaning on this data set in this post, but you can <a href="">find the raw data and the full code set on GitHub</a>.)</p>
+<p>There are several remeasurements of permanent sample plots on trees in the PEF database. I use only the most recent measurement from each plot for this analysis. On the PEF, permanent sample plots consist of nested 1/5-, 1/20-, and 1/50-acre circular plots for measuring trees &gt;= 4.5 inches, 2.5 to 4.4 inches, and 0.5 to 2.4 inches in diameter at breast height, respectively. Tree heights are measured on one-third of the plots. (NOTE: I skip some of the data cleaning on this data set in this post, but you can <a href="https://github.com/mbrussell/myblog/tree/master/content/post/2023-02-15-imputing-missing-tree-heights-from-a-forest-inventory">find the raw data and the full code set on GitHub</a>.)</p>
 <p>In total there are 14,489 total trees in the database, but only 3,382 have height measurements. Here are 10 random rows of data, and note the missing heights for many of them:</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
 <table class="table lightable-paper" style="margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
@@ -67,19 +67,42 @@ HT
 20
 </td>
 <td style="text-align:right;">
-42
+12
 </td>
 <td style="text-align:right;">
 2008
 </td>
 <td style="text-align:right;">
-54900
+35100
 </td>
 <td style="text-align:left;">
 RS
 </td>
 <td style="text-align:right;">
-11.9
+8.9
+</td>
+<td style="text-align:right;">
+65.3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+29B
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+2011
+</td>
+<td style="text-align:right;">
+45600
+</td>
+<td style="text-align:left;">
+BF
+</td>
+<td style="text-align:right;">
+7.2
 </td>
 <td style="text-align:right;">
 NA
@@ -87,25 +110,25 @@ NA
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;">
-9
+10
 </td>
 <td style="text-align:right;">
-13
+11
 </td>
 <td style="text-align:right;">
-2013
+2010
 </td>
 <td style="text-align:right;">
-90700
+30300
 </td>
 <td style="text-align:left;">
 RM
 </td>
 <td style="text-align:right;">
-10.7
+6.4
 </td>
 <td style="text-align:right;">
-NA
+43.8
 </td>
 </tr>
 <tr>
@@ -113,91 +136,22 @@ NA
 12
 </td>
 <td style="text-align:right;">
-42
+32
 </td>
 <td style="text-align:right;">
 2014
 </td>
 <td style="text-align:right;">
-65100
+94700
 </td>
 <td style="text-align:left;">
 WC
 </td>
 <td style="text-align:right;">
-7.6
+7.0
 </td>
 <td style="text-align:right;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;">
-30
-</td>
-<td style="text-align:right;">
-22
-</td>
-<td style="text-align:right;">
-2013
-</td>
-<td style="text-align:right;">
-4000
-</td>
-<td style="text-align:left;">
-PB
-</td>
-<td style="text-align:right;">
-4.8
-</td>
-<td style="text-align:right;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;">
-20
-</td>
-<td style="text-align:right;">
-32
-</td>
-<td style="text-align:right;">
-2008
-</td>
-<td style="text-align:right;">
-14700
-</td>
-<td style="text-align:left;">
-WC
-</td>
-<td style="text-align:right;">
-6.7
-</td>
-<td style="text-align:right;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;">
-24
-</td>
-<td style="text-align:right;">
-32
-</td>
-<td style="text-align:right;">
-2005
-</td>
-<td style="text-align:right;">
-4700
-</td>
-<td style="text-align:left;">
-RM
-</td>
-<td style="text-align:right;">
-6.0
-</td>
-<td style="text-align:right;">
-NA
+16.0
 </td>
 </tr>
 <tr>
@@ -205,19 +159,42 @@ NA
 4
 </td>
 <td style="text-align:right;">
-22
+32
 </td>
 <td style="text-align:right;">
 2009
 </td>
 <td style="text-align:right;">
-74300
+82800
+</td>
+<td style="text-align:left;">
+BF
+</td>
+<td style="text-align:right;">
+6.5
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+21
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+2013
+</td>
+<td style="text-align:right;">
+5200
 </td>
 <td style="text-align:left;">
 WC
 </td>
 <td style="text-align:right;">
-10.5
+6.9
 </td>
 <td style="text-align:right;">
 NA
@@ -228,19 +205,19 @@ NA
 23A
 </td>
 <td style="text-align:right;">
-33
+73
 </td>
 <td style="text-align:right;">
 2001
 </td>
 <td style="text-align:right;">
-74500
+15100
 </td>
 <td style="text-align:left;">
 BF
 </td>
 <td style="text-align:right;">
-8.0
+5.6
 </td>
 <td style="text-align:right;">
 NA
@@ -248,45 +225,68 @@ NA
 </tr>
 <tr>
 <td style="text-align:left;font-weight: bold;">
-32A
+24
 </td>
 <td style="text-align:right;">
-54
+21
 </td>
 <td style="text-align:right;">
-2009
+2005
 </td>
 <td style="text-align:right;">
-24800
-</td>
-<td style="text-align:left;">
-BF
-</td>
-<td style="text-align:right;">
-5.0
-</td>
-<td style="text-align:right;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;">
-9
-</td>
-<td style="text-align:right;">
-11
-</td>
-<td style="text-align:right;">
-2013
-</td>
-<td style="text-align:right;">
-34400
+64200
 </td>
 <td style="text-align:left;">
 EH
 </td>
 <td style="text-align:right;">
-11.4
+8.1
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+22
+</td>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:right;">
+2014
+</td>
+<td style="text-align:right;">
+23800
+</td>
+<td style="text-align:left;">
+BF
+</td>
+<td style="text-align:right;">
+5.4
+</td>
+<td style="text-align:right;">
+50.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+23A
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+2001
+</td>
+<td style="text-align:right;">
+94300
+</td>
+<td style="text-align:left;">
+EH
+</td>
+<td style="text-align:right;">
+7.6
 </td>
 <td style="text-align:right;">
 NA
@@ -458,6 +458,6 @@ p.ht.fvs + p.ht.mixed</code></pre>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
 <p>There are many ways to impute missing values, and mixed models are very fitting for forest inventory data because of their hierarchical structure. If variables of interest are subsampled, mixed models can account for random variation at different levels. R’s <code>predict()</code> function works excellent for making mixed model predictions at these different levels.</p>
-<p>–
-**By Matt Russell. PS: I’ve suppressed some of the code that cleans the Penobscot data set. You can find the raw data and the full code set on GitHub.*</p>
+<p>–</p>
+<p><em>By Matt Russell. PS: I’ve suppressed some of the code that cleans the Penobscot data set. You can <a href="https://github.com/mbrussell/myblog/tree/master/content/post/2023-02-15-imputing-missing-tree-heights-from-a-forest-inventory">find the raw data and the full code set on GitHub</a>.</em></p>
 </div>
