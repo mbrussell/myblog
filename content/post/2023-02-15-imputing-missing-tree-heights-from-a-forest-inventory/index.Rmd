@@ -34,7 +34,7 @@ This post will discuss the idea of imputation, or how to make the best predictio
 
 The data used here is from the [Penobscot Experimental Forest (PEF)](https://www.fs.usda.gov/rds/archive/catalog/RDS-2012-0008-2), a long-term silvicultural experiment based in central Maine. The species are typical of the mixed-species Acadian Forest, an ecotone between the boreal forests to the north and the broadleaf forests to the south. Permanent sample plots are located in several management units (MU) across the forest.
 
-There are several remeasurements of permanent sample plots on trees in the PEF database. I use only the most recent measurement from each plot for this analysis. On the PEF, permanent sample plots consist of nested 1/5-, 1/20-, and 1/50-acre circular plots for measuring trees >= 4.5 inches, 2.5 to 4.4 inches, and 0.5 to 2.4 inches in diameter at breast height, respectively. Tree heights are measured on one-third of the plots. (NOTE: I skip some of the data cleaning on this data set in this post, but you can [find the raw data and the full code set on GitHub]().)
+There are several remeasurements of permanent sample plots on trees in the PEF database. I use only the most recent measurement from each plot for this analysis. On the PEF, permanent sample plots consist of nested 1/5-, 1/20-, and 1/50-acre circular plots for measuring trees >= 4.5 inches, 2.5 to 4.4 inches, and 0.5 to 2.4 inches in diameter at breast height, respectively. Tree heights are measured on one-third of the plots. (NOTE: I skip some of the data cleaning on this data set in this post, but you can [find the raw data and the full code set on GitHub](https://github.com/mbrussell/myblog/tree/master/content/post/2023-02-15-imputing-missing-tree-heights-from-a-forest-inventory).)
 
 In total there are 14,489 total trees in the database, but only 3,382 have height measurements. Here are 10 random rows of data, and note the missing heights for many of them: 
 
@@ -284,7 +284,8 @@ p.ht.fvs + p.ht.mixed
 There are many ways to impute missing values, and mixed models are very fitting for forest inventory data because of their hierarchical structure. If variables of interest are subsampled, mixed models can account for random variation at different levels. R's `predict()` function works excellent for making mixed model predictions at these different levels.  
 
 -- 
-**By Matt Russell. PS: I've suppressed some of the code that cleans the Penobscot data set. You can find the raw data and the full code set on GitHub.*
+
+*By Matt Russell. PS: I've suppressed some of the code that cleans the Penobscot data set. You can [find the raw data and the full code set on GitHub](https://github.com/mbrussell/myblog/tree/master/content/post/2023-02-15-imputing-missing-tree-heights-from-a-forest-inventory).*
 
 
 
