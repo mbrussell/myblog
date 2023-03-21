@@ -28,7 +28,7 @@ Forest industry professionals are especially interested in knowing where forest 
 
 I was curious to know how much of Maine's forestland is enrolled in forest carbon projects. I searched the web and several climate registries to identify the owners, project developers, number of acres enrolled, and general location. I found most helpful [this webinar hosted by Maine Woodland Owners](https://www.youtube.com/watch?v=grh7FJyf5cU) to identify Maine forest properties that are currently enrolled in forest carbon programs.  
 
-I've compiled the data set [which you can find here]() and provided a snapshot of properties enrolled in carbon markets in Maine which you can find below. The size of each point relates to the acreage of each property:
+I've compiled the data set [which you can find here](https://github.com/mbrussell/myblog/tree/master/content/post/2023-03-21-how-much-of-maine-s-forests-are-enrolled-in-carbon-programs) and provided a snapshot of properties enrolled in carbon markets in Maine which you can find below. The size of each point relates to the acreage of each property:
 
 ```{r, echo = F, warning = F, message = F}
 library(tidyverse)
@@ -77,6 +77,6 @@ In total, approximately 531,000 acres of Maine forestlands are enrolled in fores
 
 --
 
-*By Matt Russell. NOTE: I've done my best to compile [this list of properties in Maine]() that are enrolled in carbon programs, but if may be incomplete. [Email me](mailto:matt@arbor-analytics.com) with any properties you're aware of that can be added to the list.*
+*By Matt Russell. NOTE: I've done my best to compile [this list of properties in Maine](https://github.com/mbrussell/myblog/tree/master/content/post/2023-03-21-how-much-of-maine-s-forests-are-enrolled-in-carbon-programs) that are enrolled in carbon programs, but if may be incomplete. [Email me](mailto:matt@arbor-analytics.com) with any properties you're aware of that can be added to the list.*
 
 
