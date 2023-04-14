@@ -8,8 +8,9 @@ categories:
 tags:
   - analytics
   - tidymodels
+  - bootstrap
   - forest measurements
-  - statitics
+  - statistics
 ---
 
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
@@ -33,7 +34,7 @@ tags:
 <p>To begin, we’ll use many functions from the <strong>tidyverse</strong> package in R to work with the data:</p>
 <pre class="r"><code>library(tidyverse)</code></pre>
 <p>The objective of this post is to fit a subsample of models that determine the aboveground biomass of trees using tree diameter as a predictor variable. I’ve gathered data from <a href="http://www.legacytreedata.org/">LegacyTreeData</a>, an online repository of individual tree measurements such as volume, weight, and wood density.</p>
-<p>I queried the database to provide all tree measurements for pine species the US State of Georgia. (You can <a href="http://github.com/mbrussell">find the raw data here</a>, and I’ve previously <a href="https://arbor-analytics.com/post/fit-many-models-with-broom/">written about these data</a>.)</p>
+<p>I queried the database to provide all tree measurements for pine species the US State of Georgia. (You can <a href="https://github.com/mbrussell/myblog/blob/master/content/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/ga_tree.csv">find the raw data here</a>, and I’ve previously <a href="https://arbor-analytics.com/post/fit-many-models-with-broom/">written about these data</a>.)</p>
 <p>There are 566 observations from six species that contain a value for the tree’s diameter at breast height(<code>ST_OB_D_BH</code>; cm) and its aboveground dry weight (<code>AG_DW</code>; kg). In this data set, most trees are small in diameter and do not weigh a lot:</p>
 <pre class="r"><code>ggplot(tree, aes(ST_OB_D_BH, AG_DW, col = Species)) +
   geom_point() +
