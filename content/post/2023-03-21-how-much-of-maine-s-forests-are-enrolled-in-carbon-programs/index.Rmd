@@ -77,6 +77,6 @@ In total, approximately 531,000 acres of Maine forestlands are enrolled in fores
 
 --
 
-*By Matt Russell. NOTE: I've done my best to compile [this list of properties in Maine](https://github.com/mbrussell/myblog/tree/master/content/post/2023-03-21-how-much-of-maine-s-forests-are-enrolled-in-carbon-programs) that are enrolled in carbon programs, but if may be incomplete. [Email me](mailto:matt@arbor-analytics.com) with any properties you're aware of that can be added to the list.*
+*By Matt Russell. NOTE: I've done my best to compile [this list of properties in Maine](https://github.com/mbrussell/myblog/tree/master/content/post/2023-03-21-how-much-of-maine-s-forests-are-enrolled-in-carbon-programs) that are enrolled in carbon programs, but it may be incomplete. [Email me](mailto:matt@arbor-analytics.com) with any properties you're aware of that can be added to the list.*
 
 

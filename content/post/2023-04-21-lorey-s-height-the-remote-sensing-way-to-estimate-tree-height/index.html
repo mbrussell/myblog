@@ -1,0 +1,223 @@
+---
+title: 'Lorey''s height: the remote sensing way to estimate tree height'
+author: Matt Russell
+date: '2023-04-21'
+slug: []
+categories:
+  - Forest measurements
+tags:
+  - forest measurements
+  - sampling
+  - forestry
+  - tree height
+  - site index
+  - rFIA
+  - sitreeE
+---
+
+
+
+<center>
+<img src="canopy.jpg" width="500" />
+</center>
+<center>
+<em>A canopy of lowland conifer trees in northern Minnesota.</em>
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>One of the first things you learn in an forestry field course is how to measure the height of trees. Doing so is tricky, as it’s difficult to locate the tops of many trees in dense forests (especially deciduous ones during leaf-on periods). Many foresters will sub-sample tree heights, for example only measuring the heights for every fifth tree or the four closest trees to plot center. Accurate tree height information is critical yet time consuming and expensive to collect in the field.</p>
+<p>Foresters require high-quality information on the heights of stands for estimating forest volume, growth, and other forest characteristics. With inventory data in hand, foresters have many ways to represent the average height of a stand. Because top height is widely used in determining forest site productivity, understanding how the definition of top height impacts site index is important, as <a href="https://www.sciencedirect.com/science/article/pii/S037811270100737X">work by Sharma and others</a> have reported. A popular technique to represent average top height of a stand is <strong>Lorey’s height</strong>.</p>
+<p>Lorey’s height is a measure of average stand height that is weighted by basal area. A benefit is that if you’re using horizontal point sampling to collect data, the average height of all “in” trees <em>is</em> Lorey’s mean height.</p>
+<p>Lorey’s height is popular in the remote sensing community because the height of the largest diameter trees is more likely to be detected by active or passive sensors. Although technologies have come a long way, the ability to account for the heights of shorter trees underneath the canopy remains difficult. That may be okay–in a forestry context it’s often the larger trees that provide more economic value and store more carbon relative to shorter and smaller trees in the stand.</p>
+<p>Many remote sensing papers that use it seem to point to <a href="https://www.sciencedirect.com/science/article/pii/S0924271697830006">a paper written by Naesset in 1997</a> that used it to quantify tree canopy heights from lidar data collected in Norway. It’s a variable that is provided in many spatial databases, such as from <a href="https://daac-news.ornl.gov/content/global-estimates-forest-canopy-height">lidar collects in the US</a> and <a href="https://open.canada.ca/data/en/dataset/836082d5-d55f-46c3-9b9c-aaf1a306c247">Canada</a>.</p>
+<p>This post describes the calculation of Lorey’s height using data collected from the US national forest inventory program in New York State. It then compares this definition of top height to other common ones used in forestry.</p>
+</div>
+<div id="calculating-loreys-height" class="section level2">
+<h2>Calculating Lorey’s height</h2>
+<p>Lorey’s height (<span class="math inline">\(h_L\)</span>) can be defined as:</p>
+<p><span class="math display">\[h_L=\frac{\sum{n_ig_ih_i}}{\sum{n_ig_i}}\]</span></p>
+<p>where</p>
+<ul>
+<li><span class="math inline">\(n_i\)</span> is the number of trees in the <em>i</em>th diameter class,</li>
+<li><span class="math inline">\(g_i\)</span> is the average basal area of the <em>i</em>th diameter class, and</li>
+<li><span class="math inline">\(h_i\)</span> is the average height of trees in the <em>i</em>th diameter class.</li>
+</ul>
+<p>As an example, we can put together a small data set named <strong>tree</strong> where we can calculate Lorey’s height. Assume these trees were sample from a single fixed-radius plot that is 1/5th-acre in size. The <code>tribble()</code> function from the <strong>tidyverse</strong> package can be used for this:</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre class="r"><code>tree &lt;- tribble(
+  ~treeid, ~dbh, ~ht,
+  1, 4.5,   30.8,
+  2, 4.6,   32.7,
+  3, 11.7, 62.8,
+  4, 13.8, 66.9,
+  5, 4.7,   29.3,
+  6, 7.3,   51.3,
+  7, 14.5,  65.5,
+  8, 9.6, 58.9,
+  9, 12.1, 67.5,
+  10, 16.9, 75.8,
+  11, 11.9, 69,
+  12, 13.2, 65.1,
+  13, 12,   63.3,
+  14, 14.2, 68.2,
+  15, 6.3, 47.9,
+  16, 4.9, 32.4,
+  17, 8.1, 49.2,
+  18, 9.1, 48.1,
+  19, 11.2, 48,
+  20, 9.9, 49.5,
+  21, 5.7, 26.8,
+  22, 12.9, 58.7,
+  23, 5.8, 35.4,
+  24, 4.9, 35.4,
+  25, 24,   89.6,
+  26, 6.2, 47.4,
+  27, 5.9, 54.4,
+  28, 4.5, 40.3
+  )</code></pre>
+<p>We can define the expansion factor (<code>expf</code> = 5) and then determine Lorey’s mean height. The denominator of the calculation is the basal area in the stand:</p>
+<pre class="r"><code>expf &lt;- 5
+
+tree %&gt;% 
+  mutate(ba_tree = (0.00545415*dbh^2)*expf,
+         lorey_num = (0.00545415*dbh^2)*ht*expf) %&gt;% 
+  summarize(BA = sum(ba_tree),
+            LOREY_HT = sum(lorey_num) / BA)</code></pre>
+<pre><code>## # A tibble: 1 × 2
+##      BA LOREY_HT
+##   &lt;dbl&gt;    &lt;dbl&gt;
+## 1  87.3     65.7</code></pre>
+<p>As an aside, the <a href="https://cran.r-project.org/web/packages/sitreeE/index.html"><strong>sitreeE</strong> package in R</a> also has a function for determining Lorey’s height:</p>
+<pre class="r"><code># install.packages(&quot;sitreeE&quot;)
+
+library(sitreeE)
+
+BA2 &lt;- pi*(tree$dbh/2)^2
+
+LOREY_HT2 &lt;- lorey.height(BA2, tree$ht)
+
+print(LOREY_HT2)</code></pre>
+<pre><code>## [1] 65.69421</code></pre>
+<p>So, we can conclude that this stand has a mean Lorey’s height of 65.7 feet.</p>
+</div>
+<div id="fia-data-from-new-york-state" class="section level2">
+<h2>FIA data from New York State</h2>
+<p>For an example data set, let’s query data from the US Forest Inventory and Analysis program collected in New York State. This is an excellent data set to use in this application because tree heights are measure on all sized trees in a network of permanent sample plots. There are approximately 3,200 forested plots in the New York FIA data.</p>
+<p>We can read in the data using <a href="https://rfia.netlify.app/">the <strong>rFIA</strong> package</a>. Specifically, we want to acquire the TREE and PLOT tables (uncomment to run code_:</p>
+<pre class="r"><code>library(rFIA)</code></pre>
+<pre class="r"><code># nyfia &lt;- getFIA(states = &#39;NY&#39;, 
+#                tables = c(&quot;TREE&quot;, &quot;PLOT&quot;),
+#                dir = &#39;your/path/goes/here&#39;)</code></pre>
+<p>The <code>plotFIA()</code> function maps the approximate locations of all plots:</p>
+<pre class="r"><code>plotFIA(nyfia)</code></pre>
+<center>
+<img src="ny_plots.png" width="500" />
+</center>
+</div>
+<div id="section-1" class="section level2">
+<h2></h2>
+<p>Next, we want to filter the data to only live trees (<code>STATUSCD</code> = 1) with a diameter at breast height (<code>DIA</code>) greater than 5.0 inches. I’ll also filter the data to obtain the most recent measurement of trees. In New York, this equates to all trees measured since about 2013:</p>
+<pre class="r"><code>nytree &lt;- nyfia$TREE %&gt;% 
+  filter(STATUSCD == 1 &amp; DIA &gt;= 5.0 &amp; INVYR &gt;= 2013)</code></pre>
+<p>Next, we can calculate the number of trees, basal area, and Lorey’s height for all New York plots. The <code>PLT_CN</code> variable records each plot identifier:</p>
+<pre class="r"><code>nyplot &lt;- nytree %&gt;% 
+  mutate(ba_tree = (0.00545415*DIA^2)*TPA_UNADJ,
+         lorey_num = (0.00545415*DIA^2)*ACTUALHT*TPA_UNADJ) %&gt;% 
+  group_by(PLT_CN) %&gt;% 
+  summarize(num_trees = n(),
+            BA = sum(ba_tree),
+            LOREY_HT = sum(lorey_num) / sum(ba_tree))
+nyplot</code></pre>
+<pre><code>## # A tibble: 3,224 × 4
+##     PLT_CN num_trees     BA LOREY_HT
+##      &lt;dbl&gt;     &lt;int&gt;  &lt;dbl&gt;    &lt;dbl&gt;
+##  1 1.58e13        57 145.       59.7
+##  2 1.58e13        29 121.       61.2
+##  3 1.58e13        13  24.7      61.3
+##  4 1.58e13        30 128.       66.6
+##  5 1.58e13         6   9.69     43.2
+##  6 1.58e13         6  24.6      65.2
+##  7 1.58e13        26 147.       68.2
+##  8 1.58e13        35  94.4      58.4
+##  9 1.58e13        25  98.5      73.9
+## 10 1.58e13        35 166.       63.5
+## # … with 3,214 more rows</code></pre>
+<p>We can visualize the distribution of Lorey’s height with a violin plot. We can see that the heights are approximately normal distributed, albeit slightly right-skewed:</p>
+<pre class="r"><code>ggplot(nyplot, aes(x = LOREY_HT, y = 1)) +
+  geom_violin(draw_quantiles = c(0.5)) +
+  labs(x = &quot;Lorey&#39;s height (feet)&quot;) +
+  theme(axis.title.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank())</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+<div id="comparing-loreys-height-to-other-top-height-definitions" class="section level2">
+<h2>Comparing Lorey’s height to other top height definitions</h2>
+<p>In their text, <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781118902028">Kershaw et al. 2016</a> describe three other approaches to determine top height. In addition to Lorey’s height, these include:</p>
+<ul>
+<li>The <strong>arithmetic mean height</strong> of all trees in a stand. This is a non-weighted measure of stand height and considers trees of all sizes in a stand (including ones in the lower canopy).</li>
+<li>The average height of <strong>dominant and co-dominant trees, only</strong>. This is the height calculation I first learned as a forestry student because it’s typically used in site index equations in North America.</li>
+<li>The average height of the <strong>largest diameter trees</strong> (or tallest trees). Some examples include selecting the largest 20% of trees based on diameter, or the tallest 50 trees per unit area.</li>
+</ul>
+<p>We may be interested in comparing how these three different metric of top height compare to Lorey’s height. The arithmetic mean height simply averages all heights in a stand. The average height of dominants and co-dominants can be determined by querying FIA’s <code>CCLCD</code> variable, a designation of the crown class code of each tree. (We’ll filter all trees with a <code>CCLCD</code> of 2 and 3 which represent dominant and co-dominant trees, respectively.) For the average height of the largest diameter trees, let’s take the largest diameter trees found in the top 20th percentile (or 80th quantile):</p>
+<pre class="r"><code>nyplot_q &lt;- nytree %&gt;% 
+  group_by(PLT_CN) %&gt;% 
+  summarize(pctl_80 = quantile(DIA, p = 0.8))
+
+nyplot &lt;- nytree %&gt;% 
+  inner_join(nyplot_q) %&gt;% 
+  mutate(ba_tree = (0.00545415*DIA^2)*TPA_UNADJ,
+         lorey_num = (0.00545415*DIA^2)*ACTUALHT*TPA_UNADJ,
+         ACTUALHT_dom_codom = ifelse(CCLCD %in% c(2,3), ACTUALHT, NA),
+         ACTUALHT_pctl_80 = ifelse(DIA &gt;= pctl_80, ACTUALHT, NA)) %&gt;% 
+  group_by(PLT_CN) %&gt;% 
+  summarize(num_trees = n(),
+            BA = sum(ba_tree),
+            LOREY_HT = sum(lorey_num) / sum(ba_tree),
+            ARITH_HT = mean(ACTUALHT),
+            DOM_CODOM_HT = mean(ACTUALHT_dom_codom, na.rm = T),
+            LARGE_HT = mean(ACTUALHT_pctl_80, na.rm = T))
+
+nyplot</code></pre>
+<pre><code>## # A tibble: 3,224 × 7
+##     PLT_CN num_trees     BA LOREY_HT ARITH_HT DOM_CODOM_HT LARGE_HT
+##      &lt;dbl&gt;     &lt;int&gt;  &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;        &lt;dbl&gt;    &lt;dbl&gt;
+##  1 1.58e13        57 145.       59.7     56.1         62.0     65.9
+##  2 1.58e13        29 121.       61.2     50           60.6     71.2
+##  3 1.58e13        13  24.7      61.3     58.1         60.4     65.7
+##  4 1.58e13        30 128.       66.6     59.3         61.2     71.8
+##  5 1.58e13         6   9.69     43.2     44           44.2     43  
+##  6 1.58e13         6  24.6      65.2     56.2         74       60  
+##  7 1.58e13        26 147.       68.2     62.8         71.4     70.7
+##  8 1.58e13        35  94.4      58.4     54.9         60.6     65.4
+##  9 1.58e13        25  98.5      73.9     68.1         75.6     81.2
+## 10 1.58e13        35 166.       63.5     55.0         73.6     69.7
+## # … with 3,214 more rows</code></pre>
+<p>Let’s plot the distributions of the different top height definitions:</p>
+<pre class="r"><code>nyplot_long &lt;-nyplot %&gt;% 
+  pivot_longer(LOREY_HT:LARGE_HT, names_to = &quot;Top height definition&quot;, 
+               values_to = &quot;Height (feet)&quot;)
+
+ggplot(nyplot_long, aes(x = `Height (feet)`, 
+                        y = `Top height definition`)) +
+  geom_violin(draw_quantiles = c(0.5)) +
+  labs(x = &quot;Top height (feet)&quot;) +
+  scale_y_discrete(labels = c(&quot;Arithmetic mean&quot;, &quot;Dominant/co-dominant&quot;, 
+                              &quot;Largest 20% diameter&quot;, &quot;Lorey&#39;s&quot;))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>The definition of average height of the largest diameter trees produces the greatest median height, followed by the average height of dominants and co-dominants, Lorey’s height, and then the arithmetic mean height.</p>
+<p>We can visualize the correlations between these different top height definitions. The <strong>GGally</strong> package has a <code>ggpairs()</code> function that produces a sharp-looking correlation matrix with scatter plots, densities, and Pearson correlation coefficients:</p>
+<pre class="r"><code>library(GGally)</code></pre>
+<pre class="r"><code>ny_plot_ht &lt;- nyplot[,4:7]
+
+ggpairs(ny_plot_ht, 
+        title = &quot;Correlation of top height definitions from New York FIA data&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>All of the top height definitions provide a correlation in excess of 0.9. The correlation is lowest between arithmetic mean height and the average height of the largest diameter trees (<em>r</em> = 0.907). The correlation is highest between Lorey’s height and the average height of the largest diameter trees (<em>r</em> = 0.976).</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>With the increasing use of remote sensing in forestry, Lorey’s height will likely continue to be a popular choice of representing average stand height in the future. Lorey’s height is advantageous because it weights average height by tree size (basal area) and is equal to the mean height if horizontal point sampling is used. It’s useful to understand how different stand height definitions can result in different estimates of growth and productivity when used in forestry applications.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
