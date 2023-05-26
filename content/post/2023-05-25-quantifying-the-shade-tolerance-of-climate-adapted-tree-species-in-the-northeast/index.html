@@ -1,0 +1,565 @@
+---
+title: Quantifying the shade tolerance of climate-adapted tree species in the Northeast
+author: Matt Russell
+date: '2023-05-26'
+slug: []
+categories:
+  - Forest measurements
+tags:
+  - analytics
+  - climate
+  - climate change
+  - tree species
+  - forestry
+  - tree planting
+---
+
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<center>
+<img src="seedling.jpg" width="250" />
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>A few weeks ago I attended Dr. Tony D’Amato’s excellent webinar <a href="https://www.canr.msu.edu/news/2022-23-forests-and-climate-learning-exchange-series-looking-at-forest-carbon-from-multiple-dimensions-evaluating-tradeoffs-and-opportunities-to-forest-carbon-management">“<em>Looking at Forest Carbon from Multiple Dimensions</em>”</a>. The content of the webinar was excellent and I encourage anyone involved with forest management and forest carbon to view it.</p>
+<p>One primary concept from the webinar stood out to me: many of the future tree species that are anticipated to be well adapted to future conditions are less shade tolerant that current trees on the landscape. Tony described climate-adapted species as being “large gap specialists”, most of which are intermediate or intolerant to shade.</p>
+<p>This has tremendous implications for managing forests for carbon and climate. If climate-adapted species require more sunlight, fewer of them can grow in the same amount of area compared to our current more shade tolerant species. Hence, carbon stocks will be lower if we design forests with climate-adapted species in mind.</p>
+<p>I was curious to quantify these differences in shade tolerance in my own region of the northeastern US. A few years ago, the Northern Institute of Applied Climate Science released their report <a href="https://www.fs.usda.gov/research/treesearch/55635">“<em>New England and Northern New York Forest Ecosystem Vulnerability Assessment and Synthesis</em>”</a>. The report contains valuable data on the changes in suitable habitat for tree species using information from the <a href="https://www.fs.usda.gov/nrs/atlas/tree/">Climate Change Tree Atlas</a>.</p>
+<p>The report contains projected changes in potential suitable habitat for 102 tree species in the northeastern US, forecasting through 2099. (See their Table 10 and Appendix 4). Two model scenarios were implemented: the PCM B1 and GFDL A1FI scenarios. The primary difference is that the GFDL A1FI scenario represented higher greenhouse gas emissions and greater climate warming than the PCM B1 scenario. So, both scenarios can be used to represent two different extremes of a future climate.</p>
+<p>For each species, future suitable habitat is labeled for both models as:</p>
+<ul>
+<li>Large decrease,</li>
+<li>Small decrease,</li>
+<li>No change,</li>
+<li>Small increase,</li>
+<li>Large increase, or</li>
+<li>New habitat (species is not currently in the region but is projected to be).</li>
+</ul>
+<p>I also acquired species-specific data on shade tolerance values. The data on tolerance values are from a paper I authored in 2014 on <a href="https://www.sciencedirect.com/science/article/pii/S0378112714003028">plant functional traits</a>(see supplemental data file 1 in the article.) The tolerance values were obtained from the <a href="https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9615(2006)076%5B0521:TTSDAW%5D2.0.CO;2">Niinemets and Valladares study</a> published in 2006.</p>
+<p>By using boxplots, we can see the general trends in species shade tolerance by classes of future suitable habitat. Indeed, species that are projected to see increases in suitable habitat or are anticipated to see new habitat in the region display lower shade tolerance values relative to species that will see decreases in suitable habitat:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>The GFDL A1F1 scenario predicts more species seeing large increases in suitable habitat compared to the PCM B1 model. Generally, the PCM B1 model is more “conservative”, with a greater number of species projected to have no change in suitable habitat through 2099.</p>
+<p>Under the PCM B1 scenario, the median shade tolerance for species anticipated to see a large increase in suitable habitat is 1.90, compared to a median value of 3.13 for species projected to see a small decrease. For the GFDL A1F1 scenario, the median shade tolerance for species anticipated to see a large increase is 2.74, compared to a median value of 3.31 for species projected to see a small decrease:</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-4">Table 1: </span>Summary of species changes in suitable habitat, US Northeast.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Scenario
+</th>
+<th style="text-align:left;">
+Change
+</th>
+<th style="text-align:right;">
+Number of species
+</th>
+<th style="text-align:right;">
+Median shade tolerance
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+GFDL A1F1
+</td>
+<td style="text-align:left;">
+Large decrease
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+3.31
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GFDL A1F1
+</td>
+<td style="text-align:left;">
+Large increase
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+2.74
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GFDL A1F1
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+2.23
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GFDL A1F1
+</td>
+<td style="text-align:left;">
+No change
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+2.51
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GFDL A1F1
+</td>
+<td style="text-align:left;">
+Small decrease
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+2.98
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GFDL A1F1
+</td>
+<td style="text-align:left;">
+Small increase
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+2.72
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PCM B1
+</td>
+<td style="text-align:left;">
+Large increase
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1.90
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PCM B1
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+2.13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PCM B1
+</td>
+<td style="text-align:left;">
+No change
+</td>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:right;">
+3.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PCM B1
+</td>
+<td style="text-align:left;">
+Small decrease
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+3.13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PCM B1
+</td>
+<td style="text-align:left;">
+Small increase
+</td>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:right;">
+2.72
+</td>
+</tr>
+</tbody>
+</table>
+<p>Species that are projected to see decreases in suitable area in the US Northeast include lowland species such as black spruce, tamarack, and black ash. Species that are projected to see increases in suitable area include several oaks and shrub species. Several southern pines and oak species are anticipated to have new habitat in the region:</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-5">Table 2: </span>Species changes in suitable habitat with agreement between both PCM B1 and GFDL A1F1 model scenarios, US Northeast.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+common_name
+</th>
+<th style="text-align:right;">
+ShadeTol
+</th>
+<th style="text-align:left;">
+Change
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+black spruce
+</td>
+<td style="text-align:right;">
+4.08
+</td>
+<td style="text-align:left;">
+Large decrease
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+black locust
+</td>
+<td style="text-align:right;">
+1.72
+</td>
+<td style="text-align:left;">
+Large increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+eastern redcedar
+</td>
+<td style="text-align:right;">
+1.28
+</td>
+<td style="text-align:left;">
+Large increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+flowering dogwood
+</td>
+<td style="text-align:right;">
+4.87
+</td>
+<td style="text-align:left;">
+Large increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+red mulberry
+</td>
+<td style="text-align:right;">
+2.34
+</td>
+<td style="text-align:left;">
+Large increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sassafras
+</td>
+<td style="text-align:right;">
+1.68
+</td>
+<td style="text-align:left;">
+Large increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+yellow-poplar
+</td>
+<td style="text-align:right;">
+2.07
+</td>
+<td style="text-align:left;">
+Large increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+bald cypress
+</td>
+<td style="text-align:right;">
+2.13
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cherrybark oak
+</td>
+<td style="text-align:right;">
+2.24
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+common persimmon
+</td>
+<td style="text-align:right;">
+4.21
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+loblolly pine
+</td>
+<td style="text-align:right;">
+1.99
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pawpaw
+</td>
+<td style="text-align:right;">
+3.95
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+pond pine
+</td>
+<td style="text-align:right;">
+1.47
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sand pine
+</td>
+<td style="text-align:right;">
+2.21
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+shortleaf pine
+</td>
+<td style="text-align:right;">
+1.86
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+southern red oak
+</td>
+<td style="text-align:right;">
+2.50
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sweetgum
+</td>
+<td style="text-align:right;">
+1.59
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Virginia pine
+</td>
+<td style="text-align:right;">
+1.99
+</td>
+<td style="text-align:left;">
+New habitat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+American chestnut
+</td>
+<td style="text-align:right;">
+3.06
+</td>
+<td style="text-align:left;">
+No change
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Atlantic white-cedar
+</td>
+<td style="text-align:right;">
+3.50
+</td>
+<td style="text-align:left;">
+No change
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+scrub oak
+</td>
+<td style="text-align:right;">
+2.51
+</td>
+<td style="text-align:left;">
+No change
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+black ash
+</td>
+<td style="text-align:right;">
+2.96
+</td>
+<td style="text-align:left;">
+Small decrease
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+tamarack
+</td>
+<td style="text-align:right;">
+0.98
+</td>
+<td style="text-align:left;">
+Small decrease
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+eastern redbud
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:left;">
+Small increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+northern red oak
+</td>
+<td style="text-align:right;">
+2.75
+</td>
+<td style="text-align:left;">
+Small increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ohio buckeye
+</td>
+<td style="text-align:right;">
+3.49
+</td>
+<td style="text-align:left;">
+Small increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+post oak
+</td>
+<td style="text-align:right;">
+2.16
+</td>
+<td style="text-align:left;">
+Small increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sourwood
+</td>
+<td style="text-align:right;">
+2.70
+</td>
+<td style="text-align:left;">
+Small increase
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sweet birch
+</td>
+<td style="text-align:right;">
+2.58
+</td>
+<td style="text-align:left;">
+Small increase
+</td>
+</tr>
+</tbody>
+</table>
+<p>Being aware of the light requirements for species can provide insights into expectations for meeting management goals related to forest carbon stocks and sequestration. A naive carbon management strategy might be to plant as many trees as possible, but the shade tolerance of species should be considered when evaluating the tradeoffs between carbon stocking and species requirements.</p>
+<p>–</p>
+<p><em>By Matt Russell. If you’re interested in the data and code behind this analysis, see <a href="mailto:matt@arbor-analytics.com">this GitHub page</a>. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
