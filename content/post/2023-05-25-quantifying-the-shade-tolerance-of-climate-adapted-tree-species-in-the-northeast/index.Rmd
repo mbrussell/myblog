@@ -15,20 +15,20 @@ tags:
 ---
 
 <center>
-![](seedling.jpg){width=250px}
+![](seedling.jpg){width=500px}
 </center>
 
 ##
 
 A few weeks ago I attended Dr. Tony D'Amato's excellent webinar ["*Looking at Forest Carbon from Multiple Dimensions*"](https://www.canr.msu.edu/news/2022-23-forests-and-climate-learning-exchange-series-looking-at-forest-carbon-from-multiple-dimensions-evaluating-tradeoffs-and-opportunities-to-forest-carbon-management). The content of the webinar was excellent and I encourage anyone involved with forest management and forest carbon to view it.
 
-One primary concept from the webinar stood out to me: many of the future tree species that are anticipated to be well adapted to future conditions are less shade tolerant that current trees on the landscape. Tony described climate-adapted species as being "large gap specialists", most of which are intermediate or intolerant to shade.
+One primary concept from the webinar stood out to me: many of the **future tree species** that are anticipated to be well adapted to future conditions are **less shade tolerant** that current trees on the landscape. Tony described climate-adapted species as being "large gap specialists", most of which are intermediate or intolerant to shade.
 
-This has tremendous implications for managing forests for carbon and climate. If climate-adapted species require more sunlight, fewer of them can grow in the same amount of area compared to our current more shade tolerant species. Hence, carbon stocks will be lower if we design forests with climate-adapted species in mind.
+This has tremendous implications for managing forests for carbon and climate. If climate-adapted species require more sunlight, fewer of them can grow in the same amount of area compared to our current more shade tolerant species. Hence, carbon stocks will be lower if we manage forests with climate-adapted species in mind.
 
 I was curious to quantify these differences in shade tolerance in my own region of the northeastern US. A few years ago, the Northern Institute of Applied Climate Science released their report ["*New England and Northern New York Forest Ecosystem Vulnerability Assessment and Synthesis*"](https://www.fs.usda.gov/research/treesearch/55635). The report contains valuable data on the changes in suitable habitat for tree species using information from the [Climate Change Tree Atlas](https://www.fs.usda.gov/nrs/atlas/tree/).
 
-The report contains  projected changes in potential suitable habitat for 102 tree species in the northeastern US, forecasting through 2099. (See their Table 10 and Appendix 4). Two model scenarios were implemented: the PCM B1 and GFDL A1FI scenarios. The primary difference is that the GFDL A1FI scenario represented higher greenhouse gas emissions and greater climate warming than the PCM B1 scenario. So, both scenarios can be used to represent two different extremes of a future climate. 
+The report contains  projected changes in potential suitable habitat for **102 tree species in the northeastern US**, with forecasts through 2099. (See their Table 10 and Appendix 4). Two model scenarios were implemented: the PCM B1 and GFDL A1FI scenarios. The primary difference is that the GFDL A1FI scenario represented higher greenhouse gas emissions and greater climate warming than the PCM B1 scenario. So, both scenarios can be used to represent two different extremes of a future climate. 
 
 For each species, future suitable habitat is labeled for both models as:
 
@@ -39,9 +39,9 @@ For each species, future suitable habitat is labeled for both models as:
 * Large increase, or
 * New habitat (species is not currently in the region but is projected to be).
 
-I also acquired species-specific data on shade tolerance values. The data on tolerance values are from a paper I authored in 2014 on [plant functional traits](https://www.sciencedirect.com/science/article/pii/S0378112714003028)(see supplemental data file 1 in the article.) The tolerance values were obtained from the [Niinemets and Valladares study](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9615(2006)076[0521:TTSDAW]2.0.CO;2) published in 2006. 
+I also acquired species-specific data on shade tolerance values. The data on tolerance values are from a paper I authored in 2014 on [plant functional traits](https://www.sciencedirect.com/science/article/pii/S0378112714003028) (see supplemental data file 1 in the article.) The tolerance values were obtained from the [Niinemets and Valladares study](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9615(2006)076[0521:TTSDAW]2.0.CO;2) published in 2006. 
 
-By using boxplots, we can see the general trends in species shade tolerance by classes of future suitable habitat. Indeed, species that are projected to see increases in suitable habitat or are anticipated to see new habitat in the region display lower shade tolerance values relative to species that will see decreases in suitable habitat:  
+By using boxplots, we can see the general trends in species shade tolerance by classes of future suitable habitat. Indeed, species that are projected to see increases in suitable habitat or are anticipated to see new habitat in the region display **lower shade tolerance values** relative to species that will see decreases in suitable habitat:  
 
 ```{r, echo = F, warning = F, message = F}
 library(tidyverse)
@@ -104,7 +104,7 @@ p.shade.PCMB1 / p.shade.GFDLA1FI
 
 The GFDL A1F1 scenario predicts more species seeing large increases in suitable habitat compared to the PCM B1 model. Generally, the PCM B1 model is more "conservative", with a greater number of species projected to have no change in suitable habitat through 2099.
 
-Under the PCM B1 scenario, the median shade tolerance for species anticipated to see a large increase in suitable habitat is 1.90, compared to a median value of 3.13 for species projected to see a small decrease. For the GFDL A1F1 scenario, the median shade tolerance for species anticipated to see a large increase is 2.74, compared to a median value of 3.31 for species projected to see a small decrease:
+Under the PCM B1 scenario, the median shade tolerance for species anticipated to see a large increase in suitable habitat is 1.90, compared to a median value of 3.13 for species projected to see a small decrease. For the GFDL A1F1 scenario, the median shade tolerance for species anticipated to see a large increase is 2.74, compared to a median value of 3.31 for species projected to see a large decrease:
 
 ```{r, echo = F, warning = F, message = F}
 # Calculate median values
@@ -130,7 +130,7 @@ knitr::kable((spp_all),
                 full_width = FALSE)
 ```
 
-Species that are projected to see decreases in suitable area in the US Northeast include lowland species such as black spruce, tamarack, and black ash. Species that are projected to see increases in suitable area include several oaks and shrub species. Several southern pines and oak species are anticipated to have new habitat in the region:
+Species that are projected to see decreases in suitable area in the US Northeast include lowland species that are tolerant to flooding, such as black spruce, tamarack, and black ash. Species that are projected to see increases in suitable area include several oaks and shrub species. Several southern pines and oak species are anticipated to have new habitat in the region: 
 
 ```{r, echo = F, warning = F, message = F}
 # List species by projected change
@@ -152,4 +152,4 @@ Being aware of the light requirements for species can provide insights into expe
 
 --
 
-*By Matt Russell. If you're interested in the data and code behind this analysis, see [this GitHub page](mailto:matt@arbor-analytics.com). [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
+*By Matt Russell. If you're interested in the data and code behind this analysis, see [this GitHub page](https://github.com/mbrussell/myblog/tree/master/content/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast). [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
