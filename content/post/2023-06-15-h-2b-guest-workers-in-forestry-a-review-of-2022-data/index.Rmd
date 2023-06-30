@@ -45,7 +45,7 @@ This post describes the status and trends of H-2B guest workers in forestry-rela
 
 ## H-2B guest worker database
 
-All data are derived from the H-2B Disclosure Data available on the [Department of Labor, Office of Foreign Labor Certification's website](https://www.foreignlaborcert.doleta.gov/performancedata.cfm). Data from fiscal year 2022 are reported in this post. This represents the federal fiscal year for all workers employed between October 1, 2021 and September 30, 2022. Historical data dating back to 2011 also exist on the DOL website. 
+All data are derived from the H-2B Disclosure Data available on the [Department of Labor, Office of Foreign Labor Certification's website](https://www.foreignlaborcert.doleta.gov/performancedata.cfm). Data from fiscal year 2022 are reported in this post. This represents the federal fiscal year for all workers employed between October 1, 2021 and September 30, 2022. Historical data dating back to 2011 also exist on the Department of Labor website. 
 
 Identifying forestry-related occupations can be done through querying each application's **Standard Occupational Classification (SOC)** code. The SOC code is used by federal agencies to classify workers into occupational categories.
 
