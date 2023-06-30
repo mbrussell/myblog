@@ -1,0 +1,143 @@
+---
+title: Making R graphs more accessible using BrailleR
+author: Matt Russell
+date: '2023-06-30'
+slug: []
+categories:
+  - Analytics
+  - Data visualization
+  - Accessibility
+tags:
+  - analytics
+  - accessibility
+  - data science
+  - Data viz
+  - alt text
+---
+
+
+
+<div id="section" class="section level1">
+<h1></h1>
+<center>
+<div class="float">
+<img src="alt_text_demo.png" width="500" alt="An example use of alt text for a scatterplot made in R, with description of the scatterplot provided by the BrailleR package below the graph." />
+<div class="figcaption"><em>An example use of alt text for a scatterplot made in R, with description of the scatterplot provided by the BrailleR package below the graph.</em></div>
+</div>
+</center>
+<div id="section-1" class="section level2">
+<h2></h2>
+<p>You might have seen these prompts while you’re uploading an image to social media or anywhere else on the internet: “<strong>Add alt text here.</strong>” Alt text describes what’s contained in an image or figure on a webpage. It’s useful because it can be used by screen readers for visually impaired people.</p>
+<p>Adding alt text to graphics promotes accessibility and allows more readers to interpret your image or figure. Alt text will also appear on the screen if an image does not load properly on a webpage.</p>
+<p>As it turns out, adding alt text to images also improves search engine optimization. So, dedicating time to writing alt text on images and figures can promote accessibility and also help to rank your webpages higher in internet searches.</p>
+<p>I recently read <a href="https://academic.oup.com/jrssig/article-abstract/20/1/38/7034177?redirectedFrom=fulltext">an excellent interview</a> in <em>Significance</em> magazine about the importance of using alt text for visually impaired learners. In it, they describe the R package <strong>BrailleR</strong> and how it can be used to generate text from figures made in R. This post describes a few example uses of the functions found within the package.</p>
+</div>
+<div id="the-brailler-package" class="section level2">
+<h2>The BrailleR package</h2>
+<p>I’ve read online that R is a software program that is already friendly for the blind and visually impaired. The <strong>BrailleR</strong> package contains functions that do more to help blind and visually impaired people interpret graphs and figures produced in R.</p>
+<p>You can install the R package and load it in your workspace:</p>
+<pre class="r"><code># install.packages(&quot;BrailleR&quot;)
+library(BrailleR)</code></pre>
+<p>As an example, I’ll show a series of graphs using the <code>redpine</code> data set available in the <strong>stats4nr</strong> package. Data contain information collected from 450 red pine trees in Minnesota, including their diameter at breast height (<code>DBH</code>) and total height (<code>HT). Data were collected from various forest cover types (</code>CoverType<code>*</code>) and forest inventory plots (<code>PlotNum</code>) across the forest:</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;)
+
+# devtools::install_github(&quot;mbrussell/stats4nr&quot;)
+
+library(stats4nr)
+
+data(redpine)
+
+redpine</code></pre>
+<pre><code>## # A tibble: 450 × 5
+##    PlotNum CoverType TreeNum   DBH    HT
+##      &lt;dbl&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1       5 Red pine       46  13      51
+##  2       5 Red pine       50   8.3    54
+##  3       5 Red pine       54   8.2    48
+##  4       5 Red pine       56  11.8    55
+##  5       5 Red pine       63   9      54
+##  6       5 Red pine       71  12.5    46
+##  7      11 Cut            47  25.3    90
+##  8      13 Red pine        1  16.2    85
+##  9      13 Red pine        2  18.8    86
+## 10      13 Red pine        7  22.2    90
+## # ℹ 440 more rows</code></pre>
+<p>We can make a plot of tree height and diameter using the following code from <code>ggplot</code>:</p>
+<pre class="r"><code>library(tidyverse)
+
+p_HT &lt;- ggplot(redpine, aes(DBH, HT)) +
+  geom_point() +
+  labs(x = &quot;Diameter at breast height (inches)&quot;,
+       y = &quot;Height (feet)&quot;,
+       title = &quot;Red pine height-diameter observations&quot;)</code></pre>
+<p>When we call the <code>p_HT</code> object, the <strong>BrailleR</strong> package provides the graph in addition to four lines of text describing what’s contained in the plot:</p>
+<pre class="r"><code>p_HT</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre><code>## This chart has title &#39;Red pine height-diameter observations&#39;.
+## It has x-axis &#39;Diameter at breast height (inches)&#39; with labels 10, 20 and 30.
+## It has y-axis &#39;Height (feet)&#39; with labels 25, 50, 75, 100 and 125.
+## The chart is a set of 450 points.</code></pre>
+<p>The output reads us the title of the plot, the axis labels and axis titles, and the number of data points. This is all very helpful attributes for interpreting the plot and can be read on the screen.</p>
+<p>The data are collected from different cover types, so we can add a different color for each tree using <code>col = CoverType</code> and produce the results:</p>
+<pre class="r"><code>p_HT2 &lt;- ggplot(redpine, aes(DBH, HT, col = CoverType)) +
+  geom_point() +
+  labs(x = &quot;Diameter at breast height (inches)&quot;,
+       y = &quot;Height (feet)&quot;,
+       title = &quot;Red pine height-diameter observations&quot;)
+
+p_HT2</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre><code>## This chart has title &#39;Red pine height-diameter observations&#39;.
+## It has x-axis &#39;Diameter at breast height (inches)&#39; with labels 10, 20 and 30.
+## It has y-axis &#39;Height (feet)&#39; with labels 25, 50, 75, 100 and 125.
+## There is a legend indicating colour is used to show CoverType, with 13 levels:
+## Aspen shown as strong reddish orange colour, 
+## Balsam fir shown as strong orange colour, 
+## Cut shown as strong yellow colour, 
+## Grass shown as vivid yellow green colour, 
+## Jack pine shown as vivid yellowish green colour, 
+## Paper birch shown as vivid yellowish green colour, 
+## Red pine shown as brilliant bluish green colour, 
+## Right of way shown as vivid blue colour, 
+## Scotch pine shown as brilliant blue colour, 
+## Swamp conifers shown as vivid violet colour, 
+## Upland mixed hardwoods shown as vivid violet colour, 
+## White pine shown as deep purplish pink colour and 
+## White spruce shown as vivid purplish red colour.
+## The chart is a set of 450 points.</code></pre>
+<p>Now, you can see the additional detail of the number of levels in each cover type and their colors.</p>
+<p>The **BrailleR package also works for graphics developed in base R, which can be specified with the <code>VI()</code> function. Here’s a histogram of the height of red pines.</p>
+<pre class="r"><code>VI(hist(redpine$HT))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre><code>## This is a histogram, with the title: Histogram of redpine$HT
+## &quot;redpine$HT&quot; is marked on the x-axis.
+## Tick marks for the x-axis are at: 20, 40, 60, 80, 100, and 120 
+## There are a total of 450 elements for this variable.
+## Tick marks for the y-axis are at: 0, 20, 40, 60, and 80 
+## It has 11 bins with equal widths, starting at 10 and ending at 120 .
+## The mids and counts for the bins are:
+## mid = 15  count = 4 
+## mid = 25  count = 7 
+## mid = 35  count = 17 
+## mid = 45  count = 47 
+## mid = 55  count = 59 
+## mid = 65  count = 61 
+## mid = 75  count = 46 
+## mid = 85  count = 77 
+## mid = 95  count = 75 
+## mid = 105  count = 50 
+## mid = 115  count = 7</code></pre>
+<p>The functions available in <strong>BrailleR</strong> are a great start for generating alt text copy that can be used on a figure or image. But they won’t tell you the trends in the data or the “big message” that you want to leave your reader with. This is essential to have an effective graphic.</p>
+<p>For this, Amy Cesal has any <a href="https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81">excellent post on writing alt-text images</a>. Her template is to use:</p>
+<blockquote>
+<p>“<strong>CHART TYPE</strong> <em>of</em> <strong>TYPE OF DATA</strong> <em>where</em> <strong>REASON FOR INCUDING CHART</strong>.”</p>
+</blockquote>
+<p>For example, for the first figure plotting tree diameter and height, one could provide the following for the alt text description:</p>
+<blockquote>
+<p>“<strong>Scatter plot</strong> <em>of</em> <strong>red pine tree diameters and heights</strong> <em>where</em> <strong>larger diameter trees are taller than shorter ones</strong>.”</p>
+</blockquote>
+<p>In combination with the text provided by <strong>BrailleR</strong>, these steps can help improve the accessibility of your graphs and figures made in R. For more, a great resource I found for learning more about the <strong>BrailleR</strong> package is the book <a href="https://r-resources.massey.ac.nz/BrailleRInAction/">BrailleR In Action</a> by A. Jonathan R. Godfrey.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
+</div>

@@ -1,0 +1,117 @@
+---
+title: Making R graphs more accessible using BrailleR
+author: Matt Russell
+date: '2023-06-30'
+slug: []
+categories:
+  - Analytics
+  - Data visualization
+  - Accessibility
+tags:
+  - analytics
+  - accessibility
+  - data science
+  - Data viz
+  - alt text
+---
+
+# 
+<center>
+
+![*An example use of alt text for a scatterplot made in R, with description of the scatterplot provided by the BrailleR package below the graph.*](alt_text_demo.png){width=500px}
+</center>
+
+##
+
+
+You might have seen these prompts while you're uploading an image to social media or anywhere else on the internet: "**Add alt text here.**" Alt text describes what's contained in an image or figure on a webpage. It's useful because it can be used by screen readers for visually impaired people.
+
+Adding alt text to graphics promotes accessibility and allows more readers to interpret your image or figure. Alt text will also appear on the screen if an image does not load properly on a webpage.
+
+As it turns out, adding alt text to images also improves search engine optimization. So, dedicating time to writing alt text on images and figures can promote accessibility and also help to rank your webpages higher in internet searches.
+
+I recently read [an excellent interview](https://academic.oup.com/jrssig/article-abstract/20/1/38/7034177?redirectedFrom=fulltext) in *Significance* magazine about the importance of using alt text for visually impaired learners. In it, they describe the R package **BrailleR** and how it can be used to generate text from figures made in R. This post describes a few example uses of the functions found within the package.
+
+## The BrailleR package
+
+I've read online that R is a software program that is already friendly for the blind and visually impaired. The **BrailleR** package contains functions that do more to help blind and visually impaired people interpret graphs and figures produced in R.
+
+You can install the R package and load it in your workspace:
+
+```{r, warning = F, message = F}
+# install.packages("BrailleR")
+library(BrailleR)
+```
+
+
+As an example, I'll show a series of graphs using the `redpine` data set available in the **stats4nr** package. Data contain information collected from 450 red pine trees in Minnesota, including their diameter at breast height (`DBH`) and total height (`HT). Data were collected from various forest cover types (`CoverType`*`) and forest inventory plots (`PlotNum`) across the forest:
+
+```{r}
+# install.packages("devtools")
+
+# devtools::install_github("mbrussell/stats4nr")
+
+library(stats4nr)
+
+data(redpine)
+
+redpine
+```
+
+
+We can make a plot of tree height and diameter using the following code from `ggplot`:
+
+```{r, message = F, warning = F}
+library(tidyverse)
+
+p_HT <- ggplot(redpine, aes(DBH, HT)) +
+  geom_point() +
+  labs(x = "Diameter at breast height (inches)",
+       y = "Height (feet)",
+       title = "Red pine height-diameter observations")
+```
+
+When we call the `p_HT` object, the **BrailleR** package provides the graph in addition to four lines of text describing what's contained in the plot:
+
+```{r}
+p_HT
+```
+
+The output reads us the title of the plot, the axis labels and axis titles, and the number of data points. This is all very helpful attributes for interpreting the plot and can be read on the screen.
+
+The data are collected from different cover types, so we can add a different color for each tree using `col = CoverType` and produce the results: 
+
+```{r}
+p_HT2 <- ggplot(redpine, aes(DBH, HT, col = CoverType)) +
+  geom_point() +
+  labs(x = "Diameter at breast height (inches)",
+       y = "Height (feet)",
+       title = "Red pine height-diameter observations")
+
+p_HT2
+```
+
+Now, you can see the additional detail of the number of levels in each cover type and their colors.
+
+The **BrailleR package also works for graphics developed in base R, which can be specified with the `VI()` function. Here's a histogram of the height of red pines.
+
+```{r}
+VI(hist(redpine$HT))
+```
+
+The functions available in **BrailleR** are a great start for generating alt text copy that can be used on a figure or image. But they won't tell you the trends in the data or the "big message" that you want to leave your reader with. This is essential to have an effective graphic.
+
+For this, Amy Cesal has any [excellent post on writing alt-text images](https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81). Her template is to use:
+
+> "**CHART TYPE** *of* **TYPE OF DATA** *where* **REASON FOR INCUDING CHART**."
+
+For example, for the first figure plotting tree diameter and height, one could provide the following for the alt text description:
+
+> "**Scatter plot** *of* **red pine tree diameters and heights** *where* **larger diameter trees are taller than shorter ones**."
+
+In combination with the text provided by **BrailleR**, these steps can help improve the accessibility of your graphs and figures made in R. For more, a great resource I found for learning more about the **BrailleR** package is the book [BrailleR In Action](https://r-resources.massey.ac.nz/BrailleRInAction/) by A. Jonathan R. Godfrey.
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
+
