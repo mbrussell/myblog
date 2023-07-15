@@ -38,7 +38,7 @@ Ultimately, as I was working through my text [*Statistics in Natural Resources: 
 
 3. Lastly, solutions allow you to **check your work**. This is especially beneficial to learners being introduced to a topic (as is the audience for the *Statistics in Natural Resources* book). Learners can gain confidence in the material knowing that their efforts arrived at the correct answer, and the solution provides that immediate feedback. This last point is especially important today as so many learners are working independently, often in an asynchronous course structure.
 
-To summarize, there are many benefits of making solutions available for statistics and data science exercises. As I've done with the [*Statistics in Natural Resources*](https://s3-eu-west-1.amazonaws.com/s3-euw1-ap-pe-ws4-cws-documents.ri-prod/9781032258782/stats_4_nr_solutions.pdf) book, proving solutions to exercises provides learners the ability to check their work, overcome challenges, and learn from the work of others.
+To summarize, there are many benefits of making solutions available for statistics and data science exercises. As I've done with the [*Statistics in Natural Resources*](https://s3-eu-west-1.amazonaws.com/s3-euw1-ap-pe-ws4-cws-documents.ri-prod/9781032258782/stats_4_nr_solutions.pdf) book, providing solutions to exercises enables learners to check their work, overcome challenges, and learn from the work of others.
 
 --
 
