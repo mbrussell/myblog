@@ -1,5 +1,5 @@
 ---
-title: Implementing adaptive silviculture scenarios in the Forest Vegetation Simulator
+title: Implementing climate adaptive silviculture scenarios in the Forest Vegetation Simulator
 author: Matt Russell
 date: '2023-08-29'
 slug: []
@@ -34,7 +34,7 @@ tags:
 <div id="connecticut-fia-data" class="section level2">
 <h2>Connecticut FIA data</h2>
 <p>For this analysis I’ll use three forest inventory plots measured in the state of Connecticut, obtained from the US Forest Inventory an Analysis network of plots. These plots were measured between 2018 and 2021 using a fixed radius sample design. These plots were dominated by <strong>oak trees</strong>. Two of the plots were recorded as occurring in the white oak/red oak/hickory forest type and the other in the white oak forest type.</p>
-<p>Before harvests, initial basal area ranged between 155 and 194 square feet per acre. You can download the FVS-ready files I’ve compiled for these stands <a href="https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/">at this page on GitHub</a>.</p>
+<p>Before harvests, initial basal area ranged between 155 and 194 square feet per acre. You can download the FVS-ready files I’ve compiled for these stands <a href="https://github.com/mbrussell/myblog/tree/master/content/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/data">at this page on GitHub</a>.</p>
 </div>
 <div id="adaptive-silviculture-treatments" class="section level2">
 <h2>Adaptive silviculture treatments</h2>
@@ -74,13 +74,13 @@ tags:
 <p>Now, you’re ready to specify the management actions within each subtreatment, or replicate.</p>
 <div id="gaps-subtreatment" class="section level3">
 <h3>Gaps subtreatment</h3>
-<p>For the first replicate, labeled <em>r001</em>, we’ll simulate the gaps subtreatment. This is essentially the harvested “group” in the group selection treatment where all trees are removed. For the purpose of this tutorial, we’ll use only stand number 9_11_157:</p>
+<p>For the first replicate, labeled <em>r001</em>, we’ll simulate the gaps subtreatment. This is essentially the harvested “group” in the group selection treatment where all trees are removed. For the purpose of this tutorial, we’ll use only stand number <strong>9_11_157</strong>:</p>
 </div>
 </div>
 <div id="section-6" class="section level1">
 <h1></h1>
 <center>
-<img src="rep1_22.png" width="500" />
+<img src="rep1_22.png" width="250" />
 </center>
 </div>
 <div id="section-7" class="section level1">
@@ -159,7 +159,7 @@ tags:
 <div id="section-18" class="section level1">
 <h1></h1>
 <center>
-<img src="view_outputs.png" width="500" />
+<img src="view_outputs.png" width="250" />
 </center>
 </div>
 <div id="section-19" class="section level1">
@@ -189,6 +189,6 @@ tags:
 <p>Running adaptive silvicultural management in models like FVS is possible and can account for diverse harvest scenarios like thinning treatments, group selection harvests, and planting climate-adapted species. It’s important to note that FVS is a distance-independent model and doesn’t rely on a tree’s spatial location to determine growth and mortality. Many climate-adaptive forest management treatments rely on spatial heterogeneity as a part of maintaining diversity and resilience in the face of future uncertain climates. Unfortunately, few growth and yield models can incorporate spatial variability in addition to having the capability to forecast a variety of forest management treatments like FVS.</p>
 <p>The process of adding subtreatments within FVS to account for different management actions and viewing the composite tables allows for the assessment of management impacts at the stand scale. Still, if many stands are run within FVS with multiple subtreatments, I like to export the data to other software like R and do my own calculations of stand-level attributes. Although models like FVS were not originally designed to incorporate complex forest management scenarios like adaptive silviculture, there are strategies to forecast what stands may look like under an adaptive management framework.</p>
 <p>–</p>
-<p><em>By Matt Russell. Check out the <a href="foo.com">FVS-ready files on GitHub</a> if you want to replicate this simulation, or try a another simulation using the other two stands. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+<p><em>By Matt Russell. Check out the <a href="https://github.com/mbrussell/myblog/tree/master/content/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/data">FVS-ready files on GitHub</a> if you want to replicate this simulation, or try a another simulation using the other two stands. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
 </div>
 </div>

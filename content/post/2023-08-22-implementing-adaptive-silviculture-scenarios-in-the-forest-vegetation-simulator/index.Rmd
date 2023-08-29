@@ -1,5 +1,5 @@
 ---
-title: Implementing adaptive silviculture scenarios in the Forest Vegetation Simulator
+title: Implementing climate adaptive silviculture scenarios in the Forest Vegetation Simulator
 author: Matt Russell
 date: '2023-08-29'
 slug: []
@@ -33,7 +33,7 @@ This post will step through a tutorial using the [Forest Vegetation Simulator (F
 
 For this analysis I'll use three forest inventory plots measured in the state of Connecticut, obtained from the US Forest Inventory an Analysis network of plots. These plots were measured between 2018 and 2021 using a fixed radius sample design. These plots were dominated by **oak trees**. Two of the plots were recorded as occurring in the white oak/red oak/hickory forest type and the other in the white oak forest type.
 
-Before harvests, initial basal area ranged between 155 and 194 square feet per acre. You can download the FVS-ready files I've compiled for these stands [at this page on GitHub](https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/).
+Before harvests, initial basal area ranged between 155 and 194 square feet per acre. You can download the FVS-ready files I've compiled for these stands [at this page on GitHub](https://github.com/mbrussell/myblog/tree/master/content/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/data).
 
 ## Adaptive silviculture treatments
 
@@ -72,11 +72,11 @@ Now, you're ready to specify the management actions within each subtreatment, or
 
 ### Gaps subtreatment
 
-For the first replicate, labeled *r001*, we'll simulate the gaps subtreatment. This is essentially the harvested "group" in the group selection treatment where all trees are removed. For the purpose of this tutorial, we'll use only stand number 9_11_157:
+For the first replicate, labeled *r001*, we'll simulate the gaps subtreatment. This is essentially the harvested "group" in the group selection treatment where all trees are removed. For the purpose of this tutorial, we'll use only stand number **9_11_157**:
 
 # 
 <center>
-![](rep1_22.png){width=500px}
+![](rep1_22.png){width=250px}
 </center>
 # 
 
@@ -144,7 +144,7 @@ Despite the fact that we've simulated three subtreatments within a stand, FVS pr
 
 # 
 <center> 
-![](view_outputs.png){width=500px}
+![](view_outputs.png){width=250px}
 </center>
 #
 
@@ -172,5 +172,5 @@ The process of adding subtreatments within FVS to account for different manageme
 
 --
 
-*By Matt Russell. Check out the [FVS-ready files on GitHub](foo.com) if you want to replicate this simulation, or try a another simulation using the other two stands. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
+*By Matt Russell. Check out the [FVS-ready files on GitHub](https://github.com/mbrussell/myblog/tree/master/content/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/data) if you want to replicate this simulation, or try a another simulation using the other two stands. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
 
