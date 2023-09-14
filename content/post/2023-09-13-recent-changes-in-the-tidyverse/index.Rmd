@@ -94,7 +94,8 @@ This will choose the `lag()` function from **dplyr**. For example, say we wanted
 
 ```{r}
 elm |> 
-  mutate(DIA2 = lag(DIA))
+  mutate(DIA2 = lag(DIA)) |> 
+  select(DIA, DIA2)
 ```
 
 ### New updates to joining variables
@@ -146,7 +147,7 @@ elm |>
     )
 ```
 
-I'm not sure how much this new technique will help in my analysis (and I'm wondering why the order of crown classes is different for both approaches), but it does make sense to keep the functions within the same call. This may be particularly useful if there are more operations happening after the grouping.
+I'm not sure how much this new technique will help in my analysis, but it does make sense to keep the functions within the same call. This may be particularly useful if there are more operations happening after the grouping.
 
 ### New function to split columns and rows
 

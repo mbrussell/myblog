@@ -71,22 +71,22 @@ conflicts_prefer(dplyr::lag)</code></pre>
 <pre><code>## [conflicted] Will prefer dplyr::lag over any other package.</code></pre>
 <p>This will choose the <code>lag()</code> function from <strong>dplyr</strong>. For example, say we wanted to use it to lag the tree diameter measurement in the <strong>elm</strong> data set:</p>
 <pre class="r"><code>elm |&gt; 
-  mutate(DIA2 = lag(DIA))</code></pre>
-<pre><code>## # A tibble: 333 × 9
-##    STATUSCD  SPCD   DIA    HT CROWN_HEIGHT CROWN_DIAM_WIDE UNCOMP_CROWN_RATIO
-##       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt;           &lt;dbl&gt;              &lt;dbl&gt;
-##  1        1   838   5      32         19.2              19                 60
-##  2        1   838   5      25         11.3              11                 45
-##  3        1   838   5.1    21          6.3              10                 30
-##  4        1   838   5.1    27         18.9              13                 70
-##  5        1   838   5.1    22         18.7               6                 85
-##  6        1   838   5.1    27         18.9              11                 70
-##  7        1   838   5.2    29         11.6              12                 40
-##  8        1   838   5.2    20          7                 9                 35
-##  9        1   838   5.2    18         17.8              12                 99
-## 10        1   838   5.2    17          6                17                 35
-## # ℹ 323 more rows
-## # ℹ 2 more variables: CROWN_CLASS_CD &lt;dbl&gt;, DIA2 &lt;dbl&gt;</code></pre>
+  mutate(DIA2 = lag(DIA)) |&gt; 
+  select(DIA, DIA2)</code></pre>
+<pre><code>## # A tibble: 333 × 2
+##      DIA  DIA2
+##    &lt;dbl&gt; &lt;dbl&gt;
+##  1   5    NA  
+##  2   5     5  
+##  3   5.1   5  
+##  4   5.1   5.1
+##  5   5.1   5.1
+##  6   5.1   5.1
+##  7   5.2   5.1
+##  8   5.2   5.2
+##  9   5.2   5.2
+## 10   5.2   5.2
+## # ℹ 323 more rows</code></pre>
 </div>
 <div id="new-updates-to-joining-variables" class="section level3">
 <h3>New updates to joining variables</h3>
@@ -150,7 +150,7 @@ conflicts_prefer(dplyr::lag)</code></pre>
 ## 3              3    10.9    5.10
 ## 4              1     7.5    3.29
 ## 5              2    17.6    7.56</code></pre>
-<p>I’m not sure how much this new technique will help in my analysis (and I’m wondering why the order of crown classes is different for both approaches), but it does make sense to keep the functions within the same call. This may be particularly useful if there are more operations happening after the grouping.</p>
+<p>I’m not sure how much this new technique will help in my analysis, but it does make sense to keep the functions within the same call. This may be particularly useful if there are more operations happening after the grouping.</p>
 </div>
 <div id="new-function-to-split-columns-and-rows" class="section level3">
 <h3>New function to split columns and rows</h3>
