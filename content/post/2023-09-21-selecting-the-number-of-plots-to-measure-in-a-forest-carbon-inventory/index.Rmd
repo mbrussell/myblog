@@ -12,7 +12,7 @@ tags:
   - carbon
   - forest carbon
 ---
-
+#
 <center>
 
 ![](inventory_eqpt.jpg){width=500px}
