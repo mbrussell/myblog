@@ -57,7 +57,7 @@ large_se <- 0.6287748
 large_sd <- large_se*sqrt(plots_large)
 ```
 
-# Maine property with spruce/fir forest
+## Maine property with spruce/fir forest
 
 <center>
 
