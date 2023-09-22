@@ -12,8 +12,7 @@ tags:
   - carbon
   - forest carbon
 ---
-# Stratifying the number of plots to measure in a forest carbon inventory
-<center>
+# 
 
 ![](inventory_eqpt.jpg){width=500px}
 </center>
@@ -57,13 +56,8 @@ large_se <- 0.6287748
 large_sd <- large_se*sqrt(plots_large)
 ```
 
-## Maine property with spruce/fir forest
+# Maine property with spruce/fir forest
 
-<center>
-
-![](spruce fir maine.jpg){width=500px}
-</center>
-#  
 For this example, a 200-acre ownership located in Maine seeks to enroll in a carbon project. It requires a precise estimate of the total carbon in aboveground and belowground portions of live trees. The property is a spruce/fir forest type.
 
 Some previous data were collected from a pilot study across the property. Foresters measured 20 1/10th-acre plots across the property and found the average carbon storage to be 21.2 metric tonnes of carbon per acre with a standard deviation of 10.7.
