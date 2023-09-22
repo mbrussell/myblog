@@ -1,0 +1,255 @@
+---
+title: Stratifying the number of plots to measure in a forest carbon inventory
+author: Matt Russell
+date: '2023-09-22'
+slug: []
+categories:
+  - Sampling
+tags:
+  - sampling
+  - forestsamplr
+  - forest inventory
+  - carbon
+  - forest carbon
+---
+
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<center>
+<img src="inventory_eqpt.jpg" width="500" />
+</center>
+<div id="section" class="section level1">
+<h1></h1>
+<p>Forest inventories that measure carbon, like any forest attribute, are conducted to obtain a precise estimate of a population mean. Forest carbon inventories can cost a lot of time and effort. Their high costs have been cited as a barrier for some landowners to enter carbon programs.</p>
+<p>Until remote sensing technologies are adopted at scale to monitor and report carbon, field based inventories will continue to be relied on the estimate forest carbon and their associated attributes. Fortunately, stratified random sampling is an efficient field sampling methodology that can save time and effort in the field.</p>
+<p>If we know the size of a number of subpopulations that are a part of a larger population (e.g., an ownership seeking to enroll in a carbon project), we can use stratified random sampling to efficiently measure attributes like forest carbon. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling. This ultimately results in a narrower confidence interval for an overall population estimate, even when using the same sample size.</p>
+<p>This post will describe a way to allocate field plots to measure forest carbon under a stratified random sampling framework.</p>
+</div>
+<div id="maine-property-with-sprucefir-forest" class="section level1">
+<h1>Maine property with spruce/fir forest</h1>
+<center>
+<img src="spruce%20fir%20maine.jpg" width="500" />
+</center>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>For this example, a 200-acre ownership located in Maine seeks to enroll in a carbon project. It requires a precise estimate of the total carbon in aboveground and belowground portions of live trees. The property is a spruce/fir forest type.</p>
+<p>Some previous data were collected from a pilot study across the property. Foresters measured 20 1/10th-acre plots across the property and found the average carbon storage to be 21.2 metric tonnes of carbon per acre with a standard deviation of 10.7.</p>
+<p>Foresters also recorded the stand size class of each plot they visited. These were categorized with stands containing primarily small- (&lt;5 inches), medium (5-10 inches), or large-diameter trees (&gt; 10 inches). For each stand size class, we can calculate the standard deviation from our pilot study. Using remote sensing, the foresters were able to distinguish how many acres were found in each of these stand size classes across the property.</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-4">Table 1: </span>Example stratum for a forest carbon inventory in a spruce/fir forest in Maine.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Stand size class
+</th>
+<th style="text-align:right;">
+Stratum area (acres)
+</th>
+<th style="text-align:right;">
+SD (metric tons/acre)
+</th>
+<th style="text-align:right;">
+Area x SD
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Small diameter (&lt; 5 in)
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+7.8
+</td>
+<td style="text-align:right;">
+507
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Medium diameter (5 - 10 in)
+</td>
+<td style="text-align:right;">
+77
+</td>
+<td style="text-align:right;">
+8.3
+</td>
+<td style="text-align:right;">
+639
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Large diameter (&gt; 10 in)
+</td>
+<td style="text-align:right;">
+58
+</td>
+<td style="text-align:right;">
+11.7
+</td>
+<td style="text-align:right;">
+679
+</td>
+</tr>
+</tbody>
+</table>
+<p>For those of you that may want to perform these calculations in R, the data table named <strong>stratum</strong> compiles the data in a usable format:</p>
+<pre class="r"><code>library(tidyverse)
+
+stratum &lt;- tribble(
+  ~`Stand size class`, ~`Stratum area (acres)`, ~`SD (metric tons/acre)`, ~`Area x SD`,
+  &quot;Small diameter (&lt; 5 in)&quot;, 65, 7.8, 507,
+  &quot;Medium diameter (5 - 10 in)&quot;, 77, 8.3, 639,
+  &quot;Large diameter (&gt; 10 in)&quot;, 58, 11.7, 679
+)</code></pre>
+</div>
+<div id="allocating-field-plots-to-stratum" class="section level1">
+<h1>Allocating field plots to stratum</h1>
+<p>I’ve written about the benefits of stratified random sampling <a href="https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/">in the past</a>. And I encourage you to see <a href="https://github.com/ncx-co/forestsamplr">the forestsampler package</a> developed by NCX for other great functions related to generating estimates for a variety of forest sampling methods.</p>
+<p>Knowing what we now know about the variability within each strata on the Maine property, we could allocate the number of field plots to each stand in a few different ways. Described in Burkhart et al.’s <a href="https://www.waveland.com/browse.php?t=668&amp;r=a"><em>Forest Measurements</em></a>, there are two common ways to allocate field plots in a stratified random sample: through <strong>proportional</strong> or <strong>optimal allocation</strong>.</p>
+<div id="proportional-allocation" class="section level2">
+<h2>Proportional allocation</h2>
+<p>Say our analysis indicates we need to collect data from 100 new inventory plots to achieve a desired level of precision (e.g., to be within 5% of the mean carbon storage). Proportional allocation would distribute the 100 field plots according to their total area. That is, we can collect more field plots in larger-size strata. The following R function named <code>allocate()</code> can determine the appropriate number of desired plots to collect in each stratum. We’ll round up the number of plots with the <code>ceiling()</code> function to make sure we measure an entire plot:</p>
+<pre class="r"><code>allocate &lt;- function(acres.stratum, total.acres, total.plots){
+  num.plots = ceiling((acres.stratum / total.acres) * total.plots)
+  return(num.plots)
+  }</code></pre>
+<p>We can apply the function to the <strong>stratum</strong> data frame:</p>
+<pre class="r"><code>allocate(acres.stratum = stratum$`Stratum area (acres)`,
+         total.acres = sum(stratum$`Stratum area (acres)`),
+         total.plots = 100)</code></pre>
+<pre><code>## [1] 33 39 29</code></pre>
+<p>So, the proportional allocation method indicates we should collect 33, 39, and 29 plots in the small-, medium-, and large-diameter stands, respectively. Because more acreage is found in medium-sized trees, we collect more plots there.</p>
+</div>
+<div id="optimal-allocation" class="section level2">
+<h2>Optimal allocation</h2>
+<p>The optimal allocation method distributes the 100 field plots to each stratum that provides the smallest amount of variability possible. In addition to the total area, also required in this calculation is the standard deviation of carbon found within each stratum. The total number of plots to sample in each stratum would be represented by the stratum area multiplied by the standard deviation of carbon, as seen in the table above. The <code>Area x SD</code> variable can be input into the <code>allocate()</code> function to determine the appropriate number of plots to collect with optimal allocation:</p>
+<pre class="r"><code>allocate(acres.stratum = stratum$`Area x SD`,
+         total.acres = sum(stratum$`Area x SD`),
+         total.plots = 100)</code></pre>
+<pre><code>## [1] 28 36 38</code></pre>
+<p>So, the optimal allocation method indicates we should collect 28, 36, and 38 plots in the small-, medium-, and large-diameter stands, respectively. In other words, because the stand deviation of carbon is lower in the small- and medium-diameter stands, we can focus our sampling in the large-diameter stands where there is more variability in carbon. The optimal strategy indicates sampling three fewer plots in the medium-diameter stands compared to the proportional allocation method, even though it’s the stand with the largest area.</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-10">Table 2: </span>Distribution of plots to sample for proportional and optimal allocation methods.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Stand size class
+</th>
+<th style="text-align:right;">
+Stratum area (acres)
+</th>
+<th style="text-align:right;">
+SD (metric tons/acre)
+</th>
+<th style="text-align:right;">
+Area x SD
+</th>
+<th style="text-align:right;">
+Plots to measure - proportional
+</th>
+<th style="text-align:right;">
+Plots to measure - optimal
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Small diameter (&lt; 5 in)
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+7.8
+</td>
+<td style="text-align:right;">
+507
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Medium diameter (5 - 10 in)
+</td>
+<td style="text-align:right;">
+77
+</td>
+<td style="text-align:right;">
+8.3
+</td>
+<td style="text-align:right;">
+639
+</td>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Large diameter (&gt; 10 in)
+</td>
+<td style="text-align:right;">
+58
+</td>
+<td style="text-align:right;">
+11.7
+</td>
+<td style="text-align:right;">
+679
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+37
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SUM
+</td>
+<td style="text-align:right;">
+200
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+1825
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+</tbody>
+</table>
+<p>There is a lot more that goes into planning a forest carbon inventory, but understanding how many plots to measure and where to measure them is an important first step. Using stratified random sampling is an efficient approach to determine a precise estimate of forest carbon.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
+</div>
