@@ -12,7 +12,7 @@ tags:
   - carbon
   - forest carbon
 ---
-#
+# Stratifying the number of plots to measure in a forest carbon inventory
 <center>
 
 ![](inventory_eqpt.jpg){width=500px}
