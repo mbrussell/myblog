@@ -135,9 +135,9 @@ So, the optimal allocation method indicates we should collect 28, 36, and 38 plo
 ```{r, echo = F}
 stratum_summ <- tribble(
   ~`Stand size class`, ~`Stratum area (acres)`, ~`SD (metric tons/acre)`, ~`Area x SD`, ~`Plots to measure - proportional`, ~`Plots to measure - optimal`,
-  "Small diameter (< 5 in)", 65, 7.8, 507, 32, 38,
-  "Medium diameter (5 - 10 in)", 77, 8.3, 639, 38, 35,
-  "Large diameter (> 10 in)", 58, 11.7, 679, 29, 37,
+  "Small diameter (< 5 in)", 65, 7.8, 507, 33, 28,
+  "Medium diameter (5 - 10 in)", 77, 8.3, 639, 39, 36,
+  "Large diameter (> 10 in)", 58, 11.7, 679, 29, 38,
   "SUM", 200, NA, 1825, 100, 100
 )
 
@@ -150,8 +150,10 @@ knitr::kable((stratum_summ[,]),
                 full_width = FALSE)
 ```
 
-There is a lot more that goes into planning a forest carbon inventory, but understanding how many plots to measure and where to measure them is an important first step. Using stratified random sampling is an efficient approach to determine a precise estimate of forest carbon.
+There is a lot more that goes into planning a forest carbon inventory, but understanding how many plots to measure and where to measure them is an important first step. Using stratified random sampling is an efficient approach to determine a precise estimate of forest carbon. 
 
 --
+
+*Special thanks to Micky Allen for catching an error in the numbers of plots in Table 2.*
 
 *By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*
