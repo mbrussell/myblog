@@ -12,13 +12,12 @@ tags:
   - statistics
   - data science
   - forestry
-draft: yes
 ---
 
 # 
 <center>
 
-![*Image created with DALL·E 3*](package_forest.jpg){width=500px}
+![*Image created with DALL·E 3.*](package_forest.jpg){width=500px}
 </center>
 #  
 
