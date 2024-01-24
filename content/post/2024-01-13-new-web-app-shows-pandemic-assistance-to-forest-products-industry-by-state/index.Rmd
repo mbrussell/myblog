@@ -26,7 +26,7 @@ Forest products companies used the [Paycheck Protection Program](https://www.sba
 
 [You can access the web app here.](https://matt-arbor.shinyapps.io/forestry_pandemic/)
 
-The app uses data presented in the paper [A summary of COVID-19 pandemic assistance to US forest products companies**](https://meridian.allenpress.com/fpj/article/72/4/253/488883/A-Summary-of-COVID-19-Pandemic-Assistance-to-US), published in the *Forest Products Journal* in late 2022. Values include:
+The app uses data presented in the paper [**A summary of COVID-19 pandemic assistance to US forest products companies**](https://meridian.allenpress.com/fpj/article/72/4/253/488883/A-Summary-of-COVID-19-Pandemic-Assistance-to-US), published in the *Forest Products Journal* in late 2022. Values include:
 
 * Number of loans/payments offered to forest products companies,
 * Average loan/payment amounts,

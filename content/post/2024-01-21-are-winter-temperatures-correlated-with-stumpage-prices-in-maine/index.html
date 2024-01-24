@@ -1,0 +1,218 @@
+---
+title: Are winter temperatures correlated with stumpage prices in Maine?
+author: Matt Russell
+date: '2024-01-24'
+slug: []
+categories:
+  - Forest products
+tags:
+  - climate
+  - forest products
+  - forest industry
+  - stumpage
+---
+
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<div id="section" class="section level1">
+<h1></h1>
+<center>
+<img src="me_wood.png" width="500" />
+</center>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>I was inspired after reading an article written by Lloyd Irland in <em>The Northern Logger</em> (January 2024) about the upswings and downswings in lumber prices in the last several decades. High prices for lumber were recently seen during the COVID-19 pandemic when everybody was remodeling and installing new wooden decks with all the free time they had. The intricacies of lumber prices are explained well in Lloyd’s article. An interesting observation is that during times of high lumber prices, the amount of money landowners received for selling their wood (termed <em>stumpage</em> in forestry parlance) barely nudged.</p>
+<p>There are many factors that influence how much a landowners is paid for their wood. Local markets and competition in an area matter a lot, but so does the weather. Loggers are often faced with weather challenges when harvesting timber, often from it being too wet to operate on sensitive sites.</p>
+<p>Ask most loggers here in Maine and across the Northeast, and most will tell you the 2023-2024 winter has been mild. This presents a challenge for loggers as they rely on frozen ground conditions to harvest timber on many sites. A warm winter can limit the productivity of timber harvesters and haulers in northern states.</p>
+<p>I was curious to find out if there was any correlation between stumpage payments that landowners receive and how cold winters are. The idea being that if it’s been a warm winter, supply may be limited because loggers cannot harvest as much volume, and prices may be more favorable. But a cold winter might signal a timber harvesting community that is at capacity with plenty of supply.</p>
+<p>The Maine Forest Service compiles <a href="https://www.maine.gov/dacf/mfs/publications/annual_reports.html">annual data on stumpage prices</a> by species and product classes, with data going back to 2000. The <a href="https://mco.umaine.edu/climate/me_monthly/?cdiv_id=me&amp;var_id=t2anom&amp;mon_id=ann">Maine Climate Office</a> has data on a variety climate variables going back more than a century.</p>
+<p>For this analysis, I used Maine stumpage data for all species sold as sawlogs and standardized amounts to 2021 dollars. I used the average minimum winter temperature as an indicator for how “cold” a winter was, using the average temperatures from December through February. In total, the data from 2000 through 2021 provided enough data points to see if trends exist.</p>
+<p>The first finding, perhaps not unexpected, is that minimum temperatures have increased statewide across Maine since 2000. The correlation is 0.27 and is significant (i.e., a <em>p</em>-value of less than 0.05), indicating a slight positive relationship:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>The second finding is the general decrease in stumpage prices in Maine since 2000. The correlation between Year and sawlog stumpage is weak (0.10) and not significant. These are price adjusted and in 2021 dollars, and include all 14 different sawlog species groups:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>The final finding is the trends between average winter temperatures and stumpage prices trend negative for most species. I’m left head scratching with this one…:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>You can see in the table below that only two of the species show significant trends. These species are spruce/fir and red pine.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-11">Table 1: </span>Pearson correlation coefficients bewteen stumpage price for sawlog species and minimum winter temperatures in Maine, 2000-2021.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Sawtimber species
+</th>
+<th style="text-align:right;">
+Pearson correlation
+</th>
+<th style="text-align:right;">
+P-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Spruce &amp; Fir
+</td>
+<td style="text-align:right;">
+-0.5815633
+</td>
+<td style="text-align:right;">
+0.0045263
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red Pine
+</td>
+<td style="text-align:right;">
+-0.4400497
+</td>
+<td style="text-align:right;">
+0.0404173
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+White Oak
+</td>
+<td style="text-align:right;">
+-0.4177549
+</td>
+<td style="text-align:right;">
+0.0530403
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sugar Maple
+</td>
+<td style="text-align:right;">
+-0.3987091
+</td>
+<td style="text-align:right;">
+0.0660591
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yellow Birch
+</td>
+<td style="text-align:right;">
+-0.3928108
+</td>
+<td style="text-align:right;">
+0.0705462
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hemlock
+</td>
+<td style="text-align:right;">
+-0.3362474
+</td>
+<td style="text-align:right;">
+0.1260096
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red Oak
+</td>
+<td style="text-align:right;">
+-0.3258437
+</td>
+<td style="text-align:right;">
+0.1389088
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+White Pine
+</td>
+<td style="text-align:right;">
+-0.2788256
+</td>
+<td style="text-align:right;">
+0.2089096
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red/White Maple
+</td>
+<td style="text-align:right;">
+-0.2331360
+</td>
+<td style="text-align:right;">
+0.2964157
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cedar
+</td>
+<td style="text-align:right;">
+-0.1300809
+</td>
+<td style="text-align:right;">
+0.5639533
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Beech
+</td>
+<td style="text-align:right;">
+0.0699217
+</td>
+<td style="text-align:right;">
+0.7571720
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ash
+</td>
+<td style="text-align:right;">
+-0.0446981
+</td>
+<td style="text-align:right;">
+0.8434261
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+White Birch
+</td>
+<td style="text-align:right;">
+-0.0260954
+</td>
+<td style="text-align:right;">
+0.9082289
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Aspen/Poplar
+</td>
+<td style="text-align:right;">
+-0.0108163
+</td>
+<td style="text-align:right;">
+0.9618973
+</td>
+</tr>
+</tbody>
+</table>
+<p>I anticipated finding a clearer story between winter temperatures and stumpage prices in a state that where winter weather determines so much about the health of an industry. But I’m no economist and markets sure are difficult to predict. Stumpage prices have decreased over the last 20 years in Maine, at least for the species and products examined here. This could be what statisticians call a “lurking” variable. But on the whole, it’s unwise to use a single variable to try to predict a market.</p>
+<p>Despite this, it seems like climate variables could be used more market-level analyses within the forest products industry. These data show some relationships between climate and prices. As statistician Edward Tufte once said, “Correlation does not imply causation, but it sure is a hint.”</p>
+<p>–</p>
+<p><em>By Matt Russell. For more, subscribe to my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly email newsletter</a> to stay ahead on data and analytics trends in the forest products industry.</em></p>
+</div>
