@@ -164,7 +164,7 @@ p_spp_tmin <- ggplot(stump_temps, aes(x = avg_tmin, y = savg_adj)) +
   geom_smooth(method = "lm") +
   facet_wrap(~species) +
   labs (x = "Average minimum winter temperature (deg F)",
-        y = "Sawlog stumpage (per MBF, 2021 dollars)",
+        y = "Sawlog stumpage ($/per MBF, 2021 dollars)",
         caption = "Sources: Maine Climate Office, Maine Forest Service Stumpage reports") +
   theme_bw()
 p_spp_tmin
@@ -183,7 +183,7 @@ cor_stump_temps <- cor_stump_temps |>
 
 ```{r, echo = F, warning = F, message = F}
 cor_stump_temps %>% 
-   kable("html", caption = 'Pearson correlation coefficients bewteen stumpage price for sawlog species and minimum winter temperatures in Maine, 2000-2021.') %>%
+   kable("html", caption = 'Pearson correlation coefficients between stumpage price for sawlog species and minimum winter temperatures in Maine, 2000-2021.') %>%
    kable_styling()
 ```
 
@@ -194,7 +194,7 @@ p_spp_tavg <- ggplot(stump_temps, aes(x = avg_t, y = savg_adj)) +
   geom_smooth(method = "lm") +
   facet_wrap(~species) +
   labs (x = "Average winter temperature (deg F)",
-        y = "Sawlog stumpage (per MBF, 2021 dollars)",
+        y = "Sawlog stumpage ($/per MBF, 2021 dollars)",
         caption = "Sources: Maine Climate Office, Maine Forest Service Stumpage reports") +
   theme_bw()
 #p_spp_tavg
