@@ -1,7 +1,7 @@
 ---
 title: About
 author: Matt Russell
-date: '2023-09-13'
+date: '2024-02-22'
 slug: about
 ---
 
@@ -19,7 +19,7 @@ Arbor Custom Analytics LLC offers data and analytics consulting services to fore
 * Independent research  
   
 
-<left>
+<left> 
 ![](/matt_profile2_small.jpg){width=450px}
 
 ## Matt Russell
@@ -30,7 +30,7 @@ Arbor Custom Analytics LLC offers data and analytics consulting services to fore
 * Experience in forestry and analytics research, teaching, and outreach
 * Author/co-author of over 80 peer-reviewed articles focusing on applied forestry research
 * Leadership in Society of American Foresters: New England SAF (Newsletter Editor; 2023-current); Forest Science and Technology Board (Chair, 2021-2022); A1-Inventory and Biometrics Working Group (Officer, 2014-2017)
-* Member of Society of American Foresters, Forest Products Society, and American Statistical Association  
+* Member of Society of American Foresters and Forest Products Society 
 
 ### Education
 * University of Maine, PhD in Forest Resources
