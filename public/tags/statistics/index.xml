@@ -1,133 +1,131 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>statistics on </title>
-    <link>https://arbor-analytics.com/tags/statistics/</link>
-    <description>Recent content in statistics on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Statistics on </title>
+    <link>http://localhost:4321/tags/statistics/</link>
+    <description>Recent content in Statistics on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A list of R packages for forestry applications</title>
+      <link>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</guid>
+      <description>Image created with DALL·E 3.&#xD;Two years ago I wrote about the different R packages that are available to use in forestry applications. Back then, there were 16,166 packages archived on the Comprehensive R Archive Network (CRAN). Today, the CRAN repository contains 20,102 packages.&#xA;The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users. The value of using R packages is that someone else might have already written a suite of functions for you.</description>
+    </item>
+    <item>
+      <title>It&#39;s okay to look at the solutions for statistics and data science exercises</title>
+      <link>http://localhost:4321/post/2023-07-15-it-s-okay-to-look-at-solutions-for-statistics-problems/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-07-15-it-s-okay-to-look-at-solutions-for-statistics-problems/</guid>
+      <description>The cover of a document titled “Statistics in Natural Resources: Applications with R: Exercise Soultions.”&#xD;A few years ago I completed the RStudio Instructor training course. It was a multi-day, online training workshop and I learned less about the ins and outs of coding and analysis in R, but more about the strategies and philosophy of teaching data science principles.&#xA;The course prepares instructors to teach the principles of the tidyverse, especially drawing on the concepts for the excellent book R for Data Science.</description>
+    </item>
+    <item>
+      <title>Sampling design and statistical approaches in forestry</title>
+      <link>http://localhost:4321/events/2023-05-22-sampling-design-and-statistical-approaches-in-forestry/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-05-22-sampling-design-and-statistical-approaches-in-forestry/</guid>
+      <description>&#xD;This workshop for Tag Ng showcased how sampling and statistics can be used in forestry applications. The two-hour virtual workshop discussed common sampling design used in forestry and statistical approaches with forest inventory data. Example coding sessions used the forestsamplr and tidymodels packages in R.&#xA;VIEW SLIDES&#xD;VIEW R CODE AND DATA&#xD;</description>
+    </item>
+    <item>
+      <title>Bootstrapped resampling to model tree biomass</title>
+      <link>http://localhost:4321/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/</guid>
+      <description>In one of the first presentations I gave as a graduate student, I discussed a set of regression equations that fit a nonlinear model predicting a forest growth index for several species. As all graduate students do, I spent considerable time preparing my slides and practicing my talk. The presentation went well.&#xA;I used a data splitting approach in my analysis that I presented on, a common technique that trains a model on a large portion of the data (usually around 70%) then tests it on a smaller portion of data not used in model fitting (usually around 30%).</description>
+    </item>
+    <item>
+      <title>Doing statistics in the tidyverse: exploring the infer package</title>
+      <link>http://localhost:4321/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/</guid>
+      <description>If you use R software for your data analysis, you are likely familiar with the tidyverse. The tidyverse package is a “megapackage” in R that includes several packages that import, reshape, and visualize data in a consistent manner, among other tasks.&#xA;Like many analysts, I use the tidyverse suite of functions often for importing, wrangling, and visualizing data. More and more I’m using the tidymodels package to apply statistical modeling techniques like regression and random forests on data I work with.</description>
+    </item>
     <item>
       <title>How to spot poor data analyses</title>
-      <link>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</link>
+      <link>http://localhost:4321/post/2022-10-20-how-to-spot-poor-data-analyses/</link>
       <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</guid>
-      <description>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.
-Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s autocorrecting feature had led to errors in 30% of gene list observations over a six year span.</description>
+      <guid>http://localhost:4321/post/2022-10-20-how-to-spot-poor-data-analyses/</guid>
+      <description>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.&#xA;Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s autocorrecting feature had led to errors in 30% of gene list observations over a six year span.</description>
     </item>
-    
     <item>
       <title>P-ing in the woods: p-values in forest science</title>
-      <link>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</link>
+      <link>http://localhost:4321/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</link>
       <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</guid>
-      <description>A meme about p-values. Hat tip to Matt Dancho for the idea for the graphic.The statistics community has had a lot of discussion in recent years about the role of p-values and statistical significance. This has led some to question if we’re relying too much on them as a way of interpreting results from a statistical analysis.
-The “p” in p-value stands for probability, or the probability under a statistical model that a summary of the data would be equal to or more extreme than its observed value.</description>
+      <guid>http://localhost:4321/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</guid>
+      <description>A meme about p-values. Hat tip to Matt Dancho for the idea for the graphic.&#xD;The statistics community has had a lot of discussion in recent years about the role of p-values and statistical significance. This has led some to question if we’re relying too much on them as a way of interpreting results from a statistical analysis.&#xA;The “p” in p-value stands for probability, or the probability under a statistical model that a summary of the data would be equal to or more extreme than its observed value.</description>
     </item>
-    
     <item>
       <title>New book: Statistics in Natural Resources: Applications with R</title>
-      <link>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
+      <link>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
-      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.
-I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.
-At the same time, I was searching for a different textbook to use for the course.</description>
+      <guid>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
+      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.&#xA;I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.&#xA;At the same time, I was searching for a different textbook to use for the course.</description>
     </item>
-    
     <item>
       <title>Random forests: a tutorial with forestry data</title>
-      <link>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</link>
+      <link>http://localhost:4321/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</link>
       <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</guid>
+      <guid>http://localhost:4321/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</guid>
       <description>Random forests have quickly become one of the most popular analytical techniques used in forestry today. Random forests (RF) are a machine learning technique that differ in many ways to traditional prediction models such as regression. Random forests can handle a lot of data, can be applied to classification or regression problems, and rank the relative importance of many variables that are related to a response variable of interest.</description>
     </item>
-    
     <item>
       <title>The importance of citizen data scientists in forest analytics</title>
-      <link>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
+      <link>http://localhost:4321/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
       <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
+      <guid>http://localhost:4321/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
       <description>As a part of my work with the University of Minnesota Extension, we run the Assessing Vegetation Impacts from Deer program. The AVID program engages citizen scientists to monitor tree seedlings that are susceptible to browse from white-tailed deer. With little information on deer browse impacts for most of Minnesota’s tree species, the data are beginning to provide insights on how deer browse degrades the health of the forest.</description>
     </item>
-    
     <item>
       <title>How well does the &#34;quick and dirty&#34; standard deviation approximation work?</title>
-      <link>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</link>
+      <link>http://localhost:4321/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</link>
       <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</guid>
-      <description>Photo by Chris Liverani on Unsplash.
-The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.
-When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data.</description>
+      <guid>http://localhost:4321/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</guid>
+      <description>Photo by Chris Liverani on Unsplash.&#xA;The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.&#xA;When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data.</description>
     </item>
-    
     <item>
       <title>Mixed models in R: a primer</title>
-      <link>https://arbor-analytics.com/post/mixed-models-a-primer/</link>
+      <link>http://localhost:4321/post/mixed-models-a-primer/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/mixed-models-a-primer/</guid>
-      <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:
-“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
-The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
+      <guid>http://localhost:4321/post/mixed-models-a-primer/</guid>
+      <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:&#xA;“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”&#xA;The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
     </item>
-    
     <item>
       <title>31 R packages for forest analysts</title>
-      <link>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</link>
+      <link>http://localhost:4321/post/31-r-packages-for-forest-analysts/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</guid>
-      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.
-The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
+      <guid>http://localhost:4321/post/31-r-packages-for-forest-analysts/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.&#xA;The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
     </item>
-    
     <item>
       <title>Modeling in the tidyverse, an example predicting tree biomass</title>
-      <link>https://arbor-analytics.com/post/fit-many-models-with-broom/</link>
+      <link>http://localhost:4321/post/fit-many-models-with-broom/</link>
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/fit-many-models-with-broom/</guid>
-      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.
-The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
+      <guid>http://localhost:4321/post/fit-many-models-with-broom/</guid>
+      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.&#xA;The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
     </item>
-    
     <item>
       <title>How to determine accuracy of classification models (with forestry data)</title>
-      <link>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
+      <link>http://localhost:4321/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
       <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
-      <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.
-You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
+      <guid>http://localhost:4321/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
+      <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.&#xA;You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
     </item>
-    
     <item>
       <title>The three kinds of data scientists in forestry</title>
-      <link>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</link>
+      <link>http://localhost:4321/post/the-three-kinds-of-data-scientists-in-forestry/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</guid>
-      <description>Data scientists are highly sought after professionals across tens of thousands of companies. And there&amp;rsquo;s a difference between what a data scientist does and what a statistician does.
-The field of statistics has been around for centuries, while data science programs at universities are just now beginning to graduate their first students.
-In statistics, hypotheses are evaluated. In data science, hypotheses are generated. Statistics is often considered a primary data analysis technique, while data science is often considered secondary.</description>
+      <guid>http://localhost:4321/post/the-three-kinds-of-data-scientists-in-forestry/</guid>
+      <description>Data scientists are highly sought after professionals across tens of thousands of companies. And there&amp;rsquo;s a difference between what a data scientist does and what a statistician does.&#xA;The field of statistics has been around for centuries, while data science programs at universities are just now beginning to graduate their first students.&#xA;In statistics, hypotheses are evaluated. In data science, hypotheses are generated. Statistics is often considered a primary data analysis technique, while data science is often considered secondary.</description>
     </item>
-    
     <item>
       <title>Ruffed grouse and West Nile: A review of the binomial distribution</title>
-      <link>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
+      <link>http://localhost:4321/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
-      <description>There’s been a lot of talk in the wildlife community about the West Nile virus and its impacts on ruffed grouse populations.
-In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive.</description>
+      <guid>http://localhost:4321/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
+      <description>There’s been a lot of talk in the wildlife community about the West Nile virus and its impacts on ruffed grouse populations.&#xA;In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mass timber on </title>
-    <link>https://arbor-analytics.com/tags/mass-timber/</link>
-    <description>Recent content in mass timber on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Mass Timber on </title>
+    <link>http://localhost:4321/tags/mass-timber/</link>
+    <description>Recent content in Mass Timber on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/mass-timber/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/mass-timber/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How many trees make a mass timber building?</title>
-      <link>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</link>
+      <link>http://localhost:4321/post/how-many-trees-make-a-mass-timber-building/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</guid>
-      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/
-Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
+      <guid>http://localhost:4321/post/how-many-trees-make-a-mass-timber-building/</guid>
+      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/&#xA;Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
     </item>
-    
   </channel>
 </rss>

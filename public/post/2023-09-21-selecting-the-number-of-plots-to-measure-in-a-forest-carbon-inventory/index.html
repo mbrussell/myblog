@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>Stratifying the number of plots to measure in a forest carbon inventory</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Stratifying the number of plots to measure in a forest carbon inventory</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-09-21-selecting-the-number-of-plots-to-measure-in-a-forest-carbon-inventory/">Stratifying the number of plots to measure in a forest carbon inventory</a></h4>
+    <h5>September 22, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/sampling"><kbd class="item-tag">sampling</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestsamplr"><kbd class="item-tag">forestsamplr</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="/post/2023-09-21-selecting-the-number-of-plots-to-measure-in-a-forest-carbon-inventory/index_files/kePrint/kePrint.js"></script>
+<link href="/post/2023-09-21-selecting-the-number-of-plots-to-measure-in-a-forest-carbon-inventory/index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<div id="section" class="section level1">
+<h1></h1>
+<img src="inventory_eqpt.jpg" width="500" />
+</center>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>Forest inventories that measure carbon, like any forest attribute, are conducted to obtain a precise estimate of a population mean. Forest carbon inventories can cost a lot of time and effort. Their high costs have been cited as a barrier for some landowners to enter carbon programs.</p>
+<p>Until remote sensing technologies are adopted at scale to monitor and report carbon, field based inventories will continue to be relied on the estimate forest carbon and their associated attributes. Fortunately, stratified random sampling is an efficient field sampling methodology that can save time and effort in the field.</p>
+<p>If we know the size of a number of subpopulations that are a part of a larger population (e.g., an ownership seeking to enroll in a carbon project), we can use stratified random sampling to efficiently measure attributes like forest carbon. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling. This ultimately results in a narrower confidence interval for an overall population estimate, even when using the same sample size.</p>
+<p>This post will describe a way to allocate field plots to measure forest carbon under a stratified random sampling framework.</p>
+</div>
+<div id="maine-property-with-sprucefir-forest" class="section level1">
+<h1>Maine property with spruce/fir forest</h1>
+<p>For this example, a 200-acre ownership located in Maine seeks to enroll in a carbon project. It requires a precise estimate of the total carbon in aboveground and belowground portions of live trees. The property is a spruce/fir forest type.</p>
+<p>Some previous data were collected from a pilot study across the property. Foresters measured 20 1/10th-acre plots across the property and found the average carbon storage to be 21.2 metric tonnes of carbon per acre with a standard deviation of 10.7.</p>
+<p>Foresters also recorded the stand size class of each plot they visited. These were categorized with stands containing primarily small- (&lt;5 inches), medium (5-10 inches), or large-diameter trees (&gt; 10 inches). For each stand size class, we can calculate the standard deviation from our pilot study. Using remote sensing, the foresters were able to distinguish how many acres were found in each of these stand size classes across the property.</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-4">Table 1: </span>Example stratum for a forest carbon inventory in a spruce/fir forest in Maine.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Stand size class
+</th>
+<th style="text-align:right;">
+Stratum area (acres)
+</th>
+<th style="text-align:right;">
+SD (metric tons/acre)
+</th>
+<th style="text-align:right;">
+Area x SD
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Small diameter (&lt; 5 in)
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+7.8
+</td>
+<td style="text-align:right;">
+507
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Medium diameter (5 - 10 in)
+</td>
+<td style="text-align:right;">
+77
+</td>
+<td style="text-align:right;">
+8.3
+</td>
+<td style="text-align:right;">
+639
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Large diameter (&gt; 10 in)
+</td>
+<td style="text-align:right;">
+58
+</td>
+<td style="text-align:right;">
+11.7
+</td>
+<td style="text-align:right;">
+679
+</td>
+</tr>
+</tbody>
+</table>
+<p>For those of you that may want to perform these calculations in R, the data table named <strong>stratum</strong> compiles the data in a usable format:</p>
+<pre class="r"><code>library(tidyverse)
+
+stratum &lt;- tribble(
+  ~`Stand size class`, ~`Stratum area (acres)`, ~`SD (metric tons/acre)`, ~`Area x SD`,
+  &quot;Small diameter (&lt; 5 in)&quot;, 65, 7.8, 507,
+  &quot;Medium diameter (5 - 10 in)&quot;, 77, 8.3, 639,
+  &quot;Large diameter (&gt; 10 in)&quot;, 58, 11.7, 679
+)</code></pre>
+</div>
+<div id="allocating-field-plots-to-stratum" class="section level1">
+<h1>Allocating field plots to stratum</h1>
+<p>I’ve written about the benefits of stratified random sampling <a href="https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/">in the past</a>. And I encourage you to see <a href="https://github.com/ncx-co/forestsamplr">the forestsampler package</a> developed by NCX for other great functions related to generating estimates for a variety of forest sampling methods.</p>
+<p>Knowing what we now know about the variability within each strata on the Maine property, we could allocate the number of field plots to each stand in a few different ways. Described in Burkhart et al.’s <a href="https://www.waveland.com/browse.php?t=668&amp;r=a"><em>Forest Measurements</em></a>, there are two common ways to allocate field plots in a stratified random sample: through <strong>proportional</strong> or <strong>optimal allocation</strong>.</p>
+<div id="proportional-allocation" class="section level2">
+<h2>Proportional allocation</h2>
+<p>Say our analysis indicates we need to collect data from 100 new inventory plots to achieve a desired level of precision (e.g., to be within 5% of the mean carbon storage). Proportional allocation would distribute the 100 field plots according to their total area. That is, we can collect more field plots in larger-size strata. The following R function named <code>allocate()</code> can determine the appropriate number of desired plots to collect in each stratum. We’ll round up the number of plots with the <code>ceiling()</code> function to make sure we measure an entire plot:</p>
+<pre class="r"><code>allocate &lt;- function(acres.stratum, total.acres, total.plots){
+  num.plots = ceiling((acres.stratum / total.acres) * total.plots)
+  return(num.plots)
+  }</code></pre>
+<p>We can apply the function to the <strong>stratum</strong> data frame:</p>
+<pre class="r"><code>allocate(acres.stratum = stratum$`Stratum area (acres)`,
+         total.acres = sum(stratum$`Stratum area (acres)`),
+         total.plots = 100)</code></pre>
+<pre><code>## [1] 33 39 29</code></pre>
+<p>So, the proportional allocation method indicates we should collect 33, 39, and 29 plots in the small-, medium-, and large-diameter stands, respectively. Because more acreage is found in medium-sized trees, we collect more plots there.</p>
+</div>
+<div id="optimal-allocation" class="section level2">
+<h2>Optimal allocation</h2>
+<p>The optimal allocation method distributes the 100 field plots to each stratum that provides the smallest amount of variability possible. In addition to the total area, also required in this calculation is the standard deviation of carbon found within each stratum. The total number of plots to sample in each stratum would be represented by the stratum area multiplied by the standard deviation of carbon, as seen in the table above. The <code>Area x SD</code> variable can be input into the <code>allocate()</code> function to determine the appropriate number of plots to collect with optimal allocation:</p>
+<pre class="r"><code>allocate(acres.stratum = stratum$`Area x SD`,
+         total.acres = sum(stratum$`Area x SD`),
+         total.plots = 100)</code></pre>
+<pre><code>## [1] 28 36 38</code></pre>
+<p>So, the optimal allocation method indicates we should collect 28, 36, and 38 plots in the small-, medium-, and large-diameter stands, respectively. In other words, because the stand deviation of carbon is lower in the small- and medium-diameter stands, we can focus our sampling in the large-diameter stands where there is more variability in carbon. The optimal strategy indicates sampling three fewer plots in the medium-diameter stands compared to the proportional allocation method, even though it’s the stand with the largest area.</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-10">Table 2: </span>Distribution of plots to sample for proportional and optimal allocation methods.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Stand size class
+</th>
+<th style="text-align:right;">
+Stratum area (acres)
+</th>
+<th style="text-align:right;">
+SD (metric tons/acre)
+</th>
+<th style="text-align:right;">
+Area x SD
+</th>
+<th style="text-align:right;">
+Plots to measure - proportional
+</th>
+<th style="text-align:right;">
+Plots to measure - optimal
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Small diameter (&lt; 5 in)
+</td>
+<td style="text-align:right;">
+65
+</td>
+<td style="text-align:right;">
+7.8
+</td>
+<td style="text-align:right;">
+507
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Medium diameter (5 - 10 in)
+</td>
+<td style="text-align:right;">
+77
+</td>
+<td style="text-align:right;">
+8.3
+</td>
+<td style="text-align:right;">
+639
+</td>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Large diameter (&gt; 10 in)
+</td>
+<td style="text-align:right;">
+58
+</td>
+<td style="text-align:right;">
+11.7
+</td>
+<td style="text-align:right;">
+679
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SUM
+</td>
+<td style="text-align:right;">
+200
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+1825
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+100
+</td>
+</tr>
+</tbody>
+</table>
+<p>There is a lot more that goes into planning a forest carbon inventory, but understanding how many plots to measure and where to measure them is an important first step. Using stratified random sampling is an efficient approach to determine a precise estimate of forest carbon.</p>
+<p>–</p>
+<p><em>Special thanks to Micky Allen for catching an error in the numbers of plots in Table 2.</em></p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/">A quick and easy way to estimate forestland area change across US states</a></h4>
+    <h5>February 16, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-ownership"><kbd class="item-tag">forest ownership</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestland-area"><kbd class="item-tag">forestland area</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/">A handy R function for getting ecological division from FIA data</a></h4>
+    <h5>November 18, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/data-management"><kbd class="item-tag">data management</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/ecodivision"><kbd class="item-tag">ecodivision</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

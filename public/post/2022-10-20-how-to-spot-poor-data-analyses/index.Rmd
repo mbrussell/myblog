@@ -66,3 +66,4 @@ Tables should be used (1) to convey precise numbers or text, (2) to compare indi
 
 *By Matt Russell. Which data analysis practices are “red flags” to you? Leave me a comment on [the LinkedIn post for this article](https://www.linkedin.com/feed/update/urn:li:activity:6988925136041041920) and I’d love to hear it.*
 
+---

@@ -1,42 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>books on </title>
-    <link>https://arbor-analytics.com/tags/books/</link>
-    <description>Recent content in books on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Books on </title>
+    <link>http://localhost:4321/tags/books/</link>
+    <description>Recent content in Books on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/books/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>New book: Statistics in Natural Resources: Applications with R</title>
-      <link>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
+      <link>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
-      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.
-I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.
-At the same time, I was searching for a different textbook to use for the course.</description>
+      <guid>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
+      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.&#xA;I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.&#xA;At the same time, I was searching for a different textbook to use for the course.</description>
     </item>
-    
     <item>
       <title>New eBook: Forest Carbon by the Numbers</title>
-      <link>https://arbor-analytics.com/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</link>
+      <link>http://localhost:4321/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</link>
       <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</guid>
-      <description>Now available on Amazon is Forest Carbon by the Numbers: Understanding the Hottest Forest Product of the 2020s.
-Carbon is becoming a highly valued commodity of forests. Trees sequester carbon dioxide and turn it into wood, storing carbon in forests and long-lived forest products for long time periods. Despite the increased recognition of carbon as a natural climate solution and several emerging markets that monetize it, few professionals in forestry and natural resources have a grasp on the amount and extent of forest carbon in the ecosystems they work in.</description>
+      <guid>http://localhost:4321/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</guid>
+      <description>Now available on Amazon is Forest Carbon by the Numbers: Understanding the Hottest Forest Product of the 2020s.&#xA;Carbon is becoming a highly valued commodity of forests. Trees sequester carbon dioxide and turn it into wood, storing carbon in forests and long-lived forest products for long time periods. Despite the increased recognition of carbon as a natural climate solution and several emerging markets that monetize it, few professionals in forestry and natural resources have a grasp on the amount and extent of forest carbon in the ecosystems they work in.</description>
     </item>
-    
     <item>
       <title>A 50-year history of forest measurements by analyzing Forest Measurements</title>
-      <link>https://arbor-analytics.com/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</link>
+      <link>http://localhost:4321/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</guid>
-      <description>If you’ve even taken a course in forest measurements, you likely used Forest Measurements as the textbook. The first edition of forest measurements was published in 1967 by Thomas Eugene Avery and included a number of topics related to forest inventory, sampling forest resources, and tree and stand measurements.
-The book recently published its 6th edition in 2018 and is available through Waveland Press. Investigating how the book has incorporated new topics gives insights into the advances of the field of forest measurements:</description>
+      <guid>http://localhost:4321/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</guid>
+      <description>If you’ve even taken a course in forest measurements, you likely used Forest Measurements as the textbook. The first edition of forest measurements was published in 1967 by Thomas Eugene Avery and included a number of topics related to forest inventory, sampling forest resources, and tree and stand measurements.&#xA;The book recently published its 6th edition in 2018 and is available through Waveland Press. Investigating how the book has incorporated new topics gives insights into the advances of the field of forest measurements:</description>
     </item>
-    
   </channel>
 </rss>

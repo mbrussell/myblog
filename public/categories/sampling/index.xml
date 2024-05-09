@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sampling on </title>
-    <link>https://arbor-analytics.com/categories/sampling/</link>
+    <link>http://localhost:4321/categories/sampling/</link>
     <description>Recent content in Sampling on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/sampling/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/categories/sampling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stratifying the number of plots to measure in a forest carbon inventory</title>
+      <link>http://localhost:4321/post/2023-09-21-selecting-the-number-of-plots-to-measure-in-a-forest-carbon-inventory/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-09-21-selecting-the-number-of-plots-to-measure-in-a-forest-carbon-inventory/</guid>
+      <description>Forest inventories that measure carbon, like any forest attribute, are conducted to obtain a precise estimate of a population mean. Forest carbon inventories can cost a lot of time and effort. Their high costs have been cited as a barrier for some landowners to enter carbon programs.&#xA;Until remote sensing technologies are adopted at scale to monitor and report carbon, field based inventories will continue to be relied on the estimate forest carbon and their associated attributes.</description>
+    </item>
     <item>
       <title>Ruffed grouse and West Nile: A review of the binomial distribution</title>
-      <link>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
+      <link>http://localhost:4321/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
-      <description>There’s been a lot of talk in the wildlife community about the West Nile virus and its impacts on ruffed grouse populations.
-In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive.</description>
+      <guid>http://localhost:4321/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
+      <description>There’s been a lot of talk in the wildlife community about the West Nile virus and its impacts on ruffed grouse populations.&#xA;In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive.</description>
     </item>
-    
     <item>
       <title>Quickly explore your timber cruise data with six lines of code</title>
-      <link>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</link>
+      <link>http://localhost:4321/post/explore-your-timber-cruise-data/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</guid>
-      <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.
-A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
+      <guid>http://localhost:4321/post/explore-your-timber-cruise-data/</guid>
+      <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.&#xA;A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
     </item>
-    
     <item>
       <title>Stratified vs. simple random sampling: fun with forestsamplr</title>
-      <link>https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</link>
+      <link>http://localhost:4321/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</link>
       <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
-      <description>Tools for estimating population means for stratified and simple random samplesIf we know the size of a number of subpopulations that are a part of a larger population, we can use stratified random sampling to come up with a more precise estimate of a population mean. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling.</description>
+      <guid>http://localhost:4321/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
+      <description>Tools for estimating population means for stratified and simple random samples&#xD;If we know the size of a number of subpopulations that are a part of a larger population, we can use stratified random sampling to come up with a more precise estimate of a population mean. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling.</description>
     </item>
-    
   </channel>
 </rss>

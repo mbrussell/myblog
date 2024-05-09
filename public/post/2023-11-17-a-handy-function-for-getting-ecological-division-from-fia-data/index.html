@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>A handy R function for getting ecological division from FIA data</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">A handy R function for getting ecological division from FIA data</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/">A handy R function for getting ecological division from FIA data</a></h4>
+    <h5>November 18, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/data-management"><kbd class="item-tag">data management</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/ecodivision"><kbd class="item-tag">ecodivision</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<center>
+<div class="float">
+<img src="main_ecosections.png" width="500" alt="Ecological sections and subsections in Maine, USA (from Cleland et al. 2007)." />
+<div class="figcaption"><em>Ecological sections and subsections in Maine, USA (from Cleland et al. 2007).</em></div>
+</div>
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>To get a better feel for how they work, I’ve been digging into the new <a href="https://www.fs.usda.gov/research/programs/fia/nsvb">tree volume, biomass, and carbon models</a> released by the USDA Forest Service last month. These new equations replace volume equations developed at the regional level and are now nationally-consistent. Importantly for anyone that works with forest carbon inventory data, these new equations replace the Component Ratio Method (CRM).</p>
+<p>Although the equations replace regional ones previously implemented, they do require a geographical variable not widely used in forest biomass and carbon equations: ecological division. These divisions are outlined in the US National Hierarchical Framework of Ecological Units, described in detail in a map produced by <a href="https://www.fs.usda.gov/research/treesearch/48672">Cleland and others</a> in 2007. Within divisions there are ecological provinces. Within those provinces there are ecological sections and subsections.</p>
+<p>If you’re doing an analysis on an individual ownership, you can simply look up the property’s ecological division and find the equations for the tree species that you need. But if you’re doing an analysis at a larger scale, e.g., across a US state, there may exist multiple ecological divisions within your project area. Ecological divisions don’t line up with regional, state, or county boundaries, making it tricky to keep track of which volume, biomass, and carbon equation to use. For example, a state like Maine has three different ecological divisions. Hence, the same-sized eastern white pine tree located in three different locations in the state could have three different estates of tree biomass.</p>
+<p>This issue will arise for analysts that do statewide assessments using Forest Inventory and Analysis (FIA) data. While the FIA database has been updated with the new estimates of tree volume, biomass, and carbon, analysts often will need to use the FIA data and write customized functions based on the data.</p>
+<p>Fortunately, the <strong>PLOT</strong> table in the FIA database contains the ecological subsection where the plot resides, stored in the <strong>ECOSUBCD</strong> variable. As described in the <a href="https://www.fia.fs.usda.gov/library/database-documentation/">FIA Database User Guide</a>, ecological subsections are defined as areas of “similar surficial geology, lithology, geomorphic process, soil groups, subregional climate, and potential natural communities.” This represents the most detailed level within the hierarchical framework.</p>
+<p>You’ll need to do some work to pull the ecological division out from this variable, and it’s messy because of the alpha-numeric characteristics and differing lengths of of the <strong>ECOSUBCD</strong> variable. For example, <strong>ECOSUBCD</strong> 211Da in central Maine is termed the Central Maine Embayment Subsection.</p>
+<p>I’ll use some functions from the <strong>stringr</strong> package in R to do this, which can be called from the tidyverse library:</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<p>First, I’ll make a data table called <em>eco_codes</em> of all of the <strong>ECOSUBCD</strong> values list in Maine’s PLOT table from FIA’s <em>ME_PLOT.csv</em> file using the <code>as_tibble()</code> function. Then I’ll rename the variables to something that makes sense. You can see that Maine has 19 unique ecological subsections:</p>
+<pre class="r"><code>eco_codes &lt;- as_tibble(table(me_plot$ECOSUBCD), .name_repair = &quot;unique&quot;) |&gt; 
+  rename(ECOSUBCD = ...1,
+         num_plots = n)
+
+eco_codes</code></pre>
+<pre><code>## # A tibble: 19 × 2
+##    ECOSUBCD num_plots
+##    &lt;chr&gt;        &lt;int&gt;
+##  1 211Aa         1499
+##  2 211Ab          776
+##  3 211Ba          962
+##  4 211Bb         2020
+##  5 211Ca          788
+##  6 211Cb          820
+##  7 211Da         2697
+##  8 211Db          434
+##  9 211Dc          628
+## 10 221Ai          162
+## 11 221Ak          425
+## 12 221Al          785
+## 13 M211Aa         952
+## 14 M211Ab        2386
+## 15 M211Ac        1546
+## 16 M211Ad         103
+## 17 M211Ae         648
+## 18 M211Af        1088
+## 19 M211Ag         767</code></pre>
+<p>We can determine the ecological province (<strong>eco_province</strong>) by using the <code>str_sub()</code> function by “trimming off” the subsection letters at the end of the subsection name. This can be done by specifying <code>end = -3</code> in the function.</p>
+<p>If only it were that simple. To obtain the ecological division we need to “round down” the ecological province. For example, Ecological province 211 (Northeastern Mixed Forest Province) corresponds to ecological division 210 (Warm Continental Division). To do this you can replace the last character in the <strong>eco_province</strong> variable with a zero. This can be done with the <code>str_replace()</code> function and replacing the last character using the <code>".$"</code> command.</p>
+<p>In the end, you can see the relationships between the ecological subsection, province, and division codes:</p>
+<pre class="r"><code>eco_codes &lt;- eco_codes |&gt; 
+  mutate(eco_province = str_sub(ECOSUBCD, end = -3),
+         eco_division = str_replace(eco_province, &quot;.$&quot;, &quot;0&quot;))
+eco_codes</code></pre>
+<pre><code>## # A tibble: 19 × 4
+##    ECOSUBCD num_plots eco_province eco_division
+##    &lt;chr&gt;        &lt;int&gt; &lt;chr&gt;        &lt;chr&gt;       
+##  1 211Aa         1499 211          210         
+##  2 211Ab          776 211          210         
+##  3 211Ba          962 211          210         
+##  4 211Bb         2020 211          210         
+##  5 211Ca          788 211          210         
+##  6 211Cb          820 211          210         
+##  7 211Da         2697 211          210         
+##  8 211Db          434 211          210         
+##  9 211Dc          628 211          210         
+## 10 221Ai          162 221          220         
+## 11 221Ak          425 221          220         
+## 12 221Al          785 221          220         
+## 13 M211Aa         952 M211         M210        
+## 14 M211Ab        2386 M211         M210        
+## 15 M211Ac        1546 M211         M210        
+## 16 M211Ad         103 M211         M210        
+## 17 M211Ae         648 M211         M210        
+## 18 M211Af        1088 M211         M210        
+## 19 M211Ag         767 M211         M210</code></pre>
+<p>You can see that most FIA plots in Maine are found in the Division 210 (Warm Continental Division), followed by M210 (Warm Continental Division - Mountain Provinces) and 220 (Hot Continental Division):</p>
+<pre class="r"><code>eco_codes |&gt; 
+  summarize(num_plots_division = sum(num_plots),
+            .by = &quot;eco_division&quot;)</code></pre>
+<pre><code>## # A tibble: 3 × 2
+##   eco_division num_plots_division
+##   &lt;chr&gt;                     &lt;int&gt;
+## 1 210                       10624
+## 2 220                        1372
+## 3 M210                       7490</code></pre>
+<p>Surely, there must exist an ecological subsection lookup table that contains each subsection and its corresponding values for ecological sections, divisions, and so forth. I haven’t been able to find one yet, but if you’re aware of one, do let me know! For know I’ll likely continue use functions like this to pull out these values.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/">A quick and easy way to estimate forestland area change across US states</a></h4>
+    <h5>February 16, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-ownership"><kbd class="item-tag">forest ownership</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestland-area"><kbd class="item-tag">forestland area</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/">How much does adding previous diameter and height growth change FVS predictions?</a></h4>
+    <h5>October 31, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fvs"><kbd class="item-tag">FVS</kbd></a>
+    
+    <a href="http://localhost:4321/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

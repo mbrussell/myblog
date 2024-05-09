@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>statitics on </title>
-    <link>https://arbor-analytics.com/tags/statitics/</link>
-    <description>Recent content in statitics on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Statitics on </title>
+    <link>http://localhost:4321/tags/statitics/</link>
+    <description>Recent content in Statitics on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/statitics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/statitics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What statistics students in natural resources want to learn more about</title>
-      <link>https://arbor-analytics.com/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</link>
+      <link>http://localhost:4321/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</link>
       <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</guid>
-      <description>As the holidays approach, it’s always a great time of year to reflect back and look forward. This post will describe my approach to this as it relates to a class that just wrapped up for the Fall 2021 semester.
-I instruct the course NR 5021: Statistics for Agricultural and Natural Resources Professionals at the University of Minnesota. The class has between 25 and 40 graduate students enrolled in a given year, a mix between students studying natural resources, agriculture, and plant sciences.</description>
+      <guid>http://localhost:4321/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</guid>
+      <description>As the holidays approach, it’s always a great time of year to reflect back and look forward. This post will describe my approach to this as it relates to a class that just wrapped up for the Fall 2021 semester.&#xA;I instruct the course NR 5021: Statistics for Agricultural and Natural Resources Professionals at the University of Minnesota. The class has between 25 and 40 graduate students enrolled in a given year, a mix between students studying natural resources, agriculture, and plant sciences.</description>
     </item>
-    
     <item>
       <title>Should foresters keep saying “statistically significant”?</title>
-      <link>https://arbor-analytics.com/post/should-foresters-keep-saying-statistically-significant/</link>
+      <link>http://localhost:4321/post/should-foresters-keep-saying-statistically-significant/</link>
       <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/should-foresters-keep-saying-statistically-significant/</guid>
-      <description>The statistics community has had a lot of discussion in recent years about the role of p -values and statistical significance. What does this mean for forest biometricians and analysts that have traditionally used p -values and tests of significance in their daily work?
-The American Statistical Association’s August 2019 edition of their magazine Significance has a number of great articles on significance. They even refer to the term as “the S word”:</description>
+      <guid>http://localhost:4321/post/should-foresters-keep-saying-statistically-significant/</guid>
+      <description>The statistics community has had a lot of discussion in recent years about the role of p -values and statistical significance. What does this mean for forest biometricians and analysts that have traditionally used p -values and tests of significance in their daily work?&#xA;The American Statistical Association’s August 2019 edition of their magazine Significance has a number of great articles on significance. They even refer to the term as “the S word”:</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,0 +1,62 @@
+---
+title: A list of R packages for forestry applications
+author: Matt Russell
+date: '2023-11-24'
+slug: []
+categories:
+  - Analytics
+tags:
+  - analytics
+  - R
+  - R packages
+  - statistics
+  - data science
+  - forestry
+---
+
+# 
+<center>
+
+![*Image created with DALL·E 3.*](package_forest.jpg){width=500px}
+</center>
+#  
+
+Two years ago I wrote about the [different R packages](https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/) that are available to use in forestry applications. Back then, there were 16,166 packages archived on the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/web/packages/). Today, the CRAN repository contains 20,102 packages.
+
+The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users. The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others. In turn, users can provide feedback on the functions and uses of the package to improve it. 
+
+I recently updated my list of [R packages used in forestry](https://docs.google.com/spreadsheets/d/1GTVJsQ-MthC7dMDarts68Q9lSxMgerzUs198RkGHaII/edit?usp=sharing). It contains 68 packages that have specific applications for forest analysts. There were 31 packaged listed in 2020, so the profession has seen a 119% increase in forestry R packages in the past two years. This is great for the students and professionals that use R in the forestry community.
+
+Interestingly, I found many newer R packages under the following themes:
+
+* **Tree data sets.** There are several new packages that contain data sets of trees, for example **pdxtrees**, a package with tree data from trees in Portland, Oregon, or **perutimber**, a catalog of timber species found in the Peruvian Amazon. These kinds of packages make for excellent tools for teaching R concepts with forestry data, and I hope there are more of them in the future.
+* **Packages for analyzing tree rings.** There are many new packages available for analyzing tree ring data, including **DendroSync**, **measuRing**, and **xring** among others.  
+* **Packages for simulating tree growth.** Many recent packages make it easier to integrate R with many tree growth models. Since the packages **r3PG**, **sitree**, and **efdm** for some examples of this. 
+
+These packages include only those that are archived on the CRAN repository. Many more R packages exist through other services such as Github. Not all R packages are available on CRAN ([because it’s difficult](https://kbroman.org/pkg_primer/pages/cran.html)), but Github allows users to easily see packages and the code behind them as they're being developed.
+
+Any package available on CRAN has been vetted with scrutiny, so you can be sure that the forestry-specific ones are ready for a "prime time" analysis. In my searching for all forestry packages on CRAN, I've realized that the keywords “tree” and “forest” do not help much when searching for forestry packages. Most packages that mention “tree” or “forest” in their description are about topics such as random forests, regression trees, or decision trees: 
+
+```{r, echo = F, message = F, warning =F}
+library(tidyverse)
+
+df <- tribble(
+  ~name, ~value,
+  "Packages actually about forestry", 68,
+  " Packages with 'tree' \n or 'forest' in their name", 355
+)
+
+ggplot(df, aes(name, value)) +
+  geom_bar(stat="identity", fill = "lightblue", col = "black") +
+  labs(y = "Number of R packages", x = "") +
+  theme(panel.background = element_rect(fill = "NA"),
+        axis.line = element_line(color = "black"))
+
+```
+
+Which R package is missing from the list? [Email me](mailto:matt@arbor-analytics.com) with your comments and I'd love to hear which forestry packages you use.
+
+--
+
+*By Matt Russell. For more, see my [monthly email newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) for data and analytics trends in the forest products industry.*
+

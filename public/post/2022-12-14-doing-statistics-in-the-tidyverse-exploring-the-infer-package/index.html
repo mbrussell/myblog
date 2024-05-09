@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>Doing statistics in the tidyverse: exploring the infer package</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Doing statistics in the tidyverse: exploring the infer package</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/">Doing statistics in the tidyverse: exploring the infer package</a></h4>
+    <h5>December 14, 2022</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/stats4nr"><kbd class="item-tag">stats4nr</kbd></a>
+    
+    <a href="http://localhost:4321/tags/tidyverse"><kbd class="item-tag">tidyverse</kbd></a>
+    
+    <a href="http://localhost:4321/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<center>
+<img src="inferverbs.png" width="400" />
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>If you use R software for your data analysis, you are likely familiar with the tidyverse. The <strong>tidyverse</strong> package is a “megapackage” in R that includes several packages that import, reshape, and visualize data in a consistent manner, among other tasks.</p>
+<p>Like many analysts, I use the tidyverse suite of functions often for importing, wrangling, and visualizing data. More and more I’m using the <strong>tidymodels</strong> package to apply statistical modeling techniques like regression and random forests on data I work with.</p>
+<p>I’ve often wondered how to perform basic statistical tasks, like <em>t</em>-tests and simple linear regression, using a “tidy” approach. In writing code, I always found if clunky to mix writing a series of pipes (<code>%&gt;%</code>), common syntax in the tidyverse, with dollar signs (<code>$</code>), common syntax in base R that specifies a variable associated with a data set. This syntax-switching was always difficult to convey to students learning statistics. While we use one set of syntax for wrangling and visualizing data, we use a different syntax in the same programming language for performing statistical operations. It’s like trying to learn Latin American Spanish and Castilian Spanish at the same time.</p>
+<p>I recently read the excellent article <a href="https://arxiv.org/abs/2108.03510"><em>An educator’s perspective of the tidyverse</em></a> by Mine Çetinkaya-Rundel and colleagues that describes the <strong>infer</strong> package in R. The <a href="https://infer.netlify.app/"><strong>infer</strong> package</a> performs statistical inference using grammar and syntax that is similar to the tidyverse design framework.</p>
+<p>I wanted to learn more about the doing statistical tasks in the tidyverse, so in this post I compare how the code written with the <strong>infer</strong> package compares to those available in base R. I use data sets from my book <a href="https://stats4nr.com/"><em>Statistics in Natural Resources: Applications with R</em></a>, available in the <a href="https://github.com/mbrussell/stats4nr"><strong>stats4nr</strong> package</a>.</p>
+</div>
+<div id="one-sample-t-test-base-r-and-infer" class="section level2">
+<h2>One-sample t-test: base R and infer</h2>
+<p>First, I’ll load the packages to use throughout this comparison:</p>
+<pre class="r"><code>library(tidyverse)
+library(infer)
+library(stats4nr)</code></pre>
+<p>The first statistical task I’ll perform is a one-sample t-test for a mean. I’ll use the <strong>chirps</strong> data set from the <strong>stats4nr</strong> package to perform a two-sided one-sample t-test at a level of significance of <span class="math inline">\(\alpha = 0.05\)</span>. The data contain the number of chirps that a striped ground cricket makes each second (<code>cps</code>) at various temperatures:</p>
+<pre class="r"><code>ggplot(chirps, aes(cps)) +
+  geom_boxplot() +
+  labs(x = &quot;Chirps per second&quot;)</code></pre>
+<p><img src="/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>For our statistical test, assume an entomologist makes a claim that a cricket makes 18 chirps per second. Our hypotheses are then:</p>
+<ul>
+<li>The null hypothesis is that the true mean of the number of chirps a cricket makes is equal to 18.</li>
+<li>The alternative hypothesis is that the true mean of the number of chirps a cricket makes is not equal to 18.</li>
+</ul>
+<p>In base R, the <code>t.test()</code> function performs a number of hypothesis tests related to the <em>t</em>-distribution. We can write the code as:</p>
+<pre class="r"><code>t.test(chirps$cps, mu = 18)</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  chirps$cps
+## t = -3.0643, df = 14, p-value = 0.008407
+## alternative hypothesis: true mean is not equal to 18
+## 95 percent confidence interval:
+##  15.71077 17.59589
+## sample estimates:
+## mean of x 
+##  16.65333</code></pre>
+<p>The output provides the <em>t</em>-statistic, degrees of freedom, <em>p</em>-value, mean number of chirps, and the 95% confidence interval. The <em>p</em>-value of 0.008407 is less than our level of significance of <span class="math inline">\(\alpha = 0.05\)</span>, hence, we can conclude that we have evidence to reject the null hypothesis and conclude that the true mean of the number of chirps a striped ground cricket makes is not equal to 18.</p>
+<p>With the chirps data, we can use the <code>t_test()</code> wrapper function available in the <strong>infer</strong> package to provide similar calculations:</p>
+<pre class="r"><code>t_test(chirps, response = cps, mu = 18)</code></pre>
+<pre><code>## # A tibble: 1 × 7
+##   statistic  t_df p_value alternative estimate lower_ci upper_ci
+##       &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+## 1     -3.06    14 0.00841 two.sided       16.7     15.7     17.6</code></pre>
+<p>The output is stored in a small data set (a “tibble”) that can be used in subsequent analyses. With <strong>infer</strong>, more information can be obtained from the analysis by specifying four primary functions, each which are expressed as verbs:</p>
+<ul>
+<li><code>specify()</code> lists the variable you want to examine,</li>
+<li><code>hypothesize()</code> specifies the null hypothesis,</li>
+<li><code>generate()</code>) produces data based on the null hypothesis, and</li>
+<li><code>calculate()</code> calculates a distribution of statistics based on the null hypothesis.</li>
+</ul>
+<p>We can perform the same hypothesis test, this time by generating the null distribution using a bootstrap approach with 1,000 samples:</p>
+<pre class="r"><code>chirps_null_dist &lt;- chirps %&gt;%
+  specify(response = cps) %&gt;% 
+  hypothesize(null = &quot;point&quot;, mu = 18) %&gt;% 
+  generate(reps = 1000, type = &quot;bootstrap&quot;) %&gt;% 
+  calculate(stat = &quot;mean&quot;)</code></pre>
+<p>This code produces a data set with 1,000 replicates each with a calculated test statistic (the mean). We can visualize the null distribution and test statistic using the <code>visualize()</code> function:</p>
+<pre class="r"><code>observed_test_stat &lt;- chirps %&gt;%
+  specify(response = cps) %&gt;%
+  calculate(stat = &quot;mean&quot;)
+
+chirps_null_dist %&gt;%
+  visualize() + 
+  shade_p_value(observed_test_stat,
+                direction = &quot;two-sided&quot;)</code></pre>
+<p><img src="/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>From the visualization, we can see that our observed mean of 16.7 chirps per second would be unlikely if the true mean was 18 chirps per second.</p>
+</div>
+<div id="analysis-of-variance-base-r-and-infer" class="section level2">
+<h2>Analysis of variance: base R and infer</h2>
+<p>The second statistical task I’ll perform is an analysis of variance. I’ll use the <strong>iron</strong> data set from the <strong>stats4nr</strong> package which contains iron levels measured at several water depths in Chesapeake Bay. Experimenters took three measurements at six water depths: 0, 10, 30, 40, 50, and 100 feet. The response variable was iron content, measured in mg/L.</p>
+<p>Here is the distribution of iron contents at the different water depths:</p>
+<pre class="r"><code>ggplot(iron, aes(factor(depth), iron)) + 
+  geom_boxplot()+
+  ylab(&quot;Iron content (mg/L)&quot;) +
+  xlab(&quot;Water depth (feet)&quot;)</code></pre>
+<p><img src="/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>First, we’ll convert the water depth variable (currently stored as a number) to a factor variable. This is because the water depths are labeled as numbers, but they represent categorical variables in our treatment of them in the ANOVA:</p>
+<pre class="r"><code>iron &lt;- iron %&gt;% 
+  mutate(depth.fact = as.factor(depth))</code></pre>
+<p>In this ANOVA, our hypotheses are:</p>
+<ul>
+<li>The null hypothesis is that there are no differences among the mean iron contents collected across the six water depths.</li>
+<li>The alternative hypothesis is that there is at least one mean value of iron content that differs from the rest.</li>
+</ul>
+<p>In base R, we can perform a one-way ANOVA with the <code>lm()</code> function and view the ANOVA table with the <code>anova()</code> function:</p>
+<pre class="r"><code>iron.aov &lt;- lm(iron ~ depth.fact, data = iron)
+
+anova(iron.aov)</code></pre>
+<pre><code>## Analysis of Variance Table
+## 
+## Response: iron
+##            Df   Sum Sq   Mean Sq F value    Pr(&gt;F)    
+## depth.fact  5 0.064802 0.0129605  35.107 9.248e-07 ***
+## Residuals  12 0.004430 0.0003692                      
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>The output provides the ANOVA table with degrees of freedom, sums of squares, and mean squares. The <em>F</em>-statistic and <em>p</em>-value provide the results of the ANOVA. Here, we see that with a small <em>p</em>-value of the ANOVA <em>F</em>-test (9.248e-07), we reject the null hypothesis that all iron contents are equal and conclude that at least one mean differs from the rest.</p>
+<p>Using the <strong>infer</strong> package, We can perform the ANOVA by generating the null distribution. We can permute the variables in the iron data set to match each water depth with the iron content levels:</p>
+<pre class="r"><code>iron_null_dist &lt;- iron %&gt;%
+  specify(iron ~ depth.fact) %&gt;%
+  hypothesize(null = &quot;independence&quot;) %&gt;%
+  generate(reps = 1000, type = &quot;permute&quot;) %&gt;%
+  calculate(stat = &quot;F&quot;)</code></pre>
+<p>Then, we can calculate the <em>p</em>-value from the observed statistic and null distribution using the <code>get_p_value()</code> function:</p>
+<pre class="r"><code>observed_f_stat &lt;- iron %&gt;%
+  specify(iron ~ depth.fact) %&gt;%
+  hypothesize(null = &quot;independence&quot;) %&gt;%
+  calculate(stat = &quot;F&quot;)
+
+iron_null_dist %&gt;%
+  get_p_value(obs_stat = observed_f_stat,
+              direction = &quot;greater&quot;)</code></pre>
+<pre><code>## Warning: Please be cautious in reporting a p-value of 0. This result is an
+## approximation based on the number of `reps` chosen in the `generate()` step. See
+## `?get_p_value()` for more information.</code></pre>
+<pre><code>## # A tibble: 1 × 1
+##   p_value
+##     &lt;dbl&gt;
+## 1       0</code></pre>
+<p>In this case, a <em>p</em>-value of 0 is reported, which should be understood after seeing the “Please be cautious…” warning. This result is likely because the observed <em>F</em>-statistic is quite large and unlikely given the null hypothesis:</p>
+<pre class="r"><code>iron %&gt;%
+  specify(iron ~ depth.fact) %&gt;%
+  hypothesize(null = &quot;independence&quot;) %&gt;%
+  calculate(stat = &quot;F&quot;)</code></pre>
+<pre><code>## Response: iron (numeric)
+## Explanatory: depth.fact (factor)
+## Null Hypothesis: independence
+## # A tibble: 1 × 1
+##    stat
+##   &lt;dbl&gt;
+## 1  35.1</code></pre>
+<p>We can visualize the null distribution and test statistic using the <code>visualize()</code> function to see that the <em>F</em>-statistic is unlikely given null hypothesis:</p>
+<pre class="r"><code>iron_null_dist %&gt;%
+  visualize() + 
+  shade_p_value(observed_f_stat,
+                direction = &quot;greater&quot;)</code></pre>
+<p><img src="/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>Indeed, observing an <em>F</em>-statistic of 35.1 would be quite unlikely given the ANOVA hypothesis.</p>
+</div>
+<div id="takeaways-from-the-infer-package" class="section level2">
+<h2>Takeaways from the infer package</h2>
+<p>There are many advantages for using the <strong>infer</strong> package for completing elementary statistical tasks and teaching them to students. Here are a few:</p>
+<ul>
+<li>The package uses verbs as a part of it’s grammar. The user writes the code to <em>do this action</em>, a concept that is consistent within the tidyverse ecosystem.</li>
+<li>Visualization of statistical output is easy. I’ve often found that when teaching hypothesis testing, I ask students to “do the math”, then draw the distribution (even a simple sketch will do) to see where the observed statistic falls. This is essentially what the <code>visualize()</code> function does, and the red line in the graphs above is a handy comparison to the null distribution.</li>
+<li>For those functions with a wrapper function, infer outputs statistics into a table which facilitates using them in subsequent analyses, particularly when multiple tests are run in an analysis.</li>
+</ul>
+<p>There are some drawbacks to using and teaching introductory statistics with the infer package:</p>
+<ul>
+<li>There is a need to write more lines of code to obtain output. There seems to be more output that can be provided with infer functions compared to base R, but you’ll need to write the code out. In contrast, it seems that many statistical functions in base R provide an overload of output that learners will need to sift through.<br />
+</li>
+<li>The package does not have a wrapper functions for some common statistical tests like ANOVA. This could mean more code to produce similar results that base R functions provide.</li>
+</ul>
+<p>In summary, I’m glad there is a package that provides a “tidy” approach to performing statistical tests. The syntax and grammar used in the <strong>infer</strong> package is compatible with how many students are learning R today by using the tidyverse suite of functions and packages.</p>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">my monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/">A list of R packages for forestry applications</a></h4>
+    <h5>November 24, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
+    
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/">How much does adding previous diameter and height growth change FVS predictions?</a></h4>
+    <h5>October 31, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fvs"><kbd class="item-tag">FVS</kbd></a>
+    
+    <a href="http://localhost:4321/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -2,109 +2,123 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Events on </title>
-    <link>https://arbor-analytics.com/events/</link>
+    <link>http://localhost:4321/events/</link>
     <description>Recent content in Events on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/events/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/events/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Placing harvested wood products in the forest carbon discussion</title>
+      <link>http://localhost:4321/events/2024-03-28-placing-harvested-wood-products-in-the-forest-carbon-discussion/</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2024-03-28-placing-harvested-wood-products-in-the-forest-carbon-discussion/</guid>
+      <description>This presentation provides a background on harvested wood products from a carbon perspective, highlighting the role that wood durability and longevity plays in understanding how different wood product types contribute to carbon storage. It also describes a recent analysis that summarized annual harvest removals from Northeastern US states to estimate the longevity of harvested wood stored in products in use and tracked their decay to landfills and the atmosphere. A few tools are highlighted which show how foresters can determine wood product storage using forest inventory and timber sale data.</description>
+    </item>
+    <item>
+      <title>Unlocking value: harvested wood products in forest carbon programs</title>
+      <link>http://localhost:4321/events/2023-12-08-unlocking-value-harvested-wood-products-in-forest-carbon-programs/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-12-08-unlocking-value-harvested-wood-products-in-forest-carbon-programs/</guid>
+      <description>Harvested wood products store carbon in many different forms. Increasingly, forest carbon programs are available to diverse forest landowners, and harvested wood products that result from enrolled properties need to be counted. These slides were presented at the Linkiwood 2023 Wood Tech Leadership Summit on Nov. 30, 2023.&#xA;READ THE SLIDES HERE.&#xA;WATCH THE RECORDING (18:09) on YouTube.</description>
+    </item>
+    <item>
+      <title>Harvested wood products and forest carbon</title>
+      <link>http://localhost:4321/events/2023-10-16-harvested-wood-products-and-forest-carbon/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-10-16-harvested-wood-products-and-forest-carbon/</guid>
+      <description>Harvested wood products store carbon from sustainably-managed forests. These slides were presented at the Northeast Silviculture Institute for Foresters in Gardner, MA on Oct. 11, 2023.&#xA;READ THE SLIDES.</description>
+    </item>
+    <item>
+      <title>Sampling design and statistical approaches in forestry</title>
+      <link>http://localhost:4321/events/2023-05-22-sampling-design-and-statistical-approaches-in-forestry/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-05-22-sampling-design-and-statistical-approaches-in-forestry/</guid>
+      <description>&#xD;This workshop for Tag Ng showcased how sampling and statistics can be used in forestry applications. The two-hour virtual workshop discussed common sampling design used in forestry and statistical approaches with forest inventory data. Example coding sessions used the forestsamplr and tidymodels packages in R.&#xA;VIEW SLIDES&#xD;VIEW R CODE AND DATA&#xD;</description>
+    </item>
+    <item>
+      <title>Quantifying harvested wood products and forest management in carbon analyses</title>
+      <link>http://localhost:4321/events/2023-03-19-quantifying-harvested-wood-products-and-forest-management-in-carbon-analyses/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-03-19-quantifying-harvested-wood-products-and-forest-management-in-carbon-analyses/</guid>
+      <description>There remains great interest in understanding the role of forest management in storing and sequestering carbon. While researchers and land managers have a number of tools available to quantify the impacts of forest management on carbon stocks in growing forests, fewer tools are available that depict the carbon stored “off site” in the form of harvested wood products. These can include short-lived products (i.e., paper or pulp) or long-lived ones (i.</description>
+    </item>
+    <item>
+      <title>Recent research insights in forest biomass and carbon estimation</title>
+      <link>http://localhost:4321/events/2022-12-01-recent-research-insights-in-forest-biomass-and-carbon-estimation/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2022-12-01-recent-research-insights-in-forest-biomass-and-carbon-estimation/</guid>
+      <description>Recent research within the forest biometrics community is helping to generate more precise estimates of forest carbon using new methods and technologies. This presentation was delivered to the California Air Resources Board Public Workshop on US Forest Projects Compliance Offset Protocol on November 30, 2022.&#xA;READ THE SLIDES.</description>
+    </item>
     <item>
       <title>A review of the log trucking workforce and comparisons to other industries</title>
-      <link>https://arbor-analytics.com/events/2022-09-27-a-review-of-the-log-trucking-workforce-and-comparisons-to-other-industries/</link>
+      <link>http://localhost:4321/events/2022-09-27-a-review-of-the-log-trucking-workforce-and-comparisons-to-other-industries/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2022-09-27-a-review-of-the-log-trucking-workforce-and-comparisons-to-other-industries/</guid>
-      <description>The trucking industry is faced with a number of challenges, including recruiting workers, pending retirements, and an increase in demand due to e-commerce sales. These slides provide an overview of the log trucking workforce and were presented at the Forest Resources Association’s Fall Board Meeting in Portland, ME.
-READ THE SLIDES.</description>
+      <guid>http://localhost:4321/events/2022-09-27-a-review-of-the-log-trucking-workforce-and-comparisons-to-other-industries/</guid>
+      <description>The trucking industry is faced with a number of challenges, including recruiting workers, pending retirements, and an increase in demand due to e-commerce sales. These slides provide an overview of the log trucking workforce and were presented at the Forest Resources Association’s Fall Board Meeting in Portland, ME.&#xA;READ THE SLIDES.</description>
     </item>
-    
     <item>
       <title>Data Science for Forestry Applications</title>
-      <link>https://arbor-analytics.com/events/2022-09-27-data-science-for-forestry-applications/</link>
+      <link>http://localhost:4321/events/2022-09-27-data-science-for-forestry-applications/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2022-09-27-data-science-for-forestry-applications/</guid>
+      <guid>http://localhost:4321/events/2022-09-27-data-science-for-forestry-applications/</guid>
       <description>This hands-on workshop showcased how data science can be used in forestry applications. Participants learned how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop was perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
     </item>
-    
     <item>
       <title>Pandemic assistance to the forest industry: a summary</title>
-      <link>https://arbor-analytics.com/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</link>
+      <link>http://localhost:4321/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</guid>
-      <description>Forest products and timber harvesting and hauling businesses secured nearly $5 billion of federal funds through the Paycheck Protection Program and Pandemic Assistance to Timber Harvesters and Haulers programs to combat economic challenges presented by the COVID-19 pandemic. These slides were presented at the 2022 Society of American Foresters Convention in Baltimore, MD.
-READ THE SLIDES.</description>
+      <guid>http://localhost:4321/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</guid>
+      <description>Forest products and timber harvesting and hauling businesses secured nearly $5 billion of federal funds through the Paycheck Protection Program and Pandemic Assistance to Timber Harvesters and Haulers programs to combat economic challenges presented by the COVID-19 pandemic. These slides were presented at the 2022 Society of American Foresters Convention in Baltimore, MD.&#xA;READ THE SLIDES.</description>
     </item>
-    
     <item>
       <title>Potential improvements to support forest carbon management and accounting</title>
-      <link>https://arbor-analytics.com/events/2022-04-23-potential-improvements-to-support-forest-carbon-management-and-accounting/</link>
+      <link>http://localhost:4321/events/2022-04-23-potential-improvements-to-support-forest-carbon-management-and-accounting/</link>
       <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2022-04-23-potential-improvements-to-support-forest-carbon-management-and-accounting/</guid>
-      <description>Improvements are needed in the current forest inventory and monitoring programs to support forest carbon management and accounting. This presentation was a part of a Special Focus session of the Forest Inventory and Analysis National User Group.
-READ THE SLIDES.</description>
+      <guid>http://localhost:4321/events/2022-04-23-potential-improvements-to-support-forest-carbon-management-and-accounting/</guid>
+      <description>Improvements are needed in the current forest inventory and monitoring programs to support forest carbon management and accounting. This presentation was a part of a Special Focus session of the Forest Inventory and Analysis National User Group.&#xA;READ THE SLIDES.</description>
     </item>
-    
     <item>
       <title>Forest carbon Emerging opportunities in Lake States Forests</title>
-      <link>https://arbor-analytics.com/events/2021-12-10-forest-carbon-emerging-opportunities-in-lake-states-forests/</link>
+      <link>http://localhost:4321/events/2021-12-10-forest-carbon-emerging-opportunities-in-lake-states-forests/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2021-12-10-forest-carbon-emerging-opportunities-in-lake-states-forests/</guid>
-      <description>Forest carbon presents many opportunities for forest resources professionals. This presentation was a part of a panel at the Forest Resources Association’s Lake States Winter Meeting on forest carbon.
-READ THE SLIDES.</description>
+      <guid>http://localhost:4321/events/2021-12-10-forest-carbon-emerging-opportunities-in-lake-states-forests/</guid>
+      <description>Forest carbon presents many opportunities for forest resources professionals. This presentation was a part of a panel at the Forest Resources Association’s Lake States Winter Meeting on forest carbon.&#xA;READ THE SLIDES.</description>
     </item>
-    
     <item>
       <title>Can you get paid for the carbon in your woods?</title>
-      <link>https://arbor-analytics.com/events/2021-03-20-can-you-get-paid-for-the-carbon-in-your-woods/</link>
+      <link>http://localhost:4321/events/2021-03-20-can-you-get-paid-for-the-carbon-in-your-woods/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2021-03-20-can-you-get-paid-for-the-carbon-in-your-woods/</guid>
-      <description>Forest carbon markets are becoming a popular source of revenue for private woodland owners. Learn about the role of carbon sequestration in forests and how carbon markets might work for Minnesota landowners.
-This presentation and discussion and discussion was a part of UMN Extension’s Fridays with a Forester series.
-WATCH THIS WEBINAR presented by Matt Russell on March 19, 2021.
-READ THE SLIDES.</description>
+      <guid>http://localhost:4321/events/2021-03-20-can-you-get-paid-for-the-carbon-in-your-woods/</guid>
+      <description>Forest carbon markets are becoming a popular source of revenue for private woodland owners. Learn about the role of carbon sequestration in forests and how carbon markets might work for Minnesota landowners.&#xA;This presentation and discussion and discussion was a part of UMN Extension’s Fridays with a Forester series.&#xA;WATCH THIS WEBINAR presented by Matt Russell on March 19, 2021.&#xA;READ THE SLIDES.</description>
     </item>
-    
     <item>
       <title>How to add more &#34;carbon &#34; to your vocubulary</title>
-      <link>https://arbor-analytics.com/events/2021-01-23-how-to-add-more-carbon-to-your-vocubulary/</link>
+      <link>http://localhost:4321/events/2021-01-23-how-to-add-more-carbon-to-your-vocubulary/</link>
       <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2021-01-23-how-to-add-more-carbon-to-your-vocubulary/</guid>
-      <description>Carbon may be regarded as the most highly coveted forest product of the 2020’s. A benefit of trees is that they store and sequester carbon dioxide from the atmosphere, making forests a natural climate solution.
-While foresters are familiar with measuring the number of boards and cords in a forest, less is known about how much carbon is found in an acre of woods. With a number of emerging markets that seek to pay landowners for the carbon in their trees, an increased understanding of the concepts and numbers behind forest carbon is needed.</description>
+      <guid>http://localhost:4321/events/2021-01-23-how-to-add-more-carbon-to-your-vocubulary/</guid>
+      <description>Carbon may be regarded as the most highly coveted forest product of the 2020’s. A benefit of trees is that they store and sequester carbon dioxide from the atmosphere, making forests a natural climate solution.&#xA;While foresters are familiar with measuring the number of boards and cords in a forest, less is known about how much carbon is found in an acre of woods. With a number of emerging markets that seek to pay landowners for the carbon in their trees, an increased understanding of the concepts and numbers behind forest carbon is needed.</description>
     </item>
-    
     <item>
       <title>R Statistical Software for Invasive Species Applications</title>
-      <link>https://arbor-analytics.com/events/r-statistical-software-for-invasive-species-applications/</link>
+      <link>http://localhost:4321/events/r-statistical-software-for-invasive-species-applications/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/r-statistical-software-for-invasive-species-applications/</guid>
+      <guid>http://localhost:4321/events/r-statistical-software-for-invasive-species-applications/</guid>
       <description>Invasive species professionals are increasingly using data in new and complex ways. This hands-on workshop will provide an introduction to R software and how it can be used to acquire, analyze, and visualize invasive species data. This workshop will encourage and empower professionals to better use data to make strategic decisions about invasive species. It will be especially valuable to graduate students who are at an early stage in their programs and professionals seeking to learn about the software and how it can be used in their work.</description>
     </item>
-    
     <item>
       <title>Data Science for Forestry Applications</title>
-      <link>https://arbor-analytics.com/events/try2/</link>
+      <link>http://localhost:4321/events/try2/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/try2/</guid>
+      <guid>http://localhost:4321/events/try2/</guid>
       <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
     </item>
-    
     <item>
       <title>Getting down with pagedown</title>
-      <link>https://arbor-analytics.com/events/getting-down-with-pagedown/</link>
+      <link>http://localhost:4321/events/getting-down-with-pagedown/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/getting-down-with-pagedown/</guid>
-      <description>This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.
-SlidesGithub repositoryExamples with pagedown</description>
+      <guid>http://localhost:4321/events/getting-down-with-pagedown/</guid>
+      <description>&#xD;This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.&#xA;Slides&#xD;Github repository&#xD;Examples with pagedown&#xD;</description>
     </item>
-    
   </channel>
 </rss>

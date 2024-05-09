@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>trillion trees on </title>
-    <link>https://arbor-analytics.com/tags/trillion-trees/</link>
-    <description>Recent content in trillion trees on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Trillion Trees on </title>
+    <link>http://localhost:4321/tags/trillion-trees/</link>
+    <description>Recent content in Trillion Trees on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/trillion-trees/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/trillion-trees/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How much carbon is stored in one trillion trees?</title>
-      <link>https://arbor-analytics.com/post/how-much-carbon-is-stored-in-a-trillion-trees/</link>
+      <link>http://localhost:4321/post/how-much-carbon-is-stored-in-a-trillion-trees/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-much-carbon-is-stored-in-a-trillion-trees/</guid>
-      <description>The short answer: About 5.7 times as much than is currently stored in forests in the lower 48 US states and Alaska. One trillion trees equates to about 101 billion metric tons of carbon stored.The Trillion Trees Campaign has been widespread in the news recently. The United States has committed to the initiative, announced at the World Economic Forum in January 2020 and mentioned during President Trump’s annual State of the Union address on 4 February 2020.</description>
+      <guid>http://localhost:4321/post/how-much-carbon-is-stored-in-a-trillion-trees/</guid>
+      <description>The short answer: About 5.7 times as much than is currently stored in forests in the lower 48 US states and Alaska. One trillion trees equates to about 101 billion metric tons of carbon stored.&#xD;The Trillion Trees Campaign has been widespread in the news recently. The United States has committed to the initiative, announced at the World Economic Forum in January 2020 and mentioned during President Trump’s annual State of the Union address on 4 February 2020.</description>
     </item>
-    
   </channel>
 </rss>

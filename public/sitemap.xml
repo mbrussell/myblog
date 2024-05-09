@@ -2,796 +2,1013 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://arbor-analytics.com/</loc>
+    <loc>http://localhost:4321/</loc>
+    <lastmod>2024-04-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2024-04-24-a-primer-on-carbon-sequestration-rates-in-us-forests/</loc>
+    <lastmod>2024-04-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/</loc>
+    <lastmod>2024-04-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/forest-carbon/</loc>
+    <lastmod>2024-04-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/</loc>
+    <lastmod>2024-04-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/for-fun/</loc>
+    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/maple-syrup/</loc>
+    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/nontimber-forest-products/</loc>
+    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2024-04-10-recapping-the-russell-s-2024-maple-syrup-season/</loc>
+    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/</loc>
+    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/events/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/forest-products/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/harvested-wood-products/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/events/2024-03-28-placing-harvested-wood-products-in-the-forest-carbon-discussion/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/timber-harvesting/</loc>
+    <lastmod>2024-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/analytics/</loc>
+    <lastmod>2024-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/fia/</loc>
+    <lastmod>2024-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/forest-carbon/</loc>
+    <lastmod>2024-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/forest-inventory/</loc>
+    <lastmod>2024-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/forest-inventory-and-analysis/</loc>
+    <lastmod>2024-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/forest-measurements/</loc>
+    <lastmod>2024-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/nsvb/</loc>
+    <lastmod>2024-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/</loc>
+    <lastmod>2024-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/about/</loc>
+    <lastmod>2024-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/newsletter/</loc>
+    <lastmod>2024-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/podcast/</loc>
+    <lastmod>2024-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</loc>
+    <lastmod>2024-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/analytics/</loc>
+    <lastmod>2024-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/forest-ownership/</loc>
+    <lastmod>2024-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/forestland-area/</loc>
+    <lastmod>2024-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/climate/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/forest-industry/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/forest-products/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/stumpage/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/covid/</loc>
+    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/economics/</loc>
+    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/forestry/</loc>
+    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</loc>
+    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/pandemic/</loc>
+    <lastmod>2024-01-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/behind-the-curtain/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/blog/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-12-22-most-popular-blog-posts-and-podcasts-in-2023/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/podcast/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/publishing/</loc>
+    <lastmod>2023-12-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/christmas/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/data-visualization/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/data-viz/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/rockefeller-tree/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/tree/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/tree-height/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-12-17-rockefeller-tree/</loc>
+    <lastmod>2023-12-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/carbon-markets/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/events/2023-12-08-unlocking-value-harvested-wood-products-in-forest-carbon-programs/</loc>
+    <lastmod>2023-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/data-science/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/r/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/r-packages/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/statistics/</loc>
+    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/</loc>
+    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/data-management/</loc>
+    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/ecodivision/</loc>
+    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/carbon/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/forest-growth-and-yield/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/fvs/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/growth-and-yield/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/</loc>
+    <lastmod>2023-10-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/evalidator/</loc>
+    <lastmod>2023-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-10-25-using-r-and-python-to-get-forest-resource-data-through-the-evalidator-api/</loc>
+    <lastmod>2023-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/carbon-accounting/</loc>
+    <lastmod>2023-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/events/2023-10-16-harvested-wood-products-and-forest-carbon/</loc>
+    <lastmod>2023-10-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/forestsamplr/</loc>
+    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/sampling/</loc>
+    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/sampling/</loc>
+    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-09-21-selecting-the-number-of-plots-to-measure-in-a-forest-carbon-inventory/</loc>
+    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-09-13-recent-changes-in-the-tidyverse/</loc>
+    <lastmod>2023-09-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/tidyverse/</loc>
+    <lastmod>2023-09-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/adaptive-silviculture/</loc>
+    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/climate-change/</loc>
+    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/</loc>
+    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/silviculture/</loc>
+    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-07-31-linear-quantile-mixed-models-applications-in-forestry/</loc>
+    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/mixed-models/</loc>
+    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/quantile-regression/</loc>
+    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/statistics/</loc>
+    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-07-15-it-s-okay-to-look-at-solutions-for-statistics-problems/</loc>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/stats4nr/</loc>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/teaching-statistics/</loc>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/accessibility/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/accessibility/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/alt-text/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-06-30-making-r-graphs-more-accessible-using-brailler/</loc>
+    <lastmod>2023-06-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/guest-workers/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/h-2b/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-06-15-h-2b-guest-workers-in-forestry-a-review-of-2022-data/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/workforce/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/carb/</loc>
+    <lastmod>2023-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/carbon/</loc>
+    <lastmod>2023-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/carbon-credits/</loc>
+    <lastmod>2023-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-05-30-price-of-carbon-increases-slightly-at-carb-s-may-auction/</loc>
+    <lastmod>2023-05-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/forest-measurements/</loc>
+    <lastmod>2023-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast/</loc>
+    <lastmod>2023-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/tree-planting/</loc>
+    <lastmod>2023-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/tree-species/</loc>
+    <lastmod>2023-05-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/events/2023-05-22-sampling-design-and-statistical-approaches-in-forestry/</loc>
+    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/tidymodels/</loc>
+    <lastmod>2023-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-04-21-lorey-s-height-the-remote-sensing-way-to-estimate-tree-height/</loc>
+    <lastmod>2023-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/rfia/</loc>
+    <lastmod>2023-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/site-index/</loc>
+    <lastmod>2023-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/sitreee/</loc>
+    <lastmod>2023-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/bootstrap/</loc>
+    <lastmod>2023-04-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/</loc>
+    <lastmod>2023-04-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-03-21-how-much-of-maine-s-forests-are-enrolled-in-carbon-programs/</loc>
+    <lastmod>2023-03-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/maine/</loc>
+    <lastmod>2023-03-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/events/2023-03-19-quantifying-harvested-wood-products-and-forest-management-in-carbon-analyses/</loc>
+    <lastmod>2023-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-03-02-a-look-at-the-price-of-carbon-from-february-s-carb-auction/</loc>
+    <lastmod>2023-03-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-02-15-imputing-missing-tree-heights-from-a-forest-inventory/</loc>
+    <lastmod>2023-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/regression/</loc>
+    <lastmod>2023-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-02-09-calculating-carbon-in-standing-dead-trees/</loc>
+    <lastmod>2023-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/timber-prices/</loc>
+    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-01-27-timberlands-as-an-investment-continue-to-rise/</loc>
+    <lastmod>2023-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/citydao/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/dao/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2023-01-05-forestland-on-the-blockchain-a-new-prospect-for-private-forest-owners/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/categories/forestry/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020/</loc>
+    <lastmod>2022-12-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2022-12-21-forest-carbon-cheat-sheet-updated-for-2022/</loc>
+    <lastmod>2022-12-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2022-12-21-price-of-carbon-remains-steady-since-last-quarter/</loc>
+    <lastmod>2022-12-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/</loc>
+    <lastmod>2022-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/events/2022-12-01-recent-research-insights-in-forest-biomass-and-carbon-estimation/</loc>
+    <lastmod>2022-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/tags/datamart/</loc>
     <lastmod>2022-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/analytics/</loc>
+    <loc>http://localhost:4321/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</loc>
     <lastmod>2022-11-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/analytics/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/categories/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/datamart/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/evalidator/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/forest-inventory/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/forest-inventory-and-analysis/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/forest-measurements/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/forestry/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/</loc>
-    <lastmod>2022-11-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/energy/</loc>
+    <loc>http://localhost:4321/tags/energy/</loc>
     <lastmod>2022-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/forest-products/</loc>
+    <loc>http://localhost:4321/post/2022-11-09-home-heating-with-wood/</loc>
     <lastmod>2022-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-11-09-home-heating-with-wood/</loc>
+    <loc>http://localhost:4321/tags/wood/</loc>
     <lastmod>2022-11-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/wood/</loc>
-    <lastmod>2022-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/data-science/</loc>
+    <loc>http://localhost:4321/post/2022-10-20-how-to-spot-poor-data-analyses/</loc>
     <lastmod>2022-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/data-viz/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/statistics/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/teaching-statistics/</loc>
-    <lastmod>2022-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</loc>
+    <loc>http://localhost:4321/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</loc>
     <lastmod>2022-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/p-values/</loc>
+    <loc>http://localhost:4321/tags/p-values/</loc>
     <lastmod>2022-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/statistics/</loc>
-    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/events/2022-09-27-a-review-of-the-log-trucking-workforce-and-comparisons-to-other-industries/</loc>
+    <loc>http://localhost:4321/events/2022-09-27-a-review-of-the-log-trucking-workforce-and-comparisons-to-other-industries/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/events/2022-09-27-data-science-for-forestry-applications/</loc>
+    <loc>http://localhost:4321/events/2022-09-27-data-science-for-forestry-applications/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/events/</loc>
+    <loc>http://localhost:4321/categories/forest-industry/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/forest-industry/</loc>
+    <loc>http://localhost:4321/post/how-many-trees-make-a-mass-timber-building/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/forest-industry/</loc>
+    <loc>http://localhost:4321/tags/mass-timber/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</loc>
+    <loc>http://localhost:4321/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/mass-timber/</loc>
+    <loc>http://localhost:4321/tags/ppp-loans/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/pandemic/</loc>
+    <loc>http://localhost:4321/categories/prediction/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</loc>
+    <loc>http://localhost:4321/tags/transportation/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/ppp-loans/</loc>
+    <loc>http://localhost:4321/tags/trucking/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/prediction/</loc>
+    <loc>http://localhost:4321/tags/workshop/</loc>
     <lastmod>2022-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/r/</loc>
-    <lastmod>2022-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/regression/</loc>
-    <lastmod>2022-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/timber-harvesting/</loc>
-    <lastmod>2022-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/transportation/</loc>
-    <lastmod>2022-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/trucking/</loc>
-    <lastmod>2022-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/workshop/</loc>
-    <lastmod>2022-09-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/carb/</loc>
+    <loc>http://localhost:4321/post/2022-09-07-price-of-carbon-in-carb-decreases-slightly/</loc>
     <lastmod>2022-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/carbon/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/categories/carbon/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/carbon-credits/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/carbon-markets/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/forest-carbon/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2022-09-07-price-of-carbon-in-carb-decreases-slightly/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/about/</loc>
-    <lastmod>2022-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/newsletter/</loc>
-    <lastmod>2022-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/careers/</loc>
+    <loc>http://localhost:4321/tags/careers/</loc>
     <lastmod>2022-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-08-15-comparing-logging-trucker-wages-to-other-trucking-industries/</loc>
+    <loc>http://localhost:4321/post/2022-08-15-comparing-logging-trucker-wages-to-other-trucking-industries/</loc>
     <lastmod>2022-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/jobs/</loc>
+    <loc>http://localhost:4321/tags/jobs/</loc>
     <lastmod>2022-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/logging/</loc>
+    <loc>http://localhost:4321/tags/logging/</loc>
     <lastmod>2022-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/logging/</loc>
+    <loc>http://localhost:4321/categories/logging/</loc>
     <lastmod>2022-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/wages/</loc>
+    <loc>http://localhost:4321/tags/wages/</loc>
     <lastmod>2022-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/forest-measurements/</loc>
+    <loc>http://localhost:4321/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/</loc>
     <lastmod>2022-08-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/</loc>
-    <lastmod>2022-08-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/growth-and-yield/</loc>
-    <lastmod>2022-08-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</loc>
+    <loc>http://localhost:4321/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</loc>
     <lastmod>2022-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/podcast/</loc>
-    <lastmod>2022-07-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/books/</loc>
+    <loc>http://localhost:4321/tags/books/</loc>
     <lastmod>2022-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/education/</loc>
+    <loc>http://localhost:4321/tags/education/</loc>
     <lastmod>2022-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</loc>
+    <loc>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</loc>
     <lastmod>2022-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/stats4nr/</loc>
-    <lastmod>2022-07-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2022-07-14-a-forest-carbon-data-dashboard-for-minnesota/</loc>
+    <loc>http://localhost:4321/post/2022-07-14-a-forest-carbon-data-dashboard-for-minnesota/</loc>
     <lastmod>2022-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/economics/</loc>
+    <loc>http://localhost:4321/post/2022-06-03-price-of-carbon-hits-a-new-record-high/</loc>
     <lastmod>2022-06-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-06-03-price-of-carbon-hits-a-new-record-high/</loc>
-    <lastmod>2022-06-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/big-tree/</loc>
+    <loc>http://localhost:4321/tags/big-tree/</loc>
     <lastmod>2022-05-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</loc>
+    <loc>http://localhost:4321/post/2022-05-23-how-big-are-the-big-tree-champions/</loc>
     <lastmod>2022-05-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/data-import/</loc>
+    <loc>http://localhost:4321/tags/data-import/</loc>
     <lastmod>2022-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/data-management/</loc>
+    <loc>http://localhost:4321/post/2022-05-19-reading-in-data-quickly-in-r/</loc>
     <lastmod>2022-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</loc>
-    <lastmod>2022-05-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/categories/forest-products/</loc>
+    <loc>http://localhost:4321/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</loc>
     <lastmod>2022-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/harvested-wood-products/</loc>
+    <loc>http://localhost:4321/events/2022-04-23-potential-improvements-to-support-forest-carbon-management-and-accounting/</loc>
     <lastmod>2022-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</loc>
-    <lastmod>2022-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/events/2022-04-23-potential-improvements-to-support-forest-carbon-management-and-accounting/</loc>
-    <lastmod>2022-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2022-04-20-known-unknowns-unknown-unknowns/</loc>
+    <loc>http://localhost:4321/post/2022-04-20-known-unknowns-unknown-unknowns/</loc>
     <lastmod>2022-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/professional-development/</loc>
+    <loc>http://localhost:4321/categories/professional-development/</loc>
     <lastmod>2022-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/uncertainty/</loc>
+    <loc>http://localhost:4321/tags/uncertainty/</loc>
     <lastmod>2022-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-04-10-carbon-credits-quantity-versus-quality/</loc>
+    <loc>http://localhost:4321/post/2022-04-10-carbon-credits-quantity-versus-quality/</loc>
     <lastmod>2022-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</loc>
+    <loc>http://localhost:4321/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</loc>
     <lastmod>2022-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-03-10-forest-carbon-in-maine-an-introduction/</loc>
+    <loc>http://localhost:4321/post/2022-03-10-forest-carbon-in-maine-an-introduction/</loc>
     <lastmod>2022-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</loc>
+    <loc>http://localhost:4321/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</loc>
     <lastmod>2022-02-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/forestry/</loc>
+    <loc>http://localhost:4321/post/2022-02-19-forestry-is-a-stem-discipline/</loc>
     <lastmod>2022-02-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-02-19-forestry-is-a-stem-discipline/</loc>
+    <loc>http://localhost:4321/tags/stem/</loc>
     <lastmod>2022-02-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/stem/</loc>
-    <lastmod>2022-02-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</loc>
+    <loc>http://localhost:4321/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</loc>
     <lastmod>2022-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/timber-prices/</loc>
+    <loc>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</loc>
     <lastmod>2022-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</loc>
-    <lastmod>2022-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</loc>
+    <loc>http://localhost:4321/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</loc>
     <lastmod>2022-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/r-packages/</loc>
-    <lastmod>2022-01-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/statitics/</loc>
+    <loc>http://localhost:4321/tags/statitics/</loc>
     <lastmod>2021-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</loc>
+    <loc>http://localhost:4321/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</loc>
     <lastmod>2021-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/behind-the-curtain/</loc>
+    <loc>http://localhost:4321/tags/behind-the-curtain/</loc>
     <lastmod>2021-12-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/behind-the-curtain/</loc>
+    <loc>http://localhost:4321/post/2021-12-17-most-read-articles-in-2021/</loc>
     <lastmod>2021-12-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/blog/</loc>
-    <lastmod>2021-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2021-12-17-most-read-articles-in-2021/</loc>
-    <lastmod>2021-12-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/events/2021-12-10-forest-carbon-emerging-opportunities-in-lake-states-forests/</loc>
+    <loc>http://localhost:4321/events/2021-12-10-forest-carbon-emerging-opportunities-in-lake-states-forests/</loc>
     <lastmod>2021-12-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</loc>
+    <loc>http://localhost:4321/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</loc>
     <lastmod>2021-12-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/climate/</loc>
+    <loc>http://localhost:4321/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</loc>
     <lastmod>2021-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/climate-change/</loc>
+    <loc>http://localhost:4321/tags/communicating-data/</loc>
     <lastmod>2021-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</loc>
-    <lastmod>2021-11-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/communicating-data/</loc>
-    <lastmod>2021-11-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</loc>
+    <loc>http://localhost:4321/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</loc>
     <lastmod>2021-11-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/guest-workers/</loc>
+    <loc>http://localhost:4321/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/h-2b/</loc>
+    <loc>http://localhost:4321/tags/policy/</loc>
     <lastmod>2021-11-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/policy/</loc>
-    <lastmod>2021-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/random-forests/</loc>
+    <loc>http://localhost:4321/tags/random-forests/</loc>
     <lastmod>2021-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</loc>
+    <loc>http://localhost:4321/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</loc>
     <lastmod>2021-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/citizen-data-science/</loc>
+    <loc>http://localhost:4321/tags/citizen-data-science/</loc>
     <lastmod>2021-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</loc>
+    <loc>http://localhost:4321/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</loc>
     <lastmod>2021-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-08-22-if-50-of-a-tree-s-biomass-is-carbon-what-s-the-other-half/</loc>
+    <loc>http://localhost:4321/post/2021-08-22-if-50-of-a-tree-s-biomass-is-carbon-what-s-the-other-half/</loc>
     <lastmod>2021-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</loc>
+    <loc>http://localhost:4321/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</loc>
     <lastmod>2021-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-08-08-forest-carbon-key-definitions-and-numbers-in-perspective/</loc>
+    <loc>http://localhost:4321/post/2021-08-08-forest-carbon-key-definitions-and-numbers-in-perspective/</loc>
     <lastmod>2021-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/drought/</loc>
+    <loc>http://localhost:4321/tags/drought/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</loc>
+    <loc>http://localhost:4321/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/forest-health/</loc>
+    <loc>http://localhost:4321/categories/forest-health/</loc>
     <lastmod>2021-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/citations/</loc>
+    <loc>http://localhost:4321/tags/citations/</loc>
     <lastmod>2021-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/faculty/</loc>
+    <loc>http://localhost:4321/tags/faculty/</loc>
     <lastmod>2021-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/peer-review/</loc>
+    <loc>http://localhost:4321/tags/peer-review/</loc>
     <lastmod>2021-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</loc>
+    <loc>http://localhost:4321/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</loc>
     <lastmod>2021-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/research/</loc>
+    <loc>http://localhost:4321/tags/research/</loc>
     <lastmod>2021-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/science/</loc>
+    <loc>http://localhost:4321/tags/science/</loc>
     <lastmod>2021-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/</loc>
+    <loc>http://localhost:4321/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/</loc>
     <lastmod>2021-06-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</loc>
+    <loc>http://localhost:4321/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</loc>
     <lastmod>2021-06-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</loc>
+    <loc>http://localhost:4321/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</loc>
     <lastmod>2021-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/standard-deviation/</loc>
+    <loc>http://localhost:4321/tags/standard-deviation/</loc>
     <lastmod>2021-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</loc>
+    <loc>http://localhost:4321/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</loc>
     <lastmod>2021-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/</loc>
+    <loc>http://localhost:4321/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/</loc>
     <lastmod>2021-05-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</loc>
+    <loc>http://localhost:4321/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</loc>
     <lastmod>2021-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</loc>
+    <loc>http://localhost:4321/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</loc>
     <lastmod>2021-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/data-visualization/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/categories/data-wrangling/</loc>
+    <loc>http://localhost:4321/categories/data-wrangling/</loc>
     <lastmod>2021-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/</loc>
+    <loc>http://localhost:4321/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/</loc>
     <lastmod>2021-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/tidyfia/</loc>
+    <loc>http://localhost:4321/tags/tidyfia/</loc>
     <lastmod>2021-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/events/2021-03-20-can-you-get-paid-for-the-carbon-in-your-woods/</loc>
+    <loc>http://localhost:4321/events/2021-03-20-can-you-get-paid-for-the-carbon-in-your-woods/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-03-20-an-overview-of-forest-carbon-markets-for-small-landowners/</loc>
+    <loc>http://localhost:4321/post/2021-03-20-an-overview-of-forest-carbon-markets-for-small-landowners/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/webinar/</loc>
+    <loc>http://localhost:4321/tags/webinar/</loc>
     <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/pie-graphs/</loc>
+    <loc>http://localhost:4321/tags/pie-graphs/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</loc>
+    <loc>http://localhost:4321/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</loc>
     <lastmod>2021-03-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/demographics/</loc>
+    <loc>http://localhost:4321/tags/demographics/</loc>
     <lastmod>2021-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/forest-ownership/</loc>
+    <loc>http://localhost:4321/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</loc>
     <lastmod>2021-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</loc>
-    <lastmod>2021-02-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</loc>
+    <loc>http://localhost:4321/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</loc>
     <lastmod>2021-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/meateater/</loc>
+    <loc>http://localhost:4321/tags/meateater/</loc>
     <lastmod>2021-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/podcast/</loc>
-    <lastmod>2021-02-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</loc>
+    <loc>http://localhost:4321/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</loc>
     <lastmod>2021-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/events/2021-01-23-how-to-add-more-carbon-to-your-vocubulary/</loc>
+    <loc>http://localhost:4321/events/2021-01-23-how-to-add-more-carbon-to-your-vocubulary/</loc>
     <lastmod>2021-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</loc>
+    <loc>http://localhost:4321/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</loc>
     <lastmod>2021-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/climate/</loc>
+    <loc>http://localhost:4321/categories/climate/</loc>
     <lastmod>2021-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</loc>
+    <loc>http://localhost:4321/post/climate-21-what-it-says-about-forest-carbon/</loc>
     <lastmod>2021-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/greenhouse-gases/</loc>
+    <loc>http://localhost:4321/tags/greenhouse-gases/</loc>
     <lastmod>2021-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</loc>
+    <loc>http://localhost:4321/post/economic-contribution-of-forestry-employees-across-us-states/</loc>
     <lastmod>2020-12-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/most-read-posts-in-2020/</loc>
+    <loc>http://localhost:4321/post/most-read-posts-in-2020/</loc>
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/disturbance/</loc>
+    <loc>http://localhost:4321/tags/disturbance/</loc>
     <lastmod>2020-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/forest-carbon-markets-and-short-lived-trees/</loc>
+    <loc>http://localhost:4321/post/forest-carbon-markets-and-short-lived-trees/</loc>
     <lastmod>2020-11-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/coverting-wood-scaled-as-weight-to-carbon/</loc>
+    <loc>http://localhost:4321/post/coverting-wood-scaled-as-weight-to-carbon/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/timber-cruise/</loc>
+    <loc>http://localhost:4321/tags/timber-cruise/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/tidytext/</loc>
+    <loc>http://localhost:4321/tags/tidytext/</loc>
     <lastmod>2020-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/trends-in-forest-carbon-literature/</loc>
+    <loc>http://localhost:4321/post/trends-in-forest-carbon-literature/</loc>
     <lastmod>2020-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/invasive-species/</loc>
+    <loc>http://localhost:4321/tags/invasive-species/</loc>
     <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/events/r-statistical-software-for-invasive-species-applications/</loc>
+    <loc>http://localhost:4321/events/r-statistical-software-for-invasive-species-applications/</loc>
     <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/mixed-models/</loc>
+    <loc>http://localhost:4321/post/mixed-models-a-primer/</loc>
     <lastmod>2020-10-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/mixed-models-a-primer/</loc>
-    <lastmod>2020-10-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/ask-how-how-want-your-data-and-be-specific/</loc>
+    <loc>http://localhost:4321/post/ask-how-how-want-your-data-and-be-specific/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/data-management/</loc>
+    <loc>http://localhost:4321/categories/data-management/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/classification/</loc>
+    <loc>http://localhost:4321/tags/classification/</loc>
     <lastmod>2020-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/machine-learning/</loc>
+    <loc>http://localhost:4321/tags/machine-learning/</loc>
     <lastmod>2020-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/machine-learning/</loc>
+    <loc>http://localhost:4321/categories/machine-learning/</loc>
     <lastmod>2020-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</loc>
+    <loc>http://localhost:4321/post/random-forests-in-a-nutshell/</loc>
     <lastmod>2020-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/new-state-level-forest-carbon-fact-sheets-available/</loc>
+    <loc>http://localhost:4321/post/new-state-level-forest-carbon-fact-sheets-available/</loc>
     <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</loc>
+    <loc>http://localhost:4321/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</loc>
     <lastmod>2020-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</loc>
+    <loc>http://localhost:4321/post/31-r-packages-for-forest-analysts/</loc>
     <lastmod>2020-08-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</loc>
+    <loc>http://localhost:4321/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</loc>
     <lastmod>2020-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/pivot_long/</loc>
+    <loc>http://localhost:4321/tags/pivot_long/</loc>
     <lastmod>2020-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/pivot_wide/</loc>
+    <loc>http://localhost:4321/tags/pivot_wide/</loc>
     <lastmod>2020-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/tidyr/</loc>
+    <loc>http://localhost:4321/tags/tidyr/</loc>
     <lastmod>2020-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/conference/</loc>
+    <loc>http://localhost:4321/tags/conference/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/conference/</loc>
+    <loc>http://localhost:4321/categories/conference/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/reflections-on-the-american-forestry-conference/</loc>
+    <loc>http://localhost:4321/post/reflections-on-the-american-forestry-conference/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/carbon-by-state/</loc>
+    <loc>http://localhost:4321/post/carbon-by-state/</loc>
     <lastmod>2020-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</loc>
+    <loc>http://localhost:4321/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/clustering/</loc>
+    <loc>http://localhost:4321/tags/clustering/</loc>
     <lastmod>2020-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/k-means/</loc>
+    <loc>http://localhost:4321/tags/k-means/</loc>
     <lastmod>2020-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</loc>
+    <loc>http://localhost:4321/post/using-clustering-with-logging-industry-data/</loc>
     <lastmod>2020-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/polar-area-diagram/</loc>
+    <loc>http://localhost:4321/tags/polar-area-diagram/</loc>
     <lastmod>2020-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</loc>
+    <loc>http://localhost:4321/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</loc>
     <lastmod>2020-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</loc>
+    <loc>http://localhost:4321/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</loc>
     <lastmod>2020-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/sentiment-analysis/</loc>
+    <loc>http://localhost:4321/tags/sentiment-analysis/</loc>
     <lastmod>2020-06-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</loc>
+    <loc>http://localhost:4321/post/getting-your-data-into-r-from-google-sheets/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/google-sheets/</loc>
+    <loc>http://localhost:4321/tags/google-sheets/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/googlesheets4/</loc>
+    <loc>http://localhost:4321/tags/googlesheets4/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</loc>
+    <loc>http://localhost:4321/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/presentations/</loc>
+    <loc>http://localhost:4321/tags/presentations/</loc>
     <lastmod>2020-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/how-to-calculate-carbon-from-board-feet-and-cords/</loc>
+    <loc>http://localhost:4321/post/how-to-calculate-carbon-from-board-feet-and-cords/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</loc>
+    <loc>http://localhost:4321/post/disentagling-the-interactions-between-site-index-and-disturbance/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/productivity/</loc>
+    <loc>http://localhost:4321/tags/productivity/</loc>
     <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/site-index/</loc>
-    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</loc>
+    <loc>http://localhost:4321/post/forest-carbon-cheat-sheet/</loc>
     <lastmod>2020-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/hiring/</loc>
+    <loc>http://localhost:4321/tags/hiring/</loc>
     <lastmod>2020-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</loc>
+    <loc>http://localhost:4321/post/the-decline-of-researchers-in-forest-science/</loc>
     <lastmod>2020-04-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/broom/</loc>
+    <loc>http://localhost:4321/tags/broom/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/fit-many-models-with-broom/</loc>
+    <loc>http://localhost:4321/post/fit-many-models-with-broom/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/modelr/</loc>
+    <loc>http://localhost:4321/tags/modelr/</loc>
     <lastmod>2020-03-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/tidyverse/</loc>
-    <lastmod>2020-03-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</loc>
+    <loc>http://localhost:4321/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/</loc>
+    <loc>http://localhost:4321/post/units-in-forest-carbon-numbers-a-primer/</loc>
     <lastmod>2020-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/how-much-carbon-is-stored-in-a-trillion-trees/</loc>
+    <loc>http://localhost:4321/post/how-much-carbon-is-stored-in-a-trillion-trees/</loc>
     <lastmod>2020-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/trillion-trees/</loc>
+    <loc>http://localhost:4321/tags/trillion-trees/</loc>
     <lastmod>2020-02-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</loc>
+    <loc>http://localhost:4321/post/four-ways-to-supercharge-your-scatterplots/</loc>
     <lastmod>2020-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/ggplot2/</loc>
+    <loc>http://localhost:4321/tags/ggplot2/</loc>
     <lastmod>2020-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/reporting/</loc>
+    <loc>http://localhost:4321/categories/reporting/</loc>
     <lastmod>2020-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/scatterplots/</loc>
+    <loc>http://localhost:4321/tags/scatterplots/</loc>
     <lastmod>2020-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</loc>
+    <loc>http://localhost:4321/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</loc>
     <lastmod>2020-01-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</loc>
+    <loc>http://localhost:4321/post/the-three-kinds-of-data-scientists-in-forestry/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/google-scholar/</loc>
+    <loc>http://localhost:4321/tags/google-scholar/</loc>
     <lastmod>2019-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/publishing/</loc>
+    <loc>http://localhost:4321/tags/web-scraping/</loc>
     <lastmod>2019-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/web-scraping/</loc>
+    <loc>http://localhost:4321/post/which-forest-biometrics-faculty-get-the-most-citations/</loc>
     <lastmod>2019-11-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</loc>
-    <lastmod>2019-11-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/binomial/</loc>
+    <loc>http://localhost:4321/tags/binomial/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/categories/distributions/</loc>
+    <loc>http://localhost:4321/categories/distributions/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/ruffed-grouse/</loc>
+    <loc>http://localhost:4321/tags/ruffed-grouse/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</loc>
+    <loc>http://localhost:4321/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/sampling/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/categories/sampling/</loc>
-    <lastmod>2019-11-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/events/try2/</loc>
+    <loc>http://localhost:4321/events/try2/</loc>
     <lastmod>2019-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/events/getting-down-with-pagedown/</loc>
+    <loc>http://localhost:4321/events/getting-down-with-pagedown/</loc>
     <lastmod>2019-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/how-to-created-paged-html-documents-with-pagedown/</loc>
+    <loc>http://localhost:4321/post/how-to-created-paged-html-documents-with-pagedown/</loc>
     <lastmod>2019-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/html/</loc>
+    <loc>http://localhost:4321/tags/html/</loc>
     <lastmod>2019-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/pagedown/</loc>
+    <loc>http://localhost:4321/tags/pagedown/</loc>
     <lastmod>2019-10-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/how-to-calculate-how-much-carbon-is-in-a-tree/</loc>
+    <loc>http://localhost:4321/post/how-to-calculate-how-much-carbon-is-in-a-tree/</loc>
     <lastmod>2019-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</loc>
+    <loc>http://localhost:4321/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</loc>
     <lastmod>2019-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/should-foresters-keep-saying-statistically-significant/</loc>
+    <loc>http://localhost:4321/post/should-foresters-keep-saying-statistically-significant/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/significance/</loc>
+    <loc>http://localhost:4321/tags/significance/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/inspectdf/</loc>
+    <loc>http://localhost:4321/tags/inspectdf/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</loc>
+    <loc>http://localhost:4321/post/explore-your-timber-cruise-data/</loc>
     <lastmod>2019-08-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</loc>
+    <loc>http://localhost:4321/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</loc>
     <lastmod>2019-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/moose/</loc>
+    <loc>http://localhost:4321/tags/moose/</loc>
     <lastmod>2019-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/overconfidence/</loc>
+    <loc>http://localhost:4321/tags/overconfidence/</loc>
     <lastmod>2019-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</loc>
+    <loc>http://localhost:4321/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</loc>
     <lastmod>2019-07-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/animation/</loc>
+    <loc>http://localhost:4321/tags/animation/</loc>
     <lastmod>2019-06-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/gif/</loc>
+    <loc>http://localhost:4321/tags/gif/</loc>
     <lastmod>2019-06-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/magick/</loc>
+    <loc>http://localhost:4321/tags/magick/</loc>
     <lastmod>2019-06-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</loc>
+    <loc>http://localhost:4321/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</loc>
     <lastmod>2019-06-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</loc>
+    <loc>http://localhost:4321/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</loc>
     <lastmod>2019-05-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/quantile-regression/</loc>
+    <loc>http://localhost:4321/tags/wait-times/</loc>
     <lastmod>2019-05-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/wait-times/</loc>
-    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/tags/forestsamplr/</loc>
+    <loc>http://localhost:4321/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</loc>
     <lastmod>2019-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</loc>
-    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arbor-analytics.com/post/deer-vehicle-accidents/</loc>
+    <loc>http://localhost:4321/post/deer-vehicle-accidents/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/deer/</loc>
+    <loc>http://localhost:4321/tags/deer/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/deer-vehicle-accidents/</loc>
+    <loc>http://localhost:4321/tags/deer-vehicle-accidents/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/hunting/</loc>
+    <loc>http://localhost:4321/tags/hunting/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/white-tailed-deer/</loc>
+    <loc>http://localhost:4321/tags/white-tailed-deer/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/presenting-regression-results-better/</loc>
+    <loc>http://localhost:4321/post/presenting-regression-results-better/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/better-ways-to-visualize-multi-modal-data/</loc>
+    <loc>http://localhost:4321/post/better-ways-to-visualize-multi-modal-data/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/geom_boxplot/</loc>
+    <loc>http://localhost:4321/tags/geom_boxplot/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/geom_violin/</loc>
+    <loc>http://localhost:4321/tags/geom_violin/</loc>
     <lastmod>2019-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/gather/</loc>
+    <loc>http://localhost:4321/tags/gather/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/tags/spread/</loc>
+    <loc>http://localhost:4321/tags/spread/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arbor-analytics.com/post/spreading-and-gathering-tree-data/</loc>
+    <loc>http://localhost:4321/post/spreading-and-gathering-tree-data/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:4321/presentations/pagedown_tcrug_17oct2019/</loc>
+  </url><url>
+    <loc>http://localhost:4321/presentations/</loc>
   </url>
 </urlset>

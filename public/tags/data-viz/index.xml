@@ -1,137 +1,117 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data viz on </title>
-    <link>https://arbor-analytics.com/tags/data-viz/</link>
-    <description>Recent content in Data viz on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Data Viz on </title>
+    <link>http://localhost:4321/tags/data-viz/</link>
+    <description>Recent content in Data Viz on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/data-viz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/data-viz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tree measurements on the Rockefeller Center Christmas Tree</title>
+      <link>http://localhost:4321/post/2023-12-17-rockefeller-tree/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-12-17-rockefeller-tree/</guid>
+      <description>The Rockefeller Center Christmas Tree in 2022.&#xD;One of my favorite things about the holiday season is the Rockefeller Christmas tree. Every year the Christmas tree at Rockefeller Center in New York City brings a wonderful burst of green amid the dull winter colors of a big city. Although I don’t live in New York, it’s fun to watch the tree lighting special on NBC and see it pop into some of my favorite holiday movies like Elf.</description>
+    </item>
+    <item>
+      <title>Making R graphs more accessible using BrailleR</title>
+      <link>http://localhost:4321/post/2023-06-30-making-r-graphs-more-accessible-using-brailler/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-06-30-making-r-graphs-more-accessible-using-brailler/</guid>
+      <description>An example use of alt text for a scatterplot made in R, with description of the scatterplot provided by the BrailleR package below the graph.&#xD;You might have seen these prompts while you’re uploading an image to social media or anywhere else on the internet: “Add alt text here.” Alt text describes what’s contained in an image or figure on a webpage. It’s useful because it can be used by screen readers for visually impaired people.</description>
+    </item>
+    <item>
+      <title>Stumpage prices for sawlogs in Maine, 2019-2020</title>
+      <link>http://localhost:4321/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020/</link>
+      <pubDate>Fri, 23 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020/</guid>
+      <description>Many states provide information on stumpage prices for commonly harvested timber species. This information provides land managers and landowners a sense of what current prices are for different timber species, products, and regions throughout a state.&#xA;The Maine Forest Service (MFS) collects data on timber sales through a notification process when timber sales occur. The last report from MFS contains over 1,600 reports from landowners that conducted a timber sale in 2020.</description>
+    </item>
     <item>
       <title>How to spot poor data analyses</title>
-      <link>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</link>
+      <link>http://localhost:4321/post/2022-10-20-how-to-spot-poor-data-analyses/</link>
       <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</guid>
-      <description>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.
-Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s autocorrecting feature had led to errors in 30% of gene list observations over a six year span.</description>
+      <guid>http://localhost:4321/post/2022-10-20-how-to-spot-poor-data-analyses/</guid>
+      <description>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.&#xA;Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s autocorrecting feature had led to errors in 30% of gene list observations over a six year span.</description>
     </item>
-    
     <item>
       <title>Timberlands as investments see biggest gain since 2014</title>
-      <link>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
+      <link>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
       <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
-      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.
-The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
+      <guid>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.&#xA;The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
     </item>
-    
     <item>
       <title>Visualizing forest carbon trends in the last thirty years</title>
-      <link>https://arbor-analytics.com/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</link>
+      <link>http://localhost:4321/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</link>
       <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</guid>
-      <description>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.
-The value of carbon in forests has seen a tremendous increase in recent years. The increased role of forests in meeting climate challenges has required analysts to have a better understanding of carbon attributes in the forests they work in.</description>
+      <guid>http://localhost:4321/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</guid>
+      <description>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.&#xA;The value of carbon in forests has seen a tremendous increase in recent years. The increased role of forests in meeting climate challenges has required analysts to have a better understanding of carbon attributes in the forests they work in.</description>
     </item>
-    
     <item>
       <title>Creating animated bar charts to visualize sawtimber prices</title>
-      <link>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</link>
+      <link>http://localhost:4321/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</link>
       <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</guid>
-      <description>If you’re on social media, you’ve probably seen animated bar charts. My favorite is one that shows the popularity of data science software through time.
-Animated bar graphs are effective when you have a categorical variable that has a different value at multiple time periods. This is why animated bar graphs work well to visualize time series data. These data might typically be represented by multiple lines on a graph that “cross” over time.</description>
+      <guid>http://localhost:4321/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</guid>
+      <description>If you’re on social media, you’ve probably seen animated bar charts. My favorite is one that shows the popularity of data science software through time.&#xA;Animated bar graphs are effective when you have a categorical variable that has a different value at multiple time periods. This is why animated bar graphs work well to visualize time series data. These data might typically be represented by multiple lines on a graph that “cross” over time.</description>
     </item>
-    
     <item>
       <title>Some data on why pie graphs are bad</title>
-      <link>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</link>
+      <link>http://localhost:4321/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</guid>
-      <description>“The only thing worse than a pie chart is several of them.” -Edward Tufte
-I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.
-Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid.</description>
+      <guid>http://localhost:4321/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</guid>
+      <description>“The only thing worse than a pie chart is several of them.” -Edward Tufte&#xA;I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.&#xA;Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid.</description>
     </item>
-    
     <item>
       <title>Private forest landowner demographics compared to the US population</title>
-      <link>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</link>
+      <link>http://localhost:4321/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</link>
       <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</guid>
-      <description>Private individuals own a third of the nation’s forests. These private landowners value them primarily due to the beauty, natural values, and wildlife habitat they provide.
-Forests owned by private non-industrial individuals are diverse: they vary in terms of species composition, structure, and management objectives. While privately-owned forests are diverse, the demographics of their owners are not.
-Data from the National Woodland Owner Survey, a program administered by the USDA Forest Service, indicate that the primary decision makers on private forestlands are older, predominantly male, White, and non-Hispanic.</description>
+      <guid>http://localhost:4321/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</guid>
+      <description>Private individuals own a third of the nation’s forests. These private landowners value them primarily due to the beauty, natural values, and wildlife habitat they provide.&#xA;Forests owned by private non-industrial individuals are diverse: they vary in terms of species composition, structure, and management objectives. While privately-owned forests are diverse, the demographics of their owners are not.&#xA;Data from the National Woodland Owner Survey, a program administered by the USDA Forest Service, indicate that the primary decision makers on private forestlands are older, predominantly male, White, and non-Hispanic.</description>
     </item>
-    
     <item>
       <title>Polar area diagrams in celebration of Florence Nightingale</title>
-      <link>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
+      <link>http://localhost:4321/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
-      <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.
-The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s. Specifically, the visualization showed the number of deaths that occurred from preventable diseases, wounds, and other causes.</description>
+      <guid>http://localhost:4321/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
+      <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.&#xA;The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s. Specifically, the visualization showed the number of deaths that occurred from preventable diseases, wounds, and other causes.</description>
     </item>
-    
     <item>
       <title>Four ways to supercharge your scatterplots</title>
-      <link>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</link>
+      <link>http://localhost:4321/post/four-ways-to-supercharge-your-scatterplots/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</guid>
-      <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.
-There are a few rules for all scatterplots:
-The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
+      <guid>http://localhost:4321/post/four-ways-to-supercharge-your-scatterplots/</guid>
+      <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.&#xA;There are a few rules for all scatterplots:&#xA;The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)&#xD;The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)&#xD;Each observation is a point on the graph.</description>
     </item>
-    
     <item>
       <title>Quickly explore your timber cruise data with six lines of code</title>
-      <link>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</link>
+      <link>http://localhost:4321/post/explore-your-timber-cruise-data/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</guid>
-      <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.
-A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
+      <guid>http://localhost:4321/post/explore-your-timber-cruise-data/</guid>
+      <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.&#xA;A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
     </item>
-    
     <item>
       <title>Using Google Forms to analyze confidence intervals: a teaching statistics activity</title>
-      <link>https://arbor-analytics.com/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</link>
+      <link>http://localhost:4321/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</link>
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</guid>
-      <description>This post describes how the concepts of confidence intervals can be taught to students. The ideal participants are undergraduate students in an introductory statistics. The in-class activity reveals to students that most people are overconfident in their estimation of uncertainty. The activity uses the example of moose, a charismatic wildlife species in Minnesota.
-IntroductionDemonstrations of data and statistical concepts are effective when they are designed with a structure that encourages participation in the classroom 1.</description>
+      <guid>http://localhost:4321/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</guid>
+      <description>This post describes how the concepts of confidence intervals can be taught to students. The ideal participants are undergraduate students in an introductory statistics. The in-class activity reveals to students that most people are overconfident in their estimation of uncertainty. The activity uses the example of moose, a charismatic wildlife species in Minnesota.&#xA;Introduction&#xD;Demonstrations of data and statistical concepts are effective when they are designed with a structure that encourages participation in the classroom 1.</description>
     </item>
-    
     <item>
       <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
-      <link>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
+      <link>http://localhost:4321/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
       <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
-      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.
-The general process to make a GIF image with maps in R is:
-1. Create the images you want (e.g., using ggplot),
-2. Stitch the images together with magick, and
-3. Write the images as a GIF and share!</description>
+      <guid>http://localhost:4321/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
+      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.&#xA;The general process to make a GIF image with maps in R is:&#xA;1. Create the images you want (e.g., using ggplot),&#xA;2. Stitch the images together with magick, and&#xA;3. Write the images as a GIF and share!</description>
     </item>
-    
     <item>
       <title>Presenting regression results better with forest plots</title>
-      <link>https://arbor-analytics.com/post/presenting-regression-results-better/</link>
+      <link>http://localhost:4321/post/presenting-regression-results-better/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/presenting-regression-results-better/</guid>
-      <description>I was inspired by Sara Richter’s presentation at the 2019 Conference on Statistical Practice titled “Easy Ways to Make Data Visualizations More Effective”. One of the themes I took away from Sara’s presentation was that data visualization needs to be practiced, but good data visualization doesn’t need to be difficult to be done well.
-When presenting results from a regression, people often use tables. While this is good if we need the true value of something, tables may not be good if we seek to convey general trends in our results.</description>
+      <guid>http://localhost:4321/post/presenting-regression-results-better/</guid>
+      <description>I was inspired by Sara Richter’s presentation at the 2019 Conference on Statistical Practice titled “Easy Ways to Make Data Visualizations More Effective”. One of the themes I took away from Sara’s presentation was that data visualization needs to be practiced, but good data visualization doesn’t need to be difficult to be done well.&#xA;When presenting results from a regression, people often use tables. While this is good if we need the true value of something, tables may not be good if we seek to convey general trends in our results.</description>
     </item>
-    
   </channel>
 </rss>

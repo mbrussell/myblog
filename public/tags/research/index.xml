@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>research on </title>
-    <link>https://arbor-analytics.com/tags/research/</link>
-    <description>Recent content in research on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Research on </title>
+    <link>http://localhost:4321/tags/research/</link>
+    <description>Recent content in Research on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Peer review: Lessons learned from reviewing 100 forest science manuscripts</title>
-      <link>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</link>
+      <link>http://localhost:4321/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</link>
       <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</guid>
-      <description>Photo by Annie Spratt on Unsplash.
-This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.
-For the process, typically a journal will reach out to a reviewer over email with an invitation.</description>
+      <guid>http://localhost:4321/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</guid>
+      <description>Photo by Annie Spratt on Unsplash.&#xA;This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.&#xA;For the process, typically a journal will reach out to a reviewer over email with an invitation.</description>
     </item>
-    
     <item>
       <title>The decline of researchers in forest science</title>
-      <link>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</link>
+      <link>http://localhost:4321/post/the-decline-of-researchers-in-forest-science/</link>
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</guid>
-      <description>A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that “does research”.
-I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.</description>
+      <guid>http://localhost:4321/post/the-decline-of-researchers-in-forest-science/</guid>
+      <description>A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that “does research”.&#xA;I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.</description>
     </item>
-    
   </channel>
 </rss>

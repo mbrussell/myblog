@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>forest ownership on </title>
-    <link>https://arbor-analytics.com/tags/forest-ownership/</link>
-    <description>Recent content in forest ownership on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Forest Ownership on </title>
+    <link>http://localhost:4321/tags/forest-ownership/</link>
+    <description>Recent content in Forest Ownership on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/forest-ownership/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/forest-ownership/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A quick and easy way to estimate forestland area change across US states</title>
+      <link>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</guid>
+      <description>Forest industry professionals have a renewed interest in understanding the extent to which forestland area has changed in regions where they procure wood. A few examples include:&#xA;On June 30, 2023, the European Union implemented the European Union Deforestation-Free Supply Chain Regulation (EUDR), a process that bans imports into the EU marketplace if they originate from areas that have seen deforestation or forest degradation. All operators (including wood suppliers) will need to collect and maintain information on these products, including providing “adequately conclusive and verifiable information” that products are deforestation-free.</description>
+    </item>
+    <item>
+      <title>Forestland on the blockchain: a new prospect for private forest owners</title>
+      <link>http://localhost:4321/post/2023-01-05-forestland-on-the-blockchain-a-new-prospect-for-private-forest-owners/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-01-05-forestland-on-the-blockchain-a-new-prospect-for-private-forest-owners/</guid>
+      <description>In 2021 a 40-acre tract of land in Wyoming was sold and purchased. A land sale like this will not typically make news headlines. But what turned heads about this sale was that the land was purchased by 5,000 different individuals from several countries.&#xA;It was possible because of the state of Wyoming passing Bill 38 in 2021, legislation that provided a structure for decentralized autonomous organizations, or DAOs, to have legal rights in the state.</description>
+    </item>
     <item>
       <title>Private forest landowner demographics compared to the US population</title>
-      <link>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</link>
+      <link>http://localhost:4321/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</link>
       <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</guid>
-      <description>Private individuals own a third of the nation’s forests. These private landowners value them primarily due to the beauty, natural values, and wildlife habitat they provide.
-Forests owned by private non-industrial individuals are diverse: they vary in terms of species composition, structure, and management objectives. While privately-owned forests are diverse, the demographics of their owners are not.
-Data from the National Woodland Owner Survey, a program administered by the USDA Forest Service, indicate that the primary decision makers on private forestlands are older, predominantly male, White, and non-Hispanic.</description>
+      <guid>http://localhost:4321/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</guid>
+      <description>Private individuals own a third of the nation’s forests. These private landowners value them primarily due to the beauty, natural values, and wildlife habitat they provide.&#xA;Forests owned by private non-industrial individuals are diverse: they vary in terms of species composition, structure, and management objectives. While privately-owned forests are diverse, the demographics of their owners are not.&#xA;Data from the National Woodland Owner Survey, a program administered by the USDA Forest Service, indicate that the primary decision makers on private forestlands are older, predominantly male, White, and non-Hispanic.</description>
     </item>
-    
   </channel>
 </rss>

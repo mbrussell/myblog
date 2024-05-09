@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>harvested wood products on </title>
-    <link>https://arbor-analytics.com/tags/harvested-wood-products/</link>
-    <description>Recent content in harvested wood products on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Harvested Wood Products on </title>
+    <link>http://localhost:4321/tags/harvested-wood-products/</link>
+    <description>Recent content in Harvested Wood Products on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/harvested-wood-products/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/harvested-wood-products/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Placing harvested wood products in the forest carbon discussion</title>
+      <link>http://localhost:4321/events/2024-03-28-placing-harvested-wood-products-in-the-forest-carbon-discussion/</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2024-03-28-placing-harvested-wood-products-in-the-forest-carbon-discussion/</guid>
+      <description>This presentation provides a background on harvested wood products from a carbon perspective, highlighting the role that wood durability and longevity plays in understanding how different wood product types contribute to carbon storage. It also describes a recent analysis that summarized annual harvest removals from Northeastern US states to estimate the longevity of harvested wood stored in products in use and tracked their decay to landfills and the atmosphere. A few tools are highlighted which show how foresters can determine wood product storage using forest inventory and timber sale data.</description>
+    </item>
+    <item>
+      <title>Unlocking value: harvested wood products in forest carbon programs</title>
+      <link>http://localhost:4321/events/2023-12-08-unlocking-value-harvested-wood-products-in-forest-carbon-programs/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-12-08-unlocking-value-harvested-wood-products-in-forest-carbon-programs/</guid>
+      <description>Harvested wood products store carbon in many different forms. Increasingly, forest carbon programs are available to diverse forest landowners, and harvested wood products that result from enrolled properties need to be counted. These slides were presented at the Linkiwood 2023 Wood Tech Leadership Summit on Nov. 30, 2023.&#xA;READ THE SLIDES HERE.&#xA;WATCH THE RECORDING (18:09) on YouTube.</description>
+    </item>
+    <item>
+      <title>Quantifying harvested wood products and forest management in carbon analyses</title>
+      <link>http://localhost:4321/events/2023-03-19-quantifying-harvested-wood-products-and-forest-management-in-carbon-analyses/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-03-19-quantifying-harvested-wood-products-and-forest-management-in-carbon-analyses/</guid>
+      <description>There remains great interest in understanding the role of forest management in storing and sequestering carbon. While researchers and land managers have a number of tools available to quantify the impacts of forest management on carbon stocks in growing forests, fewer tools are available that depict the carbon stored “off site” in the form of harvested wood products. These can include short-lived products (i.e., paper or pulp) or long-lived ones (i.</description>
+    </item>
     <item>
       <title>Harvested wood products in the Forest Vegetation Simulator</title>
-      <link>https://arbor-analytics.com/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</link>
+      <link>http://localhost:4321/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</link>
       <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</guid>
-      <description>Carbon is stored and sequestered in growing forests. It can also can be stored “off site” in the form of harvested wood products. These can be in short-lived products (i.e., paper or pulp) or long-lived ones (i.e., utility poles).
-Harvested wood products in use and solid waste disposal sites (e.g., landfills) represent 4.5% of the total amount of carbon in the US. When using wood products, lower emissions are used compared fossil fuel-intensive materials such as steel and concrete.</description>
+      <guid>http://localhost:4321/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</guid>
+      <description>Carbon is stored and sequestered in growing forests. It can also can be stored “off site” in the form of harvested wood products. These can be in short-lived products (i.e., paper or pulp) or long-lived ones (i.e., utility poles).&#xA;Harvested wood products in use and solid waste disposal sites (e.g., landfills) represent 4.5% of the total amount of carbon in the US. When using wood products, lower emissions are used compared fossil fuel-intensive materials such as steel and concrete.</description>
     </item>
-    
   </channel>
 </rss>

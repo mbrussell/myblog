@@ -1,51 +1,75 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Forest products on </title>
-    <link>https://arbor-analytics.com/categories/forest-products/</link>
-    <description>Recent content in Forest products on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Forest Products on </title>
+    <link>http://localhost:4321/categories/forest-products/</link>
+    <description>Recent content in Forest Products on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/forest-products/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/categories/forest-products/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Are winter temperatures correlated with stumpage prices in Maine?</title>
+      <link>http://localhost:4321/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/</link>
+      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/</guid>
+      <description>I was inspired after reading an article written by Lloyd Irland in The Northern Logger (January 2024) about the upswings and downswings in lumber prices in the last several decades. High prices for lumber were recently seen during the COVID-19 pandemic when everybody was remodeling and installing new wooden decks with all the free time they had. The intricacies of lumber prices are explained well in Lloyd’s article. An interesting observation is that during times of high lumber prices, the amount of money landowners received for selling their wood (termed stumpage in forestry parlance) barely nudged.</description>
+    </item>
+    <item>
+      <title>New web app shows pandemic assistance to forest products industry by state</title>
+      <link>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</guid>
+      <description>Screenshot of the forest products and pandemic funding application.&#xD;Forest products companies used the Paycheck Protection Program (PPP) and Pandemic Assistance for Timber Harvesters and Haulers (PATHH) programs to keep nearly 500,000 workers in the US forest industry on payroll throughout the COVID-19 pandemic. A new web application is now available that summarizes these pandemic assistance programs and funding provided to each individual state.&#xA;You can access the web app here.</description>
+    </item>
+    <item>
+      <title>Unlocking value: harvested wood products in forest carbon programs</title>
+      <link>http://localhost:4321/events/2023-12-08-unlocking-value-harvested-wood-products-in-forest-carbon-programs/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-12-08-unlocking-value-harvested-wood-products-in-forest-carbon-programs/</guid>
+      <description>Harvested wood products store carbon in many different forms. Increasingly, forest carbon programs are available to diverse forest landowners, and harvested wood products that result from enrolled properties need to be counted. These slides were presented at the Linkiwood 2023 Wood Tech Leadership Summit on Nov. 30, 2023.&#xA;READ THE SLIDES HERE.&#xA;WATCH THE RECORDING (18:09) on YouTube.</description>
+    </item>
+    <item>
+      <title>Timberlands as investments continue to rise</title>
+      <link>http://localhost:4321/post/2023-01-27-timberlands-as-an-investment-continue-to-rise/</link>
+      <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-01-27-timberlands-as-an-investment-continue-to-rise/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.&#xA;The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth quarter and annual returns for their Timberland Index, an index representing 464 investment-grade timberland properties with a market value of $24.</description>
+    </item>
+    <item>
+      <title>Stumpage prices for sawlogs in Maine, 2019-2020</title>
+      <link>http://localhost:4321/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020/</link>
+      <pubDate>Fri, 23 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020/</guid>
+      <description>Many states provide information on stumpage prices for commonly harvested timber species. This information provides land managers and landowners a sense of what current prices are for different timber species, products, and regions throughout a state.&#xA;The Maine Forest Service (MFS) collects data on timber sales through a notification process when timber sales occur. The last report from MFS contains over 1,600 reports from landowners that conducted a timber sale in 2020.</description>
+    </item>
     <item>
       <title>Harvested wood products in the Forest Vegetation Simulator</title>
-      <link>https://arbor-analytics.com/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</link>
+      <link>http://localhost:4321/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</link>
       <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</guid>
-      <description>Carbon is stored and sequestered in growing forests. It can also can be stored “off site” in the form of harvested wood products. These can be in short-lived products (i.e., paper or pulp) or long-lived ones (i.e., utility poles).
-Harvested wood products in use and solid waste disposal sites (e.g., landfills) represent 4.5% of the total amount of carbon in the US. When using wood products, lower emissions are used compared fossil fuel-intensive materials such as steel and concrete.</description>
+      <guid>http://localhost:4321/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</guid>
+      <description>Carbon is stored and sequestered in growing forests. It can also can be stored “off site” in the form of harvested wood products. These can be in short-lived products (i.e., paper or pulp) or long-lived ones (i.e., utility poles).&#xA;Harvested wood products in use and solid waste disposal sites (e.g., landfills) represent 4.5% of the total amount of carbon in the US. When using wood products, lower emissions are used compared fossil fuel-intensive materials such as steel and concrete.</description>
     </item>
-    
     <item>
       <title>How the forest products industry used Paycheck Protection Program loans (2022 update)</title>
-      <link>https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</link>
+      <link>http://localhost:4321/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</link>
       <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</guid>
-      <description>SummaryThe Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 35,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 487,000 workers in the forest industry.
-The Paycheck Protection ProgramThe US Small Business Administration (SBA) managed the Paycheck Protection Program (PPP) between April 2020 and May 2021.</description>
+      <guid>http://localhost:4321/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</guid>
+      <description>Summary&#xD;The Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 35,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 487,000 workers in the forest industry.&#xA;The Paycheck Protection Program&#xD;The US Small Business Administration (SBA) managed the Paycheck Protection Program (PPP) between April 2020 and May 2021.</description>
     </item>
-    
     <item>
       <title>Timberlands as investments see biggest gain since 2014</title>
-      <link>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
+      <link>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
       <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
-      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.
-The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
+      <guid>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.&#xA;The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
     </item>
-    
     <item>
       <title>The forest products industry’s use of Paycheck Protection Program loans</title>
-      <link>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</link>
+      <link>http://localhost:4321/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</link>
       <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</guid>
-      <description>SummaryThe Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 34,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 485,000 workers in the forest industry.
-The Paycheck Protection ProgramThe US Small Business Administration (SBA) managed the Paycheck Protection Program (PPP) between April 2020 and May 2021.</description>
+      <guid>http://localhost:4321/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</guid>
+      <description>Summary&#xD;The Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 34,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 485,000 workers in the forest industry.&#xA;The Paycheck Protection Program&#xD;The US Small Business Administration (SBA) managed the Paycheck Protection Program (PPP) between April 2020 and May 2021.</description>
     </item>
-    
   </channel>
 </rss>

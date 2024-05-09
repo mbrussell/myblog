@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tidyverse on </title>
-    <link>https://arbor-analytics.com/tags/tidyverse/</link>
-    <description>Recent content in tidyverse on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Tidyverse on </title>
+    <link>http://localhost:4321/tags/tidyverse/</link>
+    <description>Recent content in Tidyverse on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recent updates to tidyverse functions</title>
+      <link>http://localhost:4321/post/2023-09-13-recent-changes-in-the-tidyverse/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-09-13-recent-changes-in-the-tidyverse/</guid>
+      <description>I recently watched the video “Teaching the tidyverse in 2023” by Mine Çetinkaya-Rundel to learn more about recent changes to my favorite R package. I learned quite a bit of new tricks and techniques for my everyday R coding and sharing a few of them here.&#xA;I’ll use the elm data set from the stats4nr package as I work through a few examples in the post. This data set contains observations on 333 cedar elm trees (Ulmus crassifolia Nutt.</description>
+    </item>
+    <item>
+      <title>Doing statistics in the tidyverse: exploring the infer package</title>
+      <link>http://localhost:4321/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/</guid>
+      <description>If you use R software for your data analysis, you are likely familiar with the tidyverse. The tidyverse package is a “megapackage” in R that includes several packages that import, reshape, and visualize data in a consistent manner, among other tasks.&#xA;Like many analysts, I use the tidyverse suite of functions often for importing, wrangling, and visualizing data. More and more I’m using the tidymodels package to apply statistical modeling techniques like regression and random forests on data I work with.</description>
+    </item>
     <item>
       <title>Modeling in the tidyverse, an example predicting tree biomass</title>
-      <link>https://arbor-analytics.com/post/fit-many-models-with-broom/</link>
+      <link>http://localhost:4321/post/fit-many-models-with-broom/</link>
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/fit-many-models-with-broom/</guid>
-      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.
-The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
+      <guid>http://localhost:4321/post/fit-many-models-with-broom/</guid>
+      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.&#xA;The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pandemic on </title>
-    <link>https://arbor-analytics.com/tags/pandemic/</link>
-    <description>Recent content in pandemic on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Pandemic on </title>
+    <link>http://localhost:4321/tags/pandemic/</link>
+    <description>Recent content in Pandemic on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/pandemic/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/pandemic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New web app shows pandemic assistance to forest products industry by state</title>
+      <link>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</guid>
+      <description>Screenshot of the forest products and pandemic funding application.&#xD;Forest products companies used the Paycheck Protection Program (PPP) and Pandemic Assistance for Timber Harvesters and Haulers (PATHH) programs to keep nearly 500,000 workers in the US forest industry on payroll throughout the COVID-19 pandemic. A new web application is now available that summarizes these pandemic assistance programs and funding provided to each individual state.&#xA;You can access the web app here.</description>
+    </item>
     <item>
       <title>Pandemic assistance to the forest industry: a summary</title>
-      <link>https://arbor-analytics.com/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</link>
+      <link>http://localhost:4321/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</guid>
-      <description>Forest products and timber harvesting and hauling businesses secured nearly $5 billion of federal funds through the Paycheck Protection Program and Pandemic Assistance to Timber Harvesters and Haulers programs to combat economic challenges presented by the COVID-19 pandemic. These slides were presented at the 2022 Society of American Foresters Convention in Baltimore, MD.
-READ THE SLIDES.</description>
+      <guid>http://localhost:4321/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</guid>
+      <description>Forest products and timber harvesting and hauling businesses secured nearly $5 billion of federal funds through the Paycheck Protection Program and Pandemic Assistance to Timber Harvesters and Haulers programs to combat economic challenges presented by the COVID-19 pandemic. These slides were presented at the 2022 Society of American Foresters Convention in Baltimore, MD.&#xA;READ THE SLIDES.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,71 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>economics on </title>
-    <link>https://arbor-analytics.com/tags/economics/</link>
-    <description>Recent content in economics on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Economics on </title>
+    <link>http://localhost:4321/tags/economics/</link>
+    <description>Recent content in Economics on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/economics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/economics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New web app shows pandemic assistance to forest products industry by state</title>
+      <link>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</guid>
+      <description>Screenshot of the forest products and pandemic funding application.&#xD;Forest products companies used the Paycheck Protection Program (PPP) and Pandemic Assistance for Timber Harvesters and Haulers (PATHH) programs to keep nearly 500,000 workers in the US forest industry on payroll throughout the COVID-19 pandemic. A new web application is now available that summarizes these pandemic assistance programs and funding provided to each individual state.&#xA;You can access the web app here.</description>
+    </item>
+    <item>
+      <title>Timberlands as investments continue to rise</title>
+      <link>http://localhost:4321/post/2023-01-27-timberlands-as-an-investment-continue-to-rise/</link>
+      <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-01-27-timberlands-as-an-investment-continue-to-rise/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.&#xA;The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth quarter and annual returns for their Timberland Index, an index representing 464 investment-grade timberland properties with a market value of $24.</description>
+    </item>
     <item>
       <title>Price of carbon hits a new record high</title>
-      <link>https://arbor-analytics.com/post/2022-06-03-price-of-carbon-hits-a-new-record-high/</link>
+      <link>http://localhost:4321/post/2022-06-03-price-of-carbon-hits-a-new-record-high/</link>
       <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-06-03-price-of-carbon-hits-a-new-record-high/</guid>
-      <description>The price of carbon per metric tonne reached a record high at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from May 2022, the settlement price of one metric tonne of carbon was $30.85. This represents a 9% increase from prices of $28.30 as recent as November 2021.
-Auction reserve prices have increased marginally over the last several years, ranging from $14.</description>
+      <guid>http://localhost:4321/post/2022-06-03-price-of-carbon-hits-a-new-record-high/</guid>
+      <description>The price of carbon per metric tonne reached a record high at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from May 2022, the settlement price of one metric tonne of carbon was $30.85. This represents a 9% increase from prices of $28.30 as recent as November 2021.&#xA;Auction reserve prices have increased marginally over the last several years, ranging from $14.</description>
     </item>
-    
     <item>
       <title>What does the price of carbon have to be for landowners to enroll in carbon markets?</title>
-      <link>https://arbor-analytics.com/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</link>
+      <link>http://localhost:4321/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</link>
       <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</guid>
-      <description>IntroductionCarbon has quickly become one of the most talked about commodities in our forests today. A variety of new and emerging carbon market programs are paying landowners for the carbon in their forests Carbon is the currency of interest when discussing trees and forests as natural climate solutions.
-While compliance-driven markets such as the California Air Resource Board’s (CARB) Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres.</description>
+      <guid>http://localhost:4321/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</guid>
+      <description>Introduction&#xD;Carbon has quickly become one of the most talked about commodities in our forests today. A variety of new and emerging carbon market programs are paying landowners for the carbon in their forests Carbon is the currency of interest when discussing trees and forests as natural climate solutions.&#xA;While compliance-driven markets such as the California Air Resource Board’s (CARB) Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres.</description>
     </item>
-    
     <item>
       <title>Timberlands as investments see biggest gain since 2014</title>
-      <link>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
+      <link>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
       <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
-      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.
-The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
+      <guid>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.&#xA;The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
     </item>
-    
     <item>
       <title>Price of carbon recently hit a record high</title>
-      <link>https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</link>
+      <link>http://localhost:4321/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</guid>
-      <description>The price of carbon per metric tonne reached a record high at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from November 2021, the settlement price of one metric tonne of carbon was $28.26. This represents a 21% increase from prices of $23.30 as recent as August 2021.
-Auction reserve prices have increased marginally over the last several years, ranging from $14.</description>
+      <guid>http://localhost:4321/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</guid>
+      <description>The price of carbon per metric tonne reached a record high at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from November 2021, the settlement price of one metric tonne of carbon was $28.26. This represents a 21% increase from prices of $23.30 as recent as August 2021.&#xA;Auction reserve prices have increased marginally over the last several years, ranging from $14.</description>
     </item>
-    
     <item>
       <title>Economic contribution of forestry employees across US states</title>
-      <link>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</link>
+      <link>http://localhost:4321/post/economic-contribution-of-forestry-employees-across-us-states/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
-      <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:
-250 companies comprise the pulp, paper, and paperboard mill industry in the US,The US forest products industry generates 5% of the manufacturing GDP ($169 billion),The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)56% of US forests are privately owned by family forest owners and companies.</description>
+      <guid>http://localhost:4321/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
+      <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:&#xA;250 companies comprise the pulp, paper, and paperboard mill industry in the US,&#xD;The US forest products industry generates 5% of the manufacturing GDP ($169 billion),&#xD;The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)&#xD;56% of US forests are privately owned by family forest owners and companies.</description>
     </item>
-    
     <item>
       <title>Reflections on the American Forestry Conference</title>
-      <link>https://arbor-analytics.com/post/reflections-on-the-american-forestry-conference/</link>
+      <link>http://localhost:4321/post/reflections-on-the-american-forestry-conference/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/reflections-on-the-american-forestry-conference/</guid>
-      <description>Shawn Baker presents on trends in logging businesses.
-Last week I tuned into the American Forestry Conference, a virtual conference on the forest products industry and how forestry businesses can reshape the future US economy. The conference, organized by the Georgia Forestry Association, had 35 speakers that discussed topics such as the challenges and opportunities of the role of forestry in the current and future economic climate. In an email, the organizing committee reported 540 attendees from 26 US states.</description>
+      <guid>http://localhost:4321/post/reflections-on-the-american-forestry-conference/</guid>
+      <description>Shawn Baker presents on trends in logging businesses.&#xA;Last week I tuned into the American Forestry Conference, a virtual conference on the forest products industry and how forestry businesses can reshape the future US economy. The conference, organized by the Georgia Forestry Association, had 35 speakers that discussed topics such as the challenges and opportunities of the role of forestry in the current and future economic climate. In an email, the organizing committee reported 540 attendees from 26 US states.</description>
     </item>
-    
   </channel>
 </rss>

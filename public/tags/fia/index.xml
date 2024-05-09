@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FIA on </title>
+    <link>http://localhost:4321/tags/fia/</link>
+    <description>Recent content in FIA on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/fia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</title>
+      <link>http://localhost:4321/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/</guid>
+      <description>Last fall the USDA Forest Service released the National Scale Volume Biomass (NSVB), a new modeling system for estimating volume, biomass, and carbon stored in individual trees. These new equations replace the previously-used Component Ratio Method (CRM) and are the result of several years of research. Volume, biomass, and carbon attributes in the US Forest Inventory and Analysis (FIA) database have been updated with values from the new equations.</description>
+    </item>
+    <item>
+      <title>A quick and easy way to estimate forestland area change across US states</title>
+      <link>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</guid>
+      <description>Forest industry professionals have a renewed interest in understanding the extent to which forestland area has changed in regions where they procure wood. A few examples include:&#xA;On June 30, 2023, the European Union implemented the European Union Deforestation-Free Supply Chain Regulation (EUDR), a process that bans imports into the EU marketplace if they originate from areas that have seen deforestation or forest degradation. All operators (including wood suppliers) will need to collect and maintain information on these products, including providing “adequately conclusive and verifiable information” that products are deforestation-free.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,174 @@
+---
+title: Using R and Python to get forest resource data through the EVALIDator API
+author: Matt Russell
+date: '2023-10-25'
+slug: []
+categories:
+  - Analytics
+tags:
+  - forest inventory
+  - forest inventory and analysis
+  - EVALIDator
+  - analytics
+---
+
+# 
+
+![](example_evalid.png){width=500px}
+</center>
+#  
+If you work with forestry data across the United States, you've probably had to turn to Forest Inventory and Analysis (FIA) data at one time or another to look at the status and trends in our forest resources. The FIA database has information contained from over 130,000 forest inventory plots across the country. 
+
+One of the tools that analysts often use to access FIA data is the  [the EVALIDator web interface](https://apps.fs.usda.gov/fiadb-api/evalidator). EVALIDator is a web-based Application Programming Interface (API) that generates population estimates for core forestry metrics. It provides the ability to query FIA information at the state level or a circular retrieval of information around a fixed geographic point.
+
+There was [an excellent webinar offered in August](https://vimeo.com/861362270/4d996ee479?share=copy) hosted by the FIA National User Group that highlighted some new features available through EVALIDator. For a long while, analysts have used it's web interface to point and click their way to estimating forest resources after selecting the forestry metrics and geographic scale they're interested in. As a long-time EVALIDator user, this was a great way to access FIA data. But dealing with the output in an HTML format and getting it into different software to analyze was always an additional step.
+
+I was happy to learn in the webinar about new ways to directly access FIA estimates through R and Python using the EVALIDator API. For me, this can save time and effort given most of my analyses, graphing, and reporting are done through R. 
+
+All of the documentation for these steps can be found in the [FIADB-API & EVALIDator user documentation](https://apps.fs.usda.gov/fiadb-api/). I'll go through a few examples where I access data from the state of Maine.
+
+## Using R to access FIA data at the state level
+  
+This first example will access the total amount of carbon stored in the live aboveground portions of trees growing on forestland in Maine, measured in metric tonnes. I'll ask for estimates to be provided by forest type group and ownership.
+
+First, I'll use R and will load a few packages to access the data: 
+
+```{r, message = F, warning = F}
+library(tidyverse)
+library(httr)
+library(jsonlite)
+library(rlist)
+library(knitr)
+```
+
+If you look at the bottom of the [documentation webpage](https://apps.fs.usda.gov/fiadb-api/), you'll see example use cases for extracting FIA estimates using R and Python. There are two examples for each that use GET and POST scripts. The GET scripts allow you to enter a complete URL if you know the attributes you're interested in. The POST script, which I copy here with the `fiadb_api_POST()` function, allows you to directly input the variables you're interested in in R: 
+
+```{r}
+# fiadb_api_POST() will accept a FIADB-API full report URL and return data frames
+# See descriptor: https://apps.fs.usda.gov/fiadb-api/
+
+fiadb_api_POST <- function(argList){
+  # make request
+  resp <- POST(url = "https://apps.fs.usda.gov/fiadb-api/fullreport", 
+               body = argList, 
+               encode = "form")
+  # parse response from JSON to R list
+  respObj <- content(resp, "parsed", encoding = "ISO-8859-1")
+  # create empty output list
+  outputList <- list()
+  # add estimates data frame to output list
+  outputList[['estimates']] <- as.data.frame(do.call(rbind,respObj$estimates))
+
+  # if estimate includes totals and subtotals, add those data frames to output list
+  if ('subtotals' %in% names(respObj)){
+    subtotals <- list()
+    # one subtotal data frame for each grouping variable
+    for (i in names(respObj$subtotals)){
+      subtotals[[i]] <- as.data.frame(do.call(rbind,respObj$subtotals[[i]]))
+    }
+    outputList[['subtotals']] <- subtotals
+
+    # totals data frame
+    outputList[['totals']] <- as.data.frame(do.call(rbind,respObj$totals))
+  }
+
+  # add estimate metadata
+  outputList[['metadata']] <- respObj$metadata
+
+  return(outputList)
+}
+```
+
+The first item to know before accessing FIA data is [the numeric code](https://apps.fs.usda.gov/fiadb-api/fullreport/parameters/snum) corresponding to the variable you're interested in. In my case, this is `snum = 98`, corresponding to the variable that represents "Forest carbon pool 1: live aboveground, in metric tonnes, on forest land." A note of caution: there are *thousands* of variables to choose from, but I suspect the most popular ones are listed toward the top of the page.
+
+The second item to know is which **wc** code you're interested in. I have no idea why it's abbreviated "wc", but it connects the state FIPS code with the 4-digit FIA inventory year. For example, I'm interested in `wc = 232021` to obtain data from Maine's (FIPS code 23) most recent inventory, collected in 2021. You could go back to inventories collected decades ago if you were interested in looking at trends, and [those codes are described here](https://apps.fs.usda.gov/fiadb-api/fullreport/parameters/wc).
+
+Finally, you can use the `rselected` and `cselected` statements to identify the variables you'd like to group by in rows and columns. In our case this is forest type group and ownership group. I'll obtain the data in an NJSON format, but you can also obtain the data in HTML, XML, or other formats. You can specify these parameters in `arg_list` and then store the data in a data frame called `all_rows`. I love how the data are presented in a long and "tidy" format:  
+
+```{r}
+arg_list_maine <- list(snum = 98,
+               wc = 232021,
+               rselected = 'Forest type group', 
+               cselected = 'Ownership group - Major',
+               outputFormat = 'NJSON')
+
+# submit list to POST request function
+post_data_maine <- fiadb_api_POST(arg_list_maine)
+
+# estimate data frame
+all_rows_maine <- post_data_maine[['estimates']]
+
+print(all_rows_maine)
+```
+
+This makes the output easy to plot immediately. Here's a graph of the output, where you can see the vast amount of carbon stored on private land in Maine, mostly in the spruce/fir and maple/beech/birch forest type groups:
+
+```{r}
+ggplot(all_rows_maine, aes(x = as.character(GRP2), 
+                           y = as.numeric(ESTIMATE))) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~as.character(GRP1)) +
+  labs(x = "Ownership",
+       y = "Forest carbon (metric tonnes)")
+```
+
+Note you'll need to play with the names of variables a bit to tidy them up, e.g., turning "`0001 Public" to simply "Public". But the R functions allow you to quickly obtain the data of interest. You can also grab the subtotals of the output to sum all values within each forest type or ownership category:
+
+```{r}
+subtotals_maine <- post_data_maine[['subtotals']]
+
+print(subtotals_maine)
+```
+
+Finally, you can grab the total number that sums all values. In this case, we learn that there's about 374 million metric tonnes of carbon stored in the live aboveground portions of trees in Maine forests:
+
+```{r}
+totals_maine <- post_data_maine[['totals']]
+print(totals_maine)
+```
+
+## Using R to access FIA data around a fixed geographic point
+
+A favorite use of EVALIDator by many is the ability to query FIA data around a specific location. For example, a user can generate population estimates for a 50-mile radius around a proposed mill that uses wood.
+
+Here's an example that queries FIA data in a 25-mile radius surrounding Bangor, Maine. It estimates the total forestland area (`snum = 2`) by stand  age class in 20-year increments and stand size class (large-, medium-, or small-diameter trees). The latitude and longitude coordinates are specified in the function:
+
+```{r}
+arg_list_bangor <- list(lat = 44.809,
+                        lon = -68.771, 
+                        radius = 25,
+                        wc = 232021,
+                        snum = 2,
+                        rselected = 'Stand-size class', 
+                        cselected = 'Stand age 20 yr classes (0 to 100 plus)',
+                        outputFormat = 'NJSON')
+
+# submit list to POST request function
+post_data_bangor <- fiadb_api_POST(arg_list_bangor)
+
+# estimate data frame
+all_rows_bangor <- post_data_bangor[['estimates']]
+
+print(all_rows_bangor)
+```
+
+You can plot these data directly to visualize the trends within the 25-mile radius:
+
+```{r}
+ggplot(all_rows_bangor, aes(x = as.character(GRP2), 
+                            y = as.numeric(ESTIMATE),
+                            fill = as.character(GRP1))) +
+  geom_bar(stat = "identity") +
+  labs(x = "Stand age",
+       y = "Forestland area (acres)") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Conclusion
+
+The new features available in the EVALIDator API that allow you to access data through R or Python can help to speed up data analysis using FIA data. You can access the entire history of FIA data and analyze forest resources data by state or a circular retrieval from a fixed geographic point. Special thanks to the USDA Forest Service staff that have made this available!  
+
+
+--
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

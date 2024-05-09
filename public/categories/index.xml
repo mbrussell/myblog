@@ -2,199 +2,186 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on </title>
-    <link>https://arbor-analytics.com/categories/</link>
+    <link>http://localhost:4321/categories/</link>
     <description>Recent content in Categories on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forest Carbon</title>
+      <link>http://localhost:4321/categories/forest-carbon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/forest-carbon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>For Fun</title>
+      <link>http://localhost:4321/categories/for-fun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/for-fun/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Analytics</title>
-      <link>https://arbor-analytics.com/categories/analytics/</link>
-      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/analytics/</guid>
+      <link>http://localhost:4321/categories/analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/analytics/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Statistics</title>
-      <link>https://arbor-analytics.com/categories/statistics/</link>
-      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/statistics/</guid>
+      <title>Forest Products</title>
+      <link>http://localhost:4321/categories/forest-products/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/forest-products/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Forest industry</title>
-      <link>https://arbor-analytics.com/categories/forest-industry/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/forest-industry/</guid>
+      <title>Behind the Curtain</title>
+      <link>http://localhost:4321/categories/behind-the-curtain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/behind-the-curtain/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Prediction</title>
-      <link>https://arbor-analytics.com/categories/prediction/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/prediction/</guid>
+      <title>Data Visualization</title>
+      <link>http://localhost:4321/categories/data-visualization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/data-visualization/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Carbon</title>
-      <link>https://arbor-analytics.com/categories/carbon/</link>
-      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/carbon/</guid>
+      <title>Forest Growth and Yield</title>
+      <link>http://localhost:4321/categories/forest-growth-and-yield/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/forest-growth-and-yield/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Logging</title>
-      <link>https://arbor-analytics.com/categories/logging/</link>
-      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/logging/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Forest measurements</title>
-      <link>https://arbor-analytics.com/categories/forest-measurements/</link>
-      <pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/forest-measurements/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Forest products</title>
-      <link>https://arbor-analytics.com/categories/forest-products/</link>
-      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/forest-products/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Professional development</title>
-      <link>https://arbor-analytics.com/categories/professional-development/</link>
-      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/professional-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Forestry</title>
-      <link>https://arbor-analytics.com/categories/forestry/</link>
-      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/forestry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Behind the curtain</title>
-      <link>https://arbor-analytics.com/categories/behind-the-curtain/</link>
-      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/behind-the-curtain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Forest health</title>
-      <link>https://arbor-analytics.com/categories/forest-health/</link>
-      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/forest-health/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data visualization</title>
-      <link>https://arbor-analytics.com/categories/data-visualization/</link>
-      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/data-visualization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data wrangling</title>
-      <link>https://arbor-analytics.com/categories/data-wrangling/</link>
-      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/data-wrangling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Climate</title>
-      <link>https://arbor-analytics.com/categories/climate/</link>
-      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/climate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data management</title>
-      <link>https://arbor-analytics.com/categories/data-management/</link>
-      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/data-management/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine learning</title>
-      <link>https://arbor-analytics.com/categories/machine-learning/</link>
-      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Conference</title>
-      <link>https://arbor-analytics.com/categories/conference/</link>
-      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/conference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reporting</title>
-      <link>https://arbor-analytics.com/categories/reporting/</link>
-      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/reporting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Distributions</title>
-      <link>https://arbor-analytics.com/categories/distributions/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/distributions/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Sampling</title>
-      <link>https://arbor-analytics.com/categories/sampling/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/categories/sampling/</guid>
+      <link>http://localhost:4321/categories/sampling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/sampling/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Statistics</title>
+      <link>http://localhost:4321/categories/statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/statistics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Accessibility</title>
+      <link>http://localhost:4321/categories/accessibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/accessibility/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Carbon</title>
+      <link>http://localhost:4321/categories/carbon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/carbon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Forest Measurements</title>
+      <link>http://localhost:4321/categories/forest-measurements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/forest-measurements/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Forestry</title>
+      <link>http://localhost:4321/categories/forestry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/forestry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Forest Industry</title>
+      <link>http://localhost:4321/categories/forest-industry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/forest-industry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prediction</title>
+      <link>http://localhost:4321/categories/prediction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/prediction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logging</title>
+      <link>http://localhost:4321/categories/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/logging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Professional Development</title>
+      <link>http://localhost:4321/categories/professional-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/professional-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Forest Health</title>
+      <link>http://localhost:4321/categories/forest-health/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/forest-health/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Wrangling</title>
+      <link>http://localhost:4321/categories/data-wrangling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/data-wrangling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Climate</title>
+      <link>http://localhost:4321/categories/climate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/climate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Management</title>
+      <link>http://localhost:4321/categories/data-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/data-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>http://localhost:4321/categories/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Conference</title>
+      <link>http://localhost:4321/categories/conference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/conference/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reporting</title>
+      <link>http://localhost:4321/categories/reporting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/reporting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributions</title>
+      <link>http://localhost:4321/categories/distributions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/categories/distributions/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

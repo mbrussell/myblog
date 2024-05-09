@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>timber cruise on </title>
-    <link>https://arbor-analytics.com/tags/timber-cruise/</link>
-    <description>Recent content in timber cruise on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Timber Cruise on </title>
+    <link>http://localhost:4321/tags/timber-cruise/</link>
+    <description>Recent content in Timber Cruise on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/timber-cruise/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/timber-cruise/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coverting forest inventory data from volume to carbon </title>
-      <link>https://arbor-analytics.com/post/coverting-wood-scaled-as-weight-to-carbon/</link>
+      <link>http://localhost:4321/post/coverting-wood-scaled-as-weight-to-carbon/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/coverting-wood-scaled-as-weight-to-carbon/</guid>
-      <description>The amount of carbon in a forest is a key metric that decision-makers want to know. Accurate estimates of forest carbon are needed if a landowner is interested in enrolling a forest into carbon markets.
-Unfortunately, most forest inventories continue to measure the amount of wood in a stand in terms of the volume it contains. Forest analysts also rely on historical forest inventory data to project future forest structure and composition - it is not unlikely to rely on inventory data that are more than 20 years old.</description>
+      <guid>http://localhost:4321/post/coverting-wood-scaled-as-weight-to-carbon/</guid>
+      <description>The amount of carbon in a forest is a key metric that decision-makers want to know. Accurate estimates of forest carbon are needed if a landowner is interested in enrolling a forest into carbon markets.&#xA;Unfortunately, most forest inventories continue to measure the amount of wood in a stand in terms of the volume it contains. Forest analysts also rely on historical forest inventory data to project future forest structure and composition - it is not unlikely to rely on inventory data that are more than 20 years old.</description>
     </item>
-    
     <item>
       <title>Quickly explore your timber cruise data with six lines of code</title>
-      <link>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</link>
+      <link>http://localhost:4321/post/explore-your-timber-cruise-data/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</guid>
-      <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.
-A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
+      <guid>http://localhost:4321/post/explore-your-timber-cruise-data/</guid>
+      <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.&#xA;A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
     </item>
-    
   </channel>
 </rss>

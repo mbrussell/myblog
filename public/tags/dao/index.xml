@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DAO on </title>
+    <link>http://localhost:4321/tags/dao/</link>
+    <description>Recent content in DAO on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/dao/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forestland on the blockchain: a new prospect for private forest owners</title>
+      <link>http://localhost:4321/post/2023-01-05-forestland-on-the-blockchain-a-new-prospect-for-private-forest-owners/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-01-05-forestland-on-the-blockchain-a-new-prospect-for-private-forest-owners/</guid>
+      <description>In 2021 a 40-acre tract of land in Wyoming was sold and purchased. A land sale like this will not typically make news headlines. But what turned heads about this sale was that the land was purchased by 5,000 different individuals from several countries.&#xA;It was possible because of the state of Wyoming passing Bill 38 in 2021, legislation that provided a structure for decentralized autonomous organizations, or DAOs, to have legal rights in the state.</description>
+    </item>
+  </channel>
+</rss>

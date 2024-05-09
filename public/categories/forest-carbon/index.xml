@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Forest Carbon on </title>
+    <link>http://localhost:4321/categories/forest-carbon/</link>
+    <description>Recent content in Forest Carbon on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/categories/forest-carbon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A primer on carbon sequestration rates in US forests</title>
+      <link>http://localhost:4321/post/2024-04-24-a-primer-on-carbon-sequestration-rates-in-us-forests/</link>
+      <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-04-24-a-primer-on-carbon-sequestration-rates-in-us-forests/</guid>
+      <description>If you work in forests, you know how important it is to understand different growth rates. Whether the stand is young, old, managed or not, forests will grow at different rates depending on a variety of conditions.&#xA;Historically, foresters have talked about growth rates in terms of volume. About 10 years ago I met with a Minnesota forester in a recently cut aspen stand. I vividly remember him telling me that “You need to be getting half a cord per acre per year to have a stand worth selling at 45 years.</description>
+    </item>
+    <item>
+      <title>Placing harvested wood products in the forest carbon discussion</title>
+      <link>http://localhost:4321/events/2024-03-28-placing-harvested-wood-products-in-the-forest-carbon-discussion/</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2024-03-28-placing-harvested-wood-products-in-the-forest-carbon-discussion/</guid>
+      <description>This presentation provides a background on harvested wood products from a carbon perspective, highlighting the role that wood durability and longevity plays in understanding how different wood product types contribute to carbon storage. It also describes a recent analysis that summarized annual harvest removals from Northeastern US states to estimate the longevity of harvested wood stored in products in use and tracked their decay to landfills and the atmosphere. A few tools are highlighted which show how foresters can determine wood product storage using forest inventory and timber sale data.</description>
+    </item>
+    <item>
+      <title>Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</title>
+      <link>http://localhost:4321/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/</guid>
+      <description>Last fall the USDA Forest Service released the National Scale Volume Biomass (NSVB), a new modeling system for estimating volume, biomass, and carbon stored in individual trees. These new equations replace the previously-used Component Ratio Method (CRM) and are the result of several years of research. Volume, biomass, and carbon attributes in the US Forest Inventory and Analysis (FIA) database have been updated with values from the new equations.</description>
+    </item>
+    <item>
+      <title>Harvested wood products and forest carbon</title>
+      <link>http://localhost:4321/events/2023-10-16-harvested-wood-products-and-forest-carbon/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-10-16-harvested-wood-products-and-forest-carbon/</guid>
+      <description>Harvested wood products store carbon from sustainably-managed forests. These slides were presented at the Northeast Silviculture Institute for Foresters in Gardner, MA on Oct. 11, 2023.&#xA;READ THE SLIDES.</description>
+    </item>
+    <item>
+      <title>Quantifying harvested wood products and forest management in carbon analyses</title>
+      <link>http://localhost:4321/events/2023-03-19-quantifying-harvested-wood-products-and-forest-management-in-carbon-analyses/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-03-19-quantifying-harvested-wood-products-and-forest-management-in-carbon-analyses/</guid>
+      <description>There remains great interest in understanding the role of forest management in storing and sequestering carbon. While researchers and land managers have a number of tools available to quantify the impacts of forest management on carbon stocks in growing forests, fewer tools are available that depict the carbon stored “off site” in the form of harvested wood products. These can include short-lived products (i.e., paper or pulp) or long-lived ones (i.</description>
+    </item>
+    <item>
+      <title>Calculating carbon in standing dead trees</title>
+      <link>http://localhost:4321/post/2023-02-09-calculating-carbon-in-standing-dead-trees/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-02-09-calculating-carbon-in-standing-dead-trees/</guid>
+      <description>A standing dead balsam fir tree in Maine.&#xD;Quantifying the presence and abundance of standing dead trees (SDTs) is notoriously difficult. While live and healthy trees generally appear similar in form and appearance to other live and healthy trees, no two standing dead trees are alike.&#xA;Trees that recently died within a few months can have most of their tops and limbs intact. Their foliage may even still be attached.</description>
+    </item>
+  </channel>
+</rss>

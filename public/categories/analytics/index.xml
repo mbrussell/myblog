@@ -2,140 +2,144 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Analytics on </title>
-    <link>https://arbor-analytics.com/categories/analytics/</link>
+    <link>http://localhost:4321/categories/analytics/</link>
     <description>Recent content in Analytics on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/analytics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/categories/analytics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A quick and easy way to estimate forestland area change across US states</title>
+      <link>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</guid>
+      <description>Forest industry professionals have a renewed interest in understanding the extent to which forestland area has changed in regions where they procure wood. A few examples include:&#xA;On June 30, 2023, the European Union implemented the European Union Deforestation-Free Supply Chain Regulation (EUDR), a process that bans imports into the EU marketplace if they originate from areas that have seen deforestation or forest degradation. All operators (including wood suppliers) will need to collect and maintain information on these products, including providing “adequately conclusive and verifiable information” that products are deforestation-free.</description>
+    </item>
+    <item>
+      <title>A list of R packages for forestry applications</title>
+      <link>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</guid>
+      <description>Image created with DALL·E 3.&#xD;Two years ago I wrote about the different R packages that are available to use in forestry applications. Back then, there were 16,166 packages archived on the Comprehensive R Archive Network (CRAN). Today, the CRAN repository contains 20,102 packages.&#xA;The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users. The value of using R packages is that someone else might have already written a suite of functions for you.</description>
+    </item>
+    <item>
+      <title>Using R and Python to get forest resource data through the EVALIDator API</title>
+      <link>http://localhost:4321/post/2023-10-25-using-r-and-python-to-get-forest-resource-data-through-the-evalidator-api/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-10-25-using-r-and-python-to-get-forest-resource-data-through-the-evalidator-api/</guid>
+      <description>If you work with forestry data across the United States, you’ve probably had to turn to Forest Inventory and Analysis (FIA) data at one time or another to look at the status and trends in our forest resources. The FIA database has information contained from over 130,000 forest inventory plots across the country.&#xA;One of the tools that analysts often use to access FIA data is the the EVALIDator web interface.</description>
+    </item>
+    <item>
+      <title>Recent updates to tidyverse functions</title>
+      <link>http://localhost:4321/post/2023-09-13-recent-changes-in-the-tidyverse/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-09-13-recent-changes-in-the-tidyverse/</guid>
+      <description>I recently watched the video “Teaching the tidyverse in 2023” by Mine Çetinkaya-Rundel to learn more about recent changes to my favorite R package. I learned quite a bit of new tricks and techniques for my everyday R coding and sharing a few of them here.&#xA;I’ll use the elm data set from the stats4nr package as I work through a few examples in the post. This data set contains observations on 333 cedar elm trees (Ulmus crassifolia Nutt.</description>
+    </item>
+    <item>
+      <title>Making R graphs more accessible using BrailleR</title>
+      <link>http://localhost:4321/post/2023-06-30-making-r-graphs-more-accessible-using-brailler/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-06-30-making-r-graphs-more-accessible-using-brailler/</guid>
+      <description>An example use of alt text for a scatterplot made in R, with description of the scatterplot provided by the BrailleR package below the graph.&#xD;You might have seen these prompts while you’re uploading an image to social media or anywhere else on the internet: “Add alt text here.” Alt text describes what’s contained in an image or figure on a webpage. It’s useful because it can be used by screen readers for visually impaired people.</description>
+    </item>
+    <item>
+      <title>Imputing missing tree heights from a forest inventory</title>
+      <link>http://localhost:4321/post/2023-02-15-imputing-missing-tree-heights-from-a-forest-inventory/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-02-15-imputing-missing-tree-heights-from-a-forest-inventory/</guid>
+      <description>Eastern white pine trees at sunrise in Maine.&#xD;Total height is one of the most useful measurements of a tree, but it’s often not measured. This is because measuring heights takes considerable time and effort. While it may be easy for a forester to measure the diameter of a tree, to obtain a proper measurement of a tree you generally need to walk away from it. This can take a lot of time if there are dozens of trees on a forest inventory plot.</description>
+    </item>
     <item>
       <title>New updates for tools that query Forest Inventory and Analysis data</title>
-      <link>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</link>
+      <link>http://localhost:4321/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</link>
       <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</guid>
-      <description>The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential.
-After attending the FIA Science Stakeholder Meeting last week, I was happy to learn about some important updates to two tools that are widely used by forest analysts: the FIA EVALIDator program and the FIA DataMart.</description>
+      <guid>http://localhost:4321/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</guid>
+      <description>The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential.&#xA;After attending the FIA Science Stakeholder Meeting last week, I was happy to learn about some important updates to two tools that are widely used by forest analysts: the FIA EVALIDator program and the FIA DataMart.</description>
     </item>
-    
     <item>
       <title>How to spot poor data analyses</title>
-      <link>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</link>
+      <link>http://localhost:4321/post/2022-10-20-how-to-spot-poor-data-analyses/</link>
       <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</guid>
-      <description>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.
-Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s autocorrecting feature had led to errors in 30% of gene list observations over a six year span.</description>
+      <guid>http://localhost:4321/post/2022-10-20-how-to-spot-poor-data-analyses/</guid>
+      <description>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.&#xA;Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s autocorrecting feature had led to errors in 30% of gene list observations over a six year span.</description>
     </item>
-    
     <item>
       <title>Pandemic assistance to the forest industry: a summary</title>
-      <link>https://arbor-analytics.com/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</link>
+      <link>http://localhost:4321/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</guid>
-      <description>Forest products and timber harvesting and hauling businesses secured nearly $5 billion of federal funds through the Paycheck Protection Program and Pandemic Assistance to Timber Harvesters and Haulers programs to combat economic challenges presented by the COVID-19 pandemic. These slides were presented at the 2022 Society of American Foresters Convention in Baltimore, MD.
-READ THE SLIDES.</description>
+      <guid>http://localhost:4321/events/2022-09-27-pandemic-assistance-to-the-forest-industry-a-summary/</guid>
+      <description>Forest products and timber harvesting and hauling businesses secured nearly $5 billion of federal funds through the Paycheck Protection Program and Pandemic Assistance to Timber Harvesters and Haulers programs to combat economic challenges presented by the COVID-19 pandemic. These slides were presented at the 2022 Society of American Foresters Convention in Baltimore, MD.&#xA;READ THE SLIDES.</description>
     </item>
-    
     <item>
       <title>Reading in data quickly into R</title>
-      <link>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</link>
+      <link>http://localhost:4321/post/2022-05-19-reading-in-data-quickly-in-r/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</guid>
-      <description>If you’re like me, you work with a lot of data files in your daily analytical work. Despite the increase in cloud computing, reading in files locally to the machine your working on is common.
-You want a rapid summary of your data and don’t want to wait forever for your computer to read in the file you’re working with. To do this, you want to use functions that are efficient and effective for working with large amounts of data.</description>
+      <guid>http://localhost:4321/post/2022-05-19-reading-in-data-quickly-in-r/</guid>
+      <description>If you’re like me, you work with a lot of data files in your daily analytical work. Despite the increase in cloud computing, reading in files locally to the machine your working on is common.&#xA;You want a rapid summary of your data and don’t want to wait forever for your computer to read in the file you’re working with. To do this, you want to use functions that are efficient and effective for working with large amounts of data.</description>
     </item>
-    
     <item>
       <title>Five R packages every forest analyst should be using</title>
-      <link>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
+      <link>http://localhost:4321/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
       <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
-      <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.
-Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.
-R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
+      <guid>http://localhost:4321/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.&#xA;Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.&#xA;R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
     </item>
-    
     <item>
       <title>Random forests: a tutorial with forestry data</title>
-      <link>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</link>
+      <link>http://localhost:4321/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</link>
       <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</guid>
+      <guid>http://localhost:4321/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</guid>
       <description>Random forests have quickly become one of the most popular analytical techniques used in forestry today. Random forests (RF) are a machine learning technique that differ in many ways to traditional prediction models such as regression. Random forests can handle a lot of data, can be applied to classification or regression problems, and rank the relative importance of many variables that are related to a response variable of interest.</description>
     </item>
-    
     <item>
       <title>The importance of citizen data scientists in forest analytics</title>
-      <link>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
+      <link>http://localhost:4321/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
       <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
+      <guid>http://localhost:4321/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
       <description>As a part of my work with the University of Minnesota Extension, we run the Assessing Vegetation Impacts from Deer program. The AVID program engages citizen scientists to monitor tree seedlings that are susceptible to browse from white-tailed deer. With little information on deer browse impacts for most of Minnesota’s tree species, the data are beginning to provide insights on how deer browse degrades the health of the forest.</description>
     </item>
-    
     <item>
       <title>Understanding the forest products industry using NAICS codes</title>
-      <link>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
+      <link>http://localhost:4321/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
       <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
-      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.
-In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
+      <guid>http://localhost:4321/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
+      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.&#xA;In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
     </item>
-    
     <item>
       <title>31 R packages for forest analysts</title>
-      <link>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</link>
+      <link>http://localhost:4321/post/31-r-packages-for-forest-analysts/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</guid>
-      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.
-The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
+      <guid>http://localhost:4321/post/31-r-packages-for-forest-analysts/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.&#xA;The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
     </item>
-    
     <item>
       <title>Forget spreading and gathering your R data, try pivoting instead</title>
-      <link>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
+      <link>http://localhost:4321/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
-      <description>Reshaping data from a wide to a long format, or vice versa, is one of the most common data manipulation tasks that analysts need to do. One of my first posts on this blog was on how to do this in R.
-That post highlighted the spread() and gather() functions available from the tidyr package. As it turns out, the gather() and spread() functions are still available to use but are no longer under active development.</description>
+      <guid>http://localhost:4321/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
+      <description>Reshaping data from a wide to a long format, or vice versa, is one of the most common data manipulation tasks that analysts need to do. One of my first posts on this blog was on how to do this in R.&#xA;That post highlighted the spread() and gather() functions available from the tidyr package. As it turns out, the gather() and spread() functions are still available to use but are no longer under active development.</description>
     </item>
-    
     <item>
       <title>Wages for logging truckers much lower than other transportation industries</title>
-      <link>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
+      <link>http://localhost:4321/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
-      <description>“To solve any problem in forestry, first figure out where the roads will go.”
-That is a quote that I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it.</description>
+      <guid>http://localhost:4321/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
+      <description>“To solve any problem in forestry, first figure out where the roads will go.”&#xA;That is a quote that I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it.</description>
     </item>
-    
     <item>
       <title>Using clustering with logging industry data</title>
-      <link>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</link>
+      <link>http://localhost:4321/post/using-clustering-with-logging-industry-data/</link>
       <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</guid>
-      <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.
-The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.
-Clustering is an unsupervised ML algorithm that groups items.</description>
+      <guid>http://localhost:4321/post/using-clustering-with-logging-industry-data/</guid>
+      <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.&#xA;The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.&#xA;Clustering is an unsupervised ML algorithm that groups items.</description>
     </item>
-    
     <item>
       <title>How do loggers feel? Sentiment analysis on the opinions of logging contractors</title>
-      <link>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
+      <link>http://localhost:4321/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
       <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
-      <description>After we conduct a survey, we have a routine for analyzing the data. Summarize the numerical responses and report values like means for specific questions. Group the data into different demographics and report the means within these categories.
-If we ask for any qualitative data through comments (e.g., “What is your opinion of X?”), the responses are always worth reading. We often get a lot of insight from reading an individual’s comments, and these comments can unveil new dimensions of our analysis.</description>
+      <guid>http://localhost:4321/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
+      <description>After we conduct a survey, we have a routine for analyzing the data. Summarize the numerical responses and report values like means for specific questions. Group the data into different demographics and report the means within these categories.&#xA;If we ask for any qualitative data through comments (e.g., “What is your opinion of X?”), the responses are always worth reading. We often get a lot of insight from reading an individual’s comments, and these comments can unveil new dimensions of our analysis.</description>
     </item>
-    
   </channel>
 </rss>

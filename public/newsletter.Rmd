@@ -1,24 +1,24 @@
 ---
 title: Newsletter
 author: Matt Russell
-date: '2022-09-06'
+date: '2024-02-22'
 slug: newsletter
 ---
 
 Two newsletter options to follow our work:
-
+ 
 ## 1. LinkedIn Newsletter  
 
 #### Insights for professionals that work with forests and data.
-This newsletter delivered through LinkedIn provides insights for professionals that work with forests and data. Published weekly, mid-week. 
+This biweekly newsletter delivered through LinkedIn provides insights for professionals that work with forests and data. Published every other week, mid-week.  
 
 **[**READ AND SUBSCRIBE HERE**](https://www.linkedin.com/newsletters/trends-in-forest-analytics-6962772901330616320/)**
 
 ## 2. Email newsletter  
   
 #### Stay on top of how data is changing the forest products industry.
-This email newsletter provides in-depth analysis on data and analytics in the forest products industry. One email delivered on the last Thursday of every month.     
+This email newsletter provides in-depth analysis on data and analytics in the forest products industry. A rundown of what's been on top of mind on over the last month. One email delivered on the last Thursday of every month.     
 
-**[**SUBSCRIBE HERE**](https://mailchi.mp/d96897dc0f46/arbor-analytics)**
+**[**SUBSCRIBE HERE**](https://mailchi.mp/d96897dc0f46/arbor-analytics)** 
 
 **[**READ PAST ISSUES**](https://us4.campaign-archive.com/home/?u=7fef5e59c1561e6fb30381b19&id=dd799e0d20)**

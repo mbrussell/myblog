@@ -2,153 +2,123 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on </title>
-    <link>https://arbor-analytics.com/tags/r/</link>
+    <link>http://localhost:4321/tags/r/</link>
     <description>Recent content in R on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A list of R packages for forestry applications</title>
+      <link>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</guid>
+      <description>Image created with DALL·E 3.&#xD;Two years ago I wrote about the different R packages that are available to use in forestry applications. Back then, there were 16,166 packages archived on the Comprehensive R Archive Network (CRAN). Today, the CRAN repository contains 20,102 packages.&#xA;The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users. The value of using R packages is that someone else might have already written a suite of functions for you.</description>
+    </item>
+    <item>
+      <title>Recent updates to tidyverse functions</title>
+      <link>http://localhost:4321/post/2023-09-13-recent-changes-in-the-tidyverse/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-09-13-recent-changes-in-the-tidyverse/</guid>
+      <description>I recently watched the video “Teaching the tidyverse in 2023” by Mine Çetinkaya-Rundel to learn more about recent changes to my favorite R package. I learned quite a bit of new tricks and techniques for my everyday R coding and sharing a few of them here.&#xA;I’ll use the elm data set from the stats4nr package as I work through a few examples in the post. This data set contains observations on 333 cedar elm trees (Ulmus crassifolia Nutt.</description>
+    </item>
     <item>
       <title>Data Science for Forestry Applications</title>
-      <link>https://arbor-analytics.com/events/2022-09-27-data-science-for-forestry-applications/</link>
+      <link>http://localhost:4321/events/2022-09-27-data-science-for-forestry-applications/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2022-09-27-data-science-for-forestry-applications/</guid>
+      <guid>http://localhost:4321/events/2022-09-27-data-science-for-forestry-applications/</guid>
       <description>This hands-on workshop showcased how data science can be used in forestry applications. Participants learned how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop was perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
     </item>
-    
     <item>
       <title>New book: Statistics in Natural Resources: Applications with R</title>
-      <link>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
+      <link>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
-      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.
-I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.
-At the same time, I was searching for a different textbook to use for the course.</description>
+      <guid>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
+      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.&#xA;I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.&#xA;At the same time, I was searching for a different textbook to use for the course.</description>
     </item>
-    
     <item>
       <title>Five R packages every forest analyst should be using</title>
-      <link>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
+      <link>http://localhost:4321/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
       <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
-      <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.
-Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.
-R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
+      <guid>http://localhost:4321/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.&#xA;Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.&#xA;R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
     </item>
-    
     <item>
       <title>Creating animated bar charts to visualize sawtimber prices</title>
-      <link>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</link>
+      <link>http://localhost:4321/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</link>
       <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</guid>
-      <description>If you’re on social media, you’ve probably seen animated bar charts. My favorite is one that shows the popularity of data science software through time.
-Animated bar graphs are effective when you have a categorical variable that has a different value at multiple time periods. This is why animated bar graphs work well to visualize time series data. These data might typically be represented by multiple lines on a graph that “cross” over time.</description>
+      <guid>http://localhost:4321/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</guid>
+      <description>If you’re on social media, you’ve probably seen animated bar charts. My favorite is one that shows the popularity of data science software through time.&#xA;Animated bar graphs are effective when you have a categorical variable that has a different value at multiple time periods. This is why animated bar graphs work well to visualize time series data. These data might typically be represented by multiple lines on a graph that “cross” over time.</description>
     </item>
-    
     <item>
       <title>R Statistical Software for Invasive Species Applications</title>
-      <link>https://arbor-analytics.com/events/r-statistical-software-for-invasive-species-applications/</link>
+      <link>http://localhost:4321/events/r-statistical-software-for-invasive-species-applications/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/r-statistical-software-for-invasive-species-applications/</guid>
+      <guid>http://localhost:4321/events/r-statistical-software-for-invasive-species-applications/</guid>
       <description>Invasive species professionals are increasingly using data in new and complex ways. This hands-on workshop will provide an introduction to R software and how it can be used to acquire, analyze, and visualize invasive species data. This workshop will encourage and empower professionals to better use data to make strategic decisions about invasive species. It will be especially valuable to graduate students who are at an early stage in their programs and professionals seeking to learn about the software and how it can be used in their work.</description>
     </item>
-    
     <item>
       <title>Mixed models in R: a primer</title>
-      <link>https://arbor-analytics.com/post/mixed-models-a-primer/</link>
+      <link>http://localhost:4321/post/mixed-models-a-primer/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/mixed-models-a-primer/</guid>
-      <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:
-“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
-The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
+      <guid>http://localhost:4321/post/mixed-models-a-primer/</guid>
+      <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:&#xA;“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”&#xA;The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
     </item>
-    
     <item>
       <title>31 R packages for forest analysts</title>
-      <link>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</link>
+      <link>http://localhost:4321/post/31-r-packages-for-forest-analysts/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</guid>
-      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.
-The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
+      <guid>http://localhost:4321/post/31-r-packages-for-forest-analysts/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.&#xA;The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
     </item>
-    
     <item>
       <title>Forget spreading and gathering your R data, try pivoting instead</title>
-      <link>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
+      <link>http://localhost:4321/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
-      <description>Reshaping data from a wide to a long format, or vice versa, is one of the most common data manipulation tasks that analysts need to do. One of my first posts on this blog was on how to do this in R.
-That post highlighted the spread() and gather() functions available from the tidyr package. As it turns out, the gather() and spread() functions are still available to use but are no longer under active development.</description>
+      <guid>http://localhost:4321/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
+      <description>Reshaping data from a wide to a long format, or vice versa, is one of the most common data manipulation tasks that analysts need to do. One of my first posts on this blog was on how to do this in R.&#xA;That post highlighted the spread() and gather() functions available from the tidyr package. As it turns out, the gather() and spread() functions are still available to use but are no longer under active development.</description>
     </item>
-    
     <item>
       <title>Data Science for Forestry Applications</title>
-      <link>https://arbor-analytics.com/events/try2/</link>
+      <link>http://localhost:4321/events/try2/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/try2/</guid>
+      <guid>http://localhost:4321/events/try2/</guid>
       <description>This hands-on workshop will showcase how data science can be used in forestry applications. Learn how to use open-source software (specifically R) to work quickly and efficiently with forestry data, with a focus on using large datasets such as Forest Inventory and Analysis data. This workshop is perfect for students and professionals who want to learn more about how to use R to work with the data they have.</description>
     </item>
-    
     <item>
       <title>Getting down with pagedown</title>
-      <link>https://arbor-analytics.com/events/getting-down-with-pagedown/</link>
+      <link>http://localhost:4321/events/getting-down-with-pagedown/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/getting-down-with-pagedown/</guid>
-      <description>This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.
-SlidesGithub repositoryExamples with pagedown</description>
+      <guid>http://localhost:4321/events/getting-down-with-pagedown/</guid>
+      <description>&#xD;This is a presentation given to the Twin Cities R User Group on 17 Oct 2019 in Bloomington, MN. This presentation provides an introduction to using pagedown in R. pagedown creates and designs paged HTML documents from R using the R Markdown language. Think reading reports with data summaries embedded in them, all in an HTML format produced in R.&#xA;Slides&#xD;Github repository&#xD;Examples with pagedown&#xD;</description>
     </item>
-    
     <item>
       <title>How to created paged HTML documents with pagedown</title>
-      <link>https://arbor-analytics.com/post/how-to-created-paged-html-documents-with-pagedown/</link>
+      <link>http://localhost:4321/post/how-to-created-paged-html-documents-with-pagedown/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-to-created-paged-html-documents-with-pagedown/</guid>
-      <description>When it comes to reading documents and data summaries online, HTML is often preferred over PDF. HTML documents are more interactive, easier to read on screens, and more accessible than PDFs.
-Many R users that produce reproducible reports have used R Markdown for integrating text, images, code, and tables and figures into an HTML format. Using the R Markdown language allows R users to work within the R ecosystem for writing and producing code.</description>
+      <guid>http://localhost:4321/post/how-to-created-paged-html-documents-with-pagedown/</guid>
+      <description>When it comes to reading documents and data summaries online, HTML is often preferred over PDF. HTML documents are more interactive, easier to read on screens, and more accessible than PDFs.&#xA;Many R users that produce reproducible reports have used R Markdown for integrating text, images, code, and tables and figures into an HTML format. Using the R Markdown language allows R users to work within the R ecosystem for writing and producing code.</description>
     </item>
-    
     <item>
       <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
-      <link>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
+      <link>http://localhost:4321/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
       <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
-      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.
-The general process to make a GIF image with maps in R is:
-1. Create the images you want (e.g., using ggplot),
-2. Stitch the images together with magick, and
-3. Write the images as a GIF and share!</description>
+      <guid>http://localhost:4321/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
+      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.&#xA;The general process to make a GIF image with maps in R is:&#xA;1. Create the images you want (e.g., using ggplot),&#xA;2. Stitch the images together with magick, and&#xA;3. Write the images as a GIF and share!</description>
     </item>
-    
     <item>
       <title>Adding some music to boxplots, and better ways to visualize diameter distributions</title>
-      <link>https://arbor-analytics.com/post/better-ways-to-visualize-multi-modal-data/</link>
+      <link>http://localhost:4321/post/better-ways-to-visualize-multi-modal-data/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/better-ways-to-visualize-multi-modal-data/</guid>
-      <description>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on between those boxes and whiskers?
-Some forestry data: In the examples below, I’ve used tree diameters measured in four management units at the Penobscot Experimental Forest in Maine.</description>
+      <guid>http://localhost:4321/post/better-ways-to-visualize-multi-modal-data/</guid>
+      <description>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on between those boxes and whiskers?&#xA;Some forestry data: In the examples below, I’ve used tree diameters measured in four management units at the Penobscot Experimental Forest in Maine.</description>
     </item>
-    
     <item>
       <title>Spreading and gathering tree data</title>
-      <link>https://arbor-analytics.com/post/spreading-and-gathering-tree-data/</link>
+      <link>http://localhost:4321/post/spreading-and-gathering-tree-data/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/spreading-and-gathering-tree-data/</guid>
-      <description>A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and needed to be wide.
-The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.</description>
+      <guid>http://localhost:4321/post/spreading-and-gathering-tree-data/</guid>
+      <description>A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and needed to be wide.&#xA;The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.</description>
     </item>
-    
   </channel>
 </rss>

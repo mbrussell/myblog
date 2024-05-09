@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>Calculating carbon in standing dead trees</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Calculating carbon in standing dead trees</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-02-09-calculating-carbon-in-standing-dead-trees/">Calculating carbon in standing dead trees</a></h4>
+    <h5>February 10, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon-accounting"><kbd class="item-tag">carbon accounting</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<center>
+<p><img src="balsam%20fir%20snag%20Maine.jpg" width="400" /></p>
+</center>
+<center>
+<em>A standing dead balsam fir tree in Maine.</em>
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>Quantifying the presence and abundance of standing dead trees (SDTs) is notoriously difficult. While live and healthy trees generally appear similar in form and appearance to other live and healthy trees, no two standing dead trees are alike.</p>
+<p>Trees that recently died within a few months can have most of their tops and limbs intact. Their foliage may even still be attached. Trees that have been standing dead for a decade or more can only have a portion of the bole remaining with the rest already decaying on the forest floor.</p>
+<p>These attributes make quantifying the carbon found within SDTs incredibly complex. The popular <a href="https://www.fs.usda.gov/research/treesearch/6996">Jenkins biomass equations</a> were developed for live trees, and cannot be applied to SDTs directly. If you’re only using common forest inventory measurements like species and diameter, there’s really no way to quantify the difference in the amount of carbon in a tree that recently died to one that has been standing dead for decades.</p>
+<p>Fortunately, most inventories that measure dead wood will collect data on the stage of decay of SDTs. These data are needed to refine estimates of SDT biomass and carbon by including structural loss and decay adjustments.</p>
+<p>In this post I implement a method for quantifying the amount of carbon in standing dead trees using R, drawing especially from functions in the <strong>tidyverse</strong> package. The approach presented here follows the component ratio method approach for determining carbon developed by the USDA Forest Service. A few key resources that go through the methods of this approach:</p>
+<ul>
+<li><a href="https://cbmjournal.biomedcentral.com/articles/10.1186/1750-0680-6-14"><em>Accounting for density reduction and structural loss in standing dead trees: implications for forest biomass and carbon stock estimates in the United States</em></a> by Domke et al. 2011. This paper describes the method and how it impacts the Forest Inventory and Analysis data.</li>
+<li><a href="https://static-content.springer.com/esm/art%3A10.1186%2F1750-0680-6-14/MediaObjects/13021_2011_72_MOESM1_ESM.PDF">Additional file 1 from the paper (PDF).</a> The supplemental file presents equations the equations used estimate above and belowground SDT biomass and carbon and provides an example calculation.</li>
+</ul>
+</div>
+<div id="standing-dead-tree-data" class="section level2">
+<h2>Standing dead tree data</h2>
+<p>I compiled a few records of standing dead trees from four Forest Inventory and Analysis plots located in Maine. The four plots were measured in 2021 and the data set contains 10 SDTs. Here is the data that can be read into R with the <code>tribble()</code> function from the <strong>tidyverse</strong> package:</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre class="r"><code>tree &lt;- tribble(
+  ~STATECD, ~COUNTYCD, ~PLOT, ~TREE, ~SPCD, ~DIA, ~ACTUALHT, ~DECAYCD,
+  23, 29, 130, 6, 95, 6.7, 27, 3,
+  23, 29, 130, 9, 95, 5.6, 9, 2,
+  23, 29, 688, 1, 12, 7.9, 35, 1,
+  23, 29, 688, 6, 12, 8.6, 31, 1,
+  23, 29, 701, 1, 371, 11, 17, 5,
+  23, 29, 701, 6, 531, 5.5, 49, 1,
+  23, 29, 846, 8, 241, 13.6, 26, 2,
+  23, 29, 846, 12, 12, 6.2, 10, 4,
+  23, 29, 846, 17, 12, 6.8, 5, 4,
+  23, 29, 846, 23, 12, 5.1, 29, 2,
+)</code></pre>
+<p>The variables are:</p>
+<ul>
+<li><code>STATECD</code>: Numeric state ID code (23 = Maine),</li>
+<li><code>COUNTYCD</code>: Numeric county ID code (29 = Washington County),<br />
+</li>
+<li><code>PLOT</code>: Numeric plot ID code,<br />
+</li>
+<li><code>TREE</code>: Numeric tree ID code,<br />
+</li>
+<li><code>SPCD</code>: Numeric FIA tree species code,<br />
+</li>
+<li><code>DIA</code>: Tree diameter (inches),</li>
+<li><code>ACTUALHT</code>: Height of the tree (feet), from ground level to the highest remaining portion of the tree,</li>
+<li><code>DECAYCD</code>: Numeric code indicating the stage of decay in a standing dead tree; ranges from 1 (all limbs and branches are present) to 5 (no evidence of branches remains; top is broken)</li>
+</ul>
+</div>
+<div id="calculating-volume-biomass-and-carbon-in-standing-dead-trees" class="section level2">
+<h2>Calculating volume, biomass and carbon in standing dead trees</h2>
+<div id="tree-volume" class="section level3">
+<h3>Tree volume</h3>
+<p>The first step to calculating the amount of carbon stored in SDTs is to determine their volume. In your region, there are likely regional volume equations that are used for the species you’re interested in. For this example, I’ll use <a href="http://ifmlab.for.unb.ca/People/Kershaw/Courses/For1001/Honer.html">equations developed by Honer in 1967</a> which are widely used for commercial species in the northeastern US and Canada.</p>
+<p>The Honer equations predict volume in cubic feet and rely on species, diameter at breast height (<code>DBH</code>; measured in inches) and total tree height (<code>HT</code>; measured in feet):</p>
+<p><span class="math display">\[ VOL = \frac{DBH^2}{a = \frac{b}{HT}}\]</span>
+where <code>a</code> and <code>b</code> are species-specific coefficients.</p>
+<p>Here is an R function to determine the volumes of the five species of SDTs in the data set:</p>
+<pre class="r"><code>fx_HONER_VOL &lt;- function(SPCD, DBH, HT){
+       if(SPCD == 12){a = 2.139; b = 301.634}   # balsam fir
+  else if(SPCD == 95){a = 1.588; b = 333.364}   # black spruce
+  else if(SPCD == 241){a = 4.167; b = 244.906}  # northern white-cedar
+  else if(SPCD == 371){a = 1.449; b = 344.754}  # yellow birch
+  else if(SPCD == 531){a = 0.959; b = 334.829}  # American beech
+  VOL = DBH**2/(a+(b/HT))
+  return(VOL)
+  }</code></pre>
+<p>Now, we can estimate the total volume of SDTs by applying the function to the <code>tree</code> data set. I use the <code>mutate()</code> function along with <code>mapply()</code> to create the new variable <code>VOL</code>:</p>
+<pre class="r"><code>tree &lt;- tree %&gt;% 
+  mutate(VOL = mapply(fx_HONER_VOL, SPCD = SPCD, DBH = DIA, HT = ACTUALHT))</code></pre>
+<p>A graph of the tree diameter-volume trends highlights the data. Note that because many of the SDTs may have a broken top, trees can be a large diameter with relatively small volume, which adds some “noise” to the relationship:</p>
+<pre class="r"><code>ggplot(tree, aes(x = DIA, y = VOL, col = factor(SPCD))) +
+  geom_point() +
+  labs(x = &quot;Diameter (in.)&quot;,
+       y = &quot;Volume (cu.ft.)&quot;)</code></pre>
+<p><img src="/post/2023-02-09-calculating-carbon-in-standing-dead-trees/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="species-data" class="section level3">
+<h3>Species data</h3>
+<p>To determine biomass and carbon attributes of dead trees, the <strong>species reference data set</strong> (<code>REF_SPECIES.csv</code>) provided by the FIA program is a must. This file contains species-specific values of wood density, decay ratios, and more. We’ll read the .csv file in from the USDA website, then select the core variables needed to determine biomass and carbon for SDTs:</p>
+<pre class="r"><code>ref_spp &lt;- read_csv(url(&quot;https://apps.fs.usda.gov/fia/datamart/CSV/REF_SPECIES.csv&quot;)) %&gt;% 
+  select(SPCD, WOOD_SPGR_GREENVOL_DRYWT, BARK_SPGR_GREENVOL_DRYWT, BARK_VOL_PCT,
+         WOOD_SPGR_MC12VOL_DRYWT, SFTWD_HRDWD, JENKINS_TOTAL_B1,JENKINS_TOTAL_B2,
+         STANDING_DEAD_DECAY_RATIO1, STANDING_DEAD_DECAY_RATIO2, 
+         STANDING_DEAD_DECAY_RATIO3,
+         STANDING_DEAD_DECAY_RATIO4, STANDING_DEAD_DECAY_RATIO5,
+         RAILE_STUMP_DOB_B1, RAILE_STUMP_DIB_B1, RAILE_STUMP_DIB_B2)</code></pre>
+<p>Next, we’ll join the <code>ref_spp</code> data set to the <code>tree</code> data set:</p>
+<pre class="r"><code>tree &lt;- inner_join(tree, ref_spp, by = &quot;SPCD&quot;)</code></pre>
+<p>Now, we’ll modify some of the species-specific factors from the reference species table. The <code>STANDING_DEAD_DECAY_RATIO</code> variable contains the ratio of decayed wood density to non-decayed wood density. It’s stored in five different variables for each of the five different decay classes, so the code below will turn it into a data set organized in a long format:</p>
+<pre class="r"><code>ref_spp_dead &lt;- ref_spp %&gt;% 
+  select(SPCD, STANDING_DEAD_DECAY_RATIO1, STANDING_DEAD_DECAY_RATIO2, 
+         STANDING_DEAD_DECAY_RATIO3, STANDING_DEAD_DECAY_RATIO4, 
+         STANDING_DEAD_DECAY_RATIO5) %&gt;% 
+  pivot_longer(STANDING_DEAD_DECAY_RATIO1:STANDING_DEAD_DECAY_RATIO5, 
+               names_to = &quot;DECAY_NAME&quot;, 
+               values_to = &quot;STANDING_DEAD_DECAY_RATIO&quot;) %&gt;% 
+  mutate(DECAYCD = as.numeric(str_sub(DECAY_NAME, 26, 26))) %&gt;% 
+  select(-DECAY_NAME) %&gt;% 
+  relocate(SPCD, DECAYCD, STANDING_DEAD_DECAY_RATIO)</code></pre>
+<p>For example, here are the decay ratios for standing dead trees for the five decay classes for balsam fir:</p>
+<pre class="r"><code>print(ref_spp_dead[ref_spp_dead$SPCD == 12, ])</code></pre>
+<pre><code>## # A tibble: 5 × 3
+##    SPCD DECAYCD STANDING_DEAD_DECAY_RATIO
+##   &lt;dbl&gt;   &lt;dbl&gt;                     &lt;dbl&gt;
+## 1    12       1                      1.04
+## 2    12       2                      1.15
+## 3    12       3                      1.10
+## 4    12       4                      0.71
+## 5    12       5                      0.71</code></pre>
+</div>
+<div id="structural-loss-adjustments" class="section level3">
+<h3>Structural loss adjustments</h3>
+<p>While decay ratios account for decay and decomposition of wood, they don’t account for structural losses. Standing dead trees experience sloughing and breakage as a result of wind damage, animal activity, and many more issues. For this, structural loss adjustments are needed to accurately determine the biomass and carbon stored in SDTs.</p>
+<p>The structural loss adjustments can be obtained in <a href="https://cbmjournal.biomedcentral.com/articles/10.1186/1750-0680-6-14/tables/2">Table 2 of the Domke et al. paper</a>. These decay-class-specific adjustments are for the bole, bark, tops and limbs, stumps, and roots. The table <code>sla</code> produces these values. We can then merge the <code>sla</code> table with the <code>ref_spp_dead</code> table, then merge that to the <code>tree</code> table:</p>
+<pre class="r"><code>sla &lt;- tribble(
+  ~DECAYCD, ~BOLE_SLA, ~BARK_SLA, ~TOP_SLA, ~STUMP_SLA, ~ROOTS_SLA,
+  1, 1, 0.92, 1, 1, 1,
+  2, 1, 0.66, 0.5, 1, 0.95,
+  3, 1, 0.39, 0.20, 1, 0.80,
+  4, 1, 0.21, 0.10, 1, 0.65,
+  5, 1, 0, 0, 1, 0.50)
+
+ref_spp_dead &lt;- left_join(ref_spp_dead, sla, by = &quot;DECAYCD&quot;)
+
+tree &lt;- left_join(tree, ref_spp_dead, by = c(&quot;SPCD&quot;, &quot;DECAYCD&quot;)) </code></pre>
+<p>Phew! That was a lot of work and we haven’t even begun to calculate biomass yet. No fear, now we have all of the variables required in the <code>tree</code> data set to begin the biomass and carbon calculations.</p>
+</div>
+</div>
+<div id="determing-component-biomass-in-standing-dead-trees" class="section level2">
+<h2>Determing component biomass in standing dead trees</h2>
+<div id="stem-and-bark" class="section level3">
+<h3>Stem and bark</h3>
+<p>We start by calculating the biomass in wood found the the stem of the tree (<span class="math inline">\(B_{ODW}\)</span>; kg). We will also need the specific gravity of wood for that species, i.e., the <code>WOOD_SPGR_GREENVOL_DRYWT</code> variable from the reference species file and <code>W</code>, the weight of one cubic meter of water (1,000 kg). The structural loss adjustment for the bole (<code>BOLE_SLA</code>) is multiplied by these values:
+<span class="math display">\[B_{ODW} = VOL\times \text{WOOD_SPGR_GREENVOL_DRYWT}\times \\ W \times \text{STANDING_DEAD_DECAY_RATIO}\times \text{BOLE_SLA}\]</span></p>
+<p>The biomass found in the bark of the tree is the next component to predict(<span class="math inline">\(B_{ODB}\)</span>; kg). For this we’ll also need to know the species-specific values for the percent of wood volume that is bark (<code>BARK_VOL_PCT</code>), the specific gravity of bark (BARK_SPGR_GREENVOL_DRYWT), and the structural loss adjustment for the bark component (<code>BARK_SLA</code>):</p>
+<p><span class="math display">\[B_{ODB} = VOL\times \text{BARK_VOL_PCT/100}\times \text{BARK_SPGR_GREENVOL_DRYWT} \times \\ W \times \text{STANDING_DEAD_DECAY_RATIO}\times \text{BARK_SLA}\]</span>
+Total SDT bole and bark biomass (<span class="math inline">\(B_{ODT}\)</span>) can be found by adding the two components:</p>
+<p><span class="math display">\[B_{ODT} = B_{ODW} + B_{ODB}\]</span></p>
+<p>Because this approach uses the component ratio method (CRM) to determine biomass stored in SDTs, the next step is to calculate the biomass in each SDT and them compute the ratios. First we need to calculate the bole biomass (kg) from the Jenkins et al. equation (<code>JENKINS_AG_TREE</code>). These equations have different parameters for 10 species groups:</p>
+<p><span class="math display">\[ \text{JENKINS_AG_TREE} = exp(\text{JENKINS_TOTAL_B1} + \\ \text{JENKINS_TOTAL_B2}*log(DIA)) \]</span>
+The bole ratio from the Jenkins et al. 2003 paper (their Table 6) can be computed for softwood species as:</p>
+<p><span class="math display">\[ \text{BOLE_RATIO_SFWD} = exp(-0.3737 + (-1.8055/(DIA)) \]</span>
+and for hardwood species as:</p>
+<p><span class="math display">\[ \text{BOLE_RATIO_HDWD} = exp(-0.3065 + (-5.4240/(DIA)) \]</span></p>
+<p>Ratios of bark can be computed for softwood species as:</p>
+<p><span class="math display">\[ \text{BARK_RATIO_SFWD} = exp(-2.0980 + (-1.1432/(DIA)) \]</span></p>
+<p>and for hardwood species as:</p>
+<p><span class="math display">\[ \text{BOLE_RATIO_HDWD} = exp(-2.0129 + (-5.4240/(DIA)) \]</span>
+Merchantable oven-dry biomass (<code>MST</code>) is then calculated as:</p>
+<p><span class="math display">\[MST = (\text{JENKINS_AG_TREE} * \text{BOLE_RATIO}) + \\ (\text{JENKINS_AG_TREE} * \text{BARK_RATIO})\]</span></p>
+<p>Then, the CRM adjustment factor (<span class="math inline">\(CRM_{AdjFac}\)</span>) for each SDT can be calculated as:</p>
+<p><span class="math display">\[ CRM_{AdjFac} = B_{ODT}/MST \]</span></p>
+</div>
+<div id="stumps" class="section level3">
+<h3>Stumps</h3>
+<p>Volume of stumps is calculated next. These equations are adopted from <a href="https://www.fs.usda.gov/research/treesearch/10745">Raile’s equations</a>. Stump volume is calculated as:</p>
+<p><span class="math display">\[ S_{VOL} = (\frac{\pi*DIA^2}{4*144})[((A-B)^2h+11B(A-B)ln(h+1)- \\ (\frac{30.25}{h+1}B^2)]_a^b)\times0.02832 \]</span></p>
+<p>where:</p>
+<ul>
+<li><code>S_VOL</code> is stump volume inside bark (<span class="math inline">\(S_{VISB}\)</span>) or outside bark (<span class="math inline">\(S_{VOSB}\)</span>),</li>
+<li><code>A</code> and <code>B</code> are species-specific coefficients (<code>RAILE_STUMP_DOB_B1</code>, <code>RAILE_STUMP_DIB_B1</code>, and <code>RAILE_STUMP_DIB_B2</code>),</li>
+<li><code>h</code> is the height above ground (ft),</li>
+<li><code>a</code> is the lower stump height (ft; typically set to 0), and</li>
+<li><code>b</code> is the upper stump height (ft; typically set to one.</li>
+</ul>
+<p>The biomass in the wood of stumps is calculated by multiplying the volume of stumps (inside bark) by the species specific gravity and the weight of water:</p>
+<p><span class="math display">\[S_{ODSW} = S_{VISB}\times \text{WOOD_SPGR_GREENVOL_DRYWT} \times W\]</span>
+A similar approach can be used for calculating the biomass in bark, this time subtracting the volume inside and outside the bark:</p>
+<p><span class="math display">\[S_{ODSB} = (S_{VOSB}-S_{VISB})\times \text{BARK_SPGR_GREENVOL_DRYWT} \times W\]</span>
+Total biomass in the stump (<span class="math inline">\(S_{ODT}\)</span>) can be calculated by applying the <span class="math inline">\(CRM_{AdjFac}\)</span> and the structural loss adjustment for the stump (<span class="math inline">\(STUMP_{SLA}\)</span>):</p>
+<p><span class="math display">\[S_{ODT} = (S_{ODSW} + S_{ODSB}) \times CRM_{AdjFac} \times STUMP_{SLA}\]</span></p>
+</div>
+<div id="tops-and-limbs" class="section level3">
+<h3>Tops and limbs</h3>
+<p>Next comes estimating the biomass in tops and limbs. Although foliage biomass is not calculated for SDTs, we calculate it to subtract it from total biomass. The foliage ratio is different for softwood and hardwood species and can be computed as:</p>
+<p><span class="math display">\[ \text{FOL_RATIO_SFWD} = exp(-2.9584 + (-4.4766/(DIA)) \]</span></p>
+<p>for softwood species and:</p>
+<p><span class="math display">\[ \text{FOL_RATIO_HDWD} = exp(-4.0813 + (-5.8816/(DIA)) \]</span></p>
+<p>for hardwood species. The top and branch biomass can be calculated from subtracting all other components and multiplying by the structural loss adjustment for tops and limbs:</p>
+<p><span class="math display">\[T_{ODT} = (\text{JENKINS_AG_TREE} - MST - (S_{ODSW} + S_{ODSB}) - \\ (\text{JENKINS_AG_TREE} * \text{FOL_RATIO})) * CRM_{AdjFac} * TOP_{SLA}\]</span></p>
+</div>
+<div id="belowground-roots" class="section level3">
+<h3>Belowground (roots)</h3>
+<p>The belowground (coarse roots) ratio from the Jenkins et al. 2003 paper (their Table 6) can be computed for softwood species as:</p>
+<p><span class="math display">\[ \text{ROOT_RATIO_SFWD} = exp(-1.5619 + (0.6614/(DIA)) \]</span>
+and for hardwood species as:</p>
+<p><span class="math display">\[ \text{ROOT_RATIO_HDWD} = exp(-1.6911 + (0.8160/(DIA)) \]</span></p>
+<p>Belowground biomass (<span class="math inline">\(BG_{ODT}\)</span>) can then be calculated as:</p>
+<p><span class="math display">\[BG_{ODT} = (\text{ROOT_RATIO} \times \text{JENKINS_AG_tree}) \\ \times CRM_{AdjFac} \times ROOTS_{SLA}\]</span></p>
+</div>
+<div id="total-standing-dead-tree-biomass-and-carbon" class="section level3">
+<h3>Total standing dead tree biomass and carbon</h3>
+<p>Finally, the total biomass of a standing dead tree, including aboveground and belowground components, can be calculated as:</p>
+<p><span class="math display">\[\text{BIOMASS_TOTAL_SDT} = B_{ODT} + S_{ODT} + T_{ODT} + BG_{ODT}\]</span></p>
+<p>And we can multiply by 0.5, assuming half of biomass is carbon, to compute total carbon in a standing dead tree:</p>
+<p><span class="math display">\[\text{CARBON_TOTAL_SDT} = \text{BIOMASS_TOTAL_SDT} \times 0.5\]</span></p>
+</div>
+</div>
+<div id="r-functions-to-determine-standing-dead-tree-biomass-and-carbon" class="section level2">
+<h2>R functions to determine standing dead tree biomass and carbon</h2>
+<p>The R functions that calculate these values are written below:</p>
+<pre class="r"><code># Stem wood biomass
+fx_B_ODW &lt;- function(VOL, WOOD_SPGR_GREENVOL_DRYWT, W, 
+                    STANDING_DEAD_DECAY_RATIO, BOLE_SLA){
+  B_ODW = VOL*WOOD_SPGR_GREENVOL_DRYWT*W*STANDING_DEAD_DECAY_RATIO*BOLE_SLA
+  return(B_ODW)
+}
+
+# Bark biomass
+fx_B_ODB &lt;- function(VOL, BARK_VOL_PCT, W, BARK_SPGR_GREENVOL_DRYWT,
+                    STANDING_DEAD_DECAY_RATIO, BARK_SLA){
+  B_ODB = VOL*(BARK_VOL_PCT/100)*BARK_SPGR_GREENVOL_DRYWT*1000*
+    STANDING_DEAD_DECAY_RATIO*BARK_SLA
+  return(B_ODB)
+}
+
+# Total SDT biomass (stem wood and bark)
+fx_B_ODT &lt;- function(B_ODW, B_ODB){
+  B_ODT = B_ODW + B_ODB
+  return(B_ODT)
+}
+
+# Jenkins aboveground biomass
+fx_JENKINS_AG_TREE &lt;- function(JENKINS_TOTAL_B1, JENKINS_TOTAL_B2, DIA){
+  JENKINS_AG_TREE = exp(JENKINS_TOTAL_B1 + JENKINS_TOTAL_B2*log(DIA))
+  return(JENKINS_AG_TREE)
+}
+
+# Bole ratio
+fx_BOLE_RATIO &lt;- function(SFTWD_HRDWD, DIA){
+       if(SFTWD_HRDWD == &quot;S&quot;){a=-0.3737; b =-1.8055}
+  else if(SFTWD_HRDWD == &quot;H&quot;){a=-0.3065; b =-5.4240}
+  BOLE_RATIO = exp(a + (b/(DIA)))
+  return(BOLE_RATIO)
+}
+
+# Bark ratio
+fx_BARK_RATIO &lt;- function(SFTWD_HRDWD, DIA){
+       if(SFTWD_HRDWD == &quot;S&quot;){a=-2.0980; b =-1.1432}
+  else if(SFTWD_HRDWD == &quot;H&quot;){a=-2.0129; b =-1.6805}
+  BOLE_RATIO = exp(a + (b/(DIA)))
+  return(BOLE_RATIO)
+}
+
+# Merchantable oven-dry biomass
+fx_MST = function(JENKINS_AG_TREE, BOLE_RATIO, BARK_RATIO){
+  MST = (JENKINS_AG_TREE * BOLE_RATIO) + (JENKINS_AG_TREE * BARK_RATIO)
+  return(MST)
+}
+
+# Component ratio adjustment factor
+fx_CRM_AdjFac = function(B_ODT, MST){
+  CRM_AdjFac = B_ODT/MST
+  return(CRM_AdjFac)
+}
+
+# Stump volume outside bark,
+
+fx_STUMP_VOSB &lt;- function(DIA, RAILE_STUMP_DOB_B1){
+  STUMP_VOSB = (3.14159265*((DIA)**2))/(4*144)*(((1-RAILE_STUMP_DOB_B1)**2*1+11*
+                RAILE_STUMP_DOB_B1*(1-RAILE_STUMP_DOB_B1)*log(1+1)-30.25/(1+1)* 
+                  RAILE_STUMP_DOB_B1**2)-((1-RAILE_STUMP_DOB_B1)**2*0+11*
+                                            RAILE_STUMP_DOB_B1*(1-RAILE_STUMP_DOB_B1)*
+                                            log(0+1)-30.25/(0+1)*RAILE_STUMP_DOB_B1**2))*0.0283168
+   return(STUMP_VOSB)
+} 
+  
+# Stump volume inside bark
+fx_STUMP_VISB &lt;- function(DIA, RAILE_STUMP_DIB_B1, RAILE_STUMP_DIB_B2){
+  STUMP_VISB = (3.14159265*((DIA)**2))/(4*144)*(((RAILE_STUMP_DIB_B1-RAILE_STUMP_DIB_B2)**2*1+11*
+                 RAILE_STUMP_DIB_B2*(RAILE_STUMP_DIB_B1-RAILE_STUMP_DIB_B2)* log(1+1)-30.25/(1+1)*             
+                   RAILE_STUMP_DIB_B2**2)-((RAILE_STUMP_DIB_B1-RAILE_STUMP_DIB_B2)**2*0+11*                                                            RAILE_STUMP_DIB_B2*(RAILE_STUMP_DIB_B1-RAILE_STUMP_DIB_B2)*
+                                             log(0+1)-30.25/(0+1)*RAILE_STUMP_DIB_B2**2))*0.0283168
+   return(STUMP_VISB)
+} 
+   
+# Stump wood biomass
+fx_S_ODSW &lt;- function(STUMP_VISB, WOOD_SPGR_GREENVOL_DRYWT, W){
+  S_ODSW = STUMP_VISB*WOOD_SPGR_GREENVOL_DRYWT*W
+  return(S_ODSW)
+}
+  
+# Stump bark biomass
+fx_S_ODSB &lt;- function(STUMP_VOSB, STUMP_VISB, BARK_SPGR_GREENVOL_DRYWT, W){
+  S_ODSB = (STUMP_VOSB - STUMP_VISB)*BARK_SPGR_GREENVOL_DRYWT*W
+  return(S_ODSB)
+}
+
+# Total stump biomass:
+fx_S_ODT &lt;- function(S_ODSW, S_ODSB, CRM_AdjFac, STUMP_SLA){
+  S_ODT = (S_ODSW + S_ODSB)*CRM_AdjFac*STUMP_SLA
+}
+
+# Foliage ratio
+fx_FOL_RATIO &lt;- function(SFTWD_HRDWD, DIA){
+       if(SFTWD_HRDWD == &quot;S&quot;){a=-2.9584; b =-4.4766}
+  else if(SFTWD_HRDWD == &quot;H&quot;){a=-4.0813; b =-5.8816}
+  FOL_RATIO = exp(a + (b/(DIA)))
+  return(FOL_RATIO)
+}
+
+# Top and branch biomass
+fx_T_ODT &lt;- function(JENKINS_AG_TREE, MST, S_ODSW, S_ODSB,
+                    FOL_RATIO, CRM_AdjFac, TOP_SLA){
+  T_ODT = (JENKINS_AG_TREE - MST - (S_ODSW + S_ODSB) - 
+             (JENKINS_AG_TREE * FOL_RATIO)) * CRM_AdjFac * TOP_SLA
+  return(T_ODT)
+}
+
+# Coarse root ratio
+fx_ROOT_RATIO &lt;- function(SFTWD_HRDWD, DIA){
+       if(SFTWD_HRDWD == &quot;S&quot;){a=-1.5619; b =0.6614}
+  else if(SFTWD_HRDWD == &quot;H&quot;){a=-1.6911; b =0.8160}
+  ROOT_RATIO = exp(a + (b/(DIA)))
+  return(ROOT_RATIO)
+}
+      
+# Belowground biomass
+fx_ROOT_ODT &lt;- function(ROOT_RATIO, JENKINS_AG_TREE, CRM_AdjFac, ROOTS_SLA){
+  ROOT_ODT = (ROOT_RATIO*JENKINS_AG_TREE) * CRM_AdjFac * ROOTS_SLA
+return(ROOT_ODT)
+}
+
+# Total biomass
+fx_BIOMASS_TOTAL_SDT &lt;- function(B_ODT, S_ODT, T_ODT, ROOT_ODT){
+  BIOMASS_TOTAL_SDT = B_ODT + S_ODT + T_ODT + ROOT_ODT
+return(BIOMASS_TOTAL_SDT)
+}
+
+# Total carbon
+fx_CARBON_TOTAL_SDT &lt;- function(BIOMASS_TOTAL_SDT){
+  CARBON_TOTAL_SDT = BIOMASS_TOTAL_SDT * 0.5
+return(CARBON_TOTAL_SDT)
+}</code></pre>
+<p>Now, we’ll apply the SDT functions to the <code>tree</code> data set. Note we’ll need to convert the volume from cubic feet to cubic meters by multiplying by 0.0283168, and change the diameter from inches/centimeters where needed:</p>
+<pre class="r"><code>tree &lt;- tree %&gt;% 
+  mutate(B_ODW = mapply(fx_B_ODW, 
+                        VOL = VOL*0.0283168, 
+                        WOOD_SPGR_GREENVOL_DRYWT = WOOD_SPGR_GREENVOL_DRYWT, 
+                        W = 1000, 
+                        STANDING_DEAD_DECAY_RATIO = STANDING_DEAD_DECAY_RATIO, 
+                        BOLE_SLA = BOLE_SLA),
+         B_ODB = mapply(fx_B_ODB,
+                        VOL = (VOL*0.0283168),
+                        BARK_VOL_PCT = BARK_VOL_PCT,
+                        BARK_SPGR_GREENVOL_DRYWT = BARK_SPGR_GREENVOL_DRYWT,
+                        W = 1000,
+                        STANDING_DEAD_DECAY_RATIO = STANDING_DEAD_DECAY_RATIO,
+                        BARK_SLA = BARK_SLA),
+         B_ODT = mapply(fx_B_ODT, 
+                        B_ODW = B_ODW,
+                        B_ODB = B_ODB),
+         JENKINS_AG_TREE = mapply(fx_JENKINS_AG_TREE,
+                                  JENKINS_TOTAL_B1 = JENKINS_TOTAL_B1, 
+                                  JENKINS_TOTAL_B2 = JENKINS_TOTAL_B2, 
+                                  DIA = DIA*2.54),
+          BOLE_RATIO = mapply(fx_BOLE_RATIO, 
+                              SFTWD_HRDWD = SFTWD_HRDWD, 
+                              DIA = DIA*2.54),
+         BARK_RATIO = mapply(fx_BARK_RATIO, 
+                             SFTWD_HRDWD = SFTWD_HRDWD, 
+                             DIA = DIA*2.54),
+         MST = mapply(fx_MST,
+                      JENKINS_AG_TREE = JENKINS_AG_TREE,
+                      BOLE_RATIO = BOLE_RATIO,
+                      BARK_RATIO = BARK_RATIO),
+         CRM_AdjFac = mapply(fx_CRM_AdjFac,
+                             B_ODT = B_ODT,
+                             MST = MST),
+         STUMP_VOSB = mapply(fx_STUMP_VOSB,
+                             DIA = DIA,
+                             RAILE_STUMP_DOB_B1 = RAILE_STUMP_DOB_B1),
+         STUMP_VISB = mapply(fx_STUMP_VISB,
+                             DIA = DIA,
+                             RAILE_STUMP_DIB_B1 = RAILE_STUMP_DIB_B1,
+                             RAILE_STUMP_DIB_B2 = RAILE_STUMP_DIB_B2),
+         S_ODSW = mapply(fx_S_ODSW,
+                          STUMP_VISB = STUMP_VISB,
+                          WOOD_SPGR_GREENVOL_DRYWT = WOOD_SPGR_GREENVOL_DRYWT,
+                          W = 1000),
+         S_ODSB = mapply(fx_S_ODSB,
+                         STUMP_VOSB = STUMP_VOSB,
+                         STUMP_VISB = STUMP_VISB,
+                         BARK_SPGR_GREENVOL_DRYWT = BARK_SPGR_GREENVOL_DRYWT,
+                         W = 1000),
+         S_ODT = mapply(fx_S_ODT,
+                        S_ODSW = S_ODSW,
+                        S_ODSB = S_ODSB,
+                        CRM_AdjFac = CRM_AdjFac,
+                        STUMP_SLA = STUMP_SLA),
+         FOL_RATIO = mapply(fx_FOL_RATIO,
+                            SFTWD_HRDWD = SFTWD_HRDWD, 
+                            DIA = DIA*2.54),
+         T_ODT = mapply(fx_T_ODT,
+                        JENKINS_AG_TREE = JENKINS_AG_TREE,
+                        MST = MST,
+                        S_ODSW = S_ODSW,
+                        S_ODSB = S_ODSB,
+                        FOL_RATIO = FOL_RATIO,
+                        CRM_AdjFac = CRM_AdjFac,
+                        TOP_SLA = TOP_SLA),
+         ROOT_RATIO = mapply(fx_ROOT_RATIO,
+                            SFTWD_HRDWD = SFTWD_HRDWD, 
+                            DIA = DIA*2.54),
+         ROOT_ODT = mapply(fx_ROOT_ODT,
+                           ROOT_RATIO = ROOT_RATIO, 
+                           JENKINS_AG_TREE = JENKINS_AG_TREE, 
+                           CRM_AdjFac = CRM_AdjFac, 
+                           ROOTS_SLA = ROOTS_SLA),
+         BIOMASS_TOTAL_SDT = mapply(fx_BIOMASS_TOTAL_SDT,
+                                    B_ODT = B_ODT,
+                                    S_ODT = S_ODT,
+                                    T_ODT = T_ODT,
+                                    ROOT_ODT = ROOT_ODT),
+         CARBON_TOTAL_SDT = mapply(fx_CARBON_TOTAL_SDT,
+                                   BIOMASS_TOTAL_SDT = BIOMASS_TOTAL_SDT))</code></pre>
+<p>Now we can plot the diameter-carbon trends, and we end up with a graph that looks similar to to the volume-diameter trends from before:</p>
+<pre class="r"><code>ggplot(tree, aes(x = DIA, y = CARBON_TOTAL_SDT*2.20462, col = factor(SPCD))) +
+  geom_point() +
+  labs(x = &quot;Diameter (in.)&quot;,
+       y = &quot;Total carbon (pounds)&quot;)</code></pre>
+<p><img src="/post/2023-02-09-calculating-carbon-in-standing-dead-trees/index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>We may be interested in a plot-level summary of SDT carbon. The code below summarizes the per-acre values of SDT carbon, by converting to pounds and multiplying by the tree’s expansion factor (In the FIA data, one tree sampled represents approximately six trees sampled on a per acre basis):</p>
+<pre class="r"><code>dead_sum &lt;- tree %&gt;% 
+  mutate(CARBON_TOTAL_SDT_part = CARBON_TOTAL_SDT*2.20462*6.018046) %&gt;% 
+  group_by(STATECD, COUNTYCD, PLOT) %&gt;% 
+  summarize(CARBON_TOTAL_SDT_lbs_ac = sum(CARBON_TOTAL_SDT_part))</code></pre>
+<p>As we can see, we have anywhere between 0.2 and 0.7 tons per acre of standing dead tree carbon from these four inventory plots:</p>
+<pre class="r"><code>ggplot(dead_sum, aes(x = factor(PLOT), y = CARBON_TOTAL_SDT_lbs_ac/2000)) +
+  geom_bar(stat = &quot;identity&quot;) +
+  labs(x = &quot;PLOT ID&quot;,
+       y = &quot;Total carbon (tons/ac)&quot;)</code></pre>
+<p><img src="/post/2023-02-09-calculating-carbon-in-standing-dead-trees/index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="other-notes" class="section level2">
+<h2>Other notes</h2>
+<p>A few other notes about determining the biomass and carbon in standing dead trees:</p>
+<ul>
+<li>Depending on the data collected on the SDTs from your inventory, there may also be measurements such as whether or not the stem is <strong>cull or rotten</strong>. After all, these characteristics are likely if the tree is dead. Some deductions in volume can be taken at the start before determining biomass and carbon.</li>
+<li>The selection of <strong>which volume equation to use</strong> has a large influence on the amount of carbon. If using FIA data, the <code>VOLCFSND</code> variable is the one that’s used in the component ratio method. These are regionally specific equations that use either height or site index. If <strong>taper equations</strong> are available for your area, consider using those given the variability in heights (e.g., broken limbs) on standing dead trees. That’s an approach I applied <a href="https://www.sciencedirect.com/science/article/pii/S0378112712004793">on some SDT data in Maine</a>. (At least the peer reviewers didn’t complain.)</li>
+<li>Some inventories, like FIA’s, collect a height measurement that assumes the tree has it’s top and limbs intact (e.g., the <code>HT</code> variable in FIA) and a <strong>true height</strong> (e.g., the <code>ACTUALHT</code> variable in FIA). When computing volume, biomass, and carbon of SDTs a true actual height is a better representation because it would incorporate broken stems.</li>
+<li>These data and equations use a five-class <strong>decay class system</strong>. This approach can be adapted by refining the decay ratios and structural loss adjustments for trees in the region you work in.</li>
+<li>The approach outlined here is similar to estimating the biomass and carbon in <strong>live trees</strong>. It’s the regional volume equations that are more complex and vary across the US.</li>
+<li>These approaches often calculate terms in mixed English and metric units. See the <a href="https://arbor-analytics.com/post/2022-12-21-forest-carbon-cheat-sheet-updated-for-2022/">Forest Carbon Cheat Sheet</a> for a handy list on common units and conversion factors.</li>
+<li>The USDA Forest Service will soon release <a href="https://www.fs.usda.gov/research/research/inventory/FIA/VBC"><strong>updated equations</strong></a> for determining volume, biomass, and carbon of trees. No doubt this will also influence the calculation of standing dead trees.</li>
+</ul>
+<p>–</p>
+<p><em>By Matt Russell. Sign up for my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly newsletter</a> for in-depth analysis on data and analytics in the forest products industry.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/">A list of R packages for forestry applications</a></h4>
+    <h5>November 24, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
+    
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/">A handy R function for getting ecological division from FIA data</a></h4>
+    <h5>November 18, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/data-management"><kbd class="item-tag">data management</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/ecodivision"><kbd class="item-tag">ecodivision</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

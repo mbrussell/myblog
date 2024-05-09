@@ -2,1036 +2,935 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>https://arbor-analytics.com/post/</link>
+    <link>http://localhost:4321/post/</link>
     <description>Recent content in Posts on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A primer on carbon sequestration rates in US forests</title>
+      <link>http://localhost:4321/post/2024-04-24-a-primer-on-carbon-sequestration-rates-in-us-forests/</link>
+      <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-04-24-a-primer-on-carbon-sequestration-rates-in-us-forests/</guid>
+      <description>If you work in forests, you know how important it is to understand different growth rates. Whether the stand is young, old, managed or not, forests will grow at different rates depending on a variety of conditions.&#xA;Historically, foresters have talked about growth rates in terms of volume. About 10 years ago I met with a Minnesota forester in a recently cut aspen stand. I vividly remember him telling me that “You need to be getting half a cord per acre per year to have a stand worth selling at 45 years.</description>
+    </item>
+    <item>
+      <title>Recapping the Russell 2024 maple syrup season</title>
+      <link>http://localhost:4321/post/2024-04-10-recapping-the-russell-s-2024-maple-syrup-season/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-04-10-recapping-the-russell-s-2024-maple-syrup-season/</guid>
+      <description>A Maine maple tree at work in March.&#xD;If you live in the Northeastern United States, maple trees abound. And in the late winter and early spring, collecting sap from those trees to turn into syrup is a great way to enjoy the woods.&#xA;For the last two years my wife and I have become amateur syrup producers. We have several red and sugar maples trees on our property that we’ve tapped.</description>
+    </item>
+    <item>
+      <title>Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</title>
+      <link>http://localhost:4321/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/</guid>
+      <description>Last fall the USDA Forest Service released the National Scale Volume Biomass (NSVB), a new modeling system for estimating volume, biomass, and carbon stored in individual trees. These new equations replace the previously-used Component Ratio Method (CRM) and are the result of several years of research. Volume, biomass, and carbon attributes in the US Forest Inventory and Analysis (FIA) database have been updated with values from the new equations.</description>
+    </item>
+    <item>
+      <title>A quick and easy way to estimate forestland area change across US states</title>
+      <link>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</guid>
+      <description>Forest industry professionals have a renewed interest in understanding the extent to which forestland area has changed in regions where they procure wood. A few examples include:&#xA;On June 30, 2023, the European Union implemented the European Union Deforestation-Free Supply Chain Regulation (EUDR), a process that bans imports into the EU marketplace if they originate from areas that have seen deforestation or forest degradation. All operators (including wood suppliers) will need to collect and maintain information on these products, including providing “adequately conclusive and verifiable information” that products are deforestation-free.</description>
+    </item>
+    <item>
+      <title>Are winter temperatures correlated with stumpage prices in Maine?</title>
+      <link>http://localhost:4321/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/</link>
+      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/</guid>
+      <description>I was inspired after reading an article written by Lloyd Irland in The Northern Logger (January 2024) about the upswings and downswings in lumber prices in the last several decades. High prices for lumber were recently seen during the COVID-19 pandemic when everybody was remodeling and installing new wooden decks with all the free time they had. The intricacies of lumber prices are explained well in Lloyd’s article. An interesting observation is that during times of high lumber prices, the amount of money landowners received for selling their wood (termed stumpage in forestry parlance) barely nudged.</description>
+    </item>
+    <item>
+      <title>New web app shows pandemic assistance to forest products industry by state</title>
+      <link>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</guid>
+      <description>Screenshot of the forest products and pandemic funding application.&#xD;Forest products companies used the Paycheck Protection Program (PPP) and Pandemic Assistance for Timber Harvesters and Haulers (PATHH) programs to keep nearly 500,000 workers in the US forest industry on payroll throughout the COVID-19 pandemic. A new web application is now available that summarizes these pandemic assistance programs and funding provided to each individual state.&#xA;You can access the web app here.</description>
+    </item>
+    <item>
+      <title>Most popular blog posts and podcasts in 2023</title>
+      <link>http://localhost:4321/post/2023-12-22-most-popular-blog-posts-and-podcasts-in-2023/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-12-22-most-popular-blog-posts-and-podcasts-in-2023/</guid>
+      <description>The end of the year is an excellent time to reflect on your work. One of the things I value is providing content that the forest analytics community enjoys and learns from.&#xA;In addition to publishing a weekly-ish newsletter on LinkedIn with 2,000+ subscribers, I published 22 posts to the Arbor Custom Analytics blog in 2023 on topics relating to data and forests. Here are the most read posts from the Arbor Custom Analytics blog in 2023:</description>
+    </item>
+    <item>
+      <title>Tree measurements on the Rockefeller Center Christmas Tree</title>
+      <link>http://localhost:4321/post/2023-12-17-rockefeller-tree/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-12-17-rockefeller-tree/</guid>
+      <description>The Rockefeller Center Christmas Tree in 2022.&#xD;One of my favorite things about the holiday season is the Rockefeller Christmas tree. Every year the Christmas tree at Rockefeller Center in New York City brings a wonderful burst of green amid the dull winter colors of a big city. Although I don’t live in New York, it’s fun to watch the tree lighting special on NBC and see it pop into some of my favorite holiday movies like Elf.</description>
+    </item>
+    <item>
+      <title>A list of R packages for forestry applications</title>
+      <link>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</guid>
+      <description>Image created with DALL·E 3.&#xD;Two years ago I wrote about the different R packages that are available to use in forestry applications. Back then, there were 16,166 packages archived on the Comprehensive R Archive Network (CRAN). Today, the CRAN repository contains 20,102 packages.&#xA;The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users. The value of using R packages is that someone else might have already written a suite of functions for you.</description>
+    </item>
+    <item>
+      <title>A handy R function for getting ecological division from FIA data</title>
+      <link>http://localhost:4321/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/</guid>
+      <description>Ecological sections and subsections in Maine, USA (from Cleland et al. 2007).&#xD;To get a better feel for how they work, I’ve been digging into the new tree volume, biomass, and carbon models released by the USDA Forest Service last month. These new equations replace volume equations developed at the regional level and are now nationally-consistent. Importantly for anyone that works with forest carbon inventory data, these new equations replace the Component Ratio Method (CRM).</description>
+    </item>
+    <item>
+      <title>How much does adding previous diameter and height growth change FVS predictions?</title>
+      <link>http://localhost:4321/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/</guid>
+      <description>A brook in western Maine, USA.&#xD;There’s a recent paper by Claudia Herbert and others that’s come up in several meetings I’ve been in the last several months. The paper describes an analysis they used with forecasting forest carbon in California using the Forest Vegetation Simulator. They concluded that using FVS “out-of-the-box”, i.e., with no local calibrations of modifications, “overpredicts carbon sequestration in live trees that remain alive ten years later by 27%, on average.</description>
+    </item>
+    <item>
+      <title>Using R and Python to get forest resource data through the EVALIDator API</title>
+      <link>http://localhost:4321/post/2023-10-25-using-r-and-python-to-get-forest-resource-data-through-the-evalidator-api/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-10-25-using-r-and-python-to-get-forest-resource-data-through-the-evalidator-api/</guid>
+      <description>If you work with forestry data across the United States, you’ve probably had to turn to Forest Inventory and Analysis (FIA) data at one time or another to look at the status and trends in our forest resources. The FIA database has information contained from over 130,000 forest inventory plots across the country.&#xA;One of the tools that analysts often use to access FIA data is the the EVALIDator web interface.</description>
+    </item>
+    <item>
+      <title>Stratifying the number of plots to measure in a forest carbon inventory</title>
+      <link>http://localhost:4321/post/2023-09-21-selecting-the-number-of-plots-to-measure-in-a-forest-carbon-inventory/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-09-21-selecting-the-number-of-plots-to-measure-in-a-forest-carbon-inventory/</guid>
+      <description>Forest inventories that measure carbon, like any forest attribute, are conducted to obtain a precise estimate of a population mean. Forest carbon inventories can cost a lot of time and effort. Their high costs have been cited as a barrier for some landowners to enter carbon programs.&#xA;Until remote sensing technologies are adopted at scale to monitor and report carbon, field based inventories will continue to be relied on the estimate forest carbon and their associated attributes.</description>
+    </item>
+    <item>
+      <title>Recent updates to tidyverse functions</title>
+      <link>http://localhost:4321/post/2023-09-13-recent-changes-in-the-tidyverse/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-09-13-recent-changes-in-the-tidyverse/</guid>
+      <description>I recently watched the video “Teaching the tidyverse in 2023” by Mine Çetinkaya-Rundel to learn more about recent changes to my favorite R package. I learned quite a bit of new tricks and techniques for my everyday R coding and sharing a few of them here.&#xA;I’ll use the elm data set from the stats4nr package as I work through a few examples in the post. This data set contains observations on 333 cedar elm trees (Ulmus crassifolia Nutt.</description>
+    </item>
+    <item>
+      <title>Implementing climate adaptive silviculture scenarios in the Forest Vegetation Simulator</title>
+      <link>http://localhost:4321/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/</guid>
+      <description>The Adaptive Silvicultre for Climate Change Project at the Chippewa National Forest, Minnesota, USA. Photo: Josh Kragthorpe.&#xD;If you follow the latest research in forestry, it’s hard not to come across studies relating to adaptive silviculture. In a nutshell, adaptive silviculture is “designed to specifically address climate change impacts and vulnerabilities to meet management goals and objectives.”&#xA;If you’ve ever been on a field tour of a forest that has recently seen a timber harvest and has undergone an adaptive silviculture treatment, you were likely impressed with the complex spatial distribution of residual trees following the harvest.</description>
+    </item>
+    <item>
+      <title>Linear quantile mixed models: applications in forestry</title>
+      <link>http://localhost:4321/post/2023-07-31-linear-quantile-mixed-models-applications-in-forestry/</link>
+      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-07-31-linear-quantile-mixed-models-applications-in-forestry/</guid>
+      <description>Example output comparing predictions from three models fit with linear quantile mixed models and one fit using ordinary least squares.&#xD;Mixed models have been used for decades by forest biometricians and statisticians. They have become popular because forestry and natural resources data are often nested, allowing the analyst to account for spatial and temporal correlation among measurements. Forest plots are often measured within stands, stands are located within ownerships, and a collection of ownerships comprise a landscape.</description>
+    </item>
+    <item>
+      <title>It&#39;s okay to look at the solutions for statistics and data science exercises</title>
+      <link>http://localhost:4321/post/2023-07-15-it-s-okay-to-look-at-solutions-for-statistics-problems/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-07-15-it-s-okay-to-look-at-solutions-for-statistics-problems/</guid>
+      <description>The cover of a document titled “Statistics in Natural Resources: Applications with R: Exercise Soultions.”&#xD;A few years ago I completed the RStudio Instructor training course. It was a multi-day, online training workshop and I learned less about the ins and outs of coding and analysis in R, but more about the strategies and philosophy of teaching data science principles.&#xA;The course prepares instructors to teach the principles of the tidyverse, especially drawing on the concepts for the excellent book R for Data Science.</description>
+    </item>
+    <item>
+      <title>Making R graphs more accessible using BrailleR</title>
+      <link>http://localhost:4321/post/2023-06-30-making-r-graphs-more-accessible-using-brailler/</link>
+      <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-06-30-making-r-graphs-more-accessible-using-brailler/</guid>
+      <description>An example use of alt text for a scatterplot made in R, with description of the scatterplot provided by the BrailleR package below the graph.&#xD;You might have seen these prompts while you’re uploading an image to social media or anywhere else on the internet: “Add alt text here.” Alt text describes what’s contained in an image or figure on a webpage. It’s useful because it can be used by screen readers for visually impaired people.</description>
+    </item>
+    <item>
+      <title>H-2B guest workers in forestry: a review of 2022 data</title>
+      <link>http://localhost:4321/post/2023-06-15-h-2b-guest-workers-in-forestry-a-review-of-2022-data/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-06-15-h-2b-guest-workers-in-forestry-a-review-of-2022-data/</guid>
+      <description>Guest workers regenerating a northern Minnesota forest. (photo: @Chris_KTDunham, Twitter)&#xD;Guest workers hired through the H-2B visa program get jobs done. This is especially true across many forestry companies. Guest workers plant trees, clear brush, conduct vegetation management, and assist in tree nursery production.&#xA;A strong guest worker program can lead to a future forest products industry that is healthy and sustainable in the long term. The H-2B program organized through the US Department of Labor provides opportunities to hire temporary foreign workers to fill low-skill and non-agricultural positions.</description>
+    </item>
+    <item>
+      <title>Price of carbon increases slightly at CARB&#39;s May auction</title>
+      <link>http://localhost:4321/post/2023-05-30-price-of-carbon-increases-slightly-at-carb-s-may-auction/</link>
+      <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-05-30-price-of-carbon-increases-slightly-at-carb-s-may-auction/</guid>
+      <description>The price of carbon per metric tonne rose at the May auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from their auction on May 17, the settlement price of one metric tonne of carbon dioxide equivalent was $30.33, an increase from prices of $27.85 posted in CARB’s last auction in February 2023.&#xA;Here is the trend in auction settlement prices from CARB since 2018:</description>
+    </item>
+    <item>
+      <title>Quantifying the shade tolerance of climate-adapted tree species in the Northeast</title>
+      <link>http://localhost:4321/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast/</link>
+      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast/</guid>
+      <description>A few weeks ago I attended Dr. Tony D’Amato’s excellent webinar “Looking at Forest Carbon from Multiple Dimensions”. The content of the webinar was excellent and I encourage anyone involved with forest management and forest carbon to view it.&#xA;One primary concept from the webinar stood out to me: many of the future tree species that are anticipated to be well adapted to future conditions are less shade tolerant that current trees on the landscape.</description>
+    </item>
+    <item>
+      <title>Lorey&#39;s height: the remote sensing way to estimate tree height</title>
+      <link>http://localhost:4321/post/2023-04-21-lorey-s-height-the-remote-sensing-way-to-estimate-tree-height/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-04-21-lorey-s-height-the-remote-sensing-way-to-estimate-tree-height/</guid>
+      <description>A canopy of lowland conifer trees in northern Minnesota.&#xD;One of the first things you learn in an forestry field course is how to measure the height of trees. Doing so is tricky, as it’s difficult to locate the tops of many trees in dense forests (especially deciduous ones during leaf-on periods). Many foresters will sub-sample tree heights, for example only measuring the heights for every fifth tree or the four closest trees to plot center.</description>
+    </item>
+    <item>
+      <title>Bootstrapped resampling to model tree biomass</title>
+      <link>http://localhost:4321/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/</guid>
+      <description>In one of the first presentations I gave as a graduate student, I discussed a set of regression equations that fit a nonlinear model predicting a forest growth index for several species. As all graduate students do, I spent considerable time preparing my slides and practicing my talk. The presentation went well.&#xA;I used a data splitting approach in my analysis that I presented on, a common technique that trains a model on a large portion of the data (usually around 70%) then tests it on a smaller portion of data not used in model fitting (usually around 30%).</description>
+    </item>
+    <item>
+      <title>How much of Maine&#39;s forests are enrolled in carbon programs?</title>
+      <link>http://localhost:4321/post/2023-03-21-how-much-of-maine-s-forests-are-enrolled-in-carbon-programs/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-03-21-how-much-of-maine-s-forests-are-enrolled-in-carbon-programs/</guid>
+      <description>Carbon storage and sequestration is one of the most important attributes that forests provide. Carbon has quickly become a mechanism to address current and future climate challenges.&#xA;Forest carbon projects have traditionally relied on compliance markets such as California Air Resources Board’s Cap and Trade Regulation program and their associated Forest Offset Protocol. Increasingly, new carbon programs developed in the voluntary markets are offering the ability for smaller landowners to enroll their lands in the forest carbon marketplace.</description>
+    </item>
+    <item>
+      <title>A look at the price of carbon from February&#39;s CARB auction</title>
+      <link>http://localhost:4321/post/2023-03-02-a-look-at-the-price-of-carbon-from-february-s-carb-auction/</link>
+      <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-03-02-a-look-at-the-price-of-carbon-from-february-s-carb-auction/</guid>
+      <description>The price of carbon per metric tonne rose by about a dollar at the February auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from their auction on February 15, the settlement price of one metric tonne of carbon was $27.85, an increase from prices of $26.80 posted in CARB’s last auction in November 2022.&#xA;Here is the trend in auction settlement prices from CARB since 2018:</description>
+    </item>
+    <item>
+      <title>Imputing missing tree heights from a forest inventory</title>
+      <link>http://localhost:4321/post/2023-02-15-imputing-missing-tree-heights-from-a-forest-inventory/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-02-15-imputing-missing-tree-heights-from-a-forest-inventory/</guid>
+      <description>Eastern white pine trees at sunrise in Maine.&#xD;Total height is one of the most useful measurements of a tree, but it’s often not measured. This is because measuring heights takes considerable time and effort. While it may be easy for a forester to measure the diameter of a tree, to obtain a proper measurement of a tree you generally need to walk away from it. This can take a lot of time if there are dozens of trees on a forest inventory plot.</description>
+    </item>
+    <item>
+      <title>Calculating carbon in standing dead trees</title>
+      <link>http://localhost:4321/post/2023-02-09-calculating-carbon-in-standing-dead-trees/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-02-09-calculating-carbon-in-standing-dead-trees/</guid>
+      <description>A standing dead balsam fir tree in Maine.&#xD;Quantifying the presence and abundance of standing dead trees (SDTs) is notoriously difficult. While live and healthy trees generally appear similar in form and appearance to other live and healthy trees, no two standing dead trees are alike.&#xA;Trees that recently died within a few months can have most of their tops and limbs intact. Their foliage may even still be attached.</description>
+    </item>
+    <item>
+      <title>Timberlands as investments continue to rise</title>
+      <link>http://localhost:4321/post/2023-01-27-timberlands-as-an-investment-continue-to-rise/</link>
+      <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-01-27-timberlands-as-an-investment-continue-to-rise/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.&#xA;The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth quarter and annual returns for their Timberland Index, an index representing 464 investment-grade timberland properties with a market value of $24.</description>
+    </item>
+    <item>
+      <title>Forestland on the blockchain: a new prospect for private forest owners</title>
+      <link>http://localhost:4321/post/2023-01-05-forestland-on-the-blockchain-a-new-prospect-for-private-forest-owners/</link>
+      <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-01-05-forestland-on-the-blockchain-a-new-prospect-for-private-forest-owners/</guid>
+      <description>In 2021 a 40-acre tract of land in Wyoming was sold and purchased. A land sale like this will not typically make news headlines. But what turned heads about this sale was that the land was purchased by 5,000 different individuals from several countries.&#xA;It was possible because of the state of Wyoming passing Bill 38 in 2021, legislation that provided a structure for decentralized autonomous organizations, or DAOs, to have legal rights in the state.</description>
+    </item>
+    <item>
+      <title>Stumpage prices for sawlogs in Maine, 2019-2020</title>
+      <link>http://localhost:4321/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020/</link>
+      <pubDate>Fri, 23 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020/</guid>
+      <description>Many states provide information on stumpage prices for commonly harvested timber species. This information provides land managers and landowners a sense of what current prices are for different timber species, products, and regions throughout a state.&#xA;The Maine Forest Service (MFS) collects data on timber sales through a notification process when timber sales occur. The last report from MFS contains over 1,600 reports from landowners that conducted a timber sale in 2020.</description>
+    </item>
+    <item>
+      <title>Forest carbon cheat sheet: updated for 2022</title>
+      <link>http://localhost:4321/post/2022-12-21-forest-carbon-cheat-sheet-updated-for-2022/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-21-forest-carbon-cheat-sheet-updated-for-2022/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.&#xA;The Cheat Sheet has been updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2020.&#xA;DOWNLOAD (PDF)&#xA;DOWNLOAD (PNG)&#xA;The Forest Carbon Cheat Sheet.&#xA;–&#xA;By Matt Russell. Email Matt with any questions or comments.</description>
+    </item>
+    <item>
+      <title>Price of carbon remains steady since last quarter</title>
+      <link>http://localhost:4321/post/2022-12-21-price-of-carbon-remains-steady-since-last-quarter/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-21-price-of-carbon-remains-steady-since-last-quarter/</guid>
+      <description>The price of carbon per metric tonne decreased slightly at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from their auction on November 16, the settlement price of one metric tonne of carbon was $26.80, a slight decrease from prices of $27.00 posted in CARB’s last auction in August 2022.&#xA;Here is the trend in auction settlement prices from CARB since 2018:</description>
+    </item>
+    <item>
+      <title>Doing statistics in the tidyverse: exploring the infer package</title>
+      <link>http://localhost:4321/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/</guid>
+      <description>If you use R software for your data analysis, you are likely familiar with the tidyverse. The tidyverse package is a “megapackage” in R that includes several packages that import, reshape, and visualize data in a consistent manner, among other tasks.&#xA;Like many analysts, I use the tidyverse suite of functions often for importing, wrangling, and visualizing data. More and more I’m using the tidymodels package to apply statistical modeling techniques like regression and random forests on data I work with.</description>
+    </item>
     <item>
       <title>New updates for tools that query Forest Inventory and Analysis data</title>
-      <link>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</link>
+      <link>http://localhost:4321/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</link>
       <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</guid>
-      <description>The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential.
-After attending the FIA Science Stakeholder Meeting last week, I was happy to learn about some important updates to two tools that are widely used by forest analysts: the FIA EVALIDator program and the FIA DataMart.</description>
+      <guid>http://localhost:4321/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</guid>
+      <description>The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential.&#xA;After attending the FIA Science Stakeholder Meeting last week, I was happy to learn about some important updates to two tools that are widely used by forest analysts: the FIA EVALIDator program and the FIA DataMart.</description>
     </item>
-    
     <item>
       <title>How many homes heat with wood?</title>
-      <link>https://arbor-analytics.com/post/2022-11-09-home-heating-with-wood/</link>
+      <link>http://localhost:4321/post/2022-11-09-home-heating-with-wood/</link>
       <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-11-09-home-heating-with-wood/</guid>
-      <description>Photo by Andreas Pajuvirta on UnsplashThe bill that was left on our door was what many homeowners are hit with this time of year: $1,082 for 175 gallons.
-Like most homes in central Maine, we heat with fuel oil in the winter. It’s a common source of home heating across northern New England, and the high price of heating oil was brought up repeatedly throughout the midterm elections.</description>
+      <guid>http://localhost:4321/post/2022-11-09-home-heating-with-wood/</guid>
+      <description>Photo by Andreas Pajuvirta on Unsplash&#xD;The bill that was left on our door was what many homeowners are hit with this time of year: $1,082 for 175 gallons.&#xA;Like most homes in central Maine, we heat with fuel oil in the winter. It’s a common source of home heating across northern New England, and the high price of heating oil was brought up repeatedly throughout the midterm elections.</description>
     </item>
-    
     <item>
       <title>How to spot poor data analyses</title>
-      <link>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</link>
+      <link>http://localhost:4321/post/2022-10-20-how-to-spot-poor-data-analyses/</link>
       <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-10-20-how-to-spot-poor-data-analyses/</guid>
-      <description>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.
-Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s autocorrecting feature had led to errors in 30% of gene list observations over a six year span.</description>
+      <guid>http://localhost:4321/post/2022-10-20-how-to-spot-poor-data-analyses/</guid>
+      <description>Being an excellent data analyst requires you to understand the techniques that go into analyzing data and how to communicate them effectively. While having a foundation in statistics and the quantitative sciences is essential, the most effective data analysts communicate information that influences decision makers.&#xA;Unfortunately, there are plenty of examples of sloppy data analyses that distort the reality of what data can tell us. As an example, genetics researchers have found that Microsoft Excel’s autocorrecting feature had led to errors in 30% of gene list observations over a six year span.</description>
     </item>
-    
     <item>
       <title>P-ing in the woods: p-values in forest science</title>
-      <link>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</link>
+      <link>http://localhost:4321/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</link>
       <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</guid>
-      <description>A meme about p-values. Hat tip to Matt Dancho for the idea for the graphic.The statistics community has had a lot of discussion in recent years about the role of p-values and statistical significance. This has led some to question if we’re relying too much on them as a way of interpreting results from a statistical analysis.
-The “p” in p-value stands for probability, or the probability under a statistical model that a summary of the data would be equal to or more extreme than its observed value.</description>
+      <guid>http://localhost:4321/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</guid>
+      <description>A meme about p-values. Hat tip to Matt Dancho for the idea for the graphic.&#xD;The statistics community has had a lot of discussion in recent years about the role of p-values and statistical significance. This has led some to question if we’re relying too much on them as a way of interpreting results from a statistical analysis.&#xA;The “p” in p-value stands for probability, or the probability under a statistical model that a summary of the data would be equal to or more extreme than its observed value.</description>
     </item>
-    
     <item>
       <title>How many trees make a mass timber building?</title>
-      <link>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</link>
+      <link>http://localhost:4321/post/how-many-trees-make-a-mass-timber-building/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</guid>
-      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/
-Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
+      <guid>http://localhost:4321/post/how-many-trees-make-a-mass-timber-building/</guid>
+      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/&#xA;Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
     </item>
-    
     <item>
       <title>Price of carbon in CARB decreases slightly</title>
-      <link>https://arbor-analytics.com/post/2022-09-07-price-of-carbon-in-carb-decreases-slightly/</link>
+      <link>http://localhost:4321/post/2022-09-07-price-of-carbon-in-carb-decreases-slightly/</link>
       <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-09-07-price-of-carbon-in-carb-decreases-slightly/</guid>
-      <description>The price of carbon per metric tonne decreased slightly at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from their auction on August 17, the settlement price of one metric tonne of carbon was $27.00. This represents a 12% decrease from prices of $30.85 posted in CARB’s last auction in May 2022.
-I’ve been keeping track of the price of carbon at CARB auctions for some time.</description>
+      <guid>http://localhost:4321/post/2022-09-07-price-of-carbon-in-carb-decreases-slightly/</guid>
+      <description>The price of carbon per metric tonne decreased slightly at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from their auction on August 17, the settlement price of one metric tonne of carbon was $27.00. This represents a 12% decrease from prices of $30.85 posted in CARB’s last auction in May 2022.&#xA;I’ve been keeping track of the price of carbon at CARB auctions for some time.</description>
     </item>
-    
     <item>
       <title>Comparing logging trucker wages to other industries</title>
-      <link>https://arbor-analytics.com/post/2022-08-15-comparing-logging-trucker-wages-to-other-trucking-industries/</link>
+      <link>http://localhost:4321/post/2022-08-15-comparing-logging-trucker-wages-to-other-trucking-industries/</link>
       <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-08-15-comparing-logging-trucker-wages-to-other-trucking-industries/</guid>
-      <description>Log truck (photo: Darin Oswald)
-“To solve any problem in forestry, first figure out where the roads will go.”
-That’s a quote I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood becomes less appealing if forest products are located far away from the mill that processes it.</description>
+      <guid>http://localhost:4321/post/2022-08-15-comparing-logging-trucker-wages-to-other-trucking-industries/</guid>
+      <description>Log truck (photo: Darin Oswald)&#xA;“To solve any problem in forestry, first figure out where the roads will go.”&#xA;That’s a quote I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood becomes less appealing if forest products are located far away from the mill that processes it.</description>
     </item>
-    
     <item>
       <title>FVS and CBM-CFS3: Comparing two forest simulation models </title>
-      <link>https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/</link>
+      <link>http://localhost:4321/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/</link>
       <pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/</guid>
-      <description>Analysts in the forestry community often turn to models to simulate what a forest will look like in the future. Whether it’s simulating a forest management treatment or forecasting the effects of a natural disturbance, models are required tools for understanding how forests will grow.
-Increasingly, models are being used to understand forest carbon stocks and stock changes. As we strive to quantify the role of forests in offsetting carbon dioxide emissions, having reliable tools to understand forest dynamics is essential.</description>
+      <guid>http://localhost:4321/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/</guid>
+      <description>Analysts in the forestry community often turn to models to simulate what a forest will look like in the future. Whether it’s simulating a forest management treatment or forecasting the effects of a natural disturbance, models are required tools for understanding how forests will grow.&#xA;Increasingly, models are being used to understand forest carbon stocks and stock changes. As we strive to quantify the role of forests in offsetting carbon dioxide emissions, having reliable tools to understand forest dynamics is essential.</description>
     </item>
-    
     <item>
       <title>Simple volume to weight conversion for US tree species</title>
-      <link>https://arbor-analytics.com/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</link>
+      <link>http://localhost:4321/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</link>
       <pubDate>Wed, 27 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</guid>
-      <description>Foresters are accustomed to converting units of measure from one to another. Data are often collected in one unit of measure (e.g., the height of a tree in feet), but need to be converted to another for some part of the analysis or report (e.g., its height in meters).
-When it comes to calculating the volume of a tree, the number of equations and models are overwhelming. Not only are there a myriad of log rules to determine wood volume of standing timber, but even more volume equations can make determining wood volume for a species of interest a mess.</description>
+      <guid>http://localhost:4321/post/2022-07-27-simple-volume-to-weight-conversion-for-us-tree-species/</guid>
+      <description>Foresters are accustomed to converting units of measure from one to another. Data are often collected in one unit of measure (e.g., the height of a tree in feet), but need to be converted to another for some part of the analysis or report (e.g., its height in meters).&#xA;When it comes to calculating the volume of a tree, the number of equations and models are overwhelming. Not only are there a myriad of log rules to determine wood volume of standing timber, but even more volume equations can make determining wood volume for a species of interest a mess.</description>
     </item>
-    
     <item>
       <title>New book: Statistics in Natural Resources: Applications with R</title>
-      <link>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
+      <link>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
-      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.
-I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.
-At the same time, I was searching for a different textbook to use for the course.</description>
+      <guid>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
+      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.&#xA;I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.&#xA;At the same time, I was searching for a different textbook to use for the course.</description>
     </item>
-    
     <item>
       <title>A forest carbon data dashboard for Minnesota</title>
-      <link>https://arbor-analytics.com/post/2022-07-14-a-forest-carbon-data-dashboard-for-minnesota/</link>
+      <link>http://localhost:4321/post/2022-07-14-a-forest-carbon-data-dashboard-for-minnesota/</link>
       <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-07-14-a-forest-carbon-data-dashboard-for-minnesota/</guid>
-      <description>By total forest land area, Minnesota ranks 21st in the United States. At 17.7 million acres, the state has an incredible amount of carbon being stored and sequestered in its trees and forests.
-I was recently a part of a year-long project funded by the Minnesota Forest Resources Council to do a deep dive into the state’s forest carbon resource. This project involved two primary tasks: (1) to create a report summarizing the current status and opportunities with forest carbon in Minnesota and (2) develop a data dashboard to effectively visualize current and past forest carbon attributes across the state.</description>
+      <guid>http://localhost:4321/post/2022-07-14-a-forest-carbon-data-dashboard-for-minnesota/</guid>
+      <description>By total forest land area, Minnesota ranks 21st in the United States. At 17.7 million acres, the state has an incredible amount of carbon being stored and sequestered in its trees and forests.&#xA;I was recently a part of a year-long project funded by the Minnesota Forest Resources Council to do a deep dive into the state’s forest carbon resource. This project involved two primary tasks: (1) to create a report summarizing the current status and opportunities with forest carbon in Minnesota and (2) develop a data dashboard to effectively visualize current and past forest carbon attributes across the state.</description>
     </item>
-    
     <item>
       <title>Price of carbon hits a new record high</title>
-      <link>https://arbor-analytics.com/post/2022-06-03-price-of-carbon-hits-a-new-record-high/</link>
+      <link>http://localhost:4321/post/2022-06-03-price-of-carbon-hits-a-new-record-high/</link>
       <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-06-03-price-of-carbon-hits-a-new-record-high/</guid>
-      <description>The price of carbon per metric tonne reached a record high at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from May 2022, the settlement price of one metric tonne of carbon was $30.85. This represents a 9% increase from prices of $28.30 as recent as November 2021.
-Auction reserve prices have increased marginally over the last several years, ranging from $14.</description>
+      <guid>http://localhost:4321/post/2022-06-03-price-of-carbon-hits-a-new-record-high/</guid>
+      <description>The price of carbon per metric tonne reached a record high at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from May 2022, the settlement price of one metric tonne of carbon was $30.85. This represents a 9% increase from prices of $28.30 as recent as November 2021.&#xA;Auction reserve prices have increased marginally over the last several years, ranging from $14.</description>
     </item>
-    
     <item>
       <title>How &#34;big&#34; are the Big Tree Champions?</title>
-      <link>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</link>
+      <link>http://localhost:4321/post/2022-05-23-how-big-are-the-big-tree-champions/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-05-23-how-big-are-the-big-tree-champions/</guid>
-      <description>You might have heard this before: “I just saw the largest X tree in the state!”
-I have always been curious about the trees that make the list of state tree champions, or “big trees”. For nearly every state in the US, a list of the largest trees of each species are maintained. As landowners and foresters roam the woods, they can report a potential champion tree. (For context, in 2018 a team of wildlife researchers came across the largest jack pine in the US when they were studying wolves in northern Minnesota.</description>
+      <guid>http://localhost:4321/post/2022-05-23-how-big-are-the-big-tree-champions/</guid>
+      <description>You might have heard this before: “I just saw the largest X tree in the state!”&#xA;I have always been curious about the trees that make the list of state tree champions, or “big trees”. For nearly every state in the US, a list of the largest trees of each species are maintained. As landowners and foresters roam the woods, they can report a potential champion tree. (For context, in 2018 a team of wildlife researchers came across the largest jack pine in the US when they were studying wolves in northern Minnesota.</description>
     </item>
-    
     <item>
       <title>Reading in data quickly into R</title>
-      <link>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</link>
+      <link>http://localhost:4321/post/2022-05-19-reading-in-data-quickly-in-r/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</guid>
-      <description>If you’re like me, you work with a lot of data files in your daily analytical work. Despite the increase in cloud computing, reading in files locally to the machine your working on is common.
-You want a rapid summary of your data and don’t want to wait forever for your computer to read in the file you’re working with. To do this, you want to use functions that are efficient and effective for working with large amounts of data.</description>
+      <guid>http://localhost:4321/post/2022-05-19-reading-in-data-quickly-in-r/</guid>
+      <description>If you’re like me, you work with a lot of data files in your daily analytical work. Despite the increase in cloud computing, reading in files locally to the machine your working on is common.&#xA;You want a rapid summary of your data and don’t want to wait forever for your computer to read in the file you’re working with. To do this, you want to use functions that are efficient and effective for working with large amounts of data.</description>
     </item>
-    
     <item>
       <title>Harvested wood products in the Forest Vegetation Simulator</title>
-      <link>https://arbor-analytics.com/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</link>
+      <link>http://localhost:4321/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</link>
       <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</guid>
-      <description>Carbon is stored and sequestered in growing forests. It can also can be stored “off site” in the form of harvested wood products. These can be in short-lived products (i.e., paper or pulp) or long-lived ones (i.e., utility poles).
-Harvested wood products in use and solid waste disposal sites (e.g., landfills) represent 4.5% of the total amount of carbon in the US. When using wood products, lower emissions are used compared fossil fuel-intensive materials such as steel and concrete.</description>
+      <guid>http://localhost:4321/post/2022-04-23-harvested-wood-products-in-the-forest-vegetation-simulator/</guid>
+      <description>Carbon is stored and sequestered in growing forests. It can also can be stored “off site” in the form of harvested wood products. These can be in short-lived products (i.e., paper or pulp) or long-lived ones (i.e., utility poles).&#xA;Harvested wood products in use and solid waste disposal sites (e.g., landfills) represent 4.5% of the total amount of carbon in the US. When using wood products, lower emissions are used compared fossil fuel-intensive materials such as steel and concrete.</description>
     </item>
-    
     <item>
       <title>Known unknowns, unknown unknowns</title>
-      <link>https://arbor-analytics.com/post/2022-04-20-known-unknowns-unknown-unknowns/</link>
+      <link>http://localhost:4321/post/2022-04-20-known-unknowns-unknown-unknowns/</link>
       <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-04-20-known-unknowns-unknown-unknowns/</guid>
-      <description>Tell me if this has ever happened to you.
-You’re taking a walk or you’re on a run in the dark, and you have a headlamp on. It’s raining or snowing - not too hard, but enough to make your time outside a little uncomfortable.
-When the light is shining on your headlamp, you can see every raindrop or snowflake in front of you. You feel every one of them as they hit your face.</description>
+      <guid>http://localhost:4321/post/2022-04-20-known-unknowns-unknown-unknowns/</guid>
+      <description>Tell me if this has ever happened to you.&#xA;You’re taking a walk or you’re on a run in the dark, and you have a headlamp on. It’s raining or snowing - not too hard, but enough to make your time outside a little uncomfortable.&#xA;When the light is shining on your headlamp, you can see every raindrop or snowflake in front of you. You feel every one of them as they hit your face.</description>
     </item>
-    
     <item>
       <title>Carbon credits: quantity versus quality</title>
-      <link>https://arbor-analytics.com/post/2022-04-10-carbon-credits-quantity-versus-quality/</link>
+      <link>http://localhost:4321/post/2022-04-10-carbon-credits-quantity-versus-quality/</link>
       <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-04-10-carbon-credits-quantity-versus-quality/</guid>
-      <description>The forestry community is focused on carbon, and the question of quantity versus quality of credits is increasingly being raised. Credits associated with forest carbon are bringing new opportunities to landowners and the investors that value timberlands.
-With about 800 million acres of forests in the US alone, there is no lack of carbon for emerging markets to tap into. Some carbon programs are limited by not including public lands, but the volume of forests in other ownerships is large.</description>
+      <guid>http://localhost:4321/post/2022-04-10-carbon-credits-quantity-versus-quality/</guid>
+      <description>The forestry community is focused on carbon, and the question of quantity versus quality of credits is increasingly being raised. Credits associated with forest carbon are bringing new opportunities to landowners and the investors that value timberlands.&#xA;With about 800 million acres of forests in the US alone, there is no lack of carbon for emerging markets to tap into. Some carbon programs are limited by not including public lands, but the volume of forests in other ownerships is large.</description>
     </item>
-    
     <item>
       <title>How the logging industry in the Lake States used PPP loans</title>
-      <link>https://arbor-analytics.com/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</link>
+      <link>http://localhost:4321/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</link>
       <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</guid>
-      <description>Logging companies in the US Lake States requested $49.7 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020 and 2021. These loans were offered to 1,445 logging businesses in the Lake States.
-The SBA Paycheck Protection Program provides information on PPP loan distributions to businesses throughout the COVID-19 pandemic. Depending on the size of the business and its needs, loan amounts varied.
-For all logging businesses, the average loan amount was $34,412 and there were an average of 3.</description>
+      <guid>http://localhost:4321/post/2022-03-22-how-the-logging-industry-in-the-lake-states-used-ppp-loans/</guid>
+      <description>Logging companies in the US Lake States requested $49.7 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020 and 2021. These loans were offered to 1,445 logging businesses in the Lake States.&#xA;The SBA Paycheck Protection Program provides information on PPP loan distributions to businesses throughout the COVID-19 pandemic. Depending on the size of the business and its needs, loan amounts varied.&#xA;For all logging businesses, the average loan amount was $34,412 and there were an average of 3.</description>
     </item>
-    
     <item>
       <title>Forest carbon in Maine: an introduction</title>
-      <link>https://arbor-analytics.com/post/2022-03-10-forest-carbon-in-maine-an-introduction/</link>
+      <link>http://localhost:4321/post/2022-03-10-forest-carbon-in-maine-an-introduction/</link>
       <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-03-10-forest-carbon-in-maine-an-introduction/</guid>
-      <description>Note: This post is based on an article Matt wrote for the Great Lakes Timber Professionals Association’s magazine in January 2022. Interested in an article like this for your state? Email Matt with any requests.
-One of the many benefits that trees provide is removing carbon dioxide from the air. Carbon dioxide is the leading source of greenhouse gas emissions in the United States.
-In trees and forests, carbon is measured by how much is stored and sequestered.</description>
+      <guid>http://localhost:4321/post/2022-03-10-forest-carbon-in-maine-an-introduction/</guid>
+      <description>Note: This post is based on an article Matt wrote for the Great Lakes Timber Professionals Association’s magazine in January 2022. Interested in an article like this for your state? Email Matt with any requests.&#xA;One of the many benefits that trees provide is removing carbon dioxide from the air. Carbon dioxide is the leading source of greenhouse gas emissions in the United States.&#xA;In trees and forests, carbon is measured by how much is stored and sequestered.</description>
     </item>
-    
     <item>
       <title>What does the price of carbon have to be for landowners to enroll in carbon markets?</title>
-      <link>https://arbor-analytics.com/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</link>
+      <link>http://localhost:4321/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</link>
       <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</guid>
-      <description>IntroductionCarbon has quickly become one of the most talked about commodities in our forests today. A variety of new and emerging carbon market programs are paying landowners for the carbon in their forests Carbon is the currency of interest when discussing trees and forests as natural climate solutions.
-While compliance-driven markets such as the California Air Resource Board’s (CARB) Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres.</description>
+      <guid>http://localhost:4321/post/2022-02-22-what-does-the-price-of-carbon-have-to-be-for-landowners-to-enroll-in-carbon-markets/</guid>
+      <description>Introduction&#xD;Carbon has quickly become one of the most talked about commodities in our forests today. A variety of new and emerging carbon market programs are paying landowners for the carbon in their forests Carbon is the currency of interest when discussing trees and forests as natural climate solutions.&#xA;While compliance-driven markets such as the California Air Resource Board’s (CARB) Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres.</description>
     </item>
-    
     <item>
       <title>Forestry is a STEM discipline</title>
-      <link>https://arbor-analytics.com/post/2022-02-19-forestry-is-a-stem-discipline/</link>
+      <link>http://localhost:4321/post/2022-02-19-forestry-is-a-stem-discipline/</link>
       <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-02-19-forestry-is-a-stem-discipline/</guid>
-      <description>The Homeland Security Department recently recognized forestry as a science, technology, engineering, and mathematics (STEM) discipline. Homeland Security has added both the general forestry and forest resources production and management fields of study to the Optional Practical Training (OPT) program.
-This is significant for the forestry profession because colleges and universities will have access to additional funding to support students. The announcement also makes it easier for non US citizens with advanced degrees (such as Masters and PhD graduates) that are in STEM disciplines to obtain lawful permanent resident status in the United States.</description>
+      <guid>http://localhost:4321/post/2022-02-19-forestry-is-a-stem-discipline/</guid>
+      <description>The Homeland Security Department recently recognized forestry as a science, technology, engineering, and mathematics (STEM) discipline. Homeland Security has added both the general forestry and forest resources production and management fields of study to the Optional Practical Training (OPT) program.&#xA;This is significant for the forestry profession because colleges and universities will have access to additional funding to support students. The announcement also makes it easier for non US citizens with advanced degrees (such as Masters and PhD graduates) that are in STEM disciplines to obtain lawful permanent resident status in the United States.</description>
     </item>
-    
     <item>
       <title>How the forest products industry used Paycheck Protection Program loans (2022 update)</title>
-      <link>https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</link>
+      <link>http://localhost:4321/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</link>
       <pubDate>Sat, 12 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</guid>
-      <description>SummaryThe Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 35,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 487,000 workers in the forest industry.
-The Paycheck Protection ProgramThe US Small Business Administration (SBA) managed the Paycheck Protection Program (PPP) between April 2020 and May 2021.</description>
+      <guid>http://localhost:4321/post/2022-02-12-how-the-forest-products-industry-used-paycheck-protection-program-loans/</guid>
+      <description>Summary&#xD;The Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 35,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 487,000 workers in the forest industry.&#xA;The Paycheck Protection Program&#xD;The US Small Business Administration (SBA) managed the Paycheck Protection Program (PPP) between April 2020 and May 2021.</description>
     </item>
-    
     <item>
       <title>Timberlands as investments see biggest gain since 2014</title>
-      <link>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
+      <link>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
       <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
-      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.
-The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
+      <guid>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.&#xA;The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
     </item>
-    
     <item>
       <title>Five R packages every forest analyst should be using</title>
-      <link>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
+      <link>http://localhost:4321/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
       <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
-      <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.
-Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.
-R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
+      <guid>http://localhost:4321/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.&#xA;Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.&#xA;R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
     </item>
-    
     <item>
       <title>What statistics students in natural resources want to learn more about</title>
-      <link>https://arbor-analytics.com/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</link>
+      <link>http://localhost:4321/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</link>
       <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</guid>
-      <description>As the holidays approach, it’s always a great time of year to reflect back and look forward. This post will describe my approach to this as it relates to a class that just wrapped up for the Fall 2021 semester.
-I instruct the course NR 5021: Statistics for Agricultural and Natural Resources Professionals at the University of Minnesota. The class has between 25 and 40 graduate students enrolled in a given year, a mix between students studying natural resources, agriculture, and plant sciences.</description>
+      <guid>http://localhost:4321/post/2021-12-22-what-statistics-students-want-to-learn-more-about/</guid>
+      <description>As the holidays approach, it’s always a great time of year to reflect back and look forward. This post will describe my approach to this as it relates to a class that just wrapped up for the Fall 2021 semester.&#xA;I instruct the course NR 5021: Statistics for Agricultural and Natural Resources Professionals at the University of Minnesota. The class has between 25 and 40 graduate students enrolled in a given year, a mix between students studying natural resources, agriculture, and plant sciences.</description>
     </item>
-    
     <item>
       <title>Most read articles in 2021</title>
-      <link>https://arbor-analytics.com/post/2021-12-17-most-read-articles-in-2021/</link>
+      <link>http://localhost:4321/post/2021-12-17-most-read-articles-in-2021/</link>
       <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-12-17-most-read-articles-in-2021/</guid>
-      <description>In 2021, 26 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you’d like to see? Email Matt with any suggestions.
-Here are the most read posts from the Arbor Custom Analytics blog in 2021:
-Getting your data into R from Google Sheets
-Creating animated bar charts to visualize sawtimber prices
-Mixed models in R: a primer</description>
+      <guid>http://localhost:4321/post/2021-12-17-most-read-articles-in-2021/</guid>
+      <description>In 2021, 26 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you’d like to see? Email Matt with any suggestions.&#xA;Here are the most read posts from the Arbor Custom Analytics blog in 2021:&#xA;Getting your data into R from Google Sheets&#xA;Creating animated bar charts to visualize sawtimber prices&#xA;Mixed models in R: a primer</description>
     </item>
-    
     <item>
       <title>Price of carbon recently hit a record high</title>
-      <link>https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</link>
+      <link>http://localhost:4321/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</guid>
-      <description>The price of carbon per metric tonne reached a record high at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from November 2021, the settlement price of one metric tonne of carbon was $28.26. This represents a 21% increase from prices of $23.30 as recent as August 2021.
-Auction reserve prices have increased marginally over the last several years, ranging from $14.</description>
+      <guid>http://localhost:4321/post/2021-12-10-price-of-carbon-recently-hit-a-record-high/</guid>
+      <description>The price of carbon per metric tonne reached a record high at a recent auction hosted by the California Air Resources Board (CARB). According to CARB’s recent Auction Information and Results from November 2021, the settlement price of one metric tonne of carbon was $28.26. This represents a 21% increase from prices of $23.30 as recent as August 2021.&#xA;Auction reserve prices have increased marginally over the last several years, ranging from $14.</description>
     </item>
-    
     <item>
       <title>CO2 offsets and trips to the family cabin</title>
-      <link>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</link>
+      <link>http://localhost:4321/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</link>
       <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
-      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.
-The true amount of forest carbon is only measured in detailed research studies, yet we discuss carbon stocks like they’re known values.</description>
+      <guid>http://localhost:4321/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
+      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.&#xA;The true amount of forest carbon is only measured in detailed research studies, yet we discuss carbon stocks like they’re known values.</description>
     </item>
-    
     <item>
       <title>Visualizing forest carbon trends in the last thirty years</title>
-      <link>https://arbor-analytics.com/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</link>
+      <link>http://localhost:4321/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</link>
       <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</guid>
-      <description>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.
-The value of carbon in forests has seen a tremendous increase in recent years. The increased role of forests in meeting climate challenges has required analysts to have a better understanding of carbon attributes in the forests they work in.</description>
+      <guid>http://localhost:4321/post/2021-11-15-visualizing-forest-carbon-tredns-in-the-last-30-years/</guid>
+      <description>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.&#xA;The value of carbon in forests has seen a tremendous increase in recent years. The increased role of forests in meeting climate challenges has required analysts to have a better understanding of carbon attributes in the forests they work in.</description>
     </item>
-    
     <item>
       <title>H-2B workers: essential to the forest products industry</title>
-      <link>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</link>
+      <link>http://localhost:4321/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</link>
       <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</guid>
-      <description>In Cabinet Battle #1, one of the most popular songs from the musical Hamilton, Alexander Hamilton and Thomas Jefferson discuss the role of the federal government in assuming the financial debt of states. It’s the late 1780s, and Hamilton has ideas for a national bank that Jefferson and many Southerners aren’t fans of.
-Near the end of Hamilton’s verse, he states that it’s odd to take “civics lessons from a slaver”.</description>
+      <guid>http://localhost:4321/post/2021-11-13-h-2b-workers-essential-to-the-forest-products-industry/</guid>
+      <description>In Cabinet Battle #1, one of the most popular songs from the musical Hamilton, Alexander Hamilton and Thomas Jefferson discuss the role of the federal government in assuming the financial debt of states. It’s the late 1780s, and Hamilton has ideas for a national bank that Jefferson and many Southerners aren’t fans of.&#xA;Near the end of Hamilton’s verse, he states that it’s odd to take “civics lessons from a slaver”.</description>
     </item>
-    
     <item>
       <title>Random forests: a tutorial with forestry data</title>
-      <link>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</link>
+      <link>http://localhost:4321/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</link>
       <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</guid>
+      <guid>http://localhost:4321/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/</guid>
       <description>Random forests have quickly become one of the most popular analytical techniques used in forestry today. Random forests (RF) are a machine learning technique that differ in many ways to traditional prediction models such as regression. Random forests can handle a lot of data, can be applied to classification or regression problems, and rank the relative importance of many variables that are related to a response variable of interest.</description>
     </item>
-    
     <item>
       <title>The importance of citizen data scientists in forest analytics</title>
-      <link>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
+      <link>http://localhost:4321/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</link>
       <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
+      <guid>http://localhost:4321/post/2021-09-07-the-importance-of-citizen-data-scientists-in-forest-analytics/</guid>
       <description>As a part of my work with the University of Minnesota Extension, we run the Assessing Vegetation Impacts from Deer program. The AVID program engages citizen scientists to monitor tree seedlings that are susceptible to browse from white-tailed deer. With little information on deer browse impacts for most of Minnesota’s tree species, the data are beginning to provide insights on how deer browse degrades the health of the forest.</description>
     </item>
-    
     <item>
       <title>If 50% of a tree&#39;s biomass is carbon, what&#39;s the other half?</title>
-      <link>https://arbor-analytics.com/post/2021-08-22-if-50-of-a-tree-s-biomass-is-carbon-what-s-the-other-half/</link>
+      <link>http://localhost:4321/post/2021-08-22-if-50-of-a-tree-s-biomass-is-carbon-what-s-the-other-half/</link>
       <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-08-22-if-50-of-a-tree-s-biomass-is-carbon-what-s-the-other-half/</guid>
-      <description>“You wrote earlier that “since half of biomass is carbon, I multiply by 0.5.” What is the other half of biomass?&#34;
-I was sent this question this question over email last week. As foresters, we’re often concerned with only carbon stored and sequestered in trees. But the are other elements that form the chemical composition of wood. While there are slight deviations to the “50% of biomass in wood is carbon” assumption, it is a statement that provides an approximation about the amount of carbon in wood.</description>
+      <guid>http://localhost:4321/post/2021-08-22-if-50-of-a-tree-s-biomass-is-carbon-what-s-the-other-half/</guid>
+      <description>“You wrote earlier that “since half of biomass is carbon, I multiply by 0.5.” What is the other half of biomass?&#34;&#xA;I was sent this question this question over email last week. As foresters, we’re often concerned with only carbon stored and sequestered in trees. But the are other elements that form the chemical composition of wood. While there are slight deviations to the “50% of biomass in wood is carbon” assumption, it is a statement that provides an approximation about the amount of carbon in wood.</description>
     </item>
-    
     <item>
       <title>New eBook: Forest Carbon by the Numbers</title>
-      <link>https://arbor-analytics.com/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</link>
+      <link>http://localhost:4321/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</link>
       <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</guid>
-      <description>Now available on Amazon is Forest Carbon by the Numbers: Understanding the Hottest Forest Product of the 2020s.
-Carbon is becoming a highly valued commodity of forests. Trees sequester carbon dioxide and turn it into wood, storing carbon in forests and long-lived forest products for long time periods. Despite the increased recognition of carbon as a natural climate solution and several emerging markets that monetize it, few professionals in forestry and natural resources have a grasp on the amount and extent of forest carbon in the ecosystems they work in.</description>
+      <guid>http://localhost:4321/post/2021-08-12-new-ebook-forest-carbon-by-the-numbers/</guid>
+      <description>Now available on Amazon is Forest Carbon by the Numbers: Understanding the Hottest Forest Product of the 2020s.&#xA;Carbon is becoming a highly valued commodity of forests. Trees sequester carbon dioxide and turn it into wood, storing carbon in forests and long-lived forest products for long time periods. Despite the increased recognition of carbon as a natural climate solution and several emerging markets that monetize it, few professionals in forestry and natural resources have a grasp on the amount and extent of forest carbon in the ecosystems they work in.</description>
     </item>
-    
     <item>
       <title>Forest carbon: key definitions and numbers in perspective  </title>
-      <link>https://arbor-analytics.com/post/2021-08-08-forest-carbon-key-definitions-and-numbers-in-perspective/</link>
+      <link>http://localhost:4321/post/2021-08-08-forest-carbon-key-definitions-and-numbers-in-perspective/</link>
       <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-08-08-forest-carbon-key-definitions-and-numbers-in-perspective/</guid>
-      <description>Carbon storage in US forests. Source: USDA Forest Service.
-Carbon is quickly becoming one of the hottest forest products of the 2020s. The term “carbon” is a broad one, and when reading an article or listening to a speaker, you may not know exactly which process or specific term is being referred to.
-Here are a few basic terms that will help guide your understanding:
-A carbon pool is a component of the forest that can gain or lose carbon over time.</description>
+      <guid>http://localhost:4321/post/2021-08-08-forest-carbon-key-definitions-and-numbers-in-perspective/</guid>
+      <description>Carbon storage in US forests. Source: USDA Forest Service.&#xA;Carbon is quickly becoming one of the hottest forest products of the 2020s. The term “carbon” is a broad one, and when reading an article or listening to a speaker, you may not know exactly which process or specific term is being referred to.&#xA;Here are a few basic terms that will help guide your understanding:&#xA;A carbon pool is a component of the forest that can gain or lose carbon over time.</description>
     </item>
-    
     <item>
       <title>Drought in the US West: impacts from the last ten years</title>
-      <link>https://arbor-analytics.com/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</link>
+      <link>http://localhost:4321/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</link>
       <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</guid>
-      <description>Drought conditions in the western US, 20 July 2021. From US Drought Monitor.
-Much of the western United States is currently under severe drought conditions. Drought impacts trees and forests in the short and long term. Trees and forests can tolerate some extended dry periods depending of species and local conditions, but without adequate moisture availability, drought can ultimately lead to tree mortality.
-Perhaps the greatest impact of drought is the stress it places on trees.</description>
+      <guid>http://localhost:4321/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</guid>
+      <description>Drought conditions in the western US, 20 July 2021. From US Drought Monitor.&#xA;Much of the western United States is currently under severe drought conditions. Drought impacts trees and forests in the short and long term. Trees and forests can tolerate some extended dry periods depending of species and local conditions, but without adequate moisture availability, drought can ultimately lead to tree mortality.&#xA;Perhaps the greatest impact of drought is the stress it places on trees.</description>
     </item>
-    
     <item>
       <title>Peer review: Lessons learned from reviewing 100 forest science manuscripts</title>
-      <link>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</link>
+      <link>http://localhost:4321/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</link>
       <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</guid>
-      <description>Photo by Annie Spratt on Unsplash.
-This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.
-For the process, typically a journal will reach out to a reviewer over email with an invitation.</description>
+      <guid>http://localhost:4321/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</guid>
+      <description>Photo by Annie Spratt on Unsplash.&#xA;This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.&#xA;For the process, typically a journal will reach out to a reviewer over email with an invitation.</description>
     </item>
-    
     <item>
       <title>Testing the assumption: Half of the biomass of a tree is carbon</title>
-      <link>https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/</link>
+      <link>http://localhost:4321/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/</link>
       <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/</guid>
-      <description>“Half of the biomass of a tree is carbon.” This has been a widely spoken statement made by many foresters and scientists alike. Most forest carbon assessments use the 50% rule and it generally works well.
-In forest analytics, determining the amount of carbon in a tree is first based on estimating its biomass. At the individual tree level, a biomass equation can be developed based on a tree’s diameter, height, species, region, and other tree and stand characteristics.</description>
+      <guid>http://localhost:4321/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/</guid>
+      <description>“Half of the biomass of a tree is carbon.” This has been a widely spoken statement made by many foresters and scientists alike. Most forest carbon assessments use the 50% rule and it generally works well.&#xA;In forest analytics, determining the amount of carbon in a tree is first based on estimating its biomass. At the individual tree level, a biomass equation can be developed based on a tree’s diameter, height, species, region, and other tree and stand characteristics.</description>
     </item>
-    
     <item>
       <title>Forest carbon cheat sheet: updated for 2021</title>
-      <link>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</link>
+      <link>http://localhost:4321/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</link>
       <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</guid>
-      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
-The Cheat Sheet has been updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2019.
-DOWNLOAD (PDF)
-DOWNLOAD (JPEG)
-–
-By Matt Russell. Email Matt with any questions or comments. Sign up for my monthly newsletter for in-depth analysis on data and analytics in the forest products industry.</description>
+      <guid>http://localhost:4321/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.&#xA;The Cheat Sheet has been updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2019.&#xA;DOWNLOAD (PDF)&#xA;DOWNLOAD (JPEG)&#xA;–&#xA;By Matt Russell. Email Matt with any questions or comments. Sign up for my monthly newsletter for in-depth analysis on data and analytics in the forest products industry.</description>
     </item>
-    
     <item>
       <title>How well does the &#34;quick and dirty&#34; standard deviation approximation work?</title>
-      <link>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</link>
+      <link>http://localhost:4321/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</link>
       <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</guid>
-      <description>Photo by Chris Liverani on Unsplash.
-The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.
-When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data.</description>
+      <guid>http://localhost:4321/post/2021-06-04-how-well-does-the-quick-and-dirty-standard-deviation-approximation-work/</guid>
+      <description>Photo by Chris Liverani on Unsplash.&#xA;The standard deviation measures the dispersion of individual samples around a mean value. It is one of the most useful measures in forestry and natural resources because it quantifies the “noise” in a sample of data.&#xA;When I was learning statistics in an introductory course, I was shown a formula to approximate the standard deviation. Rather than needing to calculate how far each observation was from the mean value, a key component of the standard deviation calculation, this formula only required knowing the largest and smallest value in the data.</description>
     </item>
-    
     <item>
       <title>The forest products industry’s use of Paycheck Protection Program loans</title>
-      <link>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</link>
+      <link>http://localhost:4321/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</link>
       <pubDate>Mon, 24 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</guid>
-      <description>SummaryThe Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 34,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 485,000 workers in the forest industry.
-The Paycheck Protection ProgramThe US Small Business Administration (SBA) managed the Paycheck Protection Program (PPP) between April 2020 and May 2021.</description>
+      <guid>http://localhost:4321/post/2021-05-23-the-forest-products-industry-s-use-of-paycheck-protection-program-loans/</guid>
+      <description>Summary&#xD;The Paycheck Protection Program (PPP) offered loans to businesses to provide a direct incentive for them to keep their workers on payroll. Forest products companies across the US received $4.7 billion in PPP loans offered through the Small Business Administration. Over 34,000 loans were offered to forest products companies in the US from April 2020 through May 2021, affecting 485,000 workers in the forest industry.&#xA;The Paycheck Protection Program&#xD;The US Small Business Administration (SBA) managed the Paycheck Protection Program (PPP) between April 2020 and May 2021.</description>
     </item>
-    
     <item>
       <title>Harvested wood products: a growing contributor to US carbon storage</title>
-      <link>https://arbor-analytics.com/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/</link>
+      <link>http://localhost:4321/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/</link>
       <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/</guid>
+      <guid>http://localhost:4321/post/2021-05-15-harvested-wood-products-an-increasing-contributor-to-us-carbon-storage/</guid>
       <description>There has been a lot of talk recently about the importance of carbon in forests. Carbon dioxide is the leading source of greenhouse gas emissions, resulting from burning fossil fuels for transportation and energy and producing electricity, among other sources. Trees sequester carbon dioxide from the air and turn it into carbon stored in wood. As a result, healthy trees and forests increase carbon storage and avoid greenhouse gas emissions.</description>
     </item>
-    
     <item>
       <title>Understanding the forest products industry using NAICS codes</title>
-      <link>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
+      <link>http://localhost:4321/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
       <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
-      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.
-In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
+      <guid>http://localhost:4321/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
+      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.&#xA;In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
     </item>
-    
     <item>
       <title>Creating animated bar charts to visualize sawtimber prices</title>
-      <link>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</link>
+      <link>http://localhost:4321/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</link>
       <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</guid>
-      <description>If you’re on social media, you’ve probably seen animated bar charts. My favorite is one that shows the popularity of data science software through time.
-Animated bar graphs are effective when you have a categorical variable that has a different value at multiple time periods. This is why animated bar graphs work well to visualize time series data. These data might typically be represented by multiple lines on a graph that “cross” over time.</description>
+      <guid>http://localhost:4321/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</guid>
+      <description>If you’re on social media, you’ve probably seen animated bar charts. My favorite is one that shows the popularity of data science software through time.&#xA;Animated bar graphs are effective when you have a categorical variable that has a different value at multiple time periods. This is why animated bar graphs work well to visualize time series data. These data might typically be represented by multiple lines on a graph that “cross” over time.</description>
     </item>
-    
     <item>
       <title>Importing FIA data to analyze forest carbon with tidyFIA</title>
-      <link>https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/</link>
+      <link>http://localhost:4321/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/</guid>
-      <description>I used to cringe every time I needed to import Forest Inventory and Analysis data. The data files that contain tree observations for a single state can exceed 100 megabytes. The file I downloaded six months ago might or might not contain the most recent data for that state.
-There are a few R packages that have been developed in the last several years that help import FIA data. The tidyFIA package is one of them.</description>
+      <guid>http://localhost:4321/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/</guid>
+      <description>I used to cringe every time I needed to import Forest Inventory and Analysis data. The data files that contain tree observations for a single state can exceed 100 megabytes. The file I downloaded six months ago might or might not contain the most recent data for that state.&#xA;There are a few R packages that have been developed in the last several years that help import FIA data. The tidyFIA package is one of them.</description>
     </item>
-    
     <item>
       <title>Five forest carbon markets for small landowners</title>
-      <link>https://arbor-analytics.com/post/2021-03-20-an-overview-of-forest-carbon-markets-for-small-landowners/</link>
+      <link>http://localhost:4321/post/2021-03-20-an-overview-of-forest-carbon-markets-for-small-landowners/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-03-20-an-overview-of-forest-carbon-markets-for-small-landowners/</guid>
-      <description>Voluntary forest carbon markets have expanded considerably over the last year. While compliance markets such as the California Air Resource Board’s Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres.
-One of the benefits of newer voluntary forest carbon programs is that they typically have small minimum acreage requirements and shorter contract lengths. These markets may be the greatest opportunity for private forestland owners with small properties (e.</description>
+      <guid>http://localhost:4321/post/2021-03-20-an-overview-of-forest-carbon-markets-for-small-landowners/</guid>
+      <description>Voluntary forest carbon markets have expanded considerably over the last year. While compliance markets such as the California Air Resource Board’s Cap-and-Trade Regulation and their associated Forest Offset Protocol have existed for several years, it has primarily targeted large landowners with thousands of acres.&#xA;One of the benefits of newer voluntary forest carbon programs is that they typically have small minimum acreage requirements and shorter contract lengths. These markets may be the greatest opportunity for private forestland owners with small properties (e.</description>
     </item>
-    
     <item>
       <title>Some data on why pie graphs are bad</title>
-      <link>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</link>
+      <link>http://localhost:4321/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</guid>
-      <description>“The only thing worse than a pie chart is several of them.” -Edward Tufte
-I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.
-Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid.</description>
+      <guid>http://localhost:4321/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</guid>
+      <description>“The only thing worse than a pie chart is several of them.” -Edward Tufte&#xA;I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.&#xA;Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid.</description>
     </item>
-    
     <item>
       <title>Private forest landowner demographics compared to the US population</title>
-      <link>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</link>
+      <link>http://localhost:4321/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</link>
       <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</guid>
-      <description>Private individuals own a third of the nation’s forests. These private landowners value them primarily due to the beauty, natural values, and wildlife habitat they provide.
-Forests owned by private non-industrial individuals are diverse: they vary in terms of species composition, structure, and management objectives. While privately-owned forests are diverse, the demographics of their owners are not.
-Data from the National Woodland Owner Survey, a program administered by the USDA Forest Service, indicate that the primary decision makers on private forestlands are older, predominantly male, White, and non-Hispanic.</description>
+      <guid>http://localhost:4321/post/2021-02-21-private-forest-landowner-demographics-compared-to-the-us-population/</guid>
+      <description>Private individuals own a third of the nation’s forests. These private landowners value them primarily due to the beauty, natural values, and wildlife habitat they provide.&#xA;Forests owned by private non-industrial individuals are diverse: they vary in terms of species composition, structure, and management objectives. While privately-owned forests are diverse, the demographics of their owners are not.&#xA;Data from the National Woodland Owner Survey, a program administered by the USDA Forest Service, indicate that the primary decision makers on private forestlands are older, predominantly male, White, and non-Hispanic.</description>
     </item>
-    
     <item>
       <title>A #ForestProud moment after listening to the MeatEater podcast</title>
-      <link>https://arbor-analytics.com/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</link>
+      <link>http://localhost:4321/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</link>
       <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</guid>
-      <description>The MeatEater podcast.The MeatEater Podcast is one of the most widely listened to podcasts in the outdoor genre. It has over 33,000 ratings on Apple Podcasts and consistently ranks as one of the most downloaded podcasts in the outdoors and wilderness categories.
-I’m a semi-regular listener and enjoy the questions from listeners, hunting stories, and discussions on conservation issues. For a podcast that talks about the outdoors so much, I’ve always found it lacks a discussion on forests, one of the ecosystems that the MeatEater crew spends so much time in.</description>
+      <guid>http://localhost:4321/post/2021-02-12-a-forestproud-moment-after-listening-to-the-meateater-podcast/</guid>
+      <description>The MeatEater podcast.&#xD;The MeatEater Podcast is one of the most widely listened to podcasts in the outdoor genre. It has over 33,000 ratings on Apple Podcasts and consistently ranks as one of the most downloaded podcasts in the outdoors and wilderness categories.&#xA;I’m a semi-regular listener and enjoy the questions from listeners, hunting stories, and discussions on conservation issues. For a podcast that talks about the outdoors so much, I’ve always found it lacks a discussion on forests, one of the ecosystems that the MeatEater crew spends so much time in.</description>
     </item>
-    
     <item>
       <title>Forest carbon: a reading list for beginners</title>
-      <link>https://arbor-analytics.com/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</link>
+      <link>http://localhost:4321/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</link>
       <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</guid>
-      <description>A black spruce forest in northern Minnesota.Carbon is quickly becoming one of the hottest forest products of the 2020s. Carbon sequestration is the reason why trees and forests are being placed front and center in discussions about natural climate solutions. Emerging markets are encouraging landowners to manage forests for the carbon they provide.
-You can very quickly can get lost in the definitions, units, and vocabulary used in the forest carbon world.</description>
+      <guid>http://localhost:4321/post/2021-02-04-forest-carbon-a-reading-list-for-beginners/</guid>
+      <description>A black spruce forest in northern Minnesota.&#xD;Carbon is quickly becoming one of the hottest forest products of the 2020s. Carbon sequestration is the reason why trees and forests are being placed front and center in discussions about natural climate solutions. Emerging markets are encouraging landowners to manage forests for the carbon they provide.&#xA;You can very quickly can get lost in the definitions, units, and vocabulary used in the forest carbon world.</description>
     </item>
-    
     <item>
       <title>Maine logging industry&#39;s use of PPP loans</title>
-      <link>https://arbor-analytics.com/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</link>
+      <link>http://localhost:4321/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</link>
       <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</guid>
-      <description>Logging companies in Maine requested at least $13.8 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020. These loans were offered to 256 logging businesses in Maine in the spring and early summer of 2020.
-The SBA Paycheck Protection Program Loan Level Data provides information on PPP loan distributions to businesses made through August 8, 2020. Depending on the size of the business and its needs, loan amounts varied.</description>
+      <guid>http://localhost:4321/post/2021-01-23-maine-logging-industry-s-use-of-ppp-loans/</guid>
+      <description>Logging companies in Maine requested at least $13.8 million in Paycheck Protection Program loans offered through the Small Business Administration in 2020. These loans were offered to 256 logging businesses in Maine in the spring and early summer of 2020.&#xA;The SBA Paycheck Protection Program Loan Level Data provides information on PPP loan distributions to businesses made through August 8, 2020. Depending on the size of the business and its needs, loan amounts varied.</description>
     </item>
-    
     <item>
       <title>Climate 21: what it says about forest carbon</title>
-      <link>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</link>
+      <link>http://localhost:4321/post/climate-21-what-it-says-about-forest-carbon/</link>
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</guid>
-      <description>There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.
-In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.
-The Department of Agriculture (USDA) memo recognizes the role that the forestry and agriculture sectors play in climate mitigation and adaptation.</description>
+      <guid>http://localhost:4321/post/climate-21-what-it-says-about-forest-carbon/</guid>
+      <description>There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.&#xA;In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.&#xA;The Department of Agriculture (USDA) memo recognizes the role that the forestry and agriculture sectors play in climate mitigation and adaptation.</description>
     </item>
-    
     <item>
       <title>Economic contribution of forestry employees across US states</title>
-      <link>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</link>
+      <link>http://localhost:4321/post/economic-contribution-of-forestry-employees-across-us-states/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
-      <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:
-250 companies comprise the pulp, paper, and paperboard mill industry in the US,The US forest products industry generates 5% of the manufacturing GDP ($169 billion),The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)56% of US forests are privately owned by family forest owners and companies.</description>
+      <guid>http://localhost:4321/post/economic-contribution-of-forestry-employees-across-us-states/</guid>
+      <description>The forest products industry relies on wood, a renewable and sustainable raw material. The industry is a top ten manufacturing employer. A few other insights on the importance of the forest products industry:&#xA;250 companies comprise the pulp, paper, and paperboard mill industry in the US,&#xD;The US forest products industry generates 5% of the manufacturing GDP ($169 billion),&#xD;The US forest products industry contains over 22,000 manufacturing facilities (~5,000 pulp and paper and 17,000 wood products)&#xD;56% of US forests are privately owned by family forest owners and companies.</description>
     </item>
-    
     <item>
       <title>Most read posts in 2020</title>
-      <link>https://arbor-analytics.com/post/most-read-posts-in-2020/</link>
+      <link>http://localhost:4321/post/most-read-posts-in-2020/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/most-read-posts-in-2020/</guid>
-      <description>In 2020, 29 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you’d like to see? Email Matt with any suggestions.
-Here are the most read posts from the Arbor Custom Analytics blog in 2020:
-Mixed models in R: a primer
-Getting your data into R from Google Sheets
-The three kinds of data scientists in forestry</description>
+      <guid>http://localhost:4321/post/most-read-posts-in-2020/</guid>
+      <description>In 2020, 29 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you’d like to see? Email Matt with any suggestions.&#xA;Here are the most read posts from the Arbor Custom Analytics blog in 2020:&#xA;Mixed models in R: a primer&#xA;Getting your data into R from Google Sheets&#xA;The three kinds of data scientists in forestry</description>
     </item>
-    
     <item>
       <title>Forest carbon and short-lived trees</title>
-      <link>https://arbor-analytics.com/post/forest-carbon-markets-and-short-lived-trees/</link>
+      <link>http://localhost:4321/post/forest-carbon-markets-and-short-lived-trees/</link>
       <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/forest-carbon-markets-and-short-lived-trees/</guid>
-      <description>I spoke with a forest products company representative this week who expressed concern with “extending rotations” so that carbon is locked up in trees for a longer time. Many forest carbon markets are proposing delaying harvesting for a few years so that more carbon accumulates over time.
-The particular concern was in Minnesota where aspen, the state’s most commercially important species, is crucial to the forest products economy. Aspen is a short-lived, shade-intolerant species that is managed using even-aged silvicultural techniques.</description>
+      <guid>http://localhost:4321/post/forest-carbon-markets-and-short-lived-trees/</guid>
+      <description>I spoke with a forest products company representative this week who expressed concern with “extending rotations” so that carbon is locked up in trees for a longer time. Many forest carbon markets are proposing delaying harvesting for a few years so that more carbon accumulates over time.&#xA;The particular concern was in Minnesota where aspen, the state’s most commercially important species, is crucial to the forest products economy. Aspen is a short-lived, shade-intolerant species that is managed using even-aged silvicultural techniques.</description>
     </item>
-    
     <item>
       <title>Coverting forest inventory data from volume to carbon </title>
-      <link>https://arbor-analytics.com/post/coverting-wood-scaled-as-weight-to-carbon/</link>
+      <link>http://localhost:4321/post/coverting-wood-scaled-as-weight-to-carbon/</link>
       <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/coverting-wood-scaled-as-weight-to-carbon/</guid>
-      <description>The amount of carbon in a forest is a key metric that decision-makers want to know. Accurate estimates of forest carbon are needed if a landowner is interested in enrolling a forest into carbon markets.
-Unfortunately, most forest inventories continue to measure the amount of wood in a stand in terms of the volume it contains. Forest analysts also rely on historical forest inventory data to project future forest structure and composition - it is not unlikely to rely on inventory data that are more than 20 years old.</description>
+      <guid>http://localhost:4321/post/coverting-wood-scaled-as-weight-to-carbon/</guid>
+      <description>The amount of carbon in a forest is a key metric that decision-makers want to know. Accurate estimates of forest carbon are needed if a landowner is interested in enrolling a forest into carbon markets.&#xA;Unfortunately, most forest inventories continue to measure the amount of wood in a stand in terms of the volume it contains. Forest analysts also rely on historical forest inventory data to project future forest structure and composition - it is not unlikely to rely on inventory data that are more than 20 years old.</description>
     </item>
-    
     <item>
       <title>Trends in forest carbon papers in the last 20 years</title>
-      <link>https://arbor-analytics.com/post/trends-in-forest-carbon-literature/</link>
+      <link>http://localhost:4321/post/trends-in-forest-carbon-literature/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/trends-in-forest-carbon-literature/</guid>
-      <description>The number of peer-reviewed research publications on forest carbon has exploded in recent decades. From the signings of the Kyoto Protocol in 1997 to the Paris Agreement in 2015, much of the science and research conducted has been in response to the global challenges and opportunities that forests provide by sequestering and storing carbon.
-Forest carbon has also been increasingly studied in forest management and silvicultural practices. New technologies and remote sensing have also brought about new ways to inventory forests for the biomass and carbon they store.</description>
+      <guid>http://localhost:4321/post/trends-in-forest-carbon-literature/</guid>
+      <description>The number of peer-reviewed research publications on forest carbon has exploded in recent decades. From the signings of the Kyoto Protocol in 1997 to the Paris Agreement in 2015, much of the science and research conducted has been in response to the global challenges and opportunities that forests provide by sequestering and storing carbon.&#xA;Forest carbon has also been increasingly studied in forest management and silvicultural practices. New technologies and remote sensing have also brought about new ways to inventory forests for the biomass and carbon they store.</description>
     </item>
-    
     <item>
       <title>Mixed models in R: a primer</title>
-      <link>https://arbor-analytics.com/post/mixed-models-a-primer/</link>
+      <link>http://localhost:4321/post/mixed-models-a-primer/</link>
       <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/mixed-models-a-primer/</guid>
-      <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:
-“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”
-The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
+      <guid>http://localhost:4321/post/mixed-models-a-primer/</guid>
+      <description>Myself and a team of coauthors recently submitted a manuscript that analyzed forest composition data from a silvicultural study. Here is a comment from a peer reviewer that reviewed the work:&#xA;“I would like the authors to justify not using mixed models or to change their analyses for mixed models.”&#xA;The comment urged us to reevaluate the analysis of the data. Ultimately we redid the analysis using a mixed model framework, instead of using the traditional analysis of variance approach taught in many introductory statistics classes.</description>
     </item>
-    
     <item>
       <title>Ask how you want your data - and be specific</title>
-      <link>https://arbor-analytics.com/post/ask-how-how-want-your-data-and-be-specific/</link>
+      <link>http://localhost:4321/post/ask-how-how-want-your-data-and-be-specific/</link>
       <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/ask-how-how-want-your-data-and-be-specific/</guid>
-      <description>I have been analyzing the submissions to the University of Minnesota Extension’s Tree and Woodland Carbon Capture Challenge. The Challenge is an activity that asked Minnesotans to measure trees and woodlands to observe how much carbon they sequester over a year.
-The audience that participated in this activity included homeowners and private woodland owners with a love for trees. In total, 26 people measured an individual tree and typed their measurements into a Google Form answering the question “What is the diameter of your tree, measured in inches?</description>
+      <guid>http://localhost:4321/post/ask-how-how-want-your-data-and-be-specific/</guid>
+      <description>I have been analyzing the submissions to the University of Minnesota Extension’s Tree and Woodland Carbon Capture Challenge. The Challenge is an activity that asked Minnesotans to measure trees and woodlands to observe how much carbon they sequester over a year.&#xA;The audience that participated in this activity included homeowners and private woodland owners with a love for trees. In total, 26 people measured an individual tree and typed their measurements into a Google Form answering the question “What is the diameter of your tree, measured in inches?</description>
     </item>
-    
     <item>
       <title>Random forests in a nutshell</title>
-      <link>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</link>
+      <link>http://localhost:4321/post/random-forests-in-a-nutshell/</link>
       <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</guid>
-      <description>Random forests have exploded in popularity in the forestry discipline in recent years. Random forests (RF) are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.
-The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article.</description>
+      <guid>http://localhost:4321/post/random-forests-in-a-nutshell/</guid>
+      <description>Random forests have exploded in popularity in the forestry discipline in recent years. Random forests (RF) are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.&#xA;The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article.</description>
     </item>
-    
     <item>
       <title>New state-level forest carbon fact sheets available</title>
-      <link>https://arbor-analytics.com/post/new-state-level-forest-carbon-fact-sheets-available/</link>
+      <link>http://localhost:4321/post/new-state-level-forest-carbon-fact-sheets-available/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/new-state-level-forest-carbon-fact-sheets-available/</guid>
-      <description>An example forest carbon fact sheet from Maine.
-Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. Despite the increasing importance of understanding the amount of carbon that forests can store and sequester, easy-to-access information at the state level is difficult to obtain.
-Arbor Custom Analytics recently worked with the Forest Resources Association to create a series of fact sheets at the state, region, and national level.</description>
+      <guid>http://localhost:4321/post/new-state-level-forest-carbon-fact-sheets-available/</guid>
+      <description>An example forest carbon fact sheet from Maine.&#xA;Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. Despite the increasing importance of understanding the amount of carbon that forests can store and sequester, easy-to-access information at the state level is difficult to obtain.&#xA;Arbor Custom Analytics recently worked with the Forest Resources Association to create a series of fact sheets at the state, region, and national level.</description>
     </item>
-    
     <item>
       <title>States with the biggest gains in forest carbon over the last 30 years</title>
-      <link>https://arbor-analytics.com/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</link>
+      <link>http://localhost:4321/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</link>
       <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</guid>
-      <description>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.
-The value of carbon in forests has seen a tremendous increase in recent years. The increase in voluntary forest carbon markets have required analysts to have a better understanding of carbon attributes in the forests they work in.</description>
+      <guid>http://localhost:4321/post/states-with-the-biggest-gains-in-forest-carbon-over-the-last-30-years/</guid>
+      <description>Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. This makes them a natural climate solution. This also encourages managers to quantify carbon attributes along with the myriad of other benefits that forests provide.&#xA;The value of carbon in forests has seen a tremendous increase in recent years. The increase in voluntary forest carbon markets have required analysts to have a better understanding of carbon attributes in the forests they work in.</description>
     </item>
-    
     <item>
       <title>31 R packages for forest analysts</title>
-      <link>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</link>
+      <link>http://localhost:4321/post/31-r-packages-for-forest-analysts/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</guid>
-      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.
-The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
+      <guid>http://localhost:4321/post/31-r-packages-for-forest-analysts/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.&#xA;The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
     </item>
-    
     <item>
       <title>Forget spreading and gathering your R data, try pivoting instead</title>
-      <link>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
+      <link>http://localhost:4321/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</link>
       <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
-      <description>Reshaping data from a wide to a long format, or vice versa, is one of the most common data manipulation tasks that analysts need to do. One of my first posts on this blog was on how to do this in R.
-That post highlighted the spread() and gather() functions available from the tidyr package. As it turns out, the gather() and spread() functions are still available to use but are no longer under active development.</description>
+      <guid>http://localhost:4321/post/forget-spreading-and-gathering-your-r-data-try-pivoting-instead/</guid>
+      <description>Reshaping data from a wide to a long format, or vice versa, is one of the most common data manipulation tasks that analysts need to do. One of my first posts on this blog was on how to do this in R.&#xA;That post highlighted the spread() and gather() functions available from the tidyr package. As it turns out, the gather() and spread() functions are still available to use but are no longer under active development.</description>
     </item>
-    
     <item>
       <title>Reflections on the American Forestry Conference</title>
-      <link>https://arbor-analytics.com/post/reflections-on-the-american-forestry-conference/</link>
+      <link>http://localhost:4321/post/reflections-on-the-american-forestry-conference/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/reflections-on-the-american-forestry-conference/</guid>
-      <description>Shawn Baker presents on trends in logging businesses.
-Last week I tuned into the American Forestry Conference, a virtual conference on the forest products industry and how forestry businesses can reshape the future US economy. The conference, organized by the Georgia Forestry Association, had 35 speakers that discussed topics such as the challenges and opportunities of the role of forestry in the current and future economic climate. In an email, the organizing committee reported 540 attendees from 26 US states.</description>
+      <guid>http://localhost:4321/post/reflections-on-the-american-forestry-conference/</guid>
+      <description>Shawn Baker presents on trends in logging businesses.&#xA;Last week I tuned into the American Forestry Conference, a virtual conference on the forest products industry and how forestry businesses can reshape the future US economy. The conference, organized by the Georgia Forestry Association, had 35 speakers that discussed topics such as the challenges and opportunities of the role of forestry in the current and future economic climate. In an email, the organizing committee reported 540 attendees from 26 US states.</description>
     </item>
-    
     <item>
       <title>Forest carbon stocks in every US state</title>
-      <link>https://arbor-analytics.com/post/carbon-by-state/</link>
+      <link>http://localhost:4321/post/carbon-by-state/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/carbon-by-state/</guid>
-      <description>photo by Sean MacEntee
-In April 2020, the USDA Forest Service published Greenhouse gas emissions and removals from forest land, woodlands, and urban trees in the United States, 1990-2018. What makes this annual report unique is that forest carbon estimates are reported for each US state. Data are available in an appendix which lists forest carbon stocks and flux for each state from 1990 to 2018.
-Across the US, forests, urban trees, and harvested wood products are the largest carbon sink.</description>
+      <guid>http://localhost:4321/post/carbon-by-state/</guid>
+      <description>photo by Sean MacEntee&#xA;In April 2020, the USDA Forest Service published Greenhouse gas emissions and removals from forest land, woodlands, and urban trees in the United States, 1990-2018. What makes this annual report unique is that forest carbon estimates are reported for each US state. Data are available in an appendix which lists forest carbon stocks and flux for each state from 1990 to 2018.&#xA;Across the US, forests, urban trees, and harvested wood products are the largest carbon sink.</description>
     </item>
-    
     <item>
       <title>Wages for logging truckers much lower than other transportation industries</title>
-      <link>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
+      <link>http://localhost:4321/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
-      <description>“To solve any problem in forestry, first figure out where the roads will go.”
-That is a quote that I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it.</description>
+      <guid>http://localhost:4321/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
+      <description>“To solve any problem in forestry, first figure out where the roads will go.”&#xA;That is a quote that I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it.</description>
     </item>
-    
     <item>
       <title>Using clustering with logging industry data</title>
-      <link>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</link>
+      <link>http://localhost:4321/post/using-clustering-with-logging-industry-data/</link>
       <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</guid>
-      <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.
-The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.
-Clustering is an unsupervised ML algorithm that groups items.</description>
+      <guid>http://localhost:4321/post/using-clustering-with-logging-industry-data/</guid>
+      <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.&#xA;The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.&#xA;Clustering is an unsupervised ML algorithm that groups items.</description>
     </item>
-    
     <item>
       <title>Polar area diagrams in celebration of Florence Nightingale</title>
-      <link>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
+      <link>http://localhost:4321/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
-      <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.
-The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s. Specifically, the visualization showed the number of deaths that occurred from preventable diseases, wounds, and other causes.</description>
+      <guid>http://localhost:4321/post/polar-area-diagrams-in-celebration-of-florence-nightingale/</guid>
+      <description>In 1858 the general public was familiar with seeing statistics presented in tables. Visualizations showing statistics and data were not widely used and were difficult to construct. One visualization that was shown to Queen Victoria in this year would live on and continue to be used in the 21st century.&#xA;The visualization showed the number of deaths from soldiers in the Crimean War, fought in the 1850s. Specifically, the visualization showed the number of deaths that occurred from preventable diseases, wounds, and other causes.</description>
     </item>
-    
     <item>
       <title>How do loggers feel? Sentiment analysis on the opinions of logging contractors</title>
-      <link>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
+      <link>http://localhost:4321/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</link>
       <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
-      <description>After we conduct a survey, we have a routine for analyzing the data. Summarize the numerical responses and report values like means for specific questions. Group the data into different demographics and report the means within these categories.
-If we ask for any qualitative data through comments (e.g., “What is your opinion of X?”), the responses are always worth reading. We often get a lot of insight from reading an individual’s comments, and these comments can unveil new dimensions of our analysis.</description>
+      <guid>http://localhost:4321/post/how-do-loggers-feel-sentiment-analysis-on-the-opinions-of-logging-contractors/</guid>
+      <description>After we conduct a survey, we have a routine for analyzing the data. Summarize the numerical responses and report values like means for specific questions. Group the data into different demographics and report the means within these categories.&#xA;If we ask for any qualitative data through comments (e.g., “What is your opinion of X?”), the responses are always worth reading. We often get a lot of insight from reading an individual’s comments, and these comments can unveil new dimensions of our analysis.</description>
     </item>
-    
     <item>
       <title>Getting your data into R from Google Sheets</title>
-      <link>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</link>
+      <link>http://localhost:4321/post/getting-your-data-into-r-from-google-sheets/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</guid>
-      <description>If you’re like me, more of the data you use on a daily basis are stored in Google Sheets. You might be using fewer Excel spreadsheets and .csv files. I recently researched the most up-to-date ways to import data from an Access database into R. (It had been a while since I imported data from a database.)
-Using Google Sheets to store data has several advantages:
-Multiple people can collaborate on the same data set,Information entered into a Google Form can populate data in a Google Spreadsheet,Data can be accessed and edited both online and offline, andGoogle Sheets can be converted to Excel spreadsheets, and vice versa.</description>
+      <guid>http://localhost:4321/post/getting-your-data-into-r-from-google-sheets/</guid>
+      <description>If you’re like me, more of the data you use on a daily basis are stored in Google Sheets. You might be using fewer Excel spreadsheets and .csv files. I recently researched the most up-to-date ways to import data from an Access database into R. (It had been a while since I imported data from a database.)&#xA;Using Google Sheets to store data has several advantages:&#xA;Multiple people can collaborate on the same data set,&#xD;Information entered into a Google Form can populate data in a Google Spreadsheet,&#xD;Data can be accessed and edited both online and offline, and&#xD;Google Sheets can be converted to Excel spreadsheets, and vice versa.</description>
     </item>
-    
     <item>
       <title>Attention forestry researchers: Incorporate a call-to-action in your presentations</title>
-      <link>https://arbor-analytics.com/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</link>
+      <link>http://localhost:4321/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</link>
       <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</guid>
-      <description>A simple call-to-action to use in a presentation: link to the slides you just presented.)
-“The primary purpose of a talk is advertising, not science.”
-This is one of the statements made in the Leek group guide to giving talks. Our lab group discussed this topic at a recent meeting in April.
-Sometimes we are required in a grant to provide a talk via a presentation about our research to the public.</description>
+      <guid>http://localhost:4321/post/attention-forestry-researchers-incorporate-a-call-to-action-in-your-presentations/</guid>
+      <description>A simple call-to-action to use in a presentation: link to the slides you just presented.)&#xA;“The primary purpose of a talk is advertising, not science.”&#xA;This is one of the statements made in the Leek group guide to giving talks. Our lab group discussed this topic at a recent meeting in April.&#xA;Sometimes we are required in a grant to provide a talk via a presentation about our research to the public.</description>
     </item>
-    
     <item>
       <title>How to calculate carbon from board feet and cords</title>
-      <link>https://arbor-analytics.com/post/how-to-calculate-carbon-from-board-feet-and-cords/</link>
+      <link>http://localhost:4321/post/how-to-calculate-carbon-from-board-feet-and-cords/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-to-calculate-carbon-from-board-feet-and-cords/</guid>
+      <guid>http://localhost:4321/post/how-to-calculate-carbon-from-board-feet-and-cords/</guid>
       <description>Foresters and wood buyers are increasingly being asked about the amount of carbon that trees and forests store. However, foresters and wood buyers do not inventory or buy their wood on a carbon basis. Instead, forests in many regions of the US are inventoried and sold using volume measurements such as board feet and cords. If a forest resources professional knows how measurements like wood volume relate to carbon, he or she can feel empowered when discussing the importance of forests and forest management in the context of carbon with landowners and decision makers.</description>
     </item>
-    
     <item>
       <title>Disentagling the interactions between site index and disturbance</title>
-      <link>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
+      <link>http://localhost:4321/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
-      <description>The Black Hills National Forest has been in the news recently after completing a timber sustainability report. In recent years, the Black Hills was one of the US Forest Service’s greatest timber-producing National Forests in the country.
-Much of the increase in timber harvest in recent years at the Black Hills National Forest was in response to a deadly mountain pine beetle epidemic. As a result, the new report suggests that current timber harvests are not sustainable into the future.</description>
+      <guid>http://localhost:4321/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
+      <description>The Black Hills National Forest has been in the news recently after completing a timber sustainability report. In recent years, the Black Hills was one of the US Forest Service’s greatest timber-producing National Forests in the country.&#xA;Much of the increase in timber harvest in recent years at the Black Hills National Forest was in response to a deadly mountain pine beetle epidemic. As a result, the new report suggests that current timber harvests are not sustainable into the future.</description>
     </item>
-    
     <item>
       <title>Forest carbon cheat sheet</title>
-      <link>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</link>
+      <link>http://localhost:4321/post/forest-carbon-cheat-sheet/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</guid>
-      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
-The Cheast Sheet is updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2018.
-DOWNLOAD (PDF)
-DOWNLOAD (JPEG)
-The Forest Carbon Cheat Sheet.
-If you have questions or comments on the Cheat Sheet, email Matt.</description>
+      <guid>http://localhost:4321/post/forest-carbon-cheat-sheet/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.&#xA;The Cheast Sheet is updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2018.&#xA;DOWNLOAD (PDF)&#xA;DOWNLOAD (JPEG)&#xA;The Forest Carbon Cheat Sheet.&#xA;If you have questions or comments on the Cheat Sheet, email Matt.</description>
     </item>
-    
     <item>
       <title>The decline of researchers in forest science</title>
-      <link>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</link>
+      <link>http://localhost:4321/post/the-decline-of-researchers-in-forest-science/</link>
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</guid>
-      <description>A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that “does research”.
-I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.</description>
+      <guid>http://localhost:4321/post/the-decline-of-researchers-in-forest-science/</guid>
+      <description>A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that “does research”.&#xA;I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.</description>
     </item>
-    
     <item>
       <title>Modeling in the tidyverse, an example predicting tree biomass</title>
-      <link>https://arbor-analytics.com/post/fit-many-models-with-broom/</link>
+      <link>http://localhost:4321/post/fit-many-models-with-broom/</link>
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/fit-many-models-with-broom/</guid>
-      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.
-The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
+      <guid>http://localhost:4321/post/fit-many-models-with-broom/</guid>
+      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.&#xA;The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
     </item>
-    
     <item>
       <title>H-2B guest workers in forestry: by the numbers</title>
-      <link>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</link>
+      <link>http://localhost:4321/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</guid>
-      <description>Guest workers regenerating a northern Minnesota forest. (photo: @Chris_KTDunham, Twitter)
-Guest workers hired through the H-2B visa program get jobs done. This is especially true across many forestry companies. Guest workers plant trees, conduct silvicultural treatments, and assist in tree nursery production.
-A strong guest worker program can lead to a future forest products industry that is healthy and sustainable in the long term.
-Last week, the Trump administration announced 35,000 additional seasonal H-2B guest worker visas available in 2020.</description>
+      <guid>http://localhost:4321/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</guid>
+      <description>Guest workers regenerating a northern Minnesota forest. (photo: @Chris_KTDunham, Twitter)&#xA;Guest workers hired through the H-2B visa program get jobs done. This is especially true across many forestry companies. Guest workers plant trees, conduct silvicultural treatments, and assist in tree nursery production.&#xA;A strong guest worker program can lead to a future forest products industry that is healthy and sustainable in the long term.&#xA;Last week, the Trump administration announced 35,000 additional seasonal H-2B guest worker visas available in 2020.</description>
     </item>
-    
     <item>
       <title>Units in forest carbon numbers: a primer</title>
-      <link>https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/</link>
+      <link>http://localhost:4321/post/units-in-forest-carbon-numbers-a-primer/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/</guid>
-      <description>Forest analysts are increasingly being asked about the amount of carbon that trees and forests store. However, most analysts are trained in summarizing forestry data sets to obtain measurements such as volume and basal area.
-If a forest analyst knows how to “speak carbon”, this can leave them feeling empowered when discussing the importance of forests and forest management in the context of carbon. This can leave a solid impression with landowners and decision makers.</description>
+      <guid>http://localhost:4321/post/units-in-forest-carbon-numbers-a-primer/</guid>
+      <description>Forest analysts are increasingly being asked about the amount of carbon that trees and forests store. However, most analysts are trained in summarizing forestry data sets to obtain measurements such as volume and basal area.&#xA;If a forest analyst knows how to “speak carbon”, this can leave them feeling empowered when discussing the importance of forests and forest management in the context of carbon. This can leave a solid impression with landowners and decision makers.</description>
     </item>
-    
     <item>
       <title>How much carbon is stored in one trillion trees?</title>
-      <link>https://arbor-analytics.com/post/how-much-carbon-is-stored-in-a-trillion-trees/</link>
+      <link>http://localhost:4321/post/how-much-carbon-is-stored-in-a-trillion-trees/</link>
       <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-much-carbon-is-stored-in-a-trillion-trees/</guid>
-      <description>The short answer: About 5.7 times as much than is currently stored in forests in the lower 48 US states and Alaska. One trillion trees equates to about 101 billion metric tons of carbon stored.The Trillion Trees Campaign has been widespread in the news recently. The United States has committed to the initiative, announced at the World Economic Forum in January 2020 and mentioned during President Trump’s annual State of the Union address on 4 February 2020.</description>
+      <guid>http://localhost:4321/post/how-much-carbon-is-stored-in-a-trillion-trees/</guid>
+      <description>The short answer: About 5.7 times as much than is currently stored in forests in the lower 48 US states and Alaska. One trillion trees equates to about 101 billion metric tons of carbon stored.&#xD;The Trillion Trees Campaign has been widespread in the news recently. The United States has committed to the initiative, announced at the World Economic Forum in January 2020 and mentioned during President Trump’s annual State of the Union address on 4 February 2020.</description>
     </item>
-    
     <item>
       <title>Four ways to supercharge your scatterplots</title>
-      <link>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</link>
+      <link>http://localhost:4321/post/four-ways-to-supercharge-your-scatterplots/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</guid>
-      <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.
-There are a few rules for all scatterplots:
-The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
+      <guid>http://localhost:4321/post/four-ways-to-supercharge-your-scatterplots/</guid>
+      <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.&#xA;There are a few rules for all scatterplots:&#xA;The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)&#xD;The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)&#xD;Each observation is a point on the graph.</description>
     </item>
-    
     <item>
       <title>How to determine accuracy of classification models (with forestry data)</title>
-      <link>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
+      <link>http://localhost:4321/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
       <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
-      <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.
-You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
+      <guid>http://localhost:4321/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
+      <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.&#xA;You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
     </item>
-    
     <item>
       <title>The three kinds of data scientists in forestry</title>
-      <link>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</link>
+      <link>http://localhost:4321/post/the-three-kinds-of-data-scientists-in-forestry/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</guid>
-      <description>Data scientists are highly sought after professionals across tens of thousands of companies. And there&amp;rsquo;s a difference between what a data scientist does and what a statistician does.
-The field of statistics has been around for centuries, while data science programs at universities are just now beginning to graduate their first students.
-In statistics, hypotheses are evaluated. In data science, hypotheses are generated. Statistics is often considered a primary data analysis technique, while data science is often considered secondary.</description>
+      <guid>http://localhost:4321/post/the-three-kinds-of-data-scientists-in-forestry/</guid>
+      <description>Data scientists are highly sought after professionals across tens of thousands of companies. And there&amp;rsquo;s a difference between what a data scientist does and what a statistician does.&#xA;The field of statistics has been around for centuries, while data science programs at universities are just now beginning to graduate their first students.&#xA;In statistics, hypotheses are evaluated. In data science, hypotheses are generated. Statistics is often considered a primary data analysis technique, while data science is often considered secondary.</description>
     </item>
-    
     <item>
       <title>Which forest biometrics researchers get the most citations?</title>
-      <link>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</link>
+      <link>http://localhost:4321/post/which-forest-biometrics-faculty-get-the-most-citations/</link>
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</guid>
-      <description>Researchers in the forest and natural resource sciences are measured by their productivity: how many publications they write and how many times those publications are cited by other researchers. Researchers that have many publications that are cited in the literature by others generally have rewarding careers and are promoted.
-In 2017 I wrote a blog post for the Ecological Society of America’s Early Career Ecologist section that provided some evidence that early-career scientists publish earlier in their careers compared to more senior researchers.</description>
+      <guid>http://localhost:4321/post/which-forest-biometrics-faculty-get-the-most-citations/</guid>
+      <description>Researchers in the forest and natural resource sciences are measured by their productivity: how many publications they write and how many times those publications are cited by other researchers. Researchers that have many publications that are cited in the literature by others generally have rewarding careers and are promoted.&#xA;In 2017 I wrote a blog post for the Ecological Society of America’s Early Career Ecologist section that provided some evidence that early-career scientists publish earlier in their careers compared to more senior researchers.</description>
     </item>
-    
     <item>
       <title>Ruffed grouse and West Nile: A review of the binomial distribution</title>
-      <link>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
+      <link>http://localhost:4321/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
-      <description>There’s been a lot of talk in the wildlife community about the West Nile virus and its impacts on ruffed grouse populations.
-In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive.</description>
+      <guid>http://localhost:4321/post/ruffed-grouse-and-west-nile-a-review-of-the-binomial-distribution/</guid>
+      <description>There’s been a lot of talk in the wildlife community about the West Nile virus and its impacts on ruffed grouse populations.&#xA;In 2018, a multi-state effort examined the presence of West Nile virus in ruffed grouse populations across the US Lake States. The study concluded that while the West Nile virus was present in the region, grouse that are exposed to West Nile do not always die and can survive.</description>
     </item>
-    
     <item>
       <title>How to created paged HTML documents with pagedown</title>
-      <link>https://arbor-analytics.com/post/how-to-created-paged-html-documents-with-pagedown/</link>
+      <link>http://localhost:4321/post/how-to-created-paged-html-documents-with-pagedown/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-to-created-paged-html-documents-with-pagedown/</guid>
-      <description>When it comes to reading documents and data summaries online, HTML is often preferred over PDF. HTML documents are more interactive, easier to read on screens, and more accessible than PDFs.
-Many R users that produce reproducible reports have used R Markdown for integrating text, images, code, and tables and figures into an HTML format. Using the R Markdown language allows R users to work within the R ecosystem for writing and producing code.</description>
+      <guid>http://localhost:4321/post/how-to-created-paged-html-documents-with-pagedown/</guid>
+      <description>When it comes to reading documents and data summaries online, HTML is often preferred over PDF. HTML documents are more interactive, easier to read on screens, and more accessible than PDFs.&#xA;Many R users that produce reproducible reports have used R Markdown for integrating text, images, code, and tables and figures into an HTML format. Using the R Markdown language allows R users to work within the R ecosystem for writing and producing code.</description>
     </item>
-    
     <item>
       <title>How to calculate how much carbon is in a tree</title>
-      <link>https://arbor-analytics.com/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
+      <link>http://localhost:4321/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
-      <description>Carbon is perhaps the most important attribute in trees today. Forests in the United States sequester about 11% of the total CO2 emissions every year, making them an important tool to combat future global changes. Having accurate models that represent how much carbon is stored in trees is essential for understanding their carbon sequestration potential and are widely used in forest carbon accounting tools.
-Most equations that predict the amount carbon in a tree start with first predicting its biomass.</description>
+      <guid>http://localhost:4321/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
+      <description>Carbon is perhaps the most important attribute in trees today. Forests in the United States sequester about 11% of the total CO2 emissions every year, making them an important tool to combat future global changes. Having accurate models that represent how much carbon is stored in trees is essential for understanding their carbon sequestration potential and are widely used in forest carbon accounting tools.&#xA;Most equations that predict the amount carbon in a tree start with first predicting its biomass.</description>
     </item>
-    
     <item>
       <title>A 50-year history of forest measurements by analyzing Forest Measurements</title>
-      <link>https://arbor-analytics.com/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</link>
+      <link>http://localhost:4321/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</guid>
-      <description>If you’ve even taken a course in forest measurements, you likely used Forest Measurements as the textbook. The first edition of forest measurements was published in 1967 by Thomas Eugene Avery and included a number of topics related to forest inventory, sampling forest resources, and tree and stand measurements.
-The book recently published its 6th edition in 2018 and is available through Waveland Press. Investigating how the book has incorporated new topics gives insights into the advances of the field of forest measurements:</description>
+      <guid>http://localhost:4321/post/a-50-year-history-of-forest-measurements-by-analyzing-forest-measurements/</guid>
+      <description>If you’ve even taken a course in forest measurements, you likely used Forest Measurements as the textbook. The first edition of forest measurements was published in 1967 by Thomas Eugene Avery and included a number of topics related to forest inventory, sampling forest resources, and tree and stand measurements.&#xA;The book recently published its 6th edition in 2018 and is available through Waveland Press. Investigating how the book has incorporated new topics gives insights into the advances of the field of forest measurements:</description>
     </item>
-    
     <item>
       <title>Should foresters keep saying “statistically significant”?</title>
-      <link>https://arbor-analytics.com/post/should-foresters-keep-saying-statistically-significant/</link>
+      <link>http://localhost:4321/post/should-foresters-keep-saying-statistically-significant/</link>
       <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/should-foresters-keep-saying-statistically-significant/</guid>
-      <description>The statistics community has had a lot of discussion in recent years about the role of p -values and statistical significance. What does this mean for forest biometricians and analysts that have traditionally used p -values and tests of significance in their daily work?
-The American Statistical Association’s August 2019 edition of their magazine Significance has a number of great articles on significance. They even refer to the term as “the S word”:</description>
+      <guid>http://localhost:4321/post/should-foresters-keep-saying-statistically-significant/</guid>
+      <description>The statistics community has had a lot of discussion in recent years about the role of p -values and statistical significance. What does this mean for forest biometricians and analysts that have traditionally used p -values and tests of significance in their daily work?&#xA;The American Statistical Association’s August 2019 edition of their magazine Significance has a number of great articles on significance. They even refer to the term as “the S word”:</description>
     </item>
-    
     <item>
       <title>Quickly explore your timber cruise data with six lines of code</title>
-      <link>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</link>
+      <link>http://localhost:4321/post/explore-your-timber-cruise-data/</link>
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/explore-your-timber-cruise-data/</guid>
-      <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.
-A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
+      <guid>http://localhost:4321/post/explore-your-timber-cruise-data/</guid>
+      <description>Data from timber cruises and other forest inventories need to be clean and easy to interpret. Time can be lost in the field and office if data were collected sloppily, were measured in the field without a protocol, or are otherwise “messy” with lots of errors.&#xA;A data-checking routine can save time, money, and resources. Identifying potential data inaccuracies or inconsistencies soon after they’re collected can help eliminate any inappropriate decisions that are made from those data further down the line.</description>
     </item>
-    
     <item>
       <title>New logging companies with old equipment: Finding patterns in logging businesses using clustering</title>
-      <link>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
+      <link>http://localhost:4321/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
-      <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.
-As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
+      <guid>http://localhost:4321/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
+      <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.&#xA;As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
     </item>
-    
     <item>
       <title>Using Google Forms to analyze confidence intervals: a teaching statistics activity</title>
-      <link>https://arbor-analytics.com/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</link>
+      <link>http://localhost:4321/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</link>
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</guid>
-      <description>This post describes how the concepts of confidence intervals can be taught to students. The ideal participants are undergraduate students in an introductory statistics. The in-class activity reveals to students that most people are overconfident in their estimation of uncertainty. The activity uses the example of moose, a charismatic wildlife species in Minnesota.
-IntroductionDemonstrations of data and statistical concepts are effective when they are designed with a structure that encourages participation in the classroom 1.</description>
+      <guid>http://localhost:4321/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</guid>
+      <description>This post describes how the concepts of confidence intervals can be taught to students. The ideal participants are undergraduate students in an introductory statistics. The in-class activity reveals to students that most people are overconfident in their estimation of uncertainty. The activity uses the example of moose, a charismatic wildlife species in Minnesota.&#xA;Introduction&#xD;Demonstrations of data and statistical concepts are effective when they are designed with a structure that encourages participation in the classroom 1.</description>
     </item>
-    
     <item>
       <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
-      <link>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
+      <link>http://localhost:4321/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
       <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
-      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.
-The general process to make a GIF image with maps in R is:
-1. Create the images you want (e.g., using ggplot),
-2. Stitch the images together with magick, and
-3. Write the images as a GIF and share!</description>
+      <guid>http://localhost:4321/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
+      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.&#xA;The general process to make a GIF image with maps in R is:&#xA;1. Create the images you want (e.g., using ggplot),&#xA;2. Stitch the images together with magick, and&#xA;3. Write the images as a GIF and share!</description>
     </item>
-    
     <item>
       <title>How much is too long a wait? Calculating expected wait times of wood deliveries</title>
-      <link>https://arbor-analytics.com/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</link>
+      <link>http://localhost:4321/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</link>
       <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</guid>
-      <description>Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)
-How important are wait times for loggers and truckers?Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill.
-Both wood procurement managers and their suppliers need to know when wait times exceed the amount of time they expect.</description>
+      <guid>http://localhost:4321/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</guid>
+      <description>Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)&#xA;How important are wait times for loggers and truckers?&#xD;Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill.&#xA;Both wood procurement managers and their suppliers need to know when wait times exceed the amount of time they expect.</description>
     </item>
-    
     <item>
       <title>Stratified vs. simple random sampling: fun with forestsamplr</title>
-      <link>https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</link>
+      <link>http://localhost:4321/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</link>
       <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
-      <description>Tools for estimating population means for stratified and simple random samplesIf we know the size of a number of subpopulations that are a part of a larger population, we can use stratified random sampling to come up with a more precise estimate of a population mean. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling.</description>
+      <guid>http://localhost:4321/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/</guid>
+      <description>Tools for estimating population means for stratified and simple random samples&#xD;If we know the size of a number of subpopulations that are a part of a larger population, we can use stratified random sampling to come up with a more precise estimate of a population mean. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling.</description>
     </item>
-    
     <item>
       <title>Connecticut harvests almost as many deer with cars as their hunters do</title>
-      <link>https://arbor-analytics.com/post/deer-vehicle-accidents/</link>
+      <link>http://localhost:4321/post/deer-vehicle-accidents/</link>
       <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/deer-vehicle-accidents/</guid>
+      <guid>http://localhost:4321/post/deer-vehicle-accidents/</guid>
       <description>White-tailed deer provide a huge contribution to the outdoors economy and deer hunters support conservation efforts throughout the US. Despite the popularity and traditions of deer and deer hunting, they present a number of ecological problems including damage to forest and agricultural crops and landscaping. Deer are ravaging Long Island’s forests and in my own state of Minnesota we’ve started a citizen science program on monitoring the impacts of deer on forest vegetation.</description>
     </item>
-    
     <item>
       <title>Presenting regression results better with forest plots</title>
-      <link>https://arbor-analytics.com/post/presenting-regression-results-better/</link>
+      <link>http://localhost:4321/post/presenting-regression-results-better/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/presenting-regression-results-better/</guid>
-      <description>I was inspired by Sara Richter’s presentation at the 2019 Conference on Statistical Practice titled “Easy Ways to Make Data Visualizations More Effective”. One of the themes I took away from Sara’s presentation was that data visualization needs to be practiced, but good data visualization doesn’t need to be difficult to be done well.
-When presenting results from a regression, people often use tables. While this is good if we need the true value of something, tables may not be good if we seek to convey general trends in our results.</description>
+      <guid>http://localhost:4321/post/presenting-regression-results-better/</guid>
+      <description>I was inspired by Sara Richter’s presentation at the 2019 Conference on Statistical Practice titled “Easy Ways to Make Data Visualizations More Effective”. One of the themes I took away from Sara’s presentation was that data visualization needs to be practiced, but good data visualization doesn’t need to be difficult to be done well.&#xA;When presenting results from a regression, people often use tables. While this is good if we need the true value of something, tables may not be good if we seek to convey general trends in our results.</description>
     </item>
-    
     <item>
       <title>Adding some music to boxplots, and better ways to visualize diameter distributions</title>
-      <link>https://arbor-analytics.com/post/better-ways-to-visualize-multi-modal-data/</link>
+      <link>http://localhost:4321/post/better-ways-to-visualize-multi-modal-data/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/better-ways-to-visualize-multi-modal-data/</guid>
-      <description>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on between those boxes and whiskers?
-Some forestry data: In the examples below, I’ve used tree diameters measured in four management units at the Penobscot Experimental Forest in Maine.</description>
+      <guid>http://localhost:4321/post/better-ways-to-visualize-multi-modal-data/</guid>
+      <description>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on between those boxes and whiskers?&#xA;Some forestry data: In the examples below, I’ve used tree diameters measured in four management units at the Penobscot Experimental Forest in Maine.</description>
     </item>
-    
     <item>
       <title>Spreading and gathering tree data</title>
-      <link>https://arbor-analytics.com/post/spreading-and-gathering-tree-data/</link>
+      <link>http://localhost:4321/post/spreading-and-gathering-tree-data/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/spreading-and-gathering-tree-data/</guid>
-      <description>A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and needed to be wide.
-The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.</description>
+      <guid>http://localhost:4321/post/spreading-and-gathering-tree-data/</guid>
+      <description>A student emailed this week with a data management need: how to turn thousands of rows of data to make a calculation based on two time periods? In short, the data were in a long format and needed to be wide.&#xA;The experiment was something like this: the student had data containing the number of tree seedlings in a forest, measured in eight different plots. She revisited the same forest five years later and measured the number of seedlings again.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="generator" content="Hugo 0.101.0" />
+		<meta name="generator" content="Hugo 0.125.7">
         <title>Random forests: a tutorial with forestry data</title>
         
         <style>
@@ -22,7 +22,7 @@
 </style>
 
 
-<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
 
 
 
@@ -126,9 +126,7 @@
                             
                                 <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
                             
                                 <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
                             
@@ -158,20 +156,20 @@
     <h4><a href="/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/">Random forests: a tutorial with forestry data</a></h4>
     <h5>September 27, 2021</h5>
     
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/random-forests"><kbd class="item-tag">random forests</kbd></a>
+    <a href="http://localhost:4321/tags/random-forests"><kbd class="item-tag">random forests</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
     
 
 </div>
 
 
     <br> <div class="text-justify">
-<script src="https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/index_files/header-attrs/header-attrs.js"></script>
+<script src="/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/index_files/header-attrs/header-attrs.js"></script>
 
 
 <center>
@@ -208,7 +206,7 @@ tree &lt;- read_sheet(&quot;https://docs.google.com/spreadsheets/d/1TPutUVyZLWr7
 <pre class="r"><code>library(GGally)
 
 ggpairs(tree, columns = c(2:5, 9))</code></pre>
-<p><img src="https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>You can see a few variables have strong positive correlations with the mass of the tree (e.g., height and diameter) and some more moderate positive correlations (e.g., age).</p>
 </div>
 <div id="the-randomforest-r-package" class="section level2">
@@ -245,7 +243,7 @@ tree.rf</code></pre>
 <p>Note the mean of squared residuals and the percent variation explained (analogous to R-squared) provided in the output. (We’ll revisit them later.)</p>
 <p>Another way to visualize the out-of-bag error rates of the random forests models is to use the <code>plot()</code> function. In this application, although we specified 500 trees, the out-of-bag error generally stabilizes after 100 trees:</p>
 <pre class="r"><code>plot(tree.rf)</code></pre>
-<p><img src="https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>Some of the most helpful output in random forests is the importance of each of the predictor variables. The importance score is calculated by evaluating the regression tree with and without that variable. When evaluating the regression tree, the mean square error (MSE) will go up, down, or stay the same.</p>
 <p>If the percent increase in MSE after removing the variable is large, it indicates an important variable. If the percent increase in MSE after removing the variable is small, it’s less important.</p>
 <p>The <code>importance()</code> function prints the importance scores for each variable and the <code>varImpPlot()</code> function plots them:</p>
@@ -256,7 +254,7 @@ tree.rf</code></pre>
 ## LCL 14.062093      633208.3
 ## Age  8.155748      323918.3</code></pre>
 <pre class="r"><code>varImpPlot(tree.rf,type=1)</code></pre>
-<p><img src="https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>The output indicates that <code>DBH</code> is the most important variable for predicting <code>Mass_tree</code> and age the least important.</p>
 </div>
 <div id="comparing-random-forests-and-regression-models" class="section level2">
@@ -355,7 +353,7 @@ library(patchwork)
 
 p.rf + p.reg</code></pre>
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
-<p><img src="https://arbor-analytics.com/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="/post/2021-09-26-random-forests-a-tutorial-with-forestry-data/index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <p>With the heteroscedastic residuals in the models, we’d likely want to explore transforming the data prior to model fitting, or to explore other modeling techniques.</p>
 </div>
 <div id="summary" class="section level2">
@@ -383,44 +381,22 @@ p.rf + p.reg</code></pre>
     
     
 
-    <h4><a href="/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/">New updates for tools that query Forest Inventory and Analysis data</a></h4>
-    <h5>November 23, 2022</h5>
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
     
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/datamart"><kbd class="item-tag">DataMart</kbd></a>
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/evalidator"><kbd class="item-tag">EVALIDator</kbd></a>
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/2022-11-09-home-heating-with-wood/">How many homes heat with wood?</a></h4>
-    <h5>November 9, 2022</h5>
-    
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
-    
-    <a href="https://arbor-analytics.com/tags/energy"><kbd class="item-tag">energy</kbd></a>
-    
-    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
-    
-    <a href="https://arbor-analytics.com/tags/wood"><kbd class="item-tag">wood</kbd></a>
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
 
 </div>
@@ -433,18 +409,50 @@ p.rf + p.reg</code></pre>
     
     
 
-    <h4><a href="/post/2022-10-20-how-to-spot-poor-data-analyses/">How to spot poor data analyses</a></h4>
-    <h5>October 20, 2022</h5>
+    <h4><a href="/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/">A list of R packages for forestry applications</a></h4>
+    <h5>November 24, 2023</h5>
     
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    <a href="http://localhost:4321/tags/r"><kbd class="item-tag">R</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    <a href="http://localhost:4321/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/">How much does adding previous diameter and height growth change FVS predictions?</a></h4>
+    <h5>October 31, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fvs"><kbd class="item-tag">FVS</kbd></a>
+    
+    <a href="http://localhost:4321/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
     
 
 </div>

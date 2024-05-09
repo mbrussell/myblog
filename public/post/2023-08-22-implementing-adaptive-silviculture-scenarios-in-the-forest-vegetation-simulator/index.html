@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>Implementing climate adaptive silviculture scenarios in the Forest Vegetation Simulator</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Implementing climate adaptive silviculture scenarios in the Forest Vegetation Simulator</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/">Implementing climate adaptive silviculture scenarios in the Forest Vegetation Simulator</a></h4>
+    <h5>August 29, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/silviculture"><kbd class="item-tag">silviculture</kbd></a>
+    
+    <a href="http://localhost:4321/tags/adaptive-silviculture"><kbd class="item-tag">adaptive silviculture</kbd></a>
+    
+    <a href="http://localhost:4321/tags/climate-change"><kbd class="item-tag">climate change</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fvs"><kbd class="item-tag">FVS</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<div id="section" class="section level1">
+<h1></h1>
+<center>
+<div class="float">
+<img src="ascc_sign.JPG" width="500" alt="The Adaptive Silvicultre for Climate Change Project at the Chippewa National Forest, Minnesota, USA. Photo: Josh Kragthorpe." />
+<div class="figcaption"><em>The Adaptive Silvicultre for Climate Change Project at the Chippewa National Forest, Minnesota, USA. Photo: Josh Kragthorpe.</em></div>
+</div>
+</center>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>If you follow the latest research in forestry, it’s hard not to come across studies relating to <strong>adaptive silviculture</strong>. <a href="https://www.adaptivesilviculture.org/silviculture-climate-adaptation">In a nutshell</a>, adaptive silviculture is “designed to specifically address climate change impacts and vulnerabilities to meet management goals and objectives.”</p>
+<p>If you’ve ever been on a field tour of a forest that has recently seen a timber harvest and has undergone an adaptive silviculture treatment, you were likely impressed with the complex spatial distribution of residual trees following the harvest. These treatments create gaps between a quarter acre and a few acres in size, leave behind reserve areas where no trees are harvested, or incorporate thinning prescriptions in the “matrix”. All in a single stand, the spatial diversity of these stands can be incredible.</p>
+<p>Stands that are managed for climate change can look complex, and so can quantifying their future structure. Most of our growth and yield models were designed to handle relatively simple forest management scenarios such as clearcuts, thinnings, and shelterwood treatments. Simulating stands that are managed under an adaptive silviculture framework can be accomplished with some growth and yield models, but not without careful tinkering.</p>
+<p>This post will step through a tutorial using the <a href="https://arbor-analytics.com/post/2022-08-04-fvs-and-cbm-cfs3-comparing-two-forest-carbon-accounting-tools/">Forest Vegetation Simulator (FVS)</a>, a widely used individual tree model that uses lists of trees (e.g., species and tree diameter) to forecast forest growth through time. The FVS model can simulate forest management activities, disturbances, and provide forest carbon and harvested wood products reports. A series of 22 different model variants provide regional differences in forest growth patterns. This analysis will simulate stands under an adaptive silviculture for climate change approach.</p>
+<div id="connecticut-fia-data" class="section level2">
+<h2>Connecticut FIA data</h2>
+<p>For this analysis I’ll use three forest inventory plots measured in the state of Connecticut, obtained from the US Forest Inventory an Analysis network of plots. These plots were measured between 2018 and 2021 using a fixed radius sample design. These plots were dominated by <strong>oak trees</strong>. Two of the plots were recorded as occurring in the white oak/red oak/hickory forest type and the other in the white oak forest type.</p>
+<p>Before harvests, initial basal area ranged between 155 and 194 square feet per acre. You can download the FVS-ready files I’ve compiled for these stands <a href="https://github.com/mbrussell/myblog/tree/master/content/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/data">at this page on GitHub</a>.</p>
+</div>
+<div id="adaptive-silviculture-treatments" class="section level2">
+<h2>Adaptive silviculture treatments</h2>
+<p>For the treatments to specify in FVS, we’ll follow a similar prescription that is being conducted at an <a href="https://www.adaptivesilviculture.org/node/996">Adaptive Silviculture for Climate Change experiment in New Hampshire</a>. This treatment follows a resilience approach to climate change, where the treatment will allow some change in current forest conditions, but will also encourage its return to original conditions. The silvicultural strategy is to generally use group and single-tree selection across the stand. The subtreatments within the stand are:</p>
+<ul>
+<li><strong>Gaps</strong>: Small gaps that leave openings for light-dependent species (20% of stand),</li>
+<li><strong>Reserves</strong>: No management within small areas across the stand (20% of stand), and</li>
+<li><strong>Matrix</strong>: Thinning to 80 square feet per acre (60% of the stand)</li>
+</ul>
+<p>This approach seeks to maintain the diversity of native tree species while also increasing drought-adapted species like oaks.</p>
+</div>
+<div id="simulating-adaptive-silviculture-with-fvs" class="section level2">
+<h2>Simulating adaptive silviculture with FVS</h2>
+<p>The FVS model has an excellent web interface, which <a href="https://www.fs.usda.gov/fvs/software/complete.php">can be downloaded here</a>. I’ll use this interface and specify to use the Northeast variant to the FVS model.</p>
+<p>The three stands in the Connecticut FIA data are labeled with stand identification numbers <strong>9_11_157</strong>, <strong>9_11_67</strong>, and <strong>9_3_389</strong>. We can add all of them by pressing <em>Add Selected Stands</em> and include them in the Run Contents window:</p>
+</div>
+</div>
+<div id="section-2" class="section level1">
+<h1></h1>
+<center>
+<img src="fvs_screenshot.png" width="800" />
+</center>
+</div>
+<div id="section-3" class="section level1">
+<h1></h1>
+<p>One approach that I’ve found effective in simulating adaptive silviculture treatments in FVS is through <strong>adding replicates with different weights</strong>. This approach is also described in an <a href="https://www.fs.usda.gov/fvs/documents/FVSTrainingGuide-20210930.pdf">FVS Training Guide</a>, and is similar to adding “subtreatments” within a stand. For example, if half of a stand is clearcut and half is not harvested, you could add two replicates with relative weights of 50% each, then perform the management actions within each replicate.</p>
+<p>For the adaptive silviculture treatments planned for these stands, we can add three replicates with relative weights of 20%, 20%, and 60% corresponding to the gap, reserves, and thinning matrix subtreatments:</p>
+</div>
+<div id="section-4" class="section level1">
+<h1></h1>
+<center>
+<img src="fvs_weight_replicate.png" width="500" />
+</center>
+</div>
+<div id="section-5" class="section level1">
+<h1></h1>
+<p>Now, you’re ready to specify the management actions within each subtreatment, or replicate.</p>
+<div id="gaps-subtreatment" class="section level3">
+<h3>Gaps subtreatment</h3>
+<p>For the first replicate, labeled <em>r001</em>, we’ll simulate the gaps subtreatment. This is essentially the harvested “group” in the group selection treatment where all trees are removed. For the purpose of this tutorial, we’ll use only stand number <strong>9_11_157</strong>:</p>
+</div>
+</div>
+<div id="section-6" class="section level1">
+<h1></h1>
+<center>
+<img src="rep1_22.png" width="250" />
+</center>
+</div>
+<div id="section-7" class="section level1">
+<h1></h1>
+<p>To specify the harvest within the gaps, select <strong>Regeneration Methods: Even-aged</strong> under the <em>Categories</em> drop down and then <strong>Clearcut/coppice</strong> under the <em>Components</em> drop down. The harvest will occur in 2023. We’ll specify the smallest diameter tree to be cut as 1-inch and will leave no legacy trees as a part of these gaps:</p>
+</div>
+<div id="section-8" class="section level1">
+<h1></h1>
+<center>
+<img src="gaps_screen.png" width="500" />
+</center>
+</div>
+<div id="section-9" class="section level1">
+<h1></h1>
+<p>There will be plenty of light available in these gaps, so we’ll want to add some natural regeneration. The Northeast variant of the FVS model does not have a full regeneration module, so oftentimes regeneration needs to be manually entered. By default, the FVS-Northeast model does include regeneration from sprouting species like oaks and aspen. However, we’ll turn the sprouting feature off and will manually enter the species and number of trees to regenerate.</p>
+<p>Select <strong>Planting &amp; Natural Regen</strong> under the <em>Categories</em> drop down and then <strong>Plant/Natural with Partial Estab Model</strong> under the <em>Components</em> drop down. We’ll add 300 trees per acre to naturally regenerate in these gaps, evenly split between two species. After looking at the overstory species found in these stands, we’ll select northern red oak and sweet birch to regenerate, given there is likely plenty of seed source available. We’ll set the survival rate to 80% to account for some mortality through deer browse and other factors:</p>
+</div>
+<div id="section-10" class="section level1">
+<h1></h1>
+<center>
+<img src="regen_gaps.png" width="500" />
+</center>
+</div>
+<div id="section-11" class="section level1">
+<h1></h1>
+<div id="reserve-subtreatment" class="section level3">
+<h3>Reserve subtreatment</h3>
+<p>For the Reserve subtreatment (<em>r002</em>), there’s not much needed to do here. You can select the <strong>Grp: AutoRep=2</strong> field in the Run Contents window of FVS, but don’t need to specify any management. We’re essentially running a “let it grow” scenario. Being a reserve treatment, we’ll simply let the current trees grow through the simulation and won’t add any regeneration.</p>
+</div>
+<div id="matrix-subtreatment-with-thinning" class="section level3">
+<h3>Matrix subtreatment with thinning</h3>
+<p>We’ll specify thinning to occur in the matrix subtreatment (<em>r003</em>). Select the <strong>Grp: AutoRep=3</strong> field in the Run Contents window to apply the thinning treatments to the remaining 60% of the stand. Select <strong>Thinning and Pruning Operations</strong> under the <em>Categories</em> drop down and then <strong>Thin throughout a diameter range</strong> under the <em>Components</em> drop down. Thinning throughout will harvest trees from across the range of the diameter distribution.</p>
+<p>The prescription calls for a thinning to leave 80 square feet of residual basal area per acre. Leave the default value to remove all species in the thinning:</p>
+</div>
+</div>
+<div id="section-12" class="section level1">
+<h1></h1>
+<center>
+<img src="matrix_screen.png" width="500" />
+</center>
+</div>
+<div id="section-13" class="section level1">
+<h1></h1>
+<p>We’ll also add some natural regeneration within the matrix. However, because the residual trees will continue to occupy some light, we’ll add half the amount of regeneration in the matrix compared to what we added in the open gaps. We’ll add 150 trees per acre to naturally regenerate, turning off the default sprouting action. Again, the species will be evenly split between northern red oak and sweet birch. We’ll lower the survival to 50% to account for the limited light conditions in the thinned portion of the stand:</p>
+</div>
+<div id="section-14" class="section level1">
+<h1></h1>
+<center>
+<img src="mr.png" width="500" />
+</center>
+</div>
+<div id="section-15" class="section level1">
+<h1></h1>
+<div id="fvs-output" class="section level2">
+<h2>FVS output</h2>
+<p>We’ll run a 50-year simulation (through 2073), which can be changed under the <strong>Time</strong> window. Another keyword that I’ll set is <em>NoTriple</em>, which turns off the tripling of tree records early in the simulation. It can be found under the <strong>Keywords</strong> menu.</p>
+<p>FVS provides multiple outputs to select from under the <strong>Select Outputs</strong> tab. I’ll choose <em>Stand Visualization</em>, <em>Carbon and fuels</em>, <em>Stand structure</em>, and <em>Regeneration.</em> Choose <em>Save and Run</em> under the <em>Run</em> window to perform the simulation.</p>
+<p>After the simulation is complete for this stand, select <em>View Outputs</em>, <em>Explore</em>, and then <em>Graphs</em>. You can see the merchantable volume trends within the gaps, reserve, and matrix subtreatments:</p>
+<ul>
+<li>For the <strong>gaps</strong> subtreatment (in red), all of the volume is removed, and by the end of the 50-year simulation our natural regeneration has not grown enough to yield any merchantable volume.</li>
+<li>For the <strong>reserve</strong> subtreatment (in green), the stand continues to grow throughout the simulation.</li>
+<li>For the <strong>matrix</strong> subtreatment (in blue), some volume is initially removed and growth continues throughout the simulation.</li>
+</ul>
+</div>
+</div>
+<div id="section-16" class="section level1">
+<h1></h1>
+<center>
+<img src="volume.png" width="500" />
+</center>
+</div>
+<div id="section-17" class="section level1">
+<h1></h1>
+<p>Despite the fact that we’ve simulated three subtreatments within a stand, FVS provides the <strong>Composite table</strong> in a format that weights the stand measurements calculated within each subtreatment. You can view the Composite table under <em>Database tables to consider</em> and selecting the <em>CmpSummary2_East</em> table:</p>
+</div>
+<div id="section-18" class="section level1">
+<h1></h1>
+<center>
+<img src="view_outputs.png" width="250" />
+</center>
+</div>
+<div id="section-19" class="section level1">
+<h1></h1>
+<p>As you can see in the table, the composite residual basal area across the entire stand is 79 square feet per acre. You can quickly confirm this is correct by calculating a weighted average of the residual basal area in the gaps (0 square feet), the reserve (155 square feet, the initial basal area), and the matrix (80 square feet). These would correspond to the replicate weights of 20%, 20%, and 60% in the gaps, reserve, and matrix, respectively:</p>
+</div>
+<div id="section-20" class="section level1">
+<h1></h1>
+<center>
+<img src="composite.png" width="500" />
+</center>
+</div>
+<div id="section-21" class="section level1">
+<h1></h1>
+<p>Finally, you can view more output by selecting <em>View Outputs</em>, <em>Explore</em>, and then <em>Graphs</em>. Here are the composite trees per acre, basal area, and quadratic mean diameter (QMD) across the stand. We can see the impact of adding the natural regeneration to the increasing trees per acre, then decreasing as the stands go through density-dependent mortality. Basal area and QMD are lowered immediately after harvest, then increase throughout the simulation:</p>
+</div>
+<div id="section-22" class="section level1">
+<h1></h1>
+<center>
+<img src="structure.png" width="800" />
+</center>
+</div>
+<div id="section-23" class="section level1">
+<h1></h1>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Running adaptive silvicultural management in models like FVS is possible and can account for diverse harvest scenarios like thinning treatments, group selection harvests, and planting climate-adapted species. It’s important to note that FVS is a distance-independent model and doesn’t rely on a tree’s spatial location to determine growth and mortality. Many climate-adaptive forest management treatments rely on spatial heterogeneity as a part of maintaining diversity and resilience in the face of future uncertain climates. Unfortunately, few growth and yield models can incorporate spatial variability in addition to having the capability to forecast a variety of forest management treatments like FVS.</p>
+<p>The process of adding subtreatments within FVS to account for different management actions and viewing the composite tables allows for the assessment of management impacts at the stand scale. Still, if many stands are run within FVS with multiple subtreatments, I like to export the data to other software like R and do my own calculations of stand-level attributes. Although models like FVS were not originally designed to incorporate complex forest management scenarios like adaptive silviculture, there are strategies to forecast what stands may look like under an adaptive management framework.</p>
+<p>–</p>
+<p><em>By Matt Russell. Check out the <a href="https://github.com/mbrussell/myblog/tree/master/content/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/data">FVS-ready files on GitHub</a> if you want to replicate this simulation, or try a another simulation using the other two stands. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/">A list of R packages for forestry applications</a></h4>
+    <h5>November 24, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
+    
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/">How much does adding previous diameter and height growth change FVS predictions?</a></h4>
+    <h5>October 31, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fvs"><kbd class="item-tag">FVS</kbd></a>
+    
+    <a href="http://localhost:4321/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -2,61 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Prediction on </title>
-    <link>https://arbor-analytics.com/categories/prediction/</link>
+    <link>http://localhost:4321/categories/prediction/</link>
     <description>Recent content in Prediction on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/prediction/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/categories/prediction/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How many trees make a mass timber building?</title>
-      <link>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</link>
+      <link>http://localhost:4321/post/how-many-trees-make-a-mass-timber-building/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-many-trees-make-a-mass-timber-building/</guid>
-      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/
-Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
+      <guid>http://localhost:4321/post/how-many-trees-make-a-mass-timber-building/</guid>
+      <description>The T3 in Minneapolis, Minnesota is a mass timber building built with wooden slabs, columns, and beams (photo: Ema Peter (http://www.emapeter.com/&#xA;Mass timber buildings are increasingly being built and have a number of environmental benefits. They are lighter than other common building materials like steel, are fire resistant, and their use reduces carbon dioxide emissions compared to other building materials. Buildings are even being constructed with beetle-killed wood to mitigate the impacts of forests disturbances on the carbon cycle.</description>
     </item>
-    
     <item>
       <title>Modeling in the tidyverse, an example predicting tree biomass</title>
-      <link>https://arbor-analytics.com/post/fit-many-models-with-broom/</link>
+      <link>http://localhost:4321/post/fit-many-models-with-broom/</link>
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/fit-many-models-with-broom/</guid>
-      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.
-The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
+      <guid>http://localhost:4321/post/fit-many-models-with-broom/</guid>
+      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.&#xA;The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
     </item>
-    
     <item>
       <title>How to determine accuracy of classification models (with forestry data)</title>
-      <link>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
+      <link>http://localhost:4321/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
       <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
-      <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.
-You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
+      <guid>http://localhost:4321/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
+      <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.&#xA;You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
     </item>
-    
     <item>
       <title>How to calculate how much carbon is in a tree</title>
-      <link>https://arbor-analytics.com/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
+      <link>http://localhost:4321/post/how-to-calculate-how-much-carbon-is-in-a-tree/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
-      <description>Carbon is perhaps the most important attribute in trees today. Forests in the United States sequester about 11% of the total CO2 emissions every year, making them an important tool to combat future global changes. Having accurate models that represent how much carbon is stored in trees is essential for understanding their carbon sequestration potential and are widely used in forest carbon accounting tools.
-Most equations that predict the amount carbon in a tree start with first predicting its biomass.</description>
+      <guid>http://localhost:4321/post/how-to-calculate-how-much-carbon-is-in-a-tree/</guid>
+      <description>Carbon is perhaps the most important attribute in trees today. Forests in the United States sequester about 11% of the total CO2 emissions every year, making them an important tool to combat future global changes. Having accurate models that represent how much carbon is stored in trees is essential for understanding their carbon sequestration potential and are widely used in forest carbon accounting tools.&#xA;Most equations that predict the amount carbon in a tree start with first predicting its biomass.</description>
     </item>
-    
     <item>
       <title>How much is too long a wait? Calculating expected wait times of wood deliveries</title>
-      <link>https://arbor-analytics.com/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</link>
+      <link>http://localhost:4321/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</link>
       <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</guid>
-      <description>Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)
-How important are wait times for loggers and truckers?Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill.
-Both wood procurement managers and their suppliers need to know when wait times exceed the amount of time they expect.</description>
+      <guid>http://localhost:4321/post/how-much-is-too-long-a-wait-calculating-expected-wait-times-of-wood-deliveries/</guid>
+      <description>Logging trucks wait to be weighed before dropping off their loads of wood. (Photo: Jamey Malcomb/Pine Journal)&#xA;How important are wait times for loggers and truckers?&#xD;Wood procurement managers and suppliers are both interested in reducing the wait times (or turn times) of wood deliveries. Wait times are defined as the time required for trucks to scale in and out when wood is delivered to a mill.&#xA;Both wood procurement managers and their suppliers need to know when wait times exceed the amount of time they expect.</description>
     </item>
-    
   </channel>
 </rss>

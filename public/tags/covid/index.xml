@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Covid on </title>
+    <link>http://localhost:4321/tags/covid/</link>
+    <description>Recent content in Covid on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/covid/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New web app shows pandemic assistance to forest products industry by state</title>
+      <link>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/</guid>
+      <description>Screenshot of the forest products and pandemic funding application.&#xD;Forest products companies used the Paycheck Protection Program (PPP) and Pandemic Assistance for Timber Harvesters and Haulers (PATHH) programs to keep nearly 500,000 workers in the US forest industry on payroll throughout the COVID-19 pandemic. A new web application is now available that summarizes these pandemic assistance programs and funding provided to each individual state.&#xA;You can access the web app here.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bootstrap on Forests aren&#39;t random.</title>
-    <link>/tags/bootstrap/</link>
-    <description>Recent content in Bootstrap on Forests aren&#39;t random.</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Bootstrap on </title>
+    <link>http://localhost:4321/tags/bootstrap/</link>
+    <description>Recent content in Bootstrap on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    
-	<atom:link href="/tags/bootstrap/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/bootstrap/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Project 3</title>
-      <link>/workshop/workshop3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/workshop/workshop3/</guid>
-      <description></description>
+      <title>Bootstrapped resampling to model tree biomass</title>
+      <link>http://localhost:4321/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/</guid>
+      <description>In one of the first presentations I gave as a graduate student, I discussed a set of regression equations that fit a nonlinear model predicting a forest growth index for several species. As all graduate students do, I spent considerable time preparing my slides and practicing my talk. The presentation went well.&#xA;I used a data splitting approach in my analysis that I presented on, a common technique that trains a model on a large portion of the data (usually around 70%) then tests it on a smaller portion of data not used in model fitting (usually around 30%).</description>
     </item>
-    
   </channel>
 </rss>

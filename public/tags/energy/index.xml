@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>energy on </title>
-    <link>https://arbor-analytics.com/tags/energy/</link>
-    <description>Recent content in energy on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Energy on </title>
+    <link>http://localhost:4321/tags/energy/</link>
+    <description>Recent content in Energy on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/energy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/energy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How many homes heat with wood?</title>
-      <link>https://arbor-analytics.com/post/2022-11-09-home-heating-with-wood/</link>
+      <link>http://localhost:4321/post/2022-11-09-home-heating-with-wood/</link>
       <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-11-09-home-heating-with-wood/</guid>
-      <description>Photo by Andreas Pajuvirta on UnsplashThe bill that was left on our door was what many homeowners are hit with this time of year: $1,082 for 175 gallons.
-Like most homes in central Maine, we heat with fuel oil in the winter. It’s a common source of home heating across northern New England, and the high price of heating oil was brought up repeatedly throughout the midterm elections.</description>
+      <guid>http://localhost:4321/post/2022-11-09-home-heating-with-wood/</guid>
+      <description>Photo by Andreas Pajuvirta on Unsplash&#xD;The bill that was left on our door was what many homeowners are hit with this time of year: $1,082 for 175 gallons.&#xA;Like most homes in central Maine, we heat with fuel oil in the winter. It’s a common source of home heating across northern New England, and the high price of heating oil was brought up repeatedly throughout the midterm elections.</description>
     </item>
-    
   </channel>
 </rss>

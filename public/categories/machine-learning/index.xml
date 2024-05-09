@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Machine learning on </title>
-    <link>https://arbor-analytics.com/categories/machine-learning/</link>
-    <description>Recent content in Machine learning on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Machine Learning on </title>
+    <link>http://localhost:4321/categories/machine-learning/</link>
+    <description>Recent content in Machine Learning on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Random forests in a nutshell</title>
-      <link>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</link>
+      <link>http://localhost:4321/post/random-forests-in-a-nutshell/</link>
       <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</guid>
-      <description>Random forests have exploded in popularity in the forestry discipline in recent years. Random forests (RF) are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.
-The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article.</description>
+      <guid>http://localhost:4321/post/random-forests-in-a-nutshell/</guid>
+      <description>Random forests have exploded in popularity in the forestry discipline in recent years. Random forests (RF) are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.&#xA;The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article.</description>
     </item>
-    
     <item>
       <title>New logging companies with old equipment: Finding patterns in logging businesses using clustering</title>
-      <link>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
+      <link>http://localhost:4321/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
-      <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.
-As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
+      <guid>http://localhost:4321/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
+      <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.&#xA;As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
     </item>
-    
   </channel>
 </rss>

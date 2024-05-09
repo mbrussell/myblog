@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hiring on </title>
-    <link>https://arbor-analytics.com/tags/hiring/</link>
-    <description>Recent content in hiring on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Hiring on </title>
+    <link>http://localhost:4321/tags/hiring/</link>
+    <description>Recent content in Hiring on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/hiring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/hiring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The decline of researchers in forest science</title>
-      <link>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</link>
+      <link>http://localhost:4321/post/the-decline-of-researchers-in-forest-science/</link>
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/the-decline-of-researchers-in-forest-science/</guid>
-      <description>A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that “does research”.
-I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.</description>
+      <guid>http://localhost:4321/post/the-decline-of-researchers-in-forest-science/</guid>
+      <description>A few months ago during a coffee break in a day-long meeting, I was asked by a forester that works for a state agency to connect him with some contacts. He was interested in anyone that works in the forest industry in Minnesota that “does research”.&#xA;I work as a faculty member and Extension forester at a Society of American Foresters-accredited institution. I am generally knowledgeable about current forestry research and the people doing it in our state.</description>
     </item>
-    
     <item>
       <title>H-2B guest workers in forestry: by the numbers</title>
-      <link>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</link>
+      <link>http://localhost:4321/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</guid>
-      <description>Guest workers regenerating a northern Minnesota forest. (photo: @Chris_KTDunham, Twitter)
-Guest workers hired through the H-2B visa program get jobs done. This is especially true across many forestry companies. Guest workers plant trees, conduct silvicultural treatments, and assist in tree nursery production.
-A strong guest worker program can lead to a future forest products industry that is healthy and sustainable in the long term.
-Last week, the Trump administration announced 35,000 additional seasonal H-2B guest worker visas available in 2020.</description>
+      <guid>http://localhost:4321/post/h-2b-forestry-and-conservation-workers-by-the-numbers/</guid>
+      <description>Guest workers regenerating a northern Minnesota forest. (photo: @Chris_KTDunham, Twitter)&#xA;Guest workers hired through the H-2B visa program get jobs done. This is especially true across many forestry companies. Guest workers plant trees, conduct silvicultural treatments, and assist in tree nursery production.&#xA;A strong guest worker program can lead to a future forest products industry that is healthy and sustainable in the long term.&#xA;Last week, the Trump administration announced 35,000 additional seasonal H-2B guest worker visas available in 2020.</description>
     </item>
-    
     <item>
       <title>The three kinds of data scientists in forestry</title>
-      <link>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</link>
+      <link>http://localhost:4321/post/the-three-kinds-of-data-scientists-in-forestry/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/the-three-kinds-of-data-scientists-in-forestry/</guid>
-      <description>Data scientists are highly sought after professionals across tens of thousands of companies. And there&amp;rsquo;s a difference between what a data scientist does and what a statistician does.
-The field of statistics has been around for centuries, while data science programs at universities are just now beginning to graduate their first students.
-In statistics, hypotheses are evaluated. In data science, hypotheses are generated. Statistics is often considered a primary data analysis technique, while data science is often considered secondary.</description>
+      <guid>http://localhost:4321/post/the-three-kinds-of-data-scientists-in-forestry/</guid>
+      <description>Data scientists are highly sought after professionals across tens of thousands of companies. And there&amp;rsquo;s a difference between what a data scientist does and what a statistician does.&#xA;The field of statistics has been around for centuries, while data science programs at universities are just now beginning to graduate their first students.&#xA;In statistics, hypotheses are evaluated. In data science, hypotheses are generated. Statistics is often considered a primary data analysis technique, while data science is often considered secondary.</description>
     </item>
-    
   </channel>
 </rss>

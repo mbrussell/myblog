@@ -1,52 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>data management on </title>
-    <link>https://arbor-analytics.com/tags/data-management/</link>
-    <description>Recent content in data management on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Data Management on </title>
+    <link>http://localhost:4321/tags/data-management/</link>
+    <description>Recent content in Data Management on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A handy R function for getting ecological division from FIA data</title>
+      <link>http://localhost:4321/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/</guid>
+      <description>Ecological sections and subsections in Maine, USA (from Cleland et al. 2007).&#xD;To get a better feel for how they work, I’ve been digging into the new tree volume, biomass, and carbon models released by the USDA Forest Service last month. These new equations replace volume equations developed at the regional level and are now nationally-consistent. Importantly for anyone that works with forest carbon inventory data, these new equations replace the Component Ratio Method (CRM).</description>
+    </item>
     <item>
       <title>Reading in data quickly into R</title>
-      <link>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</link>
+      <link>http://localhost:4321/post/2022-05-19-reading-in-data-quickly-in-r/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-05-19-reading-in-data-quickly-in-r/</guid>
-      <description>If you’re like me, you work with a lot of data files in your daily analytical work. Despite the increase in cloud computing, reading in files locally to the machine your working on is common.
-You want a rapid summary of your data and don’t want to wait forever for your computer to read in the file you’re working with. To do this, you want to use functions that are efficient and effective for working with large amounts of data.</description>
+      <guid>http://localhost:4321/post/2022-05-19-reading-in-data-quickly-in-r/</guid>
+      <description>If you’re like me, you work with a lot of data files in your daily analytical work. Despite the increase in cloud computing, reading in files locally to the machine your working on is common.&#xA;You want a rapid summary of your data and don’t want to wait forever for your computer to read in the file you’re working with. To do this, you want to use functions that are efficient and effective for working with large amounts of data.</description>
     </item>
-    
     <item>
       <title>Understanding the forest products industry using NAICS codes</title>
-      <link>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
+      <link>http://localhost:4321/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</link>
       <pubDate>Sat, 08 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
-      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.
-In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
+      <guid>http://localhost:4321/post/2021-05-08-understanding-the-forest-products-industry-using-naics-codes/</guid>
+      <description>To understand any industry, an analyst should be well acquainted with the codes designating the North American Industry Classification Systems. These NAICS codes are often used along with economic data to analyze an industry or sector. When a new business is created, they self-select into one or more NAICS codes.&#xA;In forestry, there are several designations that represent different areas of the forest products industry. These range from wood products manufacturers, loggers, pulp mills, and forest nurseries.</description>
     </item>
-    
     <item>
       <title>Ask how you want your data - and be specific</title>
-      <link>https://arbor-analytics.com/post/ask-how-how-want-your-data-and-be-specific/</link>
+      <link>http://localhost:4321/post/ask-how-how-want-your-data-and-be-specific/</link>
       <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/ask-how-how-want-your-data-and-be-specific/</guid>
-      <description>I have been analyzing the submissions to the University of Minnesota Extension’s Tree and Woodland Carbon Capture Challenge. The Challenge is an activity that asked Minnesotans to measure trees and woodlands to observe how much carbon they sequester over a year.
-The audience that participated in this activity included homeowners and private woodland owners with a love for trees. In total, 26 people measured an individual tree and typed their measurements into a Google Form answering the question “What is the diameter of your tree, measured in inches?</description>
+      <guid>http://localhost:4321/post/ask-how-how-want-your-data-and-be-specific/</guid>
+      <description>I have been analyzing the submissions to the University of Minnesota Extension’s Tree and Woodland Carbon Capture Challenge. The Challenge is an activity that asked Minnesotans to measure trees and woodlands to observe how much carbon they sequester over a year.&#xA;The audience that participated in this activity included homeowners and private woodland owners with a love for trees. In total, 26 people measured an individual tree and typed their measurements into a Google Form answering the question “What is the diameter of your tree, measured in inches?</description>
     </item>
-    
     <item>
       <title>Getting your data into R from Google Sheets</title>
-      <link>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</link>
+      <link>http://localhost:4321/post/getting-your-data-into-r-from-google-sheets/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/getting-your-data-into-r-from-google-sheets/</guid>
-      <description>If you’re like me, more of the data you use on a daily basis are stored in Google Sheets. You might be using fewer Excel spreadsheets and .csv files. I recently researched the most up-to-date ways to import data from an Access database into R. (It had been a while since I imported data from a database.)
-Using Google Sheets to store data has several advantages:
-Multiple people can collaborate on the same data set,Information entered into a Google Form can populate data in a Google Spreadsheet,Data can be accessed and edited both online and offline, andGoogle Sheets can be converted to Excel spreadsheets, and vice versa.</description>
+      <guid>http://localhost:4321/post/getting-your-data-into-r-from-google-sheets/</guid>
+      <description>If you’re like me, more of the data you use on a daily basis are stored in Google Sheets. You might be using fewer Excel spreadsheets and .csv files. I recently researched the most up-to-date ways to import data from an Access database into R. (It had been a while since I imported data from a database.)&#xA;Using Google Sheets to store data has several advantages:&#xA;Multiple people can collaborate on the same data set,&#xD;Information entered into a Google Form can populate data in a Google Spreadsheet,&#xD;Data can be accessed and edited both online and offline, and&#xD;Google Sheets can be converted to Excel spreadsheets, and vice versa.</description>
     </item>
-    
   </channel>
 </rss>

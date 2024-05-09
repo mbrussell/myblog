@@ -1,0 +1,44 @@
+---
+title: New web app shows pandemic assistance to forest products industry by state
+author: Matt Russell
+date: '2024-01-13'
+slug: []
+categories:
+  - Forest products
+tags:
+  - pandemic
+  - covid
+  - forest products
+  - economics
+  - forestry
+---
+
+
+# 
+<center>
+
+![*Screenshot of the forest products and pandemic funding application.*](webapp.png){width=500px}
+</center>
+#  
+
+Forest products companies used the [Paycheck Protection Program](https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program) (PPP) and [Pandemic Assistance for Timber Harvesters and Haulers](https://www.farmers.gov/archived/coronavirus/pandemic-assistance/pathh) (PATHH) programs to keep nearly 500,000 workers in the US forest industry on payroll throughout the COVID-19 pandemic. A [new web application](https://matt-arbor.shinyapps.io/forestry_pandemic/) is now available that summarizes these pandemic assistance programs and funding provided to each individual state.
+ 
+
+[You can access the web app here.](https://matt-arbor.shinyapps.io/forestry_pandemic/)
+
+The app uses data presented in the paper [**A summary of COVID-19 pandemic assistance to US forest products companies**](https://meridian.allenpress.com/fpj/article/72/4/253/488883/A-Summary-of-COVID-19-Pandemic-Assistance-to-US), published in the *Forest Products Journal* in late 2022. Values include:
+
+* Number of loans/payments offered to forest products companies,
+* Average loan/payment amounts,
+* Total value of loans/payment provided to state,
+* Average number of forest products jobs supported per loan,
+* Total number of forest products jobs supported in state,
+* Average gross revenue lost in 2020 per business, and
+* Total gross revenue lost by state in 2020
+
+Data for the PPP and PATHH programs are presented for each US state plus the District of Columbia and Puerto Rico.  
+
+--
+
+*By Matt Russell. For more, subscribe to my [monthly email newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) to stay ahead on data and analytics trends in the forest products industry.*
+

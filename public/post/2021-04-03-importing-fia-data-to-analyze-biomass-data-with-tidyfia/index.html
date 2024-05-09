@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="generator" content="Hugo 0.101.0" />
+		<meta name="generator" content="Hugo 0.125.7">
         <title>Importing FIA data to analyze forest carbon with tidyFIA</title>
         
         <style>
@@ -22,7 +22,7 @@
 </style>
 
 
-<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
 
 
 
@@ -126,9 +126,7 @@
                             
                                 <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
                             
                                 <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
                             
@@ -158,20 +156,20 @@
     <h4><a href="/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/">Importing FIA data to analyze forest carbon with tidyFIA</a></h4>
     <h5>April 5, 2021</h5>
     
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/data-import"><kbd class="item-tag">data import</kbd></a>
+    <a href="http://localhost:4321/tags/data-import"><kbd class="item-tag">data import</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/tidyfia"><kbd class="item-tag">tidyFIA</kbd></a>
+    <a href="http://localhost:4321/tags/tidyfia"><kbd class="item-tag">tidyFIA</kbd></a>
     
 
 </div>
 
 
     <br> <div class="text-justify">
-<script src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/header-attrs/header-attrs.js"></script>
-<script src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/kePrint/kePrint.js"></script>
-<link href="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/lightable/lightable.css" rel="stylesheet" />
+<script src="/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/header-attrs/header-attrs.js"></script>
+<script src="/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/kePrint/kePrint.js"></script>
+<link href="/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/lightable/lightable.css" rel="stylesheet" />
 
 
 <center>
@@ -204,7 +202,7 @@ library(urbnmapr)</code></pre>
 <p>A map of the FIA plot locations can be obtained with the <code>plot()</code> function in <strong>tidyFIA</strong>:</p>
 <pre class="r"><code>p.me &lt;- plot(me_data) 
 p.me</code></pre>
-<p><img src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>Depending on the amount of data collected in the state or geographic area of interest, it can take some time to import the data of interest. I will query the Maine data to obtain all inventories which have occurred since 1999, the year that annual inventories began in the state (i.e., when data began to be collected in a consistent manner):</p>
 <pre class="r"><code>plot &lt;- me_data[[&quot;plot&quot;]] %&gt;% filter(invyr &gt;= 1999)
 cond &lt;- me_data[[&quot;cond&quot;]] %&gt;% filter(invyr &gt;= 1999)
@@ -229,7 +227,7 @@ tree &lt;- me_data[[&quot;tree&quot;]] %&gt;% filter(invyr &gt;= 1999)</code></p
   labs (x = &quot;Basal area (sq. ft per acre)&quot;,
         y = &quot;Aboveground carbon (tons per acre)&quot;)
 p.carbon</code></pre>
-<p><img src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>You might also be interested in the most common species found in Maine. In the code below, the <code>ref_species</code> data frame contains the FIA species code and common names. The six most common species are gathered from the FIA database and then graphed to observe trends between tree diameter and aboveground carbon:</p>
 <pre class="r"><code>ref_species &lt;- read_ref_table(&quot;REF_SPECIES&quot;) %&gt;%
   select(spcd, common_name)
@@ -248,7 +246,7 @@ me_data[[&quot;tree&quot;]] %&gt;%
     facet_wrap(~ common_name) +
     labs (x = &quot;Tree diameter (inches)&quot;,
           y = &quot;Aboveground carbon (pounds)&quot;)</code></pre>
-<p><img src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>In Maine, some FIA plots have been remeasured up to five times. The next set of code filters the data to obtain only the most recent inventory by matching the remeasurement id number (<code>rem_id</code>; 1 through 5) with the most recent remeasurement (<code>max_rem_id</code>):</p>
 <pre class="r"><code>plot2 &lt;- plot_stats %&gt;% 
   group_by(statecd, countycd, plot) %&gt;% 
@@ -691,7 +689,7 @@ carbon_data %&gt;%
   geom_polygon(color = NA) +
   coord_map(projection = &quot;albers&quot;, lat0 = 39, lat1 = 45) +
   labs(fill = &quot;Mean carbon \n(tons per acre)&quot;)</code></pre>
-<p><img src="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 </div>
 <div id="summary" class="section level2">
 <h2>Summary</h2>
@@ -717,44 +715,22 @@ carbon_data %&gt;%
     
     
 
-    <h4><a href="/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/">New updates for tools that query Forest Inventory and Analysis data</a></h4>
-    <h5>November 23, 2022</h5>
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
     
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/datamart"><kbd class="item-tag">DataMart</kbd></a>
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/evalidator"><kbd class="item-tag">EVALIDator</kbd></a>
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/2022-11-09-home-heating-with-wood/">How many homes heat with wood?</a></h4>
-    <h5>November 9, 2022</h5>
-    
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
-    
-    <a href="https://arbor-analytics.com/tags/energy"><kbd class="item-tag">energy</kbd></a>
-    
-    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
-    
-    <a href="https://arbor-analytics.com/tags/wood"><kbd class="item-tag">wood</kbd></a>
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
 
 </div>
@@ -767,18 +743,50 @@ carbon_data %&gt;%
     
     
 
-    <h4><a href="/post/2022-10-20-how-to-spot-poor-data-analyses/">How to spot poor data analyses</a></h4>
-    <h5>October 20, 2022</h5>
+    <h4><a href="/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/">A list of R packages for forestry applications</a></h4>
+    <h5>November 24, 2023</h5>
     
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    <a href="http://localhost:4321/tags/r"><kbd class="item-tag">R</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    <a href="http://localhost:4321/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/">How much does adding previous diameter and height growth change FVS predictions?</a></h4>
+    <h5>October 31, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fvs"><kbd class="item-tag">FVS</kbd></a>
+    
+    <a href="http://localhost:4321/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
     
 
 </div>

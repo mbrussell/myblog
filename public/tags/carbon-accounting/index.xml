@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Carbon Accounting on </title>
+    <link>http://localhost:4321/tags/carbon-accounting/</link>
+    <description>Recent content in Carbon Accounting on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/carbon-accounting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Harvested wood products and forest carbon</title>
+      <link>http://localhost:4321/events/2023-10-16-harvested-wood-products-and-forest-carbon/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-10-16-harvested-wood-products-and-forest-carbon/</guid>
+      <description>Harvested wood products store carbon from sustainably-managed forests. These slides were presented at the Northeast Silviculture Institute for Foresters in Gardner, MA on Oct. 11, 2023.&#xA;READ THE SLIDES.</description>
+    </item>
+    <item>
+      <title>Calculating carbon in standing dead trees</title>
+      <link>http://localhost:4321/post/2023-02-09-calculating-carbon-in-standing-dead-trees/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-02-09-calculating-carbon-in-standing-dead-trees/</guid>
+      <description>A standing dead balsam fir tree in Maine.&#xD;Quantifying the presence and abundance of standing dead trees (SDTs) is notoriously difficult. While live and healthy trees generally appear similar in form and appearance to other live and healthy trees, no two standing dead trees are alike.&#xA;Trees that recently died within a few months can have most of their tops and limbs intact. Their foliage may even still be attached.</description>
+    </item>
+  </channel>
+</rss>

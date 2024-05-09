@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tidymodels on </title>
+    <link>http://localhost:4321/tags/tidymodels/</link>
+    <description>Recent content in Tidymodels on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/tidymodels/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sampling design and statistical approaches in forestry</title>
+      <link>http://localhost:4321/events/2023-05-22-sampling-design-and-statistical-approaches-in-forestry/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2023-05-22-sampling-design-and-statistical-approaches-in-forestry/</guid>
+      <description>&#xD;This workshop for Tag Ng showcased how sampling and statistics can be used in forestry applications. The two-hour virtual workshop discussed common sampling design used in forestry and statistical approaches with forest inventory data. Example coding sessions used the forestsamplr and tidymodels packages in R.&#xA;VIEW SLIDES&#xD;VIEW R CODE AND DATA&#xD;</description>
+    </item>
+    <item>
+      <title>Bootstrapped resampling to model tree biomass</title>
+      <link>http://localhost:4321/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/</guid>
+      <description>In one of the first presentations I gave as a graduate student, I discussed a set of regression equations that fit a nonlinear model predicting a forest growth index for several species. As all graduate students do, I spent considerable time preparing my slides and practicing my talk. The presentation went well.&#xA;I used a data splitting approach in my analysis that I presented on, a common technique that trains a model on a large portion of the data (usually around 70%) then tests it on a smaller portion of data not used in model fitting (usually around 30%).</description>
+    </item>
+  </channel>
+</rss>

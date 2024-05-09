@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>classification on </title>
-    <link>https://arbor-analytics.com/tags/classification/</link>
-    <description>Recent content in classification on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Classification on </title>
+    <link>http://localhost:4321/tags/classification/</link>
+    <description>Recent content in Classification on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/classification/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/classification/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Random forests in a nutshell</title>
-      <link>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</link>
+      <link>http://localhost:4321/post/random-forests-in-a-nutshell/</link>
       <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/random-forests-in-a-nutshell/</guid>
-      <description>Random forests have exploded in popularity in the forestry discipline in recent years. Random forests (RF) are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.
-The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article.</description>
+      <guid>http://localhost:4321/post/random-forests-in-a-nutshell/</guid>
+      <description>Random forests have exploded in popularity in the forestry discipline in recent years. Random forests (RF) are a quantitative tool categorized as a machine learning technique. Analysts prefer to use RF methods because they can handle large amounts of data, provide the relative importance of a many variables, and can be applied to classification or regression problems.&#xA;The following graph shows the number of articles from four common journals in the forestry discipline that contained the term “random forests” in the article.</description>
     </item>
-    
     <item>
       <title>How to determine accuracy of classification models (with forestry data)</title>
-      <link>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
+      <link>http://localhost:4321/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</link>
       <pubDate>Mon, 13 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
-      <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.
-You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
+      <guid>http://localhost:4321/post/how-to-determine-accuracy-of-classification-models-with-forestry-data/</guid>
+      <description>Classification is the process when you predict something, and that something is a class or label. It’s widely used when analyzing and modeling forestry data. Data scientists use if often as one of the many machine learning algorithms.&#xA;You might have learned about classification in the context of logistic regression. In logistic regression, your outcome is a binary class of data. For example, a tree can be alive or dead.</description>
     </item>
-    
   </channel>
 </rss>

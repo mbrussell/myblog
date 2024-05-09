@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ecodivision on </title>
+    <link>http://localhost:4321/tags/ecodivision/</link>
+    <description>Recent content in Ecodivision on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/ecodivision/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A handy R function for getting ecological division from FIA data</title>
+      <link>http://localhost:4321/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/</guid>
+      <description>Ecological sections and subsections in Maine, USA (from Cleland et al. 2007).&#xD;To get a better feel for how they work, I’ve been digging into the new tree volume, biomass, and carbon models released by the USDA Forest Service last month. These new equations replace volume equations developed at the regional level and are now nationally-consistent. Importantly for anyone that works with forest carbon inventory data, these new equations replace the Component Ratio Method (CRM).</description>
+    </item>
+  </channel>
+</rss>

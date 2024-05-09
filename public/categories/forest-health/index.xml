@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Forest health on </title>
-    <link>https://arbor-analytics.com/categories/forest-health/</link>
-    <description>Recent content in Forest health on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Forest Health on </title>
+    <link>http://localhost:4321/categories/forest-health/</link>
+    <description>Recent content in Forest Health on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/forest-health/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/categories/forest-health/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Drought in the US West: impacts from the last ten years</title>
-      <link>https://arbor-analytics.com/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</link>
+      <link>http://localhost:4321/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</link>
       <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</guid>
-      <description>Drought conditions in the western US, 20 July 2021. From US Drought Monitor.
-Much of the western United States is currently under severe drought conditions. Drought impacts trees and forests in the short and long term. Trees and forests can tolerate some extended dry periods depending of species and local conditions, but without adequate moisture availability, drought can ultimately lead to tree mortality.
-Perhaps the greatest impact of drought is the stress it places on trees.</description>
+      <guid>http://localhost:4321/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</guid>
+      <description>Drought conditions in the western US, 20 July 2021. From US Drought Monitor.&#xA;Much of the western United States is currently under severe drought conditions. Drought impacts trees and forests in the short and long term. Trees and forests can tolerate some extended dry periods depending of species and local conditions, but without adequate moisture availability, drought can ultimately lead to tree mortality.&#xA;Perhaps the greatest impact of drought is the stress it places on trees.</description>
     </item>
-    
   </channel>
 </rss>

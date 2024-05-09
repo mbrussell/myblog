@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>climate change on </title>
-    <link>https://arbor-analytics.com/tags/climate-change/</link>
-    <description>Recent content in climate change on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Climate Change on </title>
+    <link>http://localhost:4321/tags/climate-change/</link>
+    <description>Recent content in Climate Change on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/climate-change/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/climate-change/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementing climate adaptive silviculture scenarios in the Forest Vegetation Simulator</title>
+      <link>http://localhost:4321/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-08-22-implementing-adaptive-silviculture-scenarios-in-the-forest-vegetation-simulator/</guid>
+      <description>The Adaptive Silvicultre for Climate Change Project at the Chippewa National Forest, Minnesota, USA. Photo: Josh Kragthorpe.&#xD;If you follow the latest research in forestry, it’s hard not to come across studies relating to adaptive silviculture. In a nutshell, adaptive silviculture is “designed to specifically address climate change impacts and vulnerabilities to meet management goals and objectives.”&#xA;If you’ve ever been on a field tour of a forest that has recently seen a timber harvest and has undergone an adaptive silviculture treatment, you were likely impressed with the complex spatial distribution of residual trees following the harvest.</description>
+    </item>
+    <item>
+      <title>Quantifying the shade tolerance of climate-adapted tree species in the Northeast</title>
+      <link>http://localhost:4321/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast/</link>
+      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast/</guid>
+      <description>A few weeks ago I attended Dr. Tony D’Amato’s excellent webinar “Looking at Forest Carbon from Multiple Dimensions”. The content of the webinar was excellent and I encourage anyone involved with forest management and forest carbon to view it.&#xA;One primary concept from the webinar stood out to me: many of the future tree species that are anticipated to be well adapted to future conditions are less shade tolerant that current trees on the landscape.</description>
+    </item>
     <item>
       <title>CO2 offsets and trips to the family cabin</title>
-      <link>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</link>
+      <link>http://localhost:4321/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</link>
       <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
-      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.
-The true amount of forest carbon is only measured in detailed research studies, yet we discuss carbon stocks like they’re known values.</description>
+      <guid>http://localhost:4321/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
+      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.&#xA;The true amount of forest carbon is only measured in detailed research studies, yet we discuss carbon stocks like they’re known values.</description>
     </item>
-    
     <item>
       <title>Climate 21: what it says about forest carbon</title>
-      <link>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</link>
+      <link>http://localhost:4321/post/climate-21-what-it-says-about-forest-carbon/</link>
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</guid>
-      <description>There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.
-In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.
-The Department of Agriculture (USDA) memo recognizes the role that the forestry and agriculture sectors play in climate mitigation and adaptation.</description>
+      <guid>http://localhost:4321/post/climate-21-what-it-says-about-forest-carbon/</guid>
+      <description>There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.&#xA;In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.&#xA;The Department of Agriculture (USDA) memo recognizes the role that the forestry and agriculture sectors play in climate mitigation and adaptation.</description>
     </item>
-    
   </channel>
 </rss>

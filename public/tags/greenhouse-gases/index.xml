@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>greenhouse gases on </title>
-    <link>https://arbor-analytics.com/tags/greenhouse-gases/</link>
-    <description>Recent content in greenhouse gases on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Greenhouse Gases on </title>
+    <link>http://localhost:4321/tags/greenhouse-gases/</link>
+    <description>Recent content in Greenhouse Gases on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/greenhouse-gases/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/greenhouse-gases/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Climate 21: what it says about forest carbon</title>
-      <link>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</link>
+      <link>http://localhost:4321/post/climate-21-what-it-says-about-forest-carbon/</link>
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/climate-21-what-it-says-about-forest-carbon/</guid>
-      <description>There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.
-In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.
-The Department of Agriculture (USDA) memo recognizes the role that the forestry and agriculture sectors play in climate mitigation and adaptation.</description>
+      <guid>http://localhost:4321/post/climate-21-what-it-says-about-forest-carbon/</guid>
+      <description>There&amp;rsquo;s a transition coming to the White House, and forests and climate change will be a large part of it.&#xA;In late 2020, the Climate 21 Project drafted a series of transition memos highlighting recommendations and opportunities related to climate change and the federal government&amp;rsquo;s response. The Climate 21 Project includes the insights of over 150 experts with government expertise related to climate change.&#xA;The Department of Agriculture (USDA) memo recognizes the role that the forestry and agriculture sectors play in climate mitigation and adaptation.</description>
     </item>
-    
     <item>
       <title>New state-level forest carbon fact sheets available</title>
-      <link>https://arbor-analytics.com/post/new-state-level-forest-carbon-fact-sheets-available/</link>
+      <link>http://localhost:4321/post/new-state-level-forest-carbon-fact-sheets-available/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/new-state-level-forest-carbon-fact-sheets-available/</guid>
-      <description>An example forest carbon fact sheet from Maine.
-Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. Despite the increasing importance of understanding the amount of carbon that forests can store and sequester, easy-to-access information at the state level is difficult to obtain.
-Arbor Custom Analytics recently worked with the Forest Resources Association to create a series of fact sheets at the state, region, and national level.</description>
+      <guid>http://localhost:4321/post/new-state-level-forest-carbon-fact-sheets-available/</guid>
+      <description>An example forest carbon fact sheet from Maine.&#xA;Trees and forests sequester carbon dioxide and other greenhouse gases from the atmosphere. Despite the increasing importance of understanding the amount of carbon that forests can store and sequester, easy-to-access information at the state level is difficult to obtain.&#xA;Arbor Custom Analytics recently worked with the Forest Resources Association to create a series of fact sheets at the state, region, and national level.</description>
     </item>
-    
   </channel>
 </rss>

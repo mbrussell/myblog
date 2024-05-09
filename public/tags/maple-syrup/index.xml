@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maple Syrup on </title>
+    <link>http://localhost:4321/tags/maple-syrup/</link>
+    <description>Recent content in Maple Syrup on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/maple-syrup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recapping the Russell 2024 maple syrup season</title>
+      <link>http://localhost:4321/post/2024-04-10-recapping-the-russell-s-2024-maple-syrup-season/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-04-10-recapping-the-russell-s-2024-maple-syrup-season/</guid>
+      <description>A Maine maple tree at work in March.&#xD;If you live in the Northeastern United States, maple trees abound. And in the late winter and early spring, collecting sap from those trees to turn into syrup is a great way to enjoy the woods.&#xA;For the last two years my wife and I have become amateur syrup producers. We have several red and sugar maples trees on our property that we’ve tapped.</description>
+    </item>
+  </channel>
+</rss>

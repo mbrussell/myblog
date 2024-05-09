@@ -1,0 +1,155 @@
+---
+title: Quantifying the shade tolerance of climate-adapted tree species in the Northeast
+author: Matt Russell
+date: '2023-05-26'
+slug: []
+categories:
+  - Forest measurements
+tags:
+  - analytics
+  - climate
+  - climate change
+  - tree species
+  - forestry
+  - tree planting
+---
+
+<center>
+![](seedling.jpg){width=500px}
+</center>
+
+##
+
+A few weeks ago I attended Dr. Tony D'Amato's excellent webinar ["*Looking at Forest Carbon from Multiple Dimensions*"](https://www.canr.msu.edu/news/2022-23-forests-and-climate-learning-exchange-series-looking-at-forest-carbon-from-multiple-dimensions-evaluating-tradeoffs-and-opportunities-to-forest-carbon-management). The content of the webinar was excellent and I encourage anyone involved with forest management and forest carbon to view it.
+
+One primary concept from the webinar stood out to me: many of the **future tree species** that are anticipated to be well adapted to future conditions are **less shade tolerant** that current trees on the landscape. Tony described climate-adapted species as being "large gap specialists", most of which are intermediate or intolerant to shade.
+
+This has tremendous implications for managing forests for carbon and climate. If climate-adapted species require more sunlight, fewer of them can grow in the same amount of area compared to our current more shade tolerant species. Hence, carbon stocks will be lower if we manage forests with climate-adapted species in mind.
+
+I was curious to quantify these differences in shade tolerance in my own region of the northeastern US. A few years ago, the Northern Institute of Applied Climate Science released their report ["*New England and Northern New York Forest Ecosystem Vulnerability Assessment and Synthesis*"](https://www.fs.usda.gov/research/treesearch/55635). The report contains valuable data on the changes in suitable habitat for tree species using information from the [Climate Change Tree Atlas](https://www.fs.usda.gov/nrs/atlas/tree/).
+
+The report contains  projected changes in potential suitable habitat for **102 tree species in the northeastern US**, with forecasts through 2099. (See their Table 10 and Appendix 4). Two model scenarios were implemented: the PCM B1 and GFDL A1FI scenarios. The primary difference is that the GFDL A1FI scenario represented higher greenhouse gas emissions and greater climate warming than the PCM B1 scenario. So, both scenarios can be used to represent two different extremes of a future climate. 
+
+For each species, future suitable habitat is labeled for both models as:
+
+* Large decrease,
+* Small decrease,
+* No change,
+* Small increase,
+* Large increase, or
+* New habitat (species is not currently in the region but is projected to be).
+
+I also acquired species-specific data on shade tolerance values. The data on tolerance values are from a paper I authored in 2014 on [plant functional traits](https://www.sciencedirect.com/science/article/pii/S0378112714003028) (see supplemental data file 1 in the article.) The tolerance values were obtained from the [Niinemets and Valladares study](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9615(2006)076[0521:TTSDAW]2.0.CO;2) published in 2006. 
+
+By using boxplots, we can see the general trends in species shade tolerance by classes of future suitable habitat. Indeed, species that are projected to see increases in suitable habitat or are anticipated to see new habitat in the region display **lower shade tolerance values** relative to species that will see decreases in suitable habitat:  
+
+```{r, echo = F, warning = F, message = F}
+library(tidyverse)
+library(kableExtra)
+options(kableExtra.auto_format = FALSE)
+library(patchwork)
+```
+
+```{r, echo = F, warning = F, message = F}
+ne_spp <- read_csv("C:/Users/matt/Documents/Arbor/Data/shade_tolerance/niacs_ne_species_climate.csv")
+
+tol <- read_csv("C:/Users/matt/Documents/Arbor/Data/shade_tolerance/REF_SPECIES_TRAITS.csv") %>% 
+  rename(common_name = COMMON_NAME)
+
+spp <- left_join(ne_spp, tol, by = "common_name") 
+
+spp_PCMB1 <- spp %>% 
+  filter(change_class_2070_2099_PCMB1 != "―" &
+           change_class_2070_2099_PCMB1 != "Large decrease")
+
+spp_GFDLA1FI <- spp %>% 
+  filter(change_class_2070_2099_GFDLA1FI != "―")
+```
+
+```{r, echo = F, warning = F, message = F}
+# Make violin plots
+
+# PCMB1 scenario
+p.shade.PCMB1 <- ggplot(spp_PCMB1, aes(x = factor(change_class_2070_2099_PCMB1, 
+                                          level = c("New habitat", "Large increase", "Small increase",
+                                            "No change", "Small decrease", "Large decrease")),
+                                       y = ShadeTol,
+                                       fill = change_class_2070_2099_PCMB1)) + 
+  geom_boxplot(linewidth = 0.75) + 
+  coord_flip() +
+  labs (y = " ",
+        x = "Species change in suitable habitat",
+        title = "PCM B1 scenario") +
+  scale_fill_brewer(palette = "Set1") +
+  theme_bw() +
+    theme(legend.position = "none") 
+
+# GFDLA1FI model
+p.shade.GFDLA1FI <- ggplot(spp_GFDLA1FI, aes(x = factor(change_class_2070_2099_GFDLA1FI, 
+                                          level = c("New habitat", "Large increase", "Small increase",
+                                            "No change", "Small decrease", "Large decrease")),
+                                  y = ShadeTol,
+                                  fill = change_class_2070_2099_GFDLA1FI)) +
+  geom_boxplot(linewidth = 0.75) + 
+  coord_flip() +
+  labs (y = "Shade tolerance",
+        x = "Species change in suitable habitat",
+        title = "GFDL A1FI scenario",
+        caption = "Source: Janowiak et al. 2018") +
+  scale_fill_brewer(palette = "Set1") +
+  theme_bw() +
+    theme(legend.position = "none") 
+p.shade.PCMB1 / p.shade.GFDLA1FI
+```
+
+The GFDL A1F1 scenario predicts more species seeing large increases in suitable habitat compared to the PCM B1 model. Generally, the PCM B1 model is more "conservative", with a greater number of species projected to have no change in suitable habitat through 2099.
+
+Under the PCM B1 scenario, the median shade tolerance for species anticipated to see a large increase in suitable habitat is 1.90, compared to a median value of 3.13 for species projected to see a small decrease. For the GFDL A1F1 scenario, the median shade tolerance for species anticipated to see a large increase is 2.74, compared to a median value of 3.31 for species projected to see a large decrease:
+
+```{r, echo = F, warning = F, message = F}
+# Calculate median values
+
+spp_GFDLA1FI_trim <- spp_GFDLA1FI %>% 
+  select(common_name, change_class_2070_2099_GFDLA1FI, ShadeTol) %>% 
+  rename(Change = change_class_2070_2099_GFDLA1FI) %>% 
+  mutate(Scenario = "GFDL A1F1")
+
+spp_PCMB1_trim <- spp_PCMB1 %>% 
+  select(common_name, change_class_2070_2099_PCMB1, ShadeTol) %>% 
+  rename(Change = change_class_2070_2099_PCMB1) %>% 
+  mutate(Scenario = "PCM B1")
+
+spp_all <- rbind(spp_GFDLA1FI_trim, spp_PCMB1_trim) %>% 
+  group_by(Scenario, Change) %>% 
+  summarize(`Number of species` = n(),
+            `Median shade tolerance` = round(median(ShadeTol), 2))
+
+knitr::kable((spp_all), 
+             caption = 'Summary of species changes in suitable habitat, US Northeast.') %>% 
+   kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+```
+
+Species that are projected to see decreases in suitable area in the US Northeast include lowland species that are tolerant to flooding, such as black spruce, tamarack, and black ash. Species that are projected to see increases in suitable area include several oaks and shrub species. Several southern pines and oak species are anticipated to have new habitat in the region: 
+
+```{r, echo = F, warning = F, message = F}
+# List species by projected change
+
+spp_same <- spp %>% 
+  filter(change_class_2070_2099_PCMB1 == change_class_2070_2099_GFDLA1FI) %>% 
+  mutate(Change = change_class_2070_2099_PCMB1)
+
+spp_same <- spp_same %>% 
+  arrange(Change)
+
+knitr::kable((spp_same[, c(1, 24, 27)]), 
+             caption = 'Species changes in suitable habitat with agreement between both PCM B1 and GFDL A1F1 model scenarios, US Northeast.') %>% 
+   kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+```
+
+Being aware of the light requirements for species can provide insights into expectations for meeting management goals related to forest carbon stocks and sequestration. A naive carbon management strategy might be to plant as many trees as possible, but the shade tolerance of species should be considered when evaluating the tradeoffs between carbon stocking and species requirements. 
+
+--
+
+*By Matt Russell. If you're interested in the data and code behind this analysis, see [this GitHub page](https://github.com/mbrussell/myblog/tree/master/content/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast). [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

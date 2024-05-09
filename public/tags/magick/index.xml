@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>magick on </title>
-    <link>https://arbor-analytics.com/tags/magick/</link>
-    <description>Recent content in magick on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Magick on </title>
+    <link>http://localhost:4321/tags/magick/</link>
+    <description>Recent content in Magick on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/magick/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/magick/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Making animated GIFs in R: ten years of emerald ash borer spread in Minnesota </title>
-      <link>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
+      <link>http://localhost:4321/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</link>
       <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
-      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.
-The general process to make a GIF image with maps in R is:
-1. Create the images you want (e.g., using ggplot),
-2. Stitch the images together with magick, and
-3. Write the images as a GIF and share!</description>
+      <guid>http://localhost:4321/post/making-animated-gif-maps-in-r-visualizing-ten-years-of-emerald-ash-borer-spread-in-minnesota/</guid>
+      <description>The popularity of GIFs have exploded in recent years and they give photojournalists a great way to tell a story. Sometimes the right GIF image can bring data to life.&#xA;The general process to make a GIF image with maps in R is:&#xA;1. Create the images you want (e.g., using ggplot),&#xA;2. Stitch the images together with magick, and&#xA;3. Write the images as a GIF and share!</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pie graphs on </title>
-    <link>https://arbor-analytics.com/tags/pie-graphs/</link>
-    <description>Recent content in pie graphs on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Pie Graphs on </title>
+    <link>http://localhost:4321/tags/pie-graphs/</link>
+    <description>Recent content in Pie Graphs on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/pie-graphs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/pie-graphs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Some data on why pie graphs are bad</title>
-      <link>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</link>
+      <link>http://localhost:4321/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</link>
       <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</guid>
-      <description>“The only thing worse than a pie chart is several of them.” -Edward Tufte
-I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.
-Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid.</description>
+      <guid>http://localhost:4321/post/2021-03-12-some-data-on-why-pie-graphs-are-bad/</guid>
+      <description>“The only thing worse than a pie chart is several of them.” -Edward Tufte&#xA;I was in college when I first head that pie graphs were bad. I didn’t really understand why at first, but I always appreciated how easy they were to make in Excel and Minitab.&#xA;Over time I learned about the drawbacks to visualizing data with pie graphs. I eventually came across the papers by Cleveland and McGill (1984, 1985), works that effectively showed which types of graphs to produce and which to avoid.</description>
     </item>
-    
   </channel>
 </rss>

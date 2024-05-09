@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>stats4nr on </title>
-    <link>https://arbor-analytics.com/tags/stats4nr/</link>
-    <description>Recent content in stats4nr on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Stats4nr on </title>
+    <link>http://localhost:4321/tags/stats4nr/</link>
+    <description>Recent content in Stats4nr on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/stats4nr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/stats4nr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>It&#39;s okay to look at the solutions for statistics and data science exercises</title>
+      <link>http://localhost:4321/post/2023-07-15-it-s-okay-to-look-at-solutions-for-statistics-problems/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-07-15-it-s-okay-to-look-at-solutions-for-statistics-problems/</guid>
+      <description>The cover of a document titled “Statistics in Natural Resources: Applications with R: Exercise Soultions.”&#xD;A few years ago I completed the RStudio Instructor training course. It was a multi-day, online training workshop and I learned less about the ins and outs of coding and analysis in R, but more about the strategies and philosophy of teaching data science principles.&#xA;The course prepares instructors to teach the principles of the tidyverse, especially drawing on the concepts for the excellent book R for Data Science.</description>
+    </item>
+    <item>
+      <title>Doing statistics in the tidyverse: exploring the infer package</title>
+      <link>http://localhost:4321/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-14-doing-statistics-in-the-tidyverse-exploring-the-infer-package/</guid>
+      <description>If you use R software for your data analysis, you are likely familiar with the tidyverse. The tidyverse package is a “megapackage” in R that includes several packages that import, reshape, and visualize data in a consistent manner, among other tasks.&#xA;Like many analysts, I use the tidyverse suite of functions often for importing, wrangling, and visualizing data. More and more I’m using the tidymodels package to apply statistical modeling techniques like regression and random forests on data I work with.</description>
+    </item>
     <item>
       <title>New book: Statistics in Natural Resources: Applications with R</title>
-      <link>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
+      <link>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
-      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.
-I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.
-At the same time, I was searching for a different textbook to use for the course.</description>
+      <guid>http://localhost:4321/post/2022-07-20-new-book-statistics-in-natural-resources-applications-with-r/</guid>
+      <description>At the start of the pandemic in 2020, I was worried. Not just for the serious global health impacts, but also for the workload I would soon be faced with.&#xA;I taught an introductory statistics course for graduate students in the natural resources and agricultural disciplines, and was scrambling to find out how I would migrate my course material to an online, asynchronous format.&#xA;At the same time, I was searching for a different textbook to use for the course.</description>
     </item>
-    
   </channel>
 </rss>

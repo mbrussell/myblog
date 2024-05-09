@@ -1,21 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>forest inventory and analysis on </title>
-    <link>https://arbor-analytics.com/tags/forest-inventory-and-analysis/</link>
-    <description>Recent content in forest inventory and analysis on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Forest Inventory and Analysis on </title>
+    <link>http://localhost:4321/tags/forest-inventory-and-analysis/</link>
+    <description>Recent content in Forest Inventory and Analysis on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/forest-inventory-and-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/forest-inventory-and-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</title>
+      <link>http://localhost:4321/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/</guid>
+      <description>Last fall the USDA Forest Service released the National Scale Volume Biomass (NSVB), a new modeling system for estimating volume, biomass, and carbon stored in individual trees. These new equations replace the previously-used Component Ratio Method (CRM) and are the result of several years of research. Volume, biomass, and carbon attributes in the US Forest Inventory and Analysis (FIA) database have been updated with values from the new equations.</description>
+    </item>
+    <item>
+      <title>A quick and easy way to estimate forestland area change across US states</title>
+      <link>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/</guid>
+      <description>Forest industry professionals have a renewed interest in understanding the extent to which forestland area has changed in regions where they procure wood. A few examples include:&#xA;On June 30, 2023, the European Union implemented the European Union Deforestation-Free Supply Chain Regulation (EUDR), a process that bans imports into the EU marketplace if they originate from areas that have seen deforestation or forest degradation. All operators (including wood suppliers) will need to collect and maintain information on these products, including providing “adequately conclusive and verifiable information” that products are deforestation-free.</description>
+    </item>
+    <item>
+      <title>A handy R function for getting ecological division from FIA data</title>
+      <link>http://localhost:4321/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/</guid>
+      <description>Ecological sections and subsections in Maine, USA (from Cleland et al. 2007).&#xD;To get a better feel for how they work, I’ve been digging into the new tree volume, biomass, and carbon models released by the USDA Forest Service last month. These new equations replace volume equations developed at the regional level and are now nationally-consistent. Importantly for anyone that works with forest carbon inventory data, these new equations replace the Component Ratio Method (CRM).</description>
+    </item>
+    <item>
+      <title>How much does adding previous diameter and height growth change FVS predictions?</title>
+      <link>http://localhost:4321/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/</guid>
+      <description>A brook in western Maine, USA.&#xD;There’s a recent paper by Claudia Herbert and others that’s come up in several meetings I’ve been in the last several months. The paper describes an analysis they used with forecasting forest carbon in California using the Forest Vegetation Simulator. They concluded that using FVS “out-of-the-box”, i.e., with no local calibrations of modifications, “overpredicts carbon sequestration in live trees that remain alive ten years later by 27%, on average.</description>
+    </item>
+    <item>
+      <title>Using R and Python to get forest resource data through the EVALIDator API</title>
+      <link>http://localhost:4321/post/2023-10-25-using-r-and-python-to-get-forest-resource-data-through-the-evalidator-api/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-10-25-using-r-and-python-to-get-forest-resource-data-through-the-evalidator-api/</guid>
+      <description>If you work with forestry data across the United States, you’ve probably had to turn to Forest Inventory and Analysis (FIA) data at one time or another to look at the status and trends in our forest resources. The FIA database has information contained from over 130,000 forest inventory plots across the country.&#xA;One of the tools that analysts often use to access FIA data is the the EVALIDator web interface.</description>
+    </item>
+    <item>
+      <title>Recent research insights in forest biomass and carbon estimation</title>
+      <link>http://localhost:4321/events/2022-12-01-recent-research-insights-in-forest-biomass-and-carbon-estimation/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/events/2022-12-01-recent-research-insights-in-forest-biomass-and-carbon-estimation/</guid>
+      <description>Recent research within the forest biometrics community is helping to generate more precise estimates of forest carbon using new methods and technologies. This presentation was delivered to the California Air Resources Board Public Workshop on US Forest Projects Compliance Offset Protocol on November 30, 2022.&#xA;READ THE SLIDES.</description>
+    </item>
     <item>
       <title>New updates for tools that query Forest Inventory and Analysis data</title>
-      <link>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</link>
+      <link>http://localhost:4321/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</link>
       <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</guid>
-      <description>The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential.
-After attending the FIA Science Stakeholder Meeting last week, I was happy to learn about some important updates to two tools that are widely used by forest analysts: the FIA EVALIDator program and the FIA DataMart.</description>
+      <guid>http://localhost:4321/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/</guid>
+      <description>The US national forest inventory has information contained from over 130,000 forest inventory plots across the country. Data collected and maintained by the Forest Inventory and Analysis (FIA) program are needed for answering core forestry questions, and having the right tools to help extract specific data that fits the analysis is essential.&#xA;After attending the FIA Science Stakeholder Meeting last week, I was happy to learn about some important updates to two tools that are widely used by forest analysts: the FIA EVALIDator program and the FIA DataMart.</description>
     </item>
-    
   </channel>
 </rss>

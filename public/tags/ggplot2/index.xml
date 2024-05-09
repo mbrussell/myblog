@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ggplot2 on </title>
-    <link>https://arbor-analytics.com/tags/ggplot2/</link>
-    <description>Recent content in ggplot2 on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Ggplot2 on </title>
+    <link>http://localhost:4321/tags/ggplot2/</link>
+    <description>Recent content in Ggplot2 on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Four ways to supercharge your scatterplots</title>
-      <link>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</link>
+      <link>http://localhost:4321/post/four-ways-to-supercharge-your-scatterplots/</link>
       <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/four-ways-to-supercharge-your-scatterplots/</guid>
-      <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.
-There are a few rules for all scatterplots:
-The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)Each observation is a point on the graph.</description>
+      <guid>http://localhost:4321/post/four-ways-to-supercharge-your-scatterplots/</guid>
+      <description>Scatterplots are a go-to visualization with forestry data. Scatterplots show the relationship between two quantitative variables measured on the same object. For example, a tree’s diameter and height.&#xA;There are a few rules for all scatterplots:&#xA;The explanatory variable goes on the x-axis. (This is usually the “easier” measurement to collect.)&#xD;The response variable goes on the y-axis. (This is usually the “harder” measurement to collect.)&#xD;Each observation is a point on the graph.</description>
     </item>
-    
     <item>
       <title>Adding some music to boxplots, and better ways to visualize diameter distributions</title>
-      <link>https://arbor-analytics.com/post/better-ways-to-visualize-multi-modal-data/</link>
+      <link>http://localhost:4321/post/better-ways-to-visualize-multi-modal-data/</link>
       <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/better-ways-to-visualize-multi-modal-data/</guid>
-      <description>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on between those boxes and whiskers?
-Some forestry data: In the examples below, I’ve used tree diameters measured in four management units at the Penobscot Experimental Forest in Maine.</description>
+      <guid>http://localhost:4321/post/better-ways-to-visualize-multi-modal-data/</guid>
+      <description>Boxplots are an old standby in statistics and data analysis. They became popular because they show the distribution of a data set along with a clear visualization of its five-number summary: the minimum, first quartile, median, third quartile and maximum. But how can we unpack what’s going on between those boxes and whiskers?&#xA;Some forestry data: In the examples below, I’ve used tree diameters measured in four management units at the Penobscot Experimental Forest in Maine.</description>
     </item>
-    
   </channel>
 </rss>

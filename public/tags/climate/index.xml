@@ -1,60 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>climate on </title>
-    <link>https://arbor-analytics.com/tags/climate/</link>
-    <description>Recent content in climate on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Climate on </title>
+    <link>http://localhost:4321/tags/climate/</link>
+    <description>Recent content in Climate on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/climate/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/climate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Are winter temperatures correlated with stumpage prices in Maine?</title>
+      <link>http://localhost:4321/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/</link>
+      <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/</guid>
+      <description>I was inspired after reading an article written by Lloyd Irland in The Northern Logger (January 2024) about the upswings and downswings in lumber prices in the last several decades. High prices for lumber were recently seen during the COVID-19 pandemic when everybody was remodeling and installing new wooden decks with all the free time they had. The intricacies of lumber prices are explained well in Lloyd’s article. An interesting observation is that during times of high lumber prices, the amount of money landowners received for selling their wood (termed stumpage in forestry parlance) barely nudged.</description>
+    </item>
+    <item>
+      <title>Quantifying the shade tolerance of climate-adapted tree species in the Northeast</title>
+      <link>http://localhost:4321/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast/</link>
+      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast/</guid>
+      <description>A few weeks ago I attended Dr. Tony D’Amato’s excellent webinar “Looking at Forest Carbon from Multiple Dimensions”. The content of the webinar was excellent and I encourage anyone involved with forest management and forest carbon to view it.&#xA;One primary concept from the webinar stood out to me: many of the future tree species that are anticipated to be well adapted to future conditions are less shade tolerant that current trees on the landscape.</description>
+    </item>
+    <item>
+      <title>Forest carbon cheat sheet: updated for 2022</title>
+      <link>http://localhost:4321/post/2022-12-21-forest-carbon-cheat-sheet-updated-for-2022/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-21-forest-carbon-cheat-sheet-updated-for-2022/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.&#xA;The Cheat Sheet has been updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2020.&#xA;DOWNLOAD (PDF)&#xA;DOWNLOAD (PNG)&#xA;The Forest Carbon Cheat Sheet.&#xA;–&#xA;By Matt Russell. Email Matt with any questions or comments.</description>
+    </item>
     <item>
       <title>CO2 offsets and trips to the family cabin</title>
-      <link>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</link>
+      <link>http://localhost:4321/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</link>
       <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
-      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.
-The true amount of forest carbon is only measured in detailed research studies, yet we discuss carbon stocks like they’re known values.</description>
+      <guid>http://localhost:4321/post/2021-11-27-co2-offsets-and-trips-to-the-family-cabin/</guid>
+      <description>Often I think that if the numbers behind forest carbon estimates were easier to calculate and interpret, we’d all have a better understanding of the carbon stored and sequestered in our forests. It starts simple when we say that “half of the biomass of a tree is carbon”. But beyond that, transitions between gases and solids and conversions between metric and English units quickly add complexity.&#xA;The true amount of forest carbon is only measured in detailed research studies, yet we discuss carbon stocks like they’re known values.</description>
     </item>
-    
     <item>
       <title>Drought in the US West: impacts from the last ten years</title>
-      <link>https://arbor-analytics.com/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</link>
+      <link>http://localhost:4321/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</link>
       <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</guid>
-      <description>Drought conditions in the western US, 20 July 2021. From US Drought Monitor.
-Much of the western United States is currently under severe drought conditions. Drought impacts trees and forests in the short and long term. Trees and forests can tolerate some extended dry periods depending of species and local conditions, but without adequate moisture availability, drought can ultimately lead to tree mortality.
-Perhaps the greatest impact of drought is the stress it places on trees.</description>
+      <guid>http://localhost:4321/post/2021-07-23-drought-in-the-us-west-impacts-in-the-last-10-years/</guid>
+      <description>Drought conditions in the western US, 20 July 2021. From US Drought Monitor.&#xA;Much of the western United States is currently under severe drought conditions. Drought impacts trees and forests in the short and long term. Trees and forests can tolerate some extended dry periods depending of species and local conditions, but without adequate moisture availability, drought can ultimately lead to tree mortality.&#xA;Perhaps the greatest impact of drought is the stress it places on trees.</description>
     </item>
-    
     <item>
       <title>Forest carbon cheat sheet: updated for 2021</title>
-      <link>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</link>
+      <link>http://localhost:4321/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</link>
       <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</guid>
-      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
-The Cheat Sheet has been updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2019.
-DOWNLOAD (PDF)
-DOWNLOAD (JPEG)
-–
-By Matt Russell. Email Matt with any questions or comments. Sign up for my monthly newsletter for in-depth analysis on data and analytics in the forest products industry.</description>
+      <guid>http://localhost:4321/post/2021-06-12-forest-carbon-cheat-sheet-updated-for-2021/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.&#xA;The Cheat Sheet has been updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2019.&#xA;DOWNLOAD (PDF)&#xA;DOWNLOAD (JPEG)&#xA;–&#xA;By Matt Russell. Email Matt with any questions or comments. Sign up for my monthly newsletter for in-depth analysis on data and analytics in the forest products industry.</description>
     </item>
-    
     <item>
       <title>Forest carbon cheat sheet</title>
-      <link>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</link>
+      <link>http://localhost:4321/post/forest-carbon-cheat-sheet/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/forest-carbon-cheat-sheet/</guid>
-      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.
-The Cheast Sheet is updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2018.
-DOWNLOAD (PDF)
-DOWNLOAD (JPEG)
-The Forest Carbon Cheat Sheet.
-If you have questions or comments on the Cheat Sheet, email Matt.</description>
+      <guid>http://localhost:4321/post/forest-carbon-cheat-sheet/</guid>
+      <description>The Forest Carbon Cheat Sheet is a quick reference guide for converting forest carbon measurements and understanding typical carbon values at the tree, stand, and landscape levels.&#xA;The Cheast Sheet is updated with the most recent values published in the US Environmental Protection Agency Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2018.&#xA;DOWNLOAD (PDF)&#xA;DOWNLOAD (JPEG)&#xA;The Forest Carbon Cheat Sheet.&#xA;If you have questions or comments on the Cheat Sheet, email Matt.</description>
     </item>
-    
   </channel>
 </rss>

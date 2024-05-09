@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>site index on </title>
-    <link>https://arbor-analytics.com/tags/site-index/</link>
-    <description>Recent content in site index on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Site Index on </title>
+    <link>http://localhost:4321/tags/site-index/</link>
+    <description>Recent content in Site Index on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/site-index/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/site-index/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lorey&#39;s height: the remote sensing way to estimate tree height</title>
+      <link>http://localhost:4321/post/2023-04-21-lorey-s-height-the-remote-sensing-way-to-estimate-tree-height/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-04-21-lorey-s-height-the-remote-sensing-way-to-estimate-tree-height/</guid>
+      <description>A canopy of lowland conifer trees in northern Minnesota.&#xD;One of the first things you learn in an forestry field course is how to measure the height of trees. Doing so is tricky, as it’s difficult to locate the tops of many trees in dense forests (especially deciduous ones during leaf-on periods). Many foresters will sub-sample tree heights, for example only measuring the heights for every fifth tree or the four closest trees to plot center.</description>
+    </item>
     <item>
       <title>Disentagling the interactions between site index and disturbance</title>
-      <link>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
+      <link>http://localhost:4321/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
-      <description>The Black Hills National Forest has been in the news recently after completing a timber sustainability report. In recent years, the Black Hills was one of the US Forest Service’s greatest timber-producing National Forests in the country.
-Much of the increase in timber harvest in recent years at the Black Hills National Forest was in response to a deadly mountain pine beetle epidemic. As a result, the new report suggests that current timber harvests are not sustainable into the future.</description>
+      <guid>http://localhost:4321/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
+      <description>The Black Hills National Forest has been in the news recently after completing a timber sustainability report. In recent years, the Black Hills was one of the US Forest Service’s greatest timber-producing National Forests in the country.&#xA;Much of the increase in timber harvest in recent years at the Black Hills National Forest was in response to a deadly mountain pine beetle epidemic. As a result, the new report suggests that current timber harvests are not sustainable into the future.</description>
     </item>
-    
   </channel>
 </rss>

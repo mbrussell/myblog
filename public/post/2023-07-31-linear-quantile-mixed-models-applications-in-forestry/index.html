@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>Linear quantile mixed models: applications in forestry</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Linear quantile mixed models: applications in forestry</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-07-31-linear-quantile-mixed-models-applications-in-forestry/">Linear quantile mixed models: applications in forestry</a></h4>
+    <h5>August 21, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/mixed-models"><kbd class="item-tag">mixed models</kbd></a>
+    
+    <a href="http://localhost:4321/tags/quantile-regression"><kbd class="item-tag">quantile regression</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<div id="section" class="section level1">
+<h1></h1>
+<center>
+<div class="float">
+<img src="lqmm_example.png" width="500" alt="Example output comparing predictions from three models fit with linear quantile mixed models and one fit using ordinary least squares." />
+<div class="figcaption"><em>Example output comparing predictions from three models fit with linear quantile mixed models and one fit using ordinary least squares.</em></div>
+</div>
+</center>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>Mixed models have been used for decades by forest biometricians and statisticians. <a href="https://arbor-analytics.com/post/mixed-models-a-primer/">They have become popular</a> because forestry and natural resources data are often nested, allowing the analyst to account for spatial and temporal correlation among measurements. Forest plots are often measured within stands, stands are located within ownerships, and a collection of ownerships comprise a landscape.</p>
+<p>With mixed models, fixed effects are considered population-averaged values and are similar to the parameters found in “traditional” regression techniques like ordinary least squares. Random effects can be determined for each parameter, typically for each hierarchical level in a data set.</p>
+<p>Quantile regression has also become a widely used technique in forestry. <a href="https://www.aeaweb.org/articles?id=10.1257/jep.15.4.143">Quantile regression</a> methods allow estimation of response variables for any quantile of the data. While ordinary least squares and other regression techniques fit regression lines through the mean or median (i.e., 50th quantile), quantile regression can perform regression through any quantile of the data.</p>
+<div id="linear-quantile-mixed-models" class="section level2">
+<h2>Linear quantile mixed models</h2>
+<p>As an extension to quantile regression, <a href="https://link.springer.com/article/10.1007/s11222-013-9381-9">linear quantile mixed models (LQMM)</a> provide a flexible structure to account for multilevel data through the incorporation of random effects. These LQMM models may be specified with random effects similar to a mixed models framework.</p>
+<p>The general model form for an LQMM model follows, adapted from a simple linear regression model form with a random effect placed on the intercept:</p>
+<p><span class="math display">\[Y=\beta_0+b_i+\beta_1X+\epsilon\]</span></p>
+<p>where <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are fixed effects and <span class="math inline">\(b_i\)</span> is a random effect for subject <span class="math inline">\(i\)</span>. The random effect can be thought of as each subject’s deviation from the fixed intercept parameter. The <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> values are fit using LQMM procedures to any desired quantile.</p>
+</div>
+<div id="the-lqmm-package-in-r" class="section level2">
+<h2>The lqmm package in R</h2>
+<p>In R, <a href="https://rdrr.io/cran/lqmm/man/lqmm.html">the <strong>lqmm</strong> package</a> fits linear quantile mixed models for hierarchical data:</p>
+<pre class="r"><code>#install.packages(&quot;lqmm&quot;)
+
+library(lqmm)</code></pre>
+<p>As an application, we can fit an LQMM to predict tree height (<code>HT</code>) based on its diameter at breast height (<code>DBH</code>). Data are from 450 red pine trees collected at the Cloquet Forestry Center in Cloquet, Minnesota in 2014 with <code>DBH</code> measured in inches and <code>HT</code> measured in feet. The data are found in the <em>redpine</em> data set available in the <strong>stats4nr</strong> package:</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;)
+
+#devtools::install_github(&quot;mbrussell/stats4nr&quot;)
+
+library(stats4nr)
+
+data(redpine)</code></pre>
+<p>Now, most applications of tree height-diameter models will employ nonlinear model forms, but for the red pine data here, we can see a general linear trend with the data. Plus, it will make our application of LQMM techniques easy to compare to other linear regression techniques:</p>
+<pre class="r"><code>library(tidyverse)
+
+ggplot(redpine, aes(x = DBH, y = HT)) +
+  geom_point() +
+  labs(x = &quot;DBH (inches)&quot;,
+       y = &quot;Height (feet)&quot;) +
+  theme_bw()</code></pre>
+<p><img src="/post/2023-07-31-linear-quantile-mixed-models-applications-in-forestry/index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>We might believe that specifying the inventory plot as a random effect can improve our model performance. That is, we might believe that the inventory plot in which a tree was measured can reduce the variability in tree height estimates. To fit an LQMM model with a random intercept term in R, we specify the <code>lqmm()</code> function. The key arguments are specifying the model form in the <code>fixed =</code> statement and the random effect variable with the <code>group =</code> statement. The <code>tau =</code> statement allows you to specify the quantile you wish to run the model:</p>
+<pre class="r"><code>ht.lqmm50 &lt;- lqmm(fixed = HT ~ DBH, 
+                random = ~1, 
+                group = PlotNum,
+                tau = 0.50,
+                data = redpine)
+
+summary(ht.lqmm50)</code></pre>
+<pre><code>## Call: lqmm(fixed = HT ~ DBH, random = ~1, group = PlotNum, tau = 0.5, 
+##     data = redpine)
+## 
+## Quantile 0.5 
+## 
+## Fixed effects:
+##                Value Std. Error lower bound upper bound  Pr(&gt;|t|)    
+## (Intercept) 31.51788    4.57640    22.32126     40.7145 9.925e-09 ***
+## DBH          2.76287    0.28641     2.18731      3.3384 6.556e-13 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## AIC:
+## [1] 3441 (df = 4)</code></pre>
+<p>We can also extract the random effects for each inventory plot using the <code>ranef()</code> function. We can see that the random effects are centered around zero and range from about -20 to 20:</p>
+<pre class="r"><code>ranef &lt;- ranef(ht.lqmm50)
+
+ggplot(ranef, aes(`(Intercept)`)) +
+  geom_density()  </code></pre>
+<p><img src="/post/2023-07-31-linear-quantile-mixed-models-applications-in-forestry/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>We can compare the LQMM model output to a simple linear regression fit the the mean value and without any random effect:</p>
+<pre class="r"><code>ht.slr &lt;- lm(HT~DBH,
+             data = redpine)
+summary(ht.slr)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = HT ~ DBH, data = redpine)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -55.449  -9.250  -0.894   8.878  43.415 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  31.1552     1.8357   16.97   &lt;2e-16 ***
+## DBH           3.0493     0.1201   25.39   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 14.31 on 448 degrees of freedom
+## Multiple R-squared:   0.59,	Adjusted R-squared:  0.5891 
+## F-statistic: 644.7 on 1 and 448 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>You can see that the intercept values are quite similar (31.5179 and 31.1552), however the slope for the LQMM model (2.7629) is lower than that of the simple linear regression (3.0493).</p>
+<p>We can specify multiple quantiles in the <code>tau =</code> statement to run multiple regressions at various quantiles of the data. We might seek to do this because trees at higher quantiles may be in better crown positions, i.e., they are dominant or co-dominant trees and might need to estimate site index of the forest stand using these trees. Similarly, trees at lower quantiles may be suppressed or intermediate in crown position and we might wish to implement management strategies that improve their growth. As we fit the LQMM models, note the increases in the slope term associated with <code>DBH</code> as the quantiles increase from 0.25 to 0.75:</p>
+<pre class="r"><code>ht.lqmm &lt;- lqmm(fixed = HT ~ DBH, 
+                random = ~1, 
+                group = PlotNum,
+                tau = c(0.25, 0.50, 0.75),
+                data = redpine)
+
+summary(ht.lqmm)</code></pre>
+<pre><code>## Warning in errorHandling(OPTIMIZATION$low_loop, &quot;low&quot;, control$LP_max_iter, : Lower loop did not converge in: lqmm. Try increasing max number of iterations (500) or tolerance (1e-05)
+
+## Warning in errorHandling(OPTIMIZATION$low_loop, &quot;low&quot;, control$LP_max_iter, : Lower loop did not converge in: lqmm. Try increasing max number of iterations (500) or tolerance (1e-05)</code></pre>
+<pre><code>## Call: lqmm(fixed = HT ~ DBH, random = ~1, group = PlotNum, tau = c(0.25, 
+##     0.5, 0.75), data = redpine)
+## 
+## tau = 0.25
+## 
+## Fixed effects:
+##               Value Std. Error lower bound upper bound  Pr(&gt;|t|)    
+## (Intercept) 28.2689     4.1937     19.8414     36.6963 1.672e-08 ***
+## DBH          2.6951     0.2289      2.2351      3.1551 6.778e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## tau = 0.5
+## 
+## Fixed effects:
+##                Value Std. Error lower bound upper bound  Pr(&gt;|t|)    
+## (Intercept) 31.51788    4.11450    23.24949     39.7863 6.342e-10 ***
+## DBH          2.76287    0.26361     2.23313      3.2926 4.136e-14 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## tau = 0.75
+## 
+## Fixed effects:
+##                Value Std. Error lower bound upper bound  Pr(&gt;|t|)    
+## (Intercept) 32.15125    4.11386    23.88414     40.4184 3.664e-10 ***
+## DBH          3.19633    0.26442     2.66495      3.7277 2.583e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## AIC:
+## [1] 3483 (df = 4) 3441 (df = 4) 3473 (df = 4)</code></pre>
+<p>Let’s make a small data set that contains the predictions of these models, stored in the <strong>tree</strong> data set. Then, we’ll visualize the output along with the ordinary least squares line:</p>
+<pre class="r"><code>tree &lt;- tibble(DBH = c(seq(0,30,1))) %&gt;% 
+  mutate(`Ordinary least squares` = 31.1552 + 3.0493*DBH,
+         `LQMM, quantile = 0.25` = 28.26885 + 2.69508*DBH,
+         `LQMM, quantile = 0.50` = 31.51788 + 2.76287*DBH,
+         `LQMM, quantile = 0.75` = 32.15125 + 3.19633*DBH) %&gt;% 
+  pivot_longer(`Ordinary least squares`:`LQMM, quantile = 0.75`,
+               names_to = &quot;Model&quot;,
+               values_to = &quot;HT&quot;)
+
+ggplot(tree, aes(DBH, HT, col = Model)) +
+  geom_line(linewidth = 1.25) +
+  labs(x = &quot;DBH (inches)&quot;,
+       y = &quot;Height (feet)&quot;) +
+  theme_bw()</code></pre>
+<p><img src="/post/2023-07-31-linear-quantile-mixed-models-applications-in-forestry/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>One thing I’ve noticed in fitting LQMM models is that the standard errors for parameter estimates tend to always be higher for compared to ordinary least squares models. They also tend to be high compared to models fit with linear mixed models through functions available in packages like <strong>lme4</strong>. This is likely due to the quantile regression techniques.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Linear quantile mixed models are robust and combine the strengths of both mixed models and quantile regression techniques. These models have a number of potential applications with forestry and natural resources data where data are often nested and we’re not always concerned with what’s happening through the mean value of the data, but instead at some other quantile. There is also an R package that fits <a href="https://cran.r-project.org/web/packages/qrNLMM/index.html">quantile regressions for nonlinear mixed-effects models</a>, providing more tools to estimate trends through any quantile with data found in a variety of shapes and sizes.</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/">A list of R packages for forestry applications</a></h4>
+    <h5>November 24, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
+    
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/">How much does adding previous diameter and height growth change FVS predictions?</a></h4>
+    <h5>October 31, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fvs"><kbd class="item-tag">FVS</kbd></a>
+    
+    <a href="http://localhost:4321/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

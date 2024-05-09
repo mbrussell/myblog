@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>publishing on </title>
-    <link>https://arbor-analytics.com/tags/publishing/</link>
-    <description>Recent content in publishing on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Publishing on </title>
+    <link>http://localhost:4321/tags/publishing/</link>
+    <description>Recent content in Publishing on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/publishing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/publishing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Most popular blog posts and podcasts in 2023</title>
+      <link>http://localhost:4321/post/2023-12-22-most-popular-blog-posts-and-podcasts-in-2023/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-12-22-most-popular-blog-posts-and-podcasts-in-2023/</guid>
+      <description>The end of the year is an excellent time to reflect on your work. One of the things I value is providing content that the forest analytics community enjoys and learns from.&#xA;In addition to publishing a weekly-ish newsletter on LinkedIn with 2,000+ subscribers, I published 22 posts to the Arbor Custom Analytics blog in 2023 on topics relating to data and forests. Here are the most read posts from the Arbor Custom Analytics blog in 2023:</description>
+    </item>
     <item>
       <title>Which forest biometrics researchers get the most citations?</title>
-      <link>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</link>
+      <link>http://localhost:4321/post/which-forest-biometrics-faculty-get-the-most-citations/</link>
       <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/which-forest-biometrics-faculty-get-the-most-citations/</guid>
-      <description>Researchers in the forest and natural resource sciences are measured by their productivity: how many publications they write and how many times those publications are cited by other researchers. Researchers that have many publications that are cited in the literature by others generally have rewarding careers and are promoted.
-In 2017 I wrote a blog post for the Ecological Society of America’s Early Career Ecologist section that provided some evidence that early-career scientists publish earlier in their careers compared to more senior researchers.</description>
+      <guid>http://localhost:4321/post/which-forest-biometrics-faculty-get-the-most-citations/</guid>
+      <description>Researchers in the forest and natural resource sciences are measured by their productivity: how many publications they write and how many times those publications are cited by other researchers. Researchers that have many publications that are cited in the literature by others generally have rewarding careers and are promoted.&#xA;In 2017 I wrote a blog post for the Ecological Society of America’s Early Career Ecologist section that provided some evidence that early-career scientists publish earlier in their careers compared to more senior researchers.</description>
     </item>
-    
   </channel>
 </rss>

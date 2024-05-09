@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>broom on </title>
-    <link>https://arbor-analytics.com/tags/broom/</link>
-    <description>Recent content in broom on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Broom on </title>
+    <link>http://localhost:4321/tags/broom/</link>
+    <description>Recent content in Broom on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/broom/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/broom/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Modeling in the tidyverse, an example predicting tree biomass</title>
-      <link>https://arbor-analytics.com/post/fit-many-models-with-broom/</link>
+      <link>http://localhost:4321/post/fit-many-models-with-broom/</link>
       <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/fit-many-models-with-broom/</guid>
-      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.
-The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
+      <guid>http://localhost:4321/post/fit-many-models-with-broom/</guid>
+      <description>One of the most revolutionary advances in the last 10 years in the R program has been the tidyverse. I recently watched Hadley Wickham’s talk on the tidyverse from rstudio::conf 2020 and it was a great synopsis of the current status and future of the packages.&#xA;The growth of the tidyverse packages is astounding. As an example, the cumulative number of downloads for the dplyr package has reached over 10 million.</description>
     </item>
-    
   </channel>
 </rss>

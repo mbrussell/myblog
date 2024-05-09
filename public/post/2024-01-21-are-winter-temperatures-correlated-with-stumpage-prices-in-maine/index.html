@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>Are winter temperatures correlated with stumpage prices in Maine?</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Are winter temperatures correlated with stumpage prices in Maine?</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/">Are winter temperatures correlated with stumpage prices in Maine?</a></h4>
+    <h5>January 24, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/climate"><kbd class="item-tag">climate</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-industry"><kbd class="item-tag">forest industry</kbd></a>
+    
+    <a href="http://localhost:4321/tags/stumpage"><kbd class="item-tag">stumpage</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/index_files/kePrint/kePrint.js"></script>
+<link href="/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<div id="section" class="section level1">
+<h1></h1>
+<center>
+<img src="me_wood.png" width="500" />
+</center>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>I was inspired after reading an article written by Lloyd Irland in <em>The Northern Logger</em> (January 2024) about the upswings and downswings in lumber prices in the last several decades. High prices for lumber were recently seen during the COVID-19 pandemic when everybody was remodeling and installing new wooden decks with all the free time they had. The intricacies of lumber prices are explained well in Lloyd’s article. An interesting observation is that during times of high lumber prices, the amount of money landowners received for selling their wood (termed <em>stumpage</em> in forestry parlance) barely nudged.</p>
+<p>There are many factors that influence how much a landowners is paid for their wood. Local markets and competition in an area matter a lot, but so does the weather. Loggers are often faced with weather challenges when harvesting timber, often from it being too wet to operate on sensitive sites.</p>
+<p>Ask most loggers here in Maine and across the Northeast, and most will tell you the 2023-2024 winter has been mild. This presents a challenge for loggers as they rely on frozen ground conditions to harvest timber on many sites. A warm winter can limit the productivity of timber harvesters and haulers in northern states.</p>
+<p>I was curious to find out if there was any correlation between stumpage payments that landowners receive and how cold winters are. The idea being that if it’s been a warm winter, supply may be limited because loggers cannot harvest as much volume, and prices may be more favorable. But a cold winter might signal a timber harvesting community that is at capacity with plenty of supply.</p>
+<p>The Maine Forest Service compiles <a href="https://www.maine.gov/dacf/mfs/publications/annual_reports.html">annual data on stumpage prices</a> by species and product classes, with data going back to 2000. The <a href="https://mco.umaine.edu/climate/me_monthly/?cdiv_id=me&amp;var_id=t2anom&amp;mon_id=ann">Maine Climate Office</a> has data on a variety climate variables going back more than a century.</p>
+<p>For this analysis, I used Maine stumpage data for all species sold as sawlogs and standardized amounts to 2021 dollars. I used the average minimum winter temperature as an indicator for how “cold” a winter was, using the average temperatures from December through February. In total, the data from 2000 through 2021 provided enough data points to see if trends exist.</p>
+<p>The first finding, perhaps not unexpected, is that minimum temperatures have increased statewide across Maine since 2000. The correlation is 0.27 and is significant (i.e., a <em>p</em>-value of less than 0.05), indicating a slight positive relationship:</p>
+<p><img src="/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>The second finding is the general decrease in stumpage prices in Maine since 2000. The correlation between Year and sawlog stumpage is weak (0.10) and not significant. These are price adjusted and in 2021 dollars, and include all 14 different sawlog species groups:</p>
+<p><img src="/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>The final finding is the trends between average winter temperatures and stumpage prices trend negative for most species. I’m left head scratching with this one…:</p>
+<p><img src="/post/2024-01-21-are-winter-temperatures-correlated-with-stumpage-prices-in-maine/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>You can see in the table below that only two of the species show significant trends. These species are spruce/fir and red pine.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-11">Table 1: </span>Pearson correlation coefficients between stumpage price for sawlog species and minimum winter temperatures in Maine, 2000-2021.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Sawtimber species
+</th>
+<th style="text-align:right;">
+Pearson correlation
+</th>
+<th style="text-align:right;">
+P-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Spruce &amp; Fir
+</td>
+<td style="text-align:right;">
+-0.5815633
+</td>
+<td style="text-align:right;">
+0.0045263
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red Pine
+</td>
+<td style="text-align:right;">
+-0.4400497
+</td>
+<td style="text-align:right;">
+0.0404173
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+White Oak
+</td>
+<td style="text-align:right;">
+-0.4177549
+</td>
+<td style="text-align:right;">
+0.0530403
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sugar Maple
+</td>
+<td style="text-align:right;">
+-0.3987091
+</td>
+<td style="text-align:right;">
+0.0660591
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yellow Birch
+</td>
+<td style="text-align:right;">
+-0.3928108
+</td>
+<td style="text-align:right;">
+0.0705462
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hemlock
+</td>
+<td style="text-align:right;">
+-0.3362474
+</td>
+<td style="text-align:right;">
+0.1260096
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red Oak
+</td>
+<td style="text-align:right;">
+-0.3258437
+</td>
+<td style="text-align:right;">
+0.1389088
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+White Pine
+</td>
+<td style="text-align:right;">
+-0.2788256
+</td>
+<td style="text-align:right;">
+0.2089096
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red/White Maple
+</td>
+<td style="text-align:right;">
+-0.2331360
+</td>
+<td style="text-align:right;">
+0.2964157
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cedar
+</td>
+<td style="text-align:right;">
+-0.1300809
+</td>
+<td style="text-align:right;">
+0.5639533
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Beech
+</td>
+<td style="text-align:right;">
+0.0699217
+</td>
+<td style="text-align:right;">
+0.7571720
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ash
+</td>
+<td style="text-align:right;">
+-0.0446981
+</td>
+<td style="text-align:right;">
+0.8434261
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+White Birch
+</td>
+<td style="text-align:right;">
+-0.0260954
+</td>
+<td style="text-align:right;">
+0.9082289
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Aspen/Poplar
+</td>
+<td style="text-align:right;">
+-0.0108163
+</td>
+<td style="text-align:right;">
+0.9618973
+</td>
+</tr>
+</tbody>
+</table>
+<p>I anticipated finding a clearer story between winter temperatures and stumpage prices in a state that where winter weather determines so much about the health of an industry. But I’m no economist and markets sure are difficult to predict. Stumpage prices have decreased over the last 20 years in Maine, at least for the species and products examined here. This could be what statisticians call a “lurking” variable. But on the whole, it’s unwise to use a single variable to try to predict a market.</p>
+<p>Despite this, it seems like climate variables could be used more market-level analyses within the forest products industry. These data show some relationships between climate and prices. As statistician Edward Tufte once said, “Correlation does not imply causation, but it sure is a hint.”</p>
+<p>–</p>
+<p><em>By Matt Russell. For more, subscribe to my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly email newsletter</a> to stay ahead on data and analytics trends in the forest products industry.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-01-13-new-web-app-shows-pandemic-assistance-to-forest-products-industry-by-state/">New web app shows pandemic assistance to forest products industry by state</a></h4>
+    <h5>January 13, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/pandemic"><kbd class="item-tag">pandemic</kbd></a>
+    
+    <a href="http://localhost:4321/tags/covid"><kbd class="item-tag">covid</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
+    
+    <a href="http://localhost:4321/tags/economics"><kbd class="item-tag">economics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-06-15-h-2b-guest-workers-in-forestry-a-review-of-2022-data/">H-2B guest workers in forestry: a review of 2022 data</a></h4>
+    <h5>June 16, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/h-2b"><kbd class="item-tag">H-2B</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-industry"><kbd class="item-tag">forest industry</kbd></a>
+    
+    <a href="http://localhost:4321/tags/workforce"><kbd class="item-tag">workforce</kbd></a>
+    
+    <a href="http://localhost:4321/tags/guest-workers"><kbd class="item-tag">guest workers</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast/">Quantifying the shade tolerance of climate-adapted tree species in the Northeast</a></h4>
+    <h5>May 26, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/climate"><kbd class="item-tag">climate</kbd></a>
+    
+    <a href="http://localhost:4321/tags/climate-change"><kbd class="item-tag">climate change</kbd></a>
+    
+    <a href="http://localhost:4321/tags/tree-species"><kbd class="item-tag">tree species</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+    <a href="http://localhost:4321/tags/tree-planting"><kbd class="item-tag">tree planting</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

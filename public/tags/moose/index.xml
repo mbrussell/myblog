@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>moose on </title>
-    <link>https://arbor-analytics.com/tags/moose/</link>
-    <description>Recent content in moose on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Moose on </title>
+    <link>http://localhost:4321/tags/moose/</link>
+    <description>Recent content in Moose on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/moose/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/moose/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Google Forms to analyze confidence intervals: a teaching statistics activity</title>
-      <link>https://arbor-analytics.com/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</link>
+      <link>http://localhost:4321/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</link>
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</guid>
-      <description>This post describes how the concepts of confidence intervals can be taught to students. The ideal participants are undergraduate students in an introductory statistics. The in-class activity reveals to students that most people are overconfident in their estimation of uncertainty. The activity uses the example of moose, a charismatic wildlife species in Minnesota.
-IntroductionDemonstrations of data and statistical concepts are effective when they are designed with a structure that encourages participation in the classroom 1.</description>
+      <guid>http://localhost:4321/post/using-google-forms-to-analyze-confidence-intervals-a-teaching-statistics-activity/</guid>
+      <description>This post describes how the concepts of confidence intervals can be taught to students. The ideal participants are undergraduate students in an introductory statistics. The in-class activity reveals to students that most people are overconfident in their estimation of uncertainty. The activity uses the example of moose, a charismatic wildlife species in Minnesota.&#xA;Introduction&#xD;Demonstrations of data and statistical concepts are effective when they are designed with a structure that encourages participation in the classroom 1.</description>
     </item>
-    
   </channel>
 </rss>

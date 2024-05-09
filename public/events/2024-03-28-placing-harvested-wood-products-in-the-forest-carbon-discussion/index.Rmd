@@ -1,0 +1,26 @@
+---
+title: Placing harvested wood products in the forest carbon discussion
+author: Matt Russell
+date: '2024-03-28'
+slug: []
+categories:
+  - Forest carbon
+tags:
+  - harvested wood products
+  - timber harvesting
+  - forest products
+description: 'March 27, 2024, New England Society of American Foresters Annual WInter Meeting'  
+---
+
+
+<center>
+
+![](hwp_cover.png){width=250px}
+</center>
+
+##
+ 
+This presentation provides a background on harvested wood products from a carbon perspective, highlighting the role that wood durability and longevity plays in understanding how different wood product types contribute to carbon storage. It also describes a recent analysis that summarized annual harvest removals from Northeastern US states to estimate the longevity of harvested wood stored in products in use and tracked their decay to landfills and the atmosphere. A few tools are highlighted which show how foresters can determine wood product storage using forest inventory and timber sale data. These resources can be leveraged by foresters when engaged in discussions that focus on the role of forest products in forest carbon.    
+
+* [VIEW SLIDES](https://drive.google.com/file/d/1_kSCy7Wp_CebVS-j3EHptnR1nuCVYJ_C/view?usp=sharing)
+

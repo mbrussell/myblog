@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>disturbance on </title>
-    <link>https://arbor-analytics.com/tags/disturbance/</link>
-    <description>Recent content in disturbance on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Disturbance on </title>
+    <link>http://localhost:4321/tags/disturbance/</link>
+    <description>Recent content in Disturbance on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/disturbance/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/disturbance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Forest carbon and short-lived trees</title>
-      <link>https://arbor-analytics.com/post/forest-carbon-markets-and-short-lived-trees/</link>
+      <link>http://localhost:4321/post/forest-carbon-markets-and-short-lived-trees/</link>
       <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/forest-carbon-markets-and-short-lived-trees/</guid>
-      <description>I spoke with a forest products company representative this week who expressed concern with “extending rotations” so that carbon is locked up in trees for a longer time. Many forest carbon markets are proposing delaying harvesting for a few years so that more carbon accumulates over time.
-The particular concern was in Minnesota where aspen, the state’s most commercially important species, is crucial to the forest products economy. Aspen is a short-lived, shade-intolerant species that is managed using even-aged silvicultural techniques.</description>
+      <guid>http://localhost:4321/post/forest-carbon-markets-and-short-lived-trees/</guid>
+      <description>I spoke with a forest products company representative this week who expressed concern with “extending rotations” so that carbon is locked up in trees for a longer time. Many forest carbon markets are proposing delaying harvesting for a few years so that more carbon accumulates over time.&#xA;The particular concern was in Minnesota where aspen, the state’s most commercially important species, is crucial to the forest products economy. Aspen is a short-lived, shade-intolerant species that is managed using even-aged silvicultural techniques.</description>
     </item>
-    
     <item>
       <title>Disentagling the interactions between site index and disturbance</title>
-      <link>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
+      <link>http://localhost:4321/post/disentagling-the-interactions-between-site-index-and-disturbance/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
-      <description>The Black Hills National Forest has been in the news recently after completing a timber sustainability report. In recent years, the Black Hills was one of the US Forest Service’s greatest timber-producing National Forests in the country.
-Much of the increase in timber harvest in recent years at the Black Hills National Forest was in response to a deadly mountain pine beetle epidemic. As a result, the new report suggests that current timber harvests are not sustainable into the future.</description>
+      <guid>http://localhost:4321/post/disentagling-the-interactions-between-site-index-and-disturbance/</guid>
+      <description>The Black Hills National Forest has been in the news recently after completing a timber sustainability report. In recent years, the Black Hills was one of the US Forest Service’s greatest timber-producing National Forests in the country.&#xA;Much of the increase in timber harvest in recent years at the Black Hills National Forest was in response to a deadly mountain pine beetle epidemic. As a result, the new report suggests that current timber harvests are not sustainable into the future.</description>
     </item>
-    
   </channel>
 </rss>

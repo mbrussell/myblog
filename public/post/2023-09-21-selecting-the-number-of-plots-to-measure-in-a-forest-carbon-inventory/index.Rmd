@@ -1,0 +1,159 @@
+---
+title: Stratifying the number of plots to measure in a forest carbon inventory
+author: Matt Russell
+date: '2023-09-22'
+slug: []
+categories:
+  - Sampling
+tags:
+  - sampling
+  - forestsamplr
+  - forest inventory
+  - carbon
+  - forest carbon
+---
+# 
+
+![](inventory_eqpt.jpg){width=500px}
+</center>
+#  
+Forest inventories that measure carbon, like any forest attribute, are conducted to obtain a precise estimate of a population mean. Forest carbon inventories can cost a lot of time and effort. Their high costs have been cited as a barrier for some landowners to enter carbon programs. 
+
+Until remote sensing technologies are adopted at scale to monitor and report carbon, field based inventories will continue to be relied on the estimate forest carbon and their associated attributes. Fortunately, stratified random sampling is an efficient field sampling methodology that can save time and effort in the field. 
+
+If we know the size of a number of subpopulations that are a part of a larger population (e.g., an ownership seeking to enroll in a carbon project), we can use stratified random sampling to efficiently measure attributes like forest carbon. If these subpopulations, or strata, have different mean values and smaller variances relative to the population mean, stratified random sampling is generally preferred over simple random sampling. This ultimately results in a narrower confidence interval for an overall population estimate, even when using the same sample size.
+
+This post will describe a way to allocate field plots to measure forest carbon under a stratified random sampling framework.
+ 
+```{r, echo = F, warning = F, message = F}
+library(tidyverse)
+library(kableExtra)
+```
+
+```{r, echo = F}
+#See here for general statistics used in this analysis (adapted slightly): https://apps.fs.usda.gov/fiadb-api/fullreport?rselected=Forest%20type%20group&cselected=Stand-size%20class&sdenom=2&snum=55&wc=232021
+metric_ton_convert <- 0.907185
+plots_all <- 1116
+all_se <- 0.32    
+all_sd <- all_se*sqrt(plots_all)
+
+# Small
+#13.0637*metric_ton_convert
+plots_small = 396
+small_se <- 0.39    
+small_sd <- small_se*sqrt(plots_small)
+
+# Medium
+#21.8263*metric_ton_convert	
+plots_med = 468
+med_se <- 0.3850253 
+med_sd <- med_se*sqrt(plots_med)
+
+# Large
+#30.2494*metric_ton_convert
+plots_large = 347
+large_se <- 0.6287748 
+large_sd <- large_se*sqrt(plots_large)
+```
+
+# Maine property with spruce/fir forest
+
+For this example, a 200-acre ownership located in Maine seeks to enroll in a carbon project. It requires a precise estimate of the total carbon in aboveground and belowground portions of live trees. The property is a spruce/fir forest type.
+
+Some previous data were collected from a pilot study across the property. Foresters measured 20 1/10th-acre plots across the property and found the average carbon storage to be 21.2 metric tonnes of carbon per acre with a standard deviation of 10.7.
+
+Foresters also recorded the stand size class of each plot they visited. These were categorized with stands containing primarily small- (<5 inches), medium (5-10 inches), or large-diameter trees (> 10 inches). For each stand size class, we can calculate the standard deviation from our pilot study. Using remote sensing, the foresters were able to distinguish how many acres were found in each of these stand size classes across the property.
+
+```{r, echo = F}
+stratum <- tribble(
+  ~`Stand size class`, ~`Stratum area (acres)`, ~`SD (metric tons/acre)`, ~`Area x SD`,
+  "Small diameter (< 5 in)", 65, 7.8, 507,
+  "Medium diameter (5 - 10 in)", 77, 8.3, 639,
+  "Large diameter (> 10 in)", 58, 11.7, 679
+)
+```
+
+```{r, echo = F}
+knitr::kable((stratum[,]), 
+             caption = 'Example stratum for a forest carbon inventory in a spruce/fir forest in Maine.') %>% 
+   kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+```
+
+For those of you that may want to perform these calculations in R, the data table named **stratum** compiles the data in a usable format:
+
+```{r}
+library(tidyverse)
+
+stratum <- tribble(
+  ~`Stand size class`, ~`Stratum area (acres)`, ~`SD (metric tons/acre)`, ~`Area x SD`,
+  "Small diameter (< 5 in)", 65, 7.8, 507,
+  "Medium diameter (5 - 10 in)", 77, 8.3, 639,
+  "Large diameter (> 10 in)", 58, 11.7, 679
+)
+```
+
+# Allocating field plots to stratum
+
+I've written about the benefits of stratified random sampling [in the past](https://arbor-analytics.com/post/stratified-vs-simple-random-sampling-fun-with-forestsamplr/). And I encourage you to see [the forestsampler package](https://github.com/ncx-co/forestsamplr) developed by NCX for other great functions related to generating estimates for a variety of forest sampling methods.
+
+Knowing what we now know about the variability within each strata on the Maine property, we could allocate the number of field plots to each stand in a few different ways. Described in Burkhart et al.’s [*Forest Measurements*](https://www.waveland.com/browse.php?t=668&r=a), there are two common ways to allocate field plots in a stratified random sample: through **proportional** or **optimal allocation**.
+
+## Proportional allocation
+
+Say our analysis indicates we need to collect data from 100 new inventory plots to achieve a desired level of precision (e.g., to be within 5% of the mean carbon storage). Proportional allocation would distribute the 100 field plots according to their total area. That is, we can collect more field plots in larger-size strata. The following R function named `allocate()` can determine the appropriate number of desired plots to collect in each stratum. We'll round up the number of plots with the `ceiling()` function to make sure we measure an entire plot: 
+
+```{r}
+allocate <- function(acres.stratum, total.acres, total.plots){
+  num.plots = ceiling((acres.stratum / total.acres) * total.plots)
+  return(num.plots)
+  }
+```
+
+We can apply the function to the **stratum** data frame:
+
+```{r}
+allocate(acres.stratum = stratum$`Stratum area (acres)`,
+         total.acres = sum(stratum$`Stratum area (acres)`),
+         total.plots = 100)
+```
+
+So, the proportional allocation method indicates we should collect 33, 39, and 29 plots in the small-, medium-, and large-diameter stands, respectively. Because more acreage is found in medium-sized trees, we collect more plots there.  
+
+## Optimal allocation
+
+The optimal allocation method distributes the 100 field plots to each stratum that provides the smallest amount of variability possible. In addition to the total area, also required in this calculation is the standard deviation of carbon found within each stratum. The total number of plots to sample in each stratum would be represented by the stratum area multiplied by the standard deviation of carbon, as seen in the table above. The `Area x SD` variable can be input into the `allocate()` function to determine the appropriate number of plots to collect with optimal allocation:
+
+```{r}
+allocate(acres.stratum = stratum$`Area x SD`,
+         total.acres = sum(stratum$`Area x SD`),
+         total.plots = 100)
+```
+
+So, the optimal allocation method indicates we should collect 28, 36, and 38 plots in the small-, medium-, and large-diameter stands, respectively. In other words, because the stand deviation of carbon is lower in the small- and medium-diameter stands, we can focus our sampling in the large-diameter stands where there is more variability in carbon. The optimal strategy indicates sampling three fewer plots in the medium-diameter stands compared to the proportional allocation method, even though it’s the stand with the largest area.
+
+```{r, echo = F}
+stratum_summ <- tribble(
+  ~`Stand size class`, ~`Stratum area (acres)`, ~`SD (metric tons/acre)`, ~`Area x SD`, ~`Plots to measure - proportional`, ~`Plots to measure - optimal`,
+  "Small diameter (< 5 in)", 65, 7.8, 507, 33, 28,
+  "Medium diameter (5 - 10 in)", 77, 8.3, 639, 39, 36,
+  "Large diameter (> 10 in)", 58, 11.7, 679, 29, 38,
+  "SUM", 200, NA, 1825, 100, 100
+)
+
+``` 
+
+```{r, echo = F}
+knitr::kable((stratum_summ[,]), 
+             caption = 'Distribution of plots to sample for proportional and optimal allocation methods.') %>% 
+   kable_styling(bootstrap_options = "bordered",
+                full_width = FALSE)
+```
+
+There is a lot more that goes into planning a forest carbon inventory, but understanding how many plots to measure and where to measure them is an important first step. Using stratified random sampling is an efficient approach to determine a precise estimate of forest carbon. 
+
+--
+
+*Special thanks to Micky Allen for catching an error in the numbers of plots in Table 2.*
+
+*By Matt Russell. [Email Matt](mailto:matt@arbor-analytics.com) with any questions or comments.*

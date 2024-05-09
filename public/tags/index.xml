@@ -2,1144 +2,1089 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>https://arbor-analytics.com/tags/</link>
+    <link>http://localhost:4321/tags/</link>
     <description>Recent content in Tags on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>analytics</title>
-      <link>https://arbor-analytics.com/tags/analytics/</link>
-      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/analytics/</guid>
+      <title>Maple Syrup</title>
+      <link>http://localhost:4321/tags/maple-syrup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/maple-syrup/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>DataMart</title>
-      <link>https://arbor-analytics.com/tags/datamart/</link>
-      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/datamart/</guid>
+      <title>Nontimber Forest Products</title>
+      <link>http://localhost:4321/tags/nontimber-forest-products/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/nontimber-forest-products/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>EVALIDator</title>
-      <link>https://arbor-analytics.com/tags/evalidator/</link>
-      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/evalidator/</guid>
+      <title>Forest Products</title>
+      <link>http://localhost:4321/tags/forest-products/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/forest-products/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>forest inventory</title>
-      <link>https://arbor-analytics.com/tags/forest-inventory/</link>
-      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/forest-inventory/</guid>
+      <title>Harvested Wood Products</title>
+      <link>http://localhost:4321/tags/harvested-wood-products/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/harvested-wood-products/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>forest inventory and analysis</title>
-      <link>https://arbor-analytics.com/tags/forest-inventory-and-analysis/</link>
-      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/forest-inventory-and-analysis/</guid>
+      <title>Timber Harvesting</title>
+      <link>http://localhost:4321/tags/timber-harvesting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/timber-harvesting/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>forest measurements</title>
-      <link>https://arbor-analytics.com/tags/forest-measurements/</link>
-      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/forest-measurements/</guid>
+      <title>Analytics</title>
+      <link>http://localhost:4321/tags/analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/analytics/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>forestry</title>
-      <link>https://arbor-analytics.com/tags/forestry/</link>
-      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/forestry/</guid>
+      <title>FIA</title>
+      <link>http://localhost:4321/tags/fia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/fia/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>energy</title>
-      <link>https://arbor-analytics.com/tags/energy/</link>
-      <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/energy/</guid>
+      <title>Forest Carbon</title>
+      <link>http://localhost:4321/tags/forest-carbon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/forest-carbon/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>forest products</title>
-      <link>https://arbor-analytics.com/tags/forest-products/</link>
-      <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/forest-products/</guid>
+      <title>Forest Inventory</title>
+      <link>http://localhost:4321/tags/forest-inventory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/forest-inventory/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>wood</title>
-      <link>https://arbor-analytics.com/tags/wood/</link>
-      <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/wood/</guid>
+      <title>Forest Inventory and Analysis</title>
+      <link>http://localhost:4321/tags/forest-inventory-and-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/forest-inventory-and-analysis/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Data science</title>
-      <link>https://arbor-analytics.com/tags/data-science/</link>
-      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/data-science/</guid>
+      <title>Forest Measurements</title>
+      <link>http://localhost:4321/tags/forest-measurements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/forest-measurements/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Data viz</title>
-      <link>https://arbor-analytics.com/tags/data-viz/</link>
-      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/data-viz/</guid>
+      <title>NSVB</title>
+      <link>http://localhost:4321/tags/nsvb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/nsvb/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>statistics</title>
-      <link>https://arbor-analytics.com/tags/statistics/</link>
-      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/statistics/</guid>
+      <title>Forest Ownership</title>
+      <link>http://localhost:4321/tags/forest-ownership/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/forest-ownership/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>teaching statistics</title>
-      <link>https://arbor-analytics.com/tags/teaching-statistics/</link>
-      <pubDate>Thu, 20 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/teaching-statistics/</guid>
+      <title>Forestland Area</title>
+      <link>http://localhost:4321/tags/forestland-area/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/forestland-area/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>p-values</title>
-      <link>https://arbor-analytics.com/tags/p-values/</link>
-      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/p-values/</guid>
+      <title>Climate</title>
+      <link>http://localhost:4321/tags/climate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/climate/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>forest industry</title>
-      <link>https://arbor-analytics.com/tags/forest-industry/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/forest-industry/</guid>
+      <title>Forest Industry</title>
+      <link>http://localhost:4321/tags/forest-industry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/forest-industry/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mass timber</title>
-      <link>https://arbor-analytics.com/tags/mass-timber/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/mass-timber/</guid>
+      <title>Stumpage</title>
+      <link>http://localhost:4321/tags/stumpage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/stumpage/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pandemic</title>
-      <link>https://arbor-analytics.com/tags/pandemic/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/pandemic/</guid>
+      <title>Covid</title>
+      <link>http://localhost:4321/tags/covid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/covid/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>PPP loans</title>
-      <link>https://arbor-analytics.com/tags/ppp-loans/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/ppp-loans/</guid>
+      <title>Economics</title>
+      <link>http://localhost:4321/tags/economics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/economics/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Forestry</title>
+      <link>http://localhost:4321/tags/forestry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/forestry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pandemic</title>
+      <link>http://localhost:4321/tags/pandemic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/pandemic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:4321/tags/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Podcast</title>
+      <link>http://localhost:4321/tags/podcast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/podcast/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Publishing</title>
+      <link>http://localhost:4321/tags/publishing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/publishing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Christmas</title>
+      <link>http://localhost:4321/tags/christmas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/christmas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Viz</title>
+      <link>http://localhost:4321/tags/data-viz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/data-viz/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rockefeller Tree</title>
+      <link>http://localhost:4321/tags/rockefeller-tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/rockefeller-tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tree</title>
+      <link>http://localhost:4321/tags/tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tree Height</title>
+      <link>http://localhost:4321/tags/tree-height/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/tree-height/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Carbon Markets</title>
+      <link>http://localhost:4321/tags/carbon-markets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/carbon-markets/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Science</title>
+      <link>http://localhost:4321/tags/data-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/data-science/</guid>
+      <description></description>
+    </item>
     <item>
       <title>R</title>
-      <link>https://arbor-analytics.com/tags/r/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/r/</guid>
+      <link>http://localhost:4321/tags/r/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/r/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Regression</title>
-      <link>https://arbor-analytics.com/tags/regression/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/regression/</guid>
+      <title>R Packages</title>
+      <link>http://localhost:4321/tags/r-packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/r-packages/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>timber harvesting</title>
-      <link>https://arbor-analytics.com/tags/timber-harvesting/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/timber-harvesting/</guid>
+      <title>Statistics</title>
+      <link>http://localhost:4321/tags/statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/statistics/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>transportation</title>
-      <link>https://arbor-analytics.com/tags/transportation/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/transportation/</guid>
+      <title>Data Management</title>
+      <link>http://localhost:4321/tags/data-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/data-management/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>trucking</title>
-      <link>https://arbor-analytics.com/tags/trucking/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/trucking/</guid>
+      <title>Ecodivision</title>
+      <link>http://localhost:4321/tags/ecodivision/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/ecodivision/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Workshop</title>
-      <link>https://arbor-analytics.com/tags/workshop/</link>
-      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/workshop/</guid>
+      <title>Carbon</title>
+      <link>http://localhost:4321/tags/carbon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/carbon/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>CARB</title>
-      <link>https://arbor-analytics.com/tags/carb/</link>
-      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/carb/</guid>
+      <title>FVS</title>
+      <link>http://localhost:4321/tags/fvs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/fvs/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>carbon</title>
-      <link>https://arbor-analytics.com/tags/carbon/</link>
-      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/carbon/</guid>
+      <title>Growth and Yield</title>
+      <link>http://localhost:4321/tags/growth-and-yield/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/growth-and-yield/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>carbon credits</title>
-      <link>https://arbor-analytics.com/tags/carbon-credits/</link>
-      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/carbon-credits/</guid>
+      <title>EVALIDator</title>
+      <link>http://localhost:4321/tags/evalidator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/evalidator/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>carbon markets</title>
-      <link>https://arbor-analytics.com/tags/carbon-markets/</link>
-      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/carbon-markets/</guid>
+      <title>Carbon Accounting</title>
+      <link>http://localhost:4321/tags/carbon-accounting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/carbon-accounting/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>forest carbon</title>
-      <link>https://arbor-analytics.com/tags/forest-carbon/</link>
-      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/forest-carbon/</guid>
+      <title>Forestsamplr</title>
+      <link>http://localhost:4321/tags/forestsamplr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/forestsamplr/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>careers</title>
-      <link>https://arbor-analytics.com/tags/careers/</link>
-      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/careers/</guid>
+      <title>Sampling</title>
+      <link>http://localhost:4321/tags/sampling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/sampling/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>jobs</title>
-      <link>https://arbor-analytics.com/tags/jobs/</link>
-      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/jobs/</guid>
+      <title>Tidyverse</title>
+      <link>http://localhost:4321/tags/tidyverse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/tidyverse/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>logging</title>
-      <link>https://arbor-analytics.com/tags/logging/</link>
-      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/logging/</guid>
+      <title>Adaptive Silviculture</title>
+      <link>http://localhost:4321/tags/adaptive-silviculture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/adaptive-silviculture/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>wages</title>
-      <link>https://arbor-analytics.com/tags/wages/</link>
-      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/wages/</guid>
+      <title>Climate Change</title>
+      <link>http://localhost:4321/tags/climate-change/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/climate-change/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>growth and yield</title>
-      <link>https://arbor-analytics.com/tags/growth-and-yield/</link>
-      <pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/growth-and-yield/</guid>
+      <title>Silviculture</title>
+      <link>http://localhost:4321/tags/silviculture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/silviculture/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>books</title>
-      <link>https://arbor-analytics.com/tags/books/</link>
-      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/books/</guid>
+      <title>Mixed Models</title>
+      <link>http://localhost:4321/tags/mixed-models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/mixed-models/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>education</title>
-      <link>https://arbor-analytics.com/tags/education/</link>
-      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/education/</guid>
+      <title>Quantile Regression</title>
+      <link>http://localhost:4321/tags/quantile-regression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/quantile-regression/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>stats4nr</title>
-      <link>https://arbor-analytics.com/tags/stats4nr/</link>
-      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/stats4nr/</guid>
+      <title>Stats4nr</title>
+      <link>http://localhost:4321/tags/stats4nr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/stats4nr/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>economics</title>
-      <link>https://arbor-analytics.com/tags/economics/</link>
-      <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/economics/</guid>
+      <title>Teaching Statistics</title>
+      <link>http://localhost:4321/tags/teaching-statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/teaching-statistics/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>big tree</title>
-      <link>https://arbor-analytics.com/tags/big-tree/</link>
-      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/big-tree/</guid>
+      <title>Accessibility</title>
+      <link>http://localhost:4321/tags/accessibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/accessibility/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>data import</title>
-      <link>https://arbor-analytics.com/tags/data-import/</link>
-      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/data-import/</guid>
+      <title>Alt Text</title>
+      <link>http://localhost:4321/tags/alt-text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/alt-text/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>data management</title>
-      <link>https://arbor-analytics.com/tags/data-management/</link>
-      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/data-management/</guid>
+      <title>Guest Workers</title>
+      <link>http://localhost:4321/tags/guest-workers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/guest-workers/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>harvested wood products</title>
-      <link>https://arbor-analytics.com/tags/harvested-wood-products/</link>
-      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/harvested-wood-products/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>uncertainty</title>
-      <link>https://arbor-analytics.com/tags/uncertainty/</link>
-      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/uncertainty/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>STEM</title>
-      <link>https://arbor-analytics.com/tags/stem/</link>
-      <pubDate>Sat, 19 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/stem/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>timber prices</title>
-      <link>https://arbor-analytics.com/tags/timber-prices/</link>
-      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/timber-prices/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R packages</title>
-      <link>https://arbor-analytics.com/tags/r-packages/</link>
-      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/r-packages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>statitics</title>
-      <link>https://arbor-analytics.com/tags/statitics/</link>
-      <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/statitics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>behind the curtain</title>
-      <link>https://arbor-analytics.com/tags/behind-the-curtain/</link>
-      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/behind-the-curtain/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blog</title>
-      <link>https://arbor-analytics.com/tags/blog/</link>
-      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>climate</title>
-      <link>https://arbor-analytics.com/tags/climate/</link>
-      <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/climate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>climate change</title>
-      <link>https://arbor-analytics.com/tags/climate-change/</link>
-      <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/climate-change/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Communicating data</title>
-      <link>https://arbor-analytics.com/tags/communicating-data/</link>
-      <pubDate>Sat, 27 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/communicating-data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>guest workers</title>
-      <link>https://arbor-analytics.com/tags/guest-workers/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/guest-workers/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>H-2B</title>
-      <link>https://arbor-analytics.com/tags/h-2b/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/h-2b/</guid>
+      <link>http://localhost:4321/tags/h-2b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/h-2b/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>policy</title>
-      <link>https://arbor-analytics.com/tags/policy/</link>
-      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/policy/</guid>
+      <title>Workforce</title>
+      <link>http://localhost:4321/tags/workforce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/workforce/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>random forests</title>
-      <link>https://arbor-analytics.com/tags/random-forests/</link>
-      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/random-forests/</guid>
+      <title>CARB</title>
+      <link>http://localhost:4321/tags/carb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/carb/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>citizen data science</title>
-      <link>https://arbor-analytics.com/tags/citizen-data-science/</link>
-      <pubDate>Tue, 07 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/citizen-data-science/</guid>
+      <title>Carbon Credits</title>
+      <link>http://localhost:4321/tags/carbon-credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/carbon-credits/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>drought</title>
-      <link>https://arbor-analytics.com/tags/drought/</link>
-      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/drought/</guid>
+      <title>Tree Planting</title>
+      <link>http://localhost:4321/tags/tree-planting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/tree-planting/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>citations</title>
-      <link>https://arbor-analytics.com/tags/citations/</link>
-      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/citations/</guid>
+      <title>Tree Species</title>
+      <link>http://localhost:4321/tags/tree-species/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/tree-species/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>faculty</title>
-      <link>https://arbor-analytics.com/tags/faculty/</link>
-      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/faculty/</guid>
+      <title>Tidymodels</title>
+      <link>http://localhost:4321/tags/tidymodels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/tidymodels/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>peer review</title>
-      <link>https://arbor-analytics.com/tags/peer-review/</link>
-      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/peer-review/</guid>
+      <title>RFIA</title>
+      <link>http://localhost:4321/tags/rfia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/rfia/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>research</title>
-      <link>https://arbor-analytics.com/tags/research/</link>
-      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/research/</guid>
+      <title>Site Index</title>
+      <link>http://localhost:4321/tags/site-index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/site-index/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>science</title>
-      <link>https://arbor-analytics.com/tags/science/</link>
-      <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/science/</guid>
+      <title>SitreeE</title>
+      <link>http://localhost:4321/tags/sitreee/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/sitreee/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>standard deviation</title>
-      <link>https://arbor-analytics.com/tags/standard-deviation/</link>
-      <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/standard-deviation/</guid>
+      <title>Bootstrap</title>
+      <link>http://localhost:4321/tags/bootstrap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/bootstrap/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tidyFIA</title>
-      <link>https://arbor-analytics.com/tags/tidyfia/</link>
-      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/tidyfia/</guid>
+      <title>Maine</title>
+      <link>http://localhost:4321/tags/maine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/maine/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>webinar</title>
-      <link>https://arbor-analytics.com/tags/webinar/</link>
-      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/webinar/</guid>
+      <title>Regression</title>
+      <link>http://localhost:4321/tags/regression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/regression/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pie graphs</title>
-      <link>https://arbor-analytics.com/tags/pie-graphs/</link>
-      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/pie-graphs/</guid>
+      <title>Timber Prices</title>
+      <link>http://localhost:4321/tags/timber-prices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/timber-prices/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>demographics</title>
-      <link>https://arbor-analytics.com/tags/demographics/</link>
-      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/demographics/</guid>
+      <title>CityDAO</title>
+      <link>http://localhost:4321/tags/citydao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/citydao/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>forest ownership</title>
-      <link>https://arbor-analytics.com/tags/forest-ownership/</link>
-      <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/forest-ownership/</guid>
+      <title>DAO</title>
+      <link>http://localhost:4321/tags/dao/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/dao/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>DataMart</title>
+      <link>http://localhost:4321/tags/datamart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/datamart/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Energy</title>
+      <link>http://localhost:4321/tags/energy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/energy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wood</title>
+      <link>http://localhost:4321/tags/wood/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/wood/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>P-Values</title>
+      <link>http://localhost:4321/tags/p-values/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/p-values/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mass Timber</title>
+      <link>http://localhost:4321/tags/mass-timber/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/mass-timber/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PPP Loans</title>
+      <link>http://localhost:4321/tags/ppp-loans/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/ppp-loans/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transportation</title>
+      <link>http://localhost:4321/tags/transportation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/transportation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trucking</title>
+      <link>http://localhost:4321/tags/trucking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/trucking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workshop</title>
+      <link>http://localhost:4321/tags/workshop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/workshop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Careers</title>
+      <link>http://localhost:4321/tags/careers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/careers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jobs</title>
+      <link>http://localhost:4321/tags/jobs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/jobs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logging</title>
+      <link>http://localhost:4321/tags/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/logging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wages</title>
+      <link>http://localhost:4321/tags/wages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/wages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Books</title>
+      <link>http://localhost:4321/tags/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/books/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Education</title>
+      <link>http://localhost:4321/tags/education/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/education/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Big Tree</title>
+      <link>http://localhost:4321/tags/big-tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/big-tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Import</title>
+      <link>http://localhost:4321/tags/data-import/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/data-import/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uncertainty</title>
+      <link>http://localhost:4321/tags/uncertainty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/uncertainty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>STEM</title>
+      <link>http://localhost:4321/tags/stem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/stem/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Statitics</title>
+      <link>http://localhost:4321/tags/statitics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/statitics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Behind the Curtain</title>
+      <link>http://localhost:4321/tags/behind-the-curtain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/behind-the-curtain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Communicating Data</title>
+      <link>http://localhost:4321/tags/communicating-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/communicating-data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Policy</title>
+      <link>http://localhost:4321/tags/policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/policy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Random Forests</title>
+      <link>http://localhost:4321/tags/random-forests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/random-forests/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Citizen Data Science</title>
+      <link>http://localhost:4321/tags/citizen-data-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/citizen-data-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Drought</title>
+      <link>http://localhost:4321/tags/drought/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/drought/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Citations</title>
+      <link>http://localhost:4321/tags/citations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/citations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Faculty</title>
+      <link>http://localhost:4321/tags/faculty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/faculty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Peer Review</title>
+      <link>http://localhost:4321/tags/peer-review/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/peer-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>http://localhost:4321/tags/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Science</title>
+      <link>http://localhost:4321/tags/science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Standard Deviation</title>
+      <link>http://localhost:4321/tags/standard-deviation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/standard-deviation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TidyFIA</title>
+      <link>http://localhost:4321/tags/tidyfia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/tidyfia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webinar</title>
+      <link>http://localhost:4321/tags/webinar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/webinar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pie Graphs</title>
+      <link>http://localhost:4321/tags/pie-graphs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/pie-graphs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Demographics</title>
+      <link>http://localhost:4321/tags/demographics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/demographics/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Meateater</title>
-      <link>https://arbor-analytics.com/tags/meateater/</link>
-      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/meateater/</guid>
+      <link>http://localhost:4321/tags/meateater/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/meateater/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>podcast</title>
-      <link>https://arbor-analytics.com/tags/podcast/</link>
-      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/podcast/</guid>
+      <title>Greenhouse Gases</title>
+      <link>http://localhost:4321/tags/greenhouse-gases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/greenhouse-gases/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>greenhouse gases</title>
-      <link>https://arbor-analytics.com/tags/greenhouse-gases/</link>
-      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/greenhouse-gases/</guid>
+      <title>Disturbance</title>
+      <link>http://localhost:4321/tags/disturbance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/disturbance/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>disturbance</title>
-      <link>https://arbor-analytics.com/tags/disturbance/</link>
-      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/disturbance/</guid>
+      <title>Timber Cruise</title>
+      <link>http://localhost:4321/tags/timber-cruise/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/timber-cruise/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>timber cruise</title>
-      <link>https://arbor-analytics.com/tags/timber-cruise/</link>
-      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/timber-cruise/</guid>
+      <title>Tidytext</title>
+      <link>http://localhost:4321/tags/tidytext/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/tidytext/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tidytext</title>
-      <link>https://arbor-analytics.com/tags/tidytext/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/tidytext/</guid>
+      <title>Invasive Species</title>
+      <link>http://localhost:4321/tags/invasive-species/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/invasive-species/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>invasive species</title>
-      <link>https://arbor-analytics.com/tags/invasive-species/</link>
-      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/invasive-species/</guid>
+      <title>Classification</title>
+      <link>http://localhost:4321/tags/classification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/classification/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mixed models</title>
-      <link>https://arbor-analytics.com/tags/mixed-models/</link>
-      <pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/mixed-models/</guid>
+      <title>Machine Learning</title>
+      <link>http://localhost:4321/tags/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/machine-learning/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>classification</title>
-      <link>https://arbor-analytics.com/tags/classification/</link>
-      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/classification/</guid>
+      <title>Pivot_long</title>
+      <link>http://localhost:4321/tags/pivot_long/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/pivot_long/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Machine learning</title>
-      <link>https://arbor-analytics.com/tags/machine-learning/</link>
-      <pubDate>Sat, 19 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/machine-learning/</guid>
+      <title>Pivot_wide</title>
+      <link>http://localhost:4321/tags/pivot_wide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/pivot_wide/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pivot_long</title>
-      <link>https://arbor-analytics.com/tags/pivot_long/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/pivot_long/</guid>
+      <title>Tidyr</title>
+      <link>http://localhost:4321/tags/tidyr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/tidyr/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pivot_wide</title>
-      <link>https://arbor-analytics.com/tags/pivot_wide/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/pivot_wide/</guid>
+      <title>Conference</title>
+      <link>http://localhost:4321/tags/conference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/conference/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tidyr</title>
-      <link>https://arbor-analytics.com/tags/tidyr/</link>
-      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/tidyr/</guid>
+      <title>Clustering</title>
+      <link>http://localhost:4321/tags/clustering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/clustering/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>conference</title>
-      <link>https://arbor-analytics.com/tags/conference/</link>
-      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/conference/</guid>
+      <title>K-Means</title>
+      <link>http://localhost:4321/tags/k-means/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/k-means/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>clustering</title>
-      <link>https://arbor-analytics.com/tags/clustering/</link>
-      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/clustering/</guid>
+      <title>Polar Area Diagram</title>
+      <link>http://localhost:4321/tags/polar-area-diagram/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/polar-area-diagram/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>k-means</title>
-      <link>https://arbor-analytics.com/tags/k-means/</link>
-      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/k-means/</guid>
+      <title>Sentiment Analysis</title>
+      <link>http://localhost:4321/tags/sentiment-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/sentiment-analysis/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>polar area diagram</title>
-      <link>https://arbor-analytics.com/tags/polar-area-diagram/</link>
-      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/polar-area-diagram/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sentiment analysis</title>
-      <link>https://arbor-analytics.com/tags/sentiment-analysis/</link>
-      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/sentiment-analysis/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Google Sheets</title>
-      <link>https://arbor-analytics.com/tags/google-sheets/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/google-sheets/</guid>
+      <link>http://localhost:4321/tags/google-sheets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/google-sheets/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>googlesheets4</title>
-      <link>https://arbor-analytics.com/tags/googlesheets4/</link>
-      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/googlesheets4/</guid>
+      <title>Googlesheets4</title>
+      <link>http://localhost:4321/tags/googlesheets4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/googlesheets4/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>presentations</title>
-      <link>https://arbor-analytics.com/tags/presentations/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/presentations/</guid>
+      <title>Presentations</title>
+      <link>http://localhost:4321/tags/presentations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/presentations/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>productivity</title>
-      <link>https://arbor-analytics.com/tags/productivity/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/productivity/</guid>
+      <title>Productivity</title>
+      <link>http://localhost:4321/tags/productivity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/productivity/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>site index</title>
-      <link>https://arbor-analytics.com/tags/site-index/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/site-index/</guid>
+      <title>Hiring</title>
+      <link>http://localhost:4321/tags/hiring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/hiring/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>hiring</title>
-      <link>https://arbor-analytics.com/tags/hiring/</link>
-      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/hiring/</guid>
+      <title>Broom</title>
+      <link>http://localhost:4321/tags/broom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/broom/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>broom</title>
-      <link>https://arbor-analytics.com/tags/broom/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/broom/</guid>
+      <title>Modelr</title>
+      <link>http://localhost:4321/tags/modelr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/modelr/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>modelr</title>
-      <link>https://arbor-analytics.com/tags/modelr/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/modelr/</guid>
+      <title>Trillion Trees</title>
+      <link>http://localhost:4321/tags/trillion-trees/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/trillion-trees/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tidyverse</title>
-      <link>https://arbor-analytics.com/tags/tidyverse/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/tidyverse/</guid>
+      <title>Ggplot2</title>
+      <link>http://localhost:4321/tags/ggplot2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/ggplot2/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>trillion trees</title>
-      <link>https://arbor-analytics.com/tags/trillion-trees/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/trillion-trees/</guid>
+      <title>Scatterplots</title>
+      <link>http://localhost:4321/tags/scatterplots/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/scatterplots/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>ggplot2</title>
-      <link>https://arbor-analytics.com/tags/ggplot2/</link>
-      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/ggplot2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>scatterplots</title>
-      <link>https://arbor-analytics.com/tags/scatterplots/</link>
-      <pubDate>Mon, 03 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/scatterplots/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Google Scholar</title>
-      <link>https://arbor-analytics.com/tags/google-scholar/</link>
-      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/google-scholar/</guid>
+      <link>http://localhost:4321/tags/google-scholar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/google-scholar/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>publishing</title>
-      <link>https://arbor-analytics.com/tags/publishing/</link>
-      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/publishing/</guid>
+      <title>Web Scraping</title>
+      <link>http://localhost:4321/tags/web-scraping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/web-scraping/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>web scraping</title>
-      <link>https://arbor-analytics.com/tags/web-scraping/</link>
-      <pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/web-scraping/</guid>
+      <title>Binomial</title>
+      <link>http://localhost:4321/tags/binomial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/binomial/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>binomial</title>
-      <link>https://arbor-analytics.com/tags/binomial/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/binomial/</guid>
+      <title>Ruffed Grouse</title>
+      <link>http://localhost:4321/tags/ruffed-grouse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/ruffed-grouse/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>ruffed grouse</title>
-      <link>https://arbor-analytics.com/tags/ruffed-grouse/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/ruffed-grouse/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sampling</title>
-      <link>https://arbor-analytics.com/tags/sampling/</link>
-      <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/sampling/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>HTML</title>
-      <link>https://arbor-analytics.com/tags/html/</link>
-      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/html/</guid>
+      <link>http://localhost:4321/tags/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/html/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>pagedown</title>
-      <link>https://arbor-analytics.com/tags/pagedown/</link>
-      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/pagedown/</guid>
+      <title>Pagedown</title>
+      <link>http://localhost:4321/tags/pagedown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/pagedown/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>significance</title>
-      <link>https://arbor-analytics.com/tags/significance/</link>
-      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/significance/</guid>
+      <title>Significance</title>
+      <link>http://localhost:4321/tags/significance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/significance/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>inspectdf</title>
-      <link>https://arbor-analytics.com/tags/inspectdf/</link>
-      <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/inspectdf/</guid>
+      <title>Inspectdf</title>
+      <link>http://localhost:4321/tags/inspectdf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/inspectdf/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>moose</title>
-      <link>https://arbor-analytics.com/tags/moose/</link>
-      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/moose/</guid>
+      <title>Moose</title>
+      <link>http://localhost:4321/tags/moose/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/moose/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>overconfidence</title>
-      <link>https://arbor-analytics.com/tags/overconfidence/</link>
-      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/overconfidence/</guid>
+      <title>Overconfidence</title>
+      <link>http://localhost:4321/tags/overconfidence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/overconfidence/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>animation</title>
-      <link>https://arbor-analytics.com/tags/animation/</link>
-      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/animation/</guid>
+      <title>Animation</title>
+      <link>http://localhost:4321/tags/animation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/animation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>GIF</title>
-      <link>https://arbor-analytics.com/tags/gif/</link>
-      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/gif/</guid>
+      <link>http://localhost:4321/tags/gif/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/gif/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>magick</title>
-      <link>https://arbor-analytics.com/tags/magick/</link>
-      <pubDate>Sat, 29 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/magick/</guid>
+      <title>Magick</title>
+      <link>http://localhost:4321/tags/magick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/magick/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>quantile regression</title>
-      <link>https://arbor-analytics.com/tags/quantile-regression/</link>
-      <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/quantile-regression/</guid>
+      <title>Wait Times</title>
+      <link>http://localhost:4321/tags/wait-times/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/wait-times/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>wait times</title>
-      <link>https://arbor-analytics.com/tags/wait-times/</link>
-      <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/wait-times/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>forestsamplr</title>
-      <link>https://arbor-analytics.com/tags/forestsamplr/</link>
-      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/forestsamplr/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>Deer</title>
-      <link>https://arbor-analytics.com/tags/deer/</link>
-      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/deer/</guid>
+      <link>http://localhost:4321/tags/deer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/deer/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Deer-vehicle accidents</title>
-      <link>https://arbor-analytics.com/tags/deer-vehicle-accidents/</link>
-      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/deer-vehicle-accidents/</guid>
+      <title>Deer-Vehicle Accidents</title>
+      <link>http://localhost:4321/tags/deer-vehicle-accidents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/deer-vehicle-accidents/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hunting</title>
-      <link>https://arbor-analytics.com/tags/hunting/</link>
-      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/hunting/</guid>
+      <link>http://localhost:4321/tags/hunting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/hunting/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>White-tailed deer</title>
-      <link>https://arbor-analytics.com/tags/white-tailed-deer/</link>
-      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/white-tailed-deer/</guid>
+      <title>White-Tailed Deer</title>
+      <link>http://localhost:4321/tags/white-tailed-deer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/white-tailed-deer/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>geom_boxplot()</title>
-      <link>https://arbor-analytics.com/tags/geom_boxplot/</link>
-      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/geom_boxplot/</guid>
+      <title>Geom_boxplot()</title>
+      <link>http://localhost:4321/tags/geom_boxplot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/geom_boxplot/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>geom_violin()</title>
-      <link>https://arbor-analytics.com/tags/geom_violin/</link>
-      <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/geom_violin/</guid>
+      <title>Geom_violin()</title>
+      <link>http://localhost:4321/tags/geom_violin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/geom_violin/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gather()</title>
-      <link>https://arbor-analytics.com/tags/gather/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/gather/</guid>
+      <title>Gather()</title>
+      <link>http://localhost:4321/tags/gather/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/gather/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>spread()</title>
-      <link>https://arbor-analytics.com/tags/spread/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/tags/spread/</guid>
+      <title>Spread()</title>
+      <link>http://localhost:4321/tags/spread/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/tags/spread/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

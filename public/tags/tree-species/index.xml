@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tree Species on </title>
+    <link>http://localhost:4321/tags/tree-species/</link>
+    <description>Recent content in Tree Species on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/tree-species/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quantifying the shade tolerance of climate-adapted tree species in the Northeast</title>
+      <link>http://localhost:4321/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast/</link>
+      <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-05-25-quantifying-the-shade-tolerance-of-climate-adapted-tree-species-in-the-northeast/</guid>
+      <description>A few weeks ago I attended Dr. Tony D’Amato’s excellent webinar “Looking at Forest Carbon from Multiple Dimensions”. The content of the webinar was excellent and I encourage anyone involved with forest management and forest carbon to view it.&#xA;One primary concept from the webinar stood out to me: many of the future tree species that are anticipated to be well adapted to future conditions are less shade tolerant that current trees on the landscape.</description>
+    </item>
+  </channel>
+</rss>

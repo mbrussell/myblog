@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>A quick and easy way to estimate forestland area change across US states</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">A quick and easy way to estimate forestland area change across US states</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/">A quick and easy way to estimate forestland area change across US states</a></h4>
+    <h5>February 16, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-ownership"><kbd class="item-tag">forest ownership</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestland-area"><kbd class="item-tag">forestland area</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<div id="section" class="section level1">
+<h1></h1>
+<center>
+<img src="forest_scene.jpg" width="500" />
+</center>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>Forest industry professionals have a renewed interest in understanding the extent to which forestland area has changed in regions where they procure wood. A few examples include:</p>
+<ul>
+<li>On June 30, 2023, the European Union implemented the <a href="https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en">European Union Deforestation-Free Supply Chain Regulation (EUDR)</a>, a process that bans imports into the EU marketplace if they originate from areas that have seen deforestation or forest degradation. All operators (including wood suppliers) will need to collect and maintain information on these products, including providing “adequately conclusive and verifiable information” that products are deforestation-free.</li>
+<li>The 2022 <a href="https://forests.org/fibersourcingstandard/">Sustainable Forestry Initiative’s (SFI) Fiber Sourcing Standard</a> contains a performance measure to “develop and implement a due diligence system to manage the risk of sourcing fiber from controversial sources.” Controversial sources are defined in a number of ways and include “conversion sources originating from regions experiencing forest area decline.”</li>
+</ul>
+<p>These issues alone make quantifying the extent of forestland area change necessary for forest products companies that export wood and seek to maintain compliance with certification standards. Fortunately, using over 130,000 forest inventory plots across the US, there are tools available to estimate forestland area change across states and regions.</p>
+<p>This post describes how <a href="https://apps.fs.usda.gov/fiadb-api/evalidator">EVALIDator</a>, a web-based application programming interface (API) created and maintained by the USDA Forest Service, can be used to estimate forestland area change. The program uses Forest Inventory and Analysis (FIA) data to determine estimates for several forest conditions of interest.</p>
+<div id="obtaining-forestland-area-change-estimates" class="section level2">
+<h2>Obtaining forestland area change estimates</h2>
+<p>The EVALIDator program can be used to access a number of forest attributes. Importantly, it can be used to acquire estimates of change in forest conditions. It’s important to note that the amount and length of the data will vary depending on your region and state. Most states have data collected since the late 1990’s or early 2000’s when FIA implemented its annual inventory framework. This provides around 20 years of quality data to estimate changing conditions. Many states also have older “periodic” inventories where data were collected prior to this, but these data were not collected using the same nationally consistent framework that is used by FIA today.</p>
+<p>For our example, we are interested in estimating how much forestland area has changed in the state of Minnesota over the last 10 years. Here are the steps to obtain those values:</p>
+<ol style="list-style-type: decimal">
+<li>Open the EVALIDator API at <a href="https://apps.fs.usda.gov/fiadb-api/evalidator">https://apps.fs.usda.gov/fiadb-api/evalidator</a>.</li>
+<li>On the first page, select <strong>State(s) retrieval</strong> as the Retrieval Type. Select <strong>Forest land</strong> from the land basis drop-down list. Select <strong>Area</strong> from the numerator drop-down list and select <strong>No denominator – just produce estimates</strong> from the ratio estimate drop-down list. Click <em>Continue.</em></li>
+<li>From the drop-down list, select <strong>2 – Area of forestland, in acres</strong>. Be sure that the radio buttons <em>Use FIA definition of forest land</em> and <em>Limit retrieval to only most recent inventories</em> are selected. Click <em>Continue.</em></li>
+<li>Scroll down in the list of available evaluations and select <strong>MINNESOTA</strong> as the state. Note that these estimates will use FIA data collected between 2017 and 2021. Click <em>Continue.</em></li>
+<li>Leave the <em>Page variable</em> section drop-down items selected to <strong>None</strong> and <strong>Current</strong>. For the row variable, scroll down to <strong>Forest type group</strong> and leave the row temporal basis set to <strong>Current</strong>. For the column variable, scroll down to <strong>Ownership group - major</strong> and leave the column temporal basis set to <strong>Current</strong>. Click <em>Open estimates in new window.</em></li>
+</ol>
+<p>In the output, a <em>Total</em> row appears as the first column and first row. In total, current estimates show that 17.67 million acres of forestland exist in the state, measured from 2017 through 2021. More forestland area is found in public forests and the aspen/birch forest type group contains the largest acreage (Fig. 1).</p>
+</div>
+</div>
+<div id="section-2" class="section level1">
+<h1></h1>
+<center>
+<div class="float">
+<img src="mn_area_change.png" width="500" alt="Fig. 1. Forestland area change estimates in Minnesota from 2007-2011 (right) to 2017-2021 (left) provided by the EVALIDator program using Forest Inventory and Analysis data." />
+<div class="figcaption"><em><strong>Fig. 1.</strong> Forestland area change estimates in Minnesota from 2007-2011 (right) to 2017-2021 (left) provided by the EVALIDator program using Forest Inventory and Analysis data.</em></div>
+</div>
+</center>
+</div>
+<div id="section-3" class="section level1">
+<h1></h1>
+<p>Now we can use data compiled from a previous inventory in Minnesota to estimate forestland area change. This time, open the EVALIDator homepage in a new window and run a similar analysis. This time, on the second page, select <strong>Show all available inventories</strong>. Now you’ll see many rows for an individual state available with many years to choose from.</p>
+<p>The FIA data are measured in a panel design where all plots in an inventory take several years to complete. In the eastern US, forests are inventoried on a five to seven year cycle, while western US forests are measured on a 10-year cycle. If we want to compare current forestland area estimates (2017-2021) with those from ten years prior (2007-2011), we can select <em>272011N MINNESOTA 2007;2008;2009;2010;2011</em> as the evaluation. On the next page, select <strong>Forest type group</strong> again as the row variable and choose <strong>Ownership group - major</strong> as the column variable.</p>
+<p>The output based on the 2007-2011 data show a total of 17.37 million acres of forestland existing in Minnesota. Hence, the state has seen an increase in forestland area by 295,418 acres over the last 10 years. A closer inspection of forest types shows that some have decreased in area (e.g., aspen/birch) while others have increased (e.g., maple/beech/birch and oak/hickory; Fig. 1).</p>
+<p>While this analysis used data collected across the entire state of Minnesota, users can also select more specific geographic regions tailored to their organization. For example, selecting a “circle retrieval” in step one on the EVALIDator web page will allow a user to input latitude and longitude coordinates to access data within a specified radius (e.g., 50 miles). This is helpful for understanding how forests have changed within wood procurement zones around a mill.</p>
+<p>Similarly, if an organization has a list of counties where they have procured wood from in the past, the county within each state can be selected as a row or page variable in step 4 on the EVALIDator web page to obtain forestland area changes estimates within those counties. If this latter approach is done, be sure to look at the number of FIA plots that are being evaluated within each county in the EVALIDator output to make sure there is a suitable number of them being used (say, greater than 25 plots) to generate the estimate.</p>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>In addition to understanding current forest conditions, the EVALIDator web tool can also provide estimates of changes to forests such as forestland area change. While there remains uncertainty about the information required by companies in regulations outlined in the EUDR and SFI’s Fiber Sourcing Standard, you and your organization can be prepared knowing how to access FIA data to show that wood does not originate from areas that have been deforested or seen significant forestland area change.</p>
+<p>–</p>
+<p><em>By Matt Russell. For more, subscribe to my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly email newsletter</a> to stay ahead on data and analytics trends in the forest products industry.</em></p>
+<p><em>This was previously published as a Technical Review for the <a href="https://forestresources.org/">Forest Resources Association</a>.</em></p>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/">A handy R function for getting ecological division from FIA data</a></h4>
+    <h5>November 18, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/data-management"><kbd class="item-tag">data management</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/ecodivision"><kbd class="item-tag">ecodivision</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/">How much does adding previous diameter and height growth change FVS predictions?</a></h4>
+    <h5>October 31, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fvs"><kbd class="item-tag">FVS</kbd></a>
+    
+    <a href="http://localhost:4321/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

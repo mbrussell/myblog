@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>p-values on </title>
-    <link>https://arbor-analytics.com/tags/p-values/</link>
-    <description>Recent content in p-values on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>P-Values on </title>
+    <link>http://localhost:4321/tags/p-values/</link>
+    <description>Recent content in P-Values on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/p-values/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/p-values/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>P-ing in the woods: p-values in forest science</title>
-      <link>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</link>
+      <link>http://localhost:4321/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</link>
       <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</guid>
-      <description>A meme about p-values. Hat tip to Matt Dancho for the idea for the graphic.The statistics community has had a lot of discussion in recent years about the role of p-values and statistical significance. This has led some to question if we’re relying too much on them as a way of interpreting results from a statistical analysis.
-The “p” in p-value stands for probability, or the probability under a statistical model that a summary of the data would be equal to or more extreme than its observed value.</description>
+      <guid>http://localhost:4321/post/2022-10-10-p-ing-in-the-woods-p-values-in-forest-science/</guid>
+      <description>A meme about p-values. Hat tip to Matt Dancho for the idea for the graphic.&#xD;The statistics community has had a lot of discussion in recent years about the role of p-values and statistical significance. This has led some to question if we’re relying too much on them as a way of interpreting results from a statistical analysis.&#xA;The “p” in p-value stands for probability, or the probability under a statistical model that a summary of the data would be equal to or more extreme than its observed value.</description>
     </item>
-    
     <item>
       <title>Should foresters keep saying “statistically significant”?</title>
-      <link>https://arbor-analytics.com/post/should-foresters-keep-saying-statistically-significant/</link>
+      <link>http://localhost:4321/post/should-foresters-keep-saying-statistically-significant/</link>
       <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/should-foresters-keep-saying-statistically-significant/</guid>
-      <description>The statistics community has had a lot of discussion in recent years about the role of p -values and statistical significance. What does this mean for forest biometricians and analysts that have traditionally used p -values and tests of significance in their daily work?
-The American Statistical Association’s August 2019 edition of their magazine Significance has a number of great articles on significance. They even refer to the term as “the S word”:</description>
+      <guid>http://localhost:4321/post/should-foresters-keep-saying-statistically-significant/</guid>
+      <description>The statistics community has had a lot of discussion in recent years about the role of p -values and statistical significance. What does this mean for forest biometricians and analysts that have traditionally used p -values and tests of significance in their daily work?&#xA;The American Statistical Association’s August 2019 edition of their magazine Significance has a number of great articles on significance. They even refer to the term as “the S word”:</description>
     </item>
-    
   </channel>
 </rss>

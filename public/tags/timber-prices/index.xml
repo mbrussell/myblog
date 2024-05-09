@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>timber prices on </title>
-    <link>https://arbor-analytics.com/tags/timber-prices/</link>
-    <description>Recent content in timber prices on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Timber Prices on </title>
+    <link>http://localhost:4321/tags/timber-prices/</link>
+    <description>Recent content in Timber Prices on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/timber-prices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/timber-prices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Timberlands as investments continue to rise</title>
+      <link>http://localhost:4321/post/2023-01-27-timberlands-as-an-investment-continue-to-rise/</link>
+      <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-01-27-timberlands-as-an-investment-continue-to-rise/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.&#xA;The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth quarter and annual returns for their Timberland Index, an index representing 464 investment-grade timberland properties with a market value of $24.</description>
+    </item>
+    <item>
+      <title>Stumpage prices for sawlogs in Maine, 2019-2020</title>
+      <link>http://localhost:4321/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020/</link>
+      <pubDate>Fri, 23 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2022-12-23-visualizing-stumpage-prices-for-sawlogs-in-maine-2019-2020/</guid>
+      <description>Many states provide information on stumpage prices for commonly harvested timber species. This information provides land managers and landowners a sense of what current prices are for different timber species, products, and regions throughout a state.&#xA;The Maine Forest Service (MFS) collects data on timber sales through a notification process when timber sales occur. The last report from MFS contains over 1,600 reports from landowners that conducted a timber sale in 2020.</description>
+    </item>
     <item>
       <title>Timberlands as investments see biggest gain since 2014</title>
-      <link>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
+      <link>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</link>
       <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
-      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.
-The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
+      <guid>http://localhost:4321/post/2022-01-22-visualizing-timberland-returns-in-the-last-10-years/</guid>
+      <description>Forests and timberlands have long been popular investments that provide returns comparable to other economy-wide measures. The changing private ownership patterns in US forests over the last several decades, as timberlands have been owned or managed by timber investment management organizations or real estate investment trusts, has led to a rise in the benefits of timberland as an investment.&#xA;The National Council of Real Estate Investment Fiduciaries (NCREIF) recently posted fourth-quarter returns for their Timberland Index, an index representing 454 investment-grade timberland properties with a market value of $24 billion.</description>
     </item>
-    
     <item>
       <title>Creating animated bar charts to visualize sawtimber prices</title>
-      <link>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</link>
+      <link>http://localhost:4321/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</link>
       <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</guid>
-      <description>If you’re on social media, you’ve probably seen animated bar charts. My favorite is one that shows the popularity of data science software through time.
-Animated bar graphs are effective when you have a categorical variable that has a different value at multiple time periods. This is why animated bar graphs work well to visualize time series data. These data might typically be represented by multiple lines on a graph that “cross” over time.</description>
+      <guid>http://localhost:4321/post/2021-04-26-creating-animated-bar-charts-to-visualize-satimber-prices/</guid>
+      <description>If you’re on social media, you’ve probably seen animated bar charts. My favorite is one that shows the popularity of data science software through time.&#xA;Animated bar graphs are effective when you have a categorical variable that has a different value at multiple time periods. This is why animated bar graphs work well to visualize time series data. These data might typically be represented by multiple lines on a graph that “cross” over time.</description>
     </item>
-    
   </channel>
 </rss>

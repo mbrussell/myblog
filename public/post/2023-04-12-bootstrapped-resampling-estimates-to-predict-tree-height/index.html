@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>Bootstrapped resampling to model tree biomass</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Bootstrapped resampling to model tree biomass</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/">Bootstrapped resampling to model tree biomass</a></h4>
+    <h5>April 12, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/tidymodels"><kbd class="item-tag">tidymodels</kbd></a>
+    
+    <a href="http://localhost:4321/tags/bootstrap"><kbd class="item-tag">bootstrap</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+<script src="/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/index_files/kePrint/kePrint.js"></script>
+<link href="/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<center>
+<img src="ash_stump.png" width="500" />
+</center>
+<div id="section" class="section level2">
+<h2></h2>
+<p>In one of the first presentations I gave as a graduate student, I discussed a set of regression equations that fit a nonlinear model predicting a forest growth index for several species. As all graduate students do, I spent considerable time preparing my slides and practicing my talk. The presentation went well.</p>
+<p>I used a data splitting approach in my analysis that I presented on, a common technique that trains a model on a large portion of the data (usually around 70%) then tests it on a smaller portion of data not used in model fitting (usually around 30%). After my presentation, a faculty member came up to me and asked, “You ever considered bootstrapping?”</p>
+<p>Up to then, I think I learned about bootstrapping in half a lecture in one of my statistics courses. In my defense, there weren’t great tutorials on how to do bootstrapping in my own field of applied forest science, and statistical packages in software like R weren’t as common as they are today. That day, I learned that bootstrapping regression models could be a viable alternative to traditional regression approaches.</p>
+<p>In a nutshell, bootstrapping is more computationally intensive but doesn’t rely on distribution assumptions (i.e., the assumption of errors that are normally distributed). It works well with data that are “messy” and in situations where only a small number of samples are available.</p>
+<p>The general approach to bootstrapping a regression model is to (1) iteratively sample a subset of the data with replacement, (2) fit the regression model to each subset, and (3) output the regression coefficients from each subset so that you can visualize and interpret results.</p>
+<p>In this tutorial, I use bootstrapping with with <strong>tidymodels</strong> package in R and apply it to estimating tree biomass for several species from the southern United States.</p>
+</div>
+<div id="tree-biomass-data" class="section level2">
+<h2>Tree biomass data</h2>
+<p>To begin, we’ll use many functions from the <strong>tidyverse</strong> package in R to work with the data:</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<p>The objective of this post is to fit a subsample of models that determine the aboveground biomass of trees using tree diameter as a predictor variable. I’ve gathered data from <a href="http://www.legacytreedata.org/">LegacyTreeData</a>, an online repository of individual tree measurements such as volume, weight, and wood density.</p>
+<p>I queried the database to provide all tree measurements for pine species the US State of Georgia. (You can <a href="https://github.com/mbrussell/myblog/blob/master/content/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/ga_tree.csv">find the raw data here</a>, and I’ve previously <a href="https://arbor-analytics.com/post/fit-many-models-with-broom/">written about these data</a>.)</p>
+<p>There are 566 observations from six species that contain a value for the tree’s diameter at breast height(<code>ST_OB_D_BH</code>; cm) and its aboveground dry weight (<code>AG_DW</code>; kg). In this data set, most trees are small in diameter and do not weigh a lot:</p>
+<pre class="r"><code>ggplot(tree, aes(ST_OB_D_BH, AG_DW, col = Species)) +
+  geom_point() +
+  labs(x = &quot;Diameter at breast height (cm)&quot;, 
+       y = &quot;Aboveground dry weight (kg)&quot;) +
+  theme(panel.background = element_rect(fill = &quot;NA&quot;),
+        axis.line = element_line(color = &quot;black&quot;))</code></pre>
+<p><img src="/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Here is a summary of the data we’ll use in the modeling exercise:</p>
+<table class="table table-bordered" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-6">Table 1: </span>Summary statistics for diameter at breast height (DBH; cm)
+and aboveground dry weight (weight; kg) for six pine species from the southeastern US.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Species
+</th>
+<th style="text-align:right;">
+Num trees
+</th>
+<th style="text-align:right;">
+Mean DBH
+</th>
+<th style="text-align:right;">
+Max DBH
+</th>
+<th style="text-align:right;">
+Min DBH
+</th>
+<th style="text-align:right;">
+Mean weight
+</th>
+<th style="text-align:right;">
+Max weight
+</th>
+<th style="text-align:right;">
+Min weight
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Loblolly pine
+</td>
+<td style="text-align:right;">
+186
+</td>
+<td style="text-align:right;">
+7.9
+</td>
+<td style="text-align:right;">
+21.6
+</td>
+<td style="text-align:right;">
+1.8
+</td>
+<td style="text-align:right;">
+16.8
+</td>
+<td style="text-align:right;">
+191.8
+</td>
+<td style="text-align:right;">
+0.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Shortleaf pine
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+7.6
+</td>
+<td style="text-align:right;">
+12.4
+</td>
+<td style="text-align:right;">
+2.8
+</td>
+<td style="text-align:right;">
+11.9
+</td>
+<td style="text-align:right;">
+35.6
+</td>
+<td style="text-align:right;">
+0.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Longleaf pine
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+7.6
+</td>
+<td style="text-align:right;">
+12.4
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+<td style="text-align:right;">
+16.5
+</td>
+<td style="text-align:right;">
+54.0
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Slash pine
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+7.6
+</td>
+<td style="text-align:right;">
+12.4
+</td>
+<td style="text-align:right;">
+3.0
+</td>
+<td style="text-align:right;">
+13.9
+</td>
+<td style="text-align:right;">
+48.0
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Virginia pine
+</td>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+7.7
+</td>
+<td style="text-align:right;">
+12.4
+</td>
+<td style="text-align:right;">
+2.5
+</td>
+<td style="text-align:right;">
+17.1
+</td>
+<td style="text-align:right;">
+58.1
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Eastern white pine
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+7.5
+</td>
+<td style="text-align:right;">
+12.4
+</td>
+<td style="text-align:right;">
+2.5
+</td>
+<td style="text-align:right;">
+12.5
+</td>
+<td style="text-align:right;">
+30.7
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="nonlinear-regression-model-of-tree-biomass" class="section level2">
+<h2>Nonlinear regression model of tree biomass</h2>
+<p>From the previous graph and what we know about tree size-mass relationships, nonlinear equation forms work best. In this case, we’ll refit the classic <a href="https://www.fs.usda.gov/research/treesearch/6996">Jenkins et al. tree biomass models</a> using our the pine tree data. The model form is an exponential model which we’ll save in R as the <code>bio_pred</code> object.</p>
+<p>With most nonlinear applications in R, we’ll also need to specify starting values for each coefficient. Here we’ll use the values for the pine species group from the Jenkins et al. publication and store them in the <code>start_vals</code> object:</p>
+<pre class="r"><code>bio_pred &lt;- as.formula(AG_DW ~ exp(b0 + b1*log(ST_OB_D_BH)))
+
+start_vals &lt;- list(b0 = -2.5356, b1 = 2.4349)</code></pre>
+<p>A classic use of these data would be to use the <code>nls()</code> function in R. Here’s how we can specify that:</p>
+<pre class="r"><code>m.bio &lt;- nls(bio_pred,
+             start = start_vals,
+             data = tree)
+summary(m.bio)</code></pre>
+<pre><code>## 
+## Formula: AG_DW ~ exp(b0 + b1 * log(ST_OB_D_BH))
+## 
+## Parameters:
+##    Estimate Std. Error t value Pr(&gt;|t|)    
+## b0 -3.31397    0.08806  -37.63   &lt;2e-16 ***
+## b1  2.75972    0.03339   82.65   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 5.657 on 564 degrees of freedom
+## 
+## Number of iterations to convergence: 4 
+## Achieved convergence tolerance: 5.058e-06</code></pre>
+<p>We can see that each coefficient has a small <em>p</em>-value. If we compare the size and magnitude of the coefficients to the ones presented in Jenkins et al., we see that they are similar, giving us some confidence in our analysis moving forward.</p>
+</div>
+<div id="bootstrapping-regressions-with-tidymodels" class="section level2">
+<h2>Bootstrapping regressions with tidymodels</h2>
+<p>The <a href="https://www.tidymodels.org/packages/"><strong>tidymodels</strong> package in R</a> has a number of helpful tools for performing regressions and handling their output. The package draws from many useful functions from other packages like <strong>rsample</strong> and <strong>broom</strong>:</p>
+<pre class="r"><code>library(tidymodels)</code></pre>
+<p>One helpful function is <code>tidy()</code>, which compiles regression output into a “tibble”, or a data set that can be used in subsequent analyses. I love this function because you can use the tibble that it creates by merging it to a new data set or visualizing the output:</p>
+<pre class="r"><code>tidy(m.bio)</code></pre>
+<pre><code>## # A tibble: 2 × 5
+##   term  estimate std.error statistic   p.value
+##   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+## 1 b0       -3.31    0.0881     -37.6 5.95e-156
+## 2 b1        2.76    0.0334      82.7 2.28e-317</code></pre>
+<p>Before we bootstrap, we’ll create a generic function to perform the subset of regressions:</p>
+<pre class="r"><code>fit_fx &lt;- function(split){
+  nls(bio_pred, data = analysis(split), start = start_vals)
+  }</code></pre>
+<p>The <code>bootstraps()</code> function from <strong>tidymodels</strong> performs the bootstrap resampling. We’ll ask it to resample from the <code>tree</code> data set a total of 500 times. We set <code>apparent = TRUE</code> to take one additional sample in the analysis, a requirement for some estimates that are produced after the sampling.</p>
+<p>We use the <code>map()</code> function to create a data frame of modeling results, including the coefficients. This is stored in <code>bio_boot</code>:</p>
+<pre class="r"><code>set.seed(123)
+
+bio_boot &lt;-
+  bootstraps(tree, times = 500, apparent = TRUE) %&gt;%
+  mutate(models = map(splits, ~ fit_fx(.x)), 
+      coef_info = map(models, tidy))
+
+bio_boot</code></pre>
+<pre><code>## # Bootstrap sampling with apparent sample 
+## # A tibble: 501 × 4
+##    splits            id           models coef_info       
+##    &lt;list&gt;            &lt;chr&gt;        &lt;list&gt; &lt;list&gt;          
+##  1 &lt;split [566/202]&gt; Bootstrap001 &lt;nls&gt;  &lt;tibble [2 × 5]&gt;
+##  2 &lt;split [566/208]&gt; Bootstrap002 &lt;nls&gt;  &lt;tibble [2 × 5]&gt;
+##  3 &lt;split [566/218]&gt; Bootstrap003 &lt;nls&gt;  &lt;tibble [2 × 5]&gt;
+##  4 &lt;split [566/200]&gt; Bootstrap004 &lt;nls&gt;  &lt;tibble [2 × 5]&gt;
+##  5 &lt;split [566/206]&gt; Bootstrap005 &lt;nls&gt;  &lt;tibble [2 × 5]&gt;
+##  6 &lt;split [566/206]&gt; Bootstrap006 &lt;nls&gt;  &lt;tibble [2 × 5]&gt;
+##  7 &lt;split [566/207]&gt; Bootstrap007 &lt;nls&gt;  &lt;tibble [2 × 5]&gt;
+##  8 &lt;split [566/211]&gt; Bootstrap008 &lt;nls&gt;  &lt;tibble [2 × 5]&gt;
+##  9 &lt;split [566/201]&gt; Bootstrap009 &lt;nls&gt;  &lt;tibble [2 × 5]&gt;
+## 10 &lt;split [566/220]&gt; Bootstrap010 &lt;nls&gt;  &lt;tibble [2 × 5]&gt;
+## # … with 491 more rows</code></pre>
+<p>If we wanted to look at a specific sample (say samples 1 and 167), we could extract the output directly from <code>bio_boot</code>. Note the differences in the b0 and b1 coefficients between the two samples:</p>
+<pre class="r"><code>bio_boot$models[[1]]</code></pre>
+<pre><code>## Nonlinear regression model
+##   model: AG_DW ~ exp(b0 + b1 * log(ST_OB_D_BH))
+##    data: analysis(split)
+##     b0     b1 
+## -3.505  2.848 
+##  residual sum-of-squares: 15302
+## 
+## Number of iterations to convergence: 6 
+## Achieved convergence tolerance: 2.44e-06</code></pre>
+<pre class="r"><code>bio_boot$models[[167]]</code></pre>
+<pre><code>## Nonlinear regression model
+##   model: AG_DW ~ exp(b0 + b1 * log(ST_OB_D_BH))
+##    data: analysis(split)
+##     b0     b1 
+## -3.139  2.682 
+##  residual sum-of-squares: 14350
+## 
+## Number of iterations to convergence: 3 
+## Achieved convergence tolerance: 9.831e-06</code></pre>
+<p>A more efficient way might be to extract the coefficients and store them in a data set named <code>bio_coef</code>:</p>
+<pre class="r"><code>bio_coef &lt;- 
+  bio_boot %&gt;%
+  select(-splits) %&gt;%
+  unnest(cols = c(coef_info)) %&gt;%
+  select(id, term, estimate) 
+
+bio_coef</code></pre>
+<pre><code>## # A tibble: 1,002 × 3
+##    id           term  estimate
+##    &lt;chr&gt;        &lt;chr&gt;    &lt;dbl&gt;
+##  1 Bootstrap001 b0       -3.50
+##  2 Bootstrap001 b1        2.85
+##  3 Bootstrap002 b0       -3.27
+##  4 Bootstrap002 b1        2.73
+##  5 Bootstrap003 b0       -3.25
+##  6 Bootstrap003 b1        2.73
+##  7 Bootstrap004 b0       -3.27
+##  8 Bootstrap004 b1        2.73
+##  9 Bootstrap005 b0       -3.35
+## 10 Bootstrap005 b1        2.79
+## # … with 992 more rows</code></pre>
+<p>Then, we can visualize the distribution in the coefficients from the 500 samples in the form of a histogram:</p>
+<pre class="r"><code>p.coef &lt;- bio_coef %&gt;% 
+  ggplot(aes(x = estimate)) + 
+  geom_histogram(bins = 20, col = &quot;white&quot;) + 
+  facet_wrap(~ term, scales = &quot;free_x&quot;)
+
+p.coef</code></pre>
+<p><img src="/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>While it’s helpful to visualize the distribution of coefficients, we also may want to quantify the key quantiles of them. The <code>int_pctl()</code> function calculates confidence intervals from bootstrap samples. Here are the lower and upper confidence interval values from the bootstrapped estimates:</p>
+<pre class="r"><code>pct_ints &lt;- int_pctl(bio_boot, coef_info, alpha = 0.05)
+
+pct_ints</code></pre>
+<pre><code>## # A tibble: 2 × 6
+##   term  .lower .estimate .upper .alpha .method   
+##   &lt;chr&gt;  &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;     
+## 1 b0     -3.82     -3.21  -2.08   0.05 percentile
+## 2 b1      2.23      2.72   2.96   0.05 percentile</code></pre>
+<p>We can add these values to our visualization to see that the upper and lower bounds (in blue) are not uniformly distributed around the mean estimate (in orange) for each coefficient:</p>
+<pre class="r"><code>p.coef + 
+  geom_vline(data = pct_ints, aes(xintercept = .estimate), 
+             col = &quot;orange&quot;, linewidth = 2, linetype = &quot;dashed&quot;) + 
+  geom_vline(data = pct_ints, aes(xintercept = .lower), 
+             col = &quot;blue&quot;) + 
+  geom_vline(data = pct_ints, aes(xintercept = .upper), 
+             col = &quot;blue&quot;)</code></pre>
+<p><img src="/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>Next, we can use the <code>augment()</code> function to obtain the fitted and residual values for each resampled data point. We’ll sample from 250 runs to limit some of our output:</p>
+<pre class="r"><code>boot_aug &lt;- 
+  bio_boot %&gt;% 
+  sample_n(250) %&gt;% 
+  mutate(augmented = map(models, augment)) %&gt;% 
+  unnest(augmented)
+
+boot_aug</code></pre>
+<pre><code>## # A tibble: 141,500 × 8
+##    splits            id           models coef_i…¹  AG_DW ST_OB…² .fitted  .resid
+##    &lt;list&gt;            &lt;chr&gt;        &lt;list&gt; &lt;list&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1 &lt;split [566/218]&gt; Bootstrap061 &lt;nls&gt;  &lt;tibble&gt; 12.1      6.86   7.32   4.74  
+##  2 &lt;split [566/218]&gt; Bootstrap061 &lt;nls&gt;  &lt;tibble&gt;  0.862    3.05   0.763  0.0987
+##  3 &lt;split [566/218]&gt; Bootstrap061 &lt;nls&gt;  &lt;tibble&gt; 53.8     12.2   36.4   17.4   
+##  4 &lt;split [566/218]&gt; Bootstrap061 &lt;nls&gt;  &lt;tibble&gt;  1.18     2.54   0.459  0.720 
+##  5 &lt;split [566/218]&gt; Bootstrap061 &lt;nls&gt;  &lt;tibble&gt; 18.3     10.9   26.8   -8.53  
+##  6 &lt;split [566/218]&gt; Bootstrap061 &lt;nls&gt;  &lt;tibble&gt;  8.66     6.86   7.32   1.34  
+##  7 &lt;split [566/218]&gt; Bootstrap061 &lt;nls&gt;  &lt;tibble&gt; 20.9     11.4   30.4   -9.52  
+##  8 &lt;split [566/218]&gt; Bootstrap061 &lt;nls&gt;  &lt;tibble&gt; 11.9      7.62   9.82   2.11  
+##  9 &lt;split [566/218]&gt; Bootstrap061 &lt;nls&gt;  &lt;tibble&gt;  5.90     5.33   3.63   2.26  
+## 10 &lt;split [566/218]&gt; Bootstrap061 &lt;nls&gt;  &lt;tibble&gt;  4.40     5.84   4.68  -0.283 
+## # … with 141,490 more rows, and abbreviated variable names ¹​coef_info,
+## #   ²​ST_OB_D_BH</code></pre>
+<p>Then, we can visualize how the resampling approach with bootstrapping results in varying relationships in predicting aboveground tree biomass based on tree diameter, with each bootstrapped model shown in blue:</p>
+<pre class="r"><code>ggplot(boot_aug, aes(x = ST_OB_D_BH, y = AG_DW )) +
+  geom_line(aes(y = .fitted, group = id), alpha = .2, col = &quot;blue&quot;) +
+  geom_point() +
+  labs(x = &quot;Diameter at breast height (cm)&quot;, 
+       y = &quot;Aboveground dry weight (kg)&quot;) +
+  theme(panel.background = element_rect(fill = &quot;NA&quot;),
+        axis.line = element_line(color = &quot;black&quot;))</code></pre>
+<p><img src="/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+</div>
+<div id="comparing-biomass-model-predictions" class="section level2">
+<h2>Comparing biomass model predictions</h2>
+<p>Finally, we may be interested to see how the different models we’ve considered result in predictions of biomass. The <code>tree_test</code> object is a small data set that applies each of three predictions from the models we’ve considered:</p>
+<ul>
+<li>The original Jenkins et al. 2004 model for the pine species group,</li>
+<li>The nonlinear least squares model fit with parametric techniques (from the <code>m.bio</code> object), and</li>
+<li>The NLS models fit with bootstrap estimates.</li>
+</ul>
+<p>The <code>AG_DW_pred</code> variable stores the predicted biomass:</p>
+<pre class="r"><code>tree_test &lt;- tibble(model = rep(c(&quot;Jenkins et al. 2004&quot;, 
+                                  &quot;NLS refit&quot;, 
+                                  &quot;NLS refit, with bootstrap&quot;),
+                                c(20, 20, 20)),
+                    dbh = rep(seq(1, 20, by = 1), 3))
+
+fx_AG_DW &lt;- function(model, ST_OB_D_BH){
+  if(model == &quot;Jenkins et al. 2004&quot;)
+    {AG_DW &lt;- exp(-2.5356 + 2.4349*log(ST_OB_D_BH))}
+  else if(model == &quot;NLS refit&quot;)
+    {AG_DW &lt;- exp(-3.31397 + 2.75972*log(ST_OB_D_BH))}
+  else if(model == &quot;NLS refit, with bootstrap&quot;)
+    {AG_DW &lt;- exp(as.numeric(pct_ints[1,3]) + 
+                    as.numeric(pct_ints[2,3])*log(ST_OB_D_BH))}
+  else(AG_DW &lt;- 0)
+  return(AG_DW = AG_DW)
+}
+
+tree_test$AG_DW_pred &lt;- mapply(fx_AG_DW, 
+                               model = tree_test$model, 
+                               ST_OB_D_BH = tree_test$dbh)</code></pre>
+<p>Then, we can plot the models to observe their differences. The original Jenkins et al. model underpredicts at larger diameters relative to the models that were refit to the data:</p>
+<pre class="r"><code>ggplot(tree_test, aes(x = dbh, y = AG_DW_pred, col = model)) +
+  geom_line() +
+  geom_point() +
+  labs(x = &quot;Diameter at breast height (cm)&quot;, 
+       y = &quot;Predicted aboveground dry weight (kg)&quot;) +
+  theme(panel.background = element_rect(fill = &quot;NA&quot;),
+        axis.line = element_line(color = &quot;black&quot;))</code></pre>
+<p><img src="/post/2023-04-12-bootstrapped-resampling-estimates-to-predict-tree-height/index_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Using bootstrapping to estimate regression coefficients has many benefits. It works well with a small number of observations and the analyst does not need to rely on distribution assumptions about the data and the resulting error terms. The <strong>tidymodels</strong> package makes performing bootstrap methods a breeze, and a variety of functions enable the analyst to visualize and interpret output from the bootstrap samples.</p>
+<p>–</p>
+<p><em>Special thanks to Julia Silge’s <a href="https://juliasilge.com/blog/beer-production/">excellent tutorial on tidymodels</a> that inspired this post, and the <a href="https://www.tidymodels.org/learn/statistics/bootstrap/">tidymodels page from Posit</a> for helpful code.</em></p>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/">A list of R packages for forestry applications</a></h4>
+    <h5>November 24, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
+    
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/">How much does adding previous diameter and height growth change FVS predictions?</a></h4>
+    <h5>October 31, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fvs"><kbd class="item-tag">FVS</kbd></a>
+    
+    <a href="http://localhost:4321/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

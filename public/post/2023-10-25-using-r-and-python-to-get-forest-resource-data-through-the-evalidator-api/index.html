@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>Using R and Python to get forest resource data through the EVALIDator API</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Using R and Python to get forest resource data through the EVALIDator API</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-10-25-using-r-and-python-to-get-forest-resource-data-through-the-evalidator-api/">Using R and Python to get forest resource data through the EVALIDator API</a></h4>
+    <h5>October 25, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/evalidator"><kbd class="item-tag">EVALIDator</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<div id="section" class="section level1">
+<h1></h1>
+<img src="example_evalid.png" width="500" />
+</center>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>If you work with forestry data across the United States, you’ve probably had to turn to Forest Inventory and Analysis (FIA) data at one time or another to look at the status and trends in our forest resources. The FIA database has information contained from over 130,000 forest inventory plots across the country.</p>
+<p>One of the tools that analysts often use to access FIA data is the <a href="https://apps.fs.usda.gov/fiadb-api/evalidator">the EVALIDator web interface</a>. EVALIDator is a web-based Application Programming Interface (API) that generates population estimates for core forestry metrics. It provides the ability to query FIA information at the state level or a circular retrieval of information around a fixed geographic point.</p>
+<p>There was <a href="https://vimeo.com/861362270/4d996ee479?share=copy">an excellent webinar offered in August</a> hosted by the FIA National User Group that highlighted some new features available through EVALIDator. For a long while, analysts have used it’s web interface to point and click their way to estimating forest resources after selecting the forestry metrics and geographic scale they’re interested in. As a long-time EVALIDator user, this was a great way to access FIA data. But dealing with the output in an HTML format and getting it into different software to analyze was always an additional step.</p>
+<p>I was happy to learn in the webinar about new ways to directly access FIA estimates through R and Python using the EVALIDator API. For me, this can save time and effort given most of my analyses, graphing, and reporting are done through R.</p>
+<p>All of the documentation for these steps can be found in the <a href="https://apps.fs.usda.gov/fiadb-api/">FIADB-API &amp; EVALIDator user documentation</a>. I’ll go through a few examples where I access data from the state of Maine.</p>
+<div id="using-r-to-access-fia-data-at-the-state-level" class="section level2">
+<h2>Using R to access FIA data at the state level</h2>
+<p>This first example will access the total amount of carbon stored in the live aboveground portions of trees growing on forestland in Maine, measured in metric tonnes. I’ll ask for estimates to be provided by forest type group and ownership.</p>
+<p>First, I’ll use R and will load a few packages to access the data:</p>
+<pre class="r"><code>library(tidyverse)
+library(httr)
+library(jsonlite)
+library(rlist)
+library(knitr)</code></pre>
+<p>If you look at the bottom of the <a href="https://apps.fs.usda.gov/fiadb-api/">documentation webpage</a>, you’ll see example use cases for extracting FIA estimates using R and Python. There are two examples for each that use GET and POST scripts. The GET scripts allow you to enter a complete URL if you know the attributes you’re interested in. The POST script, which I copy here with the <code>fiadb_api_POST()</code> function, allows you to directly input the variables you’re interested in in R:</p>
+<pre class="r"><code># fiadb_api_POST() will accept a FIADB-API full report URL and return data frames
+# See descriptor: https://apps.fs.usda.gov/fiadb-api/
+
+fiadb_api_POST &lt;- function(argList){
+  # make request
+  resp &lt;- POST(url = &quot;https://apps.fs.usda.gov/fiadb-api/fullreport&quot;, 
+               body = argList, 
+               encode = &quot;form&quot;)
+  # parse response from JSON to R list
+  respObj &lt;- content(resp, &quot;parsed&quot;, encoding = &quot;ISO-8859-1&quot;)
+  # create empty output list
+  outputList &lt;- list()
+  # add estimates data frame to output list
+  outputList[[&#39;estimates&#39;]] &lt;- as.data.frame(do.call(rbind,respObj$estimates))
+
+  # if estimate includes totals and subtotals, add those data frames to output list
+  if (&#39;subtotals&#39; %in% names(respObj)){
+    subtotals &lt;- list()
+    # one subtotal data frame for each grouping variable
+    for (i in names(respObj$subtotals)){
+      subtotals[[i]] &lt;- as.data.frame(do.call(rbind,respObj$subtotals[[i]]))
+    }
+    outputList[[&#39;subtotals&#39;]] &lt;- subtotals
+
+    # totals data frame
+    outputList[[&#39;totals&#39;]] &lt;- as.data.frame(do.call(rbind,respObj$totals))
+  }
+
+  # add estimate metadata
+  outputList[[&#39;metadata&#39;]] &lt;- respObj$metadata
+
+  return(outputList)
+}</code></pre>
+<p>The first item to know before accessing FIA data is <a href="https://apps.fs.usda.gov/fiadb-api/fullreport/parameters/snum">the numeric code</a> corresponding to the variable you’re interested in. In my case, this is <code>snum = 98</code>, corresponding to the variable that represents “Forest carbon pool 1: live aboveground, in metric tonnes, on forest land.” A note of caution: there are <em>thousands</em> of variables to choose from, but I suspect the most popular ones are listed toward the top of the page.</p>
+<p>The second item to know is which <strong>wc</strong> code you’re interested in. I have no idea why it’s abbreviated “wc”, but it connects the state FIPS code with the 4-digit FIA inventory year. For example, I’m interested in <code>wc = 232021</code> to obtain data from Maine’s (FIPS code 23) most recent inventory, collected in 2021. You could go back to inventories collected decades ago if you were interested in looking at trends, and <a href="https://apps.fs.usda.gov/fiadb-api/fullreport/parameters/wc">those codes are described here</a>.</p>
+<p>Finally, you can use the <code>rselected</code> and <code>cselected</code> statements to identify the variables you’d like to group by in rows and columns. In our case this is forest type group and ownership group. I’ll obtain the data in an NJSON format, but you can also obtain the data in HTML, XML, or other formats. You can specify these parameters in <code>arg_list</code> and then store the data in a data frame called <code>all_rows</code>. I love how the data are presented in a long and “tidy” format:</p>
+<pre class="r"><code>arg_list_maine &lt;- list(snum = 98,
+               wc = 232021,
+               rselected = &#39;Forest type group&#39;, 
+               cselected = &#39;Ownership group - Major&#39;,
+               outputFormat = &#39;NJSON&#39;)
+
+# submit list to POST request function
+post_data_maine &lt;- fiadb_api_POST(arg_list_maine)
+
+# estimate data frame
+all_rows_maine &lt;- post_data_maine[[&#39;estimates&#39;]]
+
+print(all_rows_maine)</code></pre>
+<pre><code>##     ESTIMATE                                    GRP1          GRP2 PLOT_COUNT
+## 1    3907321 `0001 White \\/ red \\/ jack pine group  `0001 Public         22
+## 2   34794633 `0001 White \\/ red \\/ jack pine group `0002 Private        248
+## 3   14315831              `0002 Spruce \\/ fir group  `0001 Public        110
+## 4  105408801              `0002 Spruce \\/ fir group `0002 Private       1022
+## 5   62430.73 `0005 Loblolly \\/ shortleaf pine group `0002 Private          1
+## 6   200511.4            `0018 Exotic softwoods group  `0001 Public          1
+## 7   530919.7            `0018 Exotic softwoods group `0002 Private          5
+## 8   823248.1                `0020 Oak \\/ pine group  `0001 Public          5
+## 9   10605584                `0020 Oak \\/ pine group `0002 Private         73
+## 10  992879.7             `0021 Oak \\/ hickory group  `0001 Public          8
+## 11  11742843             `0021 Oak \\/ hickory group `0002 Private         85
+## 12  409025.6  `0023 Elm \\/ ash \\/ cottonwood group  `0001 Public          7
+## 13   6008678  `0023 Elm \\/ ash \\/ cottonwood group `0002 Private         85
+## 14  14742242   `0024 Maple \\/ beech \\/ birch group  `0001 Public        111
+## 15 136478067   `0024 Maple \\/ beech \\/ birch group `0002 Private       1244
+## 16   3260893             `0025 Aspen \\/ birch group  `0001 Public         28
+## 17  29090608             `0025 Aspen \\/ birch group `0002 Private        330
+## 18  5419.386             `0030 Other hardwoods group  `0001 Public          2
+## 19  734723.1             `0030 Other hardwoods group `0002 Private         26
+## 20  2668.444                        `0034 Nonstocked  `0001 Public          1
+## 21  56632.09                        `0034 Nonstocked `0002 Private         10
+##          SE SE_PERCENT     VARIANCE
+## 1  990560.1   25.35138 981209246740
+## 2   2439110   7.010017 5.949256e+12
+## 3   1347882   9.415325 1.816786e+12
+## 4   3094724   2.935926 9.577318e+12
+## 5  69482.77   111.2958   4827855237
+## 6  197334.1   98.41544  38940765038
+## 7    322112   60.67057 103756168849
+## 8  383432.3   46.57554 147020293831
+## 9   1405341   13.25095 1.974982e+12
+## 10   376683   37.93843 141890069265
+## 11  1392590   11.85905 1.939306e+12
+## 12 210157.7   51.38008  44166257399
+## 13 792561.9   13.19029 628154421011
+## 14  1316509   8.930182 1.733196e+12
+## 15  3598029   2.636342 1.294581e+13
+## 16   719189   22.05497 517232753389
+## 17  1931400   6.639256 3.730306e+12
+## 18 4325.627   79.81766     18711045
+## 19   191230   26.02749  36568920234
+## 20 2380.922    89.2251      5668789
+## 21 31032.09   54.79594    962990504</code></pre>
+<p>This makes the output easy to plot immediately. Here’s a graph of the output, where you can see the vast amount of carbon stored on private land in Maine, mostly in the spruce/fir and maple/beech/birch forest type groups:</p>
+<pre class="r"><code>ggplot(all_rows_maine, aes(x = as.character(GRP2), 
+                           y = as.numeric(ESTIMATE))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  facet_wrap(~as.character(GRP1)) +
+  labs(x = &quot;Ownership&quot;,
+       y = &quot;Forest carbon (metric tonnes)&quot;)</code></pre>
+<p><img src="/post/2023-10-25-using-r-and-python-to-get-forest-resource-data-through-the-evalidator-api/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Note you’ll need to play with the names of variables a bit to tidy them up, e.g., turning “`0001 Public” to simply “Public”. But the R functions allow you to quickly obtain the data of interest. You can also grab the subtotals of the output to sum all values within each forest type or ownership category:</p>
+<pre class="r"><code>subtotals_maine &lt;- post_data_maine[[&#39;subtotals&#39;]]
+
+print(subtotals_maine)</code></pre>
+<pre><code>## $GRP1
+##     ESTIMATE                                    GRP1 PLOT_COUNT       SE
+## 1   38701954 `0001 White \\/ red \\/ jack pine group        269  2619361
+## 2  119724633              `0002 Spruce \\/ fir group       1127  3346654
+## 3   62430.73 `0005 Loblolly \\/ shortleaf pine group          1 69482.77
+## 4   731431.1            `0018 Exotic softwoods group          6 377163.5
+## 5   11428833                `0020 Oak \\/ pine group         78  1452041
+## 6   12735722             `0021 Oak \\/ hickory group         92  1432194
+## 7    6417703  `0023 Elm \\/ ash \\/ cottonwood group         92 815615.3
+## 8  151220309   `0024 Maple \\/ beech \\/ birch group       1348  3791562
+## 9   32351501             `0025 Aspen \\/ birch group        357  2057666
+## 10  740142.5             `0030 Other hardwoods group         28 191278.9
+## 11  59300.54                        `0034 Nonstocked         11 31123.29
+##    SE_PERCENT     VARIANCE
+## 1    6.768034 6.861054e+12
+## 2    2.795292 1.120009e+13
+## 3    111.2958   4827855237
+## 4    51.56515 142252326043
+## 5    12.70507 2.108422e+12
+## 6    11.24549 2.051181e+12
+## 7    12.70884 665228392598
+## 8     2.50731 1.437594e+13
+## 9    6.360341 4.233989e+12
+## 10   25.84353  36587631279
+## 11     52.484    968659293
+## 
+## $GRP2
+##    ESTIMATE          GRP2 PLOT_COUNT      SE SE_PERCENT     VARIANCE
+## 1  38660040  `0001 Public        274 1660378   4.294817 2.756855e+12
+## 2 335513920 `0002 Private       2891 3375482   1.006063 1.139388e+13</code></pre>
+<p>Finally, you can grab the total number that sums all values. In this case, we learn that there’s about 374 million metric tonnes of carbon stored in the live aboveground portions of trees in Maine forests:</p>
+<pre class="r"><code>totals_maine &lt;- post_data_maine[[&#39;totals&#39;]]
+print(totals_maine)</code></pre>
+<pre><code>##    ESTIMATE PLOT_COUNT      SE SE_PERCENT     VARIANCE
+## 1 374173960       3143 3432307  0.9173025 1.178073e+13</code></pre>
+</div>
+<div id="using-r-to-access-fia-data-around-a-fixed-geographic-point" class="section level2">
+<h2>Using R to access FIA data around a fixed geographic point</h2>
+<p>A favorite use of EVALIDator by many is the ability to query FIA data around a specific location. For example, a user can generate population estimates for a 50-mile radius around a proposed mill that uses wood.</p>
+<p>Here’s an example that queries FIA data in a 25-mile radius surrounding Bangor, Maine. It estimates the total forestland area (<code>snum = 2</code>) by stand age class in 20-year increments and stand size class (large-, medium-, or small-diameter trees). The latitude and longitude coordinates are specified in the function:</p>
+<pre class="r"><code>arg_list_bangor &lt;- list(lat = 44.809,
+                        lon = -68.771, 
+                        radius = 25,
+                        wc = 232021,
+                        snum = 2,
+                        rselected = &#39;Stand-size class&#39;, 
+                        cselected = &#39;Stand age 20 yr classes (0 to 100 plus)&#39;,
+                        outputFormat = &#39;NJSON&#39;)
+
+# submit list to POST request function
+post_data_bangor &lt;- fiadb_api_POST(arg_list_bangor)
+
+# estimate data frame
+all_rows_bangor &lt;- post_data_bangor[[&#39;estimates&#39;]]
+
+print(all_rows_bangor)</code></pre>
+<pre><code>##    ESTIMATE                  GRP1               GRP2 PLOT_COUNT       SE
+## 1   14155.6  `0001 Large diameter  `0002 21-40 years          4 7338.611
+## 2  45473.05  `0001 Large diameter  `0003 41-60 years         10    15372
+## 3  90436.76  `0001 Large diameter  `0004 61-80 years         18 22385.23
+## 4    107109  `0001 Large diameter `0005 81-100 years         23 24368.78
+## 5  41243.83  `0001 Large diameter   `0006 100+ years          7  15696.3
+## 6  51611.41 `0002 Medium diameter  `0002 21-40 years         12 16379.57
+## 7  113830.6 `0002 Medium diameter  `0003 41-60 years         25 24352.08
+## 8  199754.6 `0002 Medium diameter  `0004 61-80 years         37 33455.07
+## 9  103521.8 `0002 Medium diameter `0005 81-100 years         21 24195.48
+## 10   5758.7 `0002 Medium diameter   `0006 100+ years          1 6011.665
+## 11  19655.8  `0003 Small diameter   `0001 0-20 years          4 10104.88
+## 12 90910.76  `0003 Small diameter  `0002 21-40 years         16 23393.71
+## 13    40205  `0003 Small diameter  `0003 41-60 years          7 15304.59
+## 14 13209.02  `0003 Small diameter  `0004 61-80 years          3 8759.869
+## 15 21404.85  `0003 Small diameter `0005 81-100 years          3  11056.3
+## 16 5305.999  `0003 Small diameter   `0006 100+ years          1 5045.363
+##    SE_PERCENT   VARIANCE
+## 1    51.84246   53855209
+## 2    33.80465  236298512
+## 3    24.75236  501098555
+## 4    22.75138  593837455
+## 5    38.05733  246373784
+## 6    31.73633  268290228
+## 7    21.39326  593023809
+## 8    16.74808 1119241412
+## 9    23.37235  585421221
+## 10   104.3927   36140117
+## 11   51.40919  102108689
+## 12   25.73261  547265614
+## 13   38.06637  234230329
+## 14   66.31735   76735306
+## 15   51.65323  122241669
+## 16    95.0879   25455691</code></pre>
+<p>You can plot these data directly to visualize the trends within the 25-mile radius:</p>
+<pre class="r"><code>ggplot(all_rows_bangor, aes(x = as.character(GRP2), 
+                            y = as.numeric(ESTIMATE),
+                            fill = as.character(GRP1))) +
+  geom_bar(stat = &quot;identity&quot;) +
+  labs(x = &quot;Stand age&quot;,
+       y = &quot;Forestland area (acres)&quot;) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))</code></pre>
+<p><img src="/post/2023-10-25-using-r-and-python-to-get-forest-resource-data-through-the-evalidator-api/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>The new features available in the EVALIDator API that allow you to access data through R or Python can help to speed up data analysis using FIA data. You can access the entire history of FIA data and analyze forest resources data by state or a circular retrieval from a fixed geographic point. Special thanks to the USDA Forest Service staff that have made this available!</p>
+<p>–</p>
+<p><em>By Matt Russell. <a href="mailto:matt@arbor-analytics.com">Email Matt</a> with any questions or comments.</em></p>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/">A quick and easy way to estimate forestland area change across US states</a></h4>
+    <h5>February 16, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-ownership"><kbd class="item-tag">forest ownership</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestland-area"><kbd class="item-tag">forestland area</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/">A list of R packages for forestry applications</a></h4>
+    <h5>November 24, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
+    
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

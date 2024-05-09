@@ -1,0 +1,34 @@
+USFSspID,FVSspID,SpeciesName
+1,BF,balsam fir
+2,PI,spruce species
+4,RS,red or black spruce
+5,WS,white spruce
+6,EH,eastern hemlock
+7,WC,northern white-cedar
+9,RN,red pine
+10,WP,eastern white pine
+11,TA,tamarack
+15,RM,red maple
+16,PB,paper birch
+17,BA,black ash
+18,QA,quaking aspen
+19,BW,basswood
+20,GB,gray birch
+21,BC,black cherry
+22,PR,pin cherry
+23,EL,elm species
+24,BT,bigtooth aspen
+25,OH,other soft hardwoods
+26,BP,balsam poplar
+31,WA,white ash
+32,AB,American beech
+33,YB,yellow birch
+34,HH,hophornbeam
+35,SM,sugar maple
+36,OK,oak species
+37,SE,serviceberry species
+38,OH,striped maple
+40,OH,other hard hardwoods
+99,OH,other or unknown
+334,OH,dead hardwood
+335,OS,dead softwood

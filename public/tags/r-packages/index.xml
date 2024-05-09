@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R packages on </title>
-    <link>https://arbor-analytics.com/tags/r-packages/</link>
-    <description>Recent content in R packages on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>R Packages on </title>
+    <link>http://localhost:4321/tags/r-packages/</link>
+    <description>Recent content in R Packages on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/r-packages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/r-packages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A list of R packages for forestry applications</title>
+      <link>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/</guid>
+      <description>Image created with DALL·E 3.&#xD;Two years ago I wrote about the different R packages that are available to use in forestry applications. Back then, there were 16,166 packages archived on the Comprehensive R Archive Network (CRAN). Today, the CRAN repository contains 20,102 packages.&#xA;The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users. The value of using R packages is that someone else might have already written a suite of functions for you.</description>
+    </item>
     <item>
       <title>Five R packages every forest analyst should be using</title>
-      <link>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
+      <link>http://localhost:4321/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</link>
       <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
-      <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.
-Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.
-R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
+      <guid>http://localhost:4321/post/2022-01-14-six-r-packages-every-forest-analysts-should-be-using/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. Forest analysts use R packages, or collections of functions and data sets, to help guide their everyday work.&#xA;Last year I wrote about 31 R packages available to forest analysts available on the Comprehensive R Archive Network (CRAN) package repository. For perspective, as of today CRAN has archived 18,732 packages since 2006.&#xA;R users also make packages available on GitHub, particularly for specific disciplines like forest inventory and measurements.</description>
     </item>
-    
     <item>
       <title>31 R packages for forest analysts</title>
-      <link>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</link>
+      <link>http://localhost:4321/post/31-r-packages-for-forest-analysts/</link>
       <pubDate>Wed, 26 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/31-r-packages-for-forest-analysts/</guid>
-      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.
-The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
+      <guid>http://localhost:4321/post/31-r-packages-for-forest-analysts/</guid>
+      <description>The R program is one of the most popular programs being used by forest analysts today. The power of R comes from its diversity of packages. A package is a collection of functions and data sets developed by R users.&#xA;The value of using R packages is that someone else might have already written a suite of functions for you. These can include your coworkers, colleagues, and other professionals. R packages are written to be collaborative so that they can be shared with others.</description>
     </item>
-    
   </channel>
 </rss>

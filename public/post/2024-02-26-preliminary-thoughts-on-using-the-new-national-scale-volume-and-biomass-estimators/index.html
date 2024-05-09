@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Hugo 0.125.7">
+        <title>Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Roboto', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: darkgreen;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/white.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+		
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ 
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136790074-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-136790074-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Blog</a></li>
+                            
+                                <li><a href="/events/">Events</a></li>
+                            
+                                <li><a href="/newsletter/">Newsletter</a></li>
+                            
+                                <li><a href="/podcast/">Podcast</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://cse.google.com/cse?cx=011047172664623094254:fidgmaupcky"><i class="fa fa-search"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+
+<div id="section" class="section level1">
+<h1></h1>
+<center>
+<img src="nsvb.png" width="500" />
+</center>
+</div>
+<div id="section-1" class="section level1">
+<h1></h1>
+<p>Last fall the USDA Forest Service released the <a href="https://www.fs.usda.gov/research/programs/fia/nsvb">National Scale Volume Biomass (NSVB)</a>, a new modeling system for estimating volume, biomass, and carbon stored in individual trees. These new equations replace the previously-used Component Ratio Method (CRM) and are the result of several years of research. Volume, biomass, and carbon attributes in the US Forest Inventory and Analysis (FIA) database have been updated with values from the new equations.</p>
+<p>Forest analysts may also be interested in applying the new NSVB equations to their own forest inventory data. As the new equations are largely thought to become the “national standard”, being able to apply the equations outside of the FIA database is needed within the forestry community. This can support a number of use cases including forest carbon projects and forest management planning, among many others.</p>
+<p>To my knowledge, no R package or similar library currently exists that allows a user to apply the NSVB equations to their own forest inventory data, a disappointment given all the research and funding that’s gone into developing the equations. But most of the documentation is laid out in <a href="https://www.fs.usda.gov/research/treesearch/66998">this report by Westfall and others</a> that contains four excellent examples that apply the equations to tree observations.</p>
+<p>I’ve recently “coded up” the new equations in R, which may be another post to share in the future. Here are a few initial thoughts on implementing the new equations:</p>
+<div id="get-to-know-your-neighborhood-ecological-division." class="section level2">
+<h2>1. Get to know your neighborhood ecological division.</h2>
+<p>One of the primary differences in the NSVB models is the use of ecological provinces and divisions. I may have learned about ecological provinces and divisions in my forestry schooling, but I don’t use them regularly. Species within each ecological division (provided there were enough observations in the modeling data set) have their own set of model parameters that are used in the framework. As an example, there are 10 different volume equations for Douglas-fir dependending on which ecological division the forest is located in.</p>
+<p>These divisions are outlined in the US National Hierarchical Framework of Ecological Units, described in detail in a map produced by <a href="https://www.fs.usda.gov/research/treesearch/48672">Cleland and others in 2007</a>. Within divisions there are ecological provinces. Within those provinces there are ecological sections and subsections. At various stages in the NSVB modeling framework, the division or province will need to be known to apply the appropriate set of coefficients.</p>
+<p>I wrote about ecological divisions <a href="https://arbor-analytics.com/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/">a few months ago</a> because they’re an important part of the new modeling framework. For projects that span multiple divisions and provinces, users may need to apply the Cleland map to see where their forests lie. Ecological divisions don’t follow boundaries like state and county lines, so analysts may need to incorporate these into their own workflow.</p>
+</div>
+<div id="be-cautious-when-dealing-with-species-codes." class="section level2">
+<h2>2. Be cautious when dealing with species codes.</h2>
+<p>In addition to the multiple equations for a species depending on ecological division, species are handled delicately in the NSVB framework. Species-level coefficients may also be provided across all ecological divisions or may be grouped into species groups for estimation. These species groups follow ones presented in <a href="https://www.fs.usda.gov/research/treesearch/6996">Jenkins et al. 2003</a>. Some of the grouped equations use a mixed model form with a random effect, providing “quasi” species-level estimates.</p>
+<p>In total, there should be an equation to use for every species in your tree list depending on where the tree is located. Keeping track of which equation to use can be cumbersome, but it’s best to closely follow the coefficients listed in the supplemental data tables provided <a href="https://www.fs.usda.gov/research/treesearch/66998">in the report</a>.</p>
+</div>
+<div id="there-are-only-four-model-forms-which-are-relatively-easy-to-work-with." class="section level2">
+<h2>3. There are only four model forms, which are (relatively) easy to work with.</h2>
+<p>The new framework provides four different model forms, with the one that fit the data best ultimately chosen as the one to represent that species. These models depend on a tree’s diameter and height. An equation to predict a tree’s height along its stem at the merchantable diameter limit is a bit tricky, but a required value to determine merchantable volume.</p>
+<p>Using relatively few model forms is parsimonious and makes the analysis straightforward. Users of the former CRM method and the abundant volume equation forms that differ by region and species might be relieved.</p>
+</div>
+<div id="models-rely-on-heightactual-height-and-cull-estimates." class="section level2">
+<h2>4. Models rely on height/actual height and cull estimates.</h2>
+<p>The NSVB models require estimates of actual height and cull percentage on individual trees. These variables were also required in the CRM method, but it’s worth mentioning here because these values are not always collected in forest inventories.</p>
+<p><strong>Actual height</strong> measures the height of the tree from ground level to the highest remaining portion of the tree. This differs from the <strong>height</strong> variable used in the FIA program which assumes a tree has all of its tops and limbs intact. <strong>Cull</strong> refers to the proportion of a live or dead tree that is rotten or missing.</p>
+<p>Not having a measurement of height assuming an intact stem or an visual estimate of cull can lead to likely overestimations of volume, biomass, and carbon. Users that require an accurate estimate of carbon in standing dead trees or are working in recently disturbed forests should take note, as these conditions contain trees with broken tops.</p>
+<p>Healthy trees will likely have an actual height equal to their true height, and users may be able to get around this by assuming the two values are equal. If the proportion of a tree that is in cull was not collected in an inventory, users could make some rough approximations if the tree is designated as unacceptable growing stock or other defects are noted in the tree. Or, use any other historical data your organization might have that allows you to best determine these attributes.</p>
+<p>–</p>
+<p><em>By Matt Russell. For more, subscribe to my <a href="https://mailchi.mp/d96897dc0f46/arbor-analytics">monthly email newsletter</a> to stay ahead on data and analytics trends in the forest products industry.</em></p>
+</div>
+</div>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2024-02-16-a-quick-and-easy-way-to-estimate-forestland-area-change-across-us-states/">A quick and easy way to estimate forestland area change across US states</a></h4>
+    <h5>February 16, 2024</h5>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-ownership"><kbd class="item-tag">forest ownership</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestland-area"><kbd class="item-tag">forestland area</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/">A list of R packages for forestry applications</a></h4>
+    <h5>November 24, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r"><kbd class="item-tag">R</kbd></a>
+    
+    <a href="http://localhost:4321/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
+    
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-11-17-a-handy-function-for-getting-ecological-division-from-fia-data/">A handy R function for getting ecological division from FIA data</a></h4>
+    <h5>November 18, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/data-management"><kbd class="item-tag">data management</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/ecodivision"><kbd class="item-tag">ecodivision</kbd></a>
+    
+
+</div>
+ 
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">© Arbor Custom Analytics LLC</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

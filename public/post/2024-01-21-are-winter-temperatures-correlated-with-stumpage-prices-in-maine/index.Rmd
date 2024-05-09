@@ -1,0 +1,209 @@
+---
+title: Are winter temperatures correlated with stumpage prices in Maine?
+author: Matt Russell
+date: '2024-01-24'
+slug: []
+categories:
+  - Forest products
+tags:
+  - climate
+  - forest products
+  - forest industry
+  - stumpage
+---
+
+# 
+<center>
+
+![](me_wood.png){width=500px}
+</center>
+#  
+
+I was inspired after reading an article written by Lloyd Irland in *The Northern Logger* (January 2024) about the  upswings and downswings in lumber prices in the last several decades. High prices for lumber were recently seen during the COVID-19 pandemic when everybody was remodeling and installing new wooden decks with all the free time they had. The intricacies of lumber prices are explained well in Lloyd's article. An interesting observation is that during times of high lumber prices, the amount of money landowners received for selling their wood (termed *stumpage* in forestry parlance) barely nudged.    
+
+There are many factors that influence how much a landowners is paid for their wood. Local markets and competition in an area matter a lot, but so does the weather. Loggers are often faced with weather challenges when harvesting timber, often from it being too wet to operate on sensitive sites. 
+
+Ask most loggers here in Maine and across the Northeast, and most will tell you the 2023-2024 winter has been mild. This presents a challenge for loggers as they rely on frozen ground conditions to harvest timber on many sites. A warm winter can limit the productivity of timber harvesters and haulers in northern states.
+
+I was curious to find out if there was any correlation between stumpage payments that landowners receive and how cold winters are. The idea being that if it's been a warm winter, supply may be limited because loggers cannot harvest as much volume, and prices may be more favorable. But a cold winter might signal a timber harvesting community that is at capacity with plenty of supply. 
+
+```{r, echo = F, warning = F, message = F}
+library(tidyverse)
+library(broom)
+library(knitr)
+library(formattable)
+library(kableExtra)
+```
+
+```{r, echo = F, warnings = F, message = F}
+# Read in climate datasets
+# Source: https://mco.umaine.edu/climate/me_monthly/?cdiv_id=me&var_id=t2anom&mon_id=ann
+
+tmin <- read_csv("C:/Users/matt/Documents/Arbor/Projects/Blog/noaa_me_t2min_table.csv", skip = 5) |> 
+  mutate(prev_Dec = lag(Dec)) |> 
+  select(Year, Jan, Feb, prev_Dec) |> 
+  filter(Year > 1895) |> 
+  pivot_longer(Jan:prev_Dec, names_to = "Month", values_to ="tmin") |> 
+  group_by(Year) |> 
+  summarize(avg_tmin = mean(tmin))
+
+tavg <- read_csv("C:/Users/matt/Documents/Arbor/Projects/Blog/noaa_me_t2_table.csv", skip = 5)|> 
+  select(Year, Dec, Jan, Feb) |> 
+    mutate(prev_Dec = lag(Dec)) |> 
+  select(Year, Jan, Feb, prev_Dec) |> 
+  filter(Year > 1895) |> 
+  pivot_longer(Jan:prev_Dec, names_to = "Month", values_to ="t") |> 
+  group_by(Year) |> 
+  summarize(avg_t = mean(t))
+
+temps <- inner_join(tmin, tavg, by = "Year")
+
+# Read in stumpage data
+# Source: "Stumpage reports": https://www.maine.gov/dacf/mfs/publications/annual_reports.html
+
+stump <- read_csv("C:/Users/matt/Documents/Arbor/Data/me_saw_stumpage.csv") |> 
+  filter(!(species %in% c("Mixed Hardwood", "Mixed Soft/Hardwood", "Mixed Softwoods",
+                        "Other Hardwood", "Other Softwoods")))
+
+# Inflation rates to convert to 2021 dollars
+# Source: https://www.usinflationcalculator.com/
+infl <- tibble(
+  Year = c(2000:2021),
+  infl_rate = c(57.4, 53.1, 50.6, 47.3, 43.4, 38.7, 34.4, 30.7, 25.9, 26.3, 24.3,
+                20.5, 18.0, 16.3, 14.5, 14.3, 12.9, 10.5, 7.9, 6.0, 4.7, 0)
+  )
+```
+
+The Maine Forest Service compiles [annual data on stumpage prices](https://www.maine.gov/dacf/mfs/publications/annual_reports.html) by species and product classes, with data going back to 2000. The [Maine Climate Office](https://mco.umaine.edu/climate/me_monthly/?cdiv_id=me&var_id=t2anom&mon_id=ann) has data on a variety climate variables going back more than a century. 
+
+For this analysis, I used Maine stumpage data for all species sold as sawlogs and standardized amounts to 2021 dollars. I used the average minimum winter temperature as an indicator for how "cold" a winter was, using the average temperatures from December through February. In total, the data from 2000 through 2021 provided enough data points to see if trends exist. 
+
+The first finding, perhaps not unexpected, is that minimum temperatures have increased statewide across Maine since 2000. The correlation is 0.27 and is significant (i.e., a *p*-value of less than 0.05), indicating a slight positive relationship: 
+
+```{r, echo = F, warnings = F, message = F}
+stump_spp <- stump |> 
+  group_by(species) |> 
+  summarize(num_years = n(),
+            mean_savg = mean(savg))
+```
+
+```{r, echo = F, warnings = F, message = F}
+stump <- stump |> 
+  inner_join(infl, by = "Year") |> 
+  mutate(savg_adj = savg + (savg*(infl_rate/100)),
+         smin_adj = smin + (smin*(infl_rate/100)),
+         smax_adj = smax + (smax*(infl_rate/100)))
+```
+
+
+```{r, echo = F, warnings = F, message = F}
+stump_temps <-inner_join(stump, temps, by = "Year")
+```
+
+
+```{r, echo = F, warnings = F, message = F}
+library(tidymodels)
+
+cor_stump_temps  <- stump_temps %>%
+  nest(data = -species) %>%
+  mutate(
+    test = map(data, ~ cor.test(.x$avg_tmin, .x$savg_adj)), # S3 list-col
+    tidied = map(test, tidy)
+  ) %>%
+  unnest(tidied) |> 
+  arrange(p.value)
+
+# stump_temps %>%
+#   nest(data = -species) %>%
+#   mutate(
+#     test = map(data, ~ cor.test(.x$avg_t, .x$savg_adj)), # S3 list-col
+#     tidied = map(test, tidy)
+#   ) %>%
+#   unnest(tidied) |> 
+#   arrange(p.value)
+
+```
+
+
+
+```{r, echo = F, warnings = F, message = F}
+cor_temps <- cor.test(stump_temps$Year, stump_temps$avg_tmin)
+
+p_spp_year <- ggplot(stump_temps, aes(x = Year, y = avg_tmin)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = T) +
+  #facet_wrap(~species) +
+  labs (x = "Year",
+        y = "Average minimum winter temperature (deg F)",
+        caption = "Sources: Maine Climate Office") +
+  theme_bw()
+p_spp_year
+```
+
+The second finding is the general decrease in stumpage prices in Maine since 2000. The correlation between Year and sawlog stumpage is weak (0.10) and not significant. These are price adjusted and in 2021 dollars, and include all 14 different sawlog species groups:
+
+```{r, echo = F, warnings = F, message = F}
+cor_stump <- cor.test(stump_temps$Year, stump_temps$savg_adj)
+
+p_spp_year <- ggplot(stump_temps, aes(x = Year, y = savg_adj, col = species)) +
+  geom_point() +
+ # geom_smooth(method = "lm", se = T) +
+  #facet_wrap(~species) +
+  labs (x = "Year",
+        y = "Sawlog stumpage ($/per MBF, 2021 dollars)",
+        caption = "Sources: Maine Climate Office, Maine Forest Service Stumpage reports") +
+  theme_bw()
+p_spp_year
+```
+
+The final finding is the trends between average winter temperatures and stumpage prices trend negative for most species. I'm left head scratching with this one...: 
+
+```{r, echo = F, warnings = F, message = F}
+p_spp_tmin <- ggplot(stump_temps, aes(x = avg_tmin, y = savg_adj)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(~species) +
+  labs (x = "Average minimum winter temperature (deg F)",
+        y = "Sawlog stumpage ($/per MBF, 2021 dollars)",
+        caption = "Sources: Maine Climate Office, Maine Forest Service Stumpage reports") +
+  theme_bw()
+p_spp_tmin
+
+```
+
+You can see in the table below that only two of the species show significant trends. These species are spruce/fir and red pine.
+
+```{r, echo = F, warnings = F, message = F}
+cor_stump_temps <- cor_stump_temps |> 
+  rename(`Pearson correlation` = estimate,
+         `P-value` = p.value,
+         `Sawtimber species` = species) |> 
+  select(`Sawtimber species`, `Pearson correlation`, `P-value`)
+```
+
+```{r, echo = F, warning = F, message = F}
+cor_stump_temps %>% 
+   kable("html", caption = 'Pearson correlation coefficients between stumpage price for sawlog species and minimum winter temperatures in Maine, 2000-2021.') %>%
+   kable_styling()
+```
+
+
+```{r, echo = F, warnings = F, message = F}
+p_spp_tavg <- ggplot(stump_temps, aes(x = avg_t, y = savg_adj)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(~species) +
+  labs (x = "Average winter temperature (deg F)",
+        y = "Sawlog stumpage ($/per MBF, 2021 dollars)",
+        caption = "Sources: Maine Climate Office, Maine Forest Service Stumpage reports") +
+  theme_bw()
+#p_spp_tavg
+```
+
+I anticipated finding a clearer story between winter temperatures and stumpage prices in a state that where winter weather determines so much about the health of an industry. But I'm no economist and markets sure are difficult to predict. Stumpage prices have decreased over the last 20 years in Maine, at least for the species and products examined here. This could be what statisticians call a "lurking" variable. But on the whole, it's unwise to use a single variable to try to predict a market.
+
+Despite this, it seems like climate variables could be used more market-level analyses within the forest products industry. These data show some relationships between climate and prices. As statistician Edward Tufte once said, "Correlation does not imply causation, but it sure is a hint."
+ 
+--
+
+*By Matt Russell. For more, subscribe to my [monthly email newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) to stay ahead on data and analytics trends in the forest products industry.*

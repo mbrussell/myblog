@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>clustering on </title>
-    <link>https://arbor-analytics.com/tags/clustering/</link>
-    <description>Recent content in clustering on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Clustering on </title>
+    <link>http://localhost:4321/tags/clustering/</link>
+    <description>Recent content in Clustering on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using clustering with logging industry data</title>
-      <link>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</link>
+      <link>http://localhost:4321/post/using-clustering-with-logging-industry-data/</link>
       <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/using-clustering-with-logging-industry-data/</guid>
-      <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.
-The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.
-Clustering is an unsupervised ML algorithm that groups items.</description>
+      <guid>http://localhost:4321/post/using-clustering-with-logging-industry-data/</guid>
+      <description>A forest products company may not always require a precise numeric answer to solve a problem. Oftentimes, understanding a pattern and how data are clustered can suffice.&#xA;The benefit of using pattern recognition techniques is that data need not be labeled prior to analyzing them. In contrast to statistical techniques like regression and classification, identifying patterns can unearth new trends in how data are arranged in your organization.&#xA;Clustering is an unsupervised ML algorithm that groups items.</description>
     </item>
-    
     <item>
       <title>New logging companies with old equipment: Finding patterns in logging businesses using clustering</title>
-      <link>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
+      <link>http://localhost:4321/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</link>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
-      <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.
-As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
+      <guid>http://localhost:4321/post/new-logging-companies-with-old-equipment-finding-patterns-in-logging-businesses-using-clustering/</guid>
+      <description>Loggers are the backbone of the forest products industry and contribute to the 2.5 million jobs in the US that forests provide. Despite their importance to the industry, many studies have highlighted the challenges that loggers face with regard to economic markets, changing demographics, and an unhealthy outlook on the profession.&#xA;As an example in Minnesota, a recent study indicated that the average age of logging businesses continues to grow older, with a third of loggers more than 60 years old.</description>
     </item>
-    
   </channel>
 </rss>

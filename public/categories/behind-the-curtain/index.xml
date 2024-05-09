@@ -1,48 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Behind the curtain on </title>
-    <link>https://arbor-analytics.com/categories/behind-the-curtain/</link>
-    <description>Recent content in Behind the curtain on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Behind the Curtain on </title>
+    <link>http://localhost:4321/categories/behind-the-curtain/</link>
+    <description>Recent content in Behind the Curtain on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/categories/behind-the-curtain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/categories/behind-the-curtain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Most popular blog posts and podcasts in 2023</title>
+      <link>http://localhost:4321/post/2023-12-22-most-popular-blog-posts-and-podcasts-in-2023/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-12-22-most-popular-blog-posts-and-podcasts-in-2023/</guid>
+      <description>The end of the year is an excellent time to reflect on your work. One of the things I value is providing content that the forest analytics community enjoys and learns from.&#xA;In addition to publishing a weekly-ish newsletter on LinkedIn with 2,000+ subscribers, I published 22 posts to the Arbor Custom Analytics blog in 2023 on topics relating to data and forests. Here are the most read posts from the Arbor Custom Analytics blog in 2023:</description>
+    </item>
     <item>
       <title>Most read articles in 2021</title>
-      <link>https://arbor-analytics.com/post/2021-12-17-most-read-articles-in-2021/</link>
+      <link>http://localhost:4321/post/2021-12-17-most-read-articles-in-2021/</link>
       <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-12-17-most-read-articles-in-2021/</guid>
-      <description>In 2021, 26 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you’d like to see? Email Matt with any suggestions.
-Here are the most read posts from the Arbor Custom Analytics blog in 2021:
-Getting your data into R from Google Sheets
-Creating animated bar charts to visualize sawtimber prices
-Mixed models in R: a primer</description>
+      <guid>http://localhost:4321/post/2021-12-17-most-read-articles-in-2021/</guid>
+      <description>In 2021, 26 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you’d like to see? Email Matt with any suggestions.&#xA;Here are the most read posts from the Arbor Custom Analytics blog in 2021:&#xA;Getting your data into R from Google Sheets&#xA;Creating animated bar charts to visualize sawtimber prices&#xA;Mixed models in R: a primer</description>
     </item>
-    
     <item>
       <title>Peer review: Lessons learned from reviewing 100 forest science manuscripts</title>
-      <link>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</link>
+      <link>http://localhost:4321/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</link>
       <pubDate>Mon, 19 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</guid>
-      <description>Photo by Annie Spratt on Unsplash.
-This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.
-For the process, typically a journal will reach out to a reviewer over email with an invitation.</description>
+      <guid>http://localhost:4321/post/2021-07-19-peer-review-lessons-learned-from-reviewing-100-forest-science-manuscripts/</guid>
+      <description>Photo by Annie Spratt on Unsplash.&#xA;This summer I completed my 100th peer review of a manuscript in forest science. Peer review is mostly a non-compensated service to the profession, but the process probably works as best as any other system for evaluating the merit and impact of scientific studies. The individuals best qualified to evaluate scientific work are scientists working on similar research problems.&#xA;For the process, typically a journal will reach out to a reviewer over email with an invitation.</description>
     </item>
-    
     <item>
       <title>Most read posts in 2020</title>
-      <link>https://arbor-analytics.com/post/most-read-posts-in-2020/</link>
+      <link>http://localhost:4321/post/most-read-posts-in-2020/</link>
       <pubDate>Sat, 05 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/most-read-posts-in-2020/</guid>
-      <description>In 2020, 29 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you’d like to see? Email Matt with any suggestions.
-Here are the most read posts from the Arbor Custom Analytics blog in 2020:
-Mixed models in R: a primer
-Getting your data into R from Google Sheets
-The three kinds of data scientists in forestry</description>
+      <guid>http://localhost:4321/post/most-read-posts-in-2020/</guid>
+      <description>In 2020, 29 new posts were published to this blog on topics relating to data and forest products. Have an idea for a post you’d like to see? Email Matt with any suggestions.&#xA;Here are the most read posts from the Arbor Custom Analytics blog in 2020:&#xA;Mixed models in R: a primer&#xA;Getting your data into R from Google Sheets&#xA;The three kinds of data scientists in forestry</description>
     </item>
-    
   </channel>
 </rss>

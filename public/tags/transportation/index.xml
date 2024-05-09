@@ -1,42 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>transportation on </title>
-    <link>https://arbor-analytics.com/tags/transportation/</link>
-    <description>Recent content in transportation on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Transportation on </title>
+    <link>http://localhost:4321/tags/transportation/</link>
+    <description>Recent content in Transportation on </description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arbor-analytics.com/tags/transportation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/transportation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A review of the log trucking workforce and comparisons to other industries</title>
-      <link>https://arbor-analytics.com/events/2022-09-27-a-review-of-the-log-trucking-workforce-and-comparisons-to-other-industries/</link>
+      <link>http://localhost:4321/events/2022-09-27-a-review-of-the-log-trucking-workforce-and-comparisons-to-other-industries/</link>
       <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/events/2022-09-27-a-review-of-the-log-trucking-workforce-and-comparisons-to-other-industries/</guid>
-      <description>The trucking industry is faced with a number of challenges, including recruiting workers, pending retirements, and an increase in demand due to e-commerce sales. These slides provide an overview of the log trucking workforce and were presented at the Forest Resources Association’s Fall Board Meeting in Portland, ME.
-READ THE SLIDES.</description>
+      <guid>http://localhost:4321/events/2022-09-27-a-review-of-the-log-trucking-workforce-and-comparisons-to-other-industries/</guid>
+      <description>The trucking industry is faced with a number of challenges, including recruiting workers, pending retirements, and an increase in demand due to e-commerce sales. These slides provide an overview of the log trucking workforce and were presented at the Forest Resources Association’s Fall Board Meeting in Portland, ME.&#xA;READ THE SLIDES.</description>
     </item>
-    
     <item>
       <title>Comparing logging trucker wages to other industries</title>
-      <link>https://arbor-analytics.com/post/2022-08-15-comparing-logging-trucker-wages-to-other-trucking-industries/</link>
+      <link>http://localhost:4321/post/2022-08-15-comparing-logging-trucker-wages-to-other-trucking-industries/</link>
       <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/2022-08-15-comparing-logging-trucker-wages-to-other-trucking-industries/</guid>
-      <description>Log truck (photo: Darin Oswald)
-“To solve any problem in forestry, first figure out where the roads will go.”
-That’s a quote I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood becomes less appealing if forest products are located far away from the mill that processes it.</description>
+      <guid>http://localhost:4321/post/2022-08-15-comparing-logging-trucker-wages-to-other-trucking-industries/</guid>
+      <description>Log truck (photo: Darin Oswald)&#xA;“To solve any problem in forestry, first figure out where the roads will go.”&#xA;That’s a quote I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood becomes less appealing if forest products are located far away from the mill that processes it.</description>
     </item>
-    
     <item>
       <title>Wages for logging truckers much lower than other transportation industries</title>
-      <link>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
+      <link>http://localhost:4321/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://arbor-analytics.com/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
-      <description>“To solve any problem in forestry, first figure out where the roads will go.”
-That is a quote that I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it.</description>
+      <guid>http://localhost:4321/post/wages-for-logging-truckers-much-lower-than-other-transportation-industries/</guid>
+      <description>“To solve any problem in forestry, first figure out where the roads will go.”&#xA;That is a quote that I’ve heard a retired university professor tell students a number of times. There is a lot of wisdom in it: many forest resources are located in remote areas. Hauling products from the woods to the mill can be challenging. The economics of utilizing wood become less appealing if forest products are located far away from the mill that processes it.</description>
     </item>
-    
   </channel>
 </rss>

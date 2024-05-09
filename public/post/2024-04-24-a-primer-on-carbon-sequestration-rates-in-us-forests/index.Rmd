@@ -1,0 +1,75 @@
+---
+title: A primer on carbon sequestration rates in US forests
+description: "Here's a primer on forest carbon sequestration values and how much carbon US forests grow on an annual basis."
+author: Matt Russell
+date: '2024-04-24'
+slug: []
+categories:
+  - Forest carbon
+image: treering.jpg  
+---
+
+#   
+<center> 
+![](treering.jpg){width=500px}  
+</center>
+#  
+
+If you work in forests, you know how important it is to understand different growth rates. Whether the stand is young, old, managed or not, forests will grow at different rates depending on a variety of conditions. 
+
+Historically, foresters have talked about growth rates in terms of volume. About 10 years ago I met with a Minnesota forester in a recently cut aspen stand. I vividly remember him telling me that "You need to be getting half a cord per acre per year to have a stand worth selling at 45 years."  Given most aspen sales in Minnesota use clearcutting as a practice (or something close to it) and sell around 20 cords per acre at harvest, his math made sense to me.
+
+I still often think about forests in terms of volume and cords. Most of us have stacked a cord of firewood or at least can envision what a cord of wood looks like.
+
+But increasingly, foresters are being asked to talk about forests in terms of the carbon they store and sequester. Part of the issue with this is the [confusion around units associated with forest carbon](https://arbor-analytics.com/post/units-in-forest-carbon-numbers-a-primer/). But another source of the confusion is that foresters have had few opportunities to learn about the different ways we can quantify forest carbon. This includes talking about growth in terms of carbon sequestration, net change, or uptake, a few different definitions we use to quantify forest carbon. 
+
+For starters, I'll discuss the growth of carbon in terms of metric units (e.g., metric tonnes) because that's the common unit used throughout the carbon market discussion in the US. For reference, one metric tonne is equivalent to 1.10 US tons. I'll also talk about carbon in terms of $CO_2$ equivalents, where one unit of carbon equals 3.6667 units of $CO_2$ equivalents. Finally, and not to confuse you more, I'll discuss the growth values on a per acre basis. Again, this is mainly for ease of comparison to programs and reported numbers that discuss carbon in the US. For example, California's [recent auction in February 2024](https://ww2.arb.ca.gov/sites/default/files/2024-02/nc-feb_2024_summary_results_report.pdf) had a settlement price of $41.76 for 1 metric tonne of $CO_2$ equivalent on a per-acre basis. 
+
+In the [USDA's 2021 report on greenhouse gas emissions and removals](https://www.fs.usda.gov/research/treesearch/66035), authors report that "forest uptake averaged 0.6 metric tonnes of carbon per hectare per year, with live vegetation accounting for more than 83 percent of the uptake." Converting to our units of interest, this equates converts to 0.24 metric tonnes C/ac/yr, or 0.89 tonnes CO2-eq/ac/yr.
+
+A great publication by [Hoover and Smith in 2021](https://cbmjournal.biomedcentral.com/articles/10.1186/s13021-021-00179-2) provides similar numbers like these by region and forest type. Their analysis calculated average annual change in aboveground live trees, with average values in the negative for the Rocky Mountains (there's been a lot of forest disturbances occurring there). Values ranged as high as 2.58 tonnes CO2-eq/ac/yr in the western region of the Pacific Northwest (one of the most productive regions in North America).
+ 
+Here is a table showing the average sequestration values presented in Hoover and Smith 2021 (their Table 1):
+
+```{r echo = F, warning = F, message = F}
+library(tidyverse)
+library(knitr)
+library(formattable)
+library(kableExtra)
+```
+
+```{r echo = F, warning = F, message = F}
+seq <- tribble(
+  ~Region, ~`Average annual change (tonnes C/ha/yr)`,
+  "Northeast", 0.55,
+  "Northern Lake States", 0.40,
+  "South Central", 0.90,
+  "Southeast", 0.96,
+  "Central States", 0.38,
+  "Great Plains", 0.08,
+  "Rocky Mountain, North", -0.07,
+  "Rocky Mountain, South", -0.18,
+  "Pacific Northwest, East", 0.45,
+  "Pacific Northwest, West", 1.74,
+  "Pacific Southwest", 0.58
+  ) |> 
+  mutate(`Average annual change (tonnes CO2/ac/yr)` = round((`Average annual change (tonnes C/ha/yr)`/2.47105)*(44/12), 2))
+```
+
+```{r echo = F, warning = F, message = F}
+seq %>% 
+  select(Region, `Average annual change (tonnes CO2/ac/yr)`) |> 
+  kable("html", caption = 'Average annual change in aboveground live trees across forested regions in the US, from Hoover and Smith 2021.') %>%
+ kable_styling()
+```
+
+Hopefully these simple values can provide more perspective when conveying forest carbon information to others. I encourage you to look at the publications below to see more detailed carbon sequestration values by forest type and stand age. 
+
+### References
+Hoover, C.M., Smith, J.E. 2021. [Current aboveground live tree carbon stocks and annual net change in forests of conterminous United States.](https://doi.org/10.1186/s13021-021-00179-2) *Carbon Balance and Management* 16, 17. 
+
+Hoover, C.M., Smith, J.E. 2023. [Aboveground live tree carbon stock and change in forests of conterminous United States: influence of stand age.](https://doi.org/10.1186/s13021-023-00227-z) Carbon Balance Manage 18, 7. 
+
+--
+
+*By Matt Russell. For more, subscribe to my [monthly email newsletter](https://mailchi.mp/d96897dc0f46/arbor-analytics) to stay ahead on data and analytics trends in the forest products industry.*

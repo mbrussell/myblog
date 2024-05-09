@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="generator" content="Hugo 0.101.0" />
+		<meta name="generator" content="Hugo 0.125.7">
         <title>Testing the assumption: Half of the biomass of a tree is carbon</title>
         
         <style>
@@ -22,7 +22,7 @@
 </style>
 
 
-<link rel="stylesheet" href="https://arbor-analytics.com/css/main.css">
+<link rel="stylesheet" href="http://localhost:4321/css/main.css">
 
 
 
@@ -126,9 +126,7 @@
                             
                                 <li class="navbar-icon"><a href="mailto:matt@arbor-analytics.com"><i class="fa fa-envelope-o"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="https://twitter.com/arbor_analytics"><i class="fa fa-twitter"></i></a></li>
-                            
-                                <li class="navbar-icon"><a href="https://github.com/mbrussell/"><i class="fa fa-github"></i></a></li>
+                                <li class="navbar-icon"><a href="https://www.youtube.com/@arboranalytics"><i class="fa fa-youtube"></i></a></li>
                             
                                 <li class="navbar-icon"><a href="https://www.linkedin.com/company/arbor-custom-analytics"><i class="fa fa-linkedin"></i></a></li>
                             
@@ -158,20 +156,20 @@
     <h4><a href="/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/">Testing the assumption: Half of the biomass of a tree is carbon</a></h4>
     <h5>June 20, 2021</h5>
     
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
     
 
 </div>
 
 
     <br> <div class="text-justify">
-<script src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/header-attrs/header-attrs.js"></script>
-<script src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/kePrint/kePrint.js"></script>
-<link href="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/lightable/lightable.css" rel="stylesheet" />
+<script src="/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/header-attrs/header-attrs.js"></script>
+<script src="/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/kePrint/kePrint.js"></script>
+<link href="/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/lightable/lightable.css" rel="stylesheet" />
 
 
 <center>
@@ -185,13 +183,13 @@
 <h2>Carbon in Maine’s forests</h2>
 <p>In 2018, Martin and colleagues compiled a database of <a href="https://www.nature.com/articles/s41561-018-0246-x">wood concentrations for species around the world</a>. They found that for hardwood species in temperate regions, the average carbon concentration was <strong>46.5%</strong> (averaged across 111 species). For temperate conifers, the average carbon concentration of wood <strong>50.1%</strong> (averaged across 45 species).</p>
 <p>Obtaining data from the <a href="https://arbor-analytics.com/post/2021-04-03-importing-fia-data-to-analyze-biomass-data-with-tidyfia/">tidyFIA package in R</a>, we can simulate how these different carbon concentration factors result in different estimates of carbon at the tree and stand scales. Obtaining Forest Inventory and Analysis (FIA) data from Maine, USA results in 14,876 unique remeasurements of forest plots:</p>
-<p><img src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>Biomass and carbon of trees in the FIA program are estimated using the <a href="https://www.nrs.fs.fed.us/pubs/39555">component ratio method (CRM)</a>, a set of regional volume equations that ultimately predict carbon in aboveground portions of trees. We can modify the carbon concentration used in the CRM method to look at different assessments of carbon stored in individual trees.</p>
 <p>The figure below displays the carbon content of each tree, separated by conifers and hardwoods. Note that the carbon estimates for conifers are similar for both concentrations and generally follow the 1:1 line. (50.1% is awfully close to the default value of 50.0%.) However, for large hardwood trees, note that the 50% carbon assumption leads to “overestimates” compared to the revised 46.5% concentration:</p>
-<p><img src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>At the individual tree level, slight differences in carbon estimates will occur, especially for large-diameter hardwoods. But what about when trees are scaled to the pot level and represented on a per acre basis?</p>
 <p>The figure below shows the “overprediction” of carbon using the 50% assumption relative to the carbon concentrations which vary for hardwoods and conifers (46.5% and 50.1%). The blue regression line follows the trend for FIA plots in Maine and can be compared to the black 1:1 line:</p>
-<p><img src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <p>On average, there’s <strong>4% less carbon</strong> on FIA plots in Maine using the hardwood- and conifer-specific carbon concentrations compared to the 50% assumption. There are 16.2 tons/acre for the 50% concentration and 15.6 tons/acre using the hardwood- and conifer-specific carbon concentration. For stands with large trees with lots of biomass (e.g., large-diameter oaks and maples in Maine), these differences would be more apparent.</p>
 <p>We can analyze the Maine data to better understand carbon differences across ecological subsections. Six of Maine’s most common ecological subsections vary in terms of their species composition and stand structures.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
@@ -260,7 +258,7 @@ Connecticut Lakes Subsection
 </tbody>
 </table>
 <p>Regions that have a strong hardwood component, such as the Maine Central Mountains Subsection and the Connecticut Lakes Subsection, show stark different in high biomass areas when comparing the different carbon concentration factors.</p>
-<p><img src="https://arbor-analytics.com/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="/post/2021-06-18-testing-the-assumption-half-of-the-biomass-of-a-tree-is-carbon/index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 </div>
 <div id="summary" class="section level2">
 <h2>Summary</h2>
@@ -286,44 +284,22 @@ Connecticut Lakes Subsection
     
     
 
-    <h4><a href="/post/2022-11-23-new-updates-for-tools-that-query-forest-inventory-and-analysis-data/">New updates for tools that query Forest Inventory and Analysis data</a></h4>
-    <h5>November 23, 2022</h5>
+    <h4><a href="/post/2024-02-26-preliminary-thoughts-on-using-the-new-national-scale-volume-and-biomass-estimators/">Preliminary thoughts on using the new National Scale Volume and Biomass Estimators</a></h4>
+    <h5>February 26, 2024</h5>
     
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/datamart"><kbd class="item-tag">DataMart</kbd></a>
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/evalidator"><kbd class="item-tag">EVALIDator</kbd></a>
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    <a href="http://localhost:4321/tags/nsvb"><kbd class="item-tag">NSVB</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    <a href="http://localhost:4321/tags/fia"><kbd class="item-tag">FIA</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/post/2022-11-09-home-heating-with-wood/">How many homes heat with wood?</a></h4>
-    <h5>November 9, 2022</h5>
-    
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
-    
-    <a href="https://arbor-analytics.com/tags/energy"><kbd class="item-tag">energy</kbd></a>
-    
-    <a href="https://arbor-analytics.com/tags/forest-products"><kbd class="item-tag">forest products</kbd></a>
-    
-    <a href="https://arbor-analytics.com/tags/wood"><kbd class="item-tag">wood</kbd></a>
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
 
 </div>
@@ -336,18 +312,50 @@ Connecticut Lakes Subsection
     
     
 
-    <h4><a href="/post/2022-10-20-how-to-spot-poor-data-analyses/">How to spot poor data analyses</a></h4>
-    <h5>October 20, 2022</h5>
+    <h4><a href="/post/2023-11-24-a-list-of-r-packages-for-forestry-applications/">A list of R packages for forestry applications</a></h4>
+    <h5>November 24, 2023</h5>
     
-    <a href="https://arbor-analytics.com/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/data-viz"><kbd class="item-tag">Data viz</kbd></a>
+    <a href="http://localhost:4321/tags/r"><kbd class="item-tag">R</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/data-science"><kbd class="item-tag">Data science</kbd></a>
+    <a href="http://localhost:4321/tags/r-packages"><kbd class="item-tag">R packages</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
+    <a href="http://localhost:4321/tags/statistics"><kbd class="item-tag">statistics</kbd></a>
     
-    <a href="https://arbor-analytics.com/tags/teaching-statistics"><kbd class="item-tag">teaching statistics</kbd></a>
+    <a href="http://localhost:4321/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forestry"><kbd class="item-tag">forestry</kbd></a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2023-10-31-calibrating-fvs-how-much-does-adding-previous-diameter-and-height-growth-change-predictions/">How much does adding previous diameter and height growth change FVS predictions?</a></h4>
+    <h5>October 31, 2023</h5>
+    
+    <a href="http://localhost:4321/tags/analytics"><kbd class="item-tag">analytics</kbd></a>
+    
+    <a href="http://localhost:4321/tags/carbon"><kbd class="item-tag">carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-carbon"><kbd class="item-tag">forest carbon</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory"><kbd class="item-tag">forest inventory</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-inventory-and-analysis"><kbd class="item-tag">forest inventory and analysis</kbd></a>
+    
+    <a href="http://localhost:4321/tags/forest-measurements"><kbd class="item-tag">forest measurements</kbd></a>
+    
+    <a href="http://localhost:4321/tags/fvs"><kbd class="item-tag">FVS</kbd></a>
+    
+    <a href="http://localhost:4321/tags/growth-and-yield"><kbd class="item-tag">growth and yield</kbd></a>
     
 
 </div>

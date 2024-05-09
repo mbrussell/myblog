@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maine on </title>
+    <link>http://localhost:4321/tags/maine/</link>
+    <description>Recent content in Maine on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:4321/tags/maine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How much of Maine&#39;s forests are enrolled in carbon programs?</title>
+      <link>http://localhost:4321/post/2023-03-21-how-much-of-maine-s-forests-are-enrolled-in-carbon-programs/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/2023-03-21-how-much-of-maine-s-forests-are-enrolled-in-carbon-programs/</guid>
+      <description>Carbon storage and sequestration is one of the most important attributes that forests provide. Carbon has quickly become a mechanism to address current and future climate challenges.&#xA;Forest carbon projects have traditionally relied on compliance markets such as California Air Resources Board’s Cap and Trade Regulation program and their associated Forest Offset Protocol. Increasingly, new carbon programs developed in the voluntary markets are offering the ability for smaller landowners to enroll their lands in the forest carbon marketplace.</description>
+    </item>
+  </channel>
+</rss>
